@@ -1,0 +1,255 @@
+name: Potion-Quaffing Contest
+description: Inspired by
+    http://abominablefancy.blogspot.com/2017/04/mini-game-potion-quaffing.html
+recipe: {potion_description}. {potion_effect}.
+
+repeat: 4d6
+
+table: potion_description
+1   {potion_form} of {potion_preparation} {potion_ingredient_1a} {potion_ingredient_1b}
+    and {potion_ingredient_2}, {potion_garnish}, served in {potion_container} ({2d6}0gp)
+2   {potion_form} of {potion_preparation} {potion_ingredient_1a} {potion_ingredient_1b}
+    and {potion_ingredient_2}, served in {potion_container} ({2d6}0gp)
+3   {potion_form} of {potion_preparation} {potion_ingredient_1a}, served in {potion_container} ({2d6}0gp)
+4   {potion_form} of {potion_preparation} {potion_ingredient_1a} ({2d6}0gp)
+
+table: potion_form
+1   Blood
+2   Broth
+3   Cream
+4   Custard
+5   Decoction
+6   Dew
+7   Distillation
+8   Drainage
+9   Effluvium
+10  Elixir
+11  Extract
+12  Grease
+13  Infusion
+14  Juice
+15  Liquor
+16  Nectar
+17  Oil
+18  Pearls
+19  Sap
+20  Secretion
+21  Seepage
+22  Solution
+23  Spirits
+34  Syrup
+25  Tea
+26  Tears
+27  Tincture
+28  Tonic
+29  Vapors
+30  Water
+
+
+table: potion_preparation
+1   Bitter
+2   Boiled
+3   Braised
+4   Brewed
+5   Brined
+6   Caramelized
+7   Carbonated
+8   Coal-filtered
+9   Composted Fire
+10  Curdled
+11  Digested
+12  Emulsified
+13  Fermented
+14  Festering
+15  Infected
+16  Jellied
+17  Mashed
+18  Powdered
+19  Putrescent
+20  Reclaimed
+21  Reconstituted
+22  Regurgitated
+23  Slushed
+34  Sugared
+25  Suppurated
+26  Tainted
+27  Toasted
+28  Viscid
+29  Whipped
+30  Wounded
+
+table: potion_ingredient_1a
+1   Adder
+2   Basilisk
+3   Bat
+4   Blind-Worm
+5   Cat
+6   Caterpillar
+7   Catoblepas
+8   Crocodile
+9   Beetle
+10  Frog
+11  Goblin
+12  Hag
+13  Howlet
+14  Lark
+15  Leviathan
+16  Lizard
+17  Mandrake
+18  Manticore
+19  Newt
+20  Owl
+21  Ox
+22  Phoenix
+23  Pixie
+34  Serpent
+25  Shoggoth
+26  Spider
+27  Stirge
+28  Troll
+29  Unicorn
+30  Weevil
+
+table: potion_ingredient_1b
+1   Bile
+2   Bladder
+3   Blubber
+4   Breath
+5   Cunning
+6   Dander
+7   Dreams
+8   Egg
+9   Eye
+10  Gall
+11  Gland
+12  Heart
+13  Liver
+14  Melancholy
+15  Milk
+16  Mucus
+17  Musk
+18  Shadow
+19  Skin
+20  Song
+21  Spittle
+22  Spleen
+23  Sting
+34  Sweat
+25  Teeth
+26  Toe
+27  Tongue
+28  Wart
+29  Wing
+30  Wool
+
+table: potion_ingredient_2
+1   Ambergris
+2   Balsam
+3   Black Pudding
+4   Brimstone
+5   a Drowned Leech
+6   Dungeon Muck
+7   Frankincense
+8   Fungicide
+9   Head Cheese
+10  Heartache
+11  Hellebore
+12  Holly Ash
+13  Innocence
+14  Jonquil Blossom
+15  Misspent Youth
+16  Mistletoe Berries
+17  Moonlight
+18  Myrrh
+19  Nightshade
+20  Pond Scum
+21  Quicksilver
+22  Regret
+23  Rot Grub Castings
+34  Runny Cheese
+25  Sea Foam
+26  Swamp Root
+27  Toadstool
+28  Vinegar
+29  Wormwood
+30  Yellow Mold
+
+table: potion_garnish
+1   Aged {10d100} Years
+2   Amandine
+3   Cold-Pressed by Wicked Gnomes
+4   Cursed by Witches
+5   Dusted with Blue Cinnamon
+6   Flambe
+7   Haunted by a Vengeful Ghost
+8   Imported from the Dark Pits
+9   Jubilee
+10  Left out in the Sun
+11  Meringue
+12  Neat
+13  On the Rocks
+14  Piping Hot
+15  Poured over Ice Cream
+16  Rimmed with Salt
+17  Shaken, Not Stirred
+18  Sneezed on by a Goat
+19  Stirred, Not Shaken
+20  Suspended in Aspic
+21  Swirled with Snotberries
+22  Topped with Beard Shavings
+23  Wept on by a Very Sad Beholder
+34  With a Paper Umbrella
+25  With a Slice of Lime
+26  With a Slice of Sea Cucumber
+27  With a Sprig of Mint
+28  With Cocktail Onions
+29  With Explosive Peppers
+30  With Rainbow Sprinkles
+
+table: potion_container
+1   an Alchemist's Alembic
+2   an Amber Jar
+3   a Boot
+4   a Clay Cup
+5   a Conch Shell
+6   aCopper Kettle
+7   a Cracked Jug
+8   a Cupped Leaf
+9   a Decorative Mug
+10  an Egg Shell
+11  a Funerary Urn
+12  a Goat Skin
+13  a Green Glass Bottle
+14  an Iron Pot
+15  a Kobold's Mouth
+16  a Mermaid's Purse
+17  a Monkey Skull
+18  a Mushroom Cap
+19  an Oaken Cask
+20  an Onyx Flask
+21  a Painted Ewer
+22  a Pumpkin Shell
+23  a Ram's Horn
+34  a Rudely-shaped Gourd
+25  a Silver Vial
+26  a Spittoon
+27  a Squid's Ink Sac
+28  a Washbasin
+29  a Waxed Sack
+30  a Wooden Bucket
+
+table: potion_effect
+1   -1 {potion_stat}
+2   Prophetic Vision
+3   Insubstantial for {1d6} hours
+4   Free Drinks in any bar for next {1d6} months
+5   See Invisible for {1d4} days
+6   +1 {potion_stat}
+
+table: potion_stat 1d10
+1-2     STR
+3       DEX
+4       INT
+5       WIS
+6-8     CON
+9-10    CHA

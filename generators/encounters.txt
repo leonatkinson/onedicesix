@@ -1,0 +1,306 @@
+name: Encounters
+description: Tables for generating encounters by location
+recipe: does not use recipes
+repeat: 1
+
+table: dugeon1 1d12 Dungeon Level 1
+1   {1d6} Giant Bee(s) (AC 13, HD 1d4 HP*, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9)
+2   {2d4} Goblins (AC 14 (11), HD 1-1, #At 1 weapon, Dam 1d6 or by weapon, Mv 20' Unarmored 30', Sv F1, Ml 7 when alone)
+3   Green Slime (AC can always be hit, HD 2**, #At 1, Dam special, Mv 1', Sv F2, Ml 12)
+4   {4d4} Kobolds (AC 13 (11), HD 1d4 HP, #At 1 weapon, Dam 1d4 or by weapon, Mv 20' Unarmored 30', Sv NM, Ml 6 when alone)
+5   {npc-adventurers}
+6   {npc-bandits}
+7   {2d4} Orcs (AC 14 (11), HD 1, #At 1 weapon, Dam 1d8 or by weapon, Mv 30' Unarmored 40', Sv F1, Ml 8)
+8   {3d4} Skeletons (AC 13, HD 1, #At 1, Dam 1d6 or by weapon, Mv 40', Sv F1, Ml 12)
+9   {1d6} Spitting Cobras (AC 13, HD 1*, #At 1 bite or 1 spit, Dam 1d4 + poison or blindness, Mv 30', Sv F1, Ml 7)
+10  {1d4} Giant Crab Spiders (AC 13, HD 2*, #At 1 bite, Dam 1d8 + poison, Mv 40', Sv F2, Ml 7)
+11  {1d10} Stirges (AC 13, HD 1*, #At 1 bite, Dam 1d4 + 1d4/round blood drain, Mv 10' Fly 60', Sv F1, Ml 9)
+12  {2d6} Wolves (AC 13, HD 2, #At 1 bite, Dam 1d6, Mv 60', Sv F2, Ml 8)
+
+table: dugeon2 1d12 Dungeon Level 2
+1   {1d8} Giant Bombardier Beetles (AC 16, HD 2*, #At 1 bite + special, Dam 1d6 + special, Mv 40', Sv F2, Ml 8)
+2   {1d6} Giant Flies (AC 14, HD 2, #At 1 bite, Dam 1d8, Mv 30' Fly 60', Sv F2, Ml 8)
+3   {1d6} Ghouls (AC 14, HD 2*, #At 2 claws/1 bite, Dam 1d4/1d4/1d4, all plus paralysis, Mv 30', Sv F2, Ml 9)
+4   {1d6} Gnolls (AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8)
+5   Gray Ooze (AC 12, HD 3*, #At 1, Dam 2d8, Mv 1', Sv F3, Ml 12)
+6   {1d6} Hobgoblins (AC 14 (11), HD 1, #At 1 weapon, Dam 1d8 or by weapon, Mv 30' Unarmored 40', Sv F1, Ml 8)
+7   {2d4} Lizard Men (AC 15 (12), HD 2, #At 1 weapon, Dam 1d6+1 or by weapon +1, Mv 20' Unarmored 30' Swim 40' (not in armor), Sv F2, Ml 11)
+8   {npc-adventurers}
+9   {1d4} Pit Vipers (AC 14, HD 1*, #At 1 bite, Dam 1d4 + poison, Mv 30', Sv F1, Ml 7)
+10  {1d3} Giant Black Widow Spiders (AC 14, HD 3*, #At 1 bite, Dam 2d6 + poison, Mv 20' Web 40', Sv F3, Ml 8)
+11  {1d8} Troglodytes (AC 15, HD 2, #At 2 claws/1 bite, Dam 1d4/1d4/1d4, Mv 40', Sv F2, Ml 9)
+12  {2d4} Zombies (AC 12, HD 2, #At 1, Dam 1d8 or by weapon, Mv 20', Sv F2, Ml 12)
+
+table: dugeon3 1d12 Dungeon Level 3
+1   {2d6} Giant Ants (AC 17, HD 4, #At 1 bite, Dam 2d6, Mv 60' (10'), Sv F4, Ml 7 on first sighting, 12 after engaged)
+2   {1d6} Carnivorous Apes (AC 14, HD 4, #At 2 claws, Dam 1d4/1d4, Mv 40', Sv F4, Ml 7)
+3   {1d6} Giant Tiger Beetles (AC 17, HD 3+1, #At 1 bite, Dam 2d6, Mv 60' (10'), Sv F3, Ml 9)
+4   {2d4} Bugbears (AC 15 (13), HD 3+1, #At 1 weapon, Dam 1d8+1 or by weapon +1, Mv 30' Unarmored 40', Sv F3, Ml 9)
+5   {1d6} Dopplegangers (AC 15, HD 4*, #At 1 fist, Dam 1d12 or by weapon, Mv 30', Sv F4, Ml 10)
+6   {1d6} Gargoyles (AC 15 ‡, HD 4**, #At 2 claws/1 bite/1 horn, Dam 1d4/1d4/1d6/1d4, Mv 30' Fly 50' (15'), Sv F6, Ml 11)
+7   Gelatinous Cube (AC 12, HD 4*, #At 1, Dam 2d4 + paralysis, Mv 20', Sv F2, Ml 12)
+8   {1d8} Wererats (AC 13 †, HD 3*, #At 1 bite or 1 weapon, Dam 1d4 or 1d6 or by weapon, Mv 40', Sv F3, Ml 8)
+9   {1d6} Ogres (AC 15 (12), HD 4+1, #At 1 weapon, Dam 2d6 with ogre weapon (+3 with normal weapon), Mv 30' Unarmored 40', Sv F4, Ml 10)
+10  {1d10} Shadows (AC 13 ‡, HD 2*, #At 1 touch, Dam 1d4 + 1 point Strength loss, Mv 30', Sv F2, Ml 12)
+11  {1d3} Tentacle Worms (AC 13, HD 3*, #At 6 tentacles, Dam paralysis, Mv 40', Sv F3, Ml 9)
+12  {1d6} Wights (AC 15 †, HD 3*, #At 1 touch, Dam Energy drain (1 level), Mv 30', Sv F3, Ml 12)
+
+table: dugeon4 1d12 Dungeon Level 4-5
+1   {1d2} Cave Bears (AC 15, HD 7, #At 2 claws/1 bite + hug, Dam 1d8/1d8/2d6 + 2d8 hug, Mv 40', Sv F7, Ml 9)
+2   {1d3} Giant Caecilias (AC 14, HD 6*, #At 1 bite + swallow on 19/20, Dam 1d8 + 1d8/round if swallowed, Mv 20' (10'), Sv F3, Ml 9)
+3   {1d4} Cockatrices (AC 14, HD 5**, #At 1 beak + special, Dam 1d6 + petrification, Mv 30' Fly 60' (10'), Sv F5, Ml 7)
+4   {1d6} Dopplegangers (AC 15, HD 4*, #At 1 fist, Dam 1d12 or by weapon, Mv 30', Sv F4, Ml 10)
+5   Gray Ooze (AC 12, HD 3*, #At 1, Dam 2d8, Mv 1', Sv F3, Ml 12)
+6   {2d4} Hell Hounds (AC 14, HD 3**, #At 1 bite or 1 breath, Dam 1d6 or 3d6, Mv 40', Sv F3, Ml 9)
+7   {1d6} Werewolves (AC 15 †, HD 4*, #At 1 bite, Dam 2d4, Mv 60' Human Form 40', Sv F4, Ml 8)
+8   {1d6} Minotaurs (AC 12, HD 6, #At 1 gore/1 bite or 1 weapon, Dam 1d6/1d6 or by weapon + 2, Mv 40', Sv F6, Ml 11)
+9   Ochre Jelly (AC 12, HD 5*, #At 1, Dam 2d6, Mv 10', Sv F5, Ml 12)
+10  {1d4} Owlbears (AC 15, HD 5, #At 2 claws/1 bite + 1 hug, Dam 1d8/1d8/1d8 + 2d8, Mv 40', Sv F5, Ml 9)
+11  {1d4} Rust Monsters (AC 18, HD 5*, #At 1, Dam special, Mv 40', Sv F5, Ml 7)
+12  {1d4} Wraiths (AC 15 ‡, HD 4**, #At 1 touch, Dam 1d6 + energy drain (1 level), Mv Fly 80', Sv F4, Ml 12)
+
+table: dugeon6 1d12 Dungeon Level 6-7
+1   {1d6} Basilisks (AC 16, HD 6**, #At 1 bite/1 gaze, Dam 1d10/petrification, Mv 20' (10'), Sv F6, Ml 9)
+2   Black Pudding (AC 14, HD 10* (+9), #At 1 pseudopod, Dam 3d8, Mv 20', Sv F10, Ml 12)
+3   {1d3} Giant Caecilias (AC 14, HD 6*, #At 1 bite + swallow on 19/20, Dam 1d8 + 1d8/round if swallowed, Mv 20' (10'), Sv F3, Ml 9)
+4   {1d4} Displacers (AC 16, HD 6*, #At 2 blades, Dam 1d8/1d8, Mv 50', Sv F6, Ml 8)
+5   Hydra (AC 17, HD 6, #At 6 bites, Dam 1d10 per bite, Mv 40' (10'), Sv F6, Ml 9)
+6   {1d4} Weretigers (AC 17 †, HD 5*, #At 2 claws/1 bite, Dam 1d6/1d6/2d6, Mv 50' Human Form 40', Sv F5, Ml 9)
+7   {1d4} Mummies (AC 17 ‡, HD 5**, #At 1 touch + disease, Dam 1d12 + disease, Mv 20', Sv F5, Ml 12)
+8   {1d4} Owlbears (AC 15, HD 5, #At 2 claws/1 bite + 1 hug, Dam 1d8/1d8/1d8 + 2d8, Mv 40', Sv F5, Ml 9)
+9   {1d4} Rust Monsters (AC 18, HD 5*, #At 1, Dam special, Mv 40', Sv F5, Ml 7)
+10  {1d6} Giant Scorpions (AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11)
+11  {1d4} Spectres (AC 17 ‡, HD 6**, #At 1 touch, Dam Energy drain 2 levels/touch, Mv Fly 100', Sv F6, Ml 11)
+12  {1d8} Trolls (AC 16, HD 6*, #At 3, Dam 1d6/1d6/1d10, Mv 40', Sv F6, Ml 10 (8))
+
+table: dugeon8 1d10 Dungeon Level 8+
+1   Black Pudding (AC 14, HD 10* (+9), #At 1 pseudopod, Dam 3d8, Mv 20', Sv F10, Ml 12)
+2   {1d2} Chimeras (AC 16, HD 9** (+8), #At 2 claws/3 heads + special, Dam 1d4/1d4/2d4/2d4/3d4 + special, Mv 40' (10') Fly 60' (15'), Sv F9, Ml 9)
+3   {1d4} Hill Giants (AC 15 (13), HD 8, #At 1, Dam 2d8, Mv 30' Unarmored 40', Sv F8, Ml 8)
+4   {1d2} Stone Giants (AC 17 (15), HD 9 (+8), #At 1 stone club or 1 thrown rock, Dam 3d6 or 3d6, Mv 30' Unarmored 40', Sv F9, Ml 9)
+5   Hydra (AC 19, HD 8, #At 8 bites, Dam 1d10 per bite, Mv 40' (10'), Sv F8, Ml 9)
+6   {1d4} Wereboars (AC 16 †, HD 4*, #At 1 bite, Dam 2d6, Mv 50' Human Form 40', Sv F4, Ml 9)
+7   {1d2} Purple Worms (AC 16, HD 11* (+9) to 20* (+13), #At 1 bite/1 sting, Dam 2d8/1d8+poison, Mv 20' (15'), Sv F6 to F10 (1/2 Hit Dice), Ml 10)
+8   {1d4+1} Flame Salamanders (AC 19 ‡, HD 8*, #At 2 claws/1 bite+heat, Dam 1d4/1d4/1d8+1d8/round, Mv 40', Sv F8, Ml 8)
+9   {1d3} Frost Salamanders (AC 21 ‡, HD 12* (+10), #At 4 claws/1 bite+cold, Dam 1d6/1d6/1d6/1d6/2d6+1d8/round, Mv 40', Sv F12, Ml 9)
+10  {1d6} Vampires (AC 19 ‡, HD 8**, #At 1 weapon or special, Dam 1d8 or by weapon or special, Mv 40' Fly 60', Sv F8, Ml 11)
+
+table: desert 2d8 Desert or Barren
+2   {1d4} Blue Dragons (AC 20, HD 9** (+8), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/3d8 or breath/1d8, Mv 30' Fly 80' (15'), Sv F9 (as Hit Dice), Ml 9)
+3   {2d4} Hell Hounds (AC 18, HD 7**, #At 1 bite or 1 breath, Dam 1d6 or 7d6, Mv 40', Sv F7, Ml 9)
+4   {1d2} Fire Giants (AC 17 (13), HD 11+2* (+9), #At 1 giant weapon or 1 thrown rock, Dam 5d6 or 3d6, Mv 20' Unarmored 40' (10'), Sv F11, Ml 9)
+5   {1d2} Purple Worms (AC 16, HD 11* (+9) to 20* (+13), #At 1 bite/1 sting, Dam 2d8/1d8+poison, Mv 20' (15'), Sv F6 to F10 (1/2 Hit Dice), Ml 10)
+6   {1d6} Giant Flies (AC 14, HD 2, #At 1 bite, Dam 1d8, Mv 30' Fly 60', Sv F2, Ml 8)
+7   {1d6} Giant Scorpions (AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11)
+8   {2d4} Camels (AC 13, HD 2, #At 1 bite/1 hoof, Dam 1/1d4, Mv 50' (10'), Sv F2, Ml 7)
+9   {1d3} Giant Tarantula Spiders (AC 15, HD 4*, #At 1 bite, Dam 1d8 + poison, Mv 50', Sv F4, Ml 8)
+10  {npc-merchants-land}
+11  Hawk (AC 12, HD 1d4 HP, #At 1, Dam 1d2, Mv Fly 160', Sv F1, Ml 7)
+12  {npc-bandits}
+13  {1d6} Ogres (AC 15 (12), HD 4+1, #At 1 weapon, Dam 2d6 with ogre weapon (+3 with normal weapon), Mv 30' Unarmored 40', Sv F4, Ml 10)
+14  {2d8} Griffons (AC 18, HD 7, #At 2 claws/1 bite, Dam 1d4/1d4/2d8, Mv 40' (10') Fly 120' (10'), Sv F7, Ml 8)
+15  {1d6} Gnolls (AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8)
+16  {1d4} Red Dragons (AC 21, HD 10** (+9), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/4d8 or breath/1d8, Mv 30' Fly 80' (20'), Sv F10 (as Hit Dice), Ml 8)
+
+table: grassland 2d8 Grassland
+2   {1d4} Green Dragons (AC 19, HD 8**, #At 2 claws/1 bite or breath/1 tail, Dam 1d6/1d6/3d8 or breath/1d6, Mv 30' Fly 80' (15'), Sv F8 (as Hit Dice), Ml 8)
+3   {1d8} Trolls (AC 16, HD 6*, #At 3, Dam 1d6/1d6/1d10, Mv 40', Sv F6, Ml 10 (8))
+4   {1d6} Giant Flies (AC 14, HD 2, #At 1 bite, Dam 1d8, Mv 30' Fly 60', Sv F2, Ml 8)
+5   {1d6} Giant Scorpion s(AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11)
+6   {npc-bandits}
+7   {1d8} Lions (AC 14, HD 5, #At 2 claws/1 bite, Dam 1d6/1d6/1d10, Mv 50', Sv F5, Ml 9)
+8   {1d6} Boars (AC 13, HD 3, #At 1 tusk, Dam 2d4, Mv 50' (10'), Sv F3, Ml 9)
+9   {npc-merchants-land}
+10  {2d6} Wolfs (AC 13, HD 2, #At 1 bite, Dam 1d6, Mv 60', Sv F2, Ml 8)
+11  {1d6} Giant Bees (AC 13, HD 1d4 HP*, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9)
+12  {1d6} Gnolls (AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8)
+13  {2d4} Goblins (AC 14 (11), HD 1-1, #At 1 weapon, Dam 1d6 or by weapon, Mv 20' Unarmored 30', Sv F1, Ml 7 when alone)
+14  {1d6} Blink Dogs (AC 15, HD 4*, #At 1 bite, Dam 1d6, Mv 40', Sv F4, Ml 6)
+15  {1d4} Dire Wolves (AC 14, HD 4, #At 1 bite, Dam 2d4, Mv 50', Sv F4, Ml 9)
+16  {1d4} Hill Giants (AC 15 (13), HD 8, #At 1, Dam 2d8, Mv 30' Unarmored 40', Sv F8, Ml 8)
+
+table: inhabited 2d8 Inhabited Territories
+2   {1d4} Gold Dragons (AC 22, HD 11** (+9), #At 2 claws/1 bite or breath/1 tail, Dam 2d4/2d4/6d6 or breath/2d4, Mv 30' Fly 80' (20'), Sv F11 (as Hit Dice), Ml 10)
+3   {1d6} Ghouls (AC 14, HD 2*, #At 2 claws/1 bite, Dam 1d4/1d4/1d4, all plus paralysis, Mv 30', Sv F2, Ml 9)
+4   {2d4} Bugbears (AC 15 (13), HD 3+1, #At 1 weapon, Dam 1d8+1 or by weapon +1, Mv 30' Unarmored 40', Sv F3, Ml 9)
+5   {2d4} Goblins (AC 14 (11), HD 1-1, #At 1 weapon, Dam 1d6 or by weapon, Mv 20' Unarmored 30', Sv F1, Ml 7 when alone)
+6   {2d10} Centaurs (AC 15 (13), HD 4, #At 2 hooves/1 weapon, Dam 1d6/1d6/1d6 or by weapon, Mv 50' Unarmored 60' (10'), Sv F4, Ml 8)
+7   {npc-bandits}
+8   {npc-merchants-land}
+9   {npc-pilgrims}
+10  {npc-nobles}
+11  {3d4} Dogs (AC 14, HD 1+1, #At 1 bite, Dam 1d4 + hold, Mv 50', Sv F1, Ml 9)
+12  {1d6} Gargoyles (AC 15 ‡, HD 4**, #At 2 claws/1 bite/1 horn, Dam 1d4/1d4/1d6/1d4, Mv 30' Fly 50' (15'), Sv F6, Ml 11)
+13  {1d6} Gnolls (AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8)
+14  {1d6} Ogres (AC 15 (12), HD 4+1, #At 1 weapon, Dam 2d6 with ogre weapon (+3 with normal weapon), Mv 30' Unarmored 40', Sv F4, Ml 10)
+15  {1d6} Minotaurs (AC 14 (12), HD 6, #At 1 gore/1 bite or 1 weapon, Dam 1d6/1d6 or by weapon + 2, Mv 30' Unarmored 40', Sv F6, Ml 11)
+16  {1d6} Vampires (AC 18 ‡ to 20 ‡, HD 7** to 9** (+8), #At 1 weapon or special, Dam 1d8 or by weapon or special, Mv 40' Fly 60', Sv F7 to F9 (as Hit Dice), Ml 11)
+
+table: jungle 2d8 Jungle
+2   {1d4} Green Dragons (AC 19, HD 8**, #At 2 claws/1 bite or breath/1 tail, Dam 1d6/1d6/3d8 or breath/1d6, Mv 30' Fly 80' (15'), Sv F8 (as Hit Dice), Ml 8)
+3   {npc-bandits}
+4   {2d4} Goblins (AC 14 (11), HD 1-1, #At 1 weapon, Dam 1d6 or by weapon, Mv 20' Unarmored 30', Sv F1, Ml 7 when alone)
+5   {1d6} Hobgoblins (AC 14 (11), HD 1, #At 1 weapon, Dam 1d8 or by weapon, Mv 30' Unarmored 40', Sv F1, Ml 8)
+6   {2d4} Giant Centipedes (AC 11, HD 1d4 Hit Points*, #At 1 bite, Dam poison, Mv 40', Sv NM, Ml 7)
+7   {1d3} Giant Pythons (AC 14, HD 5*, #At 1 bite/1 constrict, Dam 1d4/2d4, Mv 30', Sv F5, Ml 8)
+8   {1d20} Elephants (AC 18, HD 9 (+8)*, #At 2 tusks or 1 trample, Dam 2d4/2d4 or 4d8, Mv 40' (15'), Sv F9, Ml 8)
+9   {3d10} Antelopes (AC 13, HD 1 to 4, #At 1 butt, Dam 1d4 or 1d6 or 1d8, Mv 80' (10'), Sv F1 to F4 (as Hit Dice), Ml 5 (7))
+10  {1d2} Jaguars (AC 16, HD 4, #At 2 claws/1 bite, Dam 1d4/1d4/2d4, Mv 70' Swim 30', Sv F4, Ml 8)
+11  {1d10} Stirges (AC 13, HD 1*, #At 1 bite, Dam 1d4 + 1d4/round blood drain, Mv 10' Fly 60', Sv F1, Ml 9)
+12  {1d6} Giant Tiger Beetles (AC 17, HD 3+1, #At 1 bite, Dam 2d6, Mv 60' (10'), Sv F3, Ml 9)
+13  {1d3} Giant Caecilias (AC 14, HD 6*, #At 1 bite + swallow on 19/20, Dam 1d8 + 1d8/round if swallowed, Mv 20' (10'), Sv F3, Ml 9)
+14  {1d10} Shadows (AC 13 ‡, HD 2*, #At 1 touch, Dam 1d4 + 1 point Strength loss, Mv 30', Sv F2, Ml 12)
+15  {npc-merchants-land}
+16  {1d4} Weretigers (AC 17 †, HD 5*, #At 2 claws/1 bite, Dam 1d6/1d6/2d6, Mv 50' Human Form 40', Sv F5, Ml 9)
+
+table: mountains 2d8 Mountains or Hills
+2   {1d4} White Dragons (AC 17, HD 6**, #At 2 claws/1 bite or breath/1 tail, Dam 1d4/1d4/2d8 or breath/1d4, Mv 30' Fly 80' (10'), Sv F6 (as Hit Dice), Ml 8)
+3   {mountain-roc}
+4   {1d4} Displacers (AC 16, HD 6*, #At 2 blades, Dam 1d8/1d8, Mv 50', Sv F6, Ml 8)
+5   {1d6} Werewolves (AC 15 †, HD 4*, #At 1 bite, Dam 2d4, Mv 60' Human Form 40', Sv F4, Ml 8)
+6   Mountain Lion (AC 14, HD 3+2, #At 2 claws/1 bite, Dam 1d4/1d4/1d6, Mv 50', Sv F3, Ml 8)
+7   {2d6} Wolves (AC 13, HD 2, #At 1 bite, Dam 1d6, Mv 60', Sv F2, Ml 8)
+8   {1d4} Giant Crab Spiders (AC 13, HD 2*, #At 1 bite, Dam 1d8 + poison, Mv 40', Sv F2, Ml 7)
+9   Hawk (AC 12, HD 1d4 HP, #At 1, Dam 1d2, Mv Fly 160', Sv F1, Ml 7)
+10  {3d6} Orcs (AC 14 (11), HD 1, #At 1 weapon, Dam 1d8 or by weapon, Mv 30' Unarmored 40', Sv F1, Ml 8)
+11  {1d10} Giant Bats (AC 14, HD 2, #At 1 bite, Dam 1d4, Mv 10' Fly 60' (10'), Sv F2, Ml 8)
+12  Giant Hawk (AC 14, HD 4, #At 1, Dam 1d6, Mv Fly 150' (10'), Sv F4, Ml 8)
+13  {1d4} Hill Giants (AC 15 (13), HD 8, #At 1, Dam 2d8, Mv 30' Unarmored 40', Sv F8, Ml 8)
+14  {1d2} Chimeras (AC 16, HD 9** (+8), #At 2 claws/3 heads + special, Dam 1d4/1d4/2d4/2d4/3d4 + special, Mv 40' (10') Fly 60' (15'), Sv F9, Ml 9)
+15  {1d4} Dire Wolves (AC 14, HD 4, #At 1 bite, Dam 2d4, Mv 50', Sv F4, Ml 9)
+16  {1d4} Red Dragons (AC 21, HD 10** (+9), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/4d8 or breath/1d8, Mv 30' Fly 80' (20'), Sv F10 (as Hit Dice), Ml 8)
+
+table: mountain-roc 1d6
+1-3 {1d12} Small Rocs (AC 18, HD 6, #At 2 claws/1 bite, Dam 1d6/1d6/2d6, Mv 20' Fly 160' (10'), Sv F6, Ml 8)
+4-5 {1d8} Large Rocs (AC 18, HD 12 (+10), #At 2 claws/1 bite, Dam 1d8/1d8/2d10, Mv 20' Fly 160' (10'), Sv F12, Ml 9)
+6   Giant Roc (AC 18, HD 32 (+16), #At 2 claws/1 bite, Dam 3d6/3d6/6d6, Mv 20' Fly 160' (10'), Sv F32, Ml 10)
+
+table: ocean 2d8 Ocean
+2   {1d4} Sea Dragons (AC 19, HD 8**, #At 1 bite or breath, Dam 3d8 or breath/1d6, Mv Fly 60' (20') Swim 60' (15'), Sv F8 (as Hit Dice), Ml 8)
+3   {ocean-hydra}
+4   {1d3} Sperm Whales (AC 22, HD 36* (+16), #At 1 bite or special, Dam 3d20, Mv Swim 60' (20'), Sv F8, Ml 7)
+5   {1d3} Giant Crocodiles (AC 19, HD 15 (+11), #At 1 bite, Dam 3d8, Mv 30' (10') Swim 30' (10'), Sv F15, Ml 9)
+6   {1d2} Giant Crabs (AC 18, HD 3, #At 2 pincers, Dam 2d6/2d6, Mv 20' Swim 20', Sv F3, Ml 7)
+7   {1d6} Killer Whales (AC 17, HD 6, #At 1 bite, Dam 2d10, Mv Swim 80' (10'), Sv F6, Ml 10)
+8   {1d2} Giant Octopus (AC 19, HD 8, #At 8 tentacles/1 bite, Dam 8x 1d4/1d6, Mv Swim 30', Sv F8, Ml 7)
+9   {2d6} Mako Sharks (AC 15, HD 4, #At 1 bite, Dam 2d6, Mv Swim 80', Sv F4, Ml 7)
+10  {npc-merchants-sea}
+11  {npc-pirates}
+12  {3d6} Bull Sharks (AC 13, HD 2, #At 1 bite, Dam 2d4, Mv Swim 60' (10'), Sv F2, Ml 7)
+13  {ocean-roc}
+14  {1d4} Great White Sharks (AC 19, HD 8, #At 1 bite, Dam 2d10, Mv Swim 60' (10'), Sv F8, Ml 8)
+15  {1d2} Mermaids (AC 12, HD 1*, #At 1, Dam 1d6 or by weapon, Mv Swim 40', Sv F1, Ml 8)
+16  {2d6} Sea Serpents (AC 17, HD 6, #At 1 bite, Dam 2d6, Mv Swim 50' (10'), Sv F6, Ml 8)
+
+table: ocean-roc 1d8
+1-5 {1d8} Large Rocs (AC 18, HD 12 (+10), #At 2 claws/1 bite, Dam 1d8/1d8/2d10, Mv 20' Fly 160' (10'), Sv F12, Ml 9)
+6-8 Giant Roc (AC 18, HD 32 (+16), #At 2 claws/1 bite, Dam 3d6/3d6/6d6, Mv 20' Fly 160' (10'), Sv F32, Ml 10)
+
+table ocean-hydra 1d20
+1-5     Hydra (AC 16, HD 5, #At 5 bites, Dam 1d10 per bite, Mv 40' (10'), Sv F5, Ml 9)
+6-10    Hydra (AC 17, HD 6, #At 6 bites, Dam 1d10 per bite, Mv 40' (10'), Sv F6, Ml 9)
+11-13   Hydra (AC 18, HD 7, #At 7 bites, Dam 1d10 per bite, Mv 40' (10'), Sv F7, Ml 9)
+14-15   Hydra (AC 19, HD 8, #At 8 bites, Dam 1d10 per bite, Mv 40' (10'), Sv F8, Ml 9)
+16-17   Hydra (AC 20, HD 9 (+8), #At 9 bites, Dam 1d10 per bite, Mv 40' (10'), Sv F9, Ml 9)
+18      Hydra (AC 21, HD 10 (+9), #At 10 bites, Dam 1d10 per bite, Mv 40' (10'), Sv F10, Ml 9)
+19      Hydra (AC 22, HD 11 (+9), #At 11 bites, Dam 1d10 per bite, Mv 40' (10'), Sv F11, Ml 9)
+20      Hydra (AC 23, HD 12 (+10), #At 12 bites, Dam 1d10 per bite, Mv 40' (10'), Sv F12, Ml 9)
+
+table: city-day 2d6 City Day Encounter
+2   {1d6} Dopplegangers (AC 15, HD 4*, #At 1 fist, Dam 1d12 or by weapon, Mv 30', Sv F4, Ml 10)
+    masquerading as {masquerading-dopplegangers}
+3   {npc-nobles}
+4   {1d6} Thieves. One is a Level {2d2} Thief. The rest, if any, are Level 1.
+5   {2d4} Bullies
+6   {2d6} City Watch
+7   {npc-merchants-land}
+8   {2d4} Beggars
+9   Priest (Level {1d4} Cleric) and {1d4} followers
+10  {2d6} Mercenaries
+11  Level {1d4+3} Mage and 1d4-1 apprentices (Level 1 Mages)
+12  {1d8} Wererats (AC 13 †, HD 3*, #At 1 bite or 1 weapon, Dam 1d4 or 1d6 or by weapon, Mv 40', Sv F3, Ml 8)
+
+table: city-night 2d6 City Night Encounter
+2   {1d6} Dopplegangers (AC 15, HD 4*, #At 1 fist, Dam 1d12 or by weapon, Mv 30', Sv F4, Ml 10)
+    masquerading as {masquerading-dopplegangers}
+3   {1d10} Shadows (AC 13 ‡, HD 2*, #At 1 touch, Dam 1d4 + 1 point Strength loss, Mv 30', Sv F2, Ml 12)
+4   Press Gang of {2d6-1} (Level 1 Fighters) plus leader (Level {1d4+1} Fighter)
+5   {2d4} Beggars
+6   {1d6} Thieves. One is a Level {2d2} Thief. The rest, if any, are Level 1.
+7   {2d4} Bullies
+8   {npc-merchants-land}
+9   {3d6} Giant Rat (AC 13, HD 1d4 HP*, #At 1 bite, Dam 1d4 + 5% chance of disease, Mv 40' Swim 20', Sv F1, Ml 8)
+10  {2d6} City Watch
+11  Level {1d4+3} Mage and 1d4-1 apprentices (Level 1 Mages)
+12  {1d8} Wererats (AC 13 †, HD 3*, #At 1 bite or 1 weapon, Dam 1d4 or 1d6 or by weapon, Mv 40', Sv F3, Ml 8)
+
+table: masquerading-dopplegangers
+1   Nobles
+2   Thieves
+3   Bullies
+4   City Watch
+5   Merchants
+6   Beggars
+7   Priests
+8   Mercenaries
+
+table: npc-adventurers 1
+1   Adventurers: {1d3} Fighters, {1d2} Thieves, {1d2} Clerics, and {1d2-1} Magic-Users.
+
+table: npc-bandits 1
+1   Bandits: {2d12} Level 1 Fighters and {1d6} Level 1 Thieves, led by a {npc-bandit-leader}.
+
+table: npc-bandit-leader
+1   Level {1d4+1} Fighter
+2   Level {1d4+1} Thief
+
+table: npc-merchants-land 1
+1   {npc-merchants-type} with {2d4} wagons, guarded by {1d4+2} Level 1 Fighters
+    and {1d4} Level 2 Fighters.
+
+table: npc-merchants-sea 1d4
+1-3 Merchant ship with a crew of {2d8+8} regular men.
+4   Large merchant ship with a crew of {2d8+8} regular men plus {1d4+2} Level 1 Fighters
+    and {1d4} Level 2 Fighters.
+
+table: npc-merchants-type 1d2
+1   A single, wealthy merchant
+2   {1d4+1} merchants travelling together
+
+table: npc-pirates 1d2
+1   Buccaneers, consisting of {3d8} Level 1 Fighters, led by a Level {1d4+2} Fighter
+    and {1d3} Level {1d4+1} Fighters.
+2   Pirates, consisting of {6d8} Level 1 Fighters, led by a Level {1d4+1} Fighter
+    and {1d3} Level {1d4} Fighters.
+
+table: npc-nobles 1d100
+1       Duke ({npc-nobles-has-class})
+2       Duchess ({npc-nobles-has-class})
+3       Prince ({npc-nobles-has-class})
+4       Princess ({npc-nobles-has-class})
+5       Viceroy ({npc-nobles-has-class})
+6       Vicereine ({npc-nobles-has-class})
+7       Count ({npc-nobles-has-class})
+8       Countess ({npc-nobles-has-class})
+9       Viscount ({npc-nobles-has-class})
+10      Viscountess ({npc-nobles-has-class})
+11      Baron ({npc-nobles-has-class})
+12      Baroness ({npc-nobles-has-class})
+13-20   Baronet ({npc-nobles-has-class})
+21      Baronetess ({npc-nobles-has-class})
+22-80   Knight ({npc-nobles-has-class})
+81-100  Dame ({npc-nobles-has-class})
+
+table: npc-nobles-has-class 1d10
+1-7     no class
+8-10    {npc-nobles-class}
+
+table: npc-nobles-class 1d10
+1-6 Level {2d4-1} Fighter
+7-8 Level {2d4-1} Magic-User
+9   Level {2d4-1} Cleric
+9   Level {2d4-1} Cleric
+10  Level {2d4-1} Thief
+
+table: npc-pilgrims 1
+1   {3d6} Pilgrims led by {1d4} Clerics

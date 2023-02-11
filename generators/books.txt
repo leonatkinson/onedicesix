@@ -1,0 +1,238 @@
+name: Books
+description: Returns a list of books found in a library. Inspired by
+    https://www.reddit.com/r/BehindTheTables/comments/43wsio/books_of_all_sorts/
+recipe:
+    This book's cover is {book_cover}. The condition is {book_condition}.
+    The subject is {book_subject}, {book_volume}.
+repeat: 3d6-3
+
+table: book_subject
+1   Alchemy ({book_subject_alchemy})
+2   Art ({book_subject_art})
+3   Astronomy ({book_subject_astronomy})
+4   Beasts ({book_subject_beasts})
+5   Demonology ({book_subject_demonology})
+6   Divination ({book_subject_divination})
+7   Healing ({book_subject_healing})
+8   Herbs ({book_subject_herbs})
+9   History ({book_subject_history})
+10  Languages ({book_subject_languages})
+11  Literature ({book_subject_literature})
+12  Mining and Mineralogy ({book_subject_mining})
+13  Music ({book_subject_music})
+14  Necromancy ({book_subject_necromancy})
+15  Plays ({book_subject_plays})
+16  Poetry ({book_subject_poetry})
+17  Prophecies ({book_subject_prophecies})
+18  Theology ({book_subject_theology})
+19  Magic ({book_subject_magic})
+20  Travel, Trade & Exploration ({book_subject_travel})
+
+table: book_subject_alchemy
+1   healing
+2   metallurgy
+3   pyromancy
+4   poisons
+5   potions
+6   recipes
+
+table: book_subject_art
+1  fortresses and palaces
+2  painting
+3  sketching
+4  sculpture
+5  stonemasonry
+6  temples and tombs
+
+table: book_subject_astronomy
+1 comets
+2 constellations
+3 moon
+4 sun
+5 stars
+6 strange phenomena
+
+table: book_subject_beasts
+1 domestic beasts
+2 habits
+3 handling
+4 husbandry
+5 poisonous beasts
+6 regional bestiary
+
+table: book_subject_demonology
+1 conjurings
+2 exorcisms
+3 fiendish bargains
+4 fiendish bestiary
+5 fiendish realms
+6 fiendish symbols
+
+table: book_subject_divination
+1 anthropomancy
+2 crystal gazing
+3 oneiromancy
+4 palm reading
+5 tarot cards
+6 tea leaves
+
+table: book_subject_healing
+1 alchemical remedies
+2 anatomy
+3 herbal remedies
+4 prayers
+5 rituals
+6 surgery
+
+table: book_subject_herbs
+1 healing herbs
+2 mushrooms
+3 poisons
+4 roots
+5 trees
+6 wildflowers
+
+table: book_subject_history
+1 ancient
+2 cultural
+3 economic
+4 military
+5 political
+6 regional
+
+table: book_subject_languages
+1 ancient
+2 forbidden
+3 exotic
+4 grammar and punctuation
+5 translations
+6 traveler's phrases
+
+table: book_subject_literature
+1 adventure
+2 fairy tales
+3 folk tales
+4 murder mystery
+5 romance
+6 satire
+
+table: book_subject_mining
+1 gems
+2 metals
+3 mining sties
+4 strategy
+5 rocks
+6 smithing
+
+table: book_subject_music
+1 heroic ballads
+2 love ballads
+3 bawdy tunes
+4 dirges and laments
+5 hymns
+6 works of a celebrated singer
+
+table: book_subject_necromancy
+1 animation
+2 corpses
+3 lichdom
+4 spirits and souls
+5 undead bestiary
+6 vampirism
+
+table: book_subject_plays
+1 comedy
+2 drama
+3 history
+4 romance
+5 satire
+6 tragedy
+
+table: book_subject_poetry
+1 ballads
+2 epic poetry
+3 love poetry
+4 lyric poetry
+5 odes and laments
+6 works of a celebrated poet
+
+table: book_subject_prophecies
+1 apocalypse
+2 astronomical events
+3 birds
+4 dreams
+5 visions
+6 weather
+
+table: book_subject_theology
+1 afterlife
+2 rituals and practices
+3 religious history
+4 saints and martyrs
+5 sacred symbols
+6 sacred texts
+
+table: book_subject_magic
+1 elementalism
+2 enchantment
+3 illusions
+4 summoning
+5 teleportation and travel
+6 warding
+
+table: book_subject_travel
+1 ancient ruins
+2 exotic travelogue
+3 economics and taxation
+4 foreign cultures
+5 regional landmarks and terrain
+6 trade routes
+
+
+table: book_condition 2d6
+2   blank
+3   pristine
+4   poor, ink stains obscuring a fair amount of the pages
+5   damaged by water but readable
+6   good and well-used, including some handwritten notes in the margins
+7   worn and tattered
+8   badly damaged, nearly illegible
+9   ancient. Pages crumble as they turn
+10  vandalized, missing many pages
+11  unfinished, 1/{2d4} of pages blank
+12  hollowed out, hiding {book_hidden_contents}
+
+table: book_hidden_contents
+1   a locket
+2   a knife
+3   a small hammer
+4   a small scroll
+5   a vial of mysterious liquid
+6   a ring
+
+table: book_cover 1d12
+1   missing, wrapped in string
+2   stained leather
+3   wooden
+4   paper
+5   animal hide
+6   stone, bound with iron rings
+7   iron and hinged
+8   leather and ebedded with gems
+9   leather, the title branded into the cover
+10  leather, gilded spine
+11  torn off, wrapped in a leather strap
+12  tree bark
+
+
+table: book_volume
+1   a single volume, the author's only published work
+2   a single volume, the author's only surviving work
+3   a single volume, written by a prolific but obscure author
+4   a single volume, written by a well-known author
+5   the sequel to a book by the same author
+6   a part of a series of {1d6+2} books
+7   a single volume of a larger work with {2d6+2} volumes
+8   an edition of a regularly published book with multiple authors
+9   a collection of works by the same author
+10  an anthology of works by several authors

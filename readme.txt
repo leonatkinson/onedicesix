@@ -1,4 +1,4 @@
-# One Dice Six
+=== One Dice Six ===
 Contributors: leonatkinson
 Tags: random, rpg, role-playing-game, osr
 Requires at least: 5.2.0
@@ -9,7 +9,7 @@ License URI: https://opensource.org/licenses/MIT
 
 Add block to display random generators defined by simple domain specific language.
 
-## Description
+== Description ==
 
 One Dice Six adds a block to the gutenberg editor that represents a random
 generator. The generator itself is defined in a text file inside the plugin's
@@ -70,18 +70,22 @@ new expressions, the generator makes another pass. Processing continues until
 no expressions remain. This allows for results from one table to refer to
 another or even recursively as in the example above.
 
-## Installation
+== Installation ==
 
 1. Copy the entire plugin folder into wp-content/plugins.
 1. Activate the plugin
 1. Place a One Dice Six block on a page.
 
-## Screenshots
+== Frequently Asked Questions ==
 
-1. ![Public view of the Mage Spellbook generator](screenshot/rendered.png?raw=true "Public View")
-2. ![View from gutenberg editor](screenshot/block.png?raw=true "Editor View")
+tbd
 
-## Changelog
+== Screenshots ==
 
-### 1.0.0
+1. Public view of the Mage Spellbook generator.
+2. View from gutenberg editor.
+
+== Changelog ==
+
+= 1.0.0 =
 * Initial Release

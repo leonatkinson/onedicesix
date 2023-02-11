@@ -1,0 +1,433 @@
+name: Religion
+description: Generates a pantheistic religion. This generator should expand to
+    include more about the greater religion, including: creation myth and major
+    stories about the gods.
+recipe: {god}
+repeat: 2d6
+
+table: god 1
+1   Name: {name};
+    Influence: {influence};
+    Gender: {gender};
+    Apparent Age: {age};
+    Physical Representation: {body};
+    Power: {power};
+    Offerings: {offerings};
+    Prayers: {prayers};
+    Holidays: {holidays}
+
+
+table: influence 2d4-1
+1   None
+2   Considered legend with no direct proof of existence
+3   Mostly observes but rarely produces miracles
+4   Actively supports followers
+5   Regularly appears to some people
+6   Actively participates in human affairs
+7   Rules a kingdom or empire
+
+table: gender 1d100
+1-45    male
+46-85   female
+86-96   none
+97-100  hermaphodite
+
+table: age 1d100
+1-5     Child-like
+6-10    Youthful
+11-50   Mature
+51-65   Middle-aged
+66-80   Old
+81-99   Ancient
+100     Any, Changeable
+
+table: body 1d100
+1-50    Human
+51-74   Human with the head of a {animal}
+75-95   {animal}
+96-100  {thing}
+
+table: animal
+1   alligator
+2   antelope
+3   baboon
+4   bear
+5   bison
+6   bobcat
+7   bull
+8   camel
+9   cat
+10  chicken
+11  crane
+12  crow
+13  deer
+14  dinosaur
+15  dog
+16  dolphin
+17  dove
+18  dragon
+19  duck
+20  elephant
+21  emu
+22  frog
+23  gazelle
+24  giraffe
+25  goat
+26  goose
+27  hedgehog
+28  hippopotamus
+29  hyena
+30  iguana
+31  lion
+32  lizard
+33  monkey
+34  octopus
+35  otter
+36  parrot
+37  pig
+38  pigeon
+39  python
+40  rabbit
+41  rhinoceros
+42  salamander
+43  salmon
+44  shark
+45  sheep
+46  squid
+47  squirrel
+48  tiger
+49  tortoise
+50  trout
+51  turtle
+52  vulture
+53  walrus
+54  warthog
+55  whale
+56  yak
+57  zebra
+
+table: thing
+1   a tree
+2   a cloud
+3   blob
+4   a mushroom
+5   a brain
+6   a cave
+7   a mountain
+8   a star
+9   the sun
+10  the moon
+11  a statue
+
+table: power
+1-10    Patron Saint of {patronage}
+11-69   God of {domain}
+70-79   God of {domain}, Protector of {patronage}
+80-89   God of {domain} and {domain}
+90-97   God of {domain}, {domain} and {domain}
+98      God of {domain}, ruler of the gods
+99      God of {domain} and {domain}, ruler of the gods
+100     God of {domain}, {domain}, and {domain}, ruler of the gods
+
+table: domain
+1   Air
+2   Animals
+3   Archery
+4   Art
+5   Battle
+6   Beauty
+7   Chaos
+8   Childbirth
+9   Communication
+10  Death
+11  Destruction
+12  Earth
+13  Ecstasy
+14  Eloquence
+15  Evil
+16  Fertility
+17  Fire
+18  Fortune
+19  Games
+20  Good
+21  Harvest
+22  Health
+23  Heroes
+24  Insanity
+25  Justice
+26  Knowledge
+27  Law
+29  Life
+30  Light
+31  Lightning
+32  Logic
+34  Love
+35  Luck
+36  Madness
+37  Magic
+38  Marriage
+39  Mediation
+40  Medicine
+41  Metal
+42  Moon
+43  Music
+44  Nature
+45  Plants
+46  Poetry
+47  Protection
+48  Sea
+49  Sleep
+50  Sports
+51  Stars
+52  Stone
+53  Storms
+55  Strength
+56  Sun
+57  Time
+58  Trade
+59  Travel
+60  Trickery
+61  Vengeance
+62  War
+63  Warcraft
+64  Water
+65  Wealth
+66  Winds
+67  Wisdom
+68  Youth
+
+table: patronage
+1   Actors
+2   Architects
+3   Artists
+4   Astronomers
+5   Athletes
+6   Authors
+7   Bakers
+8   Bankers
+9   Barren Women
+10  Beggars
+11  Blind People
+12  Bricklayers
+13  Brides
+14  Builders
+15  Carpenters
+16  Children
+17  Comedians
+18  Cooks
+19  Cripples
+20  Dancers
+21  Deaf People
+22  Desperate Situations
+23  Domestic Animals
+24  Dying People
+25  Emigrants
+26  Falsely Accused People
+27  Farmers
+29  Fathers
+30  Fishermen
+31  Mortitians
+32  Gardeners
+34  Girls
+35  Glassworkers
+36  Gravediggers
+37  Grocers
+38  Innkeepers
+39  Invalids
+40  Jewelers
+41  Journalists
+42  Laborers
+43  Lawyers
+44  Learning
+45  Lost Articles
+46  Lovers
+47  Mariners
+48  Married Women
+49  Messengers
+50  Midwives
+51  Quests
+52  Mothers
+53  Musicians
+55  Nurses
+56  Orators
+57  Orphans
+58  Painters
+59  Pawnbrokers
+60  Philosophers
+61  Physicians
+62  Plasterers
+63  Poets
+64  Poor People
+65  Preachers
+66  Pregnant Women
+67  Priests
+68  Printers
+69  Prisoners
+70  Radio Workers
+71  Rheumatism
+72  Sailors
+73  Scholars
+74  Scientists
+75  Sculptors
+76  Secretaries
+77  Servants
+78  Sick People
+79  Soldiers
+80  Students
+81  Surgeons
+82  Tax Collectors
+83  Teachers
+84  Theologians
+85  Travelers
+86  Vintners
+87  Widows
+88  Writers
+
+table: offerings 1d100
+1-50    {offering}
+51-90   {offering} or {offering}
+91-100  {offering}, {offering}, or {offering}
+
+table: offering 2d3-1
+1   none
+2   money
+3   food
+4   animals
+5   humans
+
+table: prayers 1d100
+1-50    {prayer}
+51-90   {prayer} or {prayer}
+91-100  {prayer}, {prayer}, or {prayer}
+
+table: prayer 1d4
+1   submissive posture
+2   spoken word
+3   singing
+4   written
+
+table: holidays 1d100
+1-90    {holiday}
+91-99   {holiday} and {holiday}
+100     {holiday}, {holiday}, and {holiday}
+
+table: holiday 1d16
+1   Vernal Equinox
+2   Summer Solstice
+3   Autumnal Equinox
+4   Winter Solstice
+5   The first day of the year
+6   The last day of the year
+7   Day of the Dead
+8   Birth of the Diety
+9   Death of the Diety
+10  Festival of Indulgence
+11  Month of Sacrifice
+12  Day of Freedom
+13  Harvest Festival
+14  Day of Atonement
+15  Weekly Day of Rest
+16  Night of Destruction
+
+table: name 1d100
+1-22      {name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_consonant}
+23-31     {name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_vowel}{name_consonant}
+32-38     {name_vowel}{name_consonant}{name_vowel}{name_consonant}
+39-44     {name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_consonant}
+45-50     {name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_vowel}{name_consonant}
+51-56     {name_vowel}{name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_consonant}
+57-61     {name_consonant}{name_vowel}{name_vowel}{name_consonant}
+62-66     {name_consonant}{name_vowel}{name_consonant}
+67-70     {name_vowel}{name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_vowel}{name_consonant}
+71-73     {name_vowel}{name_consonant}{name_vowel}{name_vowel}{name_consonant}
+74-76     {name_consonant}{name_vowel}{name_consonant}{name_vowel}
+77-79     {name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_consonant}{name_vowel}
+80-81     {name_vowel}{name_consonant}{name_vowel}
+82-83     {name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_vowel}
+84-85     {name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_consonant}
+86-87     {name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_vowel}{name_vowel}{name_consonant}
+88-89     {name_vowel}{name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_consonant}
+90-91     {name_vowel}{name_consonant}{name_vowel}{name_consonant}{name_vowel}
+92        {name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_vowel}
+93        {name_vowel}{name_consonant}{name_vowel}{name_vowel}{name_consonant}{name_vowel}{name_consonant}
+94        {name_consonant}{name_vowel}{name_vowel}{name_consonant}{name_vowel}{name_consonant}
+95        {name_vowel}{name_vowel}{name_consonant}{name_vowel}{name_consonant}
+96        {name_vowel}{name_consonant}{name_vowel}{name_vowel}{name_vowel}{name_consonant}
+97        {name_vowel}{name_consonant}{name_vowel}{name_vowel}
+98        {name_consonant}{name_vowel}{name_vowel}{name_consonant}{name_vowel}{name_vowel}{name_consonant}
+99        {name_vowel}{name_consonant}{name_vowel}{name_vowel}{name_consonant}{name_vowel}
+100       {name_consonant}{name_vowel}{name_vowel}{name_consonant}{name_vowel}{name_consonant}{name_vowel}{name_consonant}
+
+table: name_vowel 1d100
+1-38      A
+39-61     E
+62-78     I
+79-90     O
+91-99     U
+100       Y
+
+table: name_consonant 1d100
+1-7       S
+8-14      N
+15-20     L
+21-26     M
+27-31     H
+32-35     J
+36-38     B
+39-42     R
+43-44     D
+45-46     Z
+47        TH
+48        PH
+49        C
+50        SH
+51        CH
+52        T
+53        K
+54        V
+55        G
+56        P
+57        SS
+58        W
+59        BR
+60        ST
+61        MM
+62        RD
+63        RN
+64        TTH
+65        HN
+66        RC
+67        RK
+68        THR
+69        ZZ
+70        CCH
+71        LCH
+72        DD
+73        THN
+74        SHM
+75        F
+76        MS
+77        DR
+78        CT
+79        PHT
+80        CL
+81        GG
+82        RTH
+83        BN
+84        BS
+85        X
+86        ND
+87        NDR
+88        LL
+89        Q
+90        NJ
+91        KK
+92        LD
+93        CHR
+94        TR
+95        LK
+96        LN
+97        PHR
+98        ZR
+99        RSH
+100       BB

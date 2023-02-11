@@ -1,0 +1,214 @@
+name: City Person
+description: People you might meet wandering around in a city.
+recipe: {city-person}
+repeat: 1d6
+
+table: city-person 1d10
+1       {city-person-adventurer}
+2       {city-person-artist}
+3-5     {city-person-business}
+6       {city-person-government}
+7       {city-person-sage}
+8-10    {city-person-trades}
+
+
+table: city-person-adventurer 1d36
+1       Assassin
+2-11    Beggar
+12-14   Bodyguard
+15      Cleric Adventurer
+16      Fighter Adventurer
+17-19   Gambler
+20-22   Gentleman/Lady
+23      Guide
+24      Hunter
+25      Madman
+26      Magic-User Adventurer
+27-28   Mercenary
+29      Spy
+30      Thief Adventurer
+31-33   Town Drunk
+34-35   Vagrant
+36      Vigilante
+
+table: city-person-artist 1d27
+1       Athlete
+2-4     Dancer
+5       Embroiderer
+6-8     Entertainer
+9       Fresco Painter
+10-12   Juggler
+13      Manuscript Artist
+14-15   Mime
+16      Mosaic Artist
+17      Novelist
+18      Oil Painter
+19      Playwright
+20-21   Poet
+22      Sculptor
+23-25   Singer
+26      Stained Glass Artist
+27      Tapestry Weaver
+
+table: city-person-business
+1-2     Animal Trainer ({trained-animal})
+3       Apothecary
+4       Banker
+5       Barber
+6-8     Bartender
+9-13    Bazaar Merchant
+14-18   Boardinghouse Keeper
+19      Boatman
+20      Caravan Master
+21      Chandler
+22      Chemist
+23      Ferryman
+24      Herbalist
+25-29   Innkeeper
+30      Jeweler
+31      Kennel Keeper
+32      Locksmith
+33-37   Madame
+38-47   Merchant
+48      Moneylender
+49-53   Peddler
+54      Public Bathkeeper
+55-57   Saloonkeeper
+58      Ship Captain
+59      Smuggler
+60      Stablekeeper
+61-63   Tavernkeeper
+64      Taxidermist
+65      Translator
+66      Undertaker
+67      Wellkeeper
+
+table: trained-animal
+1       Camels
+2       Cats
+3-12    Dogs
+13      Elephants
+14-15   Falcons
+16-25   Horses
+26      Marine
+27-28   Oxen
+29      Rodents
+30      Wild
+
+table: city-person-government 1d36
+1       Constable
+2-3     Craft Guildsman
+4       Diplomat
+5-6     Government Employee
+7       Government Official
+8-12    Guardsman
+13      Guild Officer
+14      Jailor
+15      Judge
+16      Land Officer
+17      Lawyer
+18      Lighthouse Keeper
+19      Magic-User Guild Officer
+20      Majordomo
+21      Mayor
+22      Merchants' Guild Officer
+23-25   Military Officer
+26-28   Nobleman/Noblewoman
+29      Politician
+30      Royalty
+31      Tax Assessor
+32      Thieves' Guild Officer
+33      Treasurer
+34-36   Watchman
+
+
+table: city-person-sage
+1       Alchemist
+2       Archaeologist
+3-4     Astrologer
+5-6     Astronomer
+7       Botanist
+8       Geologist
+9-10    Historian
+11      Linguist
+12-13   Mathematician
+14      Pharmacist
+15-19   Philosopher
+20-21   Physician
+22      Physicist
+23      Sage of Architecture
+24      Sage of Geometry
+25      Surgeon
+26-30   Theologian
+
+table: city-person-trades
+1       Armorer
+2-3     Baker
+4       Basketweaver
+5       Beekeeper
+6-7     Blacksmith
+8       Bonecarver
+9       Bootmaker
+10      Bowyer
+11-12   Brewer
+13      Broommaker
+14      Butcher
+15      Candlemaker
+16-17   Carpenter
+18      Carter
+19      Charcoalmaker
+20      Chef
+21-25   Church Employee
+26      Clockmaker
+27      Coachman
+28-32   Construction Worker
+33      Cooper
+34      Dairy Worker
+35      Diver
+36      Docksman / Wharfsman
+37-41   Farmer
+42-43   Fisherman
+44      Fletcher
+45      Foundry Worker
+46      Freighter
+47      Furnituremaker
+48      Furrier
+49      Gemcutter
+50      Glassblower
+51      Goldsmith
+52      Graveyard Keeper
+53-57   Harlot
+58      Healer
+59-63   Indentured Servant
+64      Laborer
+65      Leatherworker
+66      Logger
+67      Lumberyard Worker
+68-69   Mason
+70      Metalsmith
+71-72   Miller
+73      Monastery Worker
+74-83   Peasant
+84      Potter
+85      Ropemaker
+86-87   Sailor
+88      Schoolteacher
+89      Scribe
+90-99   Serf
+100     Servant
+101     Shipwright
+102     Shoemaker
+103-112 Slave
+113     Soapmaker
+114     Stoneworker
+115     Tailor
+116     Tanner
+117     Thatcher
+118     Trading Post Employee
+119     Warehouse Worker
+120     Weaver
+121     Welldigger
+122     Wheelwright
+123     Winemaker
+124     Woodcarver
+125     Woodcutter

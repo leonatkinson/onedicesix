@@ -1,0 +1,84 @@
+name: Magic User Spellbook
+description: Tables for generating spellbooks
+recipe: does not use recipes
+repeat: 1
+
+table: mage-spells-1
+1   Charm Person
+2   Detect Magic
+3   Floating Disc
+4   Hold Portal
+5   Light*
+6   Magic Missile
+7   Magic Mouth
+8   Protection from Evil*
+9   Read Languages
+10  Shield
+11  Sleep
+12  Ventriloquism
+
+table: mage-spells-2
+1   Continual Light*
+2   Detect Evil*
+3   Detect Invisible
+4   ESP
+5   Invisibility
+6   Knock
+7   Levitate
+8   Locate Object
+9   Mirror Image
+10  Phantasmal Force
+11  Web
+12  Wizard Lock
+
+table: mage-spells-3
+1   Clairvoyance
+2   Darkvision
+3   Dispel Magic
+4   Fireball
+5   Fly
+6   Haste*
+7   Hold Person
+8   Invisibility 10‘ radius
+9   Lightning Bolt
+10  Protection from Evil 10’ radius*
+11  Protection from Normal Missiles
+12  Water Breathing
+
+table: mage-spells-4
+1   Charm Monster
+2   Confusion
+3   Dimension Door
+4   Growth of Plants*
+5   Hallucinatory Terrain
+6   Ice Storm
+7   Massmorph
+8   Polymorph Other
+9   Polymorph Self
+10  Remove Curse*
+11  Wall of Fire
+12  Wizard Eye
+
+table: mage-spells-5
+1   Animate Dead
+2   Cloudkill
+3   Conjure Elemental
+4   Feeblemind
+5   Hold Monster
+6   Magic Jar
+7   Passwall
+8   Telekinesis
+9   Teleport
+10  Wall of Stone
+
+table: mage-spells-6
+1   Anti-Magic Shell
+2   Death Spell
+3   Disintegrate
+4   Flesh to Stone*
+5   Geas*
+6   Invisible Stalker
+7   Lower Water
+8   Projected Image
+9   Reincarnate
+10  Wall of Iron

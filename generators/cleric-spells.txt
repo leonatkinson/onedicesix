@@ -1,0 +1,64 @@
+name: Cleric Spells
+description: Tables for spells known by clerics
+recipe: does not use recipes
+repeat: 1
+
+table: cleric-spells-1
+1   Cure Light Wounds*
+2   Detect Evil*
+3   Detect Magic
+4   Light*
+5   Protection from Evil*
+6   Purify Food and Water
+7   Remove Fear*
+8   Resist Cold
+
+table: cleric-spells-2
+1   Bless*
+2   Charm Animal
+3   Find Traps
+4   Hold Person
+5   Resist Fire
+6   Silence 15' radius
+7   Speak with Animals
+8   Spiritual Hammer
+
+table: cleric-spells-3
+1   Continual Light*
+2   Cure Blindness
+3   Cure Disease*
+4   Growth of Animals
+5   Locate Object
+6   Remove Curse*
+7   Speak with Dead
+8   Striking
+
+table: cleric-spells-4
+1   Animate Dead
+2   Create Water
+3   Cure Serious Wounds*
+4   Dispel Magic
+5   Neutralize Poison*
+6   Protection from Evil 10' radius*
+7   Speak with Plants
+8   Sticks to Snakes
+
+table: cleric-spells-5
+1   Commune
+2   Create Food
+3   Dispel Evil
+4   Insect Plague
+5   Quest*
+6   Raise Dead*
+7   True Seeing
+8   Wall of Fire
+
+table: cleric-spells-6
+1   Animate Objects
+2   Blade Barrier
+3   Find the Path
+4   Heal*
+5   Regenerate
+6   Restoration
+7   Speak with Monsters
+8   Word of Recall

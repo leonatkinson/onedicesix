@@ -1,0 +1,247 @@
+name: NPC Personality
+description: Based on 1e DMG page 100.
+recipe:
+    Wealth: {wealth};
+    Appearance: {appearance};
+    General: {general};
+    Sanity: {sanity};
+    General Tendencies: {tendency}, {tendency}, {tendency};
+    Personality: {personality};
+    Disposition: {disposition};
+    Intellect: {intellect};
+    Nature: {nature};
+    Materialism: {materialism};
+    Honesty: {honesty};
+    Bravery: {bravery};
+    Energy: {energy};
+    Thrift: {thrift};
+    Morals: {morals};
+    Piety: {piety};
+    Interests: {interests}
+repeat: 1
+
+
+table: wealth
+1   none
+2-3 scant
+4-7 average
+8   above average
+9   exceptional
+10  superabundant
+
+table: appearance
+1   young
+2-3 youthful
+4-7 mature
+8   middle-aged
+9   old
+10  ancient
+
+table: general
+1   dirty
+2   clean
+3   unkempt
+4   immaculate
+5   rough
+6   ragged
+7   dandyish
+8   foppish
+9   non-descript
+10  imposing
+
+table: sanity
+1-12    very stable
+13-73   normal
+74-86   neurotic
+87-98   unstable
+99      insane
+100     maniacal
+
+table: tendency
+1   optimist
+2   pessimist
+3   hedonist
+4   altruist
+5   helpful/kindly
+6   careless
+7   capricious/mischievous
+8   sober
+9   curious/inquisitive
+10  moody
+11  trusting
+12  suspicious/cautious
+13  precise/exacting
+14  perceptive
+15  opinionated/contrary
+16  violent/warlike
+17  studious
+18  foul/barbaric
+19  cruel/callous
+20  practical joker/prankster
+21  servile/obsequious
+22  fanatical/obsessive
+23  malevolent
+24  loquacious
+
+table: personality
+1-5 average, {personality_average}
+6-7 extroverted, {personality_extroverted}
+8   introverted, {personality_introverted}
+
+table: personality_average
+1   modest
+2   egoist/arrogant
+3   friendly
+4   aloof
+5   hostile
+6   well-spoken
+7   diplomatic
+8   abrasive
+
+table: personality_extroverted
+1  forceful
+2  overbearing
+3  friendly
+4  blustering
+5  antagonistic
+6  rude
+7  rash
+8  diplomatic
+
+table: personality_introverted
+1  retiring
+2  taciturn
+3  friendly
+4  aloof
+5  hostile
+6  rude
+7  courteous
+8  solitary/secretive
+
+table: disposition
+1   cheerful
+2   morose
+3   compassionate/sensitive
+4   unfeeling/insensitive
+5   humble
+6   proudlhaughty
+7   even tempered
+8   hot tempered
+9   easy going
+10  harsh
+
+table: intellect
+1.  dull
+2-3 average
+4-5 active
+6   dreaming
+7   ponderous
+8   anti-intellectual
+9   scheming
+10  brilliant
+
+table: nature
+1 soft-hearted
+2 forgiving
+3 hard-hearted
+4 unforgiving
+5 jealous
+6 vengeful
+
+table: materialism
+1 aesthetic
+2 intellectualist
+3 average
+4 covetous
+5 greedy
+6 avaricious
+
+table: honesty
+1   scrupulous
+2   very honorable
+3   truthful
+4-6 average
+7   liar
+8   deceitful
+
+table: bravery
+1-3 normal
+4   foolhardy
+5   brave
+6   fearless
+7   cowardly
+8   craven
+
+table: energy
+1   slothful
+2   lazy
+3-5 normal
+6-8 energetic
+8   driven
+
+table: thrift
+1   miserly
+2   mean
+3   thrifty
+4-5 average
+6-7 spendthrift
+8   wastrel
+
+table: morals
+1-21    aesthetic
+22-41   virtuous
+42-61   normal
+62-81   lusty
+82-101  lustful
+102-121 immoral
+122-141 amoral
+142     perverted
+143     sadistic
+144     depraved
+
+table: piety
+1   saintly
+2   martyr/zealot
+3   pious
+4   reverent
+5-8 average
+9   impious
+10  irreverent
+11  iconoclastic
+12  irreligious
+
+table: interests
+1       religion
+2       legends
+3       history
+4       nature
+5       horticulture
+6       husbandry
+7       exotic animals
+8       hunting
+9       fishing
+10      handicrafts
+11      athletics
+12      politics
+13      wines & spirits
+14      foods & preparation
+15      gambling
+16      drugs
+17-20   collecting {collection}
+21      community service
+22      altruism
+23-24   none
+
+table: collection
+1   knives & daggers
+2   swords
+3   weapons
+4   shields & weapons
+5   armor
+6   books & scrolls
+7   minerals & gems
+8   ornaments & jewelry
+9   coins & tokens
+10  trophies & skins
+11  porcelain, china & crystal
+12  artwork
