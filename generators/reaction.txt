@@ -1,0 +1,17 @@
+name: Reaction
+description: How to monsters or NPCs react
+recipe: {reaction}
+repeat: 1
+
+table: reaction 2d6
+2-3     <strong>The time for talk is over.</strong>
+        Morale check is {2d6}. Failure means flight or surrender. Otherwise, attack immediately.
+4-6     <strong>Someone will get their head bashed in.</strong>
+        Attitude is aggressive and negative.</strong>
+        Apply -4 to the next check if there’s room for negotiation. Otherwise, it’s fight or flight.
+7-9     <strong>Clear and present danger.</strong>
+        Cautious and aware of possible trouble. Disengage without violence if possible, or provide a final warning.
+10-11   <strong>Trust and verify.</strong>
+        Neutral and open to a fair exchange. Apply +4 to the next check. Any final offers are take-it-or-leave-it.
+12      <strong>This could be the beginning of a beautiful friendship.</strong>
+        Relaxed presumption of courtesy.

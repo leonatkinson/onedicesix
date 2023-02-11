@@ -1,0 +1,564 @@
+name: Encounters in the Tosasth Valley
+description: Tables for generating encounters by location
+recipe: {encounter} <br>({evocative})
+repeat: 1
+
+table: encounter 1d12
+1-4     <strong>Wandering</strong><br>
+        {wandering}<br>
+        <br>
+        {reaction}
+5-6     <strong>Wandering</strong><br>
+        {wandering}<br>
+        {with-or-against}<br>
+        {wandering}<br>
+        <br>
+        {reaction}
+7-10    <strong>Lair</strong> {lair-location}, {lair-type}.<br>
+        {lair}
+11      <strong>Landmark</strong><br>
+        {landmark}
+12      <strong>{dungeon}</strong>
+
+table: with-or-against 1d6
+1-2 working with
+3-4 {2d6} rounds later followed by
+5 fighting with
+6 {1d6} rounds later chased by
+
+table: wandering 3d10
+3   Green Dragon AC 19, HD {1d6+5}**, #At 2 claws/1 bite or breath/1 tail, Dam 1d6/1d6/3d8 or breath/1d6, Mv 30' Fly 80' (15'), Sv F8
+4   White Dragon AC 17, HD {1d6+3}**, #At 2 claws/1 bite or breath/1 tail, Dam 1d4/1d4/2d8 or breath/1d4, Mv 30' Fly 80' (10'), Sv F6
+5   {1d8} Trolls AC 16, HD 6*, #At 3, Dam 1d6/1d6/1d10, Mv 40', Sv F6, Ml 10 (8)
+6   Giant Roc AC 18, HD 32 (+16), #At 2 claws/1 bite, Dam 3d6/3d6/6d6, Mv 20' Fly 160' (10'), Sv F32, Ml 10
+7   {2d8} Plague Hound AC 14, HD 4*, #At 1 bite + special, Dam 2d4 bite + paralysis, Mv 50', Sv F4 Ml 9, XP 280
+8   {1d6} Giant Flies AC 14, HD 2, #At 1 bite, Dam 1d8, Mv 30' Fly 60', Sv F2, Ml 8
+9   {1d6} Giant Scorpion AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11
+10  {1d6} Werewolves AC 15 †, HD 4*, #At 1 bite, Dam 2d4, Mv 60' Human Form 40', Sv F4, Ml 8
+11  Mountain Lion AC 14, HD 3+2, #At 2 claws/1 bite, Dam 1d4/1d4/1d6, Mv 50', Sv F3, Ml 8
+12  Bandits, {2d12} Level 1 Fighters and {1d6} Level 1 Thieves, led by a {npc-bandit-leader}.
+13  {1d8} Lions AC 14, HD 5, #At 2 claws/1 bite, Dam 1d6/1d6/1d10, Mv 50', Sv F5, Ml 9
+14  {4d6} Zombies AC 12, HD 2, #At 1, Dam 1d8 or by weapon, Mv 20', Sv F2, Ml 12, XP 75
+15  {2d8} Flesh Eater Zombies AC 14, HD 2, #At 2 claws/1 bite, Dam 1d3 claw, 1d6 bite, Mv 40', Sv F2, Ml 12, XP 75
+16  {1d6} Boars AC 13, HD 3, #At 1 tusk, Dam 2d4, Mv 50' (10'), Sv F3, Ml 9
+17  {1d8} Explorers, guarded by Level {1d4} NPC party
+18  {2d6} Wolves AC 13, HD 2, #At 1 bite, Dam 1d6, Mv 60', Sv F2, Ml 8
+19  {3d6} Orcs AC 14 (11), HD 1, #At 1 weapon, Dam 1d8 or by weapon, Mv 30' Unarmored 40', Sv F1, Ml 8
+20  {1d10} Giant Bats AC 14, HD 2, #At 1 bite, Dam 1d4, Mv 10' Fly 60' (10'), Sv F2, Ml 8
+21  {1d6} Giant Bees AC 13, HD 1d4 HP*, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9
+22  {1d6} Gnolls AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8
+23  {1d4} Hill Giants AC 15 (13), HD 8, #At 1, Dam 2d8, Mv 30' Unarmored 40', Sv F8, Ml 8
+24  {2d4} Goblins AC 14 (11), HD 1-1, #At 1 weapon, Dam 1d6 or by weapon, Mv 20' Unarmored 30', Sv F1, Ml 7 when alone
+25  {1d2} Chimeras AC 16, HD 9** (+8), #At 2 claws/3 heads + special, Dam 1d4/1d4/2d4/2d4/3d4 + special, Mv 40' (10') Fly 60' (15'), Sv F9, Ml 9
+26  {2d4} Haunted Bones Skeleton AC 15, HD 3, #At 1 punch or weapon, Dam 1d6 or by weapon, Mv 50', Sv F3 Ml 11, XP 145
+27  {1d4} Dire Wolves AC 14, HD 4, #At 1 bite, Dam 2d4, Mv 50', Sv F4, Ml 9
+28  {1d3} {insect-type} Insect Swarms AC 13, HD 4*, #At 1 swarm, Dam 1d3 (double against no armor), Mv 10' Fly 20', Sv N/A, Ml 11, XP 280
+29  {1d4} Hill Giants AC 15 (13), HD 8, #At 1, Dam 2d8, Mv 30' Unarmored 40', Sv F8, Ml 8
+30  Red Dragon AC 21, HD {1d6+7}** (+9), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/4d8 or breath/1d8, Mv 30' Fly 80' (20'), Sv F10 (as Hit Dice), Ml 8
+
+table: insect-type 1d6
+1-4 Flying
+5-6 Crawling
+
+table: lair 1d100
+1-5     {2d6} Giant Scorpions AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11
+6-9     {2d6} Werewolves AC 15 †, HD 4*, #At 1 bite, Dam 2d4, Mv 60' Human Form 40', Sv F4, Ml 8
+10      Vampire AC 20 ‡, HD 9** (+8), #At 1 weapon or special, Dam 1d8 or by weapon or special, Mv 40' Fly 60', Sv F9, Ml 11, XP 1,225
+11      Succubus AC 20, HD 7**, #At 2 claws, Dam 1d4/1d4, Mv 30', Fly 50', Sv C6, Ml 7, XP 800.
+        Charm Person, Suggestion, Darkness, Dimension Door, ESP and Clairaudience, at will, as a 12th level caster.
+12-15   {1d4} Mountain Lions AC 14, HD 3+2, #At 2 claws/1 bite, Dam 1d4/1d4/1d6, Mv 50', Sv F3, Ml 8
+16-20   Bandits {2d12} Level 1 Fighters and {1d6} Level 1 Thieves, led by a {npc-bandit-leader}.
+21-25   {3d6} Wolves AC 13, HD 2, #At 1 bite, Dam 1d6, Mv 60', Sv F2, Ml 8
+26-30   {1d4} Giant Crab Spiders AC 13, HD 2*, #At 1 bite, Dam 1d8 + poison, Mv 40', Sv F2, Ml 7
+31-35   Treant AC 19, HD 8*, #At 2 fists, Dam 2d6/2d6, Mv 20', Sv F8, Ml 9, XP 945
+36-40   {5d6} Orcs AC 14, HD 1, #At 1 weapon, Dam 1d8 or by weapon, Mv 30' Unarmored 40', Sv F1, Ml 8.<br>
+        {5d6} Orc Warriors AC 14, HD 2, #At 1 weapon, Dam 1d8 or by weapon, Mv 30', Sv F2, Ml 9, XP 75.<br>
+        {1d8+2} Orc Chiefs AC 15, HD 4, #At 1 weapon, Dam 1d8+1 or by weapon+1 (strength), Mv 20', Sv F4, Ml 9, XP 240.<br>
+        Orc King AC 16, HD 6, #At 1 weapon, Dam 1d8+2 or by weapon+2 (strength), Mv 20', Sv F6, Ml 9, XP 500.
+41-45   {1d10} Giant Bats (C 14, HD 2, #At 1 bite, Dam 1d4, Mv 10' Fly 60' (10'), Sv F2, Ml 8
+46-50   {5d6} Giant Bees AC 13, HD 1d4 HP*, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9.<br>
+        Queen Bee AC 13, HD 2, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9
+51-59   {3d6} Gnolls AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8.<br>
+        Gnoll chief AC 15, HD 4, #At 1 weapon, Dam 2d4+1 or by weapon +2, Mv 30', Sv F4, Ml 9, XP 240.
+60-69   {6d10} Goblins AC 14 (11), HD 1-1, #At 1 weapon, Dam 1d6 or by weapon, Mv 20' Unarmored 30', Sv F1, Ml 7.<br>
+        {2d4} Goblin warriors AC 15, HD 5-5, #At 1 weapon + 1, Dam 1d6+1 or by weapon+1, Mv 10', Sv F5, Ml 8, XP 360<br>
+        Goblin King AC 16, HD 7-7, #At 1 weapon + 1, Dam 1d6+1 or by weapon+1, Mv 10', Sv F7, Ml 9, XP 500
+70-79   {2d4} Dire Wolves AC 14, HD 4, #At 1 bite, Dam 2d4, Mv 50', Sv F4, Ml 9
+80-88   {2d4} Giant, Hill AC 15, HD 8, #At 1, Dam 2d8, Mv 30', Sv F8, Ml 8, XP 875
+89      {1d4} Vampire Owlbear AC 18 ‡, HD 5**, #At 2 claws/1 bite + 1 hug, Dam 1d8/1d8/1d8 + 2d8, Mv 40', Sv F5, Ml 11, XP 450
+90-94   The Giant Roc AC 18, HD 32 (+16), #At 2 claws/1 bite, Dam 3d6/3d6/6d6, Mv 20' Fly 160' (10'), Sv F32, Ml 10.<br>
+        Mate Large Roc AC 18, HD 12 (+10), #At 2 claws/1 bite, Dam 1d8/1d8/2d10, Mv 20' Fly 160' (10'), Sv F12, Ml 9.<br>
+        3 Small Rocs AC 18, HD 6, #At 2 claws/1 bite, Dam 1d6/1d6/2d6, Mv 20' Fly 160' (10'), Sv F6, Ml 8.
+95-96   {1d8} Trolls AC 16, HD 6*, #At 3, Dam 1d6/1d6/1d10, Mv 40', Sv F6, Ml 10 (8)
+97      {1d4} Purple Worm AC 16, HD 11* (+9), #At 1 bite/1 sting, Dam 2d8/1d8+poison, Mv 20' (15'), Sv F6, Ml 10, XP 1,670
+98      {1d4} White Dragon AC 17, HD {1d6+3}**, #At 2 claws/1 bite or breath/1 tail, Dam 1d4/1d4/2d8 or breath/1d4, Mv 30' Fly 80' (10'), Sv F6, Ml 8
+99      Green Dragon AC 19, HD {1d6+5}**, #At 2 claws/1 bite or breath/1 tail, Dam 1d6/1d6/3d8 or breath/1d6, Mv 30' Fly 80' (15'), Sv F8, Ml 8
+100     Red Dragon AC 21, HD {1d6+7}** (+9), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/4d8 or breath/1d8, Mv 30' Fly 80' (20'), Sv F10, Ml 8
+
+table: lair-type 1d6
+1       in a cave ({cave-entrance}. {cave-size}.)
+2       in a camp ({camp-type}.)
+3       in a ruined {ruined-structure}
+4       in a cabin
+5       in a {graveyard-type} graveyard
+6       in an intact {lair-fort}
+
+table: lair-location 1d6
+1       in thick forest
+2       atop a hill
+3       in open terrain
+4-6     at {landmark}
+
+table: cave-entrance 1d6
+1-3     {1d20+4}' entrance at ground level
+4-5     Open pit {1d20+4}' wide descends {1d6}0'
+6       {2d20+4}' entrance at a ledge {1d4}0' above
+
+table: cave-size 1d6
+1       Single chamber {1d4}0' across
+2       Single chamber {1d12}0' across
+3       {1d6}0' tunnel that opens to {1d4}0' x {1d4}0' chamber
+4       {1d6+2} small chambers connected by 5' tunnels
+5       10' tunnels connecting {1d8+2} chambers of {1d12}0' across
+6       Countless tunnels and chambers diving down into the earth
+
+table: ruined-structure 1d6
+1-2     cabin
+3-4     homestead
+5       temple
+6       outpost
+
+table: graveyard-type 1d6
+1       human
+2       elven
+3       dwarven
+4       druidic
+5       dug-up
+6       orcish
+
+table: lair-fort 1d6
+1-2     fort surrounded by palisade
+3       {1d6+2}0' tower
+4       bunker
+5       hill fort
+6       cliffhouse
+
+table: camp-type
+1       Little but a campfire ring
+2       Ruined tents
+3       {1d6+2} temporary tents
+4       {1d6+2} seasonal tents
+5       {1d6+2} crude structures
+6       {1d6+2} permanent structures
+
+table: landmark 1d28
+1       Shrine to {shrine}
+2       {1d6} Ruined structures
+3       Hut ({hut-occupied})
+4       Exposed field of stone bearing {quarry}. {1d6},000 XP for sharing discovery.
+5       {grave-marker} with {grave-contents}
+6       Party of adventurers turned to stone
+7       Ancient oak. 1,000 XP for sharing discovery.
+8       Field of {flower-color} flowers
+9       A camp with recently-used fire rings
+10      A spring. 1,000 XP for sharing discovery.
+11      A small creek. 1,000 XP for sharing discovery.
+12      Well
+13      A trap door
+14      Treehouse
+15      Natural cave. {1d4},000 XP for sharing discovery.
+16      Pond
+17      Circle of standing stones. {1d6},000 XP for sharing discovery.
+18      Door in a tree opens to a room in Tosasth
+19      Talking owl
+20      Stairs cut into an ancient oak go up to a platform. Stone explains if dimension door cast here, opens a portal to another realm.
+21      Glowing green portal to Haderax.
+22      Waterfall. {1d6},000 XP for sharing discovery.
+23      Hot spring. {1d4},000 XP for sharing discovery.
+24      Bubbling mudpot. 1,000 XP for sharing discovery.
+25      Geyser. {1d6},000 XP for sharing discovery.
+26      Pit trap
+27      Watchtower
+28      {mine}, {mine-condition}, {mine-occupied}
+
+table: dungeon 1d4
+1       Tomb of the Overseers (printed adventure in folder)
+2-3     Estate of Eliari
+4       Molok's Mummies
+
+
+table: npc-bandit-leader 1d2
+1   Level {1d4+1} Fighter
+2   Level {1d4+1} Thief
+
+table: shrine 1d6
+1   Molok
+2   Haderax
+3   The Anointed One
+4   Ghot
+5   Saint Orlan
+6   Saint Irevia
+
+table: hut-occupied 1d6
+1-4 abandoned
+5-6 occupied
+
+table: quarry 2d10
+2   Gold Ore
+3   Silver Ore
+4   Coquina (aggregated shells)
+5   Iron Ore
+6   Cinder (volcanic rock)
+7   Clay
+8   Limestone
+9   Marble
+10  Granite
+11  Coal
+12  Slate
+13  Chalk
+14  Sandstone
+15  Gypsum
+16  Sand and gravel
+17  Lead Ore
+18  Copper Ore
+19  Platinum Ore
+20  Garnet
+
+table: grave-marker 1d4
+1   Simple grave marker
+2   Pile of rocks
+3   Elaborate grave marker and stone container
+4   Masoleum
+
+table: grave-contents 1d4
+1   ordinary dead body
+2   empty coffin
+3   Ghoul AC 14, HD 2*, #At 2 claws/1 bite, Dam 1d4/1d4/1d4, all plus paralysis, Mv 30', Sv F2, Ml 9, XP 100
+4   Ghost AC 20*, HD 10 (+9), #At 1 touch/1 gaze, Dam 1d6 + special, Mv 30', Sv F10, Ml 10, XP 5500
+
+table: mine 1d6
+1   Gold mine
+2   Silver mine
+3   Iron mine
+4   Lead mine
+5   Copper mine
+6   Platinum mine
+
+table: mine-condition 1d4
+1   collapsed
+2   exhausted
+3   flooded
+4   operational but abandoned
+
+table: mine-occupied 1d4
+1-2   open
+3   sealed
+4   lair of {lair}
+
+table: flower-color 1d6
+1   red
+2   yellow
+3   blue
+4   violet
+5   orange
+6   pink
+
+table: reaction 2d6
+2-3     <strong>The time for talk is over.</strong>
+        Morale check is {2d6}. Failure means flight or surrender. Otherwise, attack immediately.
+4-6     <strong>Someone will get their head bashed in.</strong>
+        Attitude is aggressive and negative.</strong>
+        Apply -4 to the next check if there’s room for negotiation. Otherwise, it’s fight or flight.
+7-9     <strong>Clear and present danger.</strong>
+        Cautious and aware of possible trouble. Disengage without violence if possible, or provide a final warning.
+10-11   <strong>Trust and verify.</strong>
+        Neutral and open to a fair exchange. Apply +4 to the next check. Any final offers are take-it-or-leave-it.
+12      <strong>This could be the beginning of a beautiful friendship.</strong>
+        Relaxed presumption of courtesy.
+
+table: evocative
+1   aberration
+2   abhor
+3   ache
+4   acrid
+5   adoration
+6   adroit
+7   affection
+8   aggravation
+9   agitation
+10  agony
+11  alarm
+12  alienation
+13  amazement
+14  amusement
+15  ancient
+16  anger
+17  anguish
+18  annoyance
+19  anxiety
+20  appetite
+21  apprehension
+22  arid
+23  arousal
+24  ashen
+25  astonishment
+26  attraction
+27  audacity
+28  backbone
+29  baleful
+30  bellicose
+31  bereaved
+32  bewildered
+33  bitterness
+34  bleak
+35  blinding
+36  bliss
+37  bloodcurdling
+38  brazen
+39  breath
+40  broken
+41  caring
+42  cashmere
+43  caustic
+44  chaotic
+45  cheerfulness
+46  cherish
+47  clench
+48  coarse
+49  compassion
+50  contempt
+51  contentment
+52  corpulent
+53  courage
+54  crave
+55  crippling
+56  crisp
+57  curious
+58  deafening
+59  decorous
+60  defeat
+61  defy
+62  dejection
+63  deleterious
+64  delight
+65  demagogue
+66  depression
+67  desire
+68  desire
+69  despair
+70  diaphanous
+71  disappointment
+72  disastrous
+73  discordant
+74  disgust
+75  dislike
+76  dismay
+77  displeasure
+78  distress
+79  dowdy
+80  dread
+81  dulcet
+82  dynamic
+83  eagerness
+84  eccentric
+85  ecstasy
+86  elation
+87  embarrassment
+88  emollient
+89  enjoyment
+90  enrage
+91  enthrallment
+92  enthusiasm
+93  envy
+94  envy
+95  ephemeral
+96  euphoria
+97  euphoric
+98  exasperation
+99  excitement
+100 exhilaration
+101 exude
+102 fallen
+103 fear
+104 fear
+105 feckless
+106 feisty
+107 ferocity
+108 fickle
+109 florid
+110 fondness
+111 forbidden
+112 frenetic
+113 fright
+114 frown
+115 frustration
+116 fury
+117 gaiety
+118 gladness
+119 glee
+120 gloom
+121 gloom
+122 glumness
+123 gossamer ephemeral
+124 grief
+125 groan
+126 grouchiness
+127 grumpiness
+128 guilt
+129 haggard
+130 happiness
+131 hard
+132 harpy
+133 hate
+134 havoc
+135 hedonist
+136 hiss
+137 histrionic
+138 homesickness
+139 hope
+140 hopelessness
+141 horror
+142 hostility
+143 humiliation
+144 hunger
+145 hurt
+146 hysteria
+147 incendiary
+148 infatuation
+149 ingénue
+150 insecurity
+151 insolent
+152 insult
+153 intrepid
+154 irksome
+155 irritation
+156 isolation
+157 jealousy
+158 jolliness
+159 joviality
+160 joy
+161 joy
+162 jubilation
+163 juicy
+164 leathery
+165 liking
+166 lilt
+167 loathe
+168 loathing
+169 loneliness
+170 longing
+171 love
+172 love
+173 lurch
+174 lurking
+175 lush
+176 lust
+177 melancholy
+178 misery
+179 moan
+180 mordant
+181 mortification
+182 murmur
+183 need
+184 neglect
+185 nervousness
+186 oath
+187 off-limits
+188 optimism
+189 opulent
+190 outrage
+191 panic
+192 passion
+193 pervasive
+194 pity
+195 playful
+196 pleasure
+197 pliant
+198 pluck
+199 plunge
+200 power
+201 powerful
+202 pride: pride
+203 pungent
+204 rage
+205 rancorous
+206 rapture
+207 raspy
+208 recalcitrant
+209 redolent
+210 regret
+211 rejection
+212 rejection
+213 relief
+214 remorse
+215 resentment
+216 restrained
+217 revulsion
+218 rigid
+219 ruthless
+220 sadness
+221 sadness
+222 satisfaction
+223 scheme
+224 scorn
+225 searing
+226 secret
+227 seethe
+228 sentimentality
+229 shame
+230 shame
+231 shatter
+232 sheer
+233 shock
+234 shrill
+235 shuffled
+236 sinew
+237 sinful
+238 skittish
+239 solid
+240 sorrow
+241 spite
+242 spunk
+243 stark
+244 startle
+245 stubby
+246 succulent
+247 suffering
+248 surprise
+249 surprise
+250 surreptitious
+251 sympathy
+252 tenderness
+253 tenseness
+254 terror
+255 thermal
+256 thick
+257 thrill
+258 thrust
+259 thundering
+260 torment
+261 triumph
+262 turbulent
+263 twisted
+264 uneasiness
+265 unhappiness
+266 vengefulness
+267 venomous
+268 visceral
+269 vitriol
+270 voracious
+271 vulnerable
+272 warped
+273 watery
+274 weathered
+275 whimpering
+276 whisper
+277 wiry
+278 withering
+279 woe
+280 woe
+281 worry
+282 wraith
+283 wrath
+284 zeal
+285 zest

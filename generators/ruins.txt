@@ -1,0 +1,789 @@
+name: Ravaged Ruins
+description: Based on Judges Guild Ready Ref Sheets
+recipe: This {class} is {condition}. It's {state}, protected by {keeper}.
+repeat: 1
+
+table: class
+1   ruined {ruins}
+2   {relics}
+3   {remains}
+4   {vestiges}
+5   {remnants}
+6   {refuse}
+7   wrecked {wrecks}
+8   {skeletons}
+9   {antiques}
+10  {artifacts}
+
+table: condition
+1   partially covered in {covered}
+2   fully covered in {covered}
+3   above ground
+4   on rocky slope
+5   inside a cavern
+6   in a crevice
+7   beneath an overhang
+8   in a large crater
+9   partially sunken
+10  burnt
+
+table: covered
+1   sand
+2   ashes
+3   cinders
+4   earth
+5   a thicket
+6   mold
+7   slime
+8   rocks
+9   webs & dust
+10  vines
+
+table: state
+1   crumbled
+2   decayed
+3   disfigured
+4   defaced
+5   wormeaten
+6   crystallized
+7   petrified
+8   corroded
+9   eroded
+10  collapsed
+11  tumbled
+12  mouldy
+13  contaminated
+14  dangerously operational
+15  partially operational
+16  fully operational
+
+table: keeper 1d20
+1       a machine
+2       humanoids
+3       a dragon
+4       the undead
+5       lycanthropes
+6       giants
+7       animals
+8       insects
+9       a trap
+10-20   nothing
+
+table: ruins
+1   {manor}
+2   village of {village}
+3   city of {city}
+4   {citadel}
+5   {castle}
+6   {temple}
+
+table: manor
+1   hut
+2   hoval
+3   hall
+4   villa
+5   cottage
+6   palace
+
+table: village
+1   {2d6} huts
+2   {4d6} hovals
+3   {6d6} cottages
+4   {6d6} cottages surrounded by a ditch
+5   {6d6} cottages surrounded by a passlisade
+6   {6d6} cottages surrounded by a moat
+
+table: city
+1   {7d6} houses & a {citadel}
+2   {8d6} houses
+3   {9d6} houses surrounded by a wall
+4   {9d6} houses & {1d4} {citadel} surrounded by a wall
+5   {2d6}0 houses
+6   {2d6}0 houses, {city_temple}
+
+table: city_temple
+1   {temple}
+2   {temple}, {temple}
+3   {temple}, {temple}, {temple}
+4   {temple}, {temple}, {temple}, {temple}
+
+table: citadel
+1   tower
+2   tower with outer wall
+3   great keep
+4   keep with four towers
+5   keep with four towers & outer wall
+6   keep with four towers, outer wall & moat
+
+table: castle
+1   castle keep with pallisade
+2   castle keep with pallisade and moat
+3   castle keep with pallisade, moat and walls
+4   castle keep with pallisade, moat, walls and manor
+5   castle keep with pallisade, moat, walls, manor and 4 towers
+6   castle keep with pallisade, moat, walls, manor, 4 towers and outer walls
+
+table: temple
+1   altar
+2   shrine
+3   sanctuary
+4   oracle
+5   pantheon
+6   monastary
+
+table: relics
+1   {tools}
+2   {machines}
+3   {tombs}
+4   {armor}
+5   {weapons}
+6   {containers}
+
+table: tools
+1   ladder
+2   plow
+3   pick
+4   hoe
+5   anvil
+6   axe
+
+table: machines
+1   loom
+2   grinding wheel
+3   clock
+4   balance
+5   potter wheel
+6   press
+
+table: tombs
+1   grave
+2   sepulcher
+3   mausoleum
+4   catacombs
+5   tomb vault
+6   crypt
+
+table: armor
+1   breastplate
+2   greaves
+3   gauntlets
+4   helmet
+5   chainmail
+6   shield
+
+table: weapons
+1   dagger
+2   scimitar
+3   hand axe
+4   spear
+5   trident
+6   battleaxe
+
+table: containers
+1   {container_group} of {container_quantity} barrels
+2   {container_group} of {container_quantity} urns
+3   {container_group} of {container_quantity} trunks
+4   {container_group} of {container_quantity} jars
+5   {container_group} of {container_quantity} bottles
+6   {container_group} of {container_quantity} boxes
+
+table: container_quantity
+1   two
+2   {2d4}
+3   {2d6}
+4   {3d6}
+
+table: container_group
+1   set
+2   group
+3   collection
+4   pile
+5   jumble
+6   heap
+
+table: remains
+1   {utensils}
+2   {apparel}
+3   {harness} harness
+4   {toys}
+5   {optics}
+6   {tome}
+
+table: utensils
+1   eating utensil
+2   digging implement
+3   writing implement
+4   navigation tool
+5   measuring device
+6   musical instrument
+
+table: apparel
+1   hauberk
+2   boots
+3   cloak
+4   tunic
+5   mask
+6   breeches
+
+table: harness
+1   swimmer
+2   flyer
+3   giant animal
+4   small animal
+5   man-sized
+6   colassal
+
+table: toys
+1   doll
+2   toy vehicle
+3   toy weapon
+4   toy tool
+5   game
+6   toy house
+
+table: optics
+1   monocle
+2   spectacles
+3   spyglass
+4   mirror
+5   colored pane
+6   periscope
+
+table: tome
+1   lexicon
+2   scrll
+3   manual
+4   tablet
+5   book
+6   codex
+
+table: vestiges
+1   {pyramid_sided} {pyramid} pyramid
+2   {mound} mound
+3   {fountain} fountain
+4   {1d20+4}' {totem} totem
+5   {sewers} sewer entrance
+6   {monolith}
+
+table: pyramid_sided
+1-4 stepped-sided
+5-6 smooth-sided
+
+table: pyramid
+1   burial tomb
+2   temple
+3   observatory
+4   palace
+
+table: mound
+1   sacrificial
+2   burial
+3   treasure
+4   lair
+5   sacred
+6   polymorphed
+
+table: fountain
+1   giant
+2   statued
+3   minature
+4   geometric
+5   wish
+6   spray
+
+table: totem
+1   {totem_mammal}
+2   human
+3   god
+4   monster
+5   bird
+6   snake
+
+table: totem_mammal
+1   Anteater
+2   Antelope
+3   Armadillo
+4   Badger
+5   Bat
+6   Bear
+7   Beaver
+8   Blackbird
+9   Bobcat
+10  Buffalo
+11  Bull
+12  Camel
+13  Canary
+14  Caribou
+15  Cat
+16  Cheetah
+17  Chimpanzee
+18  Cougar
+19  Cow
+20  Coyote
+21  Crow
+22  Deer
+23  Dog
+24  Dolphin
+25  Donkey
+26  Dove
+27  Elephant
+28  Elk
+29  Emu
+30  Ferret
+31  Fox
+32  Gazelle
+33  Giraffe
+34  Goat
+35  Gorilla
+36  Hedgehog
+37  Hippopotamus
+38  Horse
+39  Jackal
+40  Jaguar
+41  Kangaroo
+42  Lamb
+43  Leopard
+44  Lion
+45  Lynx
+46  Manatee
+47  Mink
+48  Mole
+49  Monkey
+50  Moose
+51  Mountain Lion
+52  Mouse
+53  Opossum
+54  Orca
+55  Otter
+56  Ox
+57  Panda
+58  Panther
+59  Pig
+60  Platypus
+61  Porcupine
+62  Rabbit
+63  Raccoon
+64  Rat
+65  Rhino
+66  Seahorse
+67  Seal
+68  Sheep
+69  Skunk
+70  Snake
+71  Sparrow
+72  Squirrel
+73  Stag
+74  Swallow
+75  Swan
+76  Tiger
+77  Unicorn
+78  Weasel
+79  Whale
+80  Wolf
+81  Wolverine
+82  Yak
+
+table: sewers
+1   1' square open
+2   2' square open
+3   1' square closed
+3   2' square closed
+3   4' square closed
+3   8' square closed
+
+table: monolith
+1   column
+2   hewn statue
+3   minaret
+4   obelisk
+5   effigy
+6   monument
+
+table: remnants
+1   {road}
+2   {tombstone}
+3   {signpost}
+4   {channel}
+5   {masonary}
+6   {bridge} bridge
+7   {wall}
+8   {edifice}
+9   {works}
+10  {structure}
+
+table: road
+1   tracks
+2   trail
+3   gravel road
+4   paved road
+5   asphault road
+6   concrete road
+
+table: tombstone
+1   memorial plaque
+2   cairn
+3   grave marker
+4   memorial beacon
+5   pyre
+6   burial stone pile
+
+table: signpost
+1   guidepost
+2   signpost with omen
+3   tradepost
+4   signpost with warning
+5   signpost with emblem
+6   signpost marking a boundary
+
+table: channel
+1   tunnel
+2   pipe
+3   well
+4   passage
+5   canal
+6   aqueduct
+
+table: masonary
+1   mud bricks
+2   stone bricks
+3   marble blocks
+4   plaster
+5   wattle
+6   stone blocks
+
+table: bridge
+1   rope
+2   wooden
+3   stone
+4   earthen
+5   natural
+6   brick
+
+table: wall
+1   stockage
+2   barricade
+3   fence
+4   rampart
+5   dike
+6   partition
+
+table: edifice
+1   carved cliff
+2   sculptured mound
+3   colossal statue
+4   palace
+5   mill
+6   calendar stone
+
+table: works
+1 arsenal
+2 granary
+3 paved plaza
+4 viaduct
+5 reservoir
+6 cistern
+
+table: structure
+1 stairway
+2 barricade
+3 shaft
+4 spire
+5 roof
+5 tunnel
+
+table: refuse
+1   {offal}
+2   {sewage}
+3   {parts}
+4   {discards}
+5   {food}
+6   {fuel}
+
+table: offal
+1   viscera
+2   bones
+3   gore
+4   grizzle
+5   fat
+6   talons
+
+table: sewage
+1   soap
+2   body wastes
+3   oils
+4   slop
+5   chemicals
+6   lint
+
+table: parts
+1   buckle
+2   sack of nails
+3   crossbar
+4   pommel
+5   arrowhead
+6   spike
+
+table: discards
+1   bundle of leather scraps
+2   bundle of papyrus scraps
+3   handle
+4   shield boss
+5   pole
+6   bundle of linen scraps
+
+table: food
+1   rancid fat
+2   rotting fruit
+3   discarded seeds
+4   rotting vegatables
+5   discarded minerals
+6   rotting meat
+
+table: fuel
+1   firewood
+2   coal
+3   peat for burning
+4   dung for burning
+5   petroleum
+6   candle wax
+
+table: wrecks
+1-10    {sea_vehicle}
+11-20   {land_vehicle}
+21-25   {air_vehicle}
+25-30   {war_engine}
+31      {submarine}
+32-35   {underground_vehicle}
+
+table: sea_vehicle
+1   raft
+2   canoe
+3   pig bladder for flotation
+4   longboat
+5   merchant ship
+6   man-o-war
+
+table: land_vehicle
+1   sledge
+2   wagon
+3   litter
+4   carriage
+5   wain
+6   chariot
+
+table: air_vehicle
+1   ballon
+2   mechanical wings
+3   hang glider
+4   {unusual_air_vehicle}
+5   parachute
+6   roc carriage
+
+table:unusual_air_vehicle
+1   prop-driven aircraft
+2   jet
+3   re-entry capsule
+4   spacecraft
+5   helicopter
+6   anti-gravity vehicle
+
+table: war_engine
+1   catapult
+2   ballista
+3   battering ram
+4   seige tower
+5   springald
+6   trebuchet
+
+table: submarine
+1   dolphin sled
+2   sea-horse carriage
+3   giant turtle house
+4   diving bell
+5   pocket submarine
+6   nuclear submarine
+
+table: underground_vehicle
+1   mole sled
+2   rock borer
+3   minecart
+4   earth borer
+5   worm saddle
+6   giant rat chariot
+
+table: skeletons
+1   {small_skeletons} skeleton
+2   {man_sized_skeletons} skeleton
+3   {giant_skeletons} skeleton
+4   {unusual_skeletons} skeleton
+5   {skulls} skull
+6   colossal {colossal_skeletons} skeleton
+
+table: small_skeletons
+1   miniscule
+2   halfling
+3   dwarven
+4   pixie
+5   gnome
+6   kobold
+
+table: man_sized_skeletons
+1   human
+2   elven
+3   orc
+4   troll
+5   lizard man
+6   giant snake
+
+table: giant_skeletons
+1   ogre
+2   hobgoblin
+3   hill giant
+4   dinosaur
+5   sea monster
+6   whale
+
+table: unusual_skeletons
+1   cubic
+2   chrystaline
+3   multi-limbed
+4   multi-headed
+5   winged
+6   armor-plated
+
+table: skulls
+1   {small_skeletons}
+2   {man_sized_skeletons}
+3   {giant_skeletons}
+4   {colossal_skeletons}
+5   horned {man_sized_skeletons}
+6   multi-eyed {man_sized_skeletons}
+
+table: colossal_skeletons
+1   humanoid
+2   avian
+3   reptilian
+4   ursoid
+5   amphibian
+6   crustacean
+
+table: antiques
+1   {statues} statue
+2   {furniture}
+3   engraving of a {engraving}
+4   {idols} idol
+5   {fittings}
+6   {handicraft}
+
+table: statues
+1   miniature
+2   {1d4}'
+3   {1d6+4}'
+4   {1d20+10}'
+5   {1d20}' abstract
+6   magic
+
+table: furniture
+1   throne
+2   chest
+3   giant-sized {furniture_type}
+4   miniature {furniture_type}
+5   stone {furniture_type}
+
+table: furniture_type
+1   table
+2   chair
+3   stool
+4   couch
+5   bench
+6   bed
+7   cabinet
+8   desk
+9   workbench
+10  bookcase
+
+table: engraving
+1   battle
+2   coronation
+3   punishment
+4   religious ceremony
+5   romantic event
+6   curse
+
+table: idols
+1   {1d20}" stone
+2   {1d20}" plaster
+3   {1d20}" metal
+4   {1d20}" wooden
+
+table: fittings
+1   faucet
+2   lamp
+3   bell
+4   fresco
+5   hinges
+6   knocker
+
+table: handicraft
+1   basket
+2   vase
+3   painting
+4   abacas
+5   ship's figurehead
+6   bust
+
+table: artifacts
+1   ceremonial {weapon}
+2   {entertainment} artifact
+3   {protective_device}
+4   offensive {offensive_device} device
+5   {information_device}
+6   {leadership_device}
+
+table: weapon
+1   sword
+2   dagger
+3   hammer
+4   club
+5   battleaxe
+6   javelin
+
+table: entertainment
+1   animated
+2   musical
+3   dancing
+4   serving
+5   intensifying
+6   dreaming
+
+table: protective_device
+1   protective machine
+2   staff
+3   vial
+4   garment
+5   talisman
+6   armor
+
+table: offensive_device
+1   hand
+2   vase
+3   eye
+4   box
+5   horn
+6   vat
+
+table: information_device
+1   stone of knowledge
+2   flask of knowledge
+3   orb of knowledge
+4   diadem of knowledge
+5   crystal ball
+6   necklace of knowledge
+
+table: leadership_device
+1   ring rulership
+2   diadem
+3   throne
+4   rod of rulership
+5   crown
+6   sceptre

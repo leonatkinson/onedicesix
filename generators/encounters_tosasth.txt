@@ -1,0 +1,181 @@
+name: Encounters in Tosasth
+description: Tables for generating encounters by location
+recipe: North<br>
+        {encounter}<br>
+        <br>
+        Northeast<br>
+        {encounter}<br>
+        <br>
+        Southeast<br>
+        {encounter}<br>
+        <br>
+        South<br>
+        {encounter}<br>
+        <br>
+        Southwest<br>
+        {encounter}<br>
+        <br>
+        Northwest<br>
+        {encounter}
+repeat: 1
+
+table: distance 1d4
+1   {1d4}0 ft
+2-3 {2d6}0 ft
+4   {3d6}0 ft
+
+table: encounter 1d6
+1-4 clear
+5   {harmless}
+6   {distance} away<br>
+    {monster}<br>
+    {attitude}
+
+table: harmless 1d80
+1   Gust of wind
+2   Lightning in the far distance
+3   Clouds momentarily swirl into evil face
+4   Drizzle
+5   Steady rain
+6   Heavy rain
+7   Creaking wood
+8   Grinding metal
+9   Pig squeals
+10  Woman screams once
+11  Child cries
+12  Man screams
+13  Pig grunting
+14  Ghostly shape flickers in to view momentarily
+15  Ghosts fly far overhead
+16  Red glow
+17  Flickering firelight
+18  Demonic laughter
+19  Demented laughter
+20  Laughter and screaming
+21  Whispering
+22  Heavy breathing
+23  Groans
+24  Roaring
+25  Growl
+26  Stomping
+27  Footsteps running away
+28  Door slamming
+29  Insistent knocking
+30  Small bell ringing
+31  Church bell tolling
+32  Gong
+33  Shutters flap in the wind
+34  Bubbling
+35  Crash
+36  Zap
+37  Barking
+38  BA-ROOM!
+39  CRACK!
+40  BEEP!
+41  BEEP! BEEP! BEEP!
+42  Crow cawing
+43  BLUB!
+44  GLUG!
+45  BONG!
+46  Buzzing
+47  BRZZZT!
+48  CLANG!
+49  CLANK!
+50  Slow clapping
+51  Clicking
+52  CLICK! CLICK! CLICK!
+53  CRUNCH!
+54  DING!
+55  Gasping
+56  GRRRR!
+57  GULP!
+58  Hissing
+59  OH!
+60  MMMM!
+61  Humming
+62  Mumbling
+63  OOH!
+64  Moaning
+65  OW!
+66  PTANG!
+67  POP!
+68  POP! POP! POP!
+69  Ripping
+70  Rumbling
+71  Scratching
+72  SHHH!
+73  SPLAT!
+74  THUD!
+75  TICK! TICK! TICK!
+76  Whip cracking
+77  WHRR!
+78  WHOOSH!
+79  YEECH!
+80  Vomiting
+
+table: monster 1d100
+1-25    {2d6-2} Skeletons AC 13, HD 1, HP {1d8}, #At 1, Dam 1d6, Mv 40', Sv F1, Ml 12, XP 25<br>
+        {2d6-2} Gellybones AC 14, HD 2, HP {2d8}, #At 1 slap, Dam 1d6, Mv 40', Sv F2, Ml 12, XP 75<br>
+        {2d6-2} Skeletal Flayers AC 15, HD 1, HP {1d8}, #At 1 whip/1 claw, Dam 1d6 + 1d6, Mv 40', Sv F1, Ml 12, XP 37
+26-50   {2d6} Zombies AC 12, HD 2, HP {2d8}, #At 1, Dam 1d8, Mv 20', Sv F2, Ml 12, XP 75<br>
+        {1d4-1} {monster-ghouls}
+51-60   {2d6} {monster-ghouls}<br>
+        {2d6} Ghasts AC 15, HD 2**, HP {2d8}, #At 2 claws/1 bite, Dam 1d4/1d4/1d4 + paralysis + stench, Mv 30', Sv F2, Ml 9, XP 125
+61-65   {monster-wights}<br>
+        {2d6} {monster-ghouls}
+66-70   Ghost Shroom AC 12, HD 4, HP {4d8} and 2, #At 1, Dam 1d4 + special, Mv 0', Sv F4, Ml 12, XP 240
+        Surprise on 1-3. Hit entangles, auto-damage. Save vs death +STR to escape.
+        Smaller bushes are destroyed on a turn. Larger bush is -3 to hit if
+        turned but can still attack.
+71-75   {1d2} Blood Shrouds AC 12, HD 4, HP {4d8}, #At 1 whip or 1 blood spray, Dam 1d4 or special, Mv Fly 60’, Sv F4, Ml 9, XP 320
+        Floating man in blood-soaked bedsheet. ½ Dam from bludgeon. 1 point from piercing.
+        Spray blood up to 5 feet, save vs death or blinded. Whip cloak, if attack
+        beats AC by 5 save vs paralysis or be pulled under + negative level / round.
+        Turned as wraith.
+76-80   {1d4} Mummies AC 17 ‡, HD 5, HP {5d8}, #At 1 touch + disease, Dam 1d12 + disease, Mv 20', Sv F5, Ml 12, XP 450
+81-85   {1d4} Wraiths AC 15 ‡, HD 4, HP {4d8}, #At 1 touch, Dam 1d6 + energy drain (1 level), Mv Fly 80', Sv F4, Ml 12, XP 320
+86-90   Spectre AC 17 ‡, HD 6**, HP {6d8}, #At 1 touch, Dam Energy drain 2 levels/touch, Mv Fly 100', Sv F6, Ml 11, XP 610
+92-95   Corpse Abomination AC 17, HD 12, HP {12d8}, #At 3 bludgeon, Dam 1d8, 10' Jump 60’, Sv F12, Ml 12, XP 2,075
+        Shambling amalgamation of rotting flesh. Constant chorus of wailing.
+        Within 40’ save vs. Poison to avoid a -2 on all rolls. 10’ reach.
+96-97   {monster-vampires}
+98      {monster-vampires}<br>
+        {2d6} {monster-ghouls}
+99      {monster-vampires}<br>
+        {1d4} {monster-wights}
+100     Ghost AC 20*, HD 10 (+9), HP {10d8+9}, #At 1 touch/1 gaze, Dam 1d6 + special, Mv 30', Sv F10, Ml 10, XP 5500
+
+
+table: monster-ghouls
+1   Ghouls AC 14, HD 2*, HP {2d8}, #At 2 claws/1 bite, Dam 1d4/1d4/1d4, all plus paralysis, Mv 30', Sv F2, Ml 9, XP 100
+
+table: monster-wights
+1   Wights AC 15 †, HD 3*, HP {3d8}, #At 1 touch, Dam Energy drain (1 level), Mv 30', Sv F3, Ml 12, XP 175
+
+table: monster-vampires
+1   Vampire AC 18 ‡, HD 7**, HP {7d8}, #At 1 weapon or special, Dam 1d8 or by weapon or special, Mv 40' Fly 60', Sv F7, Ml 11, XP 800
+
+table: attitude 2d6
+2       Attack
+3-7     {attitude-possible-attack}
+8-10    {attitude-uncertain}
+11      {attitude-possible-friendly}
+12      Friendly
+
+table: attitude-final 2d6
+2-5     Attack
+6-8     Leave
+9-12    Friendly
+
+table: attitude-possible-attack 2d6
+2-8     Attack
+9-12    Uncertain {attitude-final}
+
+table: attitude-uncertain 2d6
+2-5     Attack
+6-8     Negotiate {attitude-final}
+9-12    Friendly
+
+table: attitude-possible-friendly 2d6
+2-5     Uncertain {attitude-final}
+6-12    Friendly

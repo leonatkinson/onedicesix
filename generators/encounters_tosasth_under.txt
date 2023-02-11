@@ -1,0 +1,92 @@
+name: Encounters in Tosasth Underdark
+description: Tables for generating encounters by location
+recipe: {encounter}
+repeat: 1
+
+table: encounter 2d6
+2   Falling rock. Roll surprise. If not surprised, save vs death for half damage.
+    {1d10} x 5' area of effect. {rockfall}
+3   Floor collapses. Roll surprise to see if you can save to avoid.
+    {1d10} x 5' area of effect. {1d6}0' depth
+4   Bugbear Squad -- Leader (HP {4d8+4}), 4 Hobgoblin Warriors (HP {3d8}), Witch (HP {1d8}), {3d6} Goblins (HP {1d8-1})<br>
+    Bugbear Leader AC 15, HD 4+4, #At 1 weapon, Dam 1d8+2, Mv 30', Sv F4, Ml 10, XP 145<br>
+    Hobgoblin Warrior AC 14, HD 3, #At 1 weapon, Dam 1d8, Mv 30', Sv F3, Ml 9, XP 25<br>
+    Hobgoblin Witch AC 14 (11), HD 1, #At 1 weapon, Dam 1d8, Mv 30' Unarmored 40', Sv M4, Ml 8, XP 90, Magic Missile, Sleep, Web, Phantasmal Force used to create 6 Spectres.<br>
+    Goblin AC 14, HD 1-1, #At 1 weapon, Dam 1d6, Mv 20', Sv F1, Ml 7, XP 10<br>
+5   {1d6} Tentacle Worms (HP {3d8}) AC 13, HD 3*, #At 6 tentacles, Dam paralysis, Mv 40', Sv F3, Ml 9
+6   {dwarves}, attitude {2d6}
+7   {2d6} Goblins (HP {1d8-1}) AC 14, HD 1-1, #At 1 weapon, Dam 1d6, Mv 20', Sv F1, Ml 7, XP 10
+8   {2d6} Zombies (HP {2d8}) AC 12, HD 2, #At 1, Dam 1d8, Mv 20', Sv F2, Ml 12, XP 25
+9   {2d6} Giant Bugs, {bugbody}, {buglook} (HP {1d4}) AC 11, HD 1d4 HP, #At 1 bite, Dam {trick-poison-type}, Mv 40', Sv NM, Ml 7, XP 25
+10  Goggler Priest (HP {9d8}) and {1d4} Attendants (HP {2d8})<br>
+    Goggler Shaman AC 17, HD 9, #At 1 bite, Dam 1d6 kris or bite 1d4, Mv Swim 50 (20'), Sv F2, Ml 7, XP 1400
+    Prot from Good (+2 AC, +2 saves), 2 Cure Lt Wounds (1d6+1), 2 hold person,
+    resist fire (+3 saves, damage halved), striking (+1d6 dam for 9 rounds),
+    2 dispel magic, prot good 10’ radius<br>
+    Goggler AC 17, HD 2, #At 1, Dam 1d6 kris or bite 1d4, Mv Swim 50 (20'), Sv F2, Ml 9, XP 125
+11  {2d6} Ghouls (HP {2d8}) AC 14, HD 2*, #At 2 claws/1 bite, Dam 1d4/1d4/1d4, all plus paralysis, Mv 30', Sv F2, Ml 9, XP 100
+12  Purple Worm (HP {11d8}+9) AC 16, HD 11* (+9) to 20* (+13), #At 1 bite/1 sting, Dam 2d8/1d8+poison, Mv 20' (15'), Sv F6 to F10 (1/2 Hit Dice), Ml 10, XP 1670
+
+table: rockfall 1d6
+1-3 1d6 DAM
+4-5 2d6 DAM
+6   3d6 DAM {rockblock}
+
+table: rockblock 1d2
+1   plus passage is blocked
+2   plus one round of coughing
+
+table: dwarves 1d6
+1   {2d4} Dwarven Miners AC 11, HD 1-1, #At 1, Dam 1d6, Mv 40', Sv F1 (+Dwarf bonuses), Ml 7
+2   {2d4} Dwarven Merchants {npc-merchants-type} with handcarts, guarded by {1d4+2} Level 1 Fighters
+    and {1d4} Level 2 Fighters.
+3   Dwarven Bandits, {2d12} Level 1 Fighters and {1d6} Level 1 Thieves, led by a {npc-bandit-leader}.
+4   Dwarven Army, {3d8} soldiers plus sergeant {dwarvenarmy}
+5   {2d4} Dwarven Slavers {dwarvenslaves}
+6   Dwarven Adventurers, {1d3} Fighters, {1d2} Thieves, {1d2} Clerics
+
+table: dwarvenarmy 1d4
+1   patrolling for bugbear troop
+2   hunting fugitive
+3   training recruits
+4   returning from scouting mission
+
+table: dwarvenslaves 1d2
+1   escorting {3d6} goblin slaves
+2   hunting for goblins
+
+table: bugbody 1d6
+1   many legs, flat body
+2   many legs, tubular body
+3   six legs, large pincers
+4   six legs, stinger
+5   eight legs, large pincers
+6   eight legs, stinger
+
+table: buglook 1d6
+1   hard shell
+2   hairy
+3   glowing
+4   slimy
+5   stinks
+6   shoots web that lasts 1d6 rounds
+
+table: trick-poison-type 1d10
+1-3     Permanent loss of {1d8} HP
+4-5     Negative level
+6-7     -{1d4} {trick-poison-stat} after {1d20} rounds
+8       Instant Death
+9       Death after {1d20} rounds
+10      Permanent half movement
+
+table: trick-poison-stat 1d10
+1-2     STR
+3-4     DEX
+5-6     CON
+7       WIS
+8-9     INT
+10      CHA
+
+table: npc-bandit-leader
+1   Level {1d4+1} Fighter
+2   Level {1d4+1} Thief

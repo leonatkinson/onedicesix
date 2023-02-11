@@ -1,0 +1,50 @@
+name: Character Appearance Story
+description: Why did a PC suddenly show up? https://pfaff.blog/new-characters-deep-in-a-megadungeon/
+recipe: {lost}, and now I'm {doing} {condition}
+repeat: 1
+
+table: lost
+1   I fell down a chute
+2   I went down the wrong tunnel, scouting ahead
+3   I went through a one-way door
+4   I was teleported by some demon
+5   A spinning wall split me from my previous crew
+6   A pit opened up and swallowed me
+7   The rest of the party was killed. The map was lost
+8   I was hit by a Fear spell and ran away down random paths
+9   I camped out in the dungeon. When I woke, everyone was gone. I hadn't been
+    paying attention to where we were going
+10  I stepped through a door, and the other side was some unknown part of the
+    dungeon. My party was smart enough not to follow
+11  My old party abandoned me while I was shitting
+12  I'm a daring solo explorer who just took a few wrong turns
+
+table: doing
+1   surrounded by monsters
+2   in a cage made of bones
+3   at the bottom of an inescapable pit trap
+4   hunting small creatures for food
+5   trapped in a spider's web
+6   hallucinating on psychadelic mushrooms
+7   in the belly of a monster just slain
+8   hanging upside down in a snare trap
+9   passed out drunk
+10  fortifying a hideout
+11  fleeing something
+12  feeling my way through the dark with no light source
+
+table: condition
+1   naked, starving, and dehydrated.
+2   naked, gagged, and tied to a pole.
+3   naked and afraid, with but a torch burning low.
+4   well-equipped but exhausted and running out of luck. Hit points are {1d4}0% of max.
+5   with just my weapons and armor, plus a head-pounding hangover.
+6   with just whatever I was wearing and what's in my backpack, but otherwise fine.
+7   with just arms and armor. I have no food or water, but a full belly after
+    resorting to eating a monster and drinking its blood.
+8   with useless crap I've been collecting, but running low on food and water.
+9   sick with chills and fever, with a full loadout.
+10  without my arms and armor and only two pieces of gear (name them).
+    I'm down to half my hit points.
+11  healthy, but ill-equipped for the current predicament.
+12  in good health and with full loadout.

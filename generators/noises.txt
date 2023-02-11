@@ -1,0 +1,65 @@
+name: Noises
+description: Unexplained Sounds and Weird Noises
+    1E DMG Appendix I
+recipe: {noise}
+repeat: 1
+
+table: noise 1d100
+01-05   bang, slam
+6       bellowing
+7       bong
+8       buzzing
+09-10   chanting
+11      chiming
+12      chirping
+13      clanking
+14      clashing
+15      clicking
+16      coughing
+17-18   creaking
+19      drumming
+20-23   footsteps (ahead)
+24-26   footsteps (approaching)
+27-29   footsteps (behind)
+30-31   footsteps (receding)
+32-33   footsteps (side)
+34-35   giggling (faint)
+36      gong
+37-39   grating
+40-41   groaning
+42      grunting
+43-44   hissing
+45      hooting
+46      horn/trumpet sounding
+47      howling
+48      humming
+49      jingling
+50-53   knocking
+54-55   laughter
+56-57   moaning
+58-60   murmuring
+61      music
+62      rattling
+63      ringing
+64      roar(ing)
+65-68   rustling
+69-72   scratching/scrabbling
+73-74   scream(ing)
+75-77   scuttling
+78      shuffling
+79-80   slithering
+81      snapping
+82      sneezing
+83      sobbing
+84      splashing
+85      splintering
+86-87   squeaking
+88      squealing
+89-90   tapping
+91-92   thud
+93-94   thumping
+95      tinkling
+96      twanging
+97      whining
+98      whispering
+99-100  whistling

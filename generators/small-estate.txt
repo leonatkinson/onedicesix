@@ -1,0 +1,788 @@
+name: Small Estate
+description: Small Estates abandoned
+recipe:
+    Outside{break}{outside}{break2}
+    1 Gate{break}{area1}{break2}
+    2 Carriage House{break}{area2}{break2}
+    3 Hut{break}{area3}{break2}
+    4 Orchard{break}{area4}{break2}
+    5 Stable and Pen{break}
+    A 15'x15' building allows entrance to a field encircled by wooden fence.
+    Inside are stalls for livestock. The field inside the fence is overgrown
+    with weeds.
+    {area5}{break2}
+    6 Garden{break}{area6}{break2}
+    7 Well{break}{area7}{break2}
+    {house}
+    25 River's Edge{break}{area25}{break2}
+repeat: 1
+
+# Outside
+table: outside
+1   A stout wall built of smooth stone encircles a square plot approximately 150'
+    per side. Every 25' a thick column further fortifies the wall, which is 15'
+    tall. The only visible entrance is through a gate in the south wall. Beyond
+    the gate is a small estate containing three small buildings, a 10' wide road
+    circling a fenced area and a two-story house.
+2   A crumbling wall barely contains a 150'x150' plot. Between stout columns, the
+    wall often falters, allowing easy access to the grounds within. Now pointless,
+    a wrought iron gate once served as the only entrance. Inside the crumblins
+    walls are three small buildings, a 10' wide road circling a fenced area and
+    a two-story house.
+
+# Gate
+table: area1
+1   A rusting chain holds two iron gates together with a padlock. Adjust lockpicking
+    attempts by {1d20-10}% due to corrosion. {area1_decoration}
+2   Iron gates have fallen from their hinges. Weeds grow up through their decaying
+    rods. {area1_decoration}
+3   Corroded iron gates are fixed in place with a series of heavy posts. A jumble
+    of rotting boards obscure view to inside the walls. {area1_decoration}
+
+table: area1_decoration 1d10
+1-5 {blank}
+6   A sign declares "Danger! Keep Out!"
+7   "DEAD INSIDE" is painted in red letters.
+8   A small shrine including a holy symbol and dried flowers sits next to the gate.
+9   A black fungus grows over scattered bones.
+10  {1d6+2} gold coins peak out from a half-rotten bag.
+
+# Carriage House
+table: area2
+1   Stone shingles keep the rain out of a 20'x20' carriage house. Double doors
+    swing easily to reveal a small carriage in serviceable condition. A small door
+    on the east side, slight ajar, also allows entrance. {area2_monster}{break2}
+    {area2_treasure}
+2   A good portion of the stone shingles atop this 20'x20' carriage house have
+    tumbled and shattered, allowing damaging rain pour over a a small carriage
+    found beyond two doors. The right wheels of the carriage have fallen away,
+    leaving the vehicle to rest at a disturbed angle. {area2_monster}{break2}
+    {area2_treasure}
+
+table: area2_monster 2d4
+2-3 {blank}
+4   {3d12} stirges roost in the rafters.{break2}
+    Stirge AC 13, HD 1*, #At 1 bite, Dam 1d4 + 1d4/round blood drain,
+    Mv 10' Fly 60', Sv F1, Ml 9, XP 37
+5   {1d3} giant spiders have filled the structure with webs. {1d4} figures wrapped
+    in webbing hang motionless.{break2}
+    Giant Black Widow Spider AC 14, HD 3*, #At 1 bite, Dam 2d6 + poison ({poison_type}),
+    Mv 20' Web 40', Sv F3, Ml 8, XP 175
+6   {2d2} vines have grown up the walls and hang over the roof.{break2}
+    Assassin Vine AC 15, HD 6*, #At 1 + special, Dam 1d8 + special, Mv 5',
+    Sv F6, Ml 12, XP 555
+7   Gray ooze spreads out over the floor.{break2}
+    Gray Ooze AC 12, HD 3*, #At 1, Dam 2d8, Mv 1', Sv F3, Ml 12, XP 175
+8   {1d5+2} wraiths in ragged uniforms linger within.{break2}
+    Wraith* AC 15 ‡, HD 4**, #At 1 touch, Dam 1d6 + energy drain (1 level),
+    Mv Fly 80', Sv F4, Ml 12, XP 320
+
+table: area2_treasure 1d4
+1   Brass fittings from the carriage could fetch {2d10}gp.
+2   An iron-bound chest contains four place-settings of fine dinnerware,
+    including utensils ({2d8}00gp).
+3   Under the seat of the carriage is a small case containing four +1 darts.
+4   Under the seat of the carriage is a waterproof tube containing a map.
+
+# Hut
+table: area3
+1   Weeds grow from a mound of soil in a long-discarded wheelbarrow beside a
+    10'x10' hut. The stuck door requires significant force to open. Inside, a
+    meager living space contains a bed and a few personal effects, all untouched
+    for some time. An elf skeleton rests under a heavy blanket. {area3_tunnel}
+    {area3_treasure}
+2   A dilapidated door barely hangs on rusted hinges. Leaves and dirt litter the
+    the floor of the 10'x10' hut. {area3_tunnel} {area3_monster}
+
+table: area3_tunnel
+1-5 {blank}
+6   A trap door covers a tunnel curving down about 8' then leading directly under
+    the wall, emerging under thick brush.
+
+table: area3_monster 1d6
+1-3 {blank}
+4   A troll curls up in the corner.{break2}
+    Troll AC 16, HD 6*, #At 3, Dam 1d6/1d6/1d10, Mv 40', Sv F6, Ml 10 (8), XP 555
+5   A giant python rests in a coil.{break2}
+    Giant Python AC 14, HD 5*, #At 1 bite/1 constrict, Dam 1d4/2d4, Mv 30', Sv F5, Ml 8, XP 405
+6   {2d4} zombies rise to attack anyone who enters.{monster_zombie}
+
+table: area3_treasure 1d4
+1   {blank}
+2   A collection of garden implements remains well-preserved, including a shovel,
+    a rake and a pitchfork.
+3   Searching under the mattress turns up a sack of {1d8}00sp.
+4   A magical ring of plant control long ago fell through a crack in the floorboards.
+
+# Orchard
+table: area4
+1   Aging trees bear a few shriveled apples, still edible. {area4_monster}
+2   Only the largest limbs of long-dead fruit trees remain, standing pathetically
+    over piles of debris. {area4_monster}
+3   Verdant trees bear a variety of fruits, including apples and lemons. {area4_monster}
+4   Sad stumps in a barren field suggest an orchard once grew here. {area4_monster}
+
+table: area4_monster 2d4
+2-3 {blank}
+4   {2d2} vines stretch across the ground and up the tree trunks.{break2}
+    Assassin Vine AC 15, HD 6*, #At 1 + special, Dam 1d8 + special, Mv 5',
+    Sv F6, Ml 12, XP 555
+5   {3d10} giant rats dwell in tunnels dug through this area. They can pop in and
+    out of holes, surprising 3 in 6 and sometimes ducking back into the warren
+    for safety. {monster_giant_rat}
+6   Hornets nest among the trees, dividing into 3 groups if disturbed.{break2}
+    Insect Swarm AC 13, HD 3*, #At 1 swarm, Dam 1d3 (double against no armor),
+    Mv 10' Fly 20', Sv N/A, Ml 11, XP 175
+7   An undead minotaur prowls the orchard weilding a fearsome lumberjack's axe
+    (100gp).{break2}
+    Undead Minotaur AC 12, HD 6, #At 1 gore/1 bite or axe, Dam 1d6/1d6 or 1d10 + 2,
+    Mv 20', Sv F6, Ml 11, XP 500
+8   A giant hawk built a nest here and sits on {1d6} eggs worth 2,000gp each. {break2}
+    Giant Hawk AC 14, HD 4, #At 1, Dam 1d6, Mv Fly 150' (10'), Sv F4, Ml 8, XP 240
+
+# Stable and Pen
+table: area5
+1   Zombie cows struggle to escape from their stalls at the site of living flesh.
+    {break2}
+    Zombie Cow AC 12, HD 2, #At 1, Dam 1d8 bite, Mv 20', Sv F2, Ml 12, XP 75
+2   The stable is empty and dusty. The glint of something shiny attracts the eye
+    that gazes over the field, which is infested with {1d8} giant shrews. They
+    will define their home aggressively. Poking out of the dirt is an earring
+    that grants +1 CHA.{break2}
+    Giant Shrew AC 16, HD 1*, #At 2 bites, Dam 1d6/1d6, Mv 60', Sv F2, Ml 10, XP 37
+3   Doves roost in the rafters of the dilapidated stable. Long abandoned stalls
+    contain nothing more than descated straw and the bones of a cow.
+4   The doors of the stable have fallen from their hinges.
+
+# Garden
+table: area6
+1   Raised beds meant for a garden have long ago given over to weeds. One bed
+    displays towering fungal growth that appears to be dusted with a yellow powder.{break2}
+    Yellow Mold AC Can always be hit, HD 2*, #At Spores, Dam See description,
+    Mv 0, Sv NM, Ml N/A, XP 100
+2   What was once a garden is now a graveyard. Broken masonry stones are propped
+    up as grave markers, the painted text long ago washed away by rain. The graves
+    are each {1d10}' deep and contain the following.{break2}
+    Grave 1 contains {area6_grave}{break}
+    Grave 2 contains {area6_grave}{break}
+    Grave 3 contains {area6_grave}{break}
+    Grave 4 contains {area6_grave}{break}
+    Grave 5 contains {area6_grave}{break}
+    Grave 6 contains {area6_grave}{break}
+3   Ancient roses tangle themselves with gnarled limbs in six ancient garden beds.
+    Fat bees gather pollen from the unusually vivid flowers.
+4   A tree trunk bare of limbs lies crossways over six garden beds filled with
+    ordinary grass.
+
+table: area6_grave 1d10
+1-5 a rotted corpse clutching {area6_grave_treasure}
+6-7 a corpse infected with disease with {area6_grave_treasure} in a pocket
+8-9 a zombie that wields {area6_grave_treasure} as a weapon{monster_zombie}
+10  a vampire{break2}
+    Vampire* AC 18 ‡, HD 7**, #At 1 weapon or special, Dam 1d8 or by weapon or special,
+    Mv 40' Fly 60', Sv F7, Ml 11, XP 800
+
+table: area6_grave_treasure 1d4
+1-2 a worthless bauble
+3   a {area6_wand}
+4   a small sack of {3d6}pp
+
+table: area6_wand 1d100
+1-35    wand with no charges
+36-40   wand of cold ({1d6+1} charges)
+41-45   wand of enemy detection ({1d6+1} charges)
+46-50   wand of fear ({1d6+1} charges)
+51-55   wand of fireballs ({1d6+1} charges)
+56-60   wand of illusion ({1d6+1} charges)
+61-65   wand of lightning bolts ({1d6+1} charges)
+66-73   wand of magic detection ({1d6+1} charges)
+74-79   wand of paralyzation ({1d6+1} charges)
+80-84   wand of polymorph ({1d6+1} charges)
+85-92   wand of secret door detection ({1d6+1} charges)
+93-100  wand of trap detection ({1d6+1} charges)
+
+# Well
+table: area7
+1   The ground below the well is unstable and will collapse {1d6}0', taking anyone
+    within 10' with it.
+2   The well contains fresh water {1d10}0' below ground level.
+3   The water in the well is fouled, exposing those investigating to disease.
+
+# House theme
+table: house
+1   House of Undead{break2}
+    {house_windows}
+    {break2}
+    8 Porch{break}{area8a}{break2}
+    9 Entry{break}{area9a} {area9_closet}{break2}
+    10 Parlor and Hallway{break}{area10a}{break2}
+    11 Sun Room{break}{area11a}{break2}
+    12 Dining Room{break}{area12a}{break2}
+    13 Library{break}{area13a}{break2}
+    14 Service Pantry{break}{area14a}{break2}
+    15 Food Pantry{break}{area15a}{break2}
+    16 Kitchen{break}{area16a}{break2}
+    17 2nd Floor Hallway{break}{area17a}{break2}
+    18 Bedroom{break}{area18a}{break2}
+    19 Bedroom{break}{area19a}{break2}
+    20 Bedroom{break}{area20a}{break2}
+    21 Bedroom{break}{area21a}{break2}
+    22 Bedroom{break}{area22a}{break2}
+    23 Bath{break}{area23a}{break2}
+    24 Private Bath{break}{area24a}{break2}
+2   House of Bandits{break2}
+    The main house is occupied by bandits who may notice ({1d4} in 6) any
+    intruders on the grounds before they get near the house. {house_windows}
+    Bandits inside second story rooms may fire missile weapons through windows
+    at any oncoming threat.
+    {break2}
+    8 Porch{break}{area8b}{break2}
+    9 Entry{break}{area9b} {area9_closet}{break2}
+    10 Parlor and Hallway{break}{area10b}{break2}
+    11 Sun Room{break}{area11b}{break2}
+    12 Dining Room{break}{area12b}{break2}
+    13 Library{break}{area13b}{break2}
+    14 Service Pantry{break}{area14b}{break2}
+    15 Food Pantry{break}{area15b}{break2}
+    16 Kitchen{break}{area16b}{break2}
+    17 2nd Floor Hallway{break}{area17b}{break2}
+    18 Bedroom{break}{area18b}{break2}
+    19 Bedroom{break}{area19b}{break2}
+    20 Bedroom{break}{area20b}{break2}
+    21 Bedroom{break}{area21b}{break2}
+    22 Bedroom{break}{area22b}{break2}
+    23 Bath{break}{area23b}{break2}
+    24 Private Bath{break}{area24b}{break2}
+
+table: house_windows 1d4
+1   All windows are boarded up, though gaps between boards offer some view
+    inside.
+2   No glass remains in any windows. Ragged curtains flutter weakly.
+3   Half the panes of glass are missing from windows. Most of the rest are
+    shattered. Curtains or drapes obscure views to inside.
+4   Windows are of a double-hung type and in good operation. Half are locked.
+
+# Undead / Demons
+
+# Porch
+table: area8a
+1   Stairs lead up to a 10'x10' porch where sturdy boards hold a door closed. Bold
+    letters carved into one of the planks warns "{area8a_warning}". Whithered offerings
+    collect before the threshold.
+2   The entry door stands ajar, hanging loosely, on the north end of a 10'x10' porch.
+    Access is available via stairs from the south. Standing on the creeking boards, a
+    stale odor of decay creeps out from deep within the crumbling abode. Flowers and
+    herbs scatter over the groaning floorboards, some crushed under unknown feet.
+3   A patchwork of rottted stair treads leads to a partially collapsed porch. Careful
+    stepping on decaying framework of a 10' square porch allows access to a doorway
+    blocked by a door which has fallen from its top hinge and tilted clockwise.
+4   Stone stairs lead to a porch covered in wooden planks over which green paint wore
+    away under bootheels. A rusting chain loops through a hole in the door, around the door
+    frame and back out a hole in the wall where a padlock joins the two ends. Almost
+    unreadable, red paint smeared on the ragged door announces, "{area8a_warning}".
+
+table: area8a_warning
+1   DEAD INSIDE
+2   DANGER
+3   MORTO PELIGRUNDO
+4   ANNOINTED ONE BLESS THIS HOUSE
+5   NO ENTRANCE
+6   DO NOT ENTER
+7   WOE TO THOSE WHO DISTURB MY REST
+8   CURSED
+9   DEMONS
+10  DEVILRY
+
+# Entry
+table: area9a
+1   Dim light stabs through the window on the east wall of this entry chamber over a
+    well-worn rug and towards a hallway to the west. A closet door to the north invites
+    investigation, and a doorway on the south wall allows exit from the building.
+2   The main entrance to the house on the south wall faces a closet door on the north
+    wall. A window on the east wall offers a view across a path to a garden. To the west,
+    a hallway opens up to a parlor. A glass vase has falled from a small alcove, leaving
+    glass shards strewn over a moth-eaten rug.
+
+
+table: area9_closet
+1   Beyond the locked closet door hang {2d6} coats, some in severe disrepair. A thorough
+    search of pockets will turn up {area9_closet_treasure}.
+2   A small closet, five feet square, holds only shreds of unrecognizable garments hanging
+    from rusted hooks. A concealed door on the west wall contains {area9_closet_treasure}
+    plus a leather sack holding {3d8}00 gp.
+3   A leather whip winds around a rod spanning this 5'x10' closet and around the neck of
+    a wriggling corpse. It's feet dangling only inches over old floorboards, the zombie
+    reaches to the doorway to grab the unexpecting explorer. It will grapple to pull a
+    victim in for a satisfying taste of flesh. {monster_zombie}{break2}Inside the breast
+    pocket of the zombie's coat searchers find {area9_closet_treasure}.
+4   The ceiling of this 5'x10' closet collapsed into a pile of plaster and wood spliters,
+    allowing access to area 23 above.
+
+table: area9_closet_treasure
+1   a thin bar of soap wrapped in oily rag that when rubbed over a non-magical weapon
+    adds a +{1d2} enchantment for {1d6} turns
+2   a small flask of purple goo labeled "maximum insight" that when consumed boosts
+    wisdom to 18 for {1d6} hours
+3   a silver locket hiding a delicate cameo ({3d6}gp)
+4   a suicide letter that mentions treasure thrown down the well
+
+
+# Parlor and Hallway
+table: area10a
+1   The ruins of once-fine furniture litter the parlor, nearly disguising a gaping
+    hole in the floor. {area10a_hole}.
+2   Two figures sit motionless in upolstered chairs. {area10a_residents}
+
+table: area10a_hole
+1   A desicated corpse lies motionless among more debris {1d4+1}' below floor level. Anyone
+    touching it must save versus poison or be infected by mummy rot.
+2   The corpse of a giant rat lies {1d4+1}' below floor level. Movement in this room
+    has a {1d4} in 6 chance to draw the attention of {2d6} rats from the nest in the crawlspace
+    which expands under the entire footprint of the house. It also provides exits under the
+    back porch and down into the basement. Entering the crawlspace triggers the rats to
+    defend their nest to the death. {monster_giant_rat}
+3   The hole reveals an open, empty casket.
+
+
+table: area10a_residents
+1   The ordinary skeletons tumble into a pile of bones if touched.
+2   Skeletons leap to attack, both picking one victim at random to grapple and drag down the
+    hall into the kitchen (area 16). {monster_skeleton}
+3   Zombies lurch to their feet, attracted to anything magical, which they will attempt to
+    take away and then shamble outside to throw down the well. {monster_zombie}
+4   Ghouls pause their whispered argument to stare at intruders. {monster_ghoul}
+
+
+# Sun Room
+table: area11a
+1   Heavy drapes smother what would otherwise be an airy sun room. Shriveled houseplants
+    droop in earthen pots. {area11a_feature}{break2}{area11a_challenge}
+2   Dry soil spills from a pile of overturned clay pots piled in the southwest
+    corner. Fetid goo oozes from a corpse tied down to low table.
+    {area11a_feature}{break2}{area11a_challenge}
+
+table: area11a_challenge
+1   {black_tentacles}
+2   {1d3+1} ghouls click their teeth as they shift glances between each other.
+    {monster_ghoul}
+
+table: area11a_feature
+1   The animated skull of a cyclops sits on a table. A brass hammer is nearby. If
+    struck with the hammer, the skull {area11a_cyclops_action}.
+2   A wrinkled baron scowls out from a crackled oil painting that hangs over a
+    silent fireplace. {area11a_fireplace}
+
+table: area11a_cyclops_action
+1   sings a haunting elven ballad
+2   rises into the air, spins for {1d6} rounds and then shoots a bolt of green
+    energy from its eye socket at one living being. Save vs magic or take 1d6 damage
+3   breaks in two to reveal a black diamond worth {10d20}gp.
+
+table: area11a_fireplace
+1   Searching with the stale ashes of the fireplace merely encourages soot to rain
+    down the chimney.
+2   Nestled in the stale ashes is a platinum coin stamped with the likeness of a frog.
+
+
+# Dining Room
+table: area12a
+1   A large banquet table is set with silver platters and utensils, together worth
+    {1d2},000 gp. {area12a_challenge}
+2   An overturned banquet table blocks windows on the west wall. Several chairs
+    are broken into pieces. {area12a_challenge}
+
+table: area12a_challenge
+1   {black_tentacles}
+2   Thick webs span from wall to wall. {2d4} giant spiders cling to the ceiling,
+    ready to pounce on easy prey. {monster_spider}
+3   Thick dust covers everthing but a path to the door on the north wall.
+
+# Library
+table: area13a
+1   Bookshelves line the walls. Heavy drapes cover the windows. Laying open on a
+    round table are three books.{break2}
+    A. {book}{break}
+    B. {book}{break}
+    C. {book}{break2}
+    {area13a_challenge}
+2   Half-burned books linger in the fireplace. Empty bookshelves block the windows.
+    {area13a_challenge}
+
+table: area13a_challenge
+1   {black_tentacles}
+2   A trap consisting of a wire spanning the entrance pulls a bookshelf down on
+    the first to enter if undetected. Save vs death +DEX or suffer 1d6 damage.
+3   Red ink on a crinkled parchment reads "Curse those invisible crowns, and
+    curse you, too!"
+
+
+# Service Pantry
+table: area14a
+1   {black_tentacles}
+2   two
+
+# Food Pantry
+table: area15a
+1   {black_tentacles}
+2   two
+
+# Kitchen
+table: area16a
+1   one
+2   two
+
+# 2nd Floor Hallway
+table: area17a
+1   one
+2   two
+
+# Bedroom
+table: area18a
+1   {black_tentacles}
+2   two
+
+# Bedroom
+table: area19a
+1   {black_tentacles}
+2   two
+
+# Bedroom
+table: area20a
+1   {black_tentacles}
+2   two
+
+# Bedroom
+table: area21a
+1   {black_tentacles}
+2   two
+
+# Bedroom
+table: area22a
+1   {black_tentacles}
+2   two
+
+# Bath
+table: area23a
+1   {black_tentacles}
+2   two
+
+# Private Bath
+table: area24a
+1   {black_tentacles}
+2   two
+
+# Bandits
+
+# Porch
+table: area8b
+1   The door is barred from inside. {area8b_trap}
+2   The door is protected by a simple lock. {area8b_trap}
+
+table: area8b_trap
+1   The floor of the porch is rigged as a crude trap door opened by pulling a
+    rope from area 9. Victims must save vs death or fall {1d4}0' into a pit dug
+    into soft earth.
+2   The roof of the porch is rigged to drop a load of boulders when a rope is
+    pulled from inside. Victims take {1d4}d6 damage, save vs death for half.
+3   A crawlspace beneath the porch floor offers strategically placed gaps that
+    allow a bandit to thrust a dagger upwards in a sneak attack. Floorboards offer
+    excellent cover for the bandit who may wisely retreat to a crawlspace if
+    threatened.{break2}
+    Floor Bandit AC 17 (13), HD 1, #At 1 weapon, Dam 1d4, Mv 30', Sv F1, Ml 8, XP 25
+4   A short barrel contains rotting meat infested with {5d4} rot grubs.{monster_rot_grub}
+    5   An iron bear trap, unconcealed, sits in the middle of the porch.
+6   An obvious gap around a square section in the middle of the porch is a false
+    trap door.
+
+# Entry
+table: area9b
+1   oneBandits
+2   two
+
+# Parlor and Hallway
+table: area10b
+1   oneBandits
+2   two
+
+# Sun Room
+table: area11b
+1   oneBandits
+2   two
+
+# Dining Room
+table: area12b
+1   oneBandits
+2   two
+
+# Library
+table: area13b
+1   oneBandits
+2   two
+
+# Service Pantry
+table: area14b
+1   oneBandits
+2   two
+
+# Food Pantry
+table: area15b
+1   oneBandits
+2   two
+
+# Kitchen
+table: area16b
+1   oneBandits
+2   two
+
+# 2nd Floor Hallway
+table: area17b
+1   oneBandits
+2   two
+
+# Bedroom
+table: area18b
+1   oneBandits
+2   two
+
+# Bedroom
+table: area19b
+1   oneBandits
+2   two
+
+# Bedroom
+table: area20b
+1   oneBandits
+2   two
+
+# Bedroom
+table: area21b
+1   one
+2   two
+
+# Bedroom
+table: area22b
+1   one
+2   two
+
+# Bath
+table: area23b
+1   one
+2   two
+
+# Private Bath
+table: area24b
+1   one
+2   two
+
+
+
+# River's Edge
+table: area25
+1   Behind the estate a deep stream races from west to east. Fish may be
+    spotted among the shadows and rocks. {area25_monster}
+2   A sluggish, algae-clogged stream trickles along the northern wall of the
+    estate. Check for disease after significant contact with the water.
+    {area25_monster}
+3   The path ends at the edge of a stream beside a simple gravestone. {area25_grave}
+    {area25_monster}
+
+table: area25_monster 1d4
+1   {1d4} giant frogs have strayed from a nearby pond.{break2}
+    Giant Frog AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1,
+    Mv 30' Swim 30', Sv F2, Ml 6, XP 75
+2   {2d6} Giant flies buzz {2d6}0' to the north, approaching cautiously anything
+    that smells like food.{break2}
+    Giant Fly AC 14, HD 2, #At 1 bite, Dam 1d8, Mv 30' Fly 60', Sv F2, Ml 8, XP 75
+3-4 {blank}
+
+table: area25_grave 1d2
+1   If dug up, the grave will be found to contain the well-preserved body of a
+    child wearing a jeweled necklace (5,000gp). Beneath layers of clothing will
+    be found a wooden stake through the heart. If the vampiric child is left out
+    in the elements, there is a 1 in 6 chance every day that a scavenging animal
+    tears the body up enough to dislodge the stake, bringing the vampire back to
+    undeath.
+2   If dug up, the grave will be found to contain the well-preserved body of a
+    child wearing a jeweled necklace (5,000gp). Removing the necklace will
+    immediately bring forth the ghost of the child who will petulantly demand the
+    return of the necklace.{break2}
+    Ghost AC 20*, HD 10 (+9), #At 1 touch/1 gaze, Dam 1d6 + special,
+    Mv 30', Sv F10, Ml 10, XP 5500
+
+
+#
+# Monsters
+#
+
+table: monster_zombie
+1   {break2}Zombie AC 12, HD 2, #At 1, Dam 1d8 or by weapon, Mv 20', Sv F2, Ml 12, XP 75
+
+table: monster_rot_grub
+1   {break2}Rot Grub AC 10, HD 1 HP, #At 1 bite, Dam special, Mv 5', Sv F1, Ml 12, XP 16
+
+table: monster_giant_rat
+1   {break2}Giant Rat AC 13, HD 1d4 HP*, #At 1 bite, Dam 1d4 + 5% chance of disease,
+    Mv 40' Swim 20', Sv F1, Ml 8, XP 13
+
+table: monster_skeleton
+1   {break2}Skeleton ---TBD---
+
+table: monster_ghoul
+1   {break2}Ghoul ---TBD---
+
+table: monster_spider
+1   {break2}Giant Spider ---TBD---
+
+#
+# Utilities
+#
+
+table: blank
+1   <!-- blank -->
+
+table: break
+1   <br>
+
+table: break2
+1   {break} {break}
+
+table: poison_type 2d6
+2   lycanthropy
+3   CHA
+4   DEX
+5   CON
+6   paralysis {2d8} rounds
+7   death
+8   sleep {1d6} turns
+9   STR
+10  INT
+11  WIS
+12  disease
+
+table: black_tentacles
+1   Innumerable black tentacles writhe here, protruding from the floor. Anyone
+    in the room or standing at the doorway are attacked by 1d4+7 tentacles AB +{1d4+4}.
+    A successful attack is a grapple that pulls the victim into the room. Each
+    round, the victim is pulled 5’ towards the center of the room and takes
+    {1d4+4} damage. Half movement in the room.
+
+
+table: book
+1   A book about {book_subject}, it's {book_condition}.
+2   Appearing to be {book_condition}, the subject appears to be {book_subject},
+    based on the title written on the cover.
+
+table: book_subject
+1   {book_subject_alchemy}
+2   {book_subject_astronomy}
+3   {book_subject_beasts}
+4   {book_subject_demonology}
+5   {book_subject_divination}
+6   {book_subject_history}
+7   {book_subject_necromancy}
+8   {book_subject_prophecies}
+9   {book_subject_theology}
+10  {book_subject_magic}
+
+table: book_subject_alchemy
+1   transmutation
+2   metallurgy
+3   pyromancy
+4   poisons
+5   potions
+6   recipes
+
+table: book_subject_astronomy
+1 comets
+2 constellations
+3 the moon
+4 the sun
+5 the stars
+6 visitations from the heavens
+
+table: book_subject_beasts
+1 domesticating horses
+2 the habits of game animals
+3 proper handling of wild beasts
+4 animal husbandry
+5 poisonous monsters
+6 a regional bestiary
+
+table: book_subject_demonology
+1 conjuring demons
+2 exorcism
+3 fiendish bargains
+4 a fiendish bestiary
+5 the realms of devils
+6 devilish symbology
+
+table: book_subject_divination
+1 anthropomancy
+2 crystal gazing
+3 oneiromancy
+4 palm reading
+5 tarot cards
+6 tea leaves
+
+table: book_subject_history
+1 ancient ancient
+2 oddities of elven cultural
+3 oddities of dwarven cultural
+4 military history
+5 political history
+6 regional ancestry
+
+table: book_subject_necromancy
+1 animation of the dead
+2 harvesting corpses
+3 becoming a lich
+4 spirits and souls
+5 a bestiary of the undead
+6 vampirism
+7 lycanthropy
+8 a bestiary of were-creatures
+
+table: book_subject_prophecies
+1 prophecies of the apocalypse
+2 predicted astronomical events
+3 how birds are omens
+4 catalogued dreams of prophesy
+5 interpretting visions
+6 predicting the weather
+
+table: book_subject_theology
+1 the afterlife
+2 rituals
+3 religious history
+4 saints and martyrs
+5 sacred symbols
+6 a catalogue of sacred texts
+
+table: book_subject_magic
+1 elementalism
+2 enchantment
+3 illusions
+4 summoning
+5 teleportation and travel
+6 warding
+
+table: book_condition 2d6
+2   blank
+3   pristine
+4   in poor condition, with ink stains obscuring parts
+5   damaged by water but readable
+6   well-used, including some handwritten notes in the margins
+7   worn and tattered
+8   badly damaged, nearly illegible
+9   ancient. Pages crumble as they turn
+10  vandalized, missing many pages
+11  unfinished, 1/{2d4} of pages blank
+12  hollowed out and containing {book_hidden_contents}
+
+table: book_hidden_contents
+1   a locket
+2   a knife
+3   a small hammer
+4   a small scroll
+5   a vial of mysterious liquid
+6   a ring

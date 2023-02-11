@@ -1,0 +1,506 @@
+name: UNFINISHED Megadungeon Monsters
+description: Generates random monster encounters for a given dungeon level based
+    on 1e DMG Appendix C.
+recipe: does not use recipes
+repeat: 1
+
+table: dungeon1 1d20 Dungeon Level 1
+1-16    {level1}
+17-19   {level2}
+20      {level3}
+
+table: dungeon2 1d20 Dungeon Level 2
+1-12    {level1}
+13-16   {level2}
+17-18   {level3}
+19      {level4}
+20      {level5}
+
+table: dungeon3 1d20 Dungeon Level 3
+1-6     {level1}
+7-12    {level2}
+13-18   {level3}
+19      {level4}
+20      {level5}
+
+table: dungeon4 1d20 Dungeon Level 4
+1-5     {level1}
+6-10    {level2}
+11-16   {level3}
+17-18   {level4}
+19      {level5}
+20      {level6}
+
+table: dungeon5 1d20 Dungeon Level 5
+1-3     {level1}
+4-6     {level2}
+7-12    {level3}
+13-16   {level4}
+17-18   {level5}
+19      {level6}
+20      {level7}
+
+table: dungeon6 1d20 Dungeon Level 6
+1-2     {level1}
+3-4     {level2}
+5-6     {level3}
+7-12    {level4}
+13-16   {level5}
+17-18   {level6}
+19      {level7}
+20      {level8}
+
+table: dungeon7 1d20 Dungeon Level 7
+1       {level1}
+2-3     {level2}
+4-5     {level3}
+6-10    {level4}
+11-14   {level5}
+15-16   {level6}
+17-18   {level7}
+19      {level8}
+20      {level9}
+
+table: dungeon8 1d20 Dungeon Level 8
+1       {level1}
+2       {level2}
+3-4     {level3}
+5-7     {level4}
+8-10    {level5}
+11-14   {level6}
+15-16   {level7}
+17-18   {level8}
+19      {level9}
+20      {level10}
+
+table: dungeon9 1d20 Dungeon Level 9
+1       {level1}
+2       {level2}
+3       {level3}
+4-5     {level4}
+6-8     {level5}
+9-12    {level6}
+13-15   {level7}
+16-17   {level8}
+18-19   {level9}
+20      {level10}
+
+table: dungeon10 1d20 Dungeon Level 10
+1       {level1}
+2       {level2}
+3       {level3}
+4       {level4}
+5-6     {level5}
+7-9     {level6}
+10-12   {level7}
+13-16   {level8}
+17-19   {level9}
+20      {level10}
+
+table: dungeon11 1d20 Dungeon Level 11
+1       {level1}
+2       {level2}
+3       {level3}
+4       {level4}
+5       {level5}
+6-8     {level6}
+9-12    {level7}
+13-16   {level8}
+17-19   {level9}
+20      {level10}
+
+table: dungeon12 1d20 Dungeon Level 12
+1       {level1}
+2       {level2}
+3       {level3}
+4       {level4}
+5       {level5}
+6-7     {level6}
+8-9     {level7}
+10-12   {level8}
+13-18   {level9}
+19-20   {level10}
+
+table: dungeon13 1d20 Dungeon Level 13
+1       {level1}
+2       {level2}
+3       {level3}
+4       {level4}
+5       {level5}
+6-7     {level6}
+8-9     {level7}
+10-11   {level8}
+12-18   {level9}
+19-20   {level10}
+
+table: dungeon14 1d20 Dungeon Level 14
+1       {level1}
+2       {level2}
+3       {level3}
+4       {level4}
+5       {level5}
+6       {level6}
+7-8     {level7}
+9-11    {level8}
+12-17   {level9}
+18-20   {level10}
+
+table: dungeon15 1d20 Dungeon Level 15
+1       {level1}
+2       {level2}
+3       {level3}
+4       {level4}
+5       {level5}
+6       {level6}
+7       {level7}
+8-11    {level8}
+12-17   {level9}
+18-20   {level10}
+
+table: dungeon16 1d20 Dungeon Level 16 & Down
+1       {level1}
+2       {level2}
+3       {level3}
+4       {level4}
+5       {level5}
+6       {level6}
+7       {level7}
+8-10    {level8}
+11-16   {level9}
+17-20   {level10}
+
+table: level1
+01-02    {2d6} Giant Ants (AC 17, HD 4, #At 1 bite, Dam 2d6, Mv 60' (10'), Sv F4, Ml 7 on first sighting, 12 after engaged)
+03-04    Badger
+05-14    {1d8} Giant Fire Beetle (AC 16, HD 1+2, #At 1 bite, Dam 2d4, Mv 40', Sv F1, Ml 7)
+15       Demon, manes
+16-17    Dwarf
+18       Ear seeker
+19       Elf
+20-21    {1d8} Gnome (AC 15 (11), HD 1, #At 1, Dam 1d6 or by weapon, Mv 20' Unarmored 40', Sv F1 (+Dwarf bonuses), Ml 8)
+22-26    {2d4} Goblins (AC 14 (11), HD 1-1, #At 1 weapon, Dam 1d6 or by weapon, Mv 20' Unarmored 30', Sv F1, Ml 7 when alone)
+27-28    Halfling
+29-33    {1d6} Hobgoblins (AC 14 (11), HD 1, #At 1 weapon, Dam 1d8 or by weapon, Mv 30' Unarmored 40', Sv F1, Ml 8)
+34-48    {human}
+49-54    {4d4} Kobolds (AC 13 (11), HD 1d4 HP, #At 1 weapon, Dam 1d4 or by weapon, Mv 20' Unarmored 30', Sv NM, Ml 6 when alone)
+55-66    {2d4} Orcs (AC 14 (11), HD 1, #At 1 weapon, Dam 1d8 or by weapon, Mv 30' Unarmored 40', Sv F1, Ml 8)
+67-70    Piercer
+71-83    {3d6} Giant Rat (AC 13, HD 1d4 HP*, #At 1 bite, Dam 1d4 + 5% chance of disease, Mv 40' Swim 20', Sv F1, Ml 8)
+84-85    {5d4} Rot Grub (AC 10, HD 1 HP, #At 1 bite, Dam special, Mv 5', Sv F1, Ml 12)
+86-96    {1d8} Shrieker (AC 13, HD 3, #At Special, Dam None, Mv 5', Sv F1, Ml 12)
+97-98    {3d4} Skeletons (AC 13, HD 1, #At 1, Dam 1d6 or by weapon, Mv 40', Sv F1, Ml 12)
+99-00    {2d4} Zombies (AC 12, HD 2, #At 1, Dam 1d8 or by weapon, Mv 20', Sv F2, Ml 12)
+
+table: human
+01-40   {npc-bandits}
+41-45   Berserker
+46-00   {npc-adventurers}
+
+table: npc-adventurers 1
+1   Adventurers: {1d3} Fighters, {1d2} Thieves, {1d2} Clerics, and {1d2-1} Magic-Users.
+
+table: npc-bandits 1
+1   Bandits: {2d12} Level 1 Fighters and {1d6} Level 1 Thieves, led by a {npc-bandit-leader}.
+
+table: npc-bandit-leader
+1   Level {1d4+1} Fighter
+2   Level {1d4+1} Thief
+
+table: level2
+1       Badger, giant*
+02-16   {2d4} Giant Centipedes (AC 11, HD 1d4 Hit Points*, #At 1 bite, Dam poison, Mv 40', Sv NM, Ml 7)
+17-27   {npc-adventurers}
+28-29   Devil, lemure
+30-31   Gas spore
+32-38   {1d6} Gnolls (AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8)
+39-46   Piercer
+47-58   {3d6} Giant Rat (AC 13, HD 1d4 HP*, #At 1 bite, Dam 1d4 + 5% chance of disease, Mv 40' Swim 20', Sv F1, Ml 8)
+59-60   {5d4} Rot Grub (AC 10, HD 1 HP, #At 1 bite, Dam special, Mv 5', Sv F1, Ml 12)
+61-72   {1d8} Shrieker (AC 13, HD 3, #At Special, Dam None, Mv 5', Sv F1, Ml 12)
+73-77   {1d10} Stirges (AC 13, HD 1*, #At 1 bite, Dam 1d4 + 1d4/round blood drain, Mv 10' Fly 60', Sv F1, Ml 9)
+78-87   {1d4} Giant Toad (AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6)
+88-00   {1d8} Troglodytes (AC 15, HD 2, #At 2 claws/1 bite, Dam 1d4/1d4/1d4, Mv 40', Sv F2, Ml 9)
+
+table: level3
+01-10   {1d8} Giant Bombardier Beetle (AC 16, HD 2*, #At 1 bite + special, Dam 1d6 + special, Mv 40', Sv F2, Ml 8)
+11-20   {2d4} Bugbears (AC 15 (13), HD 3+1, #At 1 weapon, Dam 1d8+1 or by weapon +1, Mv 30' Unarmored 40', Sv F3, Ml 9)
+21-30   {npc-adventurers}
+31-32   {level3dragon}
+33-34   Fungi, violet
+35-40   1 Gelatinous Cube (AC 12, HD 4*, #At 1, Dam 2d4 + paralysis, Mv 20', Sv F2, Ml 12)
+41-45   {1d6} Ghouls (AC 14, HD 2*, #At 2 claws/1 bite, Dam 1d4/1d4/1d4, all plus paralysis, Mv 30', Sv F2, Ml 9)
+46-50   {1d4} Giant Draco Lizard (AC 15, HD 4+2, #At 1 bite, Dam 1d10, Mv 40' Fly 70' (C, and see below), Sv F3, Ml 7)
+51-54   {1d8} Wererats (AC 13 †, HD 3*, #At 1 bite or 1 weapon, Dam 1d4 or 1d6 or by weapon, Mv 40', Sv F3, Ml 8)
+55-60   1 Ochre Jelly* (AC 12, HD 5*, #At 1, Dam 2d6, Mv 10', Sv F5, Ml 12)
+61-72   {1d6} Ogre (AC 15 (12), HD 4+1, #At 1 weapon, Dam 2d6 with ogre weapon (+3 with normal weapon), Mv 30' Unarmored 40', Sv F4, Ml 10)
+73-74   Piercer
+75      {5d4} Rot Grub (AC 10, HD 1 HP, #At 1 bite, Dam special, Mv 5', Sv F1, Ml 12)
+76-77   {1d8} Shrieker (AC 13, HD 3, #At Special, Dam None, Mv 5', Sv F1, Ml 12)
+78-84   {1d3} Giant Black Widow Spider (AC 14, HD 3*, #At 1 bite, Dam 2d6 + poison, Mv 20' Web 40', Sv F3, Ml 8)
+85-93   {1d4} Giant Crab Spider (AC 13, HD 2*, #At 1 bite, Dam 1d8 + poison, Mv 40', Sv F2, Ml 7)
+94-95   Tick, giant
+96-00   Weasel, giant
+
+table: level3dragon
+01-28   Black Dragon (AC 18, HD 7**, #At 2 claws/1 bite or breath/1 tail, Dam 1d6/1d6/2d10 or breath/1d6, Mv 30' Fly 80' (15'), Sv F7 (as Hit Dice), Ml 8)   very young
+29-62   Brass   very young
+63-00   White Dragon (AC 17, HD 6**, #At 2 claws/1 bite or breath/1 tail, Dam 1d4/1d4/2d8 or breath/1d4, Mv 30' Fly 80' (10'), Sv F6 (as Hit Dice), Ml 8)   very young
+
+table: level4
+01-08   {1d6} Carnivorous Ape (AC 14, HD 4, #At 2 claws, Dam 1d4/1d4, Mv 40', Sv F4, Ml 7)
+09-14   Blink dog
+15-22   {npc-adventurers}
+23-24   {level4dragon}
+25-30   {1d6} Gargoyles (AC 15 ‡, HD 4**, #At 2 claws/1 bite/1 horn, Dam 1d4/1d4/1d6/1d4, Mv 30' Fly 50' (15'), Sv F6, Ml 11)
+31-36   {1d4} Ghast (AC 15, HD 2**, #At 2 claws/1 bite, Dam 1d4/1d4/1d4 + paralysis + stench, Mv 30', Sv F2, Ml 9)
+37-40   1 Gray Ooze (AC 12, HD 3*, #At 1, Dam 2d8, Mv 1', Sv F3, Ml 12)
+41-44   {2d4} Hell Hounds (AC 14, HD 3**, #At 1 bite or 1 breath, Dam 1d6 or 3d6, Mv 40', Sv F3, Ml 9)
+45-47   1 Hydra (AC 16, HD {1d2+4}, #At 5 bites, Dam 1d10 per bite, Mv 40' (10'), Sv F5, Ml 9)
+48      1 Hydra (pyro) (AC 16, HD 5, #At 5 bites, Dam 1d10 per bite, Mv 40' (10'), Sv F5, Ml 9)
+49-62   {1d6} Werewolf* (AC 15 †, HD 4*, #At 1 bite, Dam 2d4, Mv 60' Human Form 40', Sv F4, Ml 8)
+63-75   {1d8} Yellow Mold (AC Can always be hit, HD 2*, #At Spores, Dam See description, Mv 0, Sv NM, Ml N/A)
+76-78   {1d4} Owlbears (AC 15, HD 5, #At 2 claws/1 bite + 1 hug, Dam 1d8/1d8/1d8 + 2d8, Mv 40', Sv F5, Ml 9)
+79      {1d4} Rust Monsters (AC 18, HD 5*, #At 1, Dam special, Mv 40', Sv F5, Ml 7)
+80-82   {1d10} Shadows (AC 13 ‡, HD 2*, #At 1 touch, Dam 1d4 + 1 point Strength loss, Mv 30', Sv F2, Ml 12)
+83-90   {1d3} Giant Pythons (AC 14, HD 5*, #At 1 bite/1 constrict, Dam 1d4/2d4, Mv 30', Sv F5, Ml 8)
+91-94   Su-monster
+95-96   Toad, ice
+97-00   Toad, poisonous
+
+table: level4dragon
+01-09   Black   young/sub-adult (2/3)
+10-20   Blue    very young/young (1/2)
+21-30   Brass   young/sub-adult (2/3)
+31-37   Bronze  very young/young (1/2)
+38-50   Copper  very young/young (1/2)
+51-54   Gold    very young/young (1/2)
+55-70   Green   very young/young (1/2)
+71-80   Red very young/young (1/2)
+81-88   Silver  very young/young (1/2)
+89-00   White   young/sub-adult (2/3)
+
+table: level5
+01-08   {npc-adventurers}
+09-15   {1d4} Cockatrice (AC 14, HD 5**, #At 1 beak + special, Dam 1d6 + petrification, Mv 30' Fly 60' (10'), Sv F5, Ml 7)
+16-18   {1d4} Displacers (AC 16, HD 6*, #At 2 blades, Dam 1d8/1d8, Mv 50', Sv F6, Ml 8)
+19-22   {1d6} Dopplegangers (AC 15, HD 4*, #At 1 fist, Dam 1d12 or by weapon, Mv 30', Sv F4, Ml 10)
+23-24   {level5dragon}
+25-26   1 Hydra (AC 18, HD 7, #At 7 bites, Dam 1d10 per bite, Mv 40' (10'), Sv F7, Ml 9)
+27      1 Hydra (pyro) (AC 17, HD 6, #At 6 bites, Dam 1d10 per bite, Mv 40' (10'), Sv F6, Ml 9)
+28      Imp
+29-31   Leucrotta
+32-50   {1d3} Giant Horned Chameleon Lizard (AC 18, HD 5, #At 1 tongue or 1 bite, Dam grab or 2d6, Mv 40' (10'), Sv F4, Ml 7)
+51-52   Lycanthrope, wereboar
+53-60   Minotaur
+61-64   Mold, yellow
+65      Quasit
+66-67   Rust Monster
+68-70   Shrieker
+71-72   Slithering Tracker
+73-74   Snake, giant, amphisbaena
+75-82   Snake, giant, poisonous
+83-86   Snake, giant, spitting
+87-00   Spider, giant
+
+table: level5dragon
+01-08   Black   young adult/adult (4/5)
+09-20   Blue    sub-adult/young adult (3/4)
+21-30   Brass   young adult/adult (4/5)
+31-37   Bronze  sub-adult/young adult (3/4)
+38-50   Copper  sub-adult/young adult (3/4)
+51-54   Gold    sub-adult/young adult (3/4)
+55-70   Green   sub-adult/young adult (3/4)
+71-80   Red sub-adult/young adult (3/4)
+81-88   Silver  sub-adult/young adult (3/4)
+89-00   White   young adult/adult (4/5)
+
+table: level6
+01-03   Basilisk
+04-10   Carrion crawler
+11-16   {npc-adventurers}
+17      Devil, erinyes
+18-19   Djinni
+20-21   {level6dragon}
+22-25   Green slime
+26-28   Hydra, 8-9 heads
+29-32   Jackalwere
+33-36   Lammasu
+37-38   Lycanthrope, werebear
+39-41   Lycanthrope, weretiger
+42-50   Manticore
+51-55   Medusa
+56      Mold, brown
+57-58   Mold, yellow
+59-60   Ogre magi
+61-68   Otyugh
+69-70   Rakshasa
+71-73   Salamander
+74-77   Spider, phase
+78-88   Troll
+89-93   Wight
+94-95   Wind walker
+96-98   Wraith
+99-00   Wyvern
+
+table: level6dragon
+01-08   Black old
+09-19   Blue adult
+20-29   Brass old
+30-36   Bronze adult
+37-48   Copper adult
+49-52   Gold adult
+53-65   Green adult
+66-78   Red adult
+79-87   Silver adult
+88-00   White old
+
+table: level7
+01-05   Black pudding
+06-10   {npc-adventurers}
+11-14   Chimera
+15      Demon, succubus
+16      Demon, type I
+17      Demon, type II
+18      Demon, type III
+19      Devil, barbed
+20      Devil, bone
+21      Devil, horned
+22-23   {level7dragon}
+24      Efreeti
+25-26   Elemental*
+27-30   Ettin
+31-35   Giant, hill or stone
+36-38   Giant, fire or frost
+39      Golem, flesh
+40-41   Gorgon
+42-43   Groaning spirit
+44-46   Hydra, 10-12 heads
+47      Hydra, pyro-, 7-9 heads
+48-49   Intellect devourer
+50      Invisible stalker
+51-52   Lamia
+53-56   Lizard, fire
+57-59   Lurker above
+60      Mezzodaemon
+61-63   Mimic
+64-65   Mind flayer
+66-69   Mummy
+70  N   aga, spirit
+71-73   Neo-otyugh
+74      Night hag
+75-78   Roper
+79-82   Shambling mound
+83-86   Shedu
+87      Slug, giant
+88-91   Spectre
+92-93   Trapper
+94-95   Umber hulk
+96-97   Will-o-wisp
+98-00   Xorn
+
+table: level7dragon
+01-08   Black very old
+09-19   Blue old
+20-29   Brass very old
+30-36   Bronze old
+37-48   Copper old
+49-52   Gold old
+53-65   Green old
+66-78   Red old
+79-87   Silver old
+88-00   White very old
+
+table: level8
+1       Aerial servant
+02-06   {npc-adventurers}
+7       Demon, type IV
+8       Demon, type V
+9       Demon, type VI
+10      Devil, ice
+11-12   {level8dragon}
+13-17   Ghost
+18-21   Giant, cloud
+22-23   Golem, clay
+24-26   Hydra, 13-16 heads
+27      Hydra, pyro-, 12 heads
+28-29   Intellect devourer
+30-35   Lurker above
+36-41   Mold, brown
+42-43   Mold, yellow
+44-47   Mind flayer
+48-50   Naga, guardian
+51-56   Neo-otyugh
+57-64   Purple worm
+65-69   Rust monster
+70-73   Slug, giant
+74-78   Trapper
+79-86   Vampire
+87-92   Will-o-wisp
+93-00   Xorn
+
+table: level8dragon
+01-13   Black   ancient (8)
+14-24   Blue    very old (7)
+25-31   Brass   ancient (8)
+32-35   Bronze  very old (7)
+36-43   Copper  very old (7)
+44-47   Gold    very old (7)
+48-62   Green   very old (7)
+63-78   Red very old (7)
+79-82   Silver  very old (7)
+83-00   White   ancient (8)
+
+table: level9
+01-09   {npc-adventurers}
+10-12   Devil, pit fiend
+13-15   {level9dragon}
+16-21   Giant, storm
+22-23   Golem, stone
+24-30   Hydra, 17-20 heads
+31-33   Hydra, pyro-, 12 heads
+34-40   Mold, brown
+41-50   Mold, yellow
+51-52   Nycadaemon
+53-64   Purple worm
+65-67   Rust monster
+68-69   Titan, lesser
+70-73   Titan, minor
+74-80   Umber Hulk
+81-83   Vampire Former cleric, with full powers, of 7th - 10th level.
+84-93   Will-o-wisp
+94-00   Xorn
+
+table: level9dragon
+01-10   Black, 2    ancient & old (8 & 6)
+11-22   Blue    ancient (8)
+23-31   Brass, 2    ancient & old (8 & 6)
+32-34   Bronze  ancient (8)
+35-42   Copper  ancient (8)
+43-46   Gold    ancient (8)
+47-62   Green   ancient (8)
+63-78   Red ancient (8)
+79-82   Silver  ancient (8)
+83-00   White, 2    ancient & very old (8 & 7)
+
+table: level10
+01-12   Beholder
+13-20   {npc-adventurers}
+21-28   Demon, prince*
+29-30   Devil, arch-*
+31-40   {level10dragon}
+41-50   Golem, iron
+51-60   Lich
+61-70   Titan, elder
+71-80   Vampire Former magic-user, with full powers, of 9th - 12th level.
+81-00   NO ENCOUNTER
+
+table: level10dragon
+01-20   Blue, 2 ancient & very old (8 & 7)
+21-26   Bronze,2    ancient & very old (8 & 7)
+27-33   Copper,2    ancient & very old (8 & 7)
+34-35   Chromatic   (Tiamat)
+36-40   Gold,2  ancient & old (8 & 6)
+41-60   Green, 2    ancient & very old (8 & 7)
+61-63   Platinum    (Bahamut)
+64-94   Red, 2  ancient & old (8 & 6)
+95-00   Silver, 2   ancient & old (8 & 6)

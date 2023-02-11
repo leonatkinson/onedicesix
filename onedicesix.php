@@ -23,11 +23,12 @@ class Plugin {
 
         // Styles and Scripts for the front end
         add_action('wp_enqueue_scripts', function () {
+            wp_enqueue_style('onedicesix', Plugin::$url . 'generator.css');
             wp_enqueue_script(
                 'onedicesix',
                 Plugin::$url . 'generator.js',
                 ['jquery'],
-                filemtime(Plugin::$path . 'generator.js'),
+                false, //filemtime(Plugin::$path . 'generator.js'),
                 true
                 );
             wp_localize_script( 'onedicesix', 'onedicesix', [

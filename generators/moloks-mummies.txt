@@ -1,0 +1,74 @@
+name: Molok's Mummies
+description:
+recipe:
+    Doors -- {1d6}, {1d6}, {1d6}, {1d6}, {1d6}, {1d6}<br>
+    In hex {1d6+6}, {trap}<br>
+    In hex {1d6+12}, {foe}<br>
+repeat: 1
+
+table: trap
+1   a pit opens, 10 x [DF] feet deep. {trap-filth}
+2   spikes jut up for [DF]d6 damage. {trap-poison}
+3   lightning shoots up for [DF]d6 damage then changes direction for [DF]d6 total feet
+    ({trap-direction}, {trap-direction}, {trap-direction}, {trap-direction}, {trap-direction}, {trap-direction}).
+4   [DF]d6 {trap-vermin} crawl from under a crumbling tile.
+5   sleep gas puffs for [DF] rounds.
+6   {trap-liquid} pours from a ceiling portal, filling the chamber 1’/round to a depth of [DF]d6 feet.
+
+table: trap-filth
+1-5 <blank>
+6   Disease-ridden filth coats the pit, triggering [DF]% chance of infection.
+
+table: trap-poison
+1-5 <blank>
+6   Poisoned. Save or 1/2 movement until healed.
+
+table: trap-direction
+1   N
+2   NE
+3   SE
+4   S
+5   SW
+6   NW
+7   UP
+8   DN
+
+table: trap-vermin
+1   venomous snakes
+2   giant rats
+3   spiders
+4   rot grubs
+
+table: trap-liquid
+1   water
+2   sand
+3   mud
+4   gravel
+
+table: foe
+1-4 {foe1}
+5-6 {foe2}
+
+table: foe1
+1       Skeleton
+2       Zombie
+3       Ghoul
+4       Shadow
+5       Mummy
+6       Wraith
+7       Green Slime
+8       Bone Golem
+9       Spectre
+10-100  Vampire
+
+table: foe2
+1       Skeletal Flayer
+2       Gellybone
+3       Ghast
+4       Bone Chimera
+5       Bloodshroud
+6       Ghostcap Bloom
+7       Black Pudding
+8       Flesh Golem
+9       Clay Golem
+10-100  Diabolus

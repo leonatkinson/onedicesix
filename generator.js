@@ -121,7 +121,7 @@ class EmptyZ_Generator
             count = EmptyZ_Generator.computeRoll(this.repeat);
         }
 
-        // Recipe should be plain text with embedded curl braces that match table
+        // Recipe should be plain text with embedded curly braces that match table
         // names. e.g. "See {animal}". Loop over recipe, grab the first table name,
         // replace it with a lookup. Loop again until no curly braces remain.
         let result = '';
@@ -153,6 +153,15 @@ class EmptyZ_Generator
             result = result + recipe + "\n";
         }
         return result;
+    }
+
+    /**
+     * Set the recipe and run the generator
+     * @param string recipe
+     */
+    runRecipe(recipe) {
+        this.recipe = recipe;
+        return this.run();
     }
 }
 
@@ -607,6 +616,145 @@ class EmptyZ_UI_1eDmgDisease
     }
 }
 
+class EmptyZ_UI_UnderdarkTunnels
+{
+    static setup(el) {
+        let container = jQuery(el);
+        container.append('<div class="params">'
+            + '<label for="segment-count">Number of Segments</label> '
+            + '<input type="number" name="segment-count" min="1" max="100" value="1" style="width: 50%;"><br>'
+            + '<label for="tunnel-type">Dry / Wet</label> '
+            + '<select name="tunnel-type" style="width: 50%;">'
+            + '<option value="dry">Dry Tunnel</option>'
+            + '<option value="wet">Waterway</option>'
+            + '</select><br>'
+            + '<label for="segment-count">Max Length (in feet, 0=none)</label> '
+            + '<input type="number" name="max-length" min="0" max="100000" value="0" style="width: 50%;"><br>'
+            + '</div>'
+        );
+    }
+
+    static run(el) {
+        let container = jQuery(el);
+        let output = container.find('div.output');
+        let tableID = container.attr('data-table-id');
+        let generator = EmptyZ_Generators[tableID];
+        let segmentCount = parseInt(container.find('input[name="segment-count"]').val());
+        if (isNaN(segmentCount)) {
+            segmentCount = 0;
+        }
+        let tunnelType = container.find('select[name="tunnel-type"]').val();
+        let maxLength = parseInt(container.find('input[name="max-length"]').val());
+        if (isNaN(maxLength)) {
+            maxLength = 0;
+        }
+        let totalLength = 0;
+
+        for(let i = 1; i <= segmentCount; i++) {
+            if (maxLength > 0 && totalLength > maxLength) {
+                break;
+            }
+
+            output.append('<h3>Segment ' + i + '</h3>');
+            let result = '<p>';
+            if (tunnelType == 'dry') {
+                if (i == 1) {
+                    // First segment, generate everything
+                    generator.recipe = '{underdark_1a}';
+                    let length = generator.run();
+                    totalLength += parseInt(length);
+                    generator.recipe = 'Length: ' + length + '<br>'
+                        + 'Height/Width: {underdark_1b}<br>'
+                        + 'Slope: {underdark_1c}<br>'
+                        + 'Direction: {underdark_1d}<br>'
+                        + 'Floor Texture: {underdark_1e}<br>'
+                        + 'Floor Condition: {underdark_1f}<br>'
+                        + 'Air Supply: {underdark_1g}<br>'
+                        + 'Illumination: {underdark_1h}<br>';
+                    result += generator.run();
+                } else {
+                    // Length changes every segment
+                    generator.recipe = '{underdark_1a}';
+                    let length = generator.run();
+                    totalLength += parseInt(length);
+                    result += 'Length: ' + length + '<br>';
+                    // subsequent segments, figure out what changes
+                    let changes = parseInt(generator.runRecipe('{underdark_1j}'));
+                    generator.recipe = '{underdark_1k}';
+                    for(let j = 1; j <= changes; j++) {
+                        result += generator.run() + '<br>';
+                    }
+                }
+            } else {
+                if (i == 1) {
+                    // First segment, generate everything
+                    generator.recipe = '{underdark_3a}';
+                    let length = generator.run();
+                    totalLength += parseInt(length);
+                    generator.recipe = 'Length: ' + length + '<br>'
+                    + 'Width: {underdark_3b}<br>'
+                    + 'Water Depth: {underdark_3c}<br>'
+                    + 'Ceiling Height: {underdark_3d}<br>'
+                    + 'Rate of Flow: {underdark_3e}<br>'
+                    + 'Direction: {underdark_3f}<br>'
+                    + 'Water Temperature: {underdark_3g}<br>'
+                    + 'Air Supply: {underdark_3h}<br>'
+                    + 'Illumination: {underdark_3i}<br>';
+                    result += generator.run();
+                } else {
+                    // Length changes every segment
+                    generator.recipe = '{underdark_3a}';
+                    let length = generator.run();
+                    totalLength += parseInt(length);
+                    result += 'Length: ' + length + '<br>';
+                    // subsequent segments, figure out what changes
+                    let changes = parseInt(generator.runRecipe('{underdark_3k}'));
+                    generator.recipe = '{underdark_3l}';
+                    for(let j = 1; j <= changes; j++) {
+                        result += generator.run() + '<br>';
+                    }
+                }
+            }
+
+            result += '</p>';
+            output.append(result);
+        }
+
+        output.append('<p>Total Length: '+totalLength+'\'</p>');
+    }
+}
+
+class EmptyZ_UI_Reaction
+{
+    static setup(el) {
+        let container = jQuery(el);
+        container.append('<div class="params">'
+            + '<input type="number" name="adjustment" min="-6" max="6" placeholder="Adjustment -6 to +6">'
+            + '</div>'
+        );
+    }
+
+    static run(el) {
+        // compute roll and just do a straight lookup
+        let container = jQuery(el);
+        let tableID = container.attr('data-table-id');
+        let adjustment = parseInt(container.find('input[name="adjustment"]').val());
+        if (Number.isNaN(adjustment)) {
+            return;
+        }
+        let generator = EmptyZ_Generators[tableID];
+        let rollSpec = '2d6' + (adjustment >= 0 ? '+' : '') + adjustment
+        let result = EmptyZ_Generator.computeRoll(rollSpec);
+        let roll = Math.min(Math.max(result, 2), 12);
+        generator.recipe = generator.tables['reaction'].run(roll);
+        container.find('div.output').append(
+            '<p>'
+            + generator.run()
+            + '</p>'
+        );
+    }
+}
+
 class EmptyZ_UI
 {
     static setup(el) {
@@ -636,6 +784,12 @@ class EmptyZ_UI
                     break;
                 case 'mage-spells.txt':
                     EmptyZ_UI_MageSpellbook.setup(el);
+                    break;
+                case 'underdark-tunnels.txt':
+                    EmptyZ_UI_UnderdarkTunnels.setup(el);
+                    break;
+                case 'reaction.txt':
+                    EmptyZ_UI_Reaction.setup(el);
                     break;
             }
             // Add button
@@ -695,6 +849,17 @@ class EmptyZ_UI
                     EmptyZ_UI_MageSpellbook.run(el);
                     EmptyZ_UI_MageSpellbook.runCount++;
                 }
+                break;
+            case 'underdark-tunnels.txt':
+                if (typeof EmptyZ_UI_UnderdarkTunnels.runCount == 'undefined') {
+                    EmptyZ_UI_UnderdarkTunnels.runCount = 0;
+                } else {
+                    EmptyZ_UI_UnderdarkTunnels.run(el);
+                    EmptyZ_UI_UnderdarkTunnels.runCount++;
+                }
+                break;
+            case 'reaction.txt':
+                EmptyZ_UI_Reaction.run(el);
                 break;
             default:
                 // Simple generator with fixed recipe. Line breaks are turned

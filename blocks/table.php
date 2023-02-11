@@ -26,7 +26,7 @@ function table_block_init() {
             'wp-element',
             'wp-components',
         ),
-        filemtime( "$dir/$block_js" )
+        false //filemtime( "$dir/$block_js" )
     );
 
     $editor_css = 'table/editor.css';
@@ -36,7 +36,7 @@ function table_block_init() {
         array(
             'wp-blocks',
         ),
-        filemtime( "$dir/$editor_css" )
+        false //filemtime( "$dir/$block_js" )
     );
 
     $style_css = 'table/style.css';
@@ -46,7 +46,7 @@ function table_block_init() {
         array(
             'wp-blocks',
         ),
-        filemtime( "$dir/$style_css" )
+        false //filemtime( "$dir/$block_js" )
     );
 
     register_block_type( 'onedicesix/table', array(

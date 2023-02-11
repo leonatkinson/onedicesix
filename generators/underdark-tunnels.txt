@@ -1,6 +1,6 @@
 name: Underdark Tunnels
 description: Based on Dragon #131
-recipe:
+recipe: does not use recipes
 repeat: 1
 
 table: underdark_1a 1d20 Length of Section
@@ -8,580 +8,287 @@ table: underdark_1a 1d20 Length of Section
 3-6     {10d6+30}’
 7-11    {10d4}0'
 12-18   {10d6+40}0'
-19-20   {5d4}00' 500-2,000'
+19-20   {5d4}00'
 
-table: underdark_1b
-Section Height and Width
-1d20 Type (height x width)
-1
-2
-3-4
-5-6
-7-9
-10-13
-14-18
-19
-20
-Tiny (1' x 1')
-Tight (2' x 2')
-Crawl (3' x 3')
-Wide crawl (3' x 5')
-Very narrow (5' x 3')
-Narrow (5' x 5')
-Normal (10' x 10')
-Wide (15' x 15')
-Very wide (20' x 60')
+table: underdark_1b 1d20 Height and Width
+1       Tiny (1' x 1')
+2       Tight (2' x 2')
+3-4     Crawl (3' x 3')
+5-6     Wide crawl (3' x 5')
+7-9     Very narrow (5' x 3')
+10-13   Narrow (5' x 5')
+14-18   Normal (10' x 10')
+19      Wide (15' x 15')
+20      Very wide (20' x 60')
 
-table: underdark_1C
-Section Slope
-1d20 Description ( o slope)
-1
-Steep up (51-70°)
-Moderate up (31-50°)
-Gentle up (15-30°)
-Level (between 15° up and
-8-13
-15° down)
-14-17 Gentle down (15-30°)
-18-19 Moderate down (31-50°)
-20
-Steep down (51-70°)
+table: underdark_1c 1d20 Slope
+1       Steep up (51-70°)
+2-3     Moderate up (31-50°)
+4-7     Gentle up (15-30°)
+8-13    Level (between 15° up and 15° down)
+14-17   Gentle down (15-30°)
+18-19   Moderate down (31-50°)
+20      Steep down (51-70°)
 
-table: underdark_1D
-Section Direction
-1d20 Direction
-Curving right
-Curving left
-Sharp right
-Sharp left
-9-16 Straight
-17-20 Twisting and snaking
+table: underdark_1d 1d20 Direction
+1-3     Curving right
+4-6     Curving left
+7       Sharp right
+8       Sharp left
+9-16    Straight
+17-20   Twisting and snaking
 
+table: underdark_1e 1d20 Floor Texture
+1-2     Slick/polished
+3-5     Smooth
+6-11    Normal
+12-15   Rough
+16-17   Tiered
+18-19   Covered by large boulders
+20      Covered by sharp rocks
 
-table: underdark_1E
-Floor Texture
-1d20 Description
-Slick/polished
-1-2
-Smooth
-3-5
-6-11
-12-15
-16-17
-18-19
-20
-Normal
-Rough
-Tiered
-Covered by large boulders
-Covered by sharp rocks
+table: underdark_1f 1d20 Floor Condition
+1       Water-filled (up to 1' deep)
+2-6     Slippery (wet and slimy)
+7-15    Slick (damp or wet)
+16-19   Dry, good footing
+20      Dusty (dead tunnel; check cave-in chances)
 
-table: underdark_1F
-Floor Condition
-1d20 Description
-1
-Water-filled (up to 1' deep)
-Slippery (wet and slimy)
-7-15
-Slick (damp or wet)
-16-19 Dry, good footing
-20
-Dusty (dead tunnel; check
-cave-in chances)
+table: underdark_1g 1d20 Air Supply
+1       Poisonous/noxious gas
+2       Stale
+3-6     Faint circulation
+7-13    Normal
+14-16   Drafty (1% chance of torch blowout per round)
+17-18   Windy (10% chance of torch blowout per round)
+19      Rushing air (50% chance of torch blowout per round)
+20      Steam vapors
 
+table: underdark_1h 1d20 Illumination
+1-10    None
+11-14   Very weak light (moonless)
+15-17   Weak light (moonlight with overcast clouds)
+18-19   Moderate light (moonlight with no clouds)
+20      Bright light (twilight)
 
-table: underdark_1H
-Illumination*
-Light quality
-1d20 (equivalent to:)
-1-10 None
-11-14 Very weak light (moonless)
-15-17 Weak light (moonlight with
-overcast clouds)
-18-19 Moderate light (moonlight
-with no clouds)
-20
-Bright light (twilight)
-* All underground illumination is as-
-sumed to come from either lumines-
-cent fungi, larvae, insects, or rocks.
-Shafts to the surface of the earth
-should be extremely rare and would
-provide little light. Magical light sources
-are always possible.
+table: underdark_1j 1d20 Number of Attributes That Change
+1-5     0 (none)
+6-10    1 attribute
+11-14   2 attributes
+15-17   3 attributes
+18-19   4 attributes
+20      5 attributes
 
-table: underdark_1G
-Air Supply
+table: underdark_1k 1d20 Attribute That Changes
+1-4     Height and Width: {underdark_1b}
+5-7     Slope: {underdark_1c}
+8-11    Direction: {underdark_1d}
+12-15   Floor Texture: {underdark_1e}
+16-17   Floor Condition: {underdark_1f}
+18      Air Supply: {underdark_1g}
+19      Illumination: {underdark_1h}
+20      Special Feature: {underdark_2a}
 
-1d20
-1
-2
-3-6
-7-13
-14-16
-17-18
-19
-20
-Description
-Poisonous/noxious gas
-Stale
-Faint circulation
-Normal
-Drafty 1
-Windy 2
-Rushing air 3
-Steam vapors
-1
-1% chance of torch blowout per
-round.
-2
-10% chance of torch blowout per
-round.
-3
-50% chance of torch blowout per
-round.
-
-table: underdark_1I
-Changes Following This Section
-Step
-1
-2
-3
-Section change (table reference)
-Distance must always be rerolled (table: underdark_1A)
-Roll the number of attributes that change (table: underdark_1J)
-Roll for the attribute(s) that change (table: underdark_1K)
-table: underdark_1J
-Number of Attributes That Change
-1d20 Attribute changes
-1-5
-6-10
-11-14
-15-17
-18-19
-20
-None
-1 attribute
-2 attributes
-3 attributes
-4 attributes
-5 attributes
-table: underdark_1K
-Attributes That Change
-1d20
-1-4
-5-7
-8-11
-12-15
-16-17
-18
-19
-20
-Section change (table reference)
-Section height and width (table: underdark_1B)
-Section slope (table: underdark_1C)
-Section direction (table: underdark_1D)
-Floor texture (table: underdark_1E)
-Floor condition (table: underdark_1F)
-Air supply (table: underdark_1G)
-Illumination (table: underdark_1H)
-Add special feature (table: underdark_2 group)
-
-table: underdark_2A
-Special Features
-1d100
-01-30
-31-36
-37-43
-44-46
-47-53
-54-59
-60-65
-66-70
-71-75
-76-84
-85-95
-96-98
-99-00
-Features
-None
-Side ledges or tiers
-Minor side rooms (3-60' wide x (10d20 x 10)' long)
-Stairs (natural or manmade)
-Side tunnels that dead-end in 1-6 miles with cross sections of 5'
-x 5' or less (roll 1d100 for special features; 20% are small
-underground streams)
-Pits (3-18' deep)
-Chasms (20-200' deep x 4-40' wide)
-Cliffs (10-100' high)
-Geothermal activity (table: underdark_2B)
-Blockages (table: underdark_2C)
-Habitation signs (table: underdark_2D)
-Minor mineral vein
-DM's choice
-
-table: underdark_2B
-Geothermal Activity
-
-1d20 Description
-1-8
-Hot or boiling pool of water
-9-10
-11-13
-14-19
-20
-Poisonous/noxious gas vent
-Steam vent
-Hot air
-Lava pool
-
-table: underdark_2C
-Section Blockages
-1d20 Blockages
-1-3
-Large boulder field
-Minor cave-in
-4-6
-7-9
-10
-11
-Water pool
-Quicksand
-Oil pool
-Tar pit
-12
-13-17 Large stalactites, stalagmites,
-or columns
-18
-Balconies
-19
-Waterway (random size)
-20
-DM's choice
-
-table: underdark_2D
-Habitation Signs
-1d100 Signs of habitation
-01-05 Cairn marking territory
-06
-Ruined building (outpost or
-guardpost)
-07-12 Old campsite
-13
-Small, abandoned shrine
-14-15 Dead bodies
-16-17 Shallow grave
-18-19 Burial mound
-20-21 Secret stash
-22-35 Broken tools, weapons, or
-armor
-36-37 Intact tools, weapons, or
-armor
-38-41 Battlefield
-42-62 Worked stone surfaces
-63-70 Abandoned adventurer's gear
-71-89 Intact bridge
-90-00 Ruined bridge
-
-table: underdark_3A
-Length of Section
-1d20
-1-2
-3-6
-7-11
-5-40' (5d8)
-40-90’ (30 + 10d6)
-100-400' (10d4 x 10)
-12-18 500-1,000' (400 + (10d6 x 10))
-19-20 500-2,000' (10d4 x 50)
-
-table: underdark_3B
-Section Width
-5d12 Description
-5-20' Narrow
-20-60' Average
-
-table: underdark_3C
-Water Depth
-Depth (at
-1d10 tunnel's center)
-1
-2-3
-4-6
-7-9
-10
-1' or less
-1-4'
-5-9’
-10'
-15'
-
-table: underdark_3D
-Ceiling Height
-Height
-1d10 (above water)
-1
-2-3
-4-8
-9-10
-1' or less
-1-4'
-5'
-10'
-
-table: underdark_3E
-Rate of Flow
-1d20
-1-4
-5-9
-10-15
-16-19
-20
-1
-2
-3
-Description (flow rate)
-Stagnant (0' per round)
-Placid (1-40' per round)
-Medium (41-120' per round) 1
-Rapid (121-240' per round) 2
-Cascade (241-600' per round) 3
-Roll of 1-2 on 1d6 results in one drop-off of 1-3' per mile.
-Roll of 1-5 on 1d6 results in 1-6 drop-offs of 1-4' per mile.
-3-18 drop-offs of 1d8' each per mile.
-
-table: underdark_3F
-Section Direction
-1d36 Direction
-1-3
-Curving right
-4-6
-Curving left
-7
-Sharp right
-8
-Sharp left
-9-16 Straight
-17-20 Twisting and snaking
-
-table: underdark_3G
-Water Temperature
-1d20
-1
-2-3
-4-12
-13-15
-16-17
-18
-19
-20
-Temperature (°F)
-32°
-33-35°
-36-40°
-41-45°
-46-50°
-51-80°
-81-100°
-100+°
-
-table: underdark_3H
-Air Supply
-1d20 Description
-1
-2
-3-6
-7-13
-14-16
-17-18
-19
-20
-Poison or noxious gas
-Stale
-Faint circulation
-Normal
-Drafty 1
-Windy 2
-Rushing air 3
-Steam vapors
-1
-1% chance of torch blowout per
-round.
-2
-10% chance of torch blowout per
-round.
-3
-50% chance of torch blowout per
-round.
+table: underdark_2a 1d98 Special Features
+01-30   None
+31-36   Side ledges or tiers
+37-43   Minor side rooms ({3d20}' wide x {10d20}0' long)
+44-46   {underdark_2a_stairs} Stairs
+47-53   {1d6}'x {1d6}' {underdark_2a_stream} that dead-ends in {1d6} miles
+54-59   Pits (3-18' deep)
+60-65   Chasms (20-200' deep x 4-40' wide)
+66-70   Cliffs (10-100' high)
+71-75   {underdark_2b}
+76-84   {underdark_2c}
+85-95   {underdark_2d}
+96-98   Minor mineral vein
 
 
-table: underdark_3I
-Illumination*
-1d20
-1-15
-16-18
-19-20
-Light quality (equivalent to:)
-None
-Very weak light (moonless)
-Weak light (moonlight with overcast clouds)
-* All underground illumination is assumed to come from either luminescent fungi,
-larvae, insects, or rocks. Shafts to the surface of the earth should be extremely rare
-and would provide little light. Magical light sources are always possible.
+table: underdark_2a_stairs 1d2
+1   Natural
+2   Manmade
 
-table: underdark_3J
-Changes Following This Section
-Step
-1
-2
-3
-Section change (table reference)
-Distance must be rerolled (table: underdark_3A)
-Roll number of attributes that change (table: underdark_3K)
-Roll attribute(s) that change (table: underdark_3L)
+table: underdark_2a_stream 1d10
+1-2     Underground stream
+3-10    Side tunnel
 
-table: underdark_3K
-Number of Attributes That
-Change
-1d20 Attribute changes
-1-5
-6-10
-11-14
-15-17
-18-19
-20
-None
-1 attribute
-2 attributes
-3 attributes
-4 attributes
-5 attributes
+table: underdark_2b 1d20 Geothermal Activity
+1-8     Hot or boiling pool of water
+9-10    Poisonous/noxious gas vent
+11-13   Steam vent
+14-19   Hot air
+20      Lava pool
 
-table: underdark_3L
-Attributes That Change
-1d20 1-4
-5-6
-7-8
-9-12
-13-16
-17
-18
-19
-20
-Section change (table reference)
-Section width (table: underdark_3M)
-Water depth (table: underdark_3C)
-Ceiling height (table: underdark_3D)
-Rate of flow (table: underdark_3E)
-Section direction (table: underdark_3F)
-Water temperature (table: underdark_3G)
-Air supply (table: underdark_3H)
-Illumination (table: underdark_3I)
-Add special feature (table: underdark_4 group)
+table: underdark_2c 1d19 Blockages
+1-3     Large boulder field
+4-6     Minor cave-in
+7-9     Water pool
+10      Quicksand
+11      Oil pool
+12      Tar pit
+13-17   Large stalactites, stalagmites, or columns
+18      Balconies
+19      Waterway (random size)
 
-table: underdark_3M
-Changes in Section Width
-1d6 Width alteration
-1
-Decrease width by 10' (or 5'
-2-5
-6
-if width is currently 10')
-No change
-Increase width by 10'
+table: underdark_2d 1d100 Habitation Signs
+01-05   Cairn marking territory
+06      Ruined building (outpost or guardpost)
+07-12   Old campsite
+13      Small, abandoned shrine
+14-15   Dead bodies
+16-17   Shallow grave
+18-19   Burial mound
+20-21   Secret stash
+22-35   Broken tools, weapons, or armor
+36-37   Intact tools, weapons, or armor
+38-41   Battlefield
+42-62   Worked stone surfaces
+63-70   Abandoned adventurer's gear
+71-89   Intact bridge
+90-00   Ruined bridge
 
-table: underdark_4A
-Special Features
-1d100
-01-25
-26-31
-32-40
-41-46
-47-55
-56-63
-64-66
-67-68
-69
-70
-71-75
-76
-77-78
-79-83
-84-97
-98-00
-Features
-None
-Sandy beaches
-Side ledges or tiers (landing is possible)
-Minor side rooms that are 90% likely to be dry (3-60' wide x
-(10d20 x 10') long)
-Side tunnels that dead-end in 1-6 miles that are only 40% likely to
-be dry (roll for characteristics)
-Obstacles such as large boulders, columns, etc.
-Rapids*
-Whitewater rapids*
-Minor waterfalls (1-4) of 1-10' each*
-Large waves from an earthquake or cave-in
-Minor mineral vein
-Junction with a large underground river or an exit or entrance to
-the surface
-Geothermal activity (table: underdark_4B)
-Tunnel blockages (table: underdark_4C)
-Habitation signs (table: underdark_4D)
-DM's choice
-* These are in addition to any possible drop-offs determined by the Rate of Flow
-table (table: underdark_3E).
+table: underdark_3a 1d20 Waterway Length
+1-2     {5d8}'
+3-6     {10d6+30}’
+7-11    {10d4}0'
+12-18   {10d6+4}0'
+19-20   {5d4}00'
 
-table: underdark_4B
-Geothermal Activity
-1d20 Description
-Hot or boiling water
-1-8
-9-10 Poisonous/noxious gas vent
-11-14 Steam vent
-15-20 Hot air
+table: underdark_3b 5d12 Waterway Width
+5-20    Narrow ({5d4}')
+20-60   Average ({2d3}0')
 
-table: underdark_4C
-Section Blockages
-1d20 Blockages
-Large boulder field
-Minor cave-in
-Small whirlpool
-Oil seepage forms scum on
-water
-12-18 Large stalactites, stalagmites,
-or columns
-19-20 DMs choice
+table: underdark_3c 1d10 Water Depth (at center)
+1       1' or less
+2-3     {1d4}'
+4-6     {1d5+4}5-9'
+7-9     10'
+10      15'
 
-table: underdark_4D
-Habitation Signs
-1d100
-01-10
-11-13
-14-25
-26-29
-30-34
-35-36
-37
-38
-39-41
-42-59
-60-63
-64-74
-75-80
-81-00
-Signs of habitation
-Cairn marking territory
-Ruined building (outpost or guardpost)
-Old campsite on ledge or beach
-Small abandoned shrine
-Dead bodies, on land or floating
-Shallow grave on land
-Secret stash
-Dam
-Canal
-Flotsam or jetsam (broken tools, weapons, armor, or boats)
-Intact tools, weapons, armor, or boats
-Worked stone surfaces
-Abandoned adventurer's gear
-DM's choice
+table: underdark_3d 1d10 Ceiling Height (above water)
+1       1' or less
+2-3     {1d4}'
+4-8     5'
+9-10    10'
+
+table: underdark_3e 1d20 Rate of Flow
+1-4     Stagnant (0' per round)
+5-9     Placid (1-40' per round)
+10-15   Medium (41-120' per round) {underdark_3e_medium}
+16-19   Rapid (121-240' per round) {underdark_3e_rapid}
+20      Cascade (241-600' per round) {3d6} drop-offs of {1d8}' each mile
+
+table: underdark_3e_medium 1d6
+1-2     Drop-off of {1d3}' per mile
+3-6     No drop-off
+
+table: underdark_3e_rapid 1d6
+1-5     Drop-off of {1d4}' per mile
+6       No drop-off
+
+table: underdark_3f 1d20 Direction
+1-3     Curving right
+4-6     Curving left
+7       Sharp right
+8       Sharp left
+9-16    Straight
+17-20   Twisting and snaking
+
+table: underdark_3g 1d20 Water Temperature
+1       32°
+2-3     33-35°
+4-12    36-40°
+13-15   41-45°
+16-17   46-50°
+18      51-80°
+19      81-100°
+20      100+°
+
+table: underdark_3h 1d20 Air Supply
+1       Poisonous/noxious gas
+2       Stale
+3-6     Faint circulation
+7-13    Normal
+14-16   Drafty (1% chance of torch blowout per round)
+17-18   Windy (10% chance of torch blowout per round)
+19      Rushing air (50% chance of torch blowout per round)
+20      Steam vapors
+
+table: underdark_3i 1d20 Illumination
+1-15    None
+16-18   Very weak light (moonless)
+19-20   Weak light (moonlight with overcast clouds)
+
+
+table: underdark_3k 1d20 Attribute changes
+1-5     0 (none)
+6-10    1 attribute
+11-14   2 attributes
+15-17   3 attributes
+18-19   4 attributes
+20      5 attributes
+
+table: underdark_3l 1d20 Attribute That Changes
+1-4     Width: {underdark_3m}
+5-6     Water Depth: {underdark_3c}
+7-8     Ceiling Height: {underdark_3d}
+9-12    Rate of Flow: {underdark_3e}
+13-16   Direction: {underdark_3f}
+17      Water Temperature: {underdark_3g}
+18      Air Supply: {underdark_3h}
+19      Illumination: {underdark_3i}
+20      Special Feature: {underdark_4a}
+
+table: underdark_3m 1d6 Change in Section Width
+1       Decrease width by 10' (or 5' if width is currently 10')
+2-5     No change
+6       Increase width by 10'
+
+table: underdark_4a 1d97 Special Feature
+01-25   None
+26-31   Sandy beaches
+32-40   Side ledges or tiers (landing is possible)
+41-46   Minor side rooms that are 90% likely to be dry ({3d20}' x {10d20}' x 10')
+47-55   Side tunnel that dead-ends in {1d6} miles, {underdark_4a_dry}
+56-63   Obstacles such as large boulders, columns, etc.
+64-66   Rapids
+67-68   Whitewater rapids
+69      Minor waterfalls (1-4) of 1-10' each
+70      Large waves from an earthquake or cave-in
+71-75   Minor mineral vein
+76      Junction with a large underground river or an exit or entrance to the surface
+77-78   {underdark_4b}
+79-83   {underdark_4c}
+84-97   {underdark_4d}
+
+table: underdark_4a_dry 1d10
+1-4     Dry
+5-10    Flooded
+
+table: underdark_4b 1d20 Geothermal Activity
+1-8     Hot or boiling water
+9-10    Poisonous/noxious gas vent
+11-14   Steam vent
+15-20   Hot air
+
+table: underdark_4c 1d18 Blockages
+1-3     Large boulder field
+4-6     Minor cave-in
+7-9     Small whirlpool
+10-11   Oil seepage forms scum on water
+12-18   Large stalactites, stalagmites, or columns
+
+table: underdark_4d 1d80 Habitation Signs
+01-10   Cairn marking territory
+11-13   Ruined building (outpost or guardpost)
+14-25   Old campsite on ledge or beach
+26-29   Small abandoned shrine
+30-34   Dead bodies, on land or floating
+35-36   Shallow grave on land
+37      Secret stash
+38      Dam
+39-41   Canal
+42-59   Flotsam or jetsam (broken tools, weapons, armor, or boats)
+60-63   Intact tools, weapons, armor, or boats
+64-74   Worked stone surfaces
+75-80   Abandoned adventurer's gear
