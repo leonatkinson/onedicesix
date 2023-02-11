@@ -70,6 +70,8 @@ new expressions, the generator makes another pass. Processing continues until
 no expressions remain. This allows for results from one table to refer to
 another or even recursively as in the example above.
 
+See [leonatkinson.com/one-dice-six](https://www.leonatkinson.com/one-dice-six/) for original release.
+
 ## Installation
 
 1. Copy the entire plugin folder into wp-content/plugins.
