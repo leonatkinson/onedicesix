@@ -90,3 +90,10 @@ See [leonatkinson.com/one-dice-six](https://www.leonatkinson.com/one-dice-six/) 
 
 ### 1.0.0
 * Initial Release
+### 1.1.0
+* Added more generators
+* Add special logic for underdark tunnels
+* Add logic for multi-stage reaction rolls
+* Revised Death generator rules
+* Fixed number appearing in encounters generator
+* Disable setting versions of css and js files
