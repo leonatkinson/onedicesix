@@ -78,8 +78,11 @@ another or even recursively as in the example above.
 
 ## Screenshots
 
-1. ![Public view of the Mage Spellbook generator](screenshots/rendered.png?raw=true "Public View")
-2. ![View from gutenberg editor](screenshots/block.png?raw=true "Editor View")
+### Public View
+![Public view of the Mage Spellbook generator](screenshots/rendered.png?raw=true "Public View")
+
+### Editor View
+![View from gutenberg editor](screenshots/block.png?raw=true "Editor View")
 
 ## Changelog
 
