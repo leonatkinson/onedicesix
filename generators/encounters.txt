@@ -245,10 +245,10 @@ table: masquerading-dopplegangers
 8   Mercenaries
 
 table: npc-adventurers 1
-1   Adventurers: {1d3} Fighters, {1d2} Thieves, {1d2} Clerics, and {1d2-1} Magic-Users.
+1   Adventurers -- {1d3} Fighters, {1d2} Thieves, {1d2} Clerics, and {1d2-1} Magic-Users.
 
 table: npc-bandits 1
-1   Bandits: {2d12} Level 1 Fighters and {1d6} Level 1 Thieves, led by a {npc-bandit-leader}.
+1   Bandits -- {2d12} Level 1 Fighters and {1d6} Level 1 Thieves, led by a {npc-bandit-leader}.
 
 table: npc-bandit-leader
 1   Level {1d4+1} Fighter

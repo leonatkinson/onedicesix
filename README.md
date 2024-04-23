@@ -97,3 +97,5 @@ See [leonatkinson.com/one-dice-six](https://www.leonatkinson.com/one-dice-six/) 
 * Revised Death generator rules
 * Fixed number appearing in encounters generator
 * Disable setting versions of css and js files
+### 1.2.0
+* Updated and added generators

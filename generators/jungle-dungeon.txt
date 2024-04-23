@@ -1,0 +1,1530 @@
+name: Jungle Dungeon
+description: Generate a dungeon with text only
+recipe:
+    The entrance is {entrance} that opens to room 1's {door-direction} side.<br>
+    <br>
+    {rooms}
+repeat: 1
+
+# Entrance always leads to room 1
+table: entrance
+1   a {door}, {door-trap}, in a rock face
+2   behind a shrine in an ancient temple
+3   an open cave mouth leading to a {door}
+4   a set of stairs obscured by overgrown brush
+
+# Doors only lead to higher number rooms
+table: rooms
+1   There is one room.<br>
+    <br>
+    <strong>Room 1.</strong><br>
+    {room}
+2   There are two rooms.<br><br>
+    <strong>Room 1.</strong><br>
+    {room}<br><br>
+    This room {connects} <strong>room 2</strong>.<br>
+    <br>
+    <strong>Room 2.</strong><br>
+    {room}
+3   There are three rooms.<br>
+    <strong>Room 1.</strong><br>
+    {room}<br>
+    This room {connects} <strong>room 2</strong>.<br>
+    This room {connects} <strong>room 3</strong>.<br>
+    <br>
+    <strong>Room 2.</strong><br>
+    {room}<br>
+    This room {connects} <strong>room 3</strong>.<br>
+    <br>
+    <strong>Room 3.</strong><br>
+    {room}
+4   There are four rooms.<br>
+    <br>
+    <strong>Room 1.</strong><br>
+    {room}<br>
+    This room {connects} <strong>room 2</strong>.<br>
+    This room {connects} <strong>room 3</strong>.<br>
+    This room {connects} <strong>room 4</strong>.<br>
+    <br>
+    <strong>Room 2.</strong><br>
+    {room}<br>
+    This room {connects} <strong>room 3</strong>.<br>
+    This room {connects} <strong>room 4</strong>.<br>
+    <br>
+    <strong>Room 3.</strong><br>
+    {room}<br>
+    This room {connects} <strong>room 4</strong>.<br>
+    <br>
+    <strong>Room 4.</strong><br>
+    {room}
+5   There are five rooms.<br>
+    <strong>Room 1.</strong><br>
+    {room}<br>
+    This room {connects} <strong>room 2</strong>.<br>
+    This room {connects} <strong>room 3</strong>.<br>
+    This room {connects} <strong>room 4</strong>.<br>
+    This room {connects} <strong>room 5</strong>.<br>
+    <br>
+    <strong>Room 2.</strong><br>
+    {room}<br>
+    This room {connects} <strong>room 3</strong>.<br>
+    This room {connects} <strong>room 4</strong>.<br>
+    This room {connects} <strong>room 5</strong>.<br>
+    <br>
+    <strong>Room 3.</strong><br>
+    {room}<br>
+    This room {connects} <strong>room 4</strong>.<br>
+    This room {connects} <strong>room 5</strong>.<br>
+    <br>
+    <strong>Room 4.</strong><br>
+    {room}<br>
+    This room {connects} <strong>room 5</strong>.<br>
+    <br>
+    <strong>Room 5.</strong><br>
+    {room}
+
+table: connects 1d6
+1   does not connect to
+2-6 has {door}, {door-trap}, on the {door-direction} side. It goes {3d6}0 feet via {passage}
+    ending in {door}, {door-trap}, which connects to the {door-direction} side of
+
+table: door
+1   an open archway
+2   an unlocked door
+3   a locked door
+4   a secret door
+
+table: door-trap 1d6
+1-5 untrapped
+6   {container-trap}
+
+table: door-direction 1d4
+1   north
+2   south
+3   east
+4   west
+
+table: passage 1d6
+1-3 a ten by ten passage
+4-5 a five by eight foot passage
+6   a passage {1d12+4} feet wide and {1d8+4} feet tall
+
+table: room
+1   This room is {shape}. It contains {junk-pile}.<br>
+    <br>
+    The room {contents}<br>
+
+# Shape and size
+table: shape 1d100
+1-60    a rectangle {2d4}0 feet wide by {2d4}0 feet wide and a {ceiling} foot ceiling
+61-66   an isoceles triangle pointing {door-direction} with two {2d4}0 foot sides and a {2d4}0 foot base. It has a {ceiling} foot ceiling
+67-72   a circle {2d4}0 feet across with a {ceiling} foot ceiling
+73-78   a semi-circle {2d4}0 feet across, flat side to the {door-direction}, and a {ceiling} foot ceiling
+79-84   an oval {2d4}0 feet across by {2d4}0 feet tall with a {ceiling} foot ceiling
+85-89   irregularly shaped, roughly {2d4}0 feet across by {2d4}0 feet tall with a {ceiling} foot ceiling
+90-93   a rhombus (square rotated 45 degrees) {2d4}0 feet wide and tall with a {ceiling} foot ceiling
+94-96   kite-shaped (rhombus with different x and y) {2d4}0 feet across by {2d4}0 feet tall with a {ceiling} foot ceiling
+97-99   a hexagon, flat side {door-direction}, {2d4}0 feet across with a {ceiling} foot ceiling
+99-100  an octagon {2d4}0 feet across with a {ceiling} foot ceiling
+
+table: ceiling 1d10
+1-5 10
+6   {1d4+4}
+7   {1d4+8}
+8   {3d6+4}
+9   {1d6}0
+10  {2d6}0
+
+
+table: contents 1d20
+1-5     is mostly empty.
+6-14    is a monster lair.<br>
+        {monster}
+15-17   contains a monster guarding treasure.<br>
+        {monster}<br>
+        The treasure is in {container}, {container-protect}, containing
+        {cp}cp, {sp}sp, {ep}ep, {gp}gp, {pp}pp, {gems}, {jewelry}, {magic}
+18      is trapped to protect treasure.<br>
+        The treasure in {container} contains
+        {cp}cp, {sp}sp, {ep}ep, {gp}gp, {pp}pp, {gems}, {jewelry}, {magic}.
+        {trick}
+19      is some sort of trick.<br>
+        {trick}
+20      holds unguarded treasure in {container}, {container-protect}, containing
+        {cp}cp, {sp}sp, {ep}ep, {gp}gp, {pp}pp, {gems}, {jewelry}, {magic}
+
+table: cp 1d100
+1-5     {1d8}00
+6-24    {1d10}00
+25-54   {2d6}00
+55-74   {3d6}00
+75-90   {4d6}00
+91-100  {5d6}00
+
+table: sp 1d100
+1-50    0
+51-60   {1d6}00
+61-70   {1d8}00
+71-80   {1d10}00
+81-90   {2d6}00
+91-95   {3d6}00
+96-100  {5d6}00
+
+table: ep 1d100
+1-75    0
+76-80   {1d4}00
+81-84   {1d6}00
+85-88   {1d8}00
+89-92   {1d10}00
+93-96   {1d12}00
+97-100  {2d8}00
+
+table: gp 1d100
+1-55    0
+56-57   {2d4}00
+58-76   {2d6}00
+77-88   {4d8}00
+89-100  {12d6}00
+
+table: pp 1d10
+1-9     0
+10      {2d4}00
+
+table: gems 1d100
+1-80    0 gems
+81-88   {4d20} ornamental stones (10gp/each)
+89-90   {4d12} semiprecious stones (50gp/each)
+91-97   {4d10} fancy stones (100gp/each)
+98-99   {4d8} precious stones (500gp/each)
+100     {4d6} {gem-name} gems (1000gp/each)
+
+table: gem-name 1d20
+1-3 Greenstone
+4-5 Malachite
+6-7 Aventurine
+8-9 Phenalope
+10  Amethyst
+11  Fluorospar
+12  Garnet
+13  Alexandrite
+14  Topaz
+15  Bloodstone
+16  Sapphire
+17  Diamond
+18  Fire Opal
+19  Ruby
+20  Emerald
+
+table: jewelry 1d100
+1-50    no jewelry
+50-94   {2d4} {jewelry-type} with {jewelry-motif} ({2d8}00gp/each)
+95-97   {2d6} {jewelry-type} with {jewelry-motif} ({2d8}00gp/each)
+98-100  {2d8} {jewelry-type} with {jewelry-motif} ({2d8}00gp/each)
+
+table: jewelry-type 1d100
+1-6     anklets
+7-12    belts
+13-14   bowls
+15-21   bracelets
+22-27   brooches
+28-32   buckles
+33-37   chains
+38-40   chokers
+41-42   circlets
+43-47   clasps
+48-51   combs
+52      crowns
+53-55   cups
+56-62   earrings
+63-65   flagons
+66-68   goblets
+69-73   knives
+74-77   letter openers
+78-80   lockets
+81-82   medals
+83-89   necklaces
+90      plates
+91-95   pins
+96      sceptres
+97-99   statuettes
+100     tiaras
+
+table: jewelry-motif 1d4
+1-2    abstract designs
+3      a motif of {jewelry-motify-subject}
+4      a motif of {jewelry-motify-subject} and {jewelry-motify-subject}
+
+table: jewelry-motify-subject
+1   stars
+2   a crescent moon
+3   an anchor
+4   dragonfly
+5   horseshoe
+6   hands
+7   feet
+8   skulls
+9   holy symbol
+10  shamrock
+11  misteltoe
+12  warrior
+13  heart
+14  cat
+15  dog
+16  owl
+17  eagle
+18  dove
+19  apple
+20  acorn
+21  rose
+22  lotus
+23  oak
+24  pine
+25  bee
+26  shark
+27  dolphin
+28  whale
+29  angel
+30  infinity
+31  wave
+32  shell
+33  turtle
+34  frog
+35  scarab
+36  rooster
+37  horse
+38  unicorn
+39  bear
+40  arrow
+41  sword
+42  axe
+43  crab
+44  lion
+45  chalice
+46  helmet
+47  fire
+48  anvil
+49  ship
+50  trident
+
+table: magic 1d100
+1-25    {magic-weapon} {weapon-motif}
+26-35   {magic-armor} sized for a {armor-size}
+36-55   potion of {magic-potion}
+56-85   {magic-scroll}
+86-90   ring of {magic-ring}
+91-95   {magic-wand}
+96-100  {magic-misc}
+
+table: magic-weapon
+1-2     great axe {magic-weapon-bonus}
+3-9     battle axe {magic-weapon-bonus}
+10-11   hand axe {magic-weapon-bonus}
+12      footman's pick {magic-weapon-bonus}
+13-19   shortbow {magic-weapon-bonus}
+20-23   longbow {magic-weapon-bonus}
+24-28   {1d12} shortbow arrows {magic-ammo-bonus}
+29-31   {1d12} longbow arrows {magic-ammo-bonus}
+32-35   {1d12} light quarrels {magic-ammo-bonus}
+36-37   {1d12} heavy quarrels {magic-ammo-bonus}
+38      {1d12} sling bullets {magic-ammo-bonus}
+39-49   dagger {magic-weapon-bonus}
+50      flail {magic-weapon-bonus}
+51-55   shortsword {magic-weapon-bonus}
+56      cutlass {magic-weapon-bonus}
+57-68   longsword {magic-weapon-bonus}
+69-70   scimitar {magic-weapon-bonus}
+71-74   two-handed sword {magic-weapon-bonus}
+75-79   mace {magic-weapon-bonus}
+80      light mace {magic-weapon-bonus}
+81      great mace {magic-weapon-bonus}
+82      morningstar {magic-weapon-bonus}
+83-86   warhammer {magic-weapon-bonus}
+87      maul {magic-weapon-bonus}
+88      pole arm {magic-weapon-bonus}
+89      dart {magic-weapon-bonus}
+90      javelin {magic-weapon-bonus}
+91-93   spear {magic-weapon-bonus}
+94      trident {magic-weapon-bonus}
+95-96   boar spear {magic-weapon-bonus}
+97      lance {magic-weapon-bonus}
+98      scythe {magic-weapon-bonus}
+99      sickle {magic-weapon-bonus}
+100     {unusual-weapon} {magic-weapon-bonus}
+
+table: unusual-weapon
+1   pickaxe
+2   defending dagger
+3   military fork
+4   quarterstaff
+5   chain
+6   whip
+7   club
+8   cudgel
+9   walking staff
+10  greatclub
+11  sap
+12  hook
+13  spade
+14  crowbar
+15  gauntlet
+16  cestus
+17  light crossbow
+18  heavy crossbow
+19  hand crossbow
+20  bullet crossbow
+21  sling
+22  bola
+23  dart
+24  throwing blade
+25  javelin
+26  blowgun
+27  net
+28  halberd
+29  bardiche
+30  bill-guisarme
+31  ranseur
+32  voulge
+33  guisarme
+34  lucern hammer
+35  spetum
+36  bec de corbin
+37  glaive
+38  fauchard
+39  partisan
+40  rapier
+41  torch
+42  {1d12} caltrops
+43  stone
+44  mallet
+45  candlestick
+46  iron spike
+47  wooden stake
+
+table: weapon-motif 1d6
+1-3 of plain design
+4   engraved with {jewelry-motify-subject}
+5   with matching scabbard or case decorated with {jewelry-motify-subject}
+6   with {jewelry-motify-subject} on the handle
+
+table: magic-weapon-bonus 1d100
+1-40    +1
+41-50   +2
+51-55   +3
+56-57   +4
+58      +5
+59-75   +1, +2 vs {magic-weapon-enemy}
+76-85   +1, +3 vs {magic-weapon-enemy}
+86-95   {magic-weapon-bonus}, {magic-weapon-special}
+96-98   cursed, -1
+99-100   cursed, -2
+
+table: magic-ammo-bonus 1d100
+1-46    +1
+47-58   +2
+59-64   +3
+65-82   +1, +2 vs {magic-weapon-enemy}
+83-94   +1, +3 vs {magic-weapon-enemy}
+95-98   cursed, -1
+99-100   cursed, -2
+
+
+table: magic-weapon-enemy 1d6
+1   dragons
+2   enchanted
+3   lycanthropes
+4   regenerators
+5   spell users
+6   undead
+
+table: magic-weapon-special 1d20
+1-9     casts light on command
+10-11   charm person
+12      drains energy
+13-16   flames on command
+17-19   locate objects
+20      wishes
+
+table: magic-armor 1d100
+1-8     leather armor {magic-armor-bonus}
+9-13    ring mail {magic-armor-bonus}
+14-34   chain mail {magic-armor-bonus}
+35-38   scale mail {magic-armor-bonus}
+39-40   banded mail {magic-armor-bonus}
+41-50   plate mail {magic-armor-bonus}
+51-90   medium shield {magic-armor-bonus} {shield-motif}
+91-99   tower shield {magic-armor-bonus} {shield-motif}
+100     {unusual-armor}
+
+table: shield-motif 1d4
+1-2 of plain design
+3   engraved with {jewelry-motify-subject}
+4   with a painted design of {jewelry-motify-subject}
+
+
+table: unsual-armor
+1       padded
+2       hide
+3-20    studded leather
+21      brigandine
+22      splint mail
+23      field plate
+24      full plate
+26-50   buckler {shield-motif}
+
+table: magic-armor-bonus 1d100
+1-50    +1
+51-80   +2
+81-90   +3
+91-95   cursed -1
+96-100  cursed, ac 11
+
+table: armor-size 1d100
+1-65    human
+66-85   elf
+86-95   dwarf
+96-100  halfling
+
+table: magic-potion 1d30
+1       clairaudience
+2       clairvoyance
+3       cold resistance
+4       control animal
+5       control dragon
+6       control giant
+7       control human
+8       control plant
+9       control undead
+10      delusion
+11      diminution
+12      esp
+13      fire resistance
+14      flying
+15      gaseous form
+16      giant strength
+17      growth
+18      healing
+19      heroism
+20      invisibility
+21      invulnerability
+22      levitation
+23      longevity
+24      poison
+25      polymorph self
+26      speed
+27      treasure finding
+28-30   holy water
+
+table: magic-scroll 1d100
+1-3     cleric spell scroll ({cleric-spell})
+4-6     cleric spell scroll ({cleric-spell}, {cleric-spell})
+7-8     cleric spell scroll ({cleric-spell}, {cleric-spell}, {cleric-spell})
+9       cleric spell scroll ({cleric-spell}, {cleric-spell}, {cleric-spell}, {cleric-spell})
+10-15   magic-user spell scroll ({mage-spell})
+16-20   magic-user spell scroll ({mage-spell}, {mage-spell})
+21-25   magic-user spell scroll ({mage-spell}, {mage-spell}, {mage-spell})
+26-29   magic-user spell scroll ({mage-spell}, {mage-spell}, {mage-spell}, {mage-spell})
+30-32   magic-user spell scroll ({mage-spell}, {mage-spell}, {mage-spell}, {mage-spell}, {mage-spell})
+33-34   magic-user spell scroll ({mage-spell}, {mage-spell}, {mage-spell}, {mage-spell}, {mage-spell}, {mage-spell})
+35      magic-user spell scroll ({mage-spell}, {mage-spell}, {mage-spell}, {mage-spell}, {mage-spell}, {mage-spell}, {mage-spell})
+36-40   cursed scroll
+41-46   protection from elementals scroll
+47-56   protection from lycanthropes scroll
+57-61   protection from magic scroll
+62-75   protection from undead scroll
+76-85   map to treasure type A
+86-89   map to treasure type W
+90-92   map to treasure type G
+93-100  map to {magic}
+
+table: cleric-spell 2d6
+2       {cleric-spells-6}
+3-4     {cleric-spells-4}
+5-6     {cleric-spells-2}
+7-9     {cleric-spells-1}
+10-11   {cleric-spells-3}
+12      {cleric-spells-5}
+
+table: mage-spell 2d6
+2       {mage-spells-6}
+3-4     {mage-spells-4}
+5-6     {mage-spells-2}
+7-9     {mage-spells-1}
+10-11   {mage-spells-3}
+12      {mage-spells-5}
+
+
+table: magic-ring 1d100
+1-6     control animal
+07-12   control human
+13-19   control plant
+20-30   delusion
+31-33   djinni summoning
+34-44   fire resistance
+45-57   invisibility
+58-66   protection +1
+67-70   protection +2
+71      protection +3
+72-73   regeneration
+74-75   spell storing
+76-81   spell turning
+82-83   telekinesis
+84-90   water walking
+91-97   weakness
+98      wishes
+99-100  x-ray vision
+
+table: magic-wand 1d100
+1-8     rod of cancellation
+09-13   snake staff
+14-17   staff of commanding
+18-28   staff of healing
+29-30   staff of power
+31-34   staff of striking
+35      staff of wizardry
+36-40   wand of cold
+41-45   wand of enemy detection
+46-50   wand of fear
+51-55   wand of fireballs
+56-60   wand of illusion
+61-65   wand of lightning bolts
+66-73   wand of magic detection
+74-79   wand of paralyzation
+80-84   wand of polymorph
+85-92   wand of secret door detection
+93-100  wand of trap detection
+
+table: magic-misc 1d100
+1-4     amulet of proof against detection and location
+5-6     bag of devouring
+7-12    bag of holding
+13-17   boots of levitation
+18-22   boots of speed
+23-27   boots of traveling and leaping
+28      bowl commanding water elementals
+29      brazier commanding fire elementals
+30-35   broom of flying
+36      censer commanding air elementals
+37-39   cloak of displacement
+40-43   crystal ball
+44-45   crystal ball with clairaudience
+46      drums of panic
+47      efreeti bottle
+48-54   elven boots
+55-61   elven cloak
+62-63   flying carpet
+64-70   gauntlets of ogre power
+71-72   girdle of giant strength
+73-78   helm of reading languages and magic
+79      helm of telepathy
+80      helm of teleportation
+81      horn of blasting
+82      horn of doom
+83-91   medallion of esp
+92      mirror of life trapping
+93-97   rope of climbing
+98-99   scarab of protection
+100     stone commanding earth elementals
+
+table: container 1d20
+1-2     bags
+3-4     sacks
+5-6     small coffers
+7-8     chests
+9-10    huge chests
+11-12   pottery jars
+13-14   metal urns
+15-16   stone containers
+17-18   iron trunks
+19-20   loose pile
+
+table: container-protect 1d40
+1-8     {container-trap}
+9-20    {container-hidden}
+21-40   unprotected
+
+table: container-trap 1d20
+1-2     coated with contact poison (save vs death or {trick-poison-type})
+3-4     contents coated with contact (save vs death or {trick-poison-type})
+5-6     poisoned needles in lock (save vs death or {trick-poison-type})
+7       poisoned needles in handles (save vs death or {trick-poison-type})
+8       darts fire from front ({1d4} darts AB+{2d12} 1d6 DAM)
+9       darts fire up ({1d4} darts AB+{2d12} 1d6 DAM)
+10      darts fire up from inside ({1d4} darts AB+{2d12} 1d6 DAM)
+11-12   blade cuts across inside (save vs death +DEX or 1d6 DAM)
+13      venomous insects or reptiles living inside container
+14      gas released by opening ({trick-gas})
+15      trapdoor opens in front (save vs death +DEX or fall {1d3}0')
+16      Trapdoor opens 6' in front (save vs death +DEX or fall {1d3}0')
+17      stone block drops in front (save vs death +DEX or 1d6 DAM)
+18      spears release from walls on open ({1d4} spears AB+{2d12} 1d8 DAM)
+19      explosive runes (2d6 DAM, no save)
+20      glowing symbol of {glowing-symbol}
+
+table: glowing-symbol 1d8
+1       death (save vs death or die else take 8d10 damage)
+2       discord (all creatures immediately begin arguing loudly for {5d4} rounds)
+3       fear (all creatures save vs spells -4 flee as if affected by a fear spell)
+4       hopelessness (all creatures save vs spells or turn away for {3d4} turns,
+        and 25% affected creatures take no action during any round)
+5       insanity (save vs spells or be cursed by unending confusion spell)
+6       pain (all creatures suffer wracking pains for {2d10} turns, -2 DEX and AB -4)
+7       sleep (all creatures under 8 HD immediately fall catatonic, unwakeable
+        for {1d12+4} turns)
+8       stunning (all creatures stunned for {3d4} rounds, dopping anything held)
+
+table: container-hidden 1d20
+1-3     invisibility
+4-5     covered by illusion of {junk}
+6       secret space under {container}
+7-8     secret compartment in {container}
+9       inside {junk} in plain view
+10      disguised to appear as {junk}
+11      under a heap of trash/dung
+12-13   under a loose stone in the floor
+14-15   behind a loose stone in the wall
+16-20   behind a secret panel
+
+table: trick 1d40
+1       pit trap {1d6}0' deep
+2       pit trap {1d6}0' deep with {1d6} spikes (AB+10, 1d6 damage)
+3       wall descends over entrance for {2d4}0 turns
+4       flaming oil pours on one character from hole in ceiling. save vs magic for 1d3 damage else 2d6 damage
+5       pit trap 10' deep. pit walls move together to crush victims in {1d4+1} rounds
+6       {trick-poison} arrow trap, {1d3} arrows, AB+{1d20}.
+7       {trick-poison} spear trap, {1d3} arrows, AB+{1d20}.
+8       gas, {trick-gas}
+9       stone falls from ceiling, save vs death +DEX or 1d6 damage
+10      door falls on opening character, save vs death +DEX or 1d4 damage
+11      {trick-poison} caltrops, save vs death +DEX or half movement for {1d6} turns
+12      ceiling block falls, AB+{1d20} {1d4}d6 damage
+13      ceiiing collapses, all occupants take 1d6 damage
+14      ceiling lowers 10% every {1d6} rounds
+15      floor collapsing, all occupants fall 10', 1d6 damage
+16      bear trap, escape as locked door, half movement for {1d4} turns
+17      lightning bolt, {1d6}d6 damage, save vs wands for half
+18      scything blade, save vs death +DEX or take {1d4}d8 damage
+19      teleporter
+20      acid spray, save vs death +DEX or 1d10 damage, metal items damaged
+21      fireball, {1d6}d6 damage, save vs wands for half
+22      gas jet, {trick-gas}
+23-40   {trick-feature} {trick-attribute}
+
+table: trick-poison 1d20
+1       poisoned (save vs death or {trick-poison-type})
+2-20    normal
+
+table: trick-poison-type 1d10
+1-3     permanent loss of {1d8} HP
+4-5     negative level
+6-7     -{1d4} {trick-poison-stat} after {1d20} rounds
+8       instant death
+9       death after {1d20} rounds
+10      permanent half movement
+
+table: trick-poison-stat 1d10
+1-2     STR
+3-4     DEX
+5-6     CON
+7       WIS
+8-9     INT
+10      CHA
+
+table: trick-gas 1d20
+1-7     obscures vision
+8-9     blinds for {1d6} turns
+10-12   causes fear (save vs spells +WIS or flee)
+13      causes sleep (save vs spells or sleep {2d6} turns)
+14-18   increases strength (+{1d6} STR for {1d10} hours)
+19      causes sickness (-{1d6} to all rolls for {2d6} turns)
+20      poisons {trick-poison-type}
+
+table: trick-feature 1d28
+1   an altar
+2   an archway
+3   ceiling
+4   a container holding {magic}
+5   a dome
+6   a false door
+7   a secret panel hiding {magic}
+8   a blazing fire
+9   a cold fireplace
+10  a force field
+11  a fountain
+12  a fresco, mosaic, or painting
+13  a chair
+14  an idol
+15  an illusion
+16  a machine
+17  the monster or a dead body
+18  lever
+19  a pedestal
+20  a pillar or column
+21  a pit
+22  a pool
+23  the entire room
+24  a stairway
+25  a statue
+26  a tapestry
+27  vegetation
+28  a well
+
+table: trick-attribute
+1   ages PC {1d30} years
+2   is animated
+3   radiates anti-magic {1d6}0 foot radius
+4   appears and disappears
+5   asks a question, delivers blessing if the answer is virtuous
+6   attacks AB + {2d6} for {1d4}d6 AC {1d8+11} Hardness {1d20} HP {3d6}
+7   aligns target spiritually with {alignment}
+8   changes {trick-poison-stat} to {3d6}
+9   change class to {trick-class} with same XP total
+10  swaps minds with nearest PC (exchange INT, WIS and CHA)
+11  collapses doing {1d3}d6 damage
+12  reveals the direction of any item visualized
+13  disintegrates one item
+14  distorted Width/length
+15  enlarges target by double
+16  shrinks target by half
+17  enrages target
+18  electrical shock if metallic
+19  electrical shock if magical
+20  is false
+21  turns flesh to stone
+22  produces fruit
+23  turns target gaseous for {1d4} turns
+24  applies a geas in service of {alignment}
+25  doubles gravity
+26  halves gravity
+27  negates gravity
+28  creates intense greed for {2d6} turns
+29  is intelligent
+30  is invisible
+31  moves/rolls
+32  is one-way
+33  pivots two possible ways
+34  points toward treasure
+35  produces poison
+36  polymorphs target
+37  casts confusion
+38  releases {3d6} gp coins
+39  releases {3d6} counterfeit gems
+40  releases jewelry
+41  releases magic item
+42  releases map
+43  Resisting General
+44  Resisting Specific
+45  Rising/Sinking
+46  Suggests
+47  Suspends Animation
+48  Takes/Steals
+49  Talks Intelligently/Normally
+50  Talks Nonsense
+51  Talks Poetry & Rhymes
+52  Singings
+53  Casts Spells
+54  Yells
+55  Shifting
+56  Shoots
+57  Sliding
+58  Sloping
+59  Spinning
+60  Symbiotic
+61  Teleports
+62  Wish Fulfillment
+63  Reverse Wish Fulfillment
+
+table: alignment
+1   The Anointed One
+2   Haderax
+3   Molok
+4   The World Tree
+5-6 An unknown patron diety
+
+table: trick-class
+1   fighter
+2   cleric of {alignment}
+3   magic user
+4   thief
+
+
+table: junk-pile 1d20
+1-5     unidentifiable debris
+6-8     {skeleton}
+9-10    {junk}
+11-20   {junk}, {junk-pile}
+
+table: skeleton
+1   partial {dead-body-type} skeleton
+2   {dead-body-type} skeleton
+3   rotting parts of a {dead-body-type} body
+4   a dead {dead-body-type} in {dead-body-armor}
+
+table: dead-body-type 1d10
+1-5 human
+6   elf
+7   dwarf
+8   halfling
+9   goblin
+10  orc
+
+table: dead-body-armor 1d6
+1-4 torn clothing
+5-6 {magic-armor}
+
+table: junk
+1   alembic
+2   altar
+3   anklet
+4   apron
+5   arm band
+6   armchair
+7   armoire
+8   arras
+9   arrow, broken
+10  ash
+11  ashes
+12  awl
+13  bag
+14  balance & weights
+15  bandages
+16  bark
+17  barrel
+18  basin
+19  basket
+20  bastinadoes
+21  beaker
+22  beater
+23  bed
+24  bellows
+25  bells
+26  belt
+27  bench
+28  bladder
+29  blanket
+30  blouse
+31  bone
+32  bones
+33  book
+34  boots
+35  bottle
+36  broken bottle
+37  bowl
+38  bracelet
+39  branding irons
+40  brazier
+41  brazier & charcoal
+42  brooch
+43  brush
+44  bucket
+45  buckle
+46  buffet
+47  bunks
+48  buskins
+49  large barrel
+50  cabinet
+51  cage
+52  caldron
+53  candelabra
+54  candelabrum
+55  candle
+56  candles
+57  candle snuffer
+58  candlestick
+59  candlesticks
+60  cane
+61  cap
+62  cape
+63  carafe
+64  carpet
+65  case
+66  cask
+67  cassocks
+68  chain
+69  corroded chains
+70  broken chair
+71  chair
+72  padded chair
+73  padded arm chair
+74  chair with straps
+75  chalice
+76  chalk
+77  chandelier
+78  charcoal
+79  large chest
+80  medium chest
+81  chest of drawers
+82  chimes
+83  choker
+84  chopper
+85  chunks
+86  cinders
+87  clamps
+88  clasp
+89  cloak
+90  wardrobe
+91  altar cloth
+92  splintered club
+93  coal
+94  coat
+95  cobwebs
+96  coffer
+97  coif
+98  bent copper coin
+99  collar
+100 cologne
+101 columns/pillars
+102 comb
+103 coronet
+104 couch
+105 ceiling cracks
+106 floor cracks
+107 wall cracks
+108 crate
+109 cresset
+110 cressets
+111 crown
+112 crucible
+113 cruet
+114 crystal ball
+115 crystals
+116 cup
+117 cupboard
+118 curtain/tapestry
+119 cushion
+120 dagger hilt
+121 dais
+122 dampness, ceiling
+123 dampness, wall
+124 decanter
+125 desk
+126 diadem
+127 dipper
+128 dish
+129 doublet
+130 dress
+131 dried blood
+132 dripping
+133 drum
+134 dung
+135 dust
+136 earring
+137 earspoon
+138 ewer
+139 fetters
+140 fibers
+141 fire pit
+142 fireplace with mantle
+143 fireplace & wood
+144 firkin
+145 flagon
+146 flask
+147 flask, cracked
+148 fob
+149 font
+150 food
+151 food scraps
+152 fork
+153 fountain
+154 fresco
+155 frock/pinafore
+156 fungi, common
+157 funnel
+158 furnace
+159 gauntlets
+160 gelatin
+161 girdle
+162 globes
+163 gloves
+164 goblet
+165 gong
+166 gown
+167 grains
+168 grater
+169 greasy
+170 grill
+171 grinder
+172 grindstone
+173 guano
+174 habit
+175 hair/fur bits
+176 hammer head, cracked
+177 hamper
+178 hassock
+179 hat
+180 headband (fillet)
+181 helmet, badly dented
+182 herbs
+183 hogshead
+184 holy/unholy symbol(s)
+185 holy/unholy writings
+186 hood
+187 hooks
+188 horn
+189 hose
+190 hourglass
+191 huge bell
+192 husks
+193 idol
+194 idol (largish)
+195 idol(s)
+196 incense burner(s)
+197 iron bar, bent, rusted
+198 iron boots
+199 iron maiden
+200 jack (container)
+201 jar
+202 javelin head, blunt
+203 jerkin
+204 jug
+205 jupon
+206 keg
+207 kerchief
+208 kettle
+209 kirtle
+210 kneeling bench
+211 knife
+212 knives
+213 knucklebones
+214 ladle
+215 lamp
+216 lamp/lantern
+217 lamp(s)
+218 large box
+219 leather boot
+220 leaves
+221 leaves (dry) & twigs
+222 lectern
+223 leggings
+224 lens (concave, convex, etc.)
+225 linen (drawers)
+226 linen (undershirt)
+227 locket
+228 loom
+229 magic circle
+230 manacles
+231 mantle
+232 masher
+233 mat
+234 mattress
+235 medal
+236 medallion
+237 mirror
+238 mold (common)
+239 mortar & pestle
+240 mosaics
+241 mug
+242 necklace
+243 needle(s)
+244 offertory container
+245 oil (barrel of)
+246 oil fuel
+247 oil, scented
+248 orb
+249 oubliette (pit)
+250 pail
+251 painting
+252 paintings/frescoes
+253 pallet
+254 pan
+255 pantaloons
+256 parchment
+257 paste
+258 pedestal
+259 pegs
+260 pellets
+261 pendant
+262 pentacle
+263 pentagram
+264 petticoat
+265 pews
+266 phial
+267 pick handle
+268 pillory
+269 pillow
+270 pin
+271 pincers
+272 pipe (large cask)
+273 pipe, musical
+274 pipe, smoking
+275 pipes (musical)
+276 pipette
+277 pitcher
+278 plate
+279 platter
+280 pliers
+281 pole, broken (5 2/3 â€™ )
+282 pot
+283 pot (huge)
+284 pottery shards
+285 pouch
+286 pouch/purse
+287 powder
+288 prayer rug
+289 prism
+290 puff
+291 pulpit
+292 quill
+293 quilt
+294 rack
+295 rags
+296 rail
+297 razor
+298 retort
+299 robe
+300 robes
+301 rod, mixing/stirring
+302 rope
+303 rope, rotten
+304 ropes
+305 rubble & dirt
+306 rug (small-medium)
+307 rushes
+308 sack
+309 sack, torn
+310 salve
+311 sanctuary
+312 sandals
+313 saucer
+314 scarf
+315 sceptre
+316 sconce, wall
+317 scraper
+318 screen
+319 scroll
+320 scroll tube
+321 shaker
+322 shawl
+323 sheet
+324 shelf
+325 shift
+326 shrine
+327 sideboard
+328 side chair(s)
+329 sifter
+330 skin
+331 skin/hide
+332 skull
+333 slimy coating, ceiling
+334 slimy coating, floor
+335 slimy coating, wall
+336 slippers
+337 small box
+338 small casket
+339 smock
+340 soap
+341 sofa
+342 spatula
+343 spigot
+344 spike, rusted
+345 spoon
+346 spoon, measuring
+347 staff, normal
+348 stalks
+349 stand
+350 statue
+351 statue(s)
+352 statuette
+353 statuette/figurine
+354 sticks
+355 stockings
+356 stocks
+357 stones, small
+358 stool
+359 stool, high
+360 stool, normal
+361 stopper
+362 strainer
+363 strappado
+364 straw
+365 stuffed animal
+366 surcoat
+367 sword blade, broken
+368 table
+369 table, large
+370 table, long
+371 table, low
+372 table, round
+373 table, small
+374 table, trestle
+375 tankard
+376 tank (container)
+377 tapestry
+378 teeth/fangs, scattered
+379 thongs
+380 thread
+381 throne
+382 thumb screws
+383 thurible
+384 tiara
+385 tinderbox (with flint & steel)
+386 toga
+387 tongs
+388 torches
+389 torch stub
+390 towel
+391 tray
+392 tripod
+393 trivet
+394 trousers
+395 trunk
+396 tub
+397 tube (container)
+398 tube (piping)
+399 tun
+400 tunic
+401 tureen
+402 tweezers
+403 twine
+404 unguent
+405 u rack
+406 urn
+407 vase
+408 veil
+409 vest
+410 vestments
+411 vestry
+412 vial
+413 vice
+414 votive light
+415 wall basin and font
+416 wallet
+417 wall scratchings
+418 washcloth
+419 waterclock
+420 water, large puddle
+421 water, small puddle
+422 water, trickle
+423 wax blob (candle stub)
+424 wax drippings
+425 well
+426 wheel
+427 whetstone
+428 whips
+429 whistle
+430 wig
+431 wire
+432 wood billets
+433 wood pieces, rotting
+434 wool
+435 workbench
+436 wrapper
+437 yarn
+
+table: monster 1d100
+1-5     {2d6} Giant Scorpions AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11<br>
+        HP {4d8}<br>
+        <br>
+6-9     {2d6} Weretigers AC 17 â€ , HD 5*, #At 2 claws/1 bite, Dam 1d6/1d6/2d6, Mv 50' Human Form 40', Sv F5, Ml 9, XP 405, Tr C<br>
+        HP {5d8}<br>
+        <br>
+10      Vampire AC 20 â€¡, HD 9** (+8), #At 1 weapon or special, Dam 1d8 or by weapon or special, Mv 40' Fly 60', Sv F9, Ml 11, XP 1,225, Tr F<br>
+        HP {9d8}<br>
+        <br>
+11      Succubus AC 20, HD 7**, #At 2 claws, Dam 1d4/1d4, Mv 30', Fly 50', Sv C6, Ml 7, XP 800, Tr I, L.<br>
+        Charm Person, Suggestion, Darkness, Dimension Door, ESP and Clairaudience, at will, as a 12th level caster.<br>
+        HP {7d8}<br>
+        <br>
+12-15   Hydra AC 21, HD 10 (+10), #At 10, Dam 1d10, Mv 40' (10'), Sv F10, Ml 9, XP 1300, #Ap 1, Wild 1, Lair 1, Tr B<br>
+        HP {10d8}<br>
+        <br>
+16-20   {4d6} Zombies AC 12, HD 2, #At 1 weapon, Dam 1d8 or by weapon, Mv 20', Sv F2, Ml 12, XP 75<br>
+        HP {2d8}<br>
+        <br>
+21-25   {2d4} Carnivorous Apes AC 14, HD 4, #At 2 claws, Dam 1d4/1d4, Mv 40', Sv F4, Ml 7, XP 240<br>
+        HP {4d8}<br>
+        <br>
+26-30   {1d4} Giant Crab Spiders AC 13, HD 2*, #At 1 bite, Dam 1d8 + poison, Mv 40', Sv F2, Ml 7<br>
+        HP {2d8}<br>
+        <br>
+31-35   Bone Golem AC 19‡, HD 8*, #At 4 weapons, Dam 1d6/1d6/1d6/1d6 or by weapon, Mv 40' (10'), Sv F4, Ml 12, XP 945<br>
+        HP {8d8}<br>
+        <br>
+36-40   {5d6} Winged Apes AC 14, HD 3, #At 2 claws / 1 rock, Dam 1d4/1d4/1d6, Mv 40' Fly 40' (10'), Sv F4, Ml 7 (9 in flight), XP 145<br>
+        HP {3d8}<br>
+        <br>
+41-45   {1d10} Giant Bats AC 14, HD 2, #At 1 bite, Dam 1d4, Mv 10' Fly 60' (10'), Sv F2, Ml 8<br>
+        HP {2d8}<br>
+        <br>
+46-50   {3d6} Gnolls AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8.<br>
+        HP {2d8}<br>
+        <br>
+        Gnoll chief AC 15, HD 4, #At 1 weapon, Dam 2d4+1 or by weapon +2, Mv 30', Sv F4, Ml 9, XP 240.<br>
+        HP {4d8}<br>
+        <br>
+51-59   {3d6} Gorillas AC 14, HD 4, #At 1 maul / 1 bite, Dam 1d6/1d6, Mv 40', Sv F4, Ml 7, XP 240<br>
+        HP {4d8}<br>
+        <br>
+60-69   {3d12} Stirges AC 13, HD 1*, #At 1 bite, Dam 1d4 + 1d4/round blood drain, Mv 10' Fly 60', Sv F1, Ml 9, XP 37, Tr D<br>
+        HP {1d8}<br>
+        <br>
+70-79   {2d4} Gorillas AC 14, HD 4, #At 1 maul / 1 bite, Dam 1d6/1d6, Mv 40', Sv F4, Ml 7, XP 240<br>
+        HP {4d8}<br>
+        <br>
+80-88   {2d4} Hill Giants AC 15, HD 8, #At 1, Dam 2d8, Mv 30', Sv F8, Ml 8, XP 875, Tr E + {1d8},000 gp.<br>
+        HP {8d8}<br>
+        <br>
+89      {1d4} Vampire Owlbear AC 18 â€¡, HD 5**, #At 2 claws/1 bite + 1 hug, Dam 1d8/1d8/1d8 + 2d8/drain, Mv 40', Sv F5, Ml 11, XP 450, Tr D.<br>
+        HP {5d8}<br>
+        <br>
+90-94   {6d6} Lizard Men AC 15 (12), HD 2, #At 1 weapon, Dam 1d6+1 or by weapon +1, Mv 20' Unarmored 30' Swim 40', Sv F2, Ml 11, XP 75, Tr D.<br>
+        HP {2d8}<br>
+        <br>
+95-96   {1d8} Trolls AC 16, HD 6*, #At 3, Dam 1d6/1d6/1d10, Mv 40', Sv F6, Ml 10 (8), Tr D.<br>
+        HP {6d8}<br>
+        <br>
+97      {1d4} Purple Worm AC 16, HD 11* (+9), #At 1 bite/1 sting, Dam 2d8/1d8+poison, Mv 20' (15'), Sv F6, Ml 10, XP 1,670<br>
+        HP {11d8}<br>
+        <br>
+        A tunnel goes down in the underdark.
+98      {1d4} Black Dragons AC 18, HD 7**, #At 2 claws/1 bite or breath/1 tail, Dam 1d6/1d6/2d10 or breath/1d6, Mv 30' Fly 80' (15'), Sv F7 (as Hit Dice), Ml 8, XP 800, Tr H<br>
+        HP {7d8}<br>
+        <br>
+        A tunnel connects to the outside.
+99      Green Dragon AC 19, HD 8**, #At 2 claws/1 bite or breath/1 tail, Dam 1d6/1d6/3d8 or breath/1d6, Mv 30' Fly 80' (15'), Sv F8, Ml 8, Tr H.<br>
+        HP {8d8}<br>
+        <br>
+        A tunnel connects to the outside.
+100     Red Dragon AC 21, HD 10}** (+9), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/4d8 or breath/1d8, Mv 30' Fly 80' (20'), Sv F10, Ml 8, Tr H.<br>
+        HP {10d8}<br>
+        <br>
+        A tunnel connects to the outside.
+
+table: cleric-spells-1
+1   Cure Light Wounds*
+2   Detect Evil*
+3   Detect Magic
+4   Light*
+5   Protection from Evil*
+6   Purify Food and Water
+7   Remove Fear*
+8   Resist Cold
+
+table: cleric-spells-2
+1   Bless*
+2   Charm Animal
+3   Find Traps
+4   Hold Person
+5   Resist Fire
+6   Silence 15' radius
+7   Speak with Animals
+8   Spiritual Hammer
+
+table: cleric-spells-3
+1   Continual Light*
+2   Cure Blindness
+3   Cure Disease*
+4   Growth of Animals
+5   Locate Object
+6   Remove Curse*
+7   Speak with Dead
+8   Striking
+
+table: cleric-spells-4
+1   Animate Dead
+2   Create Water
+3   Cure Serious Wounds*
+4   Dispel Magic
+5   Neutralize Poison*
+6   Protection from Evil 10' radius*
+7   Speak with Plants
+8   Sticks to Snakes
+
+table: cleric-spells-5
+1   Commune
+2   Create Food
+3   Dispel Evil
+4   Insect Plague
+5   Quest*
+6   Raise Dead*
+7   True Seeing
+8   Wall of Fire
+
+table: cleric-spells-6
+1   Animate Objects
+2   Blade Barrier
+3   Find the Path
+4   Heal*
+5   Regenerate
+6   Restoration
+7   Speak with Monsters
+8   Word of Recall
+
+table: mage-spells-1
+1   Charm Person
+2   Detect Magic
+3   Floating Disc
+4   Hold Portal
+5   Light*
+6   Magic Missile
+7   Magic Mouth
+8   Protection from Evil*
+9   Read Languages
+10  Shield
+11  Sleep
+12  Ventriloquism
+
+table: mage-spells-2
+1   Continual Light*
+2   Detect Evil*
+3   Detect Invisible
+4   ESP
+5   Invisibility
+6   Knock
+7   Levitate
+8   Locate Object
+9   Mirror Image
+10  Phantasmal Force
+11  Web
+12  Wizard Lock
+
+table: mage-spells-3
+1   Clairvoyance
+2   Darkvision
+3   Dispel Magic
+4   Fireball
+5   Fly
+6   Haste*
+7   Hold Person
+8   Invisibility 10‘ radius
+9   Lightning Bolt
+10  Protection from Evil 10’ radius*
+11  Protection from Normal Missiles
+12  Water Breathing
+
+table: mage-spells-4
+1   Charm Monster
+2   Confusion
+3   Dimension Door
+4   Growth of Plants*
+5   Hallucinatory Terrain
+6   Ice Storm
+7   Massmorph
+8   Polymorph Other
+9   Polymorph Self
+10  Remove Curse*
+11  Wall of Fire
+12  Wizard Eye
+
+table: mage-spells-5
+1   Animate Dead
+2   Cloudkill
+3   Conjure Elemental
+4   Feeblemind
+5   Hold Monster
+6   Magic Jar
+7   Passwall
+8   Telekinesis
+9   Teleport
+10  Wall of Stone
+
+table: mage-spells-6
+1   Anti-Magic Shell
+2   Death Spell
+3   Disintegrate
+4   Flesh to Stone*
+5   Geas*
+6   Invisible Stalker
+7   Lower Water
+8   Projected Image
+9   Reincarnate
+10  Wall of Iron

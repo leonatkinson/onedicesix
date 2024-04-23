@@ -1,6 +1,9 @@
 name: Encounters in the St. Orlan Swamp
 description: Tables for generating encounters by location
-recipe: {encounter} <br> {wandering}
+recipe: {encounter}<br>
+        {wandering}<br>
+        Surprise {1d6} (monsters) / {1d6} (party)<br>
+        Distance {2d4}0' ({1d3}0' surprised)
 repeat: 1
 
 table: wandering 1d6
@@ -8,33 +11,35 @@ table: wandering 1d6
 3-6 in lair
 
 table: encounter 2d10
-2   Ghost: AC 20‡, HD 10* (+9), #At 1 touch/1 gaze, Dam 1d8 + CON, Mv 30', Sv F10, Ml 10, XP 1,390, Tr E, N, O<br>
+2   Ghost AC 20‡, HD 10* (+9), #At 1 touch/1 gaze, Dam 1d8 + CON, Mv 30', Sv F10, Ml 10, XP 1,390, Tr E, N, O<br>
     Save vs. Spells or flee for 2d6 rounds. Damage done heals ghost. Lose 1 CON (elves and dwarves can save). Telekinesis. Possess, save vs spells to resist.
-3   Hydra: AC 23, HD 12 (+10), #At 12, Dam 1d10, Mv 40' (10'), Sv F12, Ml 9, XP 1,875, Tr B<br>
+3   Hydra AC 23, HD 12 (+10), #At 12, Dam 1d10, Mv 40' (10'), Sv F12, Ml 9, XP 1,875, Tr B<br>
     8 damage to a head disables it.
-4   {1d8} Treant: AC 19, HD 8*, #At 2 fists, Dam 2d6/2d6, Mv 20', Sv F8, Ml 9, XP 945, Tr C
-5   {1d4} Manticore: AC 18, HD 6+1*, #At 2 claws/1 bite or 6 spikes (180' range), Dam 1d4/1d4/2d4 or 1d6 per spike, Mv 40' Fly 60' (10'), Sv F6, Ml 9, XP 555, Tr D<br>
+4   {1d8} Treants AC 19, HD 8*, #At 2 fists, Dam 2d6/2d6, Mv 20', Sv F8, Ml 9, XP 945, Tr C
+5   {1d4} Manticores AC 18, HD 6+1*, #At 2 claws/1 bite or 6 spikes (180' range), Dam 1d4/1d4/2d4 or 1d6 per spike, Mv 40' Fly 60' (10'), Sv F6, Ml 9, XP 555, Tr D<br>
     <br>
     Overgrown lion with thick leathery wings and an ugly humanoid face. Tail ends in {1d12+12} spikes.
-6   {1d8} Troll: AC 16, HD 6*, #At 2 claws/1 bite, Dam 1d6/1d6/1d10, Mv 40', Sv F6, Ml 10 (8), XP 555, Tr D<br>
+6   {1d8} Trolls AC 16, HD 6*, #At 2 claws/1 bite, Dam 1d6/1d6/1d10, Mv 40', Sv F6, Ml 10 (8), XP 555, Tr D<br>
     Heal 1 dam/round.
-7   {2d6} Ogre: AC 15 (12), HD 4+1, #At 1 weapon, Dam 2d6 or weapon +3, Mv 30' Unarmored 40', Sv F4, Ml 10, XP 240, Tr C + 1d20x100 gp
-8   {1d3} Giant Black Widow Spider: AC 14, HD 3*, #At 1 bite, Dam 2d6 + poison, Mv 20' Web 40', Sv F3, Ml 8, XP 175, Lair 1d3<br>
+7   {2d6} Ogres AC 15 (12), HD 4+1, #At 1 weapon, Dam 2d6 or weapon +3, Mv 30' Unarmored 40', Sv F4, Ml 10, XP 240, Tr C + 1d20x100 gp
+8   {1d3} Giant Black Widow Spiders AC 14, HD 3*, #At 1 bite, Dam 2d6 + poison, Mv 20' Web 40', Sv F3, Ml 8, XP 175, Lair 1d3<br>
     Save -2 vs Poison. Stumble into webs and open stuck door to escape.
-9   {1d4} Giant Frog: AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 75<br>
+9   {1d4} Giant Frogs AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 75<br>
     15' reach with tongue, which can drag dwarves. Nat 20 is a swallow, doing 1d6 dam each round. Disease.
-10  {1d6} Giant Tick: AC 14, HD 1*, #At 1 bite, Dam 1d3 + blood drain and disease, Mv 10', Sv F1, Ml 7, XP 37<br>
+10  {1d6} Giant Ticks AC 14, HD 1*, #At 1 bite, Dam 1d3 + blood drain and disease, Mv 10', Sv F1, Ml 7, XP 37<br>
     Drops from trees. Save vs poison to notice. 1d4 dam each turn. Drop off after 20 damage. STR check to remove does 1d4 dam.
-11  Gnoll Army
-12  {3d12} Stirge: AC 13, HD 1*, #At 1 bite, Dam 1d4 + 1d4/round blood drain, Mv 10' Fly 60', Sv F1, Ml 9, XP 37, Tr D<br>
+11  Gnoll Patrol<br>
+    Gnoll Leader AC 20, HD 4, #At 1 greatsword or longbow, 1d10+1 or 1d8, Mv 30' Unarmored 40', Sv F4, Ml 9, XP 240, Tr Q, S each<br>
+    {3d6} Gnolls AC 15, HD 2, #At 1 greatsword or longbow, 1d10+1 or 1d8, Mv 30' Unarmored 40', Sv F2, Ml 8, XP 75, Tr Q, S each
+12  {3d12} Stirges AC 13, HD 1*, #At 1 bite, Dam 1d4 + 1d4/round blood drain, Mv 10' Fly 60', Sv F1, Ml 9, XP 37, Tr D<br>
     Blood drain 1d4 dam/round. +2 to attach if attached, but misses strike victim instead.
-13  {2d8} Wererat*: AC 13 †, HD 3*, #At 1 bite or 1 weapon, Dam 1d4 or 1d6 or by weapon, Mv 40', Sv F3, Ml 8, XP 175, Tr C
-14  {1d4+1}/{1d10+10} Giant Wasp: AC 15, HD 4+1*, #At 1 sting, Dam 1d6 + poison, Mv 20' Fly 60', Sv F4, Ml 10, XP 280
-15  {1d3} Insect Swarm: AC Immune to weapons, HD 4*, #At 1 swarm, Dam 1d3 (double against no armor), Mv 10' Fly 20', Sv N/A, Ml 11, XP 280
-16  {1d4} Giant Two-Headed Snake: AC 14, HD 5*, #At 2 bites, Dam 1d8/1d8 + poison, Mv 30', Sv F5, Ml 8, XP 405
-17  Hangman Tree: AC 16, HD 5, #At 4 limbs plus strangle, Dam 1d6 per limb or strangle, Mv , Sv F4, Ml 12, XP 360
-18  {1d2}/{2d4} Giant Raccoon: AC 16, HD 5, #At 1 bite, Dam 2d6, Mv 50' Climb 30', Sv F5, Ml 8, XP 360, #Ap 1, Tr L in lair
-29  {1d4+1} Assassin Vine: AC 15, HD 6, #At 1 + special, Dam 1d8 + special, Mv 5', Sv F6, Ml 12, XP 500, Tr U<br>
+13  {2d8} Wererats* AC 13 †, HD 3*, #At 1 bite or 1 weapon, Dam 1d4 or 1d6 or by weapon, Mv 40', Sv F3, Ml 8, XP 175, Tr C
+14  {1d4+1}/{1d10+10} Giant Wasps AC 15, HD 4+1*, #At 1 sting, Dam 1d6 + poison, Mv 20' Fly 60', Sv F4, Ml 10, XP 280
+15  {1d3} Insect Swarms AC Immune to weapons, HD 4*, #At 1 swarm, Dam 1d3 (double against no armor), Mv 10' Fly 20', Sv N/A, Ml 11, XP 280
+16  {1d4} Giant Two-Headed Snakes AC 14, HD 5*, #At 2 bites, Dam 1d8/1d8 + poison, Mv 30', Sv F5, Ml 8, XP 405
+17  Hangman Tree AC 16, HD 5, #At 4 limbs plus strangle, Dam 1d6 per limb or strangle, Mv , Sv F4, Ml 12, XP 360
+18  {1d2} (wandering)/{2d4} (in lair) Giant Raccoons AC 16, HD 5, #At 1 bite, Dam 2d6, Mv 50' Climb 30', Sv F5, Ml 8, XP 360, #Ap 1, Tr L in lair
+19  {1d4+1} Assassin Vines AC 15, HD 6, #At 1 + special, Dam 1d8 + special, Mv 5', Sv F6, Ml 12, XP 500, Tr U<br>
     <br>
     Surprises on a roll of 1-4 on 1d6. Hit does 1d8 damage, plus entangle (1d8 damage). Save vs. Death +STR to escape.
-20  {1d3} Giant Crocodile: AC 19, HD 15 (+11), #At 1 bite, Dam 3d8, Mv , Sv F15, Ml 9, XP 2,850
+20  {1d3} Giant Crocodiles AC 19, HD 15 (+11), #At 1 bite, Dam 3d8, Mv , Sv F15, Ml 9, XP 2,850

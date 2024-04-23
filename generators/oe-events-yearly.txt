@@ -1,0 +1,309 @@
+name: Yearly Events
+description: Oriental Adventures Yearly Events
+recipe: {event}
+repeat: 1
+
+table: event 1d100
+1-10    Ambassador<br>
+        In month {1d12}, an ambassador {ambassador-dir} {ambassador-location} on a {3d10}-month
+        mission to {ambassador-mission}. The arrival is a major event for those
+        of the court, accompanied by ceremonies and banquets.
+11-15   Assassination of a Lord<br>
+        A high-ranking lord is assassinated in month {1d12}. The PCs may be under suspicion.
+        The assassin {assassin-escapes}, but {assassin-accuses}.
+        {lord-power-struggle}
+16-30   Birth<br>
+        In month {1d12}, a high-ranking noble's family has given birth to a child, a reason for
+        widespread celebration. Feasting and ceremonies last for several days.
+31      Comet<br>
+        In month {1d6}, a bright comet is sighted in the sky for {1d4} weeks,
+        a portent of some great event. {2d6} weeks later, a second event occurs.<br>
+        <br>
+        {event}
+32-40   Death of a Lord<br>
+        A high-ranking noble dies in month {1d12}, {lord-death}. {lord-power-struggle}
+41-43   Major Earthquake<br>
+        In month {1d12}, an earthquake produces extensive destruction in a {1d30+20}-mile-radius, {1d20}
+        miles {earthquake-direction} of the home of the PCs. A series of lesser
+        tremors come before and after. The big quake destroys cities, reshapes lakes,
+        coastlines, and rivers, causes great fires, and possibly kills hundreds
+        of people. {earthquake-fire} {earthquake-plague}
+44-47   Famine<br>
+        Crops wither, animals die, and the poor begin to starve. The famine strikes
+        in month {1d12} and lasts for {1d6+1} months. Food prices rise by
+        {famine-costs} times normal. Marauders scavenge food of any type. Farms
+        produce no income this year and 25% next year. {famine-uprising}
+        Population falls by 5% per month. {famine-plague}
+48-52   Major Fire<br>
+        In month {1d12}, a huge conflagration sweeps a major city of the land,
+        destroying {1d4+4}0% of the city. Use this as the chance the PCs lose property.
+        The city's population is reduced by {1d4}0%. The price of lumber and
+        building materials is ten times normal for the next four months. The price
+        of food doubles for one month.
+        {fire-plague} {fire-famine}
+53-57   Flood<br>
+        A major flood sweeps the region in month {1d12}. If on the coast, severe storms cause
+        the waters to flood the coastal regions. If along a river, a series of
+        heavy rains cause the river to rage and overflow its banks, flooding
+        the bottom land. The waters rise {5d6} feet. Signs of the impending
+        flood are obvious {1d4+1} days in advance and levees and dikes can be
+        built to protect against it. Once the flood begins, the waters rise at
+        the rate of half a foot an hour until the maximum is reached. They remain
+        at their high point for {4d6} hours and then subside at the rate of
+        1 foot per day. Buildings are extensively damaged, although only those
+        in the path of the raging waters are destroyed. The population of the
+        area is reduced by {1d10}% and the price of all goods is doubled
+        for {1d4+1} months. Normal movement across the flooded areas is
+        impossible.
+        {flood-plague}
+        {flood-timing}
+58      Major Incursion<br>
+        Beginning in month {1d12} and lasting for {1d12} months, a major migration
+        of {incursion-creatures} numbering about 1% of the existing population
+        enters the kingdom from outside its borders.
+        They come {incursion-reason}.
+        They try to live life as they always have, retaining old habits and
+        speaking their own language.
+59-68   Marriage<br>
+        The ruler of the land has arranged an important diplomatic marriage
+        {marriage-for}, seeking to {marriage-reason}. The marriage is a cause
+        for festivals and feasting. The marriage happens in month {1d12}.
+69      New Religion<br>
+        A {religion-type} arrives in month {1d12} and gains converts over a
+        period of {1d6+1} months. {religion-feud} {religion-fued}
+        {religion-ruler} {religion-ruler-ban}
+70-74   Plague<br>
+        {plague}
+75-78   Political Plot<br>
+        {plot-discovered} Many nobles and government officials are stripped of
+        their rank, banished, or executed. If the PCs are involved in political
+        affairs, there is a 40% chance they are accused of complicity. If the
+        characters have powerful enemies, this chance is increased to 80%.
+        {plot-nobles}
+        Spies and secret police are everywhere, ready to arrest people
+        on the slightest evidence. The political turmoil begins in month {1d12}
+        and lasts for {1d3} months.
+79-85   Rebellion<br>
+        {rebel-group} attempts to overthrow the government.
+        The purpose of the rebellion is {rebel-aim}.
+        The rebellion begins in month {1d12} and last {1d6} months.
+86      Tsunami<br>
+        In month {1d12}, a great wave, {1d11+9}0 feet high, strikes a 50-mile section of coastline.
+        It strikes with little warning. The population of the area is reduced
+        by 70%.
+        (Countries without coastlines treat this event as no event for the year.)
+        For {1d2} months afterwards, the price of building materials
+        triples, and the price of all other goods doubles.
+        {tsunami-plague}
+87      Visitation<br>
+        In month {1d12}, a major deity appears somewhere in the land. {visit-good}
+88      Volcano<br>
+        In month {1d12}, {volcano-appears}. The eruption is preceded by
+        tremors and rumblings identical to those that precede a major earthquake.
+        When the eruption occurs, it is of exceptional violence. All within a
+        5-mile radius is destroyed and clouds of thick ash rain down up to
+        30 miles downwind. The volcano spews smoke and ash for the remainder
+        of the month. Thereafter, the volcano remains active for {1d12} months,
+        with a 10% chance per month of another major eruption.
+89-100  War<br>
+        In month {1d12}, {war-type}. The war continues for {1d3} years.
+        {war-rebels} Press gangs roam the countryside, seeking new recruits.
+        Young adventurers desert their homes, seeking fame and fortune
+        as soldiers.
+
+table: ambassador-dir 1d100
+1-65    arrives from
+66-100  is sent to
+
+table: ambassador-mission 1d6
+1   prevent war
+2   form a military alliance
+3   arrange a marriage
+4   pay tribute
+5   promote trade
+6   gain culture
+
+table: ambassador-location 1d10
+1-9 a regional kingdom
+10  a far-away land
+
+table: assassin-escapes 1d10
+1-3     is taken alive
+4-6     is killed
+7-10    escapes
+
+table: assassin-accuses 1d100
+1       accuses the PCs
+2-100   does not implicate the PCs
+
+table: lord-power-struggle 1d10
+1-2     The lord has no clear successor, and power struggle ensues for {1d6} months.
+3-10    The court is in turmoil for {1d6} months.
+
+table: lord-death 1d4
+1   in battle
+2   through misadventure
+3   from disease
+4   peacefully in bed
+
+table: earthquake-direction 1d4
+1   north
+2   northeast
+3   east
+4   southeast
+5   south
+6   southwest
+7   west
+8   northwest
+
+table: earthquake-fire 1d10
+1-7     A large fire sweeps through the largest city.
+8-10    Small fires are quickly extinguished.
+
+table: earthquake-plague 1d10
+1-4     Populated areas suffer from a plague lasting {1d30} months.
+5-10    Fear of disease prove unwarranted.
+
+table: famine-costs 1d10
+1-4 ten
+5-9 fifty
+10  one hundred
+
+table: famine-uprising 1d10
+1-6     Peasants revolt.
+7-10    Lords prevent a peasant uprising with wise leadership.
+
+table: famine-plague 1d10
+1-2     <br>
+        {plague}
+3-10    Fear of disease proves unwarranted.
+
+table: fire-plague 1d10
+1-2     <br>
+        {plague}
+3-10    Fear of disease proves unwarranted.
+
+table: fire-famine 1d10
+1       <br>
+        Famine strikes and lasts for {1d6+1} months. Food prices rise by
+        {famine-costs} times normal. Marauders scavenge food of any type. Farms
+        produce no income this year and 25% next year. {famine-uprising}
+        Population falls by 5% per month.
+2-10    Fortunately, there is no shortage of food.
+
+table: flood-plague 1d10
+1-2     <br>
+        {plague}
+3-10    Fear of disease proves unwarranted.
+
+table: flood-timing 1d12
+1-2     The flood strikes during the winter.
+3-6     The flood strikes in the spring during planting season. Income
+        from farms in the area is reduced by 50% for the year.
+7-8     The flood strikes during the summer. 80% of all farm income is lost.
+        {flood-famine}
+9-11    The flood strikes during harvest season.
+12      The flood strikes during the winter.
+
+table: flood-famine 1d10
+1-4     Famine strikes and lasts for {1d3} months. Food prices rise by
+        {famine-costs} times normal. Marauders scavenge food of any type.
+        Population falls by 5% per month.
+5-10    Despite the ruined crops, the people have enough to eat.
+
+table: incursion-creatures
+1-5     humans
+6-8     humanoids
+9-10    monsters
+
+table: incursion-reason 1d10
+1       seeking religious freedom
+2-3     being driven from their homeland
+4-5     seeking to expand their territory
+6-7     chasing tales of natural resources such as gold
+8       fleeing famine
+9       fleeing war
+10      fleeing plague
+
+table: marriage-for 1d6
+1-2     for himself
+3-6     for his child
+
+table: marriage-reason 1d4
+1   secure an alliance
+2   gain control over a smaller kingdom
+3   settle a dispute
+4   appease an overlord
+
+table: religion-type 1d6
+1-2     new religion
+3-6     new sect of the dominant religion
+
+table: religion-feud 1d100
+1-75    It causes hostility and fueding between religions, leading to skirmishing,
+        temple burning, and battles between warrior monks.  Both sides attempt
+        to gain the support of the ruler of the land.
+76-100  It's accepted by the established faiths.
+
+table: religion-ruler 1d10
+1-6     The ruler adopts the new religion.
+7-10    The ruler
+
+table: religion-ruler-ban 1d10
+1-4     The old religions are banned. Their temples are burned. Clerics are
+        killed or banished.
+5-10    The faithful of the old religions are allowed to continue to practice.
+
+table: plague 1d1
+1   A terrible disease sweeps the land in month {1d12}, lasting for {2d6} months.
+    The population falls by 5% per month. Those untouched by the disease and
+    those of neighboring lands are suspicious of strangers. Traders do not enter
+    plagued lands and the cost of imported goods increases five times. The cost
+    of normal goods doubles. Each month, {5d5}% of population centers become
+    infected and {6d5}% of population centers rid themselves of the disease.
+
+table: plot-discovered 1d2
+1   A plot to overthrow the present government is discovered.
+2   The ruler of the land is convinced that a plot exists to overthrow his rule.
+
+table: plot-nobles 1d10
+1-2     A noble or group of nobles rises in rebellion.
+3-10    Most nobles support the ruler.
+
+table: rebel-group 1d5
+1   A powerful lord
+2   A secret society
+3   A religious sect
+4   An army commander
+5   An army of peasants
+
+table: rebel-aim 1d4
+1   gain independence from the government
+2   avoid taxation and brutal treatment
+3   gain special privileges
+4   seize the throne
+
+table: tsunami-plague 1d10
+1       <br>
+        {plague}
+2-10    The waves cleanse the land of any disease.
+
+table: visit-good 1d2
+1   The event is considered a blessing, and the site becomes a place of worship.
+    Construction of a shrine begins and completes in {2d6} months.
+2   The event is considered a curse, and the site is despised. Fortunes fall for
+    those nearby. Common folk move away if they can. The site becomes a meeting
+    place for evil beings.
+
+table: volcano-appears 1d10
+1-7     a dormant volcano erupts
+8-10    a new volcano appears
+
+table: war-type 1d2
+1   the ruler of the kingdom launches a campaign against a neighboring land
+2   the kingdom is invaded from a neighboring land
+
+table: war-rebels 1d6
+1   Away from the front, other groups take advantage of the situation and stage
+    a rebellion or uprising.
+2-6 Civilians move away from the fighting.

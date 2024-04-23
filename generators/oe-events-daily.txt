@@ -1,0 +1,362 @@
+name: Daily Events
+description: Oriental Adventures Yearly Events
+recipe: Events in the following locations...<br>
+        <br>
+        Court...<br>
+        {event-court}
+        <br>
+        <br>
+        City...<br>
+        {event-city}
+        <br>
+        <br>
+        Rural...<br>
+        {event-rural}
+        <br>
+        <br>
+        Wilderness...<br>
+        {event-wilderness}
+        <br>
+        <br>
+        Ocean...<br>
+        {event-ocean}
+repeat: 1
+
+table: event-court 1d100
+1-50    Nothing
+51-60   {countest}
+61-65   {duel}
+66-19   {entreaty}
+70-72   {illness}
+73-79   {invitation}
+80-82   {maiden}
+83      {monster}
+84-86   {plot}
+87-91   {special}
+92-100  {vip}
+
+table: event-city 1d100
+1-50    Nothing
+51-55   {duel}
+56-60   {entreaty}
+61-63   {small-fire}
+65-70   {insult}
+71-77   {invitation}
+78-79   {kidnapping}
+80-81   {maiden}
+82-84   {monster}
+85-94   {vip}
+95-100  Nothing
+
+table: event-rural 1d100
+1-50    Nothing
+51-60   {bandits}
+61-65   {crime}
+66-70   {haunting}
+71-80   {monster}
+81-83   {stranger}
+84-88   {shrine}
+89-90   {mystery}
+91-95   {vip}
+96-100  Nothing
+
+table: event-wilderness 1d100
+1-50    Nothing
+51      {bandit-camp}
+52-81   {monster}
+82      {nobles}
+83-88   {ruins}
+89-91   {shrine}
+92-93   {storm}
+94      {stranger}
+95-100  {traveler}
+
+table: event-ocean 1d100
+1-50    Nothing
+51-53   {becalmed}
+54-77   {monster}
+78-87   {pirates}
+88-92   {ship}
+93-98   {storm}
+99-100  {land}
+
+table: bandits 1d1
+1   The PCs meet bandits. {bandits-size}
+
+table: bandits-size 1d2
+1   The PCs have found the outer edge of their camp. There are {2d10} bandits
+    present. They attempt to delay or waylay the characters while two of their
+    brethren return to the main camp for help or to sound the warning.
+2   They are an advance group moving into the area. The PCs encounter
+    {3d10} mounted bandits. If possible, the bandits avoid a fight (since they
+    are here to scout). They may attempt to pass themselves off as travelers.
+
+table: bandit-camp 1d1
+1   The PCs have accidentally stumbled onto a bandit camp in the wilderness.
+
+table: becalmed 1d1
+1   The winds die out and the sea becomes perfectly still. Ships cannot sail this day and must be
+    rowed.
+
+table: contest 1d1
+1   The PCs receive an invitation to a contest from a powerful lord. The
+    contest is in one of the arts (poetry, painting, calligraphy) and will
+    happen in {1d20} days. The contest takes the form of a formal party. Each
+    guest composes a work on the spot that is then judged according to the
+    quality of the work, the appropriateness to the occasion, the imagery, and
+    the sheer beauty. The winner of the contest receives a minor gift and gains
+    honor. The contest can be missed if there is a good reason . If the
+    PCs do not attend, they lose honor. It is assumed that they are ashamed of
+    their own skills.
+
+table: crime 1d1
+1   Some crime, petty or notorious, has occurred and the player
+    characters are privy to it. They may be friends of the victim or the
+    accused (or they may be the victim). They may be witnesses to the crime.
+    They may be requested or ordered to help catch the criminal. The DM can use
+    this encounter as a basis for the beginning of an adventure with the player
+    characters.
+
+table: duel 1d1
+1   One of the PCs is challenged to a duel. {duel-reason}
+
+table: duel-reason 1d4
+1   The character has accidentally insulted an NPC or publicly embarrassed him.
+2   The NPC has come looking for the player character, having heard of his fame.
+3   It is a case of mistaken identity.
+4   The NPC may has an old score to settle with the player character or his family.
+
+table: entreaty 1d5
+1   A noble noble wants the PCs to recommend him to an NPC the PCs are familiar
+    with. He is willing to pay or even bribe the player characters.
+2   A noble noble wants the PCs to do some deed that is beyond his station or
+    power. He is willing to pay or even bribe the player characters.
+3   A group of peasants are looking for warriors to protect their village from bandits,
+4   A group of peasants are looking for warriors to drive away an evil spirit.
+5   A group of peasants are looking for warriors to avenge some wrong done to them.
+
+table: small-fire 1d1
+1   A fire breaks out in a building not far from the PCs. They are expected to
+    aid in the firefighting. This may mean organizing the work or simply being
+    part of the bucket brigade. If this encounter occurs while the player
+    characters are at home, one of their buildings will be on fire. If not
+    fought quickly and effectively, the fire will burn out of control.
+    Out-of-control fires have a 70% chance of igniting nearby buildings.
+    {small-fire-cause}
+
+table: small-fire-cause 1d10
+1-3     The fire was intentionally set by an enemy of the player characters.
+4-5     The fire was intentionally set by spies attempting to create a distraction
+        (thereby slipping past the player characters).
+6-7     The fire was intentionally set by a malicious spirit.
+8-10    The fire started by accident with no one to blame.
+
+table: haunting 1d1
+1   It is rumored that some site in the region has recently been the center of
+    strange supernatural events, the site of a {haunting-site}.
+    {haunting-real} {haunting-simple}
+
+table: haunting-site 1d3
+1   great battle
+2   murder
+3   accident
+
+table: haunting-real 1d2
+1   The haunting is real.
+2   The haunting is a hoax.
+
+table: haunting-simple 1d6
+1-2   It's a simple affair.
+3-4   The spirit returns to complete an arduous task left unfulfilled.
+5-6   The spirit returns to right some wrong.
+
+table: illness 1d10
+1-2     A disease strikes one of the PCs. {illness-description}
+3-10    A disease strikes an NPC known to the PCs. {illness-description}
+
+table: illness-description 1d1
+1   The disease is quite dangerous. The first indications of the illness start the
+    day the encounter is rolled. {2d6} days are required for the disease to run
+    its course. Each day untreated, the sick person becomes worse in condition.
+    At the end of the time period, if the disease has not been cured, a saving
+    throw versus death must be made. If the save is failed, the invalid dies. If
+    the saving throw is made, the person begins to recover. Sick characters are
+    required to rest and recover {2d6} days.
+
+table: insult 1d1
+1   One of the PCs, intentionally or inadvertently, insults an NPC. If the NPC
+    is of the player character's status or higher, he demands satisfaction. If
+    this occurs at a court, the aggrieved party presents his complaint to the
+    ruling lord, who takes some type of action on it. Should this punishment be
+    inadequate or the aggrieved is of lower standing, the player character has
+    made a long-term enemy who will attempt to cause harm in the future.
+
+table: invitation 1d1
+1   The player characters have received an order, politely phrased as an
+    invitation to call upon a powerful lord. The purpose is
+    {invitation-reason}. These invitations are by no means casual affairs.
+    Proper decorum and respect must be observed at all times when attending. Of
+    course, to refuse without justifiable reason is cause for an insult.
+
+table: invitation-reason 1d12
+1   to celebrate a births
+2   a christening
+3   a marriages
+4   a receipt of office
+5   an outing to view the moon
+6   an outing to admire cherry blossoms
+7   to go hunting
+8   for political maneuvers
+9   to receive special instructions
+10  to embarrass a third party
+11  to compromise the PCs
+12  purely a social call
+
+table: kidnapping 1d1
+    An attempt is made to kidnap a player character or an NPC known to the
+    player characters. The reason for the kidnapping is {kidnapping-reason}.
+
+table: kidnapping-reason 1d4
+1   A powerful lord sent spies to keep someone out of the way or ensure their
+    cooperation.
+2   Bandits are attempting extortion.
+3   A jealous lover is removing his competition.
+4   A pair of lovers has secretly run away under the guise of a kidnapping.
+
+table: land 1d1
+1   Land is sighted. Depending on the location of the ship, the land may be a
+    section of the coast of their intended destination, an island along their
+    course, or some small uncharted island. Such uncharted lands are certainly
+    filled with all manner of unusual and dangerous creatures (perhaps even
+    dinosaurs and gargantua!).
+
+table: maiden 1d1
+1   A young woman of exceptional grace, wit, and beauty has appeared in the region.
+    She is {maiden-who}. She charms and impresses all who meet her. She has an
+    exceptionally fine writing style that reveals her pure nature. She is skilled
+    in the playing of musical instruments and other artistic accomplishments.
+    She is properly respectful of her parents (if she has any). If the maiden
+    is any but the daughter of a powerful noble, she can be courted
+    (and possibly wed) without the full formalities. However, being aware
+    (but not vain) of her own qualities, she does not accept just anyone. Her
+    accepted suitor must possess exceptional qualities of his own. He must also
+    be a model of virtue and likewise skilled in the arts. He must possess heroic
+    qualities. To even attract her notice, he must produce some artistic item of
+    quality-a poem, painting, exceptional handwriting, etc. He must have a
+    Charisma of at least 13. Maidens of mysterious origin or princesses may set
+    impossible tasks as a condition for any successful suitor. The social rank
+    of the character is not as important as the qualities mentioned above.
+
+table: maiden-who 1d10
+1-5 the daughter of a powerful noble
+6-8 a maiden of mysterious and magical origin
+9   an exiled princess
+10  simply a commoner
+
+
+table: monster 1d1
+1   A monster appears.
+
+table: mystery 1d1
+1   A strange or supernatural event occurs, caused by {mystery-cause}.
+
+table: mystery-cause 1d4
+1   spirits
+2   a powerful spellcaster
+3   a cunning creature
+4   the manifestation of a deity
+
+table: mysytery-investigate
+1-6     The PCs are asked to investigate.
+7-10    No one asks the PCs to investigate.
+
+table: nobles 1d1
+1   A noble party of {2d10} fighters, {1d6} clerics, and {1d3} persons of rank are
+    encountered. {nobles-traveling}
+
+table: nobles-traveling 1d10
+1-8     They are traveling openly and expect all respect due their station. They
+        are traveling on foot, with the nobles carried in palanquins.
+9-10    They are traveling in disguise, perhaps on a special mission or fleeing
+        a powerful enemy. They are either on foot and dressed as common
+        peasants, or mounted dressed as wandering samurai and bushi. If dressed
+        as peasants, they are forced to swallow their pride and act in an
+        appropriately humble fashion.
+
+table: pirates 1d1
+1   {1d3} pirate ships are sighted.
+
+table: plot 1d1
+1   The PCs get wind of a plot against their lord or a powerful NPC known to them.
+
+table: ruins 1d10
+1       The characters come across a ruined temple compound. {ruins-temple-haunted}
+2-5     The characters come across a ruined farmhouse. {ruins-temple-farmhouse}
+6-8     The characters come across a ruined shrine. {ruins-temple-shrine}
+9-10    The characters come across a ruined military stockade. {ruins-temple-stockade}
+
+table: ruins-temple-haunted 1d10
+1-7     The ruins are haunted.
+8-10    The ruins are empty.
+
+table: ruins-temple-farmhouse 1d10
+1-2     The ruins are haunted.
+3-10    The ruins are empty.
+
+table: ruins-temple-shrine 1d10
+1-5     The ruins are haunted.
+6-10    The ruins are empty.
+
+table: ruins-temple-stockade 1d10
+1-3     The ruins are haunted.
+7-10    The ruins are empty.
+
+table: ship 1d10
+1-3     The sail of a ghost ship is sighted, ferrying the dead to their new land.
+4-8     The sail of a merchant ship is sighted.
+9-10    The sail of a warship is sighted.
+
+table: shrine 1d1
+1   The player characters come across a small shrine to a local deity. There is a
+    10% chance that if they stop and make appropriate offerings they receive
+    the benefits of a bless spell for the next 24 hours. If the player
+    characters damage or are disrespectful to the shrine (whether intentionally
+    or not), there is an 80% chance they are struck by a curse.
+
+table: special 1d1
+1   One or more of the player characters receive a special mission from their lord,
+    mentor, or head of the family.
+
+table: storm 1d1
+1   A fierce storm strikes. If at sea, it has gale force winds, driving
+    rain, and huge crashing waves. It lasts for {5d6} hours. The PCs are unable
+    to travel that day. Standing outside during the storm is physically
+    exhausting and exposed characters suffer 1-2 points of damage per hour.
+
+table: stranger 1d1
+1   An unknown NPC, {stranger-type}, encounters the party and displays an
+    inordinate amount of interest in them. He is traveling in the same
+    direction as the characters and usually wants to travel with them for
+    company and safety.
+
+table: stranger-type 1d10
+1-3     an ordinary traveler
+4       a member of a secret society
+5       an official of the secret police
+6       a spy on a mission
+7       a noble traveling in disguise
+8       a bandit wanting to use the characters as cover
+9       a spirit in human form,
+10      a bandit attempting to subtly gain information
+
+table: traveler 1d1
+1   A person is encountered while traveling through an area. He has no special
+    interest in the player characters, but is going in the same direction and
+    accompanies them for at least a little ways (if allowed).
+
+table: vip 1d1
+1   A noble or important official makes a state visit or passes through the
+    area the player characters are in. No attempt is made to hide his arrival.
+    His entourage includes {20d6} fighters and {10d4} clerics plus assorted servants.
+    Moving through the streets in advance of him, they announce his title and
+    force the commoners aside

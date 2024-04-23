@@ -1,0 +1,317 @@
+name: Encounters in Tunnels Beneath the Ruined Tower
+description: Tables for generating encounters by location
+recipe: You stop in a {2d6}0'x{2d6}0' chamber. {encounter}. {thing}.<br>
+        North has {open}.<br>
+        South has {open}.<br>
+        East has {open}.<br>
+        West has {open}.<br>
+        Up has {open_up}.<br>
+        Down has {open_down}.
+repeat: 1
+
+table: open 1d6
+1-3 no exit
+4   a {2d6}' dry passage {1d4}mi long, {sloping}
+5   a {2d6}' damp passage {1d4}mi long, {sloping}
+6   a {1d6}' deep water flowing through {1d4}mi pipe, {sloping}
+
+table: sloping 1d6
+1-4 mostly level
+5   sloping down
+6   sloping up
+
+table: open_up 1d20
+1-15 a solid ceiling
+16   only tiny, impassible holes
+17   a door to stairs
+18   a ladder
+19   a collapsed floor
+20   a crack just big enough to squeeze through
+
+table: open_down 1d20
+1-15    nothing
+16-17   only tiny impassible drains
+18      a ladder
+19      a collapsed floor
+20      a door to stairs
+
+table: encounter 1d6
+1-3 No monsters
+4-6   Monsters {attitude}!<br>
+    {monster}<br><br>
+
+table: thing 1d6
+1-3 Nothing of value
+4-6 {describe} {unique}
+
+table: describe 1d8
+1   Underground
+2   Artificial
+3   Soaked
+4   Solid
+5   Oily
+6   Profane
+7   Fetid
+8   Reaking
+
+table: unique 1d8
+1   {gp}gp
+2   {jewelry}
+3   blob of congealed fat
+4   {bone-type} bones
+5   {magic-weapon}
+6   mass of worms
+7   fountain, drinking causes {fountain-drink}
+8   shrine
+
+table: fountain-drink 1d10
+1-3     permanent addition of {1d4} HP
+4       swap {trick-poison-stat} and {trick-poison-stat}
+5       permanent +10' movement
+6       teleport to Tosasth
+7       physical appearance of zombie curse
+8       ghast stink curse
+9       permanent +1 saves vs spells
+10      permanent immunity to charm magic
+
+table: monster 1d100
+1-10    {1d6} Loadstars AC 17, HD 2, HP {2d8}, #At 1, Dam 1d6, Mv 20', Sv F2, Ml 12, XP 100<br>
+        On hit, 10lb blob. Lance it for 1d4 damage within 1 turn.
+11-20   {2d4} Dormayvoos AC 12, HD 2, HP {2d8}, #At 1, Dam 1d8, Mv 20', Sv F2, Ml 12, XP 100<br>
+        On hit, Save vs Spells or fall (seemingly dead). Rise in 1d4 rounds.
+21-30   {2d6} Ghouls AC 14, HD 2*, HP {2d8}, #At 2 claws/1 bite, Dam 1d4/1d4/1d4, all plus paralysis, Mv 30', Sv F2, Ml 9, XP 100
+31-40   Wights AC 15 †, HD 3*, HP {3d8}, #At 1 touch, Dam Energy drain (1 level), Mv 30', Sv F3, Ml 12, XP 175
+41-50   {1d4} Mummies AC 17 ‡, HD 5, HP {5d8}, #At 1 touch + disease, Dam 1d12 + disease, Mv 20', Sv F5, Ml 12, XP 450
+51-60   {1d4} Wraiths AC 15 ‡, HD 4, HP {4d8}, #At 1 touch, Dam 1d6 + energy drain (1 level), Mv Fly 80', Sv F4, Ml 12, XP 320
+61-99   {2d6} Giant Bugs, {bugbody}, {buglook} AC 11, HD 1d4 HP, HP {1d4}, #At 1 bite, Dam {trick-poison-type}, Mv 40', Sv NM, Ml 7, XP 25
+100     Bestomper AC 20, HD 11, HP {11d8}, #At stomp or bite or blast, Dam 3d6 or 2d6 or special, Mv 20', Sv M20, Ml 11, XP 1765<br>
+        Decapitate on natural 20 bite. Toes are AC 24. 10 points of damage to disable toe.
+        Blasts: Paralyze, Weaken, Confusion, Fire, Dispell Magic, Freeze, Blindness, Disintegrate, Death, Slow.
+
+table: attitude 2d6
+2       Attack
+3-7     {attitude-possible-attack}
+8-10    {attitude-uncertain}
+11      {attitude-possible-friendly}
+12      Friendly
+
+table: attitude-final 2d6
+2-5     Attack
+6-8     Leave
+9-12    Friendly
+
+table: attitude-possible-attack 2d6
+2-8     Attack
+9-12    Uncertain {attitude-final}
+
+table: attitude-uncertain 2d6
+2-5     Attack
+6-8     Negotiate {attitude-final}
+9-12    Friendly
+
+table: attitude-possible-friendly 2d6
+2-5     Uncertain {attitude-final}
+6-12    Friendly
+
+table: bugbody 1d6
+1   many legs, flat body
+2   many legs, tubular body
+3   six legs, large pincers
+4   six legs, stinger
+5   eight legs, large pincers
+6   eight legs, stinger
+
+table: buglook 1d6
+1   hard shell
+2   hairy
+3   glowing
+4   slimy
+5   stinks
+6   shoots web that lasts 1d6 rounds
+
+table: trick-poison-type 1d10
+1-3     Permanent loss of {1d8} HP
+4-5     Negative level
+6-7     -{1d4} {trick-poison-stat} after {1d20} rounds
+8       Instant Death
+9       Death after {1d20} rounds
+10      Permanent half movement
+
+table: trick-poison-stat 1d10
+1-2     STR
+3-4     DEX
+5-6     CON
+7       WIS
+8-9     INT
+10      CHA
+
+
+table: gp 1d100
+1-57    {1d4}00
+58-76   {1d6}00
+77-88   {2d8}00
+89-100  {4d6}00
+
+table: jewelry 1d4
+1-2     {jewlery-type} ({2d8}00gp)
+3       {jewlery-type} ({2d8}00gp)
+4       {jewlery-type} ({2d8}00gp)
+
+table: jewelry-type 1d100
+1-06    Anklet
+07-12   Belt
+13-14   Bowl
+15-21   Bracelet
+22-27   Brooche
+28-32   Buckle
+33-37   Chain
+38-40   Choker
+41-42   Circlet
+43-47   Clasp
+48-51   Comb
+52      Crown
+53-55   Cup
+56-62   Earring
+63-65   Flagon
+66-68   Goblet
+69-73   Knive
+74-77   Letter Opener
+78-80   Locket
+81-82   Medal
+83-89   Necklace
+90      Plate
+91-95   Pin
+96      Sceptre
+97-99   Statuette
+100     Tiara
+
+table: bone-type
+1   elf
+2   goggler
+3   lizard
+4   dwarf
+5   horse
+6   alien
+
+table: magic-weapon
+01-02   Great Axe {magic-weapon-bonus}
+03-09   Battle Axe {magic-weapon-bonus}
+10-11   Hand Axe {magic-weapon-bonus}
+12      Footman's Pick {magic-weapon-bonus}
+13-19   Shortbow {magic-weapon-bonus}
+20-23   Longbow {magic-weapon-bonus}
+24-28   {1d12} Shortbow Arrows {magic-ammo-bonus}
+29-31   {1d12} Longbow Arrows {magic-ammo-bonus}
+32-35   {1d12} Light Quarrels {magic-ammo-bonus}
+36-37   {1d12} Heavy Quarrels {magic-ammo-bonus}
+38      {1d12} Sling Bullets {magic-ammo-bonus}
+39-49   Dagger {magic-weapon-bonus}
+50      Flail {magic-weapon-bonus}
+51-55   Shortsword {magic-weapon-bonus}
+56      Cutlass {magic-weapon-bonus}
+57-68   Longsword {magic-weapon-bonus}
+69-70   Scimitar {magic-weapon-bonus}
+71-74   Two-Handed Sword {magic-weapon-bonus}
+75-79   Mace {magic-weapon-bonus}
+80      Light Mace {magic-weapon-bonus}
+81      Great Mace {magic-weapon-bonus}
+82      Morningstar {magic-weapon-bonus}
+83-86   Warhammer {magic-weapon-bonus}
+87      Maul {magic-weapon-bonus}
+88      Pole Arm {magic-weapon-bonus}
+89      Dart {magic-weapon-bonus}
+90      Javelin {magic-weapon-bonus}
+91-93   Spear {magic-weapon-bonus}
+94      Trident {magic-weapon-bonus}
+95-96   Boar Spear {magic-weapon-bonus}
+97      Lance {magic-weapon-bonus}
+98      Scythe {magic-weapon-bonus}
+99      Sickle {magic-weapon-bonus}
+100     {unusual-weapon} {magic-weapon-bonus}
+
+table: unusual-weapon
+1   Pickaxe
+2   Defending Dagger
+3   Military Fork
+4   Quarterstaff
+5   Chain
+6   Whip
+7   Club
+8   Cudgel
+9   Walking Staff
+10  Greatclub
+11  Sap
+12  Hook
+13  Spade
+14  Crowbar
+15  Gauntlet
+16  Cestus
+17  Light Crossbow
+18  Heavy Crossbow
+19  Hand Crossbow
+20  Bullet Crossbow
+21  Sling
+22  Bola
+23  Dart
+24  Throwing Blade
+25  Javelin
+26  Blowgun
+27  Net
+28  Halberd
+29  Bardiche
+30  Bill-Guisarme
+31  Ranseur
+32  Voulge
+33  Guisarme
+34  Lucern Hammer
+35  Spetum
+36  Bec de Corbin
+37  Glaive
+38  Fauchard
+39  Partisan
+40  Rapier
+41  Torch
+42  {1d12} Caltrops
+43  Stone
+44  Mallet
+45  Candlestick
+46  Iron Spike
+47  Wooden Stake
+
+table: magic-weapon-bonus 1d100
+01-40   +1
+41-50   +2
+51-55   +3
+56-57   +4
+58      +5
+59-75   +1, +2 vs {magic-weapon-enemy}
+76-85   +1, +3 vs {magic-weapon-enemy}
+86-95   {magic-weapon-bonus}, {magic-weapon-special}
+96-98   Cursed, -1
+99-100   Cursed, -2
+
+table: magic-ammo-bonus 1d100
+01-46   +1
+47-58   +2
+59-64   +3
+65-82   +1, +2 vs {magic-weapon-enemy}
+83-94   +1, +3 vs {magic-weapon-enemy}
+95-98   Cursed, -1
+99-100   Cursed, -2
+
+
+table: magic-weapon-enemy 1d6
+1   Dragons
+2   Enchanted
+3   Lycanthropes
+4   Regenerators
+5   Spell Users
+6   Undead
+
+table: magic-weapon-special 1d20
+1-9     Casts Light on Command
+10-11   Charm Person
+12      Drains Energy
+13-16   Flames on Command
+17-19   Locate Objects
+20      Wishes

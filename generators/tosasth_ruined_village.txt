@@ -1,0 +1,921 @@
+name: Ruined Villages in the Tosasth Valley
+description: Generates the remains of a ruined village
+recipe:
+    The {origin} village was last inhabited {years} ago. The structures {constructed}.
+    {features}
+    Of the {2d6} structures, the following are interesting.<br><br>
+    {buildings}
+repeat: 1
+
+table: origin 1d20
+1-8     elven
+9-12    dwarven
+13-15   human
+16      orc
+17      gnoll
+18      halfling
+19      goblin
+20      troll
+
+table: years 1d4
+1   {1d4+5}0 years
+2   {1d6}{1d90+9} years
+3   {1d6+1} centuries
+4   at least {1d10},000 years
+
+table: constructed 1d6
+1   were made of mortared stone
+2   had walls of mud and straw
+3   were built of hewn lumber covered in bright paint
+4   had walls of stacked logs
+5   were little more than holes with thatch roofs
+6   are made of a hard metal
+
+table: features 1d6
+1   Most walls have collapsed.
+2   A central sqaure contains a water well.
+3   Fire burned through the village.
+4   A plague left the residents dead in their beds. {1d6}% of disease exposure.
+5   Trees have grown up through roofs.
+6   {features} {features}
+
+table: buildings 1d100
+1-50    {building} {building}
+51-70   {building} {building} {building}
+71-80   {building} {building} {building} {building}
+81-87   {building} {building} {building} {building} {building}
+88-96   {building} {building} {building} {building} {building} {building}
+97-100  {building} {building} {building} {building} {building} {building} {building}
+
+table: building 1d1
+1   {building-type} {maybe-smell} {maybe-junk} {maybe-treasure}<br>
+
+table: building-type 1d100
+1-83    Residence.
+84      Bake house.
+85      Barn.
+86      Blacksmith.
+87      Carpenter.
+88      Church.
+89      Fishery.
+90      Furrier.
+91      Granary.
+92      Hall.
+93      Market.
+94      Mason.
+95      Mill.
+96      Stables.
+97      Tailor.
+98      Tavern.
+99      Warehouse.
+100     Woodcutter.
+
+table: maybe-smell 1d6
+1       It smells {smell}.
+2-6     .
+
+table: smell
+1-3     acrid
+4-5     like chlorine
+6-39    dank, mouldy
+40-49   earthy
+50-57   of manure
+58-61   metallic
+62-65   like ozone
+66-70   putrid
+71-75   of rotting vegetation
+76-77   salty, wet
+78-82   smoky
+83-89   stale, fetid
+90-95   sulphurous
+96-100  of urine
+
+table: maybe-junk 1d100
+1-10    A search turns up a {junk}.
+11-16   A search turns up a {junk} and a {junk}.
+17-100  .
+
+table: junk
+1   alembic
+2   altar
+3   anklet
+4   apron
+5   arm band
+6   armchair
+7   armoire
+8   arras
+9   broken arrow
+10  ash
+11  ashes
+12  awl
+13  bag
+14  balance & weights
+15  bandages
+16  bark
+17  barrel
+18  basin
+19  basket
+20  bastinadoes
+21  beaker
+22  beater
+23  bed
+24  bellows
+25  bells
+26  belt
+27  bench
+28  bladder
+29  blanket
+30  blouse
+31  bone
+32  bones
+33  book
+34  boots
+35  bottle
+36  broken bottle
+37  bowl
+38  bracelet
+39  branding irons
+40  brazier
+41  brazier & charcoal
+42  brooch
+43  brush
+44  bucket
+45  buckle
+46  buffet
+47  bunks
+48  buskins
+49  large barrel
+50  cabinet
+51  cage
+52  caldron
+53  candelabra
+54  candelabrum
+55  candle
+56  candles
+57  candle snuffer
+58  candlestick
+59  candlesticks
+60  cane
+61  cap
+62  cape
+63  carafe
+64  carpet
+65  case
+66  cask
+67  cassocks
+68  chain
+69  corroded
+70  chains
+71  chair
+72  padded chair
+73  padded arm chair
+74  chair with straps
+75  chalice
+76  chalk
+77  chandelier
+78  charcoal
+79  large chest
+80  medium chest
+81  chest of drawers
+82  chimes
+83  choker
+84  chopper
+85  chunks
+86  cinders
+87  clamps
+88  clasp
+89  cloak
+90  wardrobe
+91  altar cloth
+92  splintered club
+93  coal
+94  coat
+95  cobwebs
+96  coffer
+97  coif
+98  bent copper coin
+99  collar
+100 cologne
+101 columns/pillars
+102 comb
+103 coronet
+104 couch
+105 ceiling cracks
+106 floor cracks
+107 wall cracks
+108 crate
+109 cresset
+110 cressets
+111 crown
+112 crucible
+113 cruet
+114 crystal ball
+115 crystals
+116 cup
+117 cupboard
+118 curtain/tapestry
+119 cushion
+120 dagger hilt
+121 dais
+122 dampness in the ceiling
+123 dampness in the wall
+124 decanter
+125 desk
+126 diadem
+127 dipper
+128 dish
+129 doublet
+130 dress
+131 dried blood
+132 dripping
+133 drum
+134 dung
+135 dust
+136 earring
+137 earspoon
+138 ewer
+139 fetters
+140 fibers
+141 fire pit
+142 fireplace with mantle
+143 fireplace & wood
+144 firkin
+145 flagon
+146 flask
+147 flask, cracked
+148 fob
+149 font
+150 food
+151 food scraps
+152 fork
+153 fountain
+154 fresco
+155 frock
+156 fungi
+157 funnel
+158 furnace
+159 gauntlets
+160 gelatin
+161 girdle
+162 globes
+163 gloves
+164 goblet
+165 gong
+166 gown
+167 grains
+168 grater
+169 greasy
+170 grill
+171 grinder
+172 grindstone
+173 guano
+174 habit
+175 bits of hair
+176 cracked hammer head
+177 hamper
+178 hassock
+179 hat
+180 headband
+181 badly dented helmet
+182 herbs
+183 hogshead
+184 holy symbol
+185 holy writings
+186 hood
+187 hooks
+188 horn
+189 hose
+190 hourglass
+191 huge bell
+192 husks
+193 idol
+194 large idol
+195 collection of small idols
+196 incense burner
+197 bent iron bar
+198 iron boots
+199 iron maiden
+200 jack
+201 jar
+202 blunt javelin head
+203 jerkin
+204 jug
+205 jupon
+206 keg
+207 kerchief
+208 kettle
+209 kirtle
+210 kneeling bench
+211 knife
+212 knives
+213 knucklebones
+214 ladle
+215 lamp
+216 lantern
+217 box of lamps
+218 large box
+219 leather boot
+220 leaves
+221 dry leaves and twigs
+222 lectern
+223 leggings
+224 lens
+225 linen drawers
+226 undershirt
+227 locket
+228 loom
+229 magic circle
+230 manacles
+231 mantle
+232 masher
+233 mat
+234 mattress
+235 medal
+236 medallion
+237 mirror
+238 mold
+239 mortar & pestle
+240 mosaics
+241 mug
+242 necklace
+243 needle
+244 offertory container
+245 barrel of oil
+246 oil fuel
+247 scented oil
+248 orb
+249 pit
+250 pail
+251 painting
+252 frescoe
+253 pallet
+254 pan
+255 pantaloons
+256 parchment
+257 paste
+258 pedestal
+259 pegs
+260 pellets
+261 pendant
+262 pentacle
+263 pentagram
+264 petticoat
+265 pews
+266 phial
+267 pick handle
+268 pillory
+269 pillow
+270 pin
+271 pincers
+272 large cask
+273 musical pipe
+274 smoking pipe
+275 stovepipe
+276 pipette
+277 pitcher
+278 plate
+279 platter
+280 pliers
+281 broken pole
+282 pot
+283 huge pot
+284 pottery shards
+285 pouch
+286 purse
+287 powder
+288 prayer rug
+289 prism
+290 puff
+291 pulpit
+292 quill
+293 quilt
+294 rack
+295 rags
+296 rail
+297 razor
+298 retort
+299 robe
+300 robes
+301 stirring rod
+302 rope
+303 rotten rope
+304 ropes
+305 rubble & dirt
+306 rug
+307 rushes
+308 sack
+309 torn sack
+310 salve
+311 sanctuary
+312 sandals
+313 saucer
+314 scarf
+315 sceptre
+316 wall sconce
+317 scraper
+318 screen
+319 scroll
+320 scroll tube
+321 shaker
+322 shawl
+323 sheet
+324 shelf
+325 shift
+326 shrine
+327 sideboard
+328 side chair
+329 sifter
+330 skin
+331 hide
+332 skull
+333 slimy coating on the ceiling
+334 slimy coating on the floor
+335 slimy coating on the wall
+336 slippers
+337 small box
+338 small casket
+339 smock
+340 soap
+341 sofa
+342 spatula
+343 spigot
+344 rusted spike
+345 spoon
+346 measuring spoon
+347 staff
+348 stalks
+349 stand
+350 statue
+351 broken statue
+352 statuette
+353 figurine
+354 sticks
+355 stockings
+356 stocks
+357 small stones
+358 stool
+359 high stool
+360 stool
+361 stopper
+362 strainer
+363 strappado
+364 straw
+365 stuffed animal
+366 surcoat
+367 broken sword blade
+368 table
+369 large table
+370 long table
+371 low table
+372 round table
+373 small table
+374 trestle table
+375 tankard
+376 tank
+377 tapestry
+378 scattered teeth
+379 thongs
+380 thread
+381 throne
+382 thumb screws
+383 thurible
+384 tiara
+385 tinderbox (with flint & steel)
+386 toga
+387 tongs
+388 torches
+389 torch stub
+390 towel
+391 tray
+392 tripod
+393 trivet
+394 trousers
+395 trunk
+396 tub
+397 tube (container)
+398 tube (piping)
+399 tun
+400 tunic
+401 tureen
+402 tweezers
+403 twine
+404 unguent
+405 rack
+406 urn
+407 vase
+408 veil
+409 vest
+410 vestments
+411 vestry
+412 vial
+413 vice
+414 votive light
+415 wall basin and font
+416 wallet
+417 wall scratchings
+418 washcloth
+419 waterclock
+420 large puddle of water
+421 small puddle of water
+422 trickle of water
+423 wax blob (candle stub)
+424 wax drippings
+425 well
+426 wheel
+427 whetstone
+428 whips
+429 whistle
+430 wig
+431 wire
+432 wood billets
+433 rotting wood pieces
+434 wool
+435 workbench
+436 wrapper
+437 yarn
+
+table: maybe-treasure 1d100
+1       There is treasure here -- {cp}cp, {sp}sp, {ep}ep, {gp}gp, {pp}pp, {gems}, {jewelry}, {magic}.
+2-100   .
+
+table: cp 1d100
+1-5     {1d8}00
+6-24    {1d10}00
+25-54   {2d6}00
+55-74   {3d6}00
+75-90   {4d6}00
+91-100  {5d6}00
+
+table: sp 1d100
+1-50    0
+51-60   {1d6}00
+61-70   {1d8}00
+71-80   {1d10}00
+81-90   {2d6}00
+91-95   {3d6}00
+96-100  {5d6}00
+
+table: ep 1d100
+1-75    0
+76-80   {1d4}00
+81-84   {1d6}00
+85-88   {1d8}00
+89-92   {1d10}00
+93-96   {1d12}00
+97-100  {2d8}00
+
+table: gp 1d100
+1-55    0
+56-57   {1d4}00
+58-76   {1d6}00
+77-88   {2d8}00
+89-100  {4d6}00
+
+table: pp 1d10
+1-9     0
+10      {1d4}00
+
+table: gems 1d100
+1-80    0 gems
+81-88   {4d10} ornamental stones (10gp/each)
+89-90   {4d8} semiprecious stones (50gp/each)
+91-97   {4d6} fancy stones (100gp/each)
+98-99   {4d4} precious stones (500gp/each)
+100     {4d2} {gem-name} gems (1000gp/each)
+
+table: gem-name 1d20
+1-3 Greenstone
+4-5 Malachite
+6-7 Aventurine
+8-9 Phenalope
+10  Amethyst
+11  Fluorospar
+12  Garnet
+13  Alexandrite
+14  Topaz
+15  Bloodstone
+16  Sapphire
+17  Diamond
+18  Fire Opal
+19  Ruby
+20  Emerald
+
+table: jewelry 1d100
+1-89    no jewelry
+90-94   {1d4} {jewlery-type} ({2d8}00gp/each)
+95-97   {1d6} {jewlery-type} ({2d8}00gp/each)
+98-100  {1d8} {jewlery-type} ({2d8}00gp/each)
+
+table: jewelry-type 1d100
+1-6     Anklets
+7-12    Belts
+13-14   Bowls
+15-21   Bracelets
+22-27   Brooches
+28-32   Buckles
+33-37   Chains
+38-40   Chokers
+41-42   Circlets
+43-47   Clasps
+48-51   Combs
+52      Crowns
+53-55   Cups
+56-62   Earrings
+63-65   Flagons
+66-68   Goblets
+69-73   Knives
+74-77   Letter Openers
+78-80   Lockets
+81-82   Medals
+83-89   Necklaces
+90      Plates
+91-95   Pins
+96      Sceptres
+97-99   Statuettes
+100     Tiaras
+
+table: magic 1d100
+01-25   {magic-weapon}
+26-35   {magic-armor}
+36-55   Potion of {magic-potion}
+56-85   {magic-scroll}
+86-90   Ring of {magic-ring}
+91-95   {magic-wand}
+96-100  {magic-misc}
+
+table: magic-weapon
+01-02   Great Axe {magic-weapon-bonus}
+03-09   Battle Axe {magic-weapon-bonus}
+10-11   Hand Axe {magic-weapon-bonus}
+12      Footman's Pick {magic-weapon-bonus}
+13-19   Shortbow {magic-weapon-bonus}
+20-23   Longbow {magic-weapon-bonus}
+24-28   {1d12} Shortbow Arrows {magic-ammo-bonus}
+29-31   {1d12} Longbow Arrows {magic-ammo-bonus}
+32-35   {1d12} Light Quarrels {magic-ammo-bonus}
+36-37   {1d12} Heavy Quarrels {magic-ammo-bonus}
+38      {1d12} Sling Bullets {magic-ammo-bonus}
+39-49   Dagger {magic-weapon-bonus}
+50      Flail {magic-weapon-bonus}
+51-55   Shortsword {magic-weapon-bonus}
+56      Cutlass {magic-weapon-bonus}
+57-68   Longsword {magic-weapon-bonus}
+69-70   Scimitar {magic-weapon-bonus}
+71-74   Two-Handed Sword {magic-weapon-bonus}
+75-79   Mace {magic-weapon-bonus}
+80      Light Mace {magic-weapon-bonus}
+81      Great Mace {magic-weapon-bonus}
+82      Morningstar {magic-weapon-bonus}
+83-86   Warhammer {magic-weapon-bonus}
+87      Maul {magic-weapon-bonus}
+88      Pole Arm {magic-weapon-bonus}
+89      Dart {magic-weapon-bonus}
+90      Javelin {magic-weapon-bonus}
+91-93   Spear {magic-weapon-bonus}
+94      Trident {magic-weapon-bonus}
+95-96   Boar Spear {magic-weapon-bonus}
+97      Lance {magic-weapon-bonus}
+98      Scythe {magic-weapon-bonus}
+99      Sickle {magic-weapon-bonus}
+100     {unusual-weapon} {magic-weapon-bonus}
+
+table: unusual-weapon
+1   Pickaxe
+2   Defending Dagger
+3   Military Fork
+4   Quarterstaff
+5   Chain
+6   Whip
+7   Club
+8   Cudgel
+9   Walking Staff
+10  Greatclub
+11  Sap
+12  Hook
+13  Spade
+14  Crowbar
+15  Gauntlet
+16  Cestus
+17  Light Crossbow
+18  Heavy Crossbow
+19  Hand Crossbow
+20  Bullet Crossbow
+21  Sling
+22  Bola
+23  Dart
+24  Throwing Blade
+25  Javelin
+26  Blowgun
+27  Net
+28  Halberd
+29  Bardiche
+30  Bill-Guisarme
+31  Ranseur
+32  Voulge
+33  Guisarme
+34  Lucern Hammer
+35  Spetum
+36  Bec de Corbin
+37  Glaive
+38  Fauchard
+39  Partisan
+40  Rapier
+41  Torch
+42  {1d12} Caltrops
+43  Stone
+44  Mallet
+45  Candlestick
+46  Iron Spike
+47  Wooden Stake
+
+
+
+table: magic-weapon-bonus 1d100
+01-40   +1
+41-50   +2
+51-55   +3
+56-57   +4
+58      +5
+59-75   +1, +2 vs {magic-weapon-enemy}
+76-85   +1, +3 vs {magic-weapon-enemy}
+86-95   {magic-weapon-bonus}, {magic-weapon-special}
+96-98   Cursed, -1
+99-100   Cursed, -2
+
+table: magic-ammo-bonus 1d100
+01-46   +1
+47-58   +2
+59-64   +3
+65-82   +1, +2 vs {magic-weapon-enemy}
+83-94   +1, +3 vs {magic-weapon-enemy}
+95-98   Cursed, -1
+99-100   Cursed, -2
+
+
+table: magic-weapon-enemy 1d6
+1   Dragons
+2   Enchanted
+3   Lycanthropes
+4   Regenerators
+5   Spell Users
+6   Undead
+
+table: magic-weapon-special 1d20
+1-9     Casts Light on Command
+10-11   Charm Person
+12      Drains Energy
+13-16   Flames on Command
+17-19   Locate Objects
+20      Wishes
+
+table: magic-armor 1d100
+01-08   Leather Armor {magic-armor-bonus}
+09-13   Ring Mail {magic-armor-bonus}
+14-34   Chain Mail {magic-armor-bonus}
+35-38   Scale Mail {magic-armor-bonus}
+39-40   Banded Mail {magic-armor-bonus}
+41-50   Plate Mail {magic-armor-bonus}
+51-90   Medium Shield {magic-armor-bonus}
+91-99   Tower Shield {magic-armor-bonus}
+100     {unusual-armor}
+
+table: unsual-armor
+1       Padded
+2       Hide
+3-20    Studded Leather
+21      Brigandine
+22      Splint Mail
+23      Field Plate
+24      Full Plate
+26-50   Buckler
+
+table: magic-armor-bonus 1d100
+1-50    +1
+51-80   +2
+81-90   +3
+91-95   Cursed -1
+96-100  Cursed, AC 11
+
+table: magic-potion 1d30
+1       Clairaudience
+2       Clairvoyance
+3       Cold Resistance
+4       Control Animal
+5       Control Dragon
+6       Control Giant
+7       Control Human
+8       Control Plant
+9       Control Undead
+10      Delusion
+11      Diminution
+12      ESP
+13      Fire Resistance
+14      Flying
+15      Gaseous Form
+16      Giant Strength
+17      Growth
+18      Healing
+19      Heroism
+20      Invisibility
+21      Invulnerability
+22      Levitation
+23      Longevity
+24      Poison
+25      Polymorph Self
+26      Speed
+27      Treasure Finding
+28-30   Holy Water
+
+table: magic-scroll 1d100
+01-03   Cleric Spell Scroll (1 Spell)
+04-06   Cleric Spell Scroll (2 Spells)
+07-08   Cleric Spell Scroll (3 Spells)
+09      Cleric Spell Scroll (4 Spells)
+10-15   Magic-User Spell Scroll (1 Spell)
+16-20   Magic-User Spell Scroll (2 Spells)
+21-25   Magic-User Spell Scroll (3 Spells)
+26-29   Magic-User Spell Scroll (4 Spells)
+30-32   Magic-User Spell Scroll (5 Spells)
+33-34   Magic-User Spell Scroll (6 Spells)
+35      Magic-User Spell Scroll (7 Spells)
+36-40   Cursed Scroll
+41-46   Protection from Elementals Scroll
+47-56   Protection from Lycanthropes Scroll
+57-61   Protection from Magic Scroll
+62-75   Protection from Undead Scroll
+76-85   Map to Treasure Type A
+86-89   Map to Treasure Type E
+90-92   Map to Treasure Type G
+93-100  Map to {1d4} Magic Items
+
+table: magic-ring 1d100
+01-06   Control Animal
+07-12   Control Human
+13-19   Control Plant
+20-30   Delusion
+31-33   Djinni Summoning
+34-44   Fire Resistance
+45-57   Invisibility
+58-66   Protection +1
+67-70   Protection +2
+71      Protection +3
+72-73   Regeneration
+74-75   Spell Storing
+76-81   Spell Turning
+82-83   Telekinesis
+84-90   Water Walking
+91-97   Weakness
+98      Wishes
+99-100  X-Ray Vision
+
+table: magic-wand 1d100
+01-08   Rod of Cancellation
+09-13   Snake Staff
+14-17   Staff of Commanding
+18-28   Staff of Healing
+29-30   Staff of Power
+31-34   Staff of Striking
+35      Staff of Wizardry
+36-40   Wand of Cold
+41-45   Wand of Enemy Detection
+46-50   Wand of Fear
+51-55   Wand of Fireballs
+56-60   Wand of Illusion
+61-65   Wand of Lightning Bolts
+66-73   Wand of Magic Detection
+74-79   Wand of Paralyzation
+80-84   Wand of Polymorph
+85-92   Wand of Secret Door Detection
+93-100  Wand of Trap Detection
+
+table: magic-misc 1d100
+01-04   Amulet of Proof against Detection and Location
+05-06   Bag of Devouring
+07-12   Bag of Holding
+13-17   Boots of Levitation
+18-22   Boots of Speed
+23-27   Boots of Traveling and Leaping
+28      Bowl Commanding Water Elementals
+29      Brazier Commanding Fire Elementals
+30-35   Broom of Flying
+36      Censer Commanding Air Elementals
+37-39   Cloak of Displacement
+40-43   Crystal Ball
+44-45   Crystal Ball with Clairaudience
+46      Drums of Panic
+47      Efreeti Bottle
+48-54   Elven Boots
+55-61   Elven Cloak
+62-63   Flying Carpet
+64-70   Gauntlets of Ogre Power
+71-72   Girdle of Giant Strength
+73-78   Helm of Reading Languages and Magic
+79      Helm of Telepathy
+80      Helm of Teleportation
+81      Horn of Blasting
+82      Horn of Doom
+83-91   Medallion of ESP
+92      Mirror of Life Trapping
+93-97   Rope of Climbing
+98-99   Scarab of Protection
+100     Stone Commanding Earth Elementals

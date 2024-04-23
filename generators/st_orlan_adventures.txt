@@ -1,0 +1,534 @@
+name: St. Orlan Adventures
+description: Describes a simple adventure idea.
+recipe:
+    How does it start? {start}<br>
+    Where is it? {where}<br>
+    Who's the antagonist? {antagonist}<br>
+    What's the challenge? {challenge}<br>
+    What's the reward? {reward}<br>
+repeat: 1
+
+# How it starts
+
+table: start
+1   {research}
+2   {heard_rumor}
+3   {victim_help} asks for help with {victim_crime}.
+4   {official} asks for help with {official_problem}.
+5   {reward_offer}.
+6   {start_insult}.
+7   {public_threat}.
+
+table: research
+1   You discovered information in an old book.
+2   You questioned travelers passing through town about regional events.
+3   You noticed something strange while wandering.
+4   You noticed an inscription on an ancient relic.
+
+table: heard_rumor
+1   People in a local tavern were discussing a rumor.
+2   You overheard a conversation on the street.
+3   A beggar told a story in hopes of getting some coin.
+4   A vivid dream woke you at midnight.
+
+table: victim_help
+1   A fair maiden
+2   A father
+3   A mother
+4   A shopowner
+
+table: victim_crime
+1   a burglary
+2   a kidnapping
+3   a murder
+4   blackmail
+5   a missing person
+
+table: official
+1   The sheriff
+2   A priest
+3   A guardsman
+
+table: official_problem
+1   beggars
+2   thieves
+3   a murderer
+4   an escaped convict
+5   a missing person
+
+table: reward_offer
+1   A reward poster was posted
+2   The town cryer announces the offer of a reward
+3   A messanger hand-delivers an offer of employment
+
+table: start_insult
+1   Something valuable was stolen from you
+2   The antagonist insults you to your face
+3   The antagonist insults you behind your back
+4   Your home is vandalized
+
+table: public_threat
+1   Ruffians arrive in town
+2   Crime is increasing
+3   {public_threat_scarce_is} scarce
+4   Sages predict doom
+
+table: public_threat_scarce_is
+1   Food is
+2   Beer is
+3   Firewood is
+4   Weapons are
+5   Visitors are
+6   Traveling merchants are
+
+# Where is the adventure
+
+table: where
+1   A {where_building} in town.
+2   {nearby_home}, {1d6} miles {forest_direction}.
+3   The sewers.
+4   A ruined {ruins}.
+5   The forests to the {forest_direction}.
+6   A lair.
+7   A {mine_condition} mine.
+8   A cave.
+
+table: where_building
+1       alchemist shop
+2       artist gallery
+3       bakery
+4       basket makers shop
+5       bath house
+6       blacksmith
+7       brewery
+8       buckle makers shop
+9-12    cemetery
+13      cobbler shop
+14      corral
+15      distillery
+16      doctor office
+17      fountain
+18      furniture maker shop
+19      furrier storefront
+20      garden
+21      glass makers shop
+22      grainery
+23      grain merchants office
+24      guild hall
+25-35   inn
+36      instrument maker shop
+37      jewelery shop
+38      leatherworker shop
+39      library
+40      livestock merchant office
+41      locksmith shop
+42      masonry office
+43      merchant office
+44      mill
+45      moneychanger storefront
+46      pawnbroker
+47      spice merchant office
+48      parchmentmaker shop
+49      perfumery
+50      potters shop
+51      rug maker shop
+52      barber shop
+53-55   brothel
+56      butcher shop
+57      clothing shop
+58      engravery
+59      grocery
+60      laundry
+61      wine merchant office
+62      skinner shop
+63      soapmaker shop
+64      stable
+65-75   tavern
+76      taxidermist office
+77      tobacco merchant office
+78-83   warehouse
+84      weaponsmith shop
+85      weaver shop
+86      well
+87      wheelwright shop
+88      woodcarver shop
+89-100  temple of St. Orlan
+
+table: nearby_home
+1   A nearby farm
+2   The home of a hermit
+3   A large estate
+
+
+table: ruins
+1   {ruined_manor}
+2   {ruined_citadel}
+3   {ruined_castle}
+4   {ruined_temple}
+
+table: ruined_manor
+1   hut
+2   hoval
+3   hall
+4   villa
+5   cottage
+6   palace
+
+table: ruined_citadel
+1   tower
+2   tower with outer wall
+3   great keep
+4   keep with four towers
+5   keep with four towers and outer wall
+6   keep with four towers, outer wall, and moat
+
+table: ruined_castle
+1   castle with pallisade
+2   castle with pallisade and moat
+3   castle with pallisade, moat and walls
+4   castle with pallisade, moat, walls and manor
+5   castle with pallisade, moat, walls, manor and 4 towers
+6   castle with pallisade, moat, walls, manor, 4 towers and outer walls
+
+table: ruined_temple
+1   altar
+2   shrine
+3   sanctuary
+4   oracle
+5   pantheon
+6   monastary
+
+table: forest_direction
+1   north
+2   south
+3   east
+4   west
+
+table: mine_condition
+1   abandoned
+2   active
+
+# Antagonist
+
+table: antagonist
+1   a gang of bandits -- {2d12} Level 1 Fighters and {1d6} Level 1 Thieves, led by a {bandit-leader}.
+2   {monster-group}
+3   {monster-one}
+4   {natural_event}
+5   {antagonist_magic}
+
+table: bandit-leader
+1   Level {1d4+1} Fighter
+2   Level {1d4+1} Thief
+
+table: monster-group 2d4
+2   {5d4} Bugbears AC 15 (13), HD 3+1, #At 1 weapon, Dam 1d8+1 or by weapon +1, Mv 30' Unarmored 40', Sv F3, Ml 9, XP 145, Tr Q, R each; B, L, M in lair
+3   {6d10} Goblins AC 14 (11), HD 1-1, #At 1 weapon, Dam 1d6 or by weapon, Mv 20' Unarmored 30', Sv F1, Ml 7 or see below, XP 10, Tr R each; C in lair
+4   {2d10} Centaurs AC 15 (13), HD 4, #At 2 hooves/1 weapon, Dam 1d6/1d6/1d6 or by weapon, Mv 50' Unarmored 60' (10'), Sv F4, Ml 8, XP 240, Tr A
+5   {3d4} Dogs AC 14, HD 1+1, #At 1 bite, Dam 1d4 + hold, Mv 50', Sv F1, Ml 9, XP 25
+6   {2d4} Gargoyles AC 15‡, HD 4**, #At 2 claws/1 bite/1 horn, Dam 1d4/1d4/1d6/1d4, Mv 30' Fly 50' (15'), Sv F6, Ml 11, XP 320, Tr C
+7   {3d6} Gnolls AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8, XP 75, Tr Q, S each; D, K in lair
+8   {2d6} Ogres AC 15 (12), HD 4+1, #At 1 weapon, Dam 2d6, Mv 30' Unarmored 40', Sv F4, Ml 10, XP 240, Tr C + {1d20}00 gp
+
+table: monster-one 1d6
+1   Troll AC 16, HD 6*, #At 2 claws/1 bite, Dam 1d6/1d6/1d10, Mv 40', Sv F6, Ml 10 (8), XP 555, Tr D
+2   Giant Scorpion AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11, XP 280
+3-4 Lion AC 14, HD 5, #At 2 claws/1 bite, Dam 1d6/1d6/1d10, Mv 50', Sv F5, Ml 9, XP 360
+5   Wraith AC 15‡, HD 4**, #At 1 touch, Dam 1d6 + energy drain (1 level), Mv Fly 80', Sv F4, Ml 12, XP 320, Tr E
+6   Hill Giant AC 15 (13), HD 8, #At 1 giant weapon (club), Dam 2d8, Mv 30' Unarmored 40', Sv F8, Ml 8, XP 875, Tr E plus {1d8}000 gp
+
+table: natural_event
+1   an avalanche
+2   an earthquake
+3   a wildfire
+4   a flood
+5   a hurricane or tornado
+6   a volcano errupts
+
+table: antagonist_magic
+1   a curse
+2   magical sleep
+3   mind control
+4   illusions
+5   sickness
+6   confusion
+7   people turning into animals
+8   blindness
+
+# Challenge
+
+table: challenge
+1   Rescue the victim.
+2   Defeat the antagonist.
+3   Explore the area.
+4   {challenge_info}.
+5   Deliver a message or a valuable object.
+6   Gather a rare item.
+7   Protect a potential victim.
+
+table: challenge_info
+1   Gather intelligence about a nearby government
+2   Discover the plans of the antagonist
+3   Obtain information about a rival merchant
+4   Investigate the details of a crime
+5   Investigate infidelity
+6   Find a missing person
+7   Uncover fraud by a business
+
+
+# Reward
+
+table: reward
+1   {2d6}00 gp
+2   {magic}
+3   {2d6}00 xp
+4   Fame
+5   Equipment
+6   Real estate
+
+table: magic 1d100
+1-25    {magic-weapon}
+26-35   {magic-armor}
+36-55   Potion of {magic-potion}
+56-85   {magic-scroll}
+86-90   Ring of {magic-ring}
+91-100   {magic-wand}
+
+table: magic-weapon
+1-2     Great Axe {magic-weapon-bonus}
+3-9     Battle Axe {magic-weapon-bonus}
+10-11   Hand Axe {magic-weapon-bonus}
+12      Footman's Pick {magic-weapon-bonus}
+13-19   Shortbow {magic-weapon-bonus}
+20-23   Longbow {magic-weapon-bonus}
+24-28   {1d12} Shortbow Arrows {magic-ammo-bonus}
+29-31   {1d12} Longbow Arrows {magic-ammo-bonus}
+32-35   {1d12} Light Quarrels {magic-ammo-bonus}
+36-37   {1d12} Heavy Quarrels {magic-ammo-bonus}
+38      {1d12} Sling Bullets {magic-ammo-bonus}
+39-49   Dagger {magic-weapon-bonus}
+50      Flail {magic-weapon-bonus}
+51-55   Shortsword {magic-weapon-bonus}
+56      Cutlass {magic-weapon-bonus}
+57-68   Longsword {magic-weapon-bonus}
+69-70   Scimitar {magic-weapon-bonus}
+71-74   Two-Handed Sword {magic-weapon-bonus}
+75-79   Mace {magic-weapon-bonus}
+80      Light Mace {magic-weapon-bonus}
+81      Great Mace {magic-weapon-bonus}
+82      Morningstar {magic-weapon-bonus}
+83-86   Warhammer {magic-weapon-bonus}
+87      Maul {magic-weapon-bonus}
+88      Pole Arm {magic-weapon-bonus}
+89      Dart {magic-weapon-bonus}
+90      Javelin {magic-weapon-bonus}
+91-93   Spear {magic-weapon-bonus}
+94      Trident {magic-weapon-bonus}
+95-96   Boar Spear {magic-weapon-bonus}
+97      Lance {magic-weapon-bonus}
+98      Scythe {magic-weapon-bonus}
+99      Sickle {magic-weapon-bonus}
+100     {unusual-weapon} {magic-weapon-bonus}
+
+table: unusual-weapon
+1   Pickaxe
+2   Defending Dagger
+3   Military Fork
+4   Quarterstaff
+5   Chain
+6   Whip
+7   Club
+8   Cudgel
+9   Walking Staff
+10  Greatclub
+11  Sap
+12  Hook
+13  Spade
+14  Crowbar
+15  Gauntlet
+16  Cestus
+17  Light Crossbow
+18  Heavy Crossbow
+19  Hand Crossbow
+20  Bullet Crossbow
+21  Sling
+22  Bola
+23  Dart
+24  Throwing Blade
+25  Javelin
+26  Blowgun
+27  Net
+28  Halberd
+29  Bardiche
+30  Bill-Guisarme
+31  Ranseur
+32  Voulge
+33  Guisarme
+34  Lucern Hammer
+35  Spetum
+36  Bec de Corbin
+37  Glaive
+38  Fauchard
+39  Partisan
+40  Rapier
+41  Torch
+42  {1d12} Caltrops
+43  Stone
+44  Mallet
+45  Candlestick
+46  Iron Spike
+47  Wooden Stake
+
+table: magic-weapon-bonus 1d100
+1-40    +1
+41-50   +2
+51-55   +3
+56-57   +4
+58      +5
+59-75   +1, +2 vs {magic-weapon-enemy}
+76-85   +1, +3 vs {magic-weapon-enemy}
+86-95   {magic-weapon-bonus}, {magic-weapon-special}
+96-100  +0
+
+table: magic-ammo-bonus 1d100
+1-46    +1
+47-58   +2
+59-64   +3
+65-82   +1, +2 vs {magic-weapon-enemy}
+83-94   +1, +3 vs {magic-weapon-enemy}
+95-100  +0
+
+table: magic-weapon-enemy 1d6
+1   Dragons
+2   Enchanted
+3   Lycanthropes
+4   Regenerators
+5   Spell Users
+6   Undead
+
+table: magic-weapon-special 1d20
+1-9     Casts Light on Command
+10-11   Charm Person
+12      Drains Energy
+13-16   Flames on Command
+17-19   Locate Objects
+20      Wishes
+
+table: magic-armor 1d100
+1-8     Leather Armor {magic-armor-bonus}
+9-13    Ring Mail {magic-armor-bonus}
+14-34   Chain Mail {magic-armor-bonus}
+35-38   Scale Mail {magic-armor-bonus}
+39-40   Banded Mail {magic-armor-bonus}
+41-50   Plate Mail {magic-armor-bonus}
+51-90   Medium Shield {magic-armor-bonus}
+91-99   Tower Shield {magic-armor-bonus}
+100     {unusual-armor}
+
+table: unsual-armor
+1       Padded
+2       Hide
+3-20    Studded Leather
+21      Brigandine
+22      Splint Mail
+23      Field Plate
+24      Full Plate
+26-50   Buckler
+
+table: magic-armor-bonus 1d100
+1-50    +1
+51-80   +2
+81-90   +3
+91-100   +0
+
+table: magic-potion 1d30
+1       Clairaudience
+2       Clairvoyance
+3       Cold Resistance
+4       Control Animal
+5       Control Dragon
+6       Control Giant
+7       Control Human
+8       Control Plant
+9       Control Undead
+10      Delusion
+11      Diminution
+12      ESP
+13      Fire Resistance
+14      Flying
+15      Gaseous Form
+16      Giant Strength
+17      Growth
+18      Healing
+19      Heroism
+20      Invisibility
+21      Invulnerability
+22      Levitation
+23      Longevity
+24      Poison
+25      Polymorph Self
+26      Speed
+27      Treasure Finding
+28-30   Holy Water
+
+table: magic-scroll 1d100
+1-3     Cleric Spell Scroll (1 Spell)
+4-6     Cleric Spell Scroll (2 Spells)
+7-8     Cleric Spell Scroll (3 Spells)
+9       Cleric Spell Scroll (4 Spells)
+10-15   Magic-User Spell Scroll (1 Spell)
+16-20   Magic-User Spell Scroll (2 Spells)
+21-25   Magic-User Spell Scroll (3 Spells)
+26-29   Magic-User Spell Scroll (4 Spells)
+30-32   Magic-User Spell Scroll (5 Spells)
+33-34   Magic-User Spell Scroll (6 Spells)
+35      Magic-User Spell Scroll (7 Spells)
+36-40   Map to {magic-weapon}
+41-46   Protection from Elementals Scroll
+47-56   Protection from Lycanthropes Scroll
+57-61   Protection from Magic Scroll
+62-75   Protection from Undead Scroll
+76-85   Map to Treasure Type A
+86-89   Map to Treasure Type E
+90-92   Map to Treasure Type G
+93-100  Map to {magic-armor}
+
+table: magic-ring 1d100
+1-6     Control Animal
+07-12   Control Human
+13-19   Control Plant
+20-30   Delusion
+31-33   Djinni Summoning
+34-44   Fire Resistance
+45-57   Invisibility
+58-66   Protection +1
+67-70   Protection +2
+71      Protection +3
+72-73   Regeneration
+74-75   Spell Storing
+76-81   Spell Turning
+82-83   Telekinesis
+84-90   Water Walking
+91-97   Weakness
+98      Wishes
+99-100  X-Ray Vision
+
+table: magic-wand 1d100
+1-8     Rod of Cancellation
+09-13   Snake Staff
+14-17   Staff of Commanding
+18-28   Staff of Healing
+29-30   Staff of Power
+31-34   Staff of Striking
+35      Staff of Wizardry
+36-40   Wand of Cold
+41-45   Wand of Enemy Detection
+46-50   Wand of Fear
+51-55   Wand of Fireballs
+56-60   Wand of Illusion
+61-65   Wand of Lightning Bolts
+66-73   Wand of Magic Detection
+74-79   Wand of Paralyzation
+80-84   Wand of Polymorph
+85-92   Wand of Secret Door Detection
+93-100  Wand of Trap Detection

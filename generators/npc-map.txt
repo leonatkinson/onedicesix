@@ -1,0 +1,238 @@
+name: NPC Motivation, Appearance, Personality
+description: Returns a three-word code for an NPC
+recipe:
+    {motivation}, {appearance}, {personality}
+repeat: 1
+
+table: motivation
+1   prove them wrong
+2   get revenge
+3   escape
+4   find love
+5   have children
+6   travel
+7   start business
+8   leave their mark
+9   be happy
+10  learn a new language
+11  play a musical instrument
+12  write a book
+13  create art
+14  learn a skill
+15  meet new people
+16  try new foods
+17  experience new things
+
+table: appearance
+1   tall
+2   short
+3   thin
+4   fat
+5   muscular
+6   old
+7   young
+8   brown hair
+9   black hair
+10  blonde
+11  red hair
+12  brown eyes
+13  blue eyes
+14  green eyes
+15  mustache
+16  beard
+17  goatee
+18  sideburns
+19  stubble
+20  facial scar
+21  scarred chest
+22  scar on arm
+23  scar on hand
+24  scar on neck
+25  tattoo of a name
+26  tattoo of a symbol
+27  tribal tattoo
+28  wears strange hat
+29  wears a scarf
+30  wears a necklace
+31  birthmark
+32  limp
+33  accent
+34  odd hairstyle
+
+
+table: personality
+1   able
+2   abstract
+3   adaptable
+4   adventurous
+5   affectionate
+6   aggressive
+7   alert
+8   ambitious
+9   amicable
+10  amiable
+11  analytical
+12  anxious
+13  apathetic
+14  artistic
+15  assertive
+16  attentive
+17  attractive
+18  average
+19  balanced
+20  bold
+21  boring
+22  brave
+23  bright
+24  bubbly
+25  capable
+26  careful
+27  carefree
+28  charming
+29  cheerful
+30  clever
+31  close-minded
+32  clumsy
+33  confident
+34  conscientious
+35  consistent
+36  courageous
+37  creative
+38  critical
+39  curious
+40  cynical
+41  daring
+42  decisive
+43  defensive
+44  demanding
+45  dependent
+46  determined
+47  dignified
+48  disorganized
+49  dominant
+50  dreamy
+51  dutiful
+52  eager
+53  easygoing
+54  eccentric
+55  efficient
+56  elegant
+57  emotional
+58  empathetic
+59  energetic
+60  enthusiastic
+61  ethical
+62  extroverted
+63  faithful
+64  fair
+65  faithful
+66  fearless
+67  fickle
+68  focused
+69  forgiving
+70  friendly
+71  frugal
+72  funny
+73  generous
+74  gentle
+75  giving
+76  good-natured
+77  grateful
+78  great
+79  helpful
+80  honest
+81  humble
+82  humorous
+83  idealistic
+84  imaginative
+85  independent
+86  indecisive
+87  individual
+88  intelligent
+89  interesting
+90  intuitive
+91  introverted
+92  kind
+93  knowledgeable
+94  lazy
+95  level-headed
+96  logical
+97  loving
+98  loyal
+99  mature
+100 mean
+101 methodical
+102 modest
+103 moody
+104 motivated
+105 naive
+106 nervous
+107 nice
+108 open-minded
+109 organized
+110 outgoing
+111 optimistic
+112 orderly
+113 organized
+114 outgoing
+115 patient
+116 peaceful
+117 perceptive
+118 perfectionist
+119 persistent
+120 pessimistic
+121 philosophical
+122 playful
+123 polite
+124 positive
+125 practical
+126 predictable
+127 productive
+128 proud
+129 prudent
+130 quick-witted
+131 quiet
+132 rational
+133 realistic
+134 reliable
+135 reserved
+136 responsible
+137 respectful
+138 romantic
+139 rude
+140 sarcastic
+141 sensitive
+142 serious
+143 shy
+144 sincere
+145 skillful
+146 smart
+147 sociable
+148 spontaneous
+149 stable
+150 strong
+151 stubborn
+152 successful
+153 supportive
+154 sympathetic
+155 tactful
+156 talkative
+157 talented
+158 thoughtful
+159 thorough
+160 timid
+161 tolerant
+162 trusting
+163 truthful
+164 understanding
+165 unique
+166 unemotional
+167 uninhibited
+168 unselfish
+169 upbeat
+170 understanding
+171 versatile
+172 warm
+173 wise
+174 witty
+175 zealous

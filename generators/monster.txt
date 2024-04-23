@@ -1,0 +1,449 @@
+name: Monsters
+description: Random monstgers
+recipe:
+    Armor Class - {armor-class} {armor-extra}<br>
+    {hit-dice}<br>
+    {attacks}<br>
+    Movement - {movement}<br>
+    No. Appearing - {appearing}, {appearing-lair} in lair<br>
+    Save As - {save-as}<br>
+    Morale - {1d6+6}<br>
+    Treasure Type - {treasure}<br>
+    {special-ability}<br>
+    Looks like a {appearance-color} {appearance}<br>
+    {intelligence}<br>
+repeat: 1
+
+table: dice-sides 1d6
+1   4
+2   6
+3   8
+4   10
+5   12
+6   20
+
+table: stat 1d6
+1   STR
+2   INT
+3   CON
+4   DEX
+5   WIS
+6   CHA
+
+table: damage-type 1d6
+1   acid
+2   fire
+3   lightning
+4   cold
+5   filth
+6   toxic
+
+table: armor-class 2d8
+2   always hit
+3   11
+4   12
+5   13
+6   14
+7   15
+8   16
+9   17
+10  18
+11  19
+12  20
+13  21
+14  22
+15  23
+16  {1d2+23}
+
+table: armor-extra 1d100
+1-75    -
+76-85   (or wears armor)
+86-90   (s)
+91-95   (m)
+96-98   (immune to weapons)
+99      (only by fire)
+100     (only by cold)
+
+table: hit-dice 2d6
+2   1 hp<br>
+    {1d6} inches, {1d2} ounces
+3   1d2 hp<br>
+    {2d6} inches, {2d8} ounces
+4   1/2 HD (1d4 hp)<br>
+    {1d12+12} inches, {1d8} pounds
+5-6 1 HD<br>
+    {2d2} feet, {1d53+7} pounds
+7-8 {1d2} HD<br>
+    {2d4+2} feet, {1d45+5}0 pounds
+9   {1d3+1} HD<br>
+    {1d8+8} feet, {1d36+4}00 pounds
+10  {4d4} HD<br>
+    {1d16+15} feet, {4d8}000 pounds
+11  {1d16+15} HD<br>
+    {1d16+15} feet, {2d100+30}000 pounds
+12  {1d32+32} HD<br>
+    {2d10+6}0 feet, {3d10+25}0000 pounds
+
+table: attacks 1d100
+1-40    {attack}
+41-50   2 claws {attack-damage}
+51-70   {attack} or {attack}
+71-75   {attack} or {attack} or {attack}
+76-85   {attack}, {attack}
+86-90   {attack}, {attack}, {attack}
+91-100  {attack}, {attack} or {attack}
+
+table: attack 1d100
+1-20    bludgeon {attack-damage}
+21-50   bite {attack-damage}
+51-70   weapon {attack-damage}
+71-75   tentacle {attack-damage}
+76-80   blood drain {attack-damage}
+81-85   choke {attack-damage}
+86-90   touch {attack-damage}
+91-95   breath {damage-type} {attack-damage} ({1d10+5} feet wide x {2d6}0 feet long)
+96-100  {attack-special}
+
+table: attack-damage 1d100
+1-5     1d3
+6-25    {1d2}d4
+26-65   {1d6}d6
+66-80   {1d4}d8
+81-90   {1d3}d10
+91-100  1d12
+
+table: temporary 1d4
+1-2     temporary
+3-4     permanent
+
+table: attack-special 1d25
+1   {temporary} {drain-amount} {drain} drain
+2   aura of fear
+3   cone of fear
+4   charming gaze
+5   paralyzing gaze
+6   grapple
+7   poison save or {poison-effect} {poison-save}
+8   swallow whole
+9   trample
+10  gaze turns to stone
+11  slippery oil spray
+12  blistering oil spray (-2 AB for 24 hours)
+13  touch turns to stone
+14  paralyzing touch
+15  Hurl bolders
+16  Rust
+17  Dissolve organic matter
+18  Disease
+19  Attach
+20  Web
+21  Curse
+22  Poison cloud
+23  Dispel Magic
+24  Sleep
+25  Stun
+26  Horn(s) {attack-damage}
+
+table: drain 1d6
+1-2   level
+3-6   {stat}
+
+table: drain-amount 1d10
+1-5 1
+6-8 2
+9   1d4
+10  1d6
+
+table: poison-save 1d6
+1-4 (ordinary)
+4   +{2d6} to roll
+5   -{2d6} to roll
+
+table: poison-effect 1d8
+1-6     Lose 1d4 {stat} ({temporary})
+7-8     die
+
+table: movement 2d6
+2-5 {1d6}0, Fly {2d6}0
+6-8 {1d6}0
+9   {2d6}0
+10  {3d6}0
+11  Swim {2d6}0
+12  Borrow {2d6}0
+
+table: appearing 1d100
+1-50    1
+51-60   1d6
+61-70   2d6
+71-90   {1d4}d{dice-sides}
+91-100  {2d6}d{dice-sides}
+
+table: appearing-lair 1d6
+1       n/a
+2-4     same
+5       {1d4}d{dice-sides}
+6       {2d6}d{dice-sides}
+
+table: save-as 1d6
+1-3 Fighter
+4   Magic-User
+5   Cleric
+6   Thief
+
+table: treasure 1d100
+1-40    None
+41-44   A
+45-49   B
+50-53   C
+54-58   D
+59-63   E
+64-67   F
+68-72   G
+73-76   I
+77-80   J
+81-85   K
+86-89   L
+90-94   M
+95-97   N
+98-100  O
+
+table: special-ability 1d33
+1   Cast spells as level {1d20} magic-user.
+2   Cast spells as level {1d20} cleric.
+3   {special-regeneration}
+4   {damage-type} heals.
+5   {damage-type} slows.
+6   Resistence to {damage-type}.
+7   Teleport {special-ability-frequency}.
+8   Glowing body part.
+9   Surprises on 1-{1d2+3}.
+10  Gaseous form {special-ability-frequency}.
+11  Invisible {special-ability-frequency}.
+12  Summon monster {special-ability-frequency}.
+13  Telekinesis {special-ability-frequency}.
+14  Undead.
+15  Magic immunity.
+16  Deals damage if hit.
+17  Weapons stick.
+18  Those killed become this monster.
+19  Many heads.
+20  Splits if hit.
+21  Animate dead {special-ability-frequency}.
+22  Anti-magic shell.
+23  Blade barrier {special-ability-frequency}.
+24  Curse {special-ability-frequency}.
+25  Confusion {special-ability-frequency}.
+26  Blindness {special-ability-frequency}.
+27  Feeblemind {special-ability-frequency}.
+28  Shrink {special-ability-frequency}.
+29  Hold Person {special-ability-frequency}.
+30  Ice Storm {special-ability-frequency}.
+31  Polymorth Other {special-ability-frequency}.
+32  Polymorth Self {special-ability-frequency}.
+33  {1d10} Mirror Images {special-ability-frequency}.
+34  Hostile to Dwarves.
+35  Hostile to Elves.
+36  Hostile to Hobbits.
+37  Hostile to Magic Users.
+38  Hostile to Clerics.
+39  Hostile to Paladins.
+40  Silver/magic weapons do double damage.
+41  Missiles ineffective.
+42  Silent movement.
+43  Has antimagic shell.
+44  Summons snakes.
+45  Does double damage on natural 20.
+46  Legless.
+47  Slow spell has double effect.
+48  Tongue is whip.
+49  Destroyed by fire.
+50  Destroyed by sunlight.
+51  Destroyed by running water.
+52  Destroyed by holy water.
+53  Destroyed by cold.
+54  Turned by cross.
+55  Turned by mirror.
+56  Turned by garlic.
+57  Turned by wolvesbane.
+58  If human killed by undead.
+59  Turns/dispels Clerics.
+60  Commands Rats.
+61  Commands Wolves.
+62  Destroyed only by fire.
+63  Invisible.
+
+table: special-ability-frequency 1d5
+1   {1d10}/day
+2   at will
+3   1-{1d4} on d6
+4   on hit
+5   if struck
+
+
+table: special-regeneration 1d6
+1-4 Regeneration {1d2}d{dice-sides} hp/round.
+5-6 Regeneration {1d2}d{dice-sides} hp/round except {damage-type}.
+
+table: appearance 1d1500
+1-300       humanoid
+301-320     blob
+321-330     mold
+331-350     mushroom
+351-360     slime
+361-361     cactus
+362-362     succulent
+363-363     vine
+364-364     bamboo
+365-365     grass
+366-366     pine tree
+367-367     fern
+368-368     palm
+369-369     oak tree
+370-370     apple tree
+371-371     bush
+372-372     cabbage
+373-373     redwood
+374-383     frog
+384-388     newt
+389-398     salamander
+399-408     toad
+409-413     albatross
+414-418     chicken
+419-423     hummingbird
+424-433     falcon
+434-438     flamingo
+439-443     ostrich
+444-453     owl
+454-458     parrot
+459-463     penguin
+464-468     pigeon
+469-473     jay
+474-478     quail
+479-483     peacock
+484-488     dove
+489-493     robin
+494-498     sparrow
+499-503     swallow
+504-513     vulture
+514-518     swan
+519-523     seagull
+524-528     goose
+529-533     duck
+534-538     crane
+539-548     eagle
+549-553     crow
+554-563     raven
+564-564     bass
+565-569     carp
+570-570     catfish
+571-571     cod
+572-581     crayfish
+582-582     flounder
+583-583     mackerel
+584-593     lobster
+594-594     marlin
+595-595     oyster
+596-605     shrimp
+606-615     octopus
+616-616     swordfish
+617-617     tuna
+618-627     eel
+628-628     hagfish
+629-629     lamprey
+630-630     minnow
+631-631     ray
+632-632     salmon
+633-633     seahorse
+634-643     shark
+644-653     bat
+654-663     elephant
+664-673     hamster
+674-683     rabbit
+684-688     rhinoceros
+689-693     whale
+694-698     dolphin
+699-708     cow
+709-718     ox
+719-728     dog
+729-738     goat
+739-748     deer
+749-758     sheep
+759-768     raccoon
+769-778     fox
+779-783     koala
+784-793     squirrel
+794-803     ape
+804-813     monkey
+814-823     horse
+824-833     mouse
+834-843     rat
+844-848     hedgehog
+849-853     kangaroo
+854-863     bear
+864-868     walrus
+869-878     otter
+879-888     lion
+889-898     leopard
+899-948     pig
+949-953     beaver
+954-963     seal
+964-973     cat
+974-978     camel
+979-988     weasel
+989-993     sloth
+994-1003    wolf
+1004-1004   crocodile
+1005-1005   gecko
+1006-1025   lizard
+1026-1026   turtle
+1027-1046   snake
+1047-1056   pterodactyl
+1057-1057   anemone
+1058-1062   clam
+1063-1063   coral
+1064-1083   crab
+1084-1103   worm
+1104-1123   insect
+1124-1124   jellyfish
+1125-1134   leech
+1135-1144   sea urchin
+1145-1154   snail
+1155-1174   spider
+1175-1175   sponge
+1176-1185   squid
+1186-1195   starfish
+1196-1500   {appearance} and a {appearance-color} {appearance}
+
+table: appearance-extra 1d10
+1-8     -
+9-10    with {appearance-extra-thing}
+
+table: appearance-extra-thing 1d18
+1   no head
+2   3 eyes
+3   4 eyes
+4   stalk eyes
+5   unusually long fangs
+6   unusually long claws
+7   antennae
+8   3-segment body
+
+table: appearance-color 1d100
+1-44    ordinary
+45-50   black
+51-55   blue
+56-60   brown
+61-65   gray
+66-70   gray-green
+71-75   green
+76-80   red
+81-85   spotted
+86-90   striped
+91-95   white
+96-100  yellow
+
+
+table: intelligence
+1-3 Highly intelligent ({2d8+8} INT)
+4-5 Semi-intelligent ({1d4-2} INT)
+6   Unintelligent (0 INT)

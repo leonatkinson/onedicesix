@@ -1,0 +1,56 @@
+name: Wand of Wonder
+description: https://www.dandwiki.com/wiki/SRD:Rod_of_Wonder
+recipe: {effect}
+repeat: 1
+
+table: effect 1d100
+01-05   Casts slow on target. Duration 10 rounds.
+06-10   {fire-color} fire surrounds target. Duration 10 rounds. No damage.
+11-15   Wielder delusion for 1 round. {effect}
+16-20   Gust of wind shoots from wand. Small creatures knocked prone.
+        Medium creatures pushed back {5d6} feet. Flames blown out.
+        -4 to missile attacks. Duration 1 round.
+21-25   Wielder gets ESP on target for {1d4} rounds.
+26-30   Nauseating cloud centered on target. 20 foot radius. Duration 10 rounds.
+        Targets are unable to attack or cast spells, can only move. Lack of attention
+        means free sneak attacks by thieves.
+31-33   Heavy rain falls for 1 round in 60 foot radius centered on wielder.
+34-36   Summon {animal}
+37-46   Lightning bolt (70 ft. long, 5 ft. wide), {6d6} damage.
+47-49   Stream of 600 large butterflies pours forth and flutters around for 2 rounds, blinding everyone (including wielder) within 25 ft.
+50-53   Growth of Animals on target.
+54-58   Darkness on target.
+59-62   Grass grows in 160-sq.-ft. area around wielder, or grass existing there grows to ten times normal size.
+63-65   Turn ethereal any nonliving object of up to 1,000 lb. mass and up to 30 cu. ft. in size.
+66-69   Reduce wielder to 1/12 height (no save).
+70-79   Fireball at target or 100 ft. straight ahead, {6d6} damage.
+80-84   Invisibility covers wielder.
+85-87   Leaves grow from target and for last 24 hours.
+88-90   {1d4}0 gems, value 1 gp each, shoot forth in a 30 foot stream.
+        Each gem deals 1 point of damage to target at AB +1.
+91-95   Shimmering colors dance and play over a 40-ft.-by-30-ft. area.
+        Creatures therein are blinded for {1d6} rounds.
+96-97   {color-turn} turns permanently {color-turn-color} (no save).
+98-100  Flesh to stone (or stone to flesh if target is stone already) on target.
+
+table: fire-color 1d6
+1   Red
+2   Green
+3   Blue
+4   Yellow
+5   White
+6   Orange
+
+table: animal 1d4
+1   Rhino AC 19, HD 12 (+10), #At 1 butt or 1 trample, Dam 2d8 or 2d12, Mv 40' (15'), Sv F8, Ml 6
+2   Elephant AC 18, HD 9 (+8), #At 2 tusks or 1 trample, Dam 2d4/2d4 or 4d8, Mv 40' (15'), Sv F9, Ml 8
+3-4 Mouse AC 14, HD 1 HP, #At none, Dam none, Mv 30', Sv NM, Ml 6
+
+table: color-turn 1d2
+1   Wielder
+2   Target
+
+table: color-turn-color 1d3
+1   blue
+2   green
+3   purple

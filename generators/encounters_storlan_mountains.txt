@@ -1,4 +1,4 @@
-name: Encounters in the Tosasth Valley
+name: Encounters in the St. Orlan Mountains
 description: Tables for generating encounters by location
 recipe: While exploring, the party encounters {encounter}<br>
         The general vibe is "{evocative}".
@@ -22,7 +22,7 @@ table: encounter 1d12
 7-10    a <strong>lair</strong> {lair-location}, {lair-type}.<br>
         {lair}
 11      a <strong>landmark</strong>, {landmark}.
-12      <strong>{dungeon}</strong>
+12      a <strong>dungeon</strong> entrance.
 
 table: direction 1d8
 1   north
@@ -41,49 +41,51 @@ table: with-or-against 1d6
 6 {1d6} rounds later chased by
 
 table: wandering 3d10
-3   Green Dragon AC 19, HD {1d6+5}**, #At 2 claws/1 bite or breath/1 tail, Dam 1d6/1d6/3d8 or breath/1d6, Mv 30' Fly 80' (15'), Sv F8
-4   White Dragon AC 17, HD {1d6+3}**, #At 2 claws/1 bite or breath/1 tail, Dam 1d4/1d4/2d8 or breath/1d4, Mv 30' Fly 80' (10'), Sv F6
-5   {1d8} Trolls AC 16, HD 6*, #At 3, Dam 1d6/1d6/1d10, Mv 40', Sv F6, Ml 10 (8)
-6   Giant Roc AC 18, HD 32 (+16), #At 2 claws/1 bite, Dam 3d6/3d6/6d6, Mv 20' Fly 160' (10'), Sv F32, Ml 10
-7   {2d8} Plague Hound AC 14, HD 4*, #At 1 bite + special, Dam 2d4 bite + paralysis, Mv 50', Sv F4 Ml 9, XP 280
-8   {1d6} Giant Flies AC 14, HD 2, #At 1 bite, Dam 1d8, Mv 30' Fly 60', Sv F2, Ml 8
-9   {1d6} Giant Scorpion AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11
-10  {1d6} Werewolves AC 15 †, HD 4*, #At 1 bite, Dam 2d4, Mv 60' Human Form 40', Sv F4, Ml 8
-11  Mountain Lion AC 14, HD 3+2, #At 2 claws/1 bite, Dam 1d4/1d4/1d6, Mv 50', Sv F3, Ml 8
-12  Bandits<br>
+3   {1d6} Giant Scorpion AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11
+4   {1d6} Werewolves AC 15 †, HD 4*, #At 1 bite, Dam 2d4, Mv 60' Human Form 40', Sv F4, Ml 8
+5   {2d4} Plague Hound AC 14, HD 4*, #At 1 bite + special, Dam 2d4 bite + paralysis, Mv 50', Sv F4 Ml 9, XP 280
+6   {1d4} Dire Wolves AC 14, HD 4, #At 1 bite, Dam 2d4, Mv 50', Sv F4, Ml 9
+7   {1d3} {insect-type} Insect Swarms AC 13, HD 4*, #At 1 swarm, Dam 1d3 (double against no armor), Mv 10' Fly 20', Sv N/A, Ml 11, XP 280
+8   Mountain Lion AC 14, HD 3+2, #At 2 claws/1 bite, Dam 1d4/1d4/1d6, Mv 50', Sv F3, Ml 8
+9   Bandits<br>
     {2d12} Level 1 Fighters AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
     {1d6} Level 1 Thieves AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
     Led by a {npc-bandit-leader}
-13  {1d8} Lions AC 14, HD 5, #At 2 claws/1 bite, Dam 1d6/1d6/1d10, Mv 50', Sv F5, Ml 9
-14  {4d6} Zombies AC 12, HD 2, #At 1, Dam 1d8 or by weapon, Mv 20', Sv F2, Ml 12, XP 75
-15  {2d8} Flesh Eater Zombies AC 14, HD 2, #At 2 claws/1 bite, Dam 1d3 claw, 1d6 bite, Mv 40', Sv F2, Ml 12, XP 75
-16  {1d6} Boars AC 13, HD 3, #At 1 tusk, Dam 2d4, Mv 50' (10'), Sv F3, Ml 9
-17  {1d8} Explorers, guarded by Level {1d4} NPC party
-18  {2d6} Wolves AC 13, HD 2, #At 1 bite, Dam 1d6, Mv 60', Sv F2, Ml 8
-19  {3d6} Orcs AC 14 (11), HD 1, #At 1 weapon, Dam 1d8 or by weapon, Mv 30' Unarmored 40', Sv F1, Ml 8
-20  {1d10} Giant Bats AC 14, HD 2, #At 1 bite, Dam 1d4, Mv 10' Fly 60' (10'), Sv F2, Ml 8
-21  {1d6} Giant Bees AC 13, HD 1d4 HP*, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9
-22  {1d6} Gnolls AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8
-23  {1d4} Hill Giants AC 15 (13), HD 8, #At 1, Dam 2d8, Mv 30' Unarmored 40', Sv F8, Ml 8
-24  {2d4} Goblins AC 14 (11), HD 1-1, #At 1 weapon, Dam 1d6 or by weapon, Mv 20' Unarmored 30', Sv F1, Ml 7 when alone
-25  {1d2} Chimeras AC 16, HD 9** (+8), #At 2 claws/3 heads + special, Dam 1d4/1d4/2d4/2d4/3d4 + special, Mv 40' (10') Fly 60' (15'), Sv F9, Ml 9
-26  {2d4} Haunted Bones Skeleton AC 15, HD 3, #At 1 punch or weapon, Dam 1d6 or by weapon, Mv 50', Sv F3 Ml 11, XP 145
-27  {1d4} Dire Wolves AC 14, HD 4, #At 1 bite, Dam 2d4, Mv 50', Sv F4, Ml 9
-28  {1d3} {insect-type} Insect Swarms AC 13, HD 4*, #At 1 swarm, Dam 1d3 (double against no armor), Mv 10' Fly 20', Sv N/A, Ml 11, XP 280
-29  {1d4} Hill Giants AC 15 (13), HD 8, #At 1, Dam 2d8, Mv 30' Unarmored 40', Sv F8, Ml 8
-30  Red Dragon AC 21, HD {1d6+7}** (+9), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/4d8 or breath/1d8, Mv 30' Fly 80' (20'), Sv F10 (as Hit Dice), Ml 8
+10  {1d6} Giant Flies AC 14, HD 2, #At 1 bite, Dam 1d8, Mv 30' Fly 60', Sv F2, Ml 8
+11  {1d6} Zombies AC 12, HD 2, #At 1, Dam 1d8 or by weapon, Mv 20', Sv F2, Ml 12, XP 75
+12  {1d6} Flesh Eater Zombies AC 14, HD 2, #At 2 claws/1 bite, Dam 1d3 claw, 1d6 bite, Mv 40', Sv F2, Ml 12, XP 75
+13  {2d6} Wolves AC 13, HD 2, #At 1 bite, Dam 1d6, Mv 60', Sv F2, Ml 8
+14  {3d6} Orcs AC 14 (11), HD 1, #At 1 weapon, Dam 1d8 or by weapon, Mv 30' Unarmored 40', Sv F1, Ml 8
+15  {1d10} Giant Bats AC 14, HD 2, #At 1 bite, Dam 1d4, Mv 10' Fly 60' (10'), Sv F2, Ml 8
+16  {1d6} Giant Bees AC 13, HD 1d4 HP*, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9
+17  {2d4} Goblins AC 14 (11), HD 1-1, #At 1 weapon, Dam 1d6 or by weapon, Mv 20' Unarmored 30', Sv F1, Ml 7 when alone
+18  {1d6} Gnolls AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8
+19  {1d4} Ghasts AC 15, HD 2**, #At 2 claws/1 bite, Dam 1d4/1d4/1d4 + paralysis + stench, Mv 30', Sv F2, Ml 9, XP 125, Tr B
+20  {2d4} Giant Cockroach: AC 15, HD 1*, #At 1 bite, Dam 1d4, Mv 50', Sv F1*, Ml 6, XP 37
+21  {1d4} Giant Crab Spiders AC 13, HD 2*, #At 1 bite, Dam 1d8 + poison, Mv 40', Sv F2, Ml 7, XP 100
+22  {2d6} Giant Fly: AC 14, HD 2, #At 1 bite, Dam 1d8, Mv 30' Fly 60', Sv F2, Ml 8, XP 75
+23  {1d6} Harpies AC 13, HD 2*, #At 2 claws/1 weapon + special, Dam 1d4/1d4/1d6 or by weapon + special, Mv 20' Fly 50' (10'), Sv F2, Ml 7, XP 100
+24  {1d6} Boars AC 13, HD 3, #At 1 tusk, Dam 2d4, Mv 50' (10'), Sv F3, Ml 9
+25  {1d6} Carnivorous Apes AC 14, HD 4, #At 2 claws, Dam 1d4/1d4, Mv 40', Sv F4, Ml 7, XP 240
+26  {1d4} Dire Wolves AC 14, HD 4, #At 1 bite, Dam 2d4, Mv 50', Sv F4, Ml 9, XP 240
+27  {1d4} Vampire Spawns AC 15‡, HD 4*, #At 1 punch or 1 bite, Dam 1d6+3 or 1d3 + special, Mv 30', Sv F4, Ml 9, XP 280
+28  {1d3} Medusas AC 12, HD 4**, #At 1 snakebite + gaze, Dam 1d6+poison + petrification, Mv 30', Sv F4, Ml 8, XP 320, Tr F
+29  Hill Giant AC 15 (13), HD 8, #At 1, Dam 2d8, Mv 30' Unarmored 40', Sv F8, Ml 8
+30  {1d4} Lions AC 14, HD 5, #At 2 claws/1 bite, Dam 1d6/1d6/1d10, Mv 50', Sv F5, Ml 9
 
 table: insect-type 1d6
 1-4 Flying
 5-6 Crawling
 
 table: lair 1d100
-1-5     {2d6} Giant Scorpions AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11
-6-9     {2d6} Werewolves AC 15 †, HD 4*, #At 1 bite, Dam 2d4, Mv 60' Human Form 40', Sv F4, Ml 8
-10      Vampire AC 20 ‡, HD 9** (+8), #At 1 weapon or special, Dam 1d8 or by weapon or special, Mv 40' Fly 60', Sv F9, Ml 11, XP 1,225
-11      Succubus AC 20, HD 7**, #At 2 claws, Dam 1d4/1d4, Mv 30', Fly 50', Sv C6, Ml 7, XP 800.
+
+1-5     {2d4} Harpies AC 13, HD 2*, #At 2 claws/1 weapon + special, Dam 1d4/1d4/1d6 or by weapon + special, Mv 20' Fly 50' (10'), Sv F2, Ml 7, XP 100, Tr C
+6-10    {2d6} Giant Scorpions AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11
+11      {2d6} Werewolves AC 15 †, HD 4*, #At 1 bite, Dam 2d4, Mv 60' Human Form 40', Sv F4, Ml 8
+12      Vampire AC 20 ‡, HD 9** (+8), #At 1 weapon or special, Dam 1d8 or by weapon or special, Mv 40' Fly 60', Sv F9, Ml 11, XP 1,225
+13      Succubus AC 20, HD 7**, #At 2 claws, Dam 1d4/1d4, Mv 30', Fly 50', Sv C6, Ml 7, XP 800.
         Charm Person, Suggestion, Darkness, Dimension Door, ESP and Clairaudience, at will, as a 12th level caster.
-12-15   {1d4} Mountain Lions AC 14, HD 3+2, #At 2 claws/1 bite, Dam 1d4/1d4/1d6, Mv 50', Sv F3, Ml 8
+14-15   {1d4} Mountain Lions AC 14, HD 3+2, #At 2 claws/1 bite, Dam 1d4/1d4/1d6, Mv 50', Sv F3, Ml 8
 16-20   Bandits<br>
         {4d12} Level 1 Fighters AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
         {2d6} Level 1 Thieves AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
@@ -91,8 +93,7 @@ table: lair 1d100
         They have treasure type A.
 21-25   {3d6} Wolves AC 13, HD 2, #At 1 bite, Dam 1d6, Mv 60', Sv F2, Ml 8
 26-30   {1d4} Giant Crab Spiders AC 13, HD 2*, #At 1 bite, Dam 1d8 + poison, Mv 40', Sv F2, Ml 7
-31-35   Treant AC 19, HD 8*, #At 2 fists, Dam 2d6/2d6, Mv 20', Sv F8, Ml 9, XP 945
-36-40   {5d6} Orcs AC 14, HD 1, #At 1 weapon, Dam 1d8 or by weapon, Mv 30' Unarmored 40', Sv F1, Ml 8.<br>
+31-40   {5d6} Orcs AC 14, HD 1, #At 1 weapon, Dam 1d8 or by weapon, Mv 30' Unarmored 40', Sv F1, Ml 8.<br>
         {5d6} Orc Warriors AC 14, HD 2, #At 1 weapon, Dam 1d8 or by weapon, Mv 30', Sv F2, Ml 9, XP 75.<br>
         {1d8+2} Orc Chiefs AC 15, HD 4, #At 1 weapon, Dam 1d8+1 or by weapon+1 (strength), Mv 20', Sv F4, Ml 9, XP 240.<br>
         Orc King AC 16, HD 6, #At 1 weapon, Dam 1d8+2 or by weapon+2 (strength), Mv 20', Sv F6, Ml 9, XP 500.
@@ -105,16 +106,13 @@ table: lair 1d100
         {2d4} Goblin warriors AC 15, HD 5-5, #At 1 weapon + 1, Dam 1d6+1 or by weapon+1, Mv 10', Sv F5, Ml 8, XP 360<br>
         Goblin King AC 16, HD 7-7, #At 1 weapon + 1, Dam 1d6+1 or by weapon+1, Mv 10', Sv F7, Ml 9, XP 500
 70-79   {2d4} Dire Wolves AC 14, HD 4, #At 1 bite, Dam 2d4, Mv 50', Sv F4, Ml 9
-80-88   {2d4} Giant, Hill AC 15, HD 8, #At 1, Dam 2d8, Mv 30', Sv F8, Ml 8, XP 875
-89      {1d4} Vampire Owlbear AC 18 ‡, HD 5**, #At 2 claws/1 bite + 1 hug, Dam 1d8/1d8/1d8 + 2d8, Mv 40', Sv F5, Ml 11, XP 450
-90-94   The Giant Roc AC 18, HD 32 (+16), #At 2 claws/1 bite, Dam 3d6/3d6/6d6, Mv 20' Fly 160' (10'), Sv F32, Ml 10.<br>
-        Mate Large Roc AC 18, HD 12 (+10), #At 2 claws/1 bite, Dam 1d8/1d8/2d10, Mv 20' Fly 160' (10'), Sv F12, Ml 9.<br>
-        3 Small Rocs AC 18, HD 6, #At 2 claws/1 bite, Dam 1d6/1d6/2d6, Mv 20' Fly 160' (10'), Sv F6, Ml 8.
+80-88   {2d4} Hill Giants AC 15, HD 8, #At 1, Dam 2d8, Mv 30', Sv F8, Ml 8, XP 875, Tr E plus {1d8},000 gp
+89-94   {1d4} Iron Living Statues AC 18, HD 4*, #At 2 fists, Dam 1d8/1d8 + special, Mv 10', Sv F4, Ml 12, XP 280 with Tr B
 95-96   {1d8} Trolls AC 16, HD 6*, #At 3, Dam 1d6/1d6/1d10, Mv 40', Sv F6, Ml 10 (8)
-97      {1d4} Purple Worm AC 16, HD 11* (+9), #At 1 bite/1 sting, Dam 2d8/1d8+poison, Mv 20' (15'), Sv F6, Ml 10, XP 1,670
-98      {1d4} White Dragon AC 17, HD {1d6+3}**, #At 2 claws/1 bite or breath/1 tail, Dam 1d4/1d4/2d8 or breath/1d4, Mv 30' Fly 80' (10'), Sv F6, Ml 8
-99      Green Dragon AC 19, HD {1d6+5}**, #At 2 claws/1 bite or breath/1 tail, Dam 1d6/1d6/3d8 or breath/1d6, Mv 30' Fly 80' (15'), Sv F8, Ml 8
-100     Red Dragon AC 21, HD {1d6+7}** (+9), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/4d8 or breath/1d8, Mv 30' Fly 80' (20'), Sv F10, Ml 8
+97      5-Headed Hydra AC 16, HD 5 (+10), #At 5, Dam 1d10, Mv 40' (10'), Sv F5, Ml 9, XP 360, Tr B
+98      {1d4} White Dragon AC 17, HD 6**, #At 2 claws/1 bite or breath/1 tail, Dam 1d4/1d4/2d8 or breath/1d4, Mv 30' Fly 80' (10'), Sv F6, Ml 8
+99      Minotaur AC 14 (12), HD 6, #At 1 gore/1 bite or 1 weapon, Dam 1d6/1d6 or by weapon + 2, Mv 30' Unarmored 40', Sv F6, Ml 11, XP 500, Tr C
+100     Red Dragon AC 21, HD 8** (+9), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/4d8 or breath/1d8, Mv 30' Fly 80' (20'), Sv F10, Ml 8
 
 table: lair-type 1d6
 1       in a cave. {cave-entrance}. {cave-size}.
@@ -203,11 +201,6 @@ table: landmark 1d28
 26      a pit trap. ({1d6} PCs must save vs death or fall {1d4}0 feet)
 27      a watchtower
 28      a {mine}, {mine-condition}, {mine-occupied}
-
-table: dungeon 1d4
-1       Tomb of the Overseers (printed adventure in folder)
-2-3     Estate of Eliari
-4       Molok's Mummies
 
 table: npc-bandit-ac 1d6
 1-2 13

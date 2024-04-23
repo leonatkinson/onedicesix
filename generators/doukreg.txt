@@ -1,24 +1,26 @@
 name: Doukreg
 description:
-recipe: {doukreg}
+recipe: {doukreg}<br>
+        Surprise {1d6} (monsters) / {1d6} (party)<br>
+        Distance {2d4}0' ({1d3}0' surprised)
 repeat: 1
 
 table: doukreg 2d8
-2   Blue Dragon (AC 20, HD {1d6+6}** (+8), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/3d8 or breath/1d8, Mv 30' Fly 80' (15'), Sv F9 (as Hit Dice), Ml 9)
-3   {2d4} Hell Hounds (AC 18, HD 7**, #At 1 bite or 1 breath, Dam 1d6 or 7d6, Mv 40', Sv F7, Ml 9)
-4   {1d2} Fire Giants (AC 17 (13), HD 11+2* (+9), #At 1 giant weapon or 1 thrown rock, Dam 5d6 or 3d6, Mv 20' Unarmored 40' (10'), Sv F11, Ml 9)
-5   {1d6} Werewolves (AC 15 †, HD 4*, #At 1 bite, Dam 2d4, Mv 60' Human Form 40', Sv F4, Ml 8)
-6   {1d6} Giant Flies (AC 14, HD 2, #At 1 bite, Dam 1d8, Mv 30' Fly 60', Sv F2, Ml 8)
-7   {1d6} Giant Scorpions (AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11)
-8   {2d6} Wolves (AC 13, HD 2, #At 1 bite, Dam 1d6, Mv 60', Sv F2, Ml 8)
-9   {1d3} Giant Tarantula Spiders (AC 15, HD 4*, #At 1 bite, Dam 1d8 + poison, Mv 50', Sv F4, Ml 8)
-10  {1d6} Gnolls (AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8)
-11  {1d10} Antelopes (AC 13, HD 1 to 4, #At 1 butt, Dam 1d4 or 1d6 or 1d8, Mv 80' (10'), Sv F1 to F4 (as Hit Dice), Ml 5 (7))
+2   Blue Dragon AC 20, HD {1d6+6}** (+8), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/3d8 or breath/1d8, Mv 30' Fly 80' (15'), Sv F9 (as Hit Dice), Ml 9
+3   {2d4} Hell Hounds AC 18, HD 7**, #At 1 bite or 1 breath, Dam 1d6 or 7d6, Mv 40', Sv F7, Ml 9
+4   {1d2} Fire Giants AC 17 (13), HD 11+2* (+9), #At 1 giant weapon or 1 thrown rock, Dam 5d6 or 3d6, Mv 20' Unarmored 40' (10'), Sv F11, Ml 9
+5   {1d6} Werewolves AC 15 †, HD 4*, #At 1 bite, Dam 2d4, Mv 60' Human Form 40', Sv F4, Ml 8
+6   {1d6} Giant Flies AC 14, HD 2, #At 1 bite, Dam 1d8, Mv 30' Fly 60', Sv F2, Ml 8
+7   {1d6} Giant Scorpions AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11
+8   {2d6} Wolves AC 13, HD 2, #At 1 bite, Dam 1d6, Mv 60', Sv F2, Ml 8
+9   {1d3} Giant Tarantula Spiders AC 15, HD 4*, #At 1 bite, Dam 1d8 + poison, Mv 50', Sv F4, Ml 8
+10  {1d6} Gnolls AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8
+11  {1d8} Giant Wasps AC 15, HD 4+1*, #At 1 sting, Dam 1d6 + poison, Mv 20' Fly 60', Sv F4, Ml 10, XP 280
 12  {npc-bandits}
-13  {1d6} Ogres (AC 15 (12), HD 4+1, #At 1 weapon, Dam 2d6 with ogre weapon (+3 with normal weapon), Mv 30' Unarmored 40', Sv F4, Ml 10)
-14  {2d8} Griffons (AC 18, HD 7, #At 2 claws/1 bite, Dam 1d4/1d4/2d8, Mv 40' (10') Fly 120' (10'), Sv F7, Ml 8)
-15  {1d4} Hill Giants (AC 15 (13), HD 8, #At 1, Dam 2d8, Mv 30' Unarmored 40', Sv F8, Ml 8)
-16  Red Dragon (AC 21, HD {1d6+7}** (+9), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/4d8 or breath/1d8, Mv 30' Fly 80' (20'), Sv F10 (as Hit Dice), Ml 8)
+13  {1d6} Ogres AC 15 (12), HD 4+1, #At 1 weapon, Dam 2d6 with ogre weapon (+3 with normal weapon), Mv 30' Unarmored 40', Sv F4, Ml 10
+14  {2d8} Griffons AC 18, HD 7, #At 2 claws/1 bite, Dam 1d4/1d4/2d8, Mv 40' (10') Fly 120' (10'), Sv F7, Ml 8
+15  {1d4} Hill Giants AC 15 (13), HD 8, #At 1, Dam 2d8, Mv 30' Unarmored 40', Sv F8, Ml 8
+16  Red Dragon AC 21, HD {1d6+7}** (+9), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/4d8 or breath/1d8, Mv 30' Fly 80' (20'), Sv F10 (as Hit Dice), Ml 8
 
 table: npc-bandits 1
 1   Bandits: {2d12} Level 1 Fighters and {1d6} Level 1 Thieves, led by a {npc-bandit-leader}.

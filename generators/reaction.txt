@@ -1,5 +1,5 @@
 name: Reaction
-description: How to monsters or NPCs react
+description: How do monsters or NPCs react
 recipe: {reaction}
 repeat: 1
 

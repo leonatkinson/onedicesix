@@ -128,10 +128,10 @@ table: disease-severity-78 1d8
 8   {disease-severity-severe}
 
 table: disease-severity-mild 1
-1   Mild: must rest for {1d3} weeks
+1   Mild -- must rest for {1d3} weeks
 
 table: disease-severity-severe 1
-1   Severe: disabled {1d2} weeks, then must rest {1d2} weeks
+1   Severe -- disabled {1d2} weeks, then must rest {1d2} weeks
 
 table: disease-side 1d4
 1   Right

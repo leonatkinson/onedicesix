@@ -1,0 +1,28 @@
+name: Lion Reaction and Morale
+description: How does the lion react to a threatening situation.
+recipe: {reaction}
+repeat: 1
+
+table: reaction 2d6
+2       Rage at percieved enemies. Rush into battle, unable to be restrained.
+        {target} Disregard danger in pursuing targets.
+3       Rage at percieved enemies. Rush into battle, stopped only by physical
+        restraint. {target} Disregard danger in pursuing targets.
+4       Move forward to attack perceived enemies. {target} Obey voice command
+        to stop.
+5       In {1d6} rounds, move forward to attack perceived enemies. {target} Obey
+        voice command to stop.
+6       At any aggressive movement by enemies or allies, move forward to attack.
+        {target} Obey voice command to stop.
+7-9     Stay by Saul. Defend him if attacked. Attack enemies Saul attacks.
+10      Retreat cautiously, then stay at a safe distance.
+11      Retreat cautiously, then move away at full speed. After the battle, make
+        a save vs magic to test the Animal Friendship spell.
+12      Run away as fast as possible, possibly taking parting shots. After the
+        battle, make a save vs magic to test the Animal Friendship spell.
+
+table: target 1d6
+1       Choose targets at random.
+2-3     Choose nearest target.
+4-5     Choose weakest target.
+6       Choose strongest target.

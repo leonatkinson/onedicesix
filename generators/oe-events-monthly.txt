@@ -1,0 +1,490 @@
+name: Monthly Events
+description: Oriental Adventures Yearly Events
+recipe: Monthly event depending on ongoing yearly event.<br>
+    <br>
+    For years of Assassination, Incursion, Political Plot, Rebellion, or War...<br>
+    {event-war}<br>
+    <br>
+    For years of Natural Disaster...<br>
+    {event-disaster}<br>
+    <br>
+    Other years...<br>
+    {event-other}<br>
+    <br>
+repeat: 1
+
+table: event-war 1d100
+01-05   {accident}
+06-10   {bandit-activity}
+11-15   {birth}
+16-20   {death}
+21-25   {excessive-taxes}
+26-27   {famous-person}
+28      {major-fire}
+29-30   {haunting}
+31-33   {horrendous-monster}
+34-41   {major-incursion}
+42-51   {major-incursion}
+52-54   {injustice}
+55-60   {major-battle}
+61      {notorious-criminal}
+62-66   {recruiting}
+67-71   {troop-movements}
+72-78   {uprising}
+79-80   {vengeful-stranger}
+81-100  No Event
+
+table: event-disaster 1d100
+01-05   {accident}
+06-15   {bad-harvest}
+16-22   {bad-weather}
+23-32   {bandit-activity}
+33-37   {birth}
+38-44   {death}
+45-49   {earthquake}
+50-54   {excessive-taxes}
+55-60   {minor-fire}
+61-66   {flooding}
+67-69   {haunting}
+70-73   {horrendous-monster}
+74-78   {injustice}
+79-82   {landslide}
+83-87   {maneater}
+88-92   {plague}
+93      {uprising}
+94      {vip-visit}
+95-100  No Event
+
+table: event-other 1d100
+01-05   {accident}
+06-07   {bad-harvest}
+08-10   {bad-weather}
+11-15   {bandit-activity}
+16-25   {birth}
+26-30   {death}
+31-35   {famous-person}
+36-40   {minor-fire}
+41-43   {haunting}
+44-50   {injustice}
+51-55   {maiden-of-virtue}
+56-60   {maneater}
+61-68   {marriage}
+69-78   {notorious-criminal}
+79-83   {vengeful-stranger}
+84-92   {vip-visit}
+93-100  No Event
+
+
+table: accident 1d1
+1   A terrible accident occurs. A bridge across a raging river may collapse,
+    lightning may strike a building, a horse-drawn cart may rampage through
+    the streets, a levee may break, etc. The GM must decide what accident
+    occurs. The accident at best causes inconvenience and at worst causes
+    substantial loss of life. It will be the topic of conversation for some
+    time afterwards.
+
+table: bad-harvest 1d1
+1   Poor weather, lazy farmers, bad luck, and greedy crows have combined to yield
+    a poor crop. Farm incomes of the area are reduced by 25%.
+    {bad-harvest-famine} {bad-harvest-blame}
+
+table: bad-harvest-famine 1d20
+1       The bad harvest results in short-term famine, raising prices by 100%;
+2-20    The people have enough food to make it through the hard times. Prices
+        rise by 50%.
+
+table: bad-harvest-blame 1d6
+1-2     The people look to the ruler for help.
+3-6     The poor harvest is blamed on the actions of the ruler of the land, a
+        punishment for his evil actions.
+
+table: bad-weather 1d1
+1   The weather throughout the month is particularly foul. During winter,
+    roads are choked by blizzards. The air is freezing cold. In monsoon season,
+    the rains are particularly heavy, turning everything into a sodden morass.
+    In hot weather, the weather is exceptionally hot, broiling the PCs uncomfortably.
+    All movement is reduced by 50% with a like affect on trade. Armies in the
+    field suffer a 15% desertion rate during the month as the common soldiers
+    decide they have had enough. During the farming season crops are damaged,
+    reducing farm income by 15%.
+
+table: bandit-activity 1d1
+1   A force of {2d10}0 bandits have moved into the area. 50% that any caravan
+    moving through the region is attacked. Lone travelers are robbed 80% of the time.
+    Mercenary guards are in great demand. Merchants and travelers are suspicious
+    of strangers. The bandits remain in the area until they are defeated or the
+    pickings become too slim to be profitable.
+
+table: birth 1d20
+1       One of the PCs is pregnant or he made a mate pregnant. The birth will occur
+        in {1d10} months.
+2-19    A local noble or government official has a child, an occasion for feasting
+        and celebration for the noble and his retainers.
+20      There are reports of the miraculous birth of a child to a hard-working
+        peasant family, an event of great wonder. {birth-type}
+
+table: birth-type 1d3
+1   The child springs from a piece of cut bamboo.
+2   The child appears from the waters of a spring.
+3   The child is found in a local shrine.
+
+table: death 1d2
+1   A local noble dies {death-cause}. {death-succession}
+2   A government official dies {death-cause}. The central government appoints a
+    replacement who arrives in {1d6+1} weeks. Until that time, no government
+    duties relating to the post can be resolved.
+
+table: death-cause 1d3
+1   of natural causes
+2   in battle
+3   by misadventure
+
+table: death-succession 1d10
+1-3     He is replaced by his son.
+4-6     Some other person has inherited the property, either through adoption or
+        assignment of rights, and the succession goes smoothly.
+7-8     The area is assigned to a new lord by the court. At the court there is
+        political maneuvering to gain control.
+9-10    Neighboring lords attempt to seize the area through force of arms.
+
+table: earthquake 1d1
+1   A minor earthquake strikes {1d10} miles from the home of the PCs, affecting a
+    5-mile radius. Although loss of life is minor, 50% of the buildings in the
+    area of the quake will be damaged. {earthquake-fire} The earthquake is
+    preceded by tremors identical to those that precede a major quake. After
+    the earthquake, the cost of building materials doubles for {1d2} months.
+
+table: earthquake-fire 1d10
+1-2     A major fire occurs.
+3-5     {minor-fire}
+6-10    No significant fires break out.
+
+table: excessive-taxes 1d1
+1   Taxes increase to an impossible rate. Poorer peasants are driven into
+    poverty or debt-slavery. Many are forced to sell their lands at low prices
+    and take up begging. Everyone tries to find ways to avoid the new
+    taxes, petitioning for special exemptions or hiding their goods.
+    {taxes-uprising} {taxes-bandits}
+
+table: taxes-uprising 1d10
+1-3     The peasants revolt.
+4-10    The peasants have no will to fight back.
+
+table: taxes-bandits 1d10
+1-7     Bandit activity increases as impoverished peasants flee to the hills.
+8-10    Bandits find little reason to pester the area.
+
+table: famous-person 1d1
+1   A person of great renown, but no official position, has arrived in the area.
+    The person is noted for {famous-person-reason}. The visitor attempts to arrive
+    quietly and pass his time without arousing notice. However, rumors soon get
+    about of his presence and his reputation. The person remains in the area
+    for {1d6} weeks.
+
+table: famous-person-reason 1d5
+1   extraordinary skill at painting in the classical style
+2   mastery of a particularly difficult poetry form
+3   superb form in a fighting style
+4   brilliance as a philosopher
+5   a reputation for pious behavior
+
+table: minor-fire 1d1
+1   A large fire sweeps through a city. {1d4}0% of the buildings are destroyed. Building
+    material costs double.
+2   A large fire sweeps through a town. {1d3+4}0% of the buildings are burned. Building
+    material costs double.
+3   A large fire in a village burns {1d3+7}0% of structures to the ground. Building
+    material costs double.
+
+table: major-fire 1d1
+1   A huge conflagration sweeps a major city of the land, destroying {1d4+4}0%
+    of the city. The city's population is reduced by {1d4}0%. The price of lumber
+    and building materials is ten times normal for the next four months. The price
+    of food doubles for one month. {fire-plague} {fire-famine}
+
+table: fire-plague 1d10
+1-2     <br>
+        {plague}
+3-10    Fear of disease proves unwarranted.
+
+table: fire-famine 1d10
+1       <br>
+        Famine strikes and lasts for {1d6+1} months. Food prices rise by
+        {famine-costs} times normal. Marauders scavenge food of any type. Farms
+        produce no income this year and 25% next year. {famine-uprising}
+        Population falls by 5% per month.
+2-10    Fortunately, there is no shortage of food.
+
+table: famine-costs 1d10
+1-4 ten
+5-9 fifty
+10  one hundred
+
+table: famine-uprising 1d10
+1-6     Peasants revolt.
+7-10    Lords prevent a peasant uprising with wise leadership.
+
+table: flooding 1d1
+1   Flooding is caused by {flooding-cause}. The water rushes over the
+    countryside in a great wave {5d4} feet high. The wave is {1d100+100} feet wide,
+    centered about the riverbed of its source. The wave rushes downstream for
+    {1d6} miles before losing force. It can easily snap trees, tear down
+    buildings, and sweep men away. All those caught in the path of the wave
+    are swept downstream to their deaths unless they have some type of raft
+    or other flotation device. After this passes the water level quickly falls
+    to a height of {2d4} inches. It remains at this height until the collapsed
+    construction is rebuilt or the water naturally evaporates.
+
+table: flooding-cause 1d4
+1   the collapse of a levee
+2   the collapse of a dam
+3   the collapse of a dike
+4   a sudden cloudburst upstream
+
+table: haunting 1d1
+1   It is rumored that some site in the region has recently been the center of
+    strange supernatural events, the site of a {haunting-site}.
+    {haunting-real} {haunting-simple}
+
+table: haunting-site 1d3
+1   great battle
+2   murder
+3   accident
+
+table: haunting-real 1d2
+1   The haunting is real.
+2   The haunting is a hoax.
+
+table: haunting-simple 1d6
+1-2   It's a simple affair.
+3-4   The spirit returns to complete an arduous task left unfulfilled.
+5-6   The spirit returns to right some wrong.
+
+table: horrendous-monster 1d1
+1   Some creature of great evil and power moves into the area and begins
+    terrorizing the local villages.  The lair of the monster is some secluded
+    site hidden from its hunters. However, the general location of the lair is
+    known to the local peasants. They do not attack the monster, afraid of its
+    power. If the monster is not defeated or driven away soon, the villagers
+    make offerings to it as an evil god, hoping to appease it. In addition,
+    others of its type appear in the same area and the infestation
+    becomes stronger.
+
+table: major-incursion 1d1
+1   A strong force has moved into the region, with the intent of establishing a
+    permanent home here. {incursion-hostile} They arive suddenly and number about
+    1% of the existing population. The group consists of {major-incursion-group}.
+
+table: incursion-hostile 1d6
+1-2 The force is friendly.
+3-6 The force is hostile.
+
+table: major-incursion-group 1d20
+1-5     soldiers invading
+6-8     soldiers retreating
+9-10    refugees escaping disaster
+11-12   war
+13-15   bandits driven from another area
+13-15   monsters driven from another area
+1-19    nomads following game
+20      prospectors attracted to a recent mineral find
+
+table: minor-incursion 1d1
+1   {minor-incursion-group} numbering {10d10} arrives suddenly.
+    {incursion-hostile}
+
+table: minor-incursion-group 1d10
+1-2     A band of spies
+3-4     Reinforcements to a bandit gang
+5-6     The punitive expedition of a neighboring warlord
+7-8     A raiding party of a savagetribe
+9-10    A raiding party of monsters
+
+table: injustice 1d1
+1   Wickedness has seized control of the local government and courts. Corrupt and
+    greedy magistrates and court officials are jailing and punishing innocent
+    people. {injustice-cause} {injustice-pcs} Such injustice can be stopped if
+    evidence can be brought to higher officials or the player characters decide
+    to act as protectors of the innocent.
+
+table: injustice-cause 1d6
+1   The magistrate has been bribed.
+2   The magistrate wants to steal the property of the accused.
+3   The magistrate has been tricked by others.
+4   The magistrate is cruel.
+5   The magistrate is exacting official vengeance on rebels.
+6   The magistrate is exacting official vengeance on traitors.
+
+table: injustice-pcs 1d20
+1-19    The PCs are not directly involved.
+20      The PCs are wrongfully accused!
+
+table: landslide 1d1
+1   A major landslide or avalanche has blocked one of the main roads of the
+    province. The road cannot be used until the landslide is cleared. The peasants
+    must be mobilized to clear the road and the work takes {1d2} weeks.
+
+table: maiden-of-virtue 1d1
+1   A young woman of exceptional grace, wit, and beauty has appeared in the region.
+    She is {maiden-who}. She charms and impresses all who meet her. She has an
+    exceptionally fine writing style that reveals her pure nature. She is skilled
+    in the playing of musical instruments and other artistic accomplishments.
+    She is properly respectful of her parents (if she has any). If the maiden
+    is any but the daughter of a powerful noble, she can be courted
+    (and possibly wed) without the full formalities. However, being aware
+    (but not vain) of her own qualities, she does not accept just anyone. Her
+    accepted suitor must possess exceptional qualities of his own. He must also
+    be a model of virtue and likewise skilled in the arts. He must possess heroic
+    qualities. To even attract her notice, he must produce some artistic item of
+    quality-a poem, painting, exceptional handwriting, etc. He must have a
+    Charisma of at least 13. Maidens of mysterious origin or princesses may set
+    impossible tasks as a condition for any successful suitor. The social rank
+    of the character is not as important as the qualities mentioned above.
+
+table: maiden-who 1d10
+1-5 the daughter of a powerful noble
+6-8 a maiden of mysterious and magical origin
+9   an exiled princess
+10  simply a commoner
+
+table: major-battle 1d1
+1   A large and important battle is fought in the region.  Prior to the engagement,
+    there are many troops moving through the area. After the battle, the losers
+    are forced to retreat, possibly in flight. During this retreat, many peasants
+    take up arms to protect their villages and hunt down the losers. Patrols of
+    the victorious force scour the countryside looking for stragglers, deserters
+    and small bands of the enemy.
+
+table: maneater 1d1
+1   A {maneater-creature} has acquired a taste for human flesh and is raiding
+    the local villages, carrying off women, children, and farmers in their
+    fields. The animal strikes once or twice a week, killing its prey and
+    dragging it off into the woods. The villagers are paralyzed by fear,
+    unwilling to venture outside alone or after dark. They petition the
+    government, a powerful NPC, or the player characters for aid. The maneater
+    remains active until captured or killed.
+
+table: maneater-creature 1d6
+1   leopard
+2   tiger
+3   wolf
+4-6 strange creature
+
+table: marriage 1d1
+1   An important or influential person in the region either marries or completes
+    the marriage arrangements for one of his children. If the PCs are known to the
+    NPC, they are invited to attend the wedding. In any case, the wedding is cause
+    for feasting and celebration.
+
+table: notorious-criminal 1d1
+1   A wanted villain is rumored to be in the area. {criminal-type} {criminal-reward}
+
+table: criminal-type 1d4
+1   He's a banished lord who has secretly returned.
+2   He's a traitor fleeing the wrath of the king.
+3   He's an escaped convict.
+4   He's a famous bandit.
+
+table: criminal-reward 1d4
+1   There is a reward for capturing the criminal.
+2   There is a reward for killing the criminal.
+3-4 There is no reward offered.
+
+table: criminal-rumor 1d2
+1   The rumors are true.
+2   The rumors are false.
+
+table: plague 1d1
+1   A terrible disease sweeps the land, lasting for {2d6} months.
+    The population falls by 5% per month. Those untouched by the disease and
+    those of neighboring lands are suspicious of strangers. Traders do not enter
+    plagued lands and the cost of imported goods increases five times. The cost
+    of normal goods doubles. Each month, {5d5}% of population centers become
+    infected and {6d5}% of population centers rid themselves of the disease.
+
+table: recruiting 1d1
+1   Men are needed to shoulder arms and special measures are taken to recruit
+    soldiers. These include enforced levies of peasants, bounties offered to
+    capable officers, and recruiting gangs. {recruiting-pcs}
+
+table: recruiting-pcs 1d10
+1-2     The PCs are swept up into a press gang.
+3-10    The PCs avoid the press gangs.
+
+table: troop-movements 1d1
+1   Organized groups of {troop-friendly} soldiers sweep through the province.
+    There is a fair amount of looting and collections of rice, grain, and horses.
+    No repayment can be expected for this, although notes may be issued for items
+    taken. {troop-arrest} Friendly troops do not engage in wholesale pillaging
+    and neither do enemy troops (most of the time). Barbarians and enemies on
+    raids burn buildings and cause as much damage as possible in addition to
+    carrying off anything of value.
+
+table: troop-friendly 1d2
+1   {friendly}
+2   {hostile}
+
+table: troop-arrest 1d10
+1       One of the PCs is arrested as a spy.
+2-10    A spy is arrested.
+
+table: uprising 1d1
+1   Peasants rise spontaneously in rebellion. They protest against
+    {uprising-protest}. Beginning in one villages, the uprisingspreads quickly
+    to the other rural areas. The peasants arm themselves with whatever is at
+    hand--farm implements and weapons they have gathered from fighters they
+    have hunted down. Only 10% of the peasants involved have proper armor.
+    {uprising-support} The peasants have no military plan or strategy, simply
+    attacking and ambushing any troops and officials of the government they
+    find. If a strong leader should arrive in their midst, they can be trained
+    into an effective fighting force in {2d2} months. Of course, uprisings are
+    dealt with severely by the government and reinforcement troops are
+    dispatched to deal with them. No mercy or quarter is shown, a fact that
+    causes the peasants to fight to the death. {uprising-outcome}
+    {uprising-bandits}
+
+table: uprising-protest 1d4
+1   injustice
+2   excessive taxes
+3-4 general misfortune
+
+table: uprising-support 1d10
+1-6     A monastery in the area supports them, giving them troops, shelter and aid.
+7-10    No monasteries offer aid.
+
+table: uprising-outcome 1d10
+1-7     The government listens and reacts to the complaints of the peasants,
+        possibly lowering taxes or replacing the officials of the area.
+9-10    The goverment shows no mercy and changes nothing.
+
+table: uprising-bandits 1d10
+1-7     Bandit activity increases for {1d3} months as surviving peasants take
+        to the hills to escape punishment.
+9-10    The uprising is quickly put down.
+
+table: vengeful-stranger 1d1
+1   A mysterious NPC arrives in the area, searching for a particular person. He
+    travels through the region making discreet inquiries in the villages and
+    towns. He seeks revenge for some past wrong (possibly a murder or insult).
+    {vengeful-target}
+
+table: vengeful-target 1d2
+1   He's looking for one of the PCs, {vengeful-success}.
+2   He's looking for aid from the PCs, {vengeful-success}.
+
+table: vengeful-success 1d10
+1-7     and he has located his target.
+8-10    but he is unable to find the target
+
+table: vip-visit 1d1
+1   An important official comes on a formal visit to the province.
+    {vip-visit-reason}
+
+table: vip-visit-reason 1d6
+1   He has arrived to investigate the misdeeds of a local official and travels
+    in disguise. {vip-visit-pcs}
+2   The visit is marked by official banquets and feasts.
+
+table: vip-visit-pcs 1d2
+1   The PCs are hired to protect the VIP.
+2   The PCs are hired to find and eliminate the VIP.

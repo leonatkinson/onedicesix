@@ -1,6 +1,8 @@
 name: Encounters in Tosasth Underdark
 description: Tables for generating encounters by location
-recipe: {encounter}
+recipe: {encounter}<br>
+        Surprise {1d6} (monsters) / {1d6} (party)<br>
+        Distance {2d4}0' ({1d3}0' surprised)
 repeat: 1
 
 table: encounter 2d6

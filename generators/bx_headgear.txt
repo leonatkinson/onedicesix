@@ -1,0 +1,239 @@
+name: Headgear
+description: B/X HEADGEAR from
+    https://bxblackrazor.blogspot.com/2010/08/bx-headgear-new-charts-to-gear-up-your.html
+recipe: Headgear if you are a ...<br>
+    • Cleric ➔ {cleric}<br>
+    • Dwarf ➔ {dwarf}<br>
+    • Elf ➔ {elf}<br>
+    • Fighter ➔ {fighter}<br>
+    • Halfling ➔ {halfling}<br>
+    • Mage ➔ {mage}<br>
+    • Thief ➔ {thief}<br>
+repeat: 1
+
+table: cleric 1d8
+1   Bare Head, {bare}
+2-3 {hood}
+4-6 {color} {hat}
+7-8 {helm}
+
+table: dwarf 1d8
+1   Bare Head, {bare}
+2-3 {hood}
+4-5 {color} {hat}
+6-8 {helm}
+
+table: elf 1d8
+1-3 Bare Head, {bare}
+4-5 {hood}
+6   {color} {hat}
+7-8 {helm}
+
+table: fighter 1d8
+1-2 Bare Head, {bare}
+3   {hood}
+4   {color} {hat}
+5-8 {helm}
+
+table: halfling 1d8
+1-3 Bare Head, {bare}
+4-5 {hood}
+6-7 {color} {hat}
+8   {helm}
+
+table: mage 1d8
+1-2 Bare Head, {bare}
+3-4 {hood}
+5-7 {color} {hat}
+8   {helm}
+
+table: thief 1d8
+1-2 Bare Head, {bare}
+3-5 {hood}
+6-7 {color} {hat}
+8   {helm}
+
+table: bare 1d20
+1   Bald/Shaved
+2   Bald/Shaved with Tattoo
+3   Bald/Shaved with Top Knot
+4   Balding/Thinning
+5   Long Braided Hair
+6   Short Braided Hair
+7   Braided Hair into Long Beard
+8   Amazing Curly Mane
+9   Short Curly Hair
+10  Dreadlocks
+11  Grungy Hair in Eyes
+12  Long Flowing Hair with Top Knot
+13  Long Flowing Hair
+14  Long Flowing Hair, Tied Back
+15  Mohawk
+16  Short, Hacked Hair
+17  Short Hair, Page Boy
+18  Short Hair, Porridge Bowl
+19  Short Hair, Stylish
+20  Short Hair and Pony-Tail
+
+table: hood 1d20
+1   Attached hood, short
+2   Attached hood, tassel
+3   Bandana or Head Scarf
+4   Birka/Veiled
+5   Deep Hood
+6   Fur Lined Hood
+7   Heavy Fur Lined Hood
+8   Reversible Hood
+9   Hood with Long Tassel and {ornament}
+10  Hood with Long Tassel
+11  Hood with {1d4} Tassels
+12  Ninja Hood
+13  Hood Decorated with {decoration}
+14  Long and Heavy Scarf
+15  Sequined or Scaled
+16  Hood with {ornament} Ornament
+17  Short, Plain Hood
+18  Bedouin Wrap
+19  Turban
+20  Wrap with {mask} Mask
+
+table: ornament 1d4
+1 Figurine
+2 Fuzzy Ball
+3 Holy Symbol
+4 Jingle Bell
+
+table: decoration 1d8
+1 Ancient Symbols
+2 Animal Designs
+3 Curly Lines
+4 Foreign Slogan
+5 Mystic Sigils
+6 Norse Runes
+7 Polka-Dots
+8 Stripes
+
+table: mask 1d10
+1 {animal}
+2 Bird Beak
+3 Blank Face
+4 Demonic
+5 Grilled Gladiator
+6 Angry Human
+7 Bearded Human
+8 Happy Human
+9 Tusked Human
+10 Skull Faced
+
+table: animal 1d12
+1 Bear Head
+2 Beaver Tailed
+3 Boar Head
+4 Buffalo Head
+5 Dragon Head
+6 Raccoon Skin and Tail
+7 Giant Snake Head
+8 Small Coild Snake
+9 Squid Head
+10 Stag Head
+11 Turtle Shell
+12 Wolf Head
+
+table: hat 1d20
+1 {hat} adorned with {adornment}
+2 {animal} Hat
+3 Beret
+4 Bishop Miter
+5 Short Conical Hat
+6 Spiral Conical Hat
+7 Tall Conical Hat
+8 Hat Pointed Front and Back
+9 Puffy Hat
+10 Ridged Hat
+11 Sea Captain's Hat
+12 Skull Cap/Beanie
+13 Tasseled Hat ({1d4} tassels)
+14 Tiered Ziggurat ({1d4+1} levels)
+15 Top Hat
+16 Tri-Cornered Hat
+17 Wedge Shaped Hat
+18 Floppy Wide Brim Hat
+19 Stiff Wide Brim Hat
+20 Wimple
+
+table: adornment 1d10
+1 Antlers
+2 Brush Top
+3 Crest or Rune
+4 Feathers or plume
+5 Fin
+6 Holy Symbol
+7 Horns or Tusks
+8 Spikes
+9 Tassles
+10 Wings (bird or bat)
+
+table: helm 1d20
+1 Chain Coif
+2 Crusader Helm
+3 Greek Helmet
+4 Mongol Helmet
+5 Roman Helmet
+6 {mask} Masked Samurai Helmet
+7 Samurai Helmet
+8 Viking Helmet
+9 Conical Helmet with Tassel or Plume
+10 {mask} Masked Helm, adorned with {adornment}
+11 {mask} Masked Helm
+12 Metal Skull Cap
+13 Open-Faced Helmet adorned with {adornment}
+14 Open-Faced Helmet
+15 Plated Band
+16 Pot Helm
+17 Ridiculously Extravagant {extravagant} Helm
+18 Tall, Pointed Helmet
+19 Full Visor Great Helm adorned with {adornment}
+20 Full Visor Great Helm
+
+table: extravagant 1d20
+1 Bat or Bird Shaped
+2 Demon Head
+3 Elephant Head
+4 Fish Head
+5 Gem-Studded
+6 Wide Brim Gladiator
+7 Skull Shaped
+8 Spider Shaped
+9 Squid Shaped
+10 {extravagant} adorned with {adornment}
+
+table: color 1d24
+1 Albino White
+2 Black
+3 Bloody Scarlet
+4 Brilliant Copper
+5 Daisy Yellow
+6 Dark Brown
+7 Deep Purple
+8 Deep Sea Blue
+9 Dusty Pink
+10 Fiery Orange
+11 Forest Green
+12 Indigo
+13 Ivory White
+14 Light Brown
+15 Mauve
+16 Overcast Grey
+17 Pea Green
+18 Periwinkle
+19 Platinum Silver
+20 Seafoam Green
+21 Sickly Mustard
+22 Sky Blue
+23 Turquoise
+24 Multi-Colored ({multicolor})
+
+table: multicolor 1d3
+1-2 {color} and {color}
+3   {color}, {color} and {color}
+4   {color}, {color}, {color}, {color}

@@ -1,0 +1,39 @@
+name: Bag of Tricks
+description: What comes out of a Bag of Tricks
+recipe: {type3}
+repeat: 1
+
+table: type 1d10
+1-5     {type1}
+6-8     {type2}
+9-10    {type3}
+
+table: type1 1d8
+1   Weasel AC 11, HD 1 HP, #At 1 bite, 1, Mv 20', Sv NM, Ml 5
+2   Skunk AC 11, HD 1 HP, #At 1 or musk bite, 1, Mv 20', Sv NM, Ml 5
+3   Badger AC 11, HD 1 HP, #At 1 bite, 1d4, Mv 20', Sv F1, Ml 5
+4   Wolf AC 13, HD 2, #At 1 bite, Dam 1d6, Mv 60', Sv F2, Ml 8
+5   Lynx AC 14, HD 2+2, #At 2 claws/1 bite, Dam 1d2/1d2/1d4, Mv 50', Sv F5, Ml 9
+6   Wolverine AC 14, HD 3, #At 2 claws/1 bite, Dam 1d4+2/1d4+2/1d6, Mv 30’ Climb 10’ Burrow 1', Sv F3, Ml 9 or 12
+7   Boar AC 13, HD 3, #At 1 tusk, Dam 2d4, Mv 50' (10'), Sv F3, Ml 9
+8   Giant Stag AC 13, HD 5, #At 1 butt, Dam 1d6, Mv 80' (10'), Sv F5, Ml 5
+
+table: type2 1d8
+1   Rat AC 11, HD 1 HP, #At 1 bite, 1 + disease, Mv 20' Swim 10', Sv NM, Ml 5
+2   Owl AC 12, HD 1d4 HP, #At 1 claw or bite, Dam 1d2, Mv Fly 160', Sv F1, Ml 7
+3   Dog AC 14, HD 1+1, #At 1 bite, Dam 1d4 + hold, Mv 50', Sv F1, Ml 9
+4   Goat AC 14, HD 1+1, #At 1 butt, Dam 1d8, Mv 50', Sv F1, Ml 9
+5   Ram AC 13, HD 2, #At 1 horns, Dam 1d6, Mv 40' Climb 20', Sv F2, Ml 7
+6   Bull AC 13, HD 4, #At 1 butt, Dam 1d6, Mv 80' (10'), Sv F5, Ml 5
+7   Bear AC 14, HD 4, #At 2 claws/1 bite + hug, Dam 1d4/1d4/1d6 + 2d6 hug, Mv 40', Sv F4, Ml 7
+8   Lion AC 14, HD 5, #At 2 claws/1 bite, Dam 1d6/1d6/1d10, Mv 50', Sv F5, Ml 9
+
+table: type3 1d8
+1   Jackal AC 14, HD 1+1, #At 1 bite, Dam 1d4, Mv 50', Sv F1, Ml 9
+2   Eagle AC 12, HD 1d4 HP, #At 2 claw or bite, Dam 1d2/1d2/1, Mv Fly 160', Sv F1, Ml 7
+3   Baboon AC 13, HD 1, #At 1 bite, Dam 1d4, Mv 40', Sv F1, Ml 8
+4   Ostrich AC 14, HD 3, #At 1 kick or 1 bite, Dam 1d4 or 2d4, Mv 50', Sv F5, Ml 9
+5   Leopard AC 14, HD 3+2, #At 2 claws/1 bite, Dam 1d3/1d3/1d6, Mv 50', Sv F5, Ml 9
+6   Jaguar AC 14, HD 4+2, #At 2 claws/1 bite, Dam 1d3/1d3/1d8, Mv 50', Sv F5, Ml 9
+7   Buffalo AC 13, HD 5, #At 1 butt, Dam 1d8, Mv 80' (10'), Sv F5, Ml 5
+8   Tiger AC 14, HD 5, #At 2 claws/1 bite, Dam 1d6/1d6/1d10, Mv 50', Sv F5, Ml 9

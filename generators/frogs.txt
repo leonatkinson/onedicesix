@@ -1,0 +1,47 @@
+name: Frogs
+description:
+recipe: {frog}<br>
+    {gems} in their bellies
+repeat: 1
+
+table: frog 2d4
+2   {1d4} Giant Black Toads AC 20, HD 10, #At 1 acid tongue or 1 bite, Dam 5d6 or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 1300<br>
+    8' tall. Tongue attacks 40'. Save vs Dragon for half. Swallows man-sized on natural 20.
+3   {2d4} Giant Fire Toads AC 17, HD 4, #At 1 tongue or 1 bite, Dam grab or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 240<br>
+    6' tall. Immune to fire attacks. Swallows man-sized on natural 20.
+4   {1d4} Bigger Giant Frogs AC 13, HD 4, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 240<br>
+    6' tall. Swallows man-sized on natural 20.
+5   {1d4} Giant Frogs AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 75<br>
+    Swallows dwarf-sized on natural 20.
+6   {1d4} Hypno Toads AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 100<br>
+    Swallows dwarf-sized on natural 20. On gaze, save vs wands or be paralyzed while gaze holds. Psychodelic colors. Single eye.
+7   {2d4} Giant Poisonous Frogs AC 13, HD 4, #At 1 tongue or 1 bite, Dam grab or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 280<br>
+    6' tall. Immune to poison. On bite, save vs poison or take an extra 1d6 damage over three rounds. Swallows man-sized on natural 20.
+8   {1d4} Undead Giant Frogs AC 15, HD 5, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 405<br>
+    8' tall. Tongue attacks 40'. On natural 20, one negative level. Obviously rotting.
+
+
+table: gems 1d10
+1-5     no gems
+6       {4d20} ornamental stones ({2d6} gp/each)
+7       {4d12} semiprecious stones ({10d6} gp/each)
+8       {4d10} fancy stones ({2d100} gp/each)
+9       {4d8} precious stones ({10d100} gp/each)
+10      {4d6} {gem-name} gems ({10d20}0 gp/each)
+
+table: gem-name 1d20
+1-3 Greenstone
+4-5 Malachite
+6-7 Aventurine
+8-9 Phenalope
+10  Amethyst
+11  Fluorospar
+12  Garnet
+13  Alexandrite
+14  Topaz
+15  Bloodstone
+16  Sapphire
+17  Diamond
+18  Fire Opal
+19  Ruby
+20  Emerald
