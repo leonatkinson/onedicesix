@@ -344,7 +344,7 @@ table: cargo-wood
 7   sandalwood
 8   teak wood
 
-table: carge-food
+table: cargo-food
 1   dried fish
 2   whale oil
 3   dried fruit

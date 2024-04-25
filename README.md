@@ -108,4 +108,6 @@ See [leonatkinson.com/one-dice-six](https://www.leonatkinson.com/one-dice-six/) 
 ### 1.3.0
 * Added support for repeaters
 * Added BFRPG treasure generator
+### unreleased
+* Fix cargo-food typo
 
