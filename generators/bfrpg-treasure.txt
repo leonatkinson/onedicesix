@@ -1,0 +1,1658 @@
+name: Treasure
+description: Treasure types from Basic Fantasy RPG
+recipe: {type-a-cp} cp,
+    {type-a-sp} sp,
+    {type-a-ep} ep,
+    {type-a-gp} gp,
+    {type-a-pp} pp,
+    {type-a-gems},
+    {type-a-jewelry},
+    {type-a-magic}
+repeat: 1
+
+# Treasure Type A
+
+table: type-a-cp 1d100
+1-50    {5d6}00
+51-100  None
+
+table: type-a-sp 1d100
+1-60    {5d6}00
+61-100  None
+
+table: type-a-ep 1d100
+1-40    {5d4}00
+41-100  None
+
+table: type-a-gp 1d100
+1-70    {10d6}00
+71-100  None
+
+table: type-a-pp 1d100
+1-50    {1d10}00
+51-100  None
+
+table: type-a-gems 1d100
+1-50    {6d6 gem}
+51-100  None
+
+table: type-a-jewelry 1d100
+1-50    {6d6 jewelry}
+51-100  None
+
+table: type-a-magic 1d100
+1-30    {3 magic}
+31-100  None
+
+
+# Treasure Type B
+
+table: type-b-cp 1d100
+1-75    {5d10}00
+76-100  None
+
+table: type-b-sp 1d100
+1-50    {5d6}00
+51-100  None
+
+table: type-b-ep 1d100
+1-50    {5d4}00
+51-100  None
+
+table: type-b-gp 1d100
+1-50    {3d6}00
+51-100  None
+
+table: type-b-pp 1d1
+1       None
+
+table: type-b-gems 1d100
+1-50    {1d6 gem}
+51-100  None
+
+table: type-b-jewelry 1d100
+1-50    {1d6 jewelry}
+51-100  None
+
+table: type-b-magic 1d100
+1-10    {weapon-or-armor}
+11-100  None
+
+# Treasure Type C
+
+table: type-c-cp 1d100
+1-60    {6d6}00
+61-100  None
+
+table: type-c-sp 1d100
+1-60    {5d4}00
+61-100  None
+
+table: type-c-ep 1d100
+1-30    {2d6}00
+31-100  None
+
+table: type-c-gp 1d100
+1-100   None
+
+table: type-c-pp 1d100
+1-100   None
+
+table: type-c-gems 1d100
+1-25    {1d4 gem}
+26-100  None
+
+table: type-c-jewelry 1d100
+1-25    {1d4 jewelry}
+26-100  None
+
+table: type-c-magic 1d100
+1-15    {1d2 magic}
+16-100  None
+
+# Treasure Type D
+
+table: type-d-cp 1d100
+1-30    {4d6}00
+31-100  None
+
+table: type-d-sp 1d100
+1-45    {6d6}00
+46-100  None
+
+table: type-d-ep 1d100
+1-100   None
+
+table: type-d-gp 1d100
+1-90    {5d8}00
+91-100  None
+
+table: type-d-pp 1d100
+1-100   None
+
+table: type-d-gems 1d100
+1-30    {1d8 gem}
+31-100  None
+
+table: type-d-jewelry 1d100
+1-30    {1d8 jewelry}
+31-100  None
+
+table: type-d-magic 1d100
+1-20    {1d2 magic}, {potion}
+21-100  None
+
+# Treasure Type E
+
+table: type-e-cp 1d100
+1-30    {2d8}00
+31-100  None
+
+table: type-e-sp 1d100
+1-60    {6d10}00
+61-100  None
+
+table: type-e-ep 1d100
+1-50    {3d8}00
+51-100  None
+
+table: type-e-gp 1d100
+1-50    {4d10}00
+51-100  None
+
+table: type-e-pp 1d100
+1-100   None
+
+table: type-e-gems 1d100
+1-10    {1d10 gem}
+11-100  None
+
+table: type-e-jewelry 1d100
+1-10    {1d10 jewelry}
+11-100  None
+
+table: type-e-magic 1d100
+1-30    {1d4 magic}, {scroll}
+31-100  None
+
+# Treasure Type F
+
+table: type-f-cp 1d100
+1-100  None
+
+table: type-f-sp 1d100
+1-40    {3d8}00
+41-100  None
+
+table: type-f-ep 1d100
+1-50    {4d8}00
+51-100  None
+
+table: type-f-gp 1d100
+1-85    {6d10}00
+86-100  None
+
+table: type-f-pp 1d100
+1-70    {2d8}00
+71-100  None
+
+table: type-f-gems 1d100
+1-20    {2d12 gem}
+21-100  None
+
+table: type-f-jewelry 1d100
+1-10    {1d12 jewelry}
+11-100  None
+
+table: type-f-magic 1d100
+1-25    {1d4 except-weapons}, {potion}, {scroll}
+26-100  None
+
+# Treasure Type G
+
+table: type-g-cp 1d100
+1-100  None
+
+table: type-g-sp 1d100
+1-100  None
+
+table: type-g-ep 1d100
+1-100  None
+
+table: type-g-gp 1d100
+1-90    {4d6}000
+91-100  None
+
+table: type-g-pp 1d100
+1-75    {5d8}00
+76-100  None
+
+table: type-g-gems 1d100
+1-25    {3d6 gem}
+26-100  None
+
+table: type-g-jewelry 1d100
+1-25    {1d10 jewelry}
+26-100  None
+
+table: type-g-magic 1d100
+1-50    {1d4 magic}, {scroll}
+51-100  None
+
+# Treasure Type H1 Hatchling
+
+table: type-h1-cp 1d100
+1-100  None
+
+table: type-h1-sp 1d100
+1-100  None
+
+table: type-h1-ep 1d100
+1-100  None
+
+table: type-h1-gp 1d100
+1-100  None
+
+table: type-h1-pp 1d100
+1-100  None
+
+table: type-h1-gems 1d100
+1-100  None
+
+table: type-h1-jewelry 1d100
+1-100  None
+
+table: type-h1-magic 1d100
+1-100  None
+
+# Treasure Type H2
+
+table: type-h2-cp 1d100
+1-35    {8d10}00
+36-100  None
+
+table: type-h2-sp 1d100
+1-35    {6d10}000
+36-100  None
+
+table: type-h2-ep 1d100
+1-35    {3d10}000
+36-100  None
+
+table: type-h2-gp 1d100
+1-35    {5d8}000
+36-100  None
+
+table: type-h2-pp 1d100
+1-35    {9d8}00
+36-100  None
+
+table: type-h2-gems 1d100
+1-100  None
+
+
+table: type-h2-jewelry 1d100
+1-100  None
+
+
+table: type-h2-magic 1d100
+1-100  None
+
+
+# Treasure Type H3
+
+table: type-h3-cp 1d100
+1-45    {8d10}00
+46-100  None
+
+table: type-h3-sp 1d100
+1-45    {6d10}000
+46-100  None
+
+table: type-h3-ep 1d100
+1-45    {3d10}000
+46-100  None
+
+table: type-h3-gp 1d100
+1-45    {5d8}000
+46-100  None
+
+table: type-h3-pp 1d100
+1-45    {9d8}00
+46-100  None
+
+table: type-h3-gems 1d100
+1-100  None
+
+
+table: type-h3-jewelry 1d100
+1-100  None
+
+
+table: type-h3-magic 1d100
+1-100  None
+
+
+# Treasure Type H4
+
+table: type-h4-cp 1d100
+1-55    {8d10}00
+56-100  None
+
+table: type-h4-sp 1d100
+1-55    {6d10}000
+56-100  None
+
+table: type-h4-ep 1d100
+1-55    {3d10}000
+56-100  None
+
+table: type-h4-gp 1d100
+1-55    {5d8}000
+56-100  None
+
+table: type-h4-pp 1d100
+1-55    {9d8}00
+56-100  None
+
+table: type-h4-gems 1d100
+1-100  None
+
+
+table: type-h4-jewelry 1d100
+1-100  None
+
+
+table: type-h4-magic 1d100
+1-100  None
+
+
+# Treasure Type H5
+
+table: type-h5-cp 1d100
+1-65    {8d10}00
+66-100  None
+
+table: type-h5-sp 1d100
+1-65    {6d10}000
+66-100  None
+
+table: type-h5-ep 1d100
+1-65    {3d10}000
+66-100  None
+
+table: type-h5-gp 1d100
+1-65    {5d8}000
+66-100  None
+
+table: type-h5-pp 1d100
+1-65    {9d8}00
+66-100  None
+
+table: type-h5-gems 1d100
+1-100  None
+
+
+table: type-h5-jewelry 1d100
+1-100  None
+
+
+table: type-h5-magic 1d100
+1-100  None
+
+
+# Treasure Type H6
+
+table: type-h6-cp 1d100
+1-75    {8d10}00
+76-100  None
+
+table: type-h6-sp 1d100
+1-75    {6d10}000
+76-100  None
+
+table: type-h6-ep 1d100
+1-75    {3d10}000
+76-100  None
+
+table: type-h6-gp 1d100
+1-75    {5d8}000
+76-100  None
+
+table: type-h6-pp 1d100
+1-75    {9d8}00
+76-100  None
+
+table: type-h6-gems 1d100
+1-100  None
+
+table: type-h6-jewelry 1d100
+1-100  None
+
+table: type-h6-magic 1d100
+1-100  None
+
+
+# Treasure Type H7
+
+table: type-h7-cp 1d100
+1-85    {8d10}00
+86-100  None
+
+table: type-h7-sp 1d100
+1-85    {6d10}000
+86-100  None
+
+table: type-h7-ep 1d100
+1-85    {3d10}000
+86-100  None
+
+table: type-h7-gp 1d100
+1-85    {5d8}000
+86-100  None
+
+table: type-h7-pp 1d100
+1-85    {9d8}00
+86-100  None
+
+table: type-h7-gems 1d100
+1-100  None
+
+table: type-h7-jewelry 1d100
+1-100  None
+
+table: type-h7-magic 1d100
+1-100  None
+
+
+# Dragon gems, jewelry and magic depends on HD
+
+table: dragon-gems 1d100
+1-100    {1d100 gem}
+
+table: dragon-jewelry 1d100
+1-100    {10d4 jewelry}
+
+table: dragon-magic 1d100
+1-100    {1d4 magic}, {potion}, {scroll}
+
+
+# Treasure Type I
+
+table: type-i-cp 1d100
+1-100  None
+
+table: type-i-sp 1d100
+1-100  None
+
+table: type-i-ep 1d100
+1-100  None
+
+table: type-i-gp 1d100
+1-100  None
+
+table: type-i-pp 1d100
+1-80    {3d10}00
+81-100  None
+
+table: type-i-gems 1d100
+1-50    {2d6 gem}
+51-100  None
+
+table: type-i-jewelry 1d100
+1-50    {2d6 jewelry}
+51-100  None
+
+table: type-i-magic 1d100
+1-15    {magic}
+16-100  None
+
+# Treasure Type J
+
+table: type-j-cp 1d100
+1-45    {3d8}00
+46-100  None
+
+table: type-j-sp 1d100
+1-45    {1d8}00
+46-100  None
+
+table: type-j-ep 1d100
+1-100  None
+
+table: type-j-gp 1d100
+1-100  None
+
+table: type-j-pp 1d100
+1-80    {3d10}00
+81-100  None
+
+table: type-j-gems 1d100
+1-100  None
+
+table: type-j-jewelry 1d100
+1-100  None
+
+table: type-j-magic 1d100
+1-100  None
+
+# Treasure Type K
+
+table: type-k-cp 1d100
+1-100  None
+
+table: type-k-sp 1d100
+1-90    {2d10}00
+91-100  None
+
+table: type-k-ep 1d100
+1-35    {1d8}00
+36-100  None
+
+table: type-k-gp 1d100
+1-100  None
+
+table: type-k-pp 1d100
+1-100  None
+
+table: type-k-gems 1d100
+1-100  None
+
+table: type-k-jewelry 1d100
+1-100  None
+
+table: type-k-magic 1d100
+1-100  None
+
+# Treasure Type L
+
+table: type-l-cp 1d100
+1-100  None
+
+table: type-l-sp 1d100
+1-100  None
+
+table: type-l-ep 1d100
+1-100  None
+
+table: type-l-gp 1d100
+1-100  None
+
+table: type-l-pp 1d100
+1-100   None
+
+table: type-l-gems 1d100
+1-50    {1d4 gem}
+51-100  None
+
+table: type-l-jewelry 1d100
+1-100  None
+
+table: type-l-magic 1d100
+1-100  None
+
+# Treasure Type M
+
+table: type-m-cp 1d100
+1-100  None
+
+table: type-m-sp 1d100
+1-100  None
+
+table: type-m-ep 1d100
+1-100  None
+
+table: type-m-gp 1d100
+1-90    {4d10}00
+91-100  None
+
+table: type-m-pp 1d100
+1-90    {2d8}000
+91-100  None
+
+table: type-m-gems 1d100
+1-55    {5d4 gem}
+56-100  None
+
+table: type-m-jewelry 1d100
+1-45    {2d6 jewelry}
+46-100  None
+
+table: type-m-magic 1d100
+1-100  None
+
+# Treasure Type N
+
+table: type-n-cp 1d100
+1-100  None
+
+table: type-n-sp 1d100
+1-100  None
+
+table: type-n-ep 1d100
+1-100  None
+
+table: type-n-gp 1d100
+1-100  None
+
+table: type-n-pp 1d100
+1-100  None
+
+table: type-n-gems 1d100
+1-100  None
+
+table: type-n-jewelry 1d100
+1-100  None
+
+table: type-n-magic 1d100
+1-40    {2d4 potion}
+41-100  None
+
+# Treasure Type O
+
+table: type-o-cp 1d100
+1-100  None
+
+table: type-o-sp 1d100
+1-100  None
+
+table: type-o-ep 1d100
+1-100  None
+
+table: type-o-gp 1d100
+1-100  None
+
+table: type-o-pp 1d100
+1-100  None
+
+table: type-o-gems 1d100
+1-100  None
+
+table: type-o-jewelry 1d100
+1-100  None
+
+table: type-o-magic 1d100
+1-50    {2d4 scroll}
+51-100  None
+
+
+# Treasure Type P
+
+table: type-p-cp 1d100
+1-100  {3d8}
+
+table: type-p-sp 1d100
+1-100  None
+
+table: type-p-ep 1d100
+1-100  None
+
+table: type-p-gp 1d100
+1-100  None
+
+table: type-p-pp 1d100
+1-100  None
+
+table: type-p-gems 1d100
+1-100  None
+
+table: type-p-jewelry 1d100
+1-100  None
+
+table: type-p-magic 1d100
+1-100  None
+
+# Treasure Type Q
+
+table: type-q-cp 1d100
+1-100  None
+
+table: type-q-sp 1d100
+1-100  {3d6}
+
+table: type-q-ep 1d100
+1-100  None
+
+table: type-q-gp 1d100
+1-100  None
+
+table: type-q-pp 1d100
+1-100  None
+
+table: type-q-gems 1d100
+1-100  None
+
+table: type-q-jewelry 1d100
+1-100  None
+
+table: type-q-magic 1d100
+1-100  None
+
+# Treasure Type R
+
+table: type-r-cp 1d100
+1-100  None
+
+table: type-r-sp 1d100
+1-100  None
+
+table: type-r-ep 1d100
+1-100  {2d6}
+
+table: type-r-gp 1d100
+1-100  None
+
+table: type-r-pp 1d100
+1-100  None
+
+table: type-r-gems 1d100
+1-100  None
+
+table: type-r-jewelry 1d100
+1-100  None
+
+table: type-r-magic 1d100
+1-100  None
+
+# Treasure Type S
+
+table: type-s-cp 1d100
+1-100  None
+
+table: type-s-sp 1d100
+1-100  None
+
+table: type-s-ep 1d100
+1-100  None
+
+table: type-s-gp 1d100
+1-100  {2d4}
+
+table: type-s-pp 1d100
+1-100  None
+
+table: type-s-gems 1d100
+1-100  None
+
+table: type-s-jewelry 1d100
+1-100  None
+
+table: type-s-magic 1d100
+1-100  None
+
+# Treasure Type T
+
+table: type-t-cp 1d100
+1-100  None
+
+table: type-t-sp 1d100
+1-100  None
+
+table: type-t-ep 1d100
+1-100  None
+
+table: type-t-gp 1d100
+1-100  None
+
+table: type-t-pp 1d100
+1-100  {1d6}
+
+table: type-t-gems 1d100
+1-100  None
+
+table: type-t-jewelry 1d100
+1-100  None
+
+table: type-t-magic 1d100
+1-100  None
+
+# Treasure Type U
+
+table: type-u-cp 1d100
+1-50    {1d20}
+51-100  None
+
+table: type-u-sp 1d100
+1-50    {1d20}
+51-100  None
+
+table: type-u-ep 1d100
+1-100  None
+
+table: type-u-gp 1d100
+1-25    {1d20}
+26-100  None
+
+table: type-u-pp 1d100
+1-100   None
+
+table: type-u-gems 1d100
+1-5     {1d4 gem}
+6-100   None
+
+table: type-u-jewelry 1d100
+1-5     {1d4 jewelry}
+6-100   None
+
+table: type-u-magic 1d100
+1-2     {magic}
+3-100   None
+
+# Treasure Type V
+
+table: type-v-cp 1d100
+1-100  None
+
+table: type-v-sp 1d100
+1-25    {1d20}
+26-100  None
+
+table: type-v-ep 1d100
+1-25    {1d20}
+26-100  None
+
+table: type-v-gp 1d100
+1-50    {1d20}
+51-100  None
+
+table: type-v-pp 1d100
+1-25    {1d20}
+26-100  None
+
+table: type-v-gems 1d100
+1-10     {1d4 gem}
+11-100   None
+
+table: type-v-jewelry 1d100
+1-10     {1d4 jewelry}
+11-100   None
+
+table: type-v-magic 1d100
+1-5     {magic}
+6-100   None
+
+# Unguarded Treasure Level 1
+
+table: type-level1-cp 1d100
+1-75    {1d8}00
+76-100  None
+
+table: type-level1-sp 1d100
+1-50    {1d6}00
+51-100  None
+
+table: type-level1-ep 1d100
+1-25    {1d4}00
+26-100  None
+
+table: type-level1-gp 1d100
+1-7    {1d4}00
+8-100  None
+
+table: type-level1-pp 1d100
+1       {1d4}00
+2-100   None
+
+table: type-level1-gems 1d100
+1-7     {1d4 gem}
+8-100   None
+
+table: type-level1-jewelry 1d100
+1-3     {1d4 jewelry}
+4-100   None
+
+table: type-level1-magic 1d100
+1-2     {magic}
+3-100   None
+
+# Unguarded Treasure Level 2
+
+table: type-level2-cp 1d100
+1-50    {1d10}00
+51-100  None
+
+table: type-level2-sp 1d100
+1-50    {1d8}00
+51-100  None
+
+table: type-level2-ep 1d100
+1-25    {1d6}00
+26-100  None
+
+table: type-level2-gp 1d100
+1-20    {1d6}00
+21-100  None
+
+table: type-level2-pp 1d100
+1-2     {1d4}00
+3-100   None
+
+table: type-level2-gems 1d100
+1-10    {1d6 gem}
+9-100   None
+
+table: type-level2-jewelry 1d100
+1-7     {1d4 jewelry}
+8-100   None
+
+table: type-level2-magic 1d100
+1-5     {magic}
+6-100   None
+
+# Unguarded Treasure Level 3
+
+table: type-level3-cp 1d100
+1-30    {2d6}00
+31-100  None
+
+table: type-level3-sp 1d100
+1-50    {1d10}00
+51-100  None
+
+table: type-level3-ep 1d100
+1-25    {1d8}00
+26-100  None
+
+table: type-level3-gp 1d100
+1-50    {1d6}00
+51-100  None
+
+table: type-level3-pp 1d100
+1-4     {1d4}00
+5-100   None
+
+table: type-level3-gems 1d100
+1-15    {1d6 gem}
+16-100   None
+
+table: type-level3-jewelry 1d100
+1-7     {1d6 jewelry}
+8-100   None
+
+table: type-level3-magic 1d100
+1-8     {magic}
+9-100   None
+
+# Unguarded Treasure Level 4
+
+table: type-level4-cp 1d100
+1-20    {3d6}00
+21-100  None
+
+table: type-level4-sp 1d100
+1-50    {2d6}00
+51-100  None
+
+table: type-level4-ep 1d100
+1-25    {1d10}00
+26-100  None
+
+table: type-level4-gp 1d100
+1-50    {2d6}00
+51-100  None
+
+table: type-level4-pp 1d100
+1-8     {1d4}00
+9-100   None
+
+table: type-level4-gems 1d100
+1-20    {1d8 gem}
+21-100   None
+
+table: type-level4-jewelry 1d100
+1-10     {1d6 jewelry}
+11-100   None
+
+table: type-level4-magic 1d100
+1-12     {magic}
+13-100   None
+
+# Unguarded Treasure Level 5 (same as 4)
+
+table: type-level5-cp 1d100
+1-100   {type-level4-cp}
+
+table: type-level5-sp 1d100
+1-100   {type-level4-sp}
+
+table: type-level5-ep 1d100
+1-100   {type-level4-ep}
+
+table: type-level5-gp 1d100
+1-100   {type-level4-gp}
+
+table: type-level5-pp 1d100
+1-100   {type-level4-pp}
+
+table: type-level5-gems 1d100
+1-100   {type-level4-gems}
+
+table: type-level5-jewelry 1d100
+1-100   {type-level4-jewelry}
+
+table: type-level5-magic 1d100
+1-100   {type-level4-magic}
+
+# Unguarded Treasure Level 6
+
+table: type-level6-cp 1d100
+1-15    {4d6}00
+16-100  None
+
+table: type-level6-sp 1d100
+1-50    {3d6}00
+51-100  None
+
+table: type-level6-ep 1d100
+1-25    {1d12}00
+26-100  None
+
+table: type-level6-gp 1d100
+1-70    {2d8}00
+71-100  None
+
+table: type-level6-pp 1d100
+1-15     {1d4}00
+16-100   None
+
+table: type-level6-gems 1d100
+1-30    {1d8 gem}
+31-100   None
+
+table: type-level6-jewelry 1d100
+1-15     {1d6 jewelry}
+16-100   None
+
+table: type-level6-magic 1d100
+1-16     {magic}
+17-100   None
+
+# Unguarded Treasure Level 7 (same as 6)
+
+table: type-level7-cp 1d100
+1-100   {type-level6-cp}
+
+table: type-level7-sp 1d100
+1-100   {type-level6-sp}
+
+table: type-level7-ep 1d100
+1-100   {type-level6-ep}
+
+table: type-level7-gp 1d100
+1-100   {type-level6-gp}
+
+table: type-level7-pp 1d100
+1-100   {type-level6-pp}
+
+table: type-level7-gems 1d100
+1-100   {type-level6-gems}
+
+table: type-level7-jewelry 1d100
+1-100   {type-level6-jewelry}
+
+table: type-level7-magic 1d100
+1-100   {type-level6-magic}
+
+# Unguarded Treasure Level 8
+
+table: type-level8-cp 1d100
+1-10    {5d6}00
+11-100  None
+
+table: type-level8-sp 1d100
+1-50    {5d6}00
+51-100  None
+
+table: type-level8-ep 1d100
+1-25    {2d8}00
+26-100  None
+
+table: type-level8-gp 1d100
+1-75    {4d6}00
+76-100  None
+
+table: type-level8-pp 1d100
+1-30     {1d4}00
+31-100   None
+
+table: type-level8-gems 1d100
+1-40    {1d8 gem}
+41-100   None
+
+table: type-level8-jewelry 1d100
+1-30     {1d8 jewelry}
+31-100   None
+
+table: type-level8-magic 1d100
+1-20     {magic}
+21-100   None
+
+
+# Gems
+table: gem 1d100
+1-20    {gem-name} ({gem-ornamental} gp)
+21-45   {gem-name} ({gem-semiprecious} gp)
+46-75   {gem-name} ({gem-fancy} gp)
+76-95   {gem-name} ({gem-precious} gp)
+96-100  {gem-name} ({gem-gem} gp)
+
+table: gem-ornamental 2d6
+2   {1d4}
+3   5
+4   8
+5-9 10
+10  15
+11  20
+12  50
+
+table: gem-semiprecious 2d6
+2   10
+3   25
+4   38
+5-9 50
+10  75
+11  100
+12  100
+
+table: gem-fancy 2d6
+2   50
+3   50
+4   75
+5-9 100
+10  150
+11  200
+12  500
+
+table: gem-precious 2d6
+2   100
+3   250
+4   375
+5-9 500
+10  750
+11  1000
+12  1000
+
+table: gem-gem 2d6
+2   500
+3   500
+4   750
+5-9 1000
+10  1500
+11  2000
+12  5000
+
+table: gem-name 1d100
+1-5     Alexandrite
+6-12    Amethyst
+13-20   Aventurine
+21-30   Chlorastrolite
+31-40   Diamond
+41-43   Emerald
+44-48   Fire Opal
+49-57   Fluorospar
+58-63   Garnet
+64-68   Heliotrope
+69-78   Malachite
+79-88   Rhodonite
+89-91   Ruby
+92-95   Sapphire
+96-100  Topaz
+
+
+# Jewelry
+table: jewelry 1d1
+1   {jewelry-name} ({2d8}00 gp)
+
+table: jewelry-name 1d100
+1-6     Anklet
+7-12    Belt
+13-14   Bowl
+15-21   Bracelet
+22-27   Brooch
+28-32   Buckle
+33-37   Chain
+38-40   Choker
+41-42   Circlet
+43-47   Clasp
+48-51   Comb
+52      Crown
+53-55   Cup
+56-62   Earring
+63-65   Flagon
+66-68   Goblet
+69-73   Knife
+74-77   Letter Opener
+78-80   Locket
+81-82   Medal
+83-89   Necklace
+90      Plate
+91-95   Pin
+96      Scepter
+97-99   Statuette
+100     Tiara
+
+# Categories of Magic Items
+
+table: magic 1d100
+1-25    {weapon}
+26-35   {armor}
+36-55   {potion}
+56-85   {scroll}
+86-90   {wand}
+91-97   {misc}
+98-100  {rare}
+
+table: weapon-or-armor 1d100
+1-70    {weapon}
+71-100  {armor}
+
+table: except-weapons 1d7
+1-12    {armor}
+13-40   {potion}
+41-79   {scroll}
+80-86   {wand}
+87-96   {misc}
+97-100  {rare}
+
+table: weapon 1d100
+1-2     Great Axe {weapon-bonus-melee}
+3-9     Battle Axe {weapon-bonus-melee}
+10-11   Hand Axe {weapon-bonus-melee}
+12-19   Shortbow {weapon-bonus-melee}
+20-27   {1d20} Shortbow Arrows {weapon-bonus-ranged}
+28-31   Longbow {weapon-bonus-melee}
+32-35   {1d20} Longbow Arrows {weapon-bonus-ranged}
+36-43   {1d20} Light Quarrels {weapon-bonus-ranged}
+44-47   {1d20} Heavy Quarrels {weapon-bonus-ranged}
+48-59   Dagger {weapon-bonus-melee}
+60-65   Shortsword {weapon-bonus-melee}
+66-79   Longsword {weapon-bonus-melee}
+80-81   Scimitar {weapon-bonus-melee}
+82-83   Two-Handed Sword {weapon-bonus-melee}
+84-86   Warhammer {weapon-bonus-melee}
+87-94   Mace {weapon-bonus-melee}
+95      Maul {weapon-bonus-melee}
+96      Pole Arm {weapon-bonus-melee}
+97      {1d20} Sling Bullets {weapon-bonus-ranged}
+98-100  Spear {weapon-bonus-melee}
+
+table: weapon-bonus-melee 1d100
+1-40    +1
+41-50   +2
+51-55   +3
+56-57   +4
+58      +5
+59-75   +1, +2 vs. {special-enemy}
+76-85   +1, +3 vs. {special-enemy}
+86-95   {weapon-bonus-melee} + {special-ability}
+96-98   Cursed, -1*
+99-100   Cursed, -2*
+
+table: weapon-bonus-ranged 1d100
+1-46    +1
+47-58   +2
+59-64   +3
+65-82   +1, +2 vs. {special-enemy}
+83-94   +1, +3 vs. {special-enemy}
+95-98   Cursed, -1
+99-100   Cursed, -2
+
+table: special-enemy 1d6
+1   Dragons
+2   Enchanted
+3   Lycanthropes
+4   Regenerators
+5   Spell Users
+6   Undead
+
+table: special-ability 1d20
+1-9     Casts Light on Command
+10-11   Charm Person
+12      Drains Energy
+13-16   Flames on Command
+17-19   Locate Objects
+20      Wishes
+
+table: armor 1d100
+1-9     Leather Armor {armor-bonus}
+10-28   Chain Mail {armor-bonus}
+29-43   Plate Mail {armor-bonus}
+44-100  Shield {armor-bonus}
+
+table: armor-bonus 1d100
+1-50    +1
+51-80   +2
+81-90   +3
+91-95   Cursed {armor-cursed}
+96-100  Cursed AC 11
+
+table: armor-cursed 1d90
+1-50    -1
+51-80   -2
+81-90   -3
+
+table: potion 1d100
+1-3     Potion of Clairaudience
+4-6     Potion of Clairvoyance
+7-8     Potion of Cold Resistance
+9-11    Potion of Control Animal
+12-13   Potion of Control Dragon
+14-16   Potion of Control Giant
+17-19   Potion of Control Human
+20-22   Potion of Control Plant
+23-25   Potion of Control Undead
+26-32   Potion of Delusion
+33-35   Potion of Diminution
+36-39   Potion of Fire Resistance
+40-43   Potion of Flying
+44-47   Potion of Gaseous Form
+48-51   Potion of Giant Strength
+52-55   Potion of Growth
+56-59   Potion of Healing
+60-63   Potion of Heroism
+64-68   Potion of Invisibility
+69-72   Potion of Invulnerability
+73-76   Potion of Levitation
+77-80   Potion of Longevity
+81-84   Potion of Mind Reading
+85-86   Potion of Poison
+87-89   Potion of Polymorph Self
+90-97   Potion of Speed
+98-100  Potion of Treasure Finding
+
+table: scroll 1d100
+2-3     Cleric Spell Scroll ({cleric-spell})
+4-6     Cleric Spell Scroll ({2 cleric-spell})
+7-8     Cleric Spell Scroll ({3 cleric-spell})
+9       Cleric Spell Scroll ({4 cleric-spell})
+10-15   Magic-User Spell Scroll ({mage-spell})
+16-20   Magic-User Spell Scroll ({2 mage-spell})
+21-25   Magic-User Spell Scroll ({3 mage-spell})
+26-29   Magic-User Spell Scroll ({4 mage-spell})
+30-32   Magic-User Spell Scroll ({5 mage-spell})
+33-34   Magic-User Spell Scroll ({6 mage-spell})
+35      Magic-User Spell Scroll ({7 mage-spell})
+36-40   Cursed Scroll
+41-46   Scroll of Protection from Elementals
+47-56   Scroll of Protection from Lycanthropes
+57-61   Scroll of Protection from Magic
+62-75   Scroll of Protection from Undead
+76-85   Map to Treasure Type A ({type-a-cp} cp, {type-a-sp} sp, {type-a-ep} ep,
+    {type-a-gp} gp, {type-a-pp} pp, {type-a-gems}, {type-a-jewelry}, {type-a-magic})
+86-89   Map to Treasure Type E ({type-e-cp} cp, {type-e-sp} sp, {type-e-ep} ep,
+    {type-e-gp} gp, {type-e-pp} pp, {type-e-gems}, {type-e-jewelry}, {type-e-magic})
+90-92   Map to Treasure Type G ({type-g-cp} cp, {type-g-sp} sp, {type-g-ep} ep,
+    {type-g-gp} gp, {type-g-pp} pp, {type-g-gems}, {type-g-jewelry}, {type-g-magic})
+93-100  Map to Magic Items ({1d4 magic})
+
+table: wand 1d100
+1-8     Rod of Cancellation
+9-13    Snake Staff
+14-17   Staff of Commanding
+18-28   Staff of Healing
+29-30   Staff of Power
+31-34   Staff of Striking
+35      Staff of Wizardry
+36-40   Wand of Cold
+41-45   Wand of Enemy Detection
+46-50   Wand of Fear
+51-55   Wand of Fireballs
+56-60   Wand of Illusion
+61-65   Wand of Lightning Bolts
+66-73   Wand of Magic Detection
+74-79   Wand of Paralysis
+80-84   Wand of Polymorph
+85-92   Wand of Secret Door Detection
+93-100  Wand of Trap Detection
+
+table: misc 1d100
+1-57    {misc1}
+58-100  {misc2}
+
+table: misc1 1d100
+1       {misc-g} of Blasting
+2-5     {misc-f} of Blending
+6-13    {misc-f} of Cold Resistance
+14-17   {misc-e} of Comprehension
+18-22   {misc-c} of Control Animal
+23-29   {misc-c} of Control Human
+30-35   {misc-c} of Control Plant
+36-37   {misc-g} of Courage
+38-40   {misc-f} of Deception
+41-52   {misc-a} of Delusion
+53-55   {misc-c} of Djinni Summoning
+56      {misc-g} of Doom
+57-67   {misc-f} of Fire Resistance
+68-80   {misc-f} of Invisibility
+81-85   {misc-b} of Levitation
+86-95   {misc-c} of Mind Reading
+96-97   {misc-g} of Panic
+98-100  {misc-d} of Penetrating Vision
+
+table: misc2 1d100
+0-7     {misc-f} of Protection +1
+8-10    {misc-f} of Protection +2
+11      {misc-f} of Protection +3
+12-14   {misc-f} of Protection from Energy Drain
+15-20   {misc-f} of Protection from Scrying
+21-23   {misc-c} of Regeneration
+24-29   {misc-h} of Scrying
+30-32   {misc-b} of Superior Scrying
+33-39   {misc-b} of Speed
+40-42   {misc-c} of Spell Storing
+43-50   {misc-f} of Spell Turning
+51-69   {misc-b} of Stealth
+70-72   {misc-c} of Telekinesis
+73-74   {misc-c} of Telepathy
+75-76   {misc-c} of Teleportation
+77-78   {misc-d} of True Seeing
+79-88   {misc-b} of Water Walking
+89-99   {misc-c} of Weakness
+100     {misc-c} of Wishes
+
+table: bell-chime 1d2
+1   Bell
+2   Chime
+
+table: belt-girdle 1d2
+1   Belt
+2   Girdle
+
+table: ball-orb 1d2
+1   Crystal Ball
+2   Orb
+
+table: misc-a 1d10
+1-2     {bell-chime}
+3-5     {belt-girdle}
+6-13    Boots
+14-15   Bowl
+16-28   Cloak
+29-31   {ball-orb}
+32-33   Drums
+34-38   Helm
+39-43   Horn
+44-46   Lens
+47-49   Mirror
+50-67   Pendant
+68-100  Ring
+
+table: misc-b 1d10
+1-25    Boots
+26-50   Pendant
+51-100  Ring
+
+table: misc-c 1d10
+1-40    Pendant
+51-100  Ring
+
+table: misc-d 1d10
+1-17    Lens
+18-21   Mirror
+22-50   Pendant
+51-100  Ring
+
+table: misc-e 1d10
+1-40    Helm
+41-80   Pendant
+81-100  Ring
+
+table: misc-f 1d10
+1-7     {belt-girdle}
+8-38    Cloak
+39-50   Pendant
+51-100  Ring
+
+table: misc-g 1d10
+1-17    {bell-chime}
+18-50   Drums
+51-100  Horn
+
+table: misc-h 1d10
+1-17    Bowl
+18-67   {ball-orb}
+68-100  Mirror
+
+
+table: rare 1d100
+1-5     Bag of Devouring
+6-20    Bag of Holding
+21-32   Boots of Traveling and Leaping
+33-47   Broom of Flying
+48-57   {summoning}
+58-59   Efreeti Bottle
+60-64   Flying Carpet
+65-81   Gauntlets of Ogre Power
+82-86   Girdle of Giant Strength
+87-88   Mirror of Imprisonment
+89-100  Rope of Climbing
+
+table: summoning 1d8
+1   Bowl of Summoning Water Elementals
+2   Brazier of Summoning Fire Elementals
+3   Censer of Summoning Air Elementals
+4   Crucible of Summoning Metal Elementals
+5   Mallet of Summoning Wood Elementals
+6   Marble Plate of Summoning Cold Elementals
+7   Rod of Summoning Lightning Elementals
+8   Stone of Summoning Earth Elementals
+
+table: cleric-spell 1d48
+1   Cure Light Wounds*
+2   Detect Evil*
+3   Detect Magic
+4   Light*
+5   Protection from Evil*
+6   Purify Food and Water
+7   Remove Fear*
+8   Resist Cold
+9   Bless*
+10  Charm Animal
+11  Find Traps
+12  Hold Person
+13  Resist Fire
+14  Silence 15' radius
+15  Speak with Animals
+16  Spiritual Hammer
+17  Continual Light*
+18  Cure Blindness*
+19  Cure Disease*
+20  Growth of Animals
+21  Locate Object
+22  Remove Curse*
+23  Speak with Dead
+24  Striking
+25  Animate Dead
+26  Create Water
+27  Cure Serious Wounds*
+28  Dispel Magic
+29  Neutralize Poison*
+30  Protection from Evil 10' radius*
+31  Speak with Plants
+32  Sticks to Snakes
+33  Commune
+34  Create Food
+35  Dispel Evil
+36  Insect Plague
+37  Quest*
+38  Raise Dead*
+39  True Seeing
+40  Wall of Fire
+41  Animate Objects
+42  Blade Barrier
+43  Find the Path
+44  Heal*
+45  Regenerate
+46  Restoration
+47  Speak with Monsters
+48  Word of Recall
+
+table: mage-spell 1d68
+1   Charm Person
+2   Detect Magic
+3   Floating Disc
+4   Hold Portal
+5   Light*
+6   Magic Missile
+7   Magic Mouth
+8   Protection from Evil*
+9   Read Languages
+10  Shield
+11  Sleep
+12  Ventriloquism
+13  Continual Light*
+14  Detect Evil*
+15  Detect Invisible
+16  Invisibility
+17  Knock
+18  Levitate
+19  Locate Object
+20  Mind Reading
+21  Mirror Image
+22  Phantasmal Force
+23  Web
+24  Wizard Lock
+25  Clairvoyance
+26  Darkvision
+27  Dispel Magic
+28  Fireball
+29  Fly
+30  Haste*
+31  Hold Person
+32  Invisibility 10‘ radius
+33  Lightning Bolt
+34  Protection from Evil 10’ radius*
+35  Protection from Normal Missiles
+36  Water Breathing
+37  Charm Monster
+38  Confusion
+39  Dimension Door
+40  Growth of Plants*
+41  Hallucinatory Terrain
+42  Ice Storm
+43  Massmorph
+44  Polymorph Other
+45  Polymorph Self
+46  Remove Curse*
+47  Wall of Fire
+48  Wizard Eye
+49  Animate Dead
+50  Cloudkill
+51  Conjure Elemental
+52  Feeblemind*
+53  Hold Monster
+54  Magic Jar
+55  Passwall
+56  Telekinesis
+57  Teleport
+58  Wall of Stone
+59  Anti-Magic Shell
+60  Death Spell
+61  Disintegrate
+62  Flesh to Stone*
+63  Geas*
+64  Invisible Stalker
+65  Lower Water
+66  Projected Image
+67  Reincarnate
+68  Wall of Iron

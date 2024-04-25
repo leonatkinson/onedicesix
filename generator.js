@@ -17,7 +17,11 @@ class EmptyZ_Generator
         this.tables = new Map();
     }
 
+    // Expecting patterns like "3", "3d6", or "3d6+4"
     static DICE_ROLL_REGEX() { return /(\d+)d?(\d+)?([\+\-]\d+)?/; }
+
+    // Expecting patterns like "3d6 gems"
+    static REPEATER_REGEX() { return /(\S+)\s(\S+)/; }
 
     /**
      * Create an instance of Generator from import data
@@ -128,7 +132,33 @@ class EmptyZ_Generator
         for (var i = 1; i <= count; i++) {
             let recipe = this.recipe;
             while (recipe.indexOf('{') > -1) {
+                // Get the first curly brace expression
                 let m = recipe.match(/{([^}]+)}/);
+
+                // Is it a repeater
+                let repeater = m[1];
+                if (repeater.match(EmptyZ_Generator.REPEATER_REGEX())) {
+                    let spec = repeater.match(EmptyZ_Generator.REPEATER_REGEX())[1];
+                    let table = repeater.match(EmptyZ_Generator.REPEATER_REGEX())[2];
+
+                    // Are the two parts a dice roll and a table name?
+                    if (
+                        spec.match(EmptyZ_Generator.DICE_ROLL_REGEX())
+                        && typeof this.tables[table] !== 'undefined'
+                    ) {
+                        // Get the number of repetitions
+                        let roll = parseInt(EmptyZ_Generator.computeRoll(spec));
+                        // Replace the repeater with that many table references
+                        recipe = recipe.replace(
+                            '{' + repeater + '}',
+                            Array(roll).fill('{' + table + '}').join(', ')
+                            );
+                    } else {
+                        recipe = recipe.replace('{' + repeater + '}', '[' + repeater + ' broken repeater]');
+                        continue;
+                    }
+                }
+
                 // Does it match a table name?
                 let tableName = m[1];
                 if (typeof this.tables[tableName] !== 'undefined') {
@@ -143,11 +173,13 @@ class EmptyZ_Generator
                 if (spec.match(EmptyZ_Generator.DICE_ROLL_REGEX())) {
                     let roll = EmptyZ_Generator.computeRoll(spec);
                     if (roll !== false) {
+                        // Replace the first dice spec
                         recipe = recipe.replace('{' + spec + '}', roll);
                         continue;
                     }
                 }
 
+                // Unknown pattern. Replace with debug string.
                 recipe = recipe.replace('{' + tableName + '}', '[' + tableName + ' not found]');
             }
             result = result + recipe + "\n";
@@ -275,7 +307,7 @@ class EmptyZ_Table
             }
         }
         // Default catch-all in case a table has gaps
-        return "[Rolled " + roll + "]";
+        return '[Rolled ' + roll + ' on ' + this.name + ']';
     }
 }
 
@@ -755,6 +787,85 @@ class EmptyZ_UI_Reaction
     }
 }
 
+class EmptyZ_UI_BfrpgTreasure
+{
+    static setup(el) {
+        let container = jQuery(el);
+        container.append('<div class="params">'
+            + 'Treasure Type: '
+            + '<input type="text" name="type" placeholder="Treasure types separated by spaces" style="width:75%"><br>'
+            + 'Dragon HD: '
+            + '<input type="text" name="hd" placeholder="Dragon HD" style="width:25%"><br>'
+            + '</div>'
+        );
+    }
+
+    static run(el) {
+        // compute roll and just do a straight lookup
+        let container = jQuery(el);
+        let tableID = container.attr('data-table-id');
+        let treasureType = container.find('input[name="type"]').val();
+        let generator = EmptyZ_Generators[tableID];
+        let treasure = '';
+        let specialCases = ['weapon', 'armor', 'potion', 'scroll', 'wand', 'misc', 'rare'];
+
+        // Loop over each type
+        treasureType.split(' ').forEach((t) => {
+            // Special cases for types:
+            if (specialCases.indexOf(t) >= 0) {
+                let originalRecipe = generator.recipe;
+                generator.recipe = '{' + t + '}';
+                treasure += generator.run(1);
+                generator.recipe = originalRecipe;
+                return;
+            }
+
+            // The recipe has many table names like "type-a-something", and
+            // we'll replace the treasure type with the selected one.
+            generator.recipe = generator.recipe.replace(
+                /type-[a-z0-9]+-/g,
+                'type-' + t.toLowerCase() + '-'
+                );
+            // Save the output into the running tally of treasure
+            treasure += generator.run(1);
+
+            // Handle type H gems, jewelry, and magic
+            if (t.toLowerCase().startsWith('h') && !t.toLowerCase().startsWith('h1')) {
+                let dragonHd = parseInt(container.find('input[name="hd"]').val());
+                let chance = dragonHd * 5;
+                // Loop over the three types
+                ['gems', 'jewelry', 'magic'].forEach(function(tablePostfix) {
+                    if (EmptyZ_Generator.computeRoll('1d100') <= chance) {
+                        // Temporarily replace the recipe
+                        let originalRecipe = generator.recipe;
+                        generator.recipe = '{dragon-' + tablePostfix + '}';
+                        treasure += generator.run(1);
+                        generator.recipe = originalRecipe;
+                    }
+                });
+            }
+
+        });
+
+        // Remove "None"
+        treasure = treasure.replace(/None( cp| sp| ep| gp| pp)?,?/g, '');
+
+        // Remove trailing whitespace
+        treasure = treasure.replace(/\s*$/gm,"");
+
+        // Remove trailing comma
+        treasure = treasure.replace(/(^,)|(,$)/g, '');
+
+        if (treasure.length < 1) {
+            treasure = 'no treasure';
+        }
+
+        container.find('div.output').append(
+            '<p>' + treasure + '</p>'
+        );
+    }
+}
+
 class EmptyZ_UI
 {
     static setup(el) {
@@ -790,6 +901,9 @@ class EmptyZ_UI
                     break;
                 case 'reaction.txt':
                     EmptyZ_UI_Reaction.setup(el);
+                    break;
+                case 'bfrpg-treasure.txt':
+                    EmptyZ_UI_BfrpgTreasure.setup(el);
                     break;
             }
             // Add button
@@ -861,9 +975,17 @@ class EmptyZ_UI
             case 'reaction.txt':
                 EmptyZ_UI_Reaction.run(el);
                 break;
+            case 'bfrpg-treasure.txt':
+                if (typeof EmptyZ_UI_BfrpgTreasure.runCount == 'undefined') {
+                    EmptyZ_UI_BfrpgTreasure.runCount = 0;
+                } else {
+                    EmptyZ_UI_BfrpgTreasure.run(el);
+                    EmptyZ_UI_BfrpgTreasure.runCount++;
+                }
+                break;
             default:
                 // Simple generator with fixed recipe. Line breaks are turned
-                // into paragraphs. Parentheses turn into BRs. Finally, lines
+                // into paragraphs. Semicolons turn into BRs. Finally, lines
                 // starting with a label and colon get STRONG treatment.
                 generator.run().split(/[\r\n]+/).forEach(function(line) {
                     output.append('<p>'
