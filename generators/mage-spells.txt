@@ -39,7 +39,7 @@ table: mage-spells-3
 5   Fly
 6   Haste*
 7   Hold Person
-8   Invisibility 10‘ radius
+8   Invisibility 10' radius
 9   Lightning Bolt
 10  Protection from Evil 10’ radius*
 11  Protection from Normal Missiles
