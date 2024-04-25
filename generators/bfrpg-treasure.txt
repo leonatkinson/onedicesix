@@ -1361,7 +1361,7 @@ table: potion 1d100
 98-100  Potion of Treasure Finding
 
 table: scroll 1d100
-2-3     Cleric Spell Scroll ({cleric-spell})
+1-3     Cleric Spell Scroll ({cleric-spell})
 4-6     Cleric Spell Scroll ({2 cleric-spell})
 7-8     Cleric Spell Scroll ({3 cleric-spell})
 9       Cleric Spell Scroll ({4 cleric-spell})
@@ -1378,11 +1378,11 @@ table: scroll 1d100
 57-61   Scroll of Protection from Magic
 62-75   Scroll of Protection from Undead
 76-85   Map to Treasure Type A ({type-a-cp} cp, {type-a-sp} sp, {type-a-ep} ep,
-    {type-a-gp} gp, {type-a-pp} pp, {type-a-gems}, {type-a-jewelry}, {type-a-magic})
+        {type-a-gp} gp, {type-a-pp} pp, {type-a-gems}, {type-a-jewelry}, {type-a-magic})
 86-89   Map to Treasure Type E ({type-e-cp} cp, {type-e-sp} sp, {type-e-ep} ep,
-    {type-e-gp} gp, {type-e-pp} pp, {type-e-gems}, {type-e-jewelry}, {type-e-magic})
+        {type-e-gp} gp, {type-e-pp} pp, {type-e-gems}, {type-e-jewelry}, {type-e-magic})
 90-92   Map to Treasure Type G ({type-g-cp} cp, {type-g-sp} sp, {type-g-ep} ep,
-    {type-g-gp} gp, {type-g-pp} pp, {type-g-gems}, {type-g-jewelry}, {type-g-magic})
+        {type-g-gp} gp, {type-g-pp} pp, {type-g-gems}, {type-g-jewelry}, {type-g-magic})
 93-100  Map to Magic Items ({1d4 magic})
 
 table: wand 1d100
