@@ -795,7 +795,7 @@ class EmptyZ_UI_BfrpgTreasure
             + 'Treasure Type: '
             + '<input type="text" name="type" placeholder="Treasure types separated by spaces" style="width:75%"><br>'
             + 'Dragon HD: '
-            + '<input type="text" name="hd" placeholder="Dragon HD" style="width:25%"><br>'
+            + '<input type="text" name="hd" placeholder="Dragon HD" style="width:25%" value="6"><br>'
             + '</div>'
         );
     }
@@ -804,10 +804,22 @@ class EmptyZ_UI_BfrpgTreasure
         // compute roll and just do a straight lookup
         let container = jQuery(el);
         let tableID = container.attr('data-table-id');
-        let treasureType = container.find('input[name="type"]').val();
         let generator = EmptyZ_Generators[tableID];
+
+        // Get the input for treasure types, dropping to lowercase and stripping
+        // anything but letters, numbers and spaces. Good to avoid spurious commas.
+        let treasureType = container
+            .find('input[name="type"]')
+            .val()
+            .toLowerCase()
+            .replace(/[^a-z0-9\s]/g, ' ');
+
+        // Start the output
         let treasure = '';
-        let specialCases = ['weapon', 'armor', 'potion', 'scroll', 'wand', 'misc', 'rare'];
+
+        // List of table names to generate from instead of a treasure type letter
+        let specialCases = ['gem', 'jewelry', 'magic', 'weapon', 'armor',
+            'potion', 'scroll', 'wand', 'misc', 'rare'];
 
         // Loop over each type
         treasureType.split(' ').forEach((t) => {
@@ -817,6 +829,11 @@ class EmptyZ_UI_BfrpgTreasure
                 generator.recipe = '{' + t + '}';
                 treasure += generator.run(1);
                 generator.recipe = originalRecipe;
+                return;
+            }
+
+            // Make sure we have a type-<t>-cp table
+            if (typeof generator.tables['type-' + t + '-cp'] === 'undefined') {
                 return;
             }
 
@@ -830,7 +847,7 @@ class EmptyZ_UI_BfrpgTreasure
             treasure += generator.run(1);
 
             // Handle type H gems, jewelry, and magic
-            if (t.toLowerCase().startsWith('h') && !t.toLowerCase().startsWith('h1')) {
+            if (t.startsWith('h') && !t.startsWith('h1')) {
                 let dragonHd = parseInt(container.find('input[name="hd"]').val());
                 let chance = dragonHd * 5;
                 // Loop over the three types
