@@ -45,11 +45,17 @@ To generate a dice roll in a recipe, you may use the following patterns.
 * 3d6-3 (Generates values from 0 to 15)
 
 To make a lookup against a table, put the name of the table in curly braces and
-define the table later in the file. Tables are defined with a header row and a
-list of results. The header row must start with `name: ` and set a unique name.
-Optionally, the header may set a dice roll and a nice name. In the following
-example, the table would be referenced with `{weapon}` and will roll two
-four-sided dice.
+define the table later in the file. You may also specify a repeating table
+reference by putting a dice roll inside the curly braces.
+
+* {table_name}
+* {2 table_name} (roll on the table twice)
+* {2d6+1 table_name} (roll on the table 3-13 times)
+
+Tables are defined with a header row and a list of results. The header row must 
+start with `name: ` and set a unique name. Optionally, the header may set a dice 
+roll and a nice name. In the following example, the table would be referenced 
+with `{weapon}` and will roll two four-sided dice.
 
     name: weapon 2d4 Weapon Used
     2   Sword
@@ -70,7 +76,7 @@ new expressions, the generator makes another pass. Processing continues until
 no expressions remain. This allows for results from one table to refer to
 another or even recursively as in the example above.
 
-See [leonatkinson.com/one-dice-six](https://www.leonatkinson.com/one-dice-six/) for original release.
+See [leonatkinson.com/one-dice-six](https://www.leonatkinson.com/one-dice-six/) for the original release.
 
 ## Installation
 
@@ -99,3 +105,7 @@ See [leonatkinson.com/one-dice-six](https://www.leonatkinson.com/one-dice-six/) 
 * Disable setting versions of css and js files
 ### 1.2.0
 * Updated and added generators
+### 1.3.0
+* Added support for repeaters
+* Added BFRPG treasure generator
+

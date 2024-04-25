@@ -6,7 +6,7 @@
  * Author:          Leon Atkinson
  * Author URI:      https://18int.com/
  * Text Domain:     onedicesix
- * Version:         1.2.0
+ * Version:         1.3.0
  *
  * @package         Onedicesix
  */
