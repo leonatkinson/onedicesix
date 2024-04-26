@@ -4,58 +4,85 @@ recipe: does not use recipes
 repeat: 1
 
 table: deadly_blow 2d6 Result of Deadly Blow
-2       Instant Death from blow to {deadly_blow_location}! The character is dead
-        with no Save vs Death.
-3       Fatal Wound! The character dies in {1d20}0 minutes.<br>
+2       <strong>Instant Death!</strong><br>
+        The PC suffers multiple and extensive injuries,
+        expiring immediately.
+3       <strong>Fatal Wound!</strong><br>
+        Blow to {deadly_blow_location}. The wound is fatal, but the PC won’t
+        actually die for another {1d20}0 minutes. Only a wish can stop the
+        impending hand of doom. Make a Save vs. Death to determine if the PC
+        can remain conscious. Even so, the PC can do nothing more than speak or
+        crawl slowly. If the killing blow was to a limb, it is useless or
+        severed. Blows to the eyes blind the PC. Blows to the ears deafen the
+        PC.
+4-5     <strong>Severed Body {deadly_blow_location}!</strong><br>
+        The killing blow has separated a limb or other body part from the rest
+        of the body. Blades make clean cuts. Crushing weapons turn flesh and
+        bone to mush. Puncture wounds sever a major blood vessel, causing the
+        limb to become paralyzed and to later shrivel and die. Other types of
+        damage, such as fire or acid, burn away flesh over a large area to
+        produce a similar effect. In all cases, the limb is lost without
+        magical regeneration.<br>
         <br>
-        Only a wish or similar effect can heal wound. Knocked Out until death
-        unless Save vs Death is made. If the character makes the save, they are
-        conscious and can move feebly but cannot fight or perform otherwise
-        strenuous actions.<br>
+        If the hit location is the skull or neck and the
+        character wears no helmet, treat this result as a roll of 2 (Instant
+        Death). If the hit location is the trunk (chest, back, gut), and the
+        character wears no armor, treat this result as a roll of 3 (Fatal
+        Wound). Otherwise, the character will <strong>die of bleeding in {1d6+2} rounds</strong>.
+        Make a Save vs. Death to determine if the PC can remain conscious.<br>
         <br>
-        Location of wound is {deadly_blow_location}. Any limb struck is
-        completely useless. If hit in the head, the character is
-        {deadly_blow_head}.
-4-5     Severed  {deadly_blow_location}!<br>
-        <br>
-        Blades sever limbs. Crushing weapons
-        turn flesh and bone to mush. Puncture wounds severe a major blood vessel,
-        causing the limb to become paralyzed and to later shrivel and die. Other
-        types of damage, such as fire or acid, burns away flesh over a large area
-        to produce a similar effect. In all cases, the limb is lost without magical
-        regeneration.<br>
-        <br>
-        If hit location is the head and the character wears no helmet, treat
-        this result as a roll of 2, Instant Death. If the hit location is the
-        trunk, and the character wears no armor, treat this result as a roll of
-        3, Fatal Wound. Otherwise, the character will die of bleeding in
-        {1d6+2} rounds. If the hit location is to the trunk (6-40), a large
-        chunk of flesh is destroyed. Skin may grow back over the wound, but it
-        will always look grotesque. The area is permanently weak and any blow
-        to this spot will instantly kill the character.<br>
+        If the hit location is to the trunk, a large chunk of flesh is
+        destroyed. Skin may grow back over the wound, but it will always look
+        grotesque. The area is permanently weak, and any later blow to this
+        spot will instantly kill the character.<br>
         <br>
         Bleeding characters may be saved with healing magic, a tourniquet, or
         cauterization with fire, except that cauterization will not stop
-        bleeding caused by burns. Surviving characters require {3d6} weeks to
-        recover. Knocked Out until death unless Save vs Death is made.
-6-7     Broken Bone in {deadly_blow_location}! Knocked Out {1d20} rounds unless
-        Save vs Death is made.<br>
+        bleeding caused by burns.<br>
         <br>
-        If hit location is the head (1-5) and no helmet is worn, Save vs Death
-        or fall into a coma. Otherwise, {3d6} weeks to heal before the limb can
-        be used. Character with broken legs or feet cannot stand or walk. If
-        hit location is the the back, the character is permanently paralyzed
-        and unable to walk. If hit location is the chest, broken ribs will
-        prevent strenuous activity for the duration of recovery.
-8-9     Knocked Out for {1d12} rounds from a blow to the head if wearing a helm!
-        If no helmet, then treat as a Broken Bone in {deadly_blow_location}.
-10-11   Stunned for {1d4} rounds and lose helm if wearing helm. Knocked Out for
-        {1d12} rounds if not wearing helm.
-12      Rage: A surge of adrenaline returns {1d4} hit points per hit die. At the
-        end of the combat, the adrenaline drains away, hit points are reduced to
-        zero, and the PC faints for {2d6} rounds. If you roll this more than once in a
-        single combat consider yourself a Bezerker under the effects of a potion of
-        super-heroism.
+        Surviving characters require {3d6} weeks to recover. Until this time, the
+        character can do nothing more strenuous than walk or speak.
+6-7     <strong>Broken Bone in {deadly_blow_location}!</strong><br>
+        The killing blow has shattered the bones indicated by Hit Location,
+        producing an audible snap or grinding sound. In some cases, the broken
+        bone may be protruding from the flesh. The PC falls <strong>unconscious
+        for {1d20} rounds</strong> unless a Save vs. Death Ray is made.<br>
+        <br>
+        If Hit Location is the head and no helmet is worn, Save vs Death Ray or
+        fall into a coma. Otherwise, <strong>the bone heals after {3d6}
+        weeks</strong>, during which time the limb cannot be used. Characters
+        with broken legs or feet cannot stand or walk. Comatose PCs remain in
+        the coma until the bone heals.<br>
+        <br>
+        Broken bones of the arms, legs or chest reduce carrying capacity by
+        half. If the hit location is the the back, the character is permanently
+        paralyzed and unable to walk. If hit location is the chest, broken ribs
+        will prevent strenuous activity for the duration of recovery. A broken
+        bone of the gut ruptures an internal organ.
+8-9     <strong>Knocked Out!</strong><br>
+        A blow to the head had rendered the PC <strong>unconscious for {1d12}
+        rounds</strong>, unless no helmet is worn, in which case treat as a
+        Broken Bone to {deadly_blow_location}. After regaining consciousness,
+        the PC wakes up with <strong>{1d4} hit points</strong>.
+10-11   <strong>Stunned!</strong><br>
+        The PC is <strong>stunned for {1d4} rounds</strong> as a blow to the
+        head dislodges the helmet, which tumbles {2d6} feet away. If no helmet
+        is worn, the PC is <strong>knocked unconscious for 1d12 rounds</strong>.<br>
+        <br>
+        Stunned PCs experience dizziness, ringing in the ears and blurred
+        vision. Movement is halved. Ability bonuses are reduced to -3 for
+        Dexterity, Intelligence, and Charisma. Attacks suffer a -4 penalty.<br>
+        <br>
+        After regaining consciousness, the PC wakes up with <strong>{1d4} hit points</strong>.
+12      <strong>Rage!</strong><br>
+        A raging fury pushes back against the injury, returning the PC to {1d4}
+        hit points. When combat ends, hit points are reduced to zero, and the
+        PC faints for {2d6} rounds.<br>
+        <br>
+        If a PC achieves this result for a second time during a single combat,
+        a berserker effect is produced similar to a potion of heroism. The PC
+        gains a +3 attack bonus and {3d8} temporary hit points for the duration
+        of the combat.
 
 table: deadly_blow_location 1d100 Location of Deadly Blow
 1-10    Top of Skull (INT)
