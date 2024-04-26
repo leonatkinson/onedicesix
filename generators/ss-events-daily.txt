@@ -182,8 +182,8 @@ table: ocean 2d8 Ocean
     Constrict does 2d10 damage to a vessel. {2d2}0' long.
 
 table: ocean-roc 1d8
-1-5 {1d8} Large Rocs AC 18, HD 12 (+10), #At 2 claws/1 bite, Dam 1d8/1d8/2d10, Mv 20' Fly 160' (10'), Sv F12, Ml 9, XP 1875
-6-8 Giant Roc AC 18, HD 32 (+16), #At 2 claws/1 bite, Dam 3d6/3d6/6d6, Mv 20' Fly 160' (10'), Sv F20 at +5, Ml 10, XP 14250
+1-7 {1d8} Large Rocs AC 18, HD 12 (+10), #At 2 claws/1 bite, Dam 1d8/1d8/2d10, Mv 20' Fly 160' (10'), Sv F12, Ml 9, XP 1875
+8   Giant Roc AC 18, HD 32 (+16), #At 2 claws/1 bite, Dam 3d6/3d6/6d6, Mv 20' Fly 160' (10'), Sv F20 at +5, Ml 10, XP 14250
 
 table: ocean-hydra 1d20
 1-5     Hydra AC 16, HD 5 (+10), #At 5, Dam 1d10, Mv 40' (10'), Sv F5, Ml 9, XP 360
@@ -398,10 +398,10 @@ table: small-island 1d12
 
 table: settlement-list 2d6
 2-4     {settlement}
-5-7     {settlement} {settlement}
-8-10    {settlement} {settlement} {settlement}
-11      {settlement} {settlement} {settlement} {settlement}
-12      {settlement} {settlement} {settlement-list}
+5-7     {2 settlement}
+8-10    {3 settlement}
+11      {4 settlement}
+12      {2d4 settlement}
 
 table: settlement 2d4
 2   Small village of {2d6} {settlement-people}, primarily producing {settlement-trade}.
