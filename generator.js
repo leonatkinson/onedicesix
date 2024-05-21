@@ -883,6 +883,38 @@ class EmptyZ_UI_BfrpgTreasure
     }
 }
 
+class EmptyZ_UI_WbOracle
+{
+    static setup(el) {
+        let container = jQuery(el);
+        var params = jQuery('<div class="params">');
+        var selectEstimation = jQuery('<select name="estimation">');
+        selectEstimation.append('<option value="impossible">Practically Impossible</option>');
+        selectEstimation.append('<option value="very-unlikely">Very Unlikely</option>');
+        selectEstimation.append('<option value="unlikely">Unlikely</option>');
+        selectEstimation.append('<option value="middling">Middling</option>');
+        selectEstimation.append('<option value="likely">Likely</option>');
+        selectEstimation.append('<option value="very-likely">Very Likely</option>');
+        selectEstimation.append('<option value="certain">Practically Certain</option>');
+        params.append('<label for="estimation">Estimation</label>');
+        params.append(selectEstimation);
+        container.append(params);
+    }
+
+    static run(el) {
+        let container = jQuery(el);
+        let tableID = container.attr('data-table-id');
+        let generator = EmptyZ_Generators[tableID];
+        let output = container.find('div.output');
+        let estimation = container.find('select[name="estimation"]').val();
+
+        generator.recipe = '{' + estimation + '}';
+        container.find('div.output').append(
+            '<p>' + generator.run() + '</p>'
+        );
+    }
+}
+
 class EmptyZ_UI
 {
     static setup(el) {
@@ -921,6 +953,9 @@ class EmptyZ_UI
                     break;
                 case 'bfrpg-treasure.txt':
                     EmptyZ_UI_BfrpgTreasure.setup(el);
+                    break;
+                case 'wb-oracle.txt':
+                    EmptyZ_UI_WbOracle.setup(el);
                     break;
             }
             // Add button
@@ -998,6 +1033,14 @@ class EmptyZ_UI
                 } else {
                     EmptyZ_UI_BfrpgTreasure.run(el);
                     EmptyZ_UI_BfrpgTreasure.runCount++;
+                }
+                break;
+            case 'wb-oracle.txt':
+                if (typeof EmptyZ_UI_WbOracle.runCount == 'undefined') {
+                    EmptyZ_UI_WbOracle.runCount = 0;
+                } else {
+                    EmptyZ_UI_WbOracle.run(el);
+                    EmptyZ_UI_WbOracle.runCount++;
                 }
                 break;
             default:
