@@ -330,7 +330,7 @@ class EmptyZ_UI_MageSpellbook
         for (var i=1; i <=20 ; i++) {
             selectLevel.append('<option value="'+i+'">'+i+'</option>');
         }
-        params.append('<label for="name">Mage Level</label>');
+        params.append('<label for="level">Mage Level</label>');
         params.append(selectLevel);
         container.append(params);
     }
@@ -415,7 +415,7 @@ class EmptyZ_UI_ClericSpells
         for (var i=2; i <=20 ; i++) {
             selectLevel.append('<option value="'+i+'">'+i+'</option>');
         }
-        params.append('<label for="name">Cleric Level</label>');
+        params.append('<label for="level">Cleric Level</label>');
         params.append(selectLevel);
         container.append(params);
     }
