@@ -62,6 +62,15 @@ function table_block_init() {
         preg_match('/^name:(.*)/', $g, $label);
         $generators[] = [ 'value' => basename($path), 'label' => trim($label[1]) ];
     }
+
+    // Sort by label
+    usort(
+        $generators,
+        function ($a, $b) {
+            return strcmp($a['label'], $b['label']);
+        }
+    );
+
     wp_localize_script( 'table-block-editor', 'onedicesix', [
         'generators' => $generators,
         ] );
