@@ -13,12 +13,12 @@ table: event-ocean 1d100
         {ocean}<br>
         <br>
         The attitude is that {reaction}
-45-66   Land is sighted {2d4} miles away. {land}
-67-74   Spotted {seen-distance}.<br><br>
+45-66   Land may be sighted {2d10} miles away. {land}
+67-74   Possibly spotted {seen-distance}.<br><br>
         {pirates}<br><br>
         Their attitude is that {reaction}<br><br>
         {pirate-illness}
-75-82   Spotted {seen-distance}.<br><br>
+75-82   Possibly spotted {seen-distance}.<br><br>
         {ship}<br><br>
         Their attitude is that {reaction}
 83-89   A fierce storm strikes, lasting {5d6} hours. Ships with sails
@@ -29,7 +29,7 @@ table: event-ocean 1d100
         the tide to rise. If grounded, {gale-ship-damage}.
 90-98   The winds die out and the sea becomes perfectly still. Ships cannot sail
         this day and must be rowed.
-99      Spotted {seen-distance}.<br><br>{gargantua}<br><br>Its attitude is that {reaction}
+99      Possibly spotted {seen-distance}.<br><br>{gargantua}<br><br>Its attitude is that {reaction}
 100     Trapped in a maelstrom for {1d8} rounds. Giant whirlpool. After being
         trapped, suffer 6d6 damage for one round. Then ejected {6d8} miles away.
         To escape with enough rowers, the captain saves versus death.
@@ -63,9 +63,9 @@ table: event-ocean-extra 1d100
         {ocean}<br>
         <br>
         The attitude is that {reaction}
-86-90   Also... Spotted {seen-distance}.<br><br>{pirates}<br><br>Their attitude is that {reaction}
-91-95   Also... Spotted {seen-distance}.<br><br>{ship}<br>Their attitude is that {reaction}
-96-100  Also, land is sighted {2d4} miles away. {land}
+86-90   Also possibly spotted {seen-distance}.<br><br>{pirates}<br><br>Their attitude is that {reaction}
+91-95   Also possibly spotted {seen-distance}.<br><br>{ship}<br>Their attitude is that {reaction}
+96-100  Also, land may be sighted {2d10} miles away. {land}
 
 
 table: direction 1d8
@@ -80,7 +80,7 @@ table: direction 1d8
 
 table: seen-distance 1d8
 1   {4d50} yards away
-2-8 {1d8} miles away
+2-8 {2d10} miles away
 
 table: will-sink 1d10
 1-8     will sink
@@ -405,12 +405,19 @@ table: settlement-list 2d6
 
 table: settlement 2d4
 2   Small village of {2d6} {settlement-people}, primarily producing {settlement-trade}.
+    {small-settlement-ships}
 3   Small village of {4d6} {settlement-people}, primarily producing {settlement-trade}.
+    {small-settlement-ships}
 4   Village of {1d6}00 {settlement-people}, producing {settlement-trade} and {settlement-trade}.
+    {medium-settlement-ships}
 5   Village of {1d20}00 {settlement-people}, producing {settlement-trade} and {settlement-trade}.
+    {medium-settlement-ships}
 6   Village of {2d10}00 {settlement-people}, producing {settlement-trade}, {settlement-trade} and {settlement-trade}.
+    {medium-settlement-ships}
 7   Village of {2d20}00 {settlement-people}, producing {settlement-trade}, {settlement-trade} and {settlement-trade}.
+    {medium-settlement-ships}
 8   Town of {1d12},000 {settlement-people}, specializing in {settlement-trade}.
+    {large-settlement-ships}
 
 table: settlement-people 2d4
 2   gnolls
@@ -434,6 +441,43 @@ table: settlement-trade 1d12
 10  {cargo-food}
 11  iron
 12  {cargo-slaves} slaves
+
+table: small-settlement-ships 1d10
+1-7 The settlement has no port, and no ships are anchored nearby.
+8   The settlement has no port, but a vessel anchors offshore.<br><br>{settlement-ship}
+9   The settlement has a small harbor, currently empty.
+10  The settlement has a small harbor where ships are moored.<br><br>{1d2+1 settlement-ship}
+
+table: medium-settlement-ships 1d10
+1       The settlement has no port, and no ships are anchored nearby.
+2       The settlement has no port, but a vessel anchors offshore.<br><br>{settlement-ship}
+3       The settlement has a small harbor, currently empty.
+4-10    The settlement has a small harbor where ships are moored.<br><br>{1d2+1 settlement-ship}
+
+table: large-settlement-ships 1d10
+1       The settlement has a small harbor where several ships are moored.<br>br>
+        {1d4+1 settlement-ship}
+2       The settlement has a nice where ships are moored.<br>br>
+        {1d4+1 settlement-ship}
+3-7     The settlement has a large port where ships are moored.<br>br>
+        {2d6 settlement-ship}<br><br>
+        A few other ships are anchored offshore.<br><br>
+        {1d3 settlement-ship}
+8-10    The settlement has a large port where ships are moored.<br>br>
+        {2d8 settlement-ship}<br><br>
+        More ships are anchored offshore.<br><br>
+        {1d8 settlement-ship}
+
+table: settlement-ship
+1       {pirates}<br><br>
+2-8     The sail of a merchant ship is sighted, flying the flag of {ship-alignment}.<br>
+        {merchants}<br><br>
+9-10    The sail of a carrack is sighted, flying the flag of {ship-alignment}.<br>
+        The ship is 60'x20', loaded with {1d135}/135 tons of {cargo}. Move 30'. 10 hardness.
+        120 HP.  The ship has four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.<br>
+        The crew are {3d8} Level 1 {sailor-race} Fighters, led by a Level {1d4+2} {sailor-race} Fighter
+        and {1d3} Level {1d4+1} {sailor-race} Fighters.<br>
+        AC 11, #At 1 sword, Dam 1d6, Mv 40', Ml 9<br><br>
 
 table: reaction 2d6
 2       <strong>they pretend to be in trouble.</strong>
