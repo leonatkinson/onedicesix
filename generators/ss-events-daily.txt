@@ -1,5 +1,5 @@
 name: Daily Events in the Southern Seas
-description:
+description: Used some castaways from https://elfmaidsandoctopi.blogspot.com/2018/07/d100-castaways.html
 recipe: {event-ocean}<br>
         <br>
         {event-ocean-extra}<br>
@@ -363,38 +363,91 @@ table: gargantua 1d2
 
 
 table: castaway 1d18
-1   Miturina leads {2d6} stranded mutineers who will try to take the ship of any rescue parties to resume the pirate life.
-2   Elathe escaped a pirate ship to keep her virtue and is wary of any male crews, her father a weathy, spice merchant will reward anyone who saves her.
-3   Arara was cast ashore for his evil cult ways after attempting to convert other shipmates, he has had demons bring him evil spellbooks.
-4   Malb, survived a wreck and has been exploring prehuman fish man ruins in volcanic caves under the island
-5   Tangec, is sole survivor of island of meat eating apes that ate fellow castaways. He believes they guard a golden ape god idol in a cave
-6   Mataella led his coven of 2d6 cultists here at direction of a demon patron. They need to replace some lost coven members for a summoning and will sacrifice the rest of any strangers they meet
-7   Hermi (halfling) herds goats he captured and lives in peace. He would like a wife or company but happy with his goats and will trade cheese and milk and hide
-8   Nianel abandoned on shore convinced there was treasure on the island. There are mysterious basalt colums in the reef and he is sure there is a hidden cave full of gold and pearls
-9   Rolcor (dwarf) made a devil's pact to become king and was promptly stranded on the island by his crewmates and found a strange gold crown. He will do anything to get off and devote his life to killing the devils minions
-10  Uratim was lured ashore by a siren but managed to escape while his shipmates were eaten because he is deaf. He is keen to escape but vengence against the treasure hording creatures
-11  Mamasti survived a ship attack by lycanthropic seawolves and hides in his lair in fear of the beasts who live near in the sea
-12  Edre (dwarf) came here for treasure but shipmates were killed by undead pirates and only he survived. The ghosts even took the ship and wrecked it on a reef where Dick cant get at it for goods that might aid him
-13  Oranai (elf) exhibited plague symptoms and was abandoned. He is still a carrier but syptoms are mostly gone. He will enthusiastically join a crew
-14  Sian is a witch who sunk the ship she travelled on when sailors harassed her. She lives well enough but wants to return to civilisation. She will use her charms and magic to help and is happy to have a disposable husband
-15  Manana's ship was sunk by a sea serpent sent by god to punish captain, will join a crew but wary of sacreligious crewmen and very supersticious
-16  Fatir is a werewolf and thrown overboard after eating fellow crewman. Has been fine living on island alone and will offer to join a crew
-17  Malain shot an albatross and the gods of the sea hate him, any ship he sails on will face terrible ordeals while he is aboard
-18  Talla travelled here with wizard master who died exploring reef caves looking for prehuman treasures. She has kept up her study to fend off aggressive tribes and will try to get visitors to recover her masters corpse with several magic items
+1   Miturina leads {2d6} a band of mutineers who will try to take the ship of any
+    rescue parties to resume the pirate life.
+2   Elathe escaped a pirate ship to keep her virtue and is wary of any male crews,
+    her father a weathy, spice merchant will reward anyone who saves her.
+3   Arara was cast ashore for his evil cult ways after attempting to convert
+    other shipmates. Demons bring him evil spellbooks.
+4   Malb, survived a wreck and has been exploring prehuman fish man ruins in
+    volcanic caves under the island.
+5   Tangec, is sole survivor on an island of meat-eating apes that ate his fellow
+    castaways. He believes they guard a golden ape god idol in a cave.
+6   Mataella led his coven of {2d6} cultists here at direction of a demon patron.
+    They need to replace some lost coven members for a summoning and will
+    sacrifice the rest of any strangers they meet.
+7   Hermi the halfling herds goats he captured and lives in peace. He would like
+    a wife or company, but is otherwise happy with his goats. He will trade cheese,
+    milk and leather.
+8   Nianel was abandoned on shore, convinced there was treasure on the island.
+    There are mysterious basalt colums in the reef and he is sure there is a
+    hidden cave full of gold and pearls.
+9   Rolcor the dwarf made a devil's pact to become king and was promptly stranded
+    on the island by his crewmates. He recently found a strange golden crown.
+    He will do anything to get off the island, and will devote his life to killing
+    the devil's minions.
+10  Uratim was lured ashore by a siren but managed to escape while his shipmates
+    were eaten because he is deaf. He is keen to escape, and wants vengence
+    against the treasure-hording creatures.
+11  Mamasti survived a ship attack by lycanthropic seawolves and hides in his
+    lair in fear of the beasts who live near in the sea.
+12  Edre (dwarf) came here for treasure but shipmates were killed by undead
+    pirates and only he survived. The ghosts even took the ship and wrecked it
+    on a reef where Edre cant get at it for goods that might aid him.
+13  Oranai (elf) exhibited plague symptoms and was abandoned. He is still a
+    carrier but syptoms are mostly gone. He will enthusiastically join a crew.
+14  Sian is a witch who sunk the ship she travelled on when sailors harassed her.
+    She lives well enough but wants to return to civilisation. She will use her
+    charms and magic to help and is happy to have a disposable husband.
+15  Manana's ship was sunk by a sea serpent sent by god to punish captain,
+    will join a crew but wary of sacreligious crewmen and very supersticious.
+16  Fatir is a werewolf and thrown overboard after eating fellow crewman. Has
+    been fine living on island alone and will offer to join a crew.
+17  Malain shot an albatross and the gods of the sea hate him, any ship he sails
+    on will face terrible ordeals while he is aboard.
+18  Talla travelled here with wizard master who died exploring reef caves looking
+    for prehuman treasures. She has kept up her study to fend off aggressive tribes
+    and will try to get visitors to recover her master's corpse with several magic items.
 
 table: small-island 1d12
-1   Village of grass shacks where friendly natives welcome visitors. They worship a dryad on the island their queen who likes to adopt new husbands from handsome guests
-2   Grass shack tribe who have all degenerated into hairy ape folk due to exposure to a strange star stone that fell from the sky. Ape folk hope kidnapping new blood will retard the magic and keep them human
-3   Tribe of sea elves with goblinoid slaves and troops for defence. Mostly shun humans but might trade if given gifts or need something. Know many shunned islands adventurers would think worth a look
-4   Sea hag with her two troll sons, giant pet vulture she rides and a cyclops son. Wrecks on shore and large stone cottage built into cliff are visible. Undead sailors lurk under the sea here and walk all over the island. She has lots of treasure from aeons here
-5   A minor sea godess lives in her palace with sea elf and golem servants. Many fierce beasts live here like panthers and wild boar once visiting sailors who thought island dwellers helpless. Locals will inform godess of strangers who will watch them in her pearl from afar and decide if they need polymorphing or not. She has a vast library detailing events from oldest times when gods made the world
-6   Tribe of islander marine goblins in grass shacks with long outrigger canoes, huge totem poles and a idol to underwater emperor of the local sea
-7   Tribe of tako octopus fairy folk living in grass shacks willing to trade marine treasures and spells from their huge stone tablet spell books aranged around island. At a yearly festival they erect a new spell carved monolith for octopus wizardry
-8   Empty grass village with wild boar and goats. Signs that raiders kidnapped the people here and eventually new island nomads will resetle place. A well in the village and some stone idols dot the forersts demonstrate stone building
-9   Island of geysers, boiling mud pools and a village of lava abhuman islander tribe live here usin inhospitible geography to ward away strangers. Ancient tidaly submerged ruins of some elder marine race here show glyphs depicting the ancients enslaving humans in a long lost sea empire
-10  Islanders in grass shack worshipa ancient catfish folk wizard they revived who has since driven away enemies and seeks to slowly breed the humans into fish folk over time. A few locals think protection of fish god not worth becominv fish
-11  Old stone monastary built here for isolation still has hermits working on library and farming. Friendly but many are ex crusaders and do do have an armoury
-12  Old ruined monastary on hill with a few shacks where some fisherfolk have settled. They report the ruins are haunted and hear bells and chanting at night
+1   Village of grass shacks where friendly natives welcome visitors. They worship
+    a dryad on the island their queen who likes to adopt new husbands from handsome guests.
+2   Grass shack tribe who have all degenerated into hairy ape folk due to
+    exposure to a strange star stone that fell from the sky. Ape folk hope
+    kidnapping new blood will retard the magic and keep them human.
+3   Tribe of sea elves with goblinoid slaves and troops for defence. Mostly shun
+    humans but might trade if given gifts or need something. Know many shunned
+    islands adventurers would think worth a look.
+4   Sea hag with her two troll sons, giant pet vulture she rides and a cyclops son.
+    Wrecks on shore and large stone cottage built into cliff are visible.
+    Undead sailors lurk under the sea here and walk all over the island. She has
+    lots of treasure from aeons here.
+5   A minor sea godess lives in her palace with sea elf and golem servants. Many
+    fierce beasts live here like panthers and wild boar once visiting sailors who
+    thought island dwellers helpless. Locals will inform godess of strangers who
+    will watch them in her pearl from afar and decide if they need polymorphing or not.
+    She has a vast library detailing events from oldest times when gods made the world.
+6   Tribe of islander marine goblins in grass shacks with long outrigger canoes,
+    huge totem poles and a idol to underwater emperor of the local sea.
+7   Tribe of tako octopus fairy folk living in grass shacks willing to trade
+    marine treasures and spells from their huge stone tablet spell books aranged
+    around island. At a yearly festival they erect a new spell carved monolith
+    for octopus wizardry.
+8   Empty grass village with wild boar and goats. Signs that raiders kidnapped
+    the people here and eventually new island nomads will resetle place. A well
+    in the village and some stone idols dot the forersts demonstrate stone building.
+9   Island of geysers, boiling mud pools and a village of lava abhuman islander
+    tribe live here usin inhospitible geography to ward away strangers. Ancient
+    tidaly submerged ruins of some elder marine race here show glyphs depicting
+    the ancients enslaving humans in a long lost sea empire.
+10  Islanders in grass shack worship an ancient catfish folk wizard they revived
+    who has since driven away enemies and seeks to slowly breed the humans into
+    fish folk over time. A few locals think protection of the fish god is not
+    worth becoming fish.
+11  Old stone monastary built here for isolation still has hermits working on
+    library and farming. Friendly but many are ex-crusaders.
+12  Old ruined monastary on hill with a few shacks where some fisherfolk have
+    settled. They report the ruins are haunted and hear bells and chanting at night.
 
 table: settlement-list 2d6
 2-4     {settlement}
@@ -405,19 +458,19 @@ table: settlement-list 2d6
 
 table: settlement 2d4
 2   Small village of {2d6} {settlement-people}, primarily producing {settlement-trade}.
-    {small-settlement-ships}
+    {settlement-government} {small-settlement-ships}
 3   Small village of {4d6} {settlement-people}, primarily producing {settlement-trade}.
-    {small-settlement-ships}
+    {settlement-government} {small-settlement-ships}
 4   Village of {1d6}00 {settlement-people}, producing {settlement-trade} and {settlement-trade}.
-    {medium-settlement-ships}
+    {settlement-government} {medium-settlement-ships}
 5   Village of {1d20}00 {settlement-people}, producing {settlement-trade} and {settlement-trade}.
-    {medium-settlement-ships}
+    {settlement-government} {medium-settlement-ships}
 6   Village of {2d10}00 {settlement-people}, producing {settlement-trade}, {settlement-trade} and {settlement-trade}.
-    {medium-settlement-ships}
+    {settlement-government} {medium-settlement-ships}
 7   Village of {2d20}00 {settlement-people}, producing {settlement-trade}, {settlement-trade} and {settlement-trade}.
-    {medium-settlement-ships}
+    {settlement-government} {medium-settlement-ships}
 8   Town of {1d12},000 {settlement-people}, specializing in {settlement-trade}.
-    {large-settlement-ships}
+    {settlement-government} {large-settlement-ships}
 
 table: settlement-people 2d4
 2   gnolls
@@ -427,6 +480,49 @@ table: settlement-people 2d4
 6   humans, dwarves, elves and halflings
 7   elves
 8   orcs
+
+table: settlement-government 1d21
+1   No formal government enforces any laws here.
+2   No government exists per se, except when an ad hoc jury forms to deliver judgements.
+3   All government decisions are made by vote of all residents.
+4   Leaders with absolute power are elected by popular vote every {1d10} years.
+5   The industrial guilds operate the government.
+6   The government is run by council of {settlement-government-race} that decide by vote.
+7   The people are governed by an aristocracy.
+8   The people are ruled by the exceptionally wise, as determined by an ancient ritual.
+9   The people are ruled by the exceptionally intelligent, as determined by an ancient ritual.
+10  The people are ruled by the exceptionally strong, as determined by an ancient rite.
+11  The people are rulled by a guild of judges.
+12  Government power is held by the wealthy.
+13  The military operates the government.
+14  {settlement-government} Except, the government is really run by a secret cabal of {settlement-government-race}.
+15  The people are ruled by the priests.
+16  The people are governed by those deemed most honorable.
+17  The people are ruled absolutely by a {settlement-autocrat} monarch.
+18  The people are ruled by the banking guild.
+19  The people are ruled by thieves.
+20  The people are ruled by the merchant guild.
+21  All decisions of law are made by religious rite.
+
+table: settlement-government-race 2d3
+2   halflings
+3   elves
+4   humans
+5   dwarves
+6   orcs
+
+table: settlement-autocrat 1d10
+1   human
+2   elf
+3   dwarf
+4   halfling
+5   orc
+6   ogre
+7   dragon
+8   demigod
+9   mermaid
+10  demon
+
 
 table: settlement-trade 1d12
 1   {cargo-cloth}

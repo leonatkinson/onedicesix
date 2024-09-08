@@ -108,6 +108,19 @@ See [leonatkinson.com/one-dice-six](https://www.leonatkinson.com/one-dice-six/) 
 ### 1.3.0
 * Added support for repeaters
 * Added BFRPG treasure generator
-### unreleased
+### 1.4.0
 * Fix cargo-food typo
+* Fix label assignments
+* Add Wight-Box Oracle
+* Sort generator list by name
+* Update text of death generator
+* Reduce chance of Giant Roc
+* Use repeaters for island settlements
+### 1.4.1
+Small adjustments to daily events on the southern seas.
+    
+* Villages on islands now have ships in harbor or nearby
+* Spotted distances can be longer and now marked as "possibly" spotted.
+### 1.4.2
+* Add forms of government for villages.
 
