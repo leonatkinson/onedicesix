@@ -1,0 +1,119 @@
+name: Poison
+description: Random type of poison
+recipe:
+    This poison is delivered by {delivery}.
+    Its strength is considered {strength}.
+    Its effects are felt {delay}.
+    The poison {effect}.
+    {permanence}.
+repeat: 1
+
+table: delivery 1d20
+1-10    ingesting
+11-15   getting in the blood
+16-18   touch
+19-20   inhaling
+
+table: strength 1d10
+1-5     normal
+6       very weak, +4 to save
+7       weak, +2 to save
+8       strong -2 to save
+9       very strong, -4 to save
+10      extremely potent, -8 to save
+
+table: delay 1d10
+1-5     immediately
+6-7     in {1d3}d{delay-dice} rounds
+8       in {1d2}d{delay-dice} hours
+9       in {1d2}d{delay-dice} days
+10      at random, {1d8}0% chance checked every {delay-period}
+
+table: delay-dice 1d6
+1   2
+2   4
+3   6
+4   8
+5   10
+6   20
+
+table: delay-period 1d4
+1   turn
+2   day
+3   {1d4+1} days
+4   week
+
+table: effect 1d8
+1       does {damage-total} damage, {damage-save}. {damage-repeat}
+2       causes death, {death-save}
+3       induces sleep for {sleep-duration}
+4       reduces {stat} by {stat-damage}, {damage-save}. {damage-repeat}
+5       causes disease, save vs poison +CON to resist. {disease-duration}
+6       causes confusion, save for no effect
+7       causes memory loss, save vs poison or lose 1d6 memorized spells
+8       causes blindness
+
+table: damage-total
+1       1d6
+2       1d8
+3       2d6
+4       3d6
+5       3d10
+6       5d6
+7       5d10
+8       5d20
+
+table: damage-save 1d6
+1-2     save for half damage
+3-5     save for no damage
+6       no saving throw
+
+table: death-save 1d6
+1-2     save to lose 50% of HP instead
+3-5     save for no effect
+6       no save
+
+table: effect-save 1d6
+1-4     save for no effect
+5-6     no save
+
+table: damage-repeat 1d8
+1-4     The damage is taken all at once
+5       The damage is taken at a rate of {1d6} hp/round
+6       The damage is taken at a rate of {1d4}d6 hp/round
+7       Repeat for {1d6} rounds
+8       Repeat for {1d4}d6 rounds
+
+table: permanence 1d10
+1-5     Damage taken may be healed normally
+6       The effects of the poison are permanent
+7       The effects of the poison may be reversed with a remove curse spell
+8       The effects of the poison may be reversed with a restoration spell
+9       The effects wear off in {1d6} hours
+10      The effects are permanent and may not be reversed except by a wish
+
+
+table: sleep-duration 1d4
+1   3d6 rounds
+2   2d6 turns
+3   2d6 hours
+2   1d6+1 days
+
+table: stat 1d6
+1   STR
+2   DEX
+3   CON
+4   INT
+5   WIS
+6   CHA
+
+table: stat-damage 1d10
+1-3     1
+4-6     2
+7-9     1d4
+10      1d6
+
+table: disease-duration 1d8
+1-5     The disease is mild, requiring rest for 1d3 weeks
+6-7     The disease is severe, disabling for 1d2 weeks, then requiring rest for another 1d2 weeks
+8       The disease is terminal
