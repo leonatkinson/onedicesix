@@ -123,4 +123,6 @@ Small adjustments to daily events on the southern seas.
 * Spotted distances can be longer and now marked as "possibly" spotted.
 ### 1.4.2
 * Add forms of government for villages.
-
+### 1.5.0
+* Make minor adjustments to monster generator
+* Add poison generator
