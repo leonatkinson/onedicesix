@@ -52,9 +52,9 @@ reference by putting a dice roll inside the curly braces.
 * {2 table_name} (roll on the table twice)
 * {2d6+1 table_name} (roll on the table 3-13 times)
 
-Tables are defined with a header row and a list of results. The header row must 
-start with `name: ` and set a unique name. Optionally, the header may set a dice 
-roll and a nice name. In the following example, the table would be referenced 
+Tables are defined with a header row and a list of results. The header row must
+start with `name: ` and set a unique name. Optionally, the header may set a dice
+roll and a nice name. In the following example, the table would be referenced
 with `{weapon}` and will roll two four-sided dice.
 
     name: weapon 2d4 Weapon Used
@@ -118,7 +118,7 @@ See [leonatkinson.com/one-dice-six](https://www.leonatkinson.com/one-dice-six/) 
 * Use repeaters for island settlements
 ### 1.4.1
 Small adjustments to daily events on the southern seas.
-    
+
 * Villages on islands now have ships in harbor or nearby
 * Spotted distances can be longer and now marked as "possibly" spotted.
 ### 1.4.2
@@ -126,3 +126,6 @@ Small adjustments to daily events on the southern seas.
 ### 1.5.0
 * Make minor adjustments to monster generator
 * Add poison generator
+### 1.5.1
+* Add time of day for southern sea events
+* Add island size in miles or yards

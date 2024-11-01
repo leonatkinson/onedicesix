@@ -1,11 +1,17 @@
 name: Daily Events in the Southern Seas
 description: Used some castaways from https://elfmaidsandoctopi.blogspot.com/2018/07/d100-castaways.html
-recipe: {event-ocean}<br>
+recipe: At {event-time}, {event-ocean}<br>
         <br>
         {event-ocean-extra}<br>
         <br>
         If fishing, {fishing}.
 repeat: 1
+
+table: event-time 1d4
+1   dawn
+2   {1d4+1} hours after dawn
+3   noon
+4   {1d4+1} hours past noon
 
 table: event-ocean 1d100
 1-22    No event this day.
@@ -58,14 +64,14 @@ table: event-ocean-extra 1d100
 75      Playful dolphins ride the bow waves.
 76-79   Also, the winds die out and the sea becomes perfectly still. Ships cannot sail
         this day and must be rowed.
-80-85   Also...<br>
+80-85   {1d10+1} hours later...<br>
         Spotted {1d10+10}0 yards away...<br>
         {ocean}<br>
         <br>
         The attitude is that {reaction}
-86-90   Also possibly spotted {seen-distance}.<br><br>{pirates}<br><br>Their attitude is that {reaction}
-91-95   Also possibly spotted {seen-distance}.<br><br>{ship}<br>Their attitude is that {reaction}
-96-100  Also, land may be sighted {2d10} miles away. {land}
+86-90   {1d10+1} hours later, also possibly spotted {seen-distance}.<br><br>{pirates}<br><br>Their attitude is that {reaction}
+91-95   {1d10+1} hours later, also possibly spotted {seen-distance}.<br><br>{ship}<br>Their attitude is that {reaction}
+96-100  {1d10+1} hours later, land may be sighted {2d10} miles away. {land}
 
 
 table: direction 1d8
@@ -100,11 +106,32 @@ table: land-nearby 1d10
 
 
 table: land 1d10
-1       Tiny desert island with a castaway. {castaway}
-2-5     Tiny desert island. {land-food}
-6       Small island. {small-island}
-7-8     Small island. {settlement}
-9-10    Large island. {settlement-list}
+1       Desert islet ({island-tiny}) with a castaway. {castaway} {land-food}
+2-5     Desert islet ({island-tiny}). {land-food}
+6       Small island ({island-small}). {small-island}
+7-8     Small island ({island-small}). {settlement}
+9-10    Large island ({island-large}). {settlement-list}
+
+table: island-tiny 1d10
+1       {1d10}00 yards x {1d10}00 yards
+2-3     0.{1d9}mi x 0.{1d9}mi
+4-7     1.{1d4} x 1.{1d4}mi
+8-9     {1d2}.{1d6}mi x {1d2}.{1d6}mi
+10      {1d3}.{1d6}mi x {1d3}.{1d6}mi
+
+table: island-small 1d10
+1       {1d4}mi x {1d4}mi
+2-3     {1d4+1}mi x {1d4+1}mi
+4-7     {2d4}mi x {2d4}mi
+8-9     {2d6}mi x {2d6}mi
+10      {1d8+4}mi x {1d8+4}mi
+
+table: island-large 1d10
+1       {1d4}0mi x {1d4}0mi
+2-3     {1d4+1}0mi x {1d4+1}0mi
+4-7     {2d4}0mi x {2d4}0mi
+8-9     {2d6}0mi x {2d6}0mi
+10      {1d8+4}0mi x {1d8+4}0mi
 
 table: land-food 1d10
 1-5     No usuable food or water.
