@@ -477,13 +477,20 @@ table: vengeful-success 1d10
 8-10    but he is unable to find the target
 
 table: vip-visit 1d1
-1   An important official comes on a formal visit to the province.
-    {vip-visit-reason}
+1   An important person arrives in town. {vip-visit-reason}
 
-table: vip-visit-reason 1d6
+table: vip-visit-reason 1d10
 1   He has arrived to investigate the misdeeds of a local official and travels
     in disguise. {vip-visit-pcs}
 2   The visit is marked by official banquets and feasts.
+3   A banished warlord seeks to rally allies to reclaim his stolen throne. {vip-visit-pcs}
+4   A mysterious woman with hissing voice seeks a hidden grimoire.
+5   A warlord demands tribute, promising profitable allliance or terrible bloodshed.
+6   A cursed prince seeks relief from a witch he believes to live in town.
+7   A wiry man, wrapped in a cloak is an alchemist seeking a rare reagent for his quest to brew a potion of immortality.
+8   An aggressive swordmistress seeks a renegade wizard.
+9   A wandering seer with milky eyes shuffles into town, spreading prophesies of doom. {vip-visit-pcs}
+10  A priestess and her entourage preaches purification and the destruction of false idols. {vip-visit-pcs}
 
 table: vip-visit-pcs 1d2
 1   The PCs are hired to protect the VIP.
