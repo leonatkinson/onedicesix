@@ -107,10 +107,10 @@ table: land-nearby 1d10
 
 table: land 1d10
 1       Desert islet ({island-tiny}) with a castaway. {castaway} {land-food}
-2-5     Desert islet ({island-tiny}). {land-food}
-6       Small island ({island-small}). {small-island}
-7-8     Small island ({island-small}). {settlement}
-9-10    Large island ({island-large}). {settlement-list}
+2-5     Desert islet ({island-tiny}). {land-food} {adventure-location}
+6       Small island ({island-small}). {small-island} {adventure-location-list}
+7-8     Small island ({island-small}). {settlement} {adventure-location-list}
+9-10    Large island ({island-large}). {settlement-list} {adventure-location-list}
 
 table: island-tiny 1d10
 1       {1d10}00 yards x {1d10}00 yards
@@ -550,7 +550,6 @@ table: settlement-autocrat 1d10
 9   mermaid
 10  demon
 
-
 table: settlement-trade 1d12
 1   {cargo-cloth}
 2   {cargo-skins}
@@ -601,6 +600,79 @@ table: settlement-ship
         The crew are {3d8} Level 1 {sailor-race} Fighters, led by a Level {1d4+2} {sailor-race} Fighter
         and {1d3} Level {1d4+1} {sailor-race} Fighters.<br>
         AC 11, #At 1 sword, Dam 1d6, Mv 40', Ml 9<br><br>
+
+table: adventure-location-list 2d6
+2-4     No adventure locations.
+5-7     {1d2 adventure-location}
+8-10    {3 adventure-location}
+11      {4 adventure-location}
+12      {2d4 adventure-location}
+
+table: adventure-location 2d4
+2   The {adventure-location-spot} of the island has a monastery. {adventure-monastery}
+3   The {adventure-location-spot} of the island has a wizard's tower. {adventure-wizard}
+4   In the {adventure-location-spot} of the island are ruins of {adventure-ruins}
+    which might hide artifacts but also angry spirits.
+5   Hidden in the {adventure-location-spot} of the island is an underground dungeon
+    with traps, puzzles and treasure guarded by creatures. {adventure-dungeon}
+6   A shipwreck can be seen on the {adventure-shipwreck-side} side of the island,
+    {adventure-shipwreck-onshore}. {settlement-ship}
+7   The {adventure-location-spot} of the island has an abandoned {adventure-abandoned}.
+8   Hidden in the {adventure-location-spot} of the island is a glowing portal to another realm.
+
+table: adventure-location-spot 1d10
+1   north
+2   northeast
+3   east
+4   southeast
+5   south
+6   southwest
+7   west
+8   northwest
+9-10 center
+
+table: adventure-monastery 1d6
+1   Peaceful monks simply need a haven from the rest of the world.
+2   Monks guard a terrible secret.
+3   An order of the Anointed One studies scripture.
+4   Heretics to the Anointed One are developing their new ideas.
+5   An evil cult languishes in obscurity.
+6   An evil cult plots a terrible crime.
+
+table: adventure-wizard 1d4
+1   The wizard is still here.
+2   The wizard has left for a while, but will be back.
+3   The wizard died some time ago.
+4   The wizard abandoned the tower and it's crumbling.
+
+table: adventure-ruins 1d4
+1   a small settlement
+2   a religious monument
+3   a fort
+4   a farm
+
+table: adventure-dungeon 1d4
+1   The dungeon was built as a prison.
+2   The dungeon is a treasure vault.
+3   The dungeon is a tomb.
+4   The dungeon is lair.
+
+table: adventure-shipwreck-side 1d4
+1   north
+2   south
+3   east
+4   west
+
+table: adventure-shipwreck-onshore 1d4
+1   on the beach
+2-4 {5d10+50} yards off the beach
+
+table: adventure-abandoned 1d4
+1   castle
+2   temple
+3   mine
+4   plantation
+
 
 table: reaction 2d6
 2       <strong>they pretend to be in trouble.</strong>

@@ -129,3 +129,5 @@ Small adjustments to daily events on the southern seas.
 ### 1.5.1
 * Add time of day for southern sea events
 * Add island size in miles or yards
+### 1.5.2
+* Add adventure locations to southern sea events
