@@ -117,7 +117,7 @@ table: room
 # Shape and size
 table: shape 1d100
 1-60    a rectangle {2d4}0 feet wide by {2d4}0 feet wide and a {ceiling} foot ceiling
-61-66   an isoceles triangle pointing {door-direction} with two {2d4}0 foot sides and a {2d4}0 foot base. It has a {ceiling} foot ceiling
+61-66   an isosceles triangle pointing {door-direction} with two {2d4}0 foot sides and a {2d4}0 foot base. It has a {ceiling} foot ceiling
 67-72   a circle {2d4}0 feet across with a {ceiling} foot ceiling
 73-78   a semi-circle {2d4}0 feet across, flat side to the {door-direction}, and a {ceiling} foot ceiling
 79-84   an oval {2d4}0 feet across by {2d4}0 feet tall with a {ceiling} foot ceiling
