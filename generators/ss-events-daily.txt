@@ -696,10 +696,14 @@ table: reaction 2d6
 
 table: fishing 1d6
 1-2     no fish caught
-3       {fishing-junk} is pulled out of the water
-4       {1d4} {fishing-small} are caught
-5       {1d20} {fishing-small} are caught
-6       a {fishing-big} is caught
+3       {fishing-junk} is pulled out of the water {fishing-sick}
+4       {1d4} {fishing-small} are caught {fishing-sick}
+5       {1d20} {fishing-small} are caught {fishing-sick}
+6       a {fishing-big} is caught {fishing-sick}
+
+table: fishing-sick 1d20
+1-19    (no chance of disease)
+20      (check for disease)
 
 table: fishing-junk
 1   an old boot
@@ -712,77 +716,78 @@ table: fishing-junk
 8   the bloated corpse of a {sailor-race}
 
 table: fishing-small
-1   Bluefish
-2   Bonefish
-3   Bonito
-4   Bumper
-5   Croakers
-6   Red Drums
-7   Kingfish
-8   Planehead Filefish
-9   Flounders
-10  Coney
-11  Red Hind Groupers
-12  Speckled Hind Groupers
-13  Marbled Groupers
-14  Red Groupers
-15  Scamp Groupers
-16  Yellowedge Groupers
-17  Blue Striped Grunts
-18  White Grunts
-19  Blueback Herring
-20  Hogfish
-21  spotfin hogfish
-22  Lesser Amberjacks
-23  Horse-Eye Jacks
-24  Rainbow Runner Jacks
-25  Banded Rudderfish
-26  Lionfish (poisonous)
-27  Lookdowns
-28  Cero Mackerels
-29  Margates
-30  Pigfish
-31  Pinfish
-32  Jolthead Porgies
-33  Sheepshead Porgies
-34  Black Sea Bass
-35  Slippery Dicks
-36  Blackfin Snappers
-37  Dog Snappers
-38  Mutton Snappers
-39  Spadefish
-40  Tautogs
-41  Triggerfish
+1	Bluefish ({1d7}lbs each)
+2	Bonefish ({1d5}lbs each)
+3	Bonito ({1d12}lbs each)
+4	Bumper (0.{1d4+1}lbs each)
+5	Croakers ({1d3+1}lbs each)
+6	Red Drums ({1d20}lbs each)
+7	Kingfish ({1d25}lbs each)
+8	Planehead Filefish (1.{1d5}lbs each)
+9	Flounders ({1d10}lbs each)
+10	Coney (1.{1d5}lbs each)
+11	Red Hind Groupers ({1d25}lbs each)
+12	Speckled Hind Groupers ({1d25}lbs each)
+13	Marbled Groupers ({1d25}lbs each)
+14	Red Groupers ({1d25}lbs each)
+15	Scamp Groupers ({1d25}lbs each)
+16	Yellowedge Groupers ({1d20}lbs each)
+17	Blue Striped Grunts (1.{1d5}lbs each)
+18	White Grunts (1.{1d5}lbs each)
+19	Blueback Herring (0.{1d4+1}lbs each)
+20	Hogfish ({1d10}lbs each)
+21	Spotfin Hogfish ({1d10}lbs each)
+22	Lesser Amberjacks ({1d10}lbs each)
+23	Horse-Eye Jacks ({1d12}lbs each)
+24	Rainbow Runner Jacks ({1d8}lbs each)
+25	Banded Rudderfish ({1d6}lbs each)
+26	Lionfish (poisonous) (1.{1d5}lbs each)
+27	Lookdowns (1.{1d5}lbs each)
+28	Cero Mackerels ({1d10}lbs each)
+29	Margates ({1d5}lbs each)
+30	Pigfish (1.{1d5}lbs each)
+31	Pinfish (0.{1d4+1}lbs each)
+32	Jolthead Porgies ({1d5}lbs each)
+33	Sheepshead Porgies ({1d5}lbs each)
+34	Black Sea Bass ({1d3}lbs each)
+35	Slippery Dicks (0.{1d4+1}lbs each)
+36	Blackfin Snappers ({1d15}lbs each)
+37	Dog Snappers ({1d15}lbs each)
+38	Mutton Snappers ({1d15}lbs each)
+39	Spadefish ({1d8}lbs each)
+40	Tautogs ({1d8}lbs each)
+41	Triggerfish ({1d5}lbs each)
+
 
 table: fishing-big
-1   Barracuda
-2   Cobia
-3   Mahi Mahi
-4   Black Drum
-5   Black grouper
-6   Gag Grouper
-7   Goliath Grouper
-8   Yellowfin Grouper
-9   Greater Amberjack
-10  King Mackerel
-11  Blue Marlin
-12  White Marlin
-13  Black Marlin
-14  Needlefish
-15  Oilfish
-16  Permit
-17  Big-Scale Pomfret
-18  Pompano
-19  Sailfish
-20  Sawfish
-21  Striped Bass
-22  Red Snapper
-23  Snook
-24  Swordfish
-25  Tarpon
-26  Albacore Tuna
-27  Yellowfin Tuna
-28  Wahoo
+1	Barracuda ({1d15}lbs each)
+2	Cobia ({2d40}lbs each)
+3	Mahi Mahi ({2d10}lbs each)
+4	Black Drum ({2d15}lbs each)
+5	Black Grouper ({2d10+5}lbs each)
+6	Gag Grouper ({2d10+5}lbs each)
+7	Goliath Grouper ({2d100+15}lbs each)
+8	Yellowfin Grouper ({2d10}lbs each)
+9	Greater Amberjack ({5d10}lbs each)
+10	King Mackerel ({2d10}lbs each)
+11	Blue Marlin ({2d80+30}lbs each)
+12	White Marlin ({3d20+15}lbs each)
+13	Black Marlin ({5d10}0lbs each)
+14	Needlefish 	(1.{1d5}lbs each)
+15	Oilfish ({1d25}lbs each)
+16	Permit ({1d15}lbs each)
+17	Big Scale Pomfret ({1d5}lbs each)
+18	Pompano ({1d4}lbs each)
+19	Sailfish ({1d50+10}lbs each)
+20	Sawfish ({1d140+10}lbs each)
+21	Striped Bass ({1d20}lbs each)
+22	Red Snapper ({1d15}lbs each)
+23	Snook ({1d15}lbs each)
+24	Swordfish ({1d150+10}lbs each)
+25	Tarpon ({1d50+5}lbs each)
+26	Aacore Tuna ({5d6}lbs each)
+27	Yellowfin Tuna ({1d10}0lbs each)
+28	Wahoo ({1d30+10}lbs each)
 
 
 table: disease-type 1d100

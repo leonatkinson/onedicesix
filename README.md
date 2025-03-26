@@ -131,3 +131,6 @@ Small adjustments to daily events on the southern seas.
 * Add island size in miles or yards
 ### 1.5.2
 * Add adventure locations to southern sea events
+### unreleased
+* Add fish meat yield and chance of disease
+
