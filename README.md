@@ -133,4 +133,5 @@ Small adjustments to daily events on the southern seas.
 * Add adventure locations to southern sea events
 ### unreleased
 * Add fish meat yield and chance of disease
+* Ships have notes about whether they have armored bows for ramming.
 

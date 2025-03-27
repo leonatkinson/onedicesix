@@ -155,7 +155,8 @@ table: ship 1d10
         {merchants}
 9-10    The sail of a carrack is sighted, flying the flag of {ship-alignment}.<br>
         The ship is 60'x20', loaded with {1d135}/135 tons of {cargo}. Move 30'. 10 hardness.
-        120 HP.  The ship has four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.<br>
+        120 HP.  The ship has four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.
+        The bow is armored ans suitable for ramming.<br>
         The crew are {3d8} Level 1 {sailor-race} Fighters, led by a Level {1d4+2} {sailor-race} Fighter
         and {1d3} Level {1d4+1} {sailor-race} Fighters.<br>
         AC 11, #At 1 sword, Dam 1d6, Mv 40', Ml 9<br>
@@ -286,17 +287,20 @@ table: ship-type 1d6
     and {3d6} normal men.<br>
     Carrying {cargo}. Treasure type B.<br>
 3   small galley (100'x15', Mv 20', Hardness 8, 75 HP, cargo {1d210}/210)<br>
-    Two ballistas forward and another two aft. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.<br>
+    Two ballistas forward and another two aft. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.
+    The bow is armored and suitable for ramming.<br>
     Crewed by Level {1d4+2} Fighter (captain), {1d3} Level {1d4+1} Fighters (mates),
     {2d10+20} Level 1 Fighters, and {2d10+20} normal men.<br>
     Carrying {cargo}. Treasure type B.<br>
 4   large galley (120'x20', Mv 30'/25', Hardness 10, 120 HP, cargo {1d375}/375)<br>
     Forward are four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.<br>
-    Aft are two catapults. RoF 1/10, AB -8, Dam 3d10, Range -/300/400.<br>
+    Aft are two catapults. RoF 1/10, AB -8, Dam 3d10, Range -/300/400.
+    The bow is armored and suitable for ramming.<br>
     Crewed by Level {1d6+2} Fighter (captain), {3d6} Level {1d4+1} Fighters (mates),
     {4d10+20} Level 1 Fighters, and {4d10+20} normal men.<br>
     Carrying {cargo}. Treasure type D.<br>
-5-6 longship (110'x15', Mv 30'/25', Hardness 9, 110 HP, cargo {1d100}/100)<br>
+5-6 longship (110'x15', Mv 30'/25', Hardness 9, 110 HP, cargo {1d100}/100)
+    The bow is armored and suitable for ramming.<br>
     Crewed by Level {1d8+2} Fighter (captain), {2d4} Level {1d4+1} Fighters (mates),
     {2d10+20} Level 1 Fighters, and {2d10+20} normal men.<br>
     Carrying {cargo}. Treasure type F.<br>
