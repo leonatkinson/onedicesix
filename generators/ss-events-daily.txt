@@ -144,7 +144,7 @@ table: land-food 1d10
 
 table: ship 1d10
 1-3     The sail of a ghost ship is sighted, ferrying the dead to their new land.<br>
-        The ship is a carrack, 60'x20', loaded with 0/135 tons of cargo. Move 30'. 10 hardness.
+        The ship is a carrack, {1d6+6}0'x{1d3+1}0', loaded with 0/135 tons of cargo. Move 30'. 10 hardness.
         120 HP. It has no siege weapons.<br>
         Ghost Captain AC 20‡, HD 10* (+9), #At 1 touch/1 gaze, Dam 1d8 + special,
         Mv 30', Sv F10, Ml 10, XP 1390, #Ap 1, Tr E, N, O<br>
@@ -154,7 +154,7 @@ table: ship 1d10
 4-8     The sail of a merchant ship is sighted, flying the flag of {ship-alignment}.<br>
         {merchants}
 9-10    The sail of a carrack is sighted, flying the flag of {ship-alignment}.<br>
-        The ship is 60'x20', loaded with {1d135}/135 tons of {cargo}. Move 30'. 10 hardness.
+        The ship is {1d6+6}0'x{1d3+1}0', loaded with {1d135}/135 tons of {cargo}. Move 30'. 10 hardness.
         120 HP.  The ship has four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.
         The bow is armored ans suitable for ramming.<br>
         The crew are {3d8} Level 1 {sailor-race} Fighters, led by a Level {1d4+2} {sailor-race} Fighter
@@ -225,7 +225,7 @@ table: ocean-hydra 1d20
 
 table: merchants 1d20
 1-15    The merchant caravel has a crew of {2d8+8} regular men. It carries {1d75}/75 tons of {cargo}.<br>
-        It's 55'x15' and moves 20'. Hardness 8. 75 HP.<br>
+        It's {4d2}0'x15' and moves 20'. Hardness 8. 75 HP.<br>
         Treasure type C.
 16-19   The large merchant galley has a {sailor-race} crew of {12d8+8} regular men plus {3d6+2} Level 1 Fighters
         and {2d4} Level 2 Fighters. The captains is a Level 4 Fighter.<br>
@@ -235,7 +235,7 @@ table: merchants 1d20
         Aft are two catapults. RoF 1/10, AB -8, Dam 3d10, Range -/300/400.<br>
         Treasure type D.
 20      The merchant caravel had a crew of {2d8+8} regular men, all dead. It carries {1d75}/75 tons of {cargo}.<br>
-        It's 55'x15' and moves 20'. Hardness 8. 75 HP.<br>
+        It's {4d2}0'x15' and moves 20'. Hardness 8. 75 HP.<br>
         The crew died of {merchants-dead}
 
 table: merchants-dead 1d4
@@ -278,11 +278,11 @@ table: corsair-religon 1d6
 6   K'teh the Dolphin God
 
 table: ship-type 1d6
-1   caravel (55'x15', Mv 20', Hardness 8, 75 HP, cargo {1d75}/75)<br>
+1   caravel ({4d2}0'x15', Mv 20', Hardness 8, 75 HP, cargo {1d75}/75)<br>
     Crewed by Level {1d4+2} Fighter (captain), {1d3} Level {1d4+1} Fighters (mates),
     and {2d6} normal men.<br>
     Carrying {cargo}. Treasure type C.<br>
-2   carrack (60'x20', Mv 30', Hardness 10, 120 HP, cargo {1d135}/135)<br>
+2   carrack ({1d6+6}0'x{1d3+1}0', Mv 30', Hardness 10, 120 HP, cargo {1d135}/135)<br>
     Crewed by Level {1d4+2} Fighter (captain), {1d3} Level {1d4+1} Fighters (mates),
     and {3d6} normal men.<br>
     Carrying {cargo}. Treasure type B.<br>
@@ -599,7 +599,7 @@ table: settlement-ship
 2-8     The sail of a merchant ship is sighted, flying the flag of {ship-alignment}.<br>
         {merchants}<br><br>
 9-10    The sail of a carrack is sighted, flying the flag of {ship-alignment}.<br>
-        The ship is 60'x20', loaded with {1d135}/135 tons of {cargo}. Move 30'. 10 hardness.
+        The ship is {1d6+6}0'x{1d3+1}0', loaded with {1d135}/135 tons of {cargo}. Move 30'. 10 hardness.
         120 HP.  The ship has four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.<br>
         The crew are {3d8} Level 1 {sailor-race} Fighters, led by a Level {1d4+2} {sailor-race} Fighter
         and {1d3} Level {1d4+1} {sailor-race} Fighters.<br>

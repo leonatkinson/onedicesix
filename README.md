@@ -134,4 +134,5 @@ Small adjustments to daily events on the southern seas.
 ### unreleased
 * Add fish meat yield and chance of disease
 * Ships have notes about whether they have armored bows for ramming.
+* Vary lengths of caravels and carracks
 
