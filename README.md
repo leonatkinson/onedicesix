@@ -131,7 +131,7 @@ Small adjustments to daily events on the southern seas.
 * Add island size in miles or yards
 ### 1.5.2
 * Add adventure locations to southern sea events
-### unreleased
+### 1.5.3
 * Add fish meat yield and chance of disease
 * Ships have notes about whether they have armored bows for ramming.
 * Vary lengths of caravels and carracks
