@@ -2,7 +2,7 @@
 Contributors: leonatkinson
 Tags: random, rpg, role-playing-game, osr
 Requires at least: 5.2.0
-Tested up to: 5.3.2
+Tested up to: 6.8.0
 Stable tag: trunk
 License: MIT
 License URI: https://opensource.org/licenses/MIT
@@ -135,4 +135,5 @@ Small adjustments to daily events on the southern seas.
 * Add fish meat yield and chance of disease
 * Ships have notes about whether they have armored bows for ramming.
 * Vary lengths of caravels and carracks
-
+### 1.6.0
+* Allow repeat commands to specify dice rolls, too

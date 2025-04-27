@@ -144,11 +144,14 @@ class EmptyZ_Generator
                     // Are the two parts a dice roll and a table name?
                     if (
                         spec.match(EmptyZ_Generator.DICE_ROLL_REGEX())
-                        && typeof this.tables[table] !== 'undefined'
+                        && (
+                            typeof this.tables[table] !== 'undefined'
+                            || table.match(EmptyZ_Generator.DICE_ROLL_REGEX())
+                        )
                     ) {
                         // Get the number of repetitions
                         let roll = parseInt(EmptyZ_Generator.computeRoll(spec));
-                        // Replace the repeater with that many table references
+                        // Replace the repeater with that many table/roll references
                         recipe = recipe.replace(
                             '{' + repeater + '}',
                             Array(roll).fill('{' + table + '}').join(', ')
