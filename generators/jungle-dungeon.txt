@@ -14,73 +14,73 @@ table: entrance
 4   a set of stairs obscured by overgrown brush
 
 # Doors only lead to higher number rooms
-table: rooms
-1   There is one room.<br>
-    <br>
-    <strong>Room 1.</strong><br>
-    {room}
-2   There are two rooms.<br><br>
-    <strong>Room 1.</strong><br>
-    {room}<br><br>
-    This room {connects} <strong>room 2</strong>.<br>
-    <br>
-    <strong>Room 2.</strong><br>
-    {room}
-3   There are three rooms.<br>
-    <strong>Room 1.</strong><br>
-    {room}<br>
-    This room {connects} <strong>room 2</strong>.<br>
-    This room {connects} <strong>room 3</strong>.<br>
-    <br>
-    <strong>Room 2.</strong><br>
-    {room}<br>
-    This room {connects} <strong>room 3</strong>.<br>
-    <br>
-    <strong>Room 3.</strong><br>
-    {room}
-4   There are four rooms.<br>
-    <br>
-    <strong>Room 1.</strong><br>
-    {room}<br>
-    This room {connects} <strong>room 2</strong>.<br>
-    This room {connects} <strong>room 3</strong>.<br>
-    This room {connects} <strong>room 4</strong>.<br>
-    <br>
-    <strong>Room 2.</strong><br>
-    {room}<br>
-    This room {connects} <strong>room 3</strong>.<br>
-    This room {connects} <strong>room 4</strong>.<br>
-    <br>
-    <strong>Room 3.</strong><br>
-    {room}<br>
-    This room {connects} <strong>room 4</strong>.<br>
-    <br>
-    <strong>Room 4.</strong><br>
-    {room}
-5   There are five rooms.<br>
-    <strong>Room 1.</strong><br>
-    {room}<br>
-    This room {connects} <strong>room 2</strong>.<br>
-    This room {connects} <strong>room 3</strong>.<br>
-    This room {connects} <strong>room 4</strong>.<br>
-    This room {connects} <strong>room 5</strong>.<br>
-    <br>
-    <strong>Room 2.</strong><br>
-    {room}<br>
-    This room {connects} <strong>room 3</strong>.<br>
-    This room {connects} <strong>room 4</strong>.<br>
-    This room {connects} <strong>room 5</strong>.<br>
-    <br>
-    <strong>Room 3.</strong><br>
-    {room}<br>
-    This room {connects} <strong>room 4</strong>.<br>
-    This room {connects} <strong>room 5</strong>.<br>
-    <br>
-    <strong>Room 4.</strong><br>
-    {room}<br>
-    This room {connects} <strong>room 5</strong>.<br>
-    <br>
-    <strong>Room 5.</strong><br>
+table: rooms 1d20
+1       There is one room.<br>
+        <br>
+        <strong>Room 1.</strong><br>
+        {room}
+2-3     There are two rooms.<br><br>
+        <strong>Room 1.</strong><br>
+        {room}<br><br>
+        This room {connects} <strong>room 2</strong>.<br>
+        <br>
+        <strong>Room 2.</strong><br>
+        {room}
+4-6     There are three rooms.<br>
+        <strong>Room 1.</strong><br>
+        {room}<br>
+        This room {connects} <strong>room 2</strong>.<br>
+        This room {connects} <strong>room 3</strong>.<br>
+        <br>
+        <strong>Room 2.</strong><br>
+        {room}<br>
+        This room {connects} <strong>room 3</strong>.<br>
+        <br>
+        <strong>Room 3.</strong><br>
+        {room}
+7-10    There are four rooms.<br>
+        <br>
+        <strong>Room 1.</strong><br>
+        {room}<br>
+        This room {connects} <strong>room 2</strong>.<br>
+        This room {connects} <strong>room 3</strong>.<br>
+        This room {connects} <strong>room 4</strong>.<br>
+        <br>
+        <strong>Room 2.</strong><br>
+        {room}<br>
+        This room {connects} <strong>room 3</strong>.<br>
+        This room {connects} <strong>room 4</strong>.<br>
+        <br>
+        <strong>Room 3.</strong><br>
+        {room}<br>
+        This room {connects} <strong>room 4</strong>.<br>
+        <br>
+        <strong>Room 4.</strong><br>
+        {room}
+11-20   There are five rooms.<br>
+        <strong>Room 1.</strong><br>
+        {room}<br>
+        This room {connects} <strong>room 2</strong>.<br>
+        This room {connects} <strong>room 3</strong>.<br>
+        This room {connects} <strong>room 4</strong>.<br>
+        This room {connects} <strong>room 5</strong>.<br>
+        <br>
+        <strong>Room 2.</strong><br>
+        {room}<br>
+        This room {connects} <strong>room 3</strong>.<br>
+        This room {connects} <strong>room 4</strong>.<br>
+        This room {connects} <strong>room 5</strong>.<br>
+        <br>
+        <strong>Room 3.</strong><br>
+        {room}<br>
+        This room {connects} <strong>room 4</strong>.<br>
+        This room {connects} <strong>room 5</strong>.<br>
+        <br>
+        <strong>Room 4.</strong><br>
+        {room}<br>
+        This room {connects} <strong>room 5</strong>.<br>
+        <br>
+        <strong>Room 5.</strong><br>
     {room}
 
 table: connects 1d6
@@ -137,8 +137,8 @@ table: ceiling 1d10
 
 
 table: contents 1d20
-1-5     is mostly empty.
-6-14    is a monster lair.<br>
+1-3     is mostly empty.
+4-14    is a monster lair.<br>
         {monster}
 15-17   contains a monster guarding treasure.<br>
         {monster}<br>
@@ -308,7 +308,7 @@ table: jewelry-motify-subject
 
 table: magic 1d100
 1-25    {magic-weapon} {weapon-motif}
-26-35   {magic-armor} sized for a {armor-size}
+26-35   {magic-armor} (sized for a {armor-size})
 36-55   potion of {magic-potion}
 56-85   {magic-scroll}
 86-90   ring of {magic-ring}
@@ -414,7 +414,7 @@ table: magic-weapon-bonus 1d100
 58      +5
 59-75   +1, +2 vs {magic-weapon-enemy}
 76-85   +1, +3 vs {magic-weapon-enemy}
-86-95   {magic-weapon-bonus}, {magic-weapon-special}
+86-95   {magic-weapon-bonus} ({magic-weapon-special})
 96-98   cursed, -1
 99-100   cursed, -2
 
@@ -438,11 +438,11 @@ table: magic-weapon-enemy 1d6
 
 table: magic-weapon-special 1d20
 1-9     casts light on command
-10-11   charm person
-12      drains energy
+10-11   charm person x1 day
+12      drains energy on hit
 13-16   flames on command
-17-19   locate objects
-20      wishes
+17-19   locate object x1 day
+20      grants a wish
 
 table: magic-armor 1d100
 1-8     leather armor {magic-armor-bonus}
@@ -872,519 +872,520 @@ table: dead-body-armor 1d6
 5-6 {magic-armor}
 
 table: junk
-1   alembic
-2   altar
-3   anklet
-4   apron
-5   arm band
-6   armchair
-7   armoire
-8   arras
-9   arrow, broken
-10  ash
-11  ashes
-12  awl
-13  bag
+1   an alembic
+2   an altar
+3   an anklet
+4   an apron
+5   an arm band
+6   an armchair
+7   an armoire
+8   an arras
+9   a broken arrow
+10  a pile of ash
+11  scattered ashes
+12  an awl
+13  a bag
 14  balance & weights
 15  bandages
-16  bark
-17  barrel
-18  basin
-19  basket
+16  tree bark
+17  a barrel
+18  a basin
+19  a basket
 20  bastinadoes
-21  beaker
-22  beater
-23  bed
+21  a beaker
+22  a beater
+23  a bed
 24  bellows
-25  bells
-26  belt
-27  bench
-28  bladder
-29  blanket
-30  blouse
-31  bone
-32  bones
-33  book
+25  {1d4+1} bells
+26  a belt
+27  a bench
+28  a bladder
+29  a blanket
+30  a blouse
+31  a bone
+32  animal bones
+33  a book
 34  boots
-35  bottle
-36  broken bottle
-37  bowl
-38  bracelet
+35  a bottle
+36  a broken bottle
+37  a bowl
+38  a bracelet
 39  branding irons
-40  brazier
-41  brazier & charcoal
-42  brooch
-43  brush
-44  bucket
-45  buckle
-46  buffet
+40  a brazier
+41  a brazier & charcoal
+42  a brooch
+43  a brush
+44  a bucket
+45  a belt buckle
+46  a buffet
 47  bunks
 48  buskins
-49  large barrel
-50  cabinet
-51  cage
-52  caldron
-53  candelabra
-54  candelabrum
-55  candle
-56  candles
-57  candle snuffer
-58  candlestick
-59  candlesticks
-60  cane
-61  cap
-62  cape
-63  carafe
-64  carpet
-65  case
-66  cask
+49  a large barrel
+50  a cabinet
+51  a cage
+52  a caldron
+53  a candelabra
+54  a candelabrum
+55  a candle
+56  {1d4+1} candles
+57  a candle snuffer
+58  a candlestick
+59  {1d4+1} candlesticks
+60  a walking cane
+61  a cap
+62  a cape
+63  a carafe
+64  a carpet
+65  a case
+66  a cask
 67  cassocks
-68  chain
+68  a chain
 69  corroded chains
-70  broken chair
-71  chair
-72  padded chair
-73  padded arm chair
-74  chair with straps
-75  chalice
-76  chalk
-77  chandelier
+70  a broken chair
+71  a chair
+72  a padded chair
+73  a padded arm chair
+74  a chair with straps
+75  a chalice
+76  a chalk
+77  a chandelier
 78  charcoal
-79  large chest
-80  medium chest
-81  chest of drawers
+79  a large chest
+80  a medium chest
+81  a chest of drawers
 82  chimes
-83  choker
-84  chopper
-85  chunks
-86  cinders
-87  clamps
-88  clasp
-89  cloak
-90  wardrobe
-91  altar cloth
-92  splintered club
-93  coal
-94  coat
+83  a choker
+84  a chopper
+85  chunks of rock
+86  a pile of cinders
+87  {1d4+1} clamps
+88  a clasp
+89  a cloak
+90  a wardrobe
+91  an altar cloth
+92  a splintered club
+93  a handful of coal
+94  a coat
 95  cobwebs
-96  coffer
-97  coif
-98  bent copper coin
-99  collar
-100 cologne
-101 columns/pillars
-102 comb
-103 coronet
-104 couch
+96  a coffer
+97  a coif
+98  a bent copper coin
+99  a collar
+100 a vial of cologne
+101 pillars holding up the ceiling
+102 a comb
+103 a coronet
+104 a couch
 105 ceiling cracks
 106 floor cracks
 107 wall cracks
-108 crate
-109 cresset
-110 cressets
-111 crown
-112 crucible
-113 cruet
-114 crystal ball
-115 crystals
-116 cup
-117 cupboard
-118 curtain/tapestry
-119 cushion
-120 dagger hilt
-121 dais
-122 dampness, ceiling
-123 dampness, wall
-124 decanter
-125 desk
-126 diadem
-127 dipper
-128 dish
-129 doublet
-130 dress
+108 a crate
+109 a cresset
+110 {1d4+1} cressets
+111 a crown
+112 a crucible
+113 a cruet
+114 a non-magical crystal ball
+115 {1d4+1} crystals
+116 a cup
+117 a cupboard
+118 a curtain
+119 a cushion
+120 a dagger hilt
+121 a dais
+122 ceiling dampness
+123 wall dampness
+124 a decanter
+125 a desk
+126 a diadem
+127 a dipper
+128 a dish
+129 a doublet
+130 a dress
 131 dried blood
-132 dripping
-133 drum
-134 dung
+132 dripping water
+133 a drum
+134 a pile of dung
 135 dust
-136 earring
-137 earspoon
-138 ewer
+136 an earring
+137 an earspoon
+138 an ewer
 139 fetters
 140 fibers
-141 fire pit
-142 fireplace with mantle
-143 fireplace & wood
-144 firkin
-145 flagon
-146 flask
-147 flask, cracked
-148 fob
-149 font
-150 food
-151 food scraps
-152 fork
-153 fountain
-154 fresco
-155 frock/pinafore
-156 fungi, common
-157 funnel
-158 furnace
-159 gauntlets
+141 a fire pit
+142 a fireplace with mantle
+143 a fireplace & wood
+144 a firkin
+145 a flagon
+146 a flask
+147 a cracked flask
+148 a fob
+149 a font
+150 spoiled food
+151 dried food scraps
+152 a fork
+153 a fountain
+154 a fresco
+155 a frock
+156 common fungus
+157 a funnel
+158 a furnace
+159 a pair of gauntlets
 160 gelatin
-161 girdle
-162 globes
-163 gloves
-164 goblet
-165 gong
-166 gown
-167 grains
-168 grater
-169 greasy
-170 grill
-171 grinder
-172 grindstone
-173 guano
-174 habit
-175 hair/fur bits
-176 hammer head, cracked
-177 hamper
-178 hassock
-179 hat
-180 headband (fillet)
-181 helmet, badly dented
-182 herbs
-183 hogshead
-184 holy/unholy symbol(s)
-185 holy/unholy writings
-186 hood
-187 hooks
-188 horn
-189 hose
-190 hourglass
-191 huge bell
-192 husks
-193 idol
-194 idol (largish)
-195 idol(s)
-196 incense burner(s)
-197 iron bar, bent, rusted
-198 iron boots
-199 iron maiden
-200 jack (container)
-201 jar
-202 javelin head, blunt
-203 jerkin
-204 jug
-205 jupon
-206 keg
-207 kerchief
-208 kettle
-209 kirtle
-210 kneeling bench
-211 knife
-212 knives
-213 knucklebones
-214 ladle
-215 lamp
-216 lamp/lantern
-217 lamp(s)
-218 large box
-219 leather boot
-220 leaves
-221 leaves (dry) & twigs
-222 lectern
+161 an ordinary girdle
+162 a globe
+163 a pair of gloves
+164 a goblet
+165 a gong
+166 a gown
+167 a pile of grain
+168 a grater
+169 a greasy stain
+170 a grill
+171 a grinder
+172 a grindstone
+173 a pile of guano
+174 a habit
+175 bit of hair
+176 a cracked hammer head
+177 a hamper
+178 a hassock
+179 a hat
+180 a headband
+181 a badly dented helmet
+182 a small sack of herbs
+183 a hogshead
+184 holy symbols
+185 unholy symbols
+186 a hood
+187 {1d4+1} hooks
+188 a horn
+189 a hose
+190 an hourglass
+191 a huge bell
+192 {1d4+1} husks
+193 an idol
+194 a large idol
+195 {1d4+1} small idols
+196 an incense burner
+197 a bent and rusted iron bar
+198 a pair of iron boots
+199 an iron maiden
+200 a jack (container)
+201 a jar
+202 a blunt javelin head
+203 a jerkin
+204 a jug
+205 a jupon
+206 a keg
+207 a kerchief
+208 a kettle
+209 a kirtle
+210 a kneeling bench
+211 a knife
+212 {1d4+1} knives
+213 a set of knucklebones
+214 a ladle
+215 a lamp
+216 a lantern
+217 {1d4+1} lamps
+218 a large box
+219 a leather boot
+220 a pile of leaves
+221 a pile of dry leaves & twigs
+222 a lectern
 223 leggings
-224 lens (concave, convex, etc.)
-225 linen (drawers)
-226 linen (undershirt)
-227 locket
-228 loom
-229 magic circle
+224 a lens
+225 linen drawers
+226 linen undershirt
+227 a locket
+228 a loom
+229 a magic circle
 230 manacles
-231 mantle
-232 masher
-233 mat
-234 mattress
-235 medal
-236 medallion
-237 mirror
-238 mold (common)
-239 mortar & pestle
+231 a mantle
+232 a masher
+233 a mat
+234 a mattress
+235 a medal
+236 a medallion
+237 a mirror
+238 common mold
+239 a mortar & pestle
 240 mosaics
-241 mug
-242 necklace
-243 needle(s)
-244 offertory container
-245 oil (barrel of)
-246 oil fuel
-247 oil, scented
-248 orb
-249 oubliette (pit)
-250 pail
-251 painting
-252 paintings/frescoes
-253 pallet
-254 pan
+241 a mug
+242 a necklace
+243 {1d4+1} needles
+244 an offertory container
+245 a barrel of oil
+246 a bottle of fuel oil
+247 a vial of scented oil
+248 an orb
+249 an oubliette (pit)
+250 a pail
+251 a painting
+252 {1d4+1} paintings
+253 a pallet
+254 a pan
 255 pantaloons
-256 parchment
-257 paste
-258 pedestal
-259 pegs
-260 pellets
-261 pendant
-262 pentacle
-263 pentagram
-264 petticoat
+256 a roll of parchment
+257 a jar of paste
+258 a pedestal
+259 {1d4+1} pegs
+260 {1d4+1} pellets
+261 a pendant
+262 a pentacle
+263 a pentagram
+264 a petticoat
 265 pews
-266 phial
-267 pick handle
-268 pillory
-269 pillow
-270 pin
-271 pincers
-272 pipe (large cask)
-273 pipe, musical
-274 pipe, smoking
-275 pipes (musical)
-276 pipette
-277 pitcher
-278 plate
-279 platter
-280 pliers
-281 pole, broken (5 2/3 â€™ )
-282 pot
-283 pot (huge)
+266 a phial
+267 a pick handle
+268 a pillory
+269 a pillow
+270 a pin
+271 a pair of pincers
+272 a large cask pipe
+273 a musical pipe
+274 a smokeing pipe
+275 musicial pipes
+276 a pipette
+277 a pitcher
+278 a plate
+279 a platter
+280 a pair of pliers
+281 a broken pole ({1d4+2} feet long)
+282 a pot
+283 a huge pot
 284 pottery shards
-285 pouch
-286 pouch/purse
-287 powder
-288 prayer rug
-289 prism
-290 puff
-291 pulpit
-292 quill
-293 quilt
-294 rack
-295 rags
-296 rail
-297 razor
-298 retort
-299 robe
-300 robes
-301 rod, mixing/stirring
-302 rope
-303 rope, rotten
-304 ropes
+285 a pouch
+286 a purse
+287 a pile of powder
+288 a prayer rug
+289 a prism
+290 a puff
+291 a pulpit
+292 a quill
+293 a quilt
+294 a rack
+295 a pile of rags
+296 a rail
+297 a razor
+298 a retort
+299 a robe
+300 {1d4+1} robes
+301 a mixing rod
+302 {3d6} feet of rope
+303 a rotten rope
+304 {1d4+1} 4 foot ropes
 305 rubble & dirt
-306 rug (small-medium)
+306 a small rug
 307 rushes
-308 sack
-309 sack, torn
-310 salve
-311 sanctuary
-312 sandals
-313 saucer
-314 scarf
-315 sceptre
-316 sconce, wall
-317 scraper
-318 screen
-319 scroll
-320 scroll tube
-321 shaker
-322 shawl
-323 sheet
-324 shelf
-325 shift
-326 shrine
-327 sideboard
-328 side chair(s)
-329 sifter
-330 skin
-331 skin/hide
-332 skull
-333 slimy coating, ceiling
-334 slimy coating, floor
-335 slimy coating, wall
-336 slippers
-337 small box
-338 small casket
-339 smock
-340 soap
-341 sofa
-342 spatula
-343 spigot
-344 spike, rusted
-345 spoon
-346 spoon, measuring
-347 staff, normal
+308 a sack
+309 a torn sack
+310 a jar of salve
+311 a sanctuary
+312 a pair of sandals
+313 a saucer
+314 a scarf
+315 a sceptre
+316 a wall sconce
+317 a scraper
+318 a screen
+319 a scroll
+320 a scroll tube
+321 a shaker
+322 a shawl
+323 a sheet
+324 a shelf
+325 a shift
+326 a shrine
+327 a sideboard
+328 a side chair
+329 a sifter
+330 a patch of skin
+331 an animal hide
+332 a skull
+333 a slimy coating on the ceiling
+334 a slimy coating on the floor
+335 a slimy coating on the wall
+336 a pair slippers
+337 a small box
+338 a small casket
+339 a smock
+340 a bar of soap
+341 a sofa
+342 a spatula
+343 a spigot
+344 a rusted spike
+345 a spoon
+346 a measureing spoon
+347 an ordinary staff
 348 stalks
-349 stand
-350 statue
-351 statue(s)
-352 statuette
-353 statuette/figurine
-354 sticks
-355 stockings
+349 a stand
+350 a statue
+351 {1d4+2} statues
+352 a statuette
+353 a figurine
+354 {1d4+2} sticks
+355 a pair of stockings
 356 stocks
-357 stones, small
-358 stool
-359 stool, high
-360 stool, normal
-361 stopper
-362 strainer
-363 strappado
-364 straw
-365 stuffed animal
-366 surcoat
-367 sword blade, broken
-368 table
-369 table, large
-370 table, long
-371 table, low
-372 table, round
-373 table, small
-374 table, trestle
-375 tankard
-376 tank (container)
-377 tapestry
-378 teeth/fangs, scattered
-379 thongs
-380 thread
-381 throne
+357 {1d4+2} small stones
+358 a foot stool
+359 a high stool
+360 a bar stool
+361 a stopper
+362 a strainer
+363 a strappado
+364 a pile of straw
+365 a stuffed animal
+366 a surcoat
+367 a broken sword blade
+368 a table
+369 a large table
+370 a long table
+371 a low table
+372 a round table
+373 a small table
+374 a trestle table
+375 a tankard
+376 a tank (container)
+377 a tapestry
+378 scattered teeth
+379 a thong
+380 a spool of thread
+381 a throne
 382 thumb screws
-383 thurible
-384 tiara
-385 tinderbox (with flint & steel)
-386 toga
-387 tongs
-388 torches
-389 torch stub
-390 towel
-391 tray
-392 tripod
-393 trivet
-394 trousers
-395 trunk
-396 tub
-397 tube (container)
-398 tube (piping)
-399 tun
-400 tunic
-401 tureen
-402 tweezers
-403 twine
+383 a thurible
+384 a tiara
+385 a tinderbox (with flint & steel)
+386 a toga
+387 a pair of tongs
+388 {1d4+2} torches
+389 a torch stub
+390 a towel
+391 a tray
+392 a tripod
+393 a trivet
+394 a pair of trousers
+395 a trunk
+396 a tub
+397 a tube (container)
+398 a tube (piping)
+399 a tun
+400 a tunic
+401 a tureen
+402 a pair of tweezers
+403 a ball of twine
 404 unguent
-405 u rack
-406 urn
-407 vase
-408 veil
-409 vest
+405 a u rack
+406 an urn
+407 a vase
+408 a veil
+409 a vest
 410 vestments
 411 vestry
-412 vial
-413 vice
-414 votive light
-415 wall basin and font
-416 wallet
+412 a vial
+413 a vice
+414 a votive light
+415 a wall basin and font
+416 a wallet
 417 wall scratchings
-418 washcloth
-419 waterclock
-420 water, large puddle
-421 water, small puddle
-422 water, trickle
-423 wax blob (candle stub)
+418 a washcloth
+419 a waterclock
+420 a large puddle of water
+421 a small puddle of water
+422 a trickle water
+423 a wax blob
 424 wax drippings
-425 well
-426 wheel
-427 whetstone
-428 whips
-429 whistle
-430 wig
-431 wire
-432 wood billets
-433 wood pieces, rotting
-434 wool
-435 workbench
-436 wrapper
-437 yarn
+425 a well
+426 a wheel
+427 a whetstone
+428 {1d4+2} whips
+429 a whistle
+430 a wig
+431 a spool of wire
+432 {1d4+2} wood billets
+433 {1d4+2} rotting wood pieces
+434 a ball of wool
+435 a workbench
+436 a wrapper
+437 a ball of yarn
 
 table: monster 1d100
-1-5     {2d6} Giant Scorpions AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11<br>
-        HP {4d8}<br>
+1-5     Giant Scorpions AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11<br>
+        HP {2d6 4d8}<br>
         <br>
-6-9     {2d6} Weretigers AC 17 â€ , HD 5*, #At 2 claws/1 bite, Dam 1d6/1d6/2d6, Mv 50' Human Form 40', Sv F5, Ml 9, XP 405, Tr C<br>
-        HP {5d8}<br>
-        <br>
-10      Vampire AC 20 â€¡, HD 9** (+8), #At 1 weapon or special, Dam 1d8 or by weapon or special, Mv 40' Fly 60', Sv F9, Ml 11, XP 1,225, Tr F<br>
+6-9     Giant Wolf Spider AC 18, HD 9*, #At 1 bite, Dam 1d12 bite + poison, Mv 50' Jump 20', Sv F9, Ml 10, XP 1150<br>
         HP {9d8}<br>
         <br>
-11      Succubus AC 20, HD 7**, #At 2 claws, Dam 1d4/1d4, Mv 30', Fly 50', Sv C6, Ml 7, XP 800, Tr I, L.<br>
+10      Vampires AC 20(m), HD 9** (+8), #At 1 weapon or special, Dam 1d8 or by weapon or special, Mv 40' Fly 60', Sv F9, Ml 11, XP 1,225<br>
+        HP {1d4 9d8}<br>
+        <br>
+11      Succubus AC 20, HD 7**, #At 2 claws, Dam 1d4/1d4, Mv 30', Fly 50', Sv C6, Ml 7, XP 800<br>
         Charm Person, Suggestion, Darkness, Dimension Door, ESP and Clairaudience, at will, as a 12th level caster.<br>
         HP {7d8}<br>
         <br>
-12-15   Hydra AC 21, HD 10 (+10), #At 10, Dam 1d10, Mv 40' (10'), Sv F10, Ml 9, XP 1300, #Ap 1, Wild 1, Lair 1, Tr B<br>
+12-15   Hydra AC 21, HD 10 (+10), #At 10, Dam 1d10, Mv 40' (10'), Sv F10, Ml 9, XP 1300<br>
         HP {10d8}<br>
         <br>
-16-20   {4d6} Zombies AC 12, HD 2, #At 1 weapon, Dam 1d8 or by weapon, Mv 20', Sv F2, Ml 12, XP 75<br>
-        HP {2d8}<br>
+16-20   Zombies AC 12, HD 2, #At 1 weapon, Dam 1d8 or by weapon, Mv 20', Sv F2, Ml 12, XP 75<br>
+        HP {4d6 2d8}<br>
         <br>
-21-25   {2d4} Carnivorous Apes AC 14, HD 4, #At 2 claws, Dam 1d4/1d4, Mv 40', Sv F4, Ml 7, XP 240<br>
-        HP {4d8}<br>
+21-25   Carnivorous Apes AC 14, HD 4, #At 2 claws, Dam 1d4/1d4, Mv 40', Sv F4, Ml 7, XP 240<br>
+        HP {2d4 4d8}<br>
         <br>
-26-30   {1d4} Giant Crab Spiders AC 13, HD 2*, #At 1 bite, Dam 1d8 + poison, Mv 40', Sv F2, Ml 7<br>
-        HP {2d8}<br>
+26-30   Giant Crab Spiders AC 13, HD 2*, #At 1 bite, Dam 1d8 + poison, Mv 40', Sv F2, Ml 7<br>
+        HP {1d4 2d8}<br>
         <br>
 31-35   Bone Golem AC 19‡, HD 8*, #At 4 weapons, Dam 1d6/1d6/1d6/1d6 or by weapon, Mv 40' (10'), Sv F4, Ml 12, XP 945<br>
         HP {8d8}<br>
         <br>
-36-40   {5d6} Winged Apes AC 14, HD 3, #At 2 claws / 1 rock, Dam 1d4/1d4/1d6, Mv 40' Fly 40' (10'), Sv F4, Ml 7 (9 in flight), XP 145<br>
-        HP {3d8}<br>
+36-40   Winged Apes AC 14, HD 3, #At 2 claws / 1 rock, Dam 1d4/1d4/1d6, Mv 40' Fly 40' (10'), Sv F4, Ml 7 (9 in flight), XP 145<br>
+        HP {5d6 3d8}<br>
         <br>
-41-45   {1d10} Giant Bats AC 14, HD 2, #At 1 bite, Dam 1d4, Mv 10' Fly 60' (10'), Sv F2, Ml 8<br>
-        HP {2d8}<br>
+41-45   Giant Bats AC 14, HD 2, #At 1 bite, Dam 1d4, Mv 10' Fly 60' (10'), Sv F2, Ml 8<br>
+        HP {1d10 2d8}<br>
         <br>
-46-50   {3d6} Gnolls AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8.<br>
-        HP {2d8}<br>
+46-50   Gnolls AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8.<br>
+        HP {3d6 2d8}<br>
         <br>
         Gnoll chief AC 15, HD 4, #At 1 weapon, Dam 2d4+1 or by weapon +2, Mv 30', Sv F4, Ml 9, XP 240.<br>
         HP {4d8}<br>
         <br>
-51-59   {3d6} Gorillas AC 14, HD 4, #At 1 maul / 1 bite, Dam 1d6/1d6, Mv 40', Sv F4, Ml 7, XP 240<br>
-        HP {4d8}<br>
+51-59   Gorillas AC 14, HD 4, #At 1 maul / 1 bite, Dam 1d6/1d6, Mv 40', Sv F4, Ml 7, XP 240<br>
+        HP {3d6 4d8}<br>
         <br>
-60-69   {3d12} Stirges AC 13, HD 1*, #At 1 bite, Dam 1d4 + 1d4/round blood drain, Mv 10' Fly 60', Sv F1, Ml 9, XP 37, Tr D<br>
-        HP {1d8}<br>
+60-69   Stirges AC 13, HD 1*, #At 1 bite, Dam 1d4 + 1d4/round blood drain, Mv 10' Fly 60', Sv F1, Ml 9, XP 37<br>
+        HP {3d12 1d8}<br>
         <br>
-70-79   {2d4} Gorillas AC 14, HD 4, #At 1 maul / 1 bite, Dam 1d6/1d6, Mv 40', Sv F4, Ml 7, XP 240<br>
-        HP {4d8}<br>
+70-79   Goggler Acolytes AC 15, HD 5*, #At 1 bite or 1 scimitar, Dam 1d4 bite or 1d8 scimitar, Mv 40' Swim 30', Sv C5, ML 9, XP 405<br>
+        Spells memorized are darkness, cure light wounds (1d6+1), spiritual hammer, hold person.<br>
+        HP {2d6 5d8}<br>
         <br>
-80-88   {2d4} Hill Giants AC 15, HD 8, #At 1, Dam 2d8, Mv 30', Sv F8, Ml 8, XP 875, Tr E + {1d8},000 gp.<br>
-        HP {8d8}<br>
+80-88   Hill Giants AC 15, HD 8, #At 1, Dam 2d8, Mv 30', Sv F8, Ml 8, XP 875, Tr E + {1d8},000 gp.<br>
+        HP {2d4 8d8}<br>
         <br>
-89      {1d4} Vampire Owlbear AC 18 â€¡, HD 5**, #At 2 claws/1 bite + 1 hug, Dam 1d8/1d8/1d8 + 2d8/drain, Mv 40', Sv F5, Ml 11, XP 450, Tr D.<br>
-        HP {5d8}<br>
+89      Vampire Owlbear AC 18(m), HD 5**, #At 2 claws/1 bite + 1 hug, Dam 1d8/1d8/1d8 + 2d8/drain, Mv 40', Sv F5, Ml 11, XP 450<br>
+        HP {1d4 5d8}<br>
         <br>
-90-94   {6d6} Lizard Men AC 15 (12), HD 2, #At 1 weapon, Dam 1d6+1 or by weapon +1, Mv 20' Unarmored 30' Swim 40', Sv F2, Ml 11, XP 75, Tr D.<br>
-        HP {2d8}<br>
+90-94   Lizard Men AC 15 (12), HD 2, #At 1 weapon, Dam 1d6+1 or by weapon +1, Mv 20' Unarmored 30' Swim 40', Sv F2, Ml 11, XP 75<br>
+        HP {6d6 2d8}<br>
         <br>
-95-96   {1d8} Trolls AC 16, HD 6*, #At 3, Dam 1d6/1d6/1d10, Mv 40', Sv F6, Ml 10 (8), Tr D.<br>
-        HP {6d8}<br>
+95-96   Trolls AC 16, HD 6*, #At 3, Dam 1d6/1d6/1d10, Mv 40', Sv F6, Ml 10 (8)<br>
+        HP {1d8 6d8}<br>
         <br>
-97      {1d4} Purple Worm AC 16, HD 11* (+9), #At 1 bite/1 sting, Dam 2d8/1d8+poison, Mv 20' (15'), Sv F6, Ml 10, XP 1,670<br>
-        HP {11d8}<br>
+97      Purple Worms AC 16, HD 11* (+9), #At 1 bite/1 sting, Dam 2d8/1d8+poison, Mv 20' (15'), Sv F6, Ml 10, XP 1,670<br>
+        HP {1d4 11d8}<br>
         <br>
         A tunnel goes down in the underdark.
-98      {1d4} Black Dragons AC 18, HD 7**, #At 2 claws/1 bite or breath/1 tail, Dam 1d6/1d6/2d10 or breath/1d6, Mv 30' Fly 80' (15'), Sv F7 (as Hit Dice), Ml 8, XP 800, Tr H<br>
-        HP {7d8}<br>
+98      Black Dragons AC 18, HD 7**, #At 2 claws/1 bite or breath/1 tail, Dam 1d6/1d6/2d10 or breath/1d6, Mv 30' Fly 80' (15'), Sv F7 (as Hit Dice), Ml 8, XP 800<br>
+        HP {1d4 7d8}<br>
         <br>
         A tunnel connects to the outside.
-99      Green Dragon AC 19, HD 8**, #At 2 claws/1 bite or breath/1 tail, Dam 1d6/1d6/3d8 or breath/1d6, Mv 30' Fly 80' (15'), Sv F8, Ml 8, Tr H.<br>
+99      Green Dragon AC 19, HD 8**, #At 2 claws/1 bite or breath/1 tail, Dam 1d6/1d6/3d8 or breath/1d6, Mv 30' Fly 80' (15'), Sv F8, Ml 8<br>
         HP {8d8}<br>
         <br>
         A tunnel connects to the outside.
-100     Red Dragon AC 21, HD 10}** (+9), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/4d8 or breath/1d8, Mv 30' Fly 80' (20'), Sv F10, Ml 8, Tr H.<br>
+100     Red Dragon AC 21, HD 10** (+9), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/4d8 or breath/1d8, Mv 30' Fly 80' (20'), Sv F10, Ml 8<br>
         HP {10d8}<br>
         <br>
         A tunnel connects to the outside.
