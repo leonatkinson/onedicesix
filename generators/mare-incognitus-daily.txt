@@ -1,0 +1,1070 @@
+name: Daily Events in Mare Incognitus
+description:
+recipe: {weather}<br>
+        At {event-time}, {event-ocean}<br>
+        <br>
+        {event-ocean-extra}<br>
+        <br>
+        If fishing, {fishing}.
+repeat: 1
+
+table: weather 1d10
+1-3 Optimal weather conditions provide the best visibility.
+4-6 Except for morning fog, conditions are clear.
+7   Distant storms reduce visibility to 3 miles.
+8   High humidity produces a haze that reduces visibility to 3 miles.
+9   Intermittent rain reduces visibility to under 1 mile.
+10  {weather-no-visibiilty} reduces visibility to a matter of yards.
+
+table: weather-no-visibiilty 1d2
+1   A torrential downpour
+2   Thick fog
+
+
+table: event-time 1d4
+1   dawn
+2   {1d4+1} hours after dawn
+3   noon
+4   {1d4+1} hours past noon
+
+table: event-ocean 1d100
+1-20    No event this day.
+21-40   Spotted {1d10+10}0 yards away...<br>
+        {ocean}<br>
+        <br>
+        The attitude is that {reaction}
+41-60   A fierce storm strikes, lasting {5d6} hours. Ships with sails
+        can run with the wind, moving <strong>{direction}</strong> at 3x speed
+        and {gale-run-aground}. Ships without sails or those trying to stay at
+        anchor {will-sink}. The only recourse is to beach the ship if land is
+        nearby, {land-nearby}. Running aground requires waiting {1d8} hours for
+        the tide to rise. If grounded, {gale-ship-damage}.
+61-80   Land may be sighted {2d10} miles away. {land}
+81-85   The winds die out and the sea becomes perfectly still. Ships cannot sail
+        this day and must be rowed.
+86-95   Possibly spotted {seen-distance}.<br><br>
+        {pirates}<br><br>
+        Their attitude is that {reaction}<br><br>
+        {pirate-illness}
+96-97   Possibly spotted {seen-distance}.<br><br>
+        {ship}<br><br>
+        Their attitude is that {reaction}
+98-99   Possibly spotted {seen-distance}.<br><br>{gargantua}<br><br>Its attitude is that {reaction}
+99-100  Trapped in a maelstrom for {1d8} rounds. Giant whirlpool. After being
+        trapped, suffer 6d6 damage for one round. Then ejected {6d8} miles away.
+        To escape with enough rowers, the captain saves versus death.
+
+table: event-ocean-extra 1d100
+1-55    The crew makes itself busy with routine tasks.
+56      The sea breeze is bracing.
+57      Sea turtles swim nearby.
+58      Manta rays are seen.
+59      A shipwreck can be seen in the shallow waters of a reef.
+60      Purple jellyfish drift through the water serenly.
+61      Sea snakes glide just beneath the surface of the water.
+62      {1d6} bloated cow carcasses bob in the water.
+63      The naked body of a fisherman rots in a small boat.
+64      The swells are steep, and the ships dip and heave for {2d6} hours.
+65      The ocean surface is glass smooth, and sky merges with the water at the horizon.
+66      Bioluminescent plankton swirls under the water at night.
+67      Bioluminescent plankton leaves a trail behind the ship.
+68      Flying fish leap from the water.
+69      Whales breach {1d6} miles away.
+70      A cargo crate bobs in the water. It's filled with rotted food.
+71      A rainbow stretches across the sky.
+72      Majestic seabirds cruise over the waves.
+73      The sunrise is particularly beautiful.
+74      The sunset is particularly beautiful.
+75      Playful dolphins ride the bow waves.
+76-79   Also, the winds die out and the sea becomes perfectly still. Ships cannot sail
+        this day and must be rowed.
+80-85   {1d10+1} hours later...<br>
+        Spotted {1d10+10}0 yards away...<br>
+        {ocean}<br>
+        <br>
+        The attitude is that {reaction}
+86-90   {1d10+1} hours later, also possibly spotted {seen-distance}.<br><br>{pirates}<br><br>Their attitude is that {reaction}
+91-92   {1d10+1} hours later, also possibly spotted {seen-distance}.<br><br>{ship}<br>Their attitude is that {reaction}
+93-100  {1d10+1} hours later, land may be sighted {2d10} miles away. {land}
+
+
+table: direction 1d8
+1   north
+2   northeast
+3   east
+4   southeast
+5   south
+6   southwest
+7   west
+8   northwest
+
+table: seen-distance 1d8
+1   {4d50} yards away
+2-8 {2d10} miles away
+
+table: will-sink 1d10
+1-8     will sink
+9-10    will avoid sinking
+
+table: gale-run-aground 1d10
+1     runs aground
+2-10  rides out the storm
+
+table: gale-ship-damage 1d10
+1       the ship is fatally damaged
+2-10    the ship is undamaged
+
+table: land-nearby 1d10
+1-3     which fortunately, there is
+4-10    but there is none
+
+
+table: land 1d10
+1       Desert islet ({island-tiny}) with a castaway. {castaway} {land-food}
+2-5     Desert islet ({island-tiny}). {land-food} {adventure-location}
+6       Small island ({island-small}). {small-island} {adventure-location-list}
+7-8     Small island ({island-small}). {settlement} {adventure-location-list}
+9-10    Large island ({island-large}). {settlement-list} {adventure-location-list}
+
+table: island-tiny 1d10
+1       {1d10}00 yards x {1d10}00 yards
+2-3     0.{1d9}mi x 0.{1d9}mi
+4-7     1.{1d4} x 1.{1d4}mi
+8-9     {1d2}.{1d6}mi x {1d2}.{1d6}mi
+10      {1d3}.{1d6}mi x {1d3}.{1d6}mi
+
+table: island-small 1d10
+1       {1d4}mi x {1d4}mi
+2-3     {1d4+1}mi x {1d4+1}mi
+4-7     {2d4}mi x {2d4}mi
+8-9     {2d6}mi x {2d6}mi
+10      {1d8+4}mi x {1d8+4}mi
+
+table: island-large 1d10
+1       {1d4}0mi x {1d4}0mi
+2-3     {1d4+1}0mi x {1d4+1}0mi
+4-7     {2d4}0mi x {2d4}0mi
+8-9     {2d6}0mi x {2d6}0mi
+10      {1d8+4}0mi x {1d8+4}0mi
+
+table: land-food 1d10
+1-5     No usuable food or water.
+6       Seals live here.
+7       A bird colony lives here. Eggs equalling {5d6} days of food can be gathered.
+8       A volcanic crator collects rain water.
+9       Coconut trees grow here.
+10      Ample shellfish grow on rocks around the island. {5d6} days of food can be gathered.
+
+
+table: ship 1d10
+1-8     The sail of a ghost ship is sighted, ferrying the dead to their new land.<br>
+        The ship is a carrack, {1d6+6}0'x{1d3+1}0', loaded with 0/135 tons of cargo. Move 30'. 10 hardness.
+        120 HP. It has no siege weapons.<br>
+        Ghost Captain AC 20‡, HD 10* (+9), #At 1 touch/1 gaze, Dam 1d8 + special,
+        Mv 30', Sv F10, Ml 10, XP 1390, #Ap 1, Tr E, N, O<br>
+        {2d6} Wights AC 15 †, HD 3*, #At 1 touch, Dam Energy drain (1 level), Mv 30',
+        Sv F3, Ml 12, XP 175<br>
+        {3d8} Skeletons AC 13, HD 1, #At 1 cutlass, Dam 1d6, Mv 40', Sv F1, Ml 12, XP 25<br>
+9       The sail of a merchant ship is sighted, flying the flag of {ship-alignment}.<br>
+        {merchants}
+10      The sail of a carrack is sighted, flying the flag of {ship-alignment}.<br>
+        The ship is {1d6+6}0'x{1d3+1}0', loaded with {1d135}/135 tons of {cargo}. Move 30'. 10 hardness.
+        120 HP.  The ship has four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.
+        The bow is armored ans suitable for ramming.<br>
+        The crew are {3d8} Level 1 {sailor-race} Fighters, led by a Level {1d4+2} {sailor-race} Fighter
+        and {1d3} Level {1d4+1} {sailor-race} Fighters.<br>
+        AC 11, #At 1 sword, Dam 1d6, Mv 40', Ml 9<br>
+
+table: ship-alignment 1d4
+1   the empire (red, eagle holding a cross)
+2-4 {small-nation}
+
+table: small-nation 1d10
+1   Yokrayga (horizontal stripes green/white/green)
+2   Eskia (blue crescent on white)
+3   Nudrela (golden star on blue)
+4   Uthos (red triangle on left, horizontal stripes black/green/gold)
+5   Awhax (orange tiger silhouette on black)
+6   Heglia (orange flame on white)
+7   Usua (purple dragon on yellow)
+8   Drein (white elephant on burgandy)
+9   Stronia (three blue circles in a triangle on white)
+10  Egrad (unicorn on green)
+
+table: sailor-race 1d10
+1-6     Human
+7-8     Elf
+9       Halfling
+10      Dwarf
+
+table: ocean 2d8 Ocean
+2   Sea Dragon AC 19, HD 11** (+9 AB), #At 2 claws/1 bite or breath,
+    Dam 1d10/1d10/3d10 or 11d8 steam breath, Mv 10' Fly 60' (20') Swim 60' (15'), Sv F8, Ml 8,
+    XP 1015<br>
+    Steam breath 11/day. 100' x 55'.
+3   {ocean-hydra}
+4   {1d4} Purple Worms AC 16, HD 20* (+13), #At 1 bite/1 sting, Dam 2d8/1d8+poison, Mv 20' (15'), Sv F10, Ml 10, XP 5450
+5   {1d3} Jellyfish Swarm AC Immune to weapons, HD 4*, #At 1 swarm, Dam 1d3 + DEX drain (1d6 turns), Mv Swim 20', Sv N/A, Ml 11, XP 280
+6   {3d4} Flying Man-of-War AC 11, HD 2, #At 1 touch, Dam Poison + digestion, Mv Fly 40', Sv F2, Ml 12, XP 75<br>
+    On touch, targets saves vs paralysis or stunned 1d4 rounds. Man-of-War attaches and does 1d6 dam/round.
+    100lbs and size of horse. If it takes 6 dam in one blow, it pops. Corpses are poisonous.
+7   {1d3} Water-breathing Storm Giants AC 19 (13), HD 15** (+11), #At 1 giant weapon or 1 lightning bolt, Dam 8d6 or 15d6, Mv 30' Unarmored 50' (10'), Sv F15, Ml 10, XP 3100
+8   {1d4} Aquatic Naga AC 15, HD 9*, #At 1 bite or spells as MU 5, Dam 1d4 + poison, Mv 40' Swim 90', Sv F9, Ml 7, XP 1150
+9   {1d6} Ramfish AC 20, HD 10, #At 1 gore or bite, Dam 2d6+5, Mv Swim 40', Sv F20, Ml 7, XP 5250<br>
+    10' long, 500lbs. Hard scales. Ramming horns. Charge for an additional 2d6 damage.
+10  {1d4} Wraiths AC 15(m), HD 4**, #At 1 touch, Dam 1d6 + energy drain (1 level), Mv Fly 80', Sv F4, Ml 12, XP 320
+11  {1d6} Sea Vampires AC 20(m), HD 9** (+8), #At 1 weapon or special, Dam 1d8 or by weapon or special, Mv 40' Swim 60', Sv F9, Ml 11, XP 1225<br>
+    Save vs. Spells with -2 penalty or be charmed by gaze.  Bite does 1d3 points of
+    damage the first round followed by energy drain every round thereafter.
+    Suffer -5 AC while biting.  Apply +3 points of damage with melee weapons.
+    Summon 1d3 jellyfish swarm or 3d6 great white sharks,
+    arriving in 2d6 rounds.  Transform into manta ray or great white shark at will.
+    Gaseous form at will.
+12  Scyllan AC 29(s), HD 16** (+25), #At 4 tentacles + 2 claws, Dam 1d8+11 + 2d6+5, Mv Swim 50', Sv F16, Ml 12, XP 3520<br>
+    20' tall, 10,000 lbs. Tentacles. Devil. Waits to snatch people from the ship deck to eat.
+    Tentacles grapple. Wails. Save vs Spells +WIS or be panicked (<5HD) or shaken (-4 AB) for 2d6 rounds.
+    Grappled opponents may be swallowed on another successful attack, taking 2d8+16 damage/round.
+    Swallowed targets must do 25 dam to AC 17 to escape.
+13  {ocean-roc}
+14  Water Elemental AC 22 (m), HD 16* (+12), #At 1, Dam 3d6, Mv 20' (15') Swim 60', Sv F16, Ml 10, XP 3385<br>
+    Looks like a giant wave. Double damage from air. Extra 1d8 damage to anything in the water.
+15  {1d2} Mermaids AC 12, HD 1*, #At 1 weapon, Dam 1d6 or by weapon, Mv Swim 40', Sv F1, Ml 8, XP 37<br>
+    Siren song attracts. Save -4 if there are two mermaids. If the captain fails
+    his save, he tries to steer the ship into the rocks.
+16  {2d6} Sea Serpents AC 17, HD 6, #At 1 bite, Dam 2d6, Mv Swim 50' (10'), Sv F6, Ml 8, XP 500<br>
+    Constrict does 2d10 damage to a vessel. {2d2}0' long.
+
+table: ocean-roc 1d8
+1-7 {1d8} Large Rocs AC 18, HD 12 (+10), #At 2 claws/1 bite, Dam 1d8/1d8/2d10, Mv 20' Fly 160' (10'), Sv F12, Ml 9, XP 1875
+8   Giant Roc AC 18, HD 32 (+16), #At 2 claws/1 bite, Dam 3d6/3d6/6d6, Mv 20' Fly 160' (10'), Sv F20 at +5, Ml 10, XP 14250
+
+table: ocean-hydra 1d20
+1-5     Hydra AC 16, HD 5 (+10), #At 5, Dam 1d10, Mv 40' (10'), Sv F5, Ml 9, XP 360
+6-10    Hydra AC 17, HD 6 (+10), #At 6, Dam 1d10, Mv 40' (10'), Sv F6, Ml 9, XP 500
+11-13   Hydra AC 18, HD 7 (+10), #At 7, Dam 1d10, Mv 40' (10'), Sv F7, Ml 9, XP 670
+14-15   Hydra AC 19, HD 8 (+10), #At 8, Dam 1d10, Mv 40' (10'), Sv F8, Ml 9, XP 875
+16-17   Hydra AC 20, HD 9 (+10), #At 9, Dam 1d10, Mv 40' (10'), Sv F9, Ml 9, XP 1075
+18      Hydra AC 21, HD 10 (+10), #At 10, Dam 1d10, Mv 40' (10'), Sv F10, Ml 9, XP 1300
+19      Hydra AC 22, HD 11 (+10), #At 11, Dam 1d10, Mv 40' (10'), Sv F11, Ml 9, XP 1575
+20      Hydra AC 23, HD 12 (+10), #At 12, Dam 1d10, Mv 40' (10'), Sv F12, Ml 9, XP 1875
+
+table: merchants 1d20
+1-5     The merchant caravel has a crew of {2d8+8} regular men. It carries {1d75}/75 tons of {cargo}.<br>
+        It's {4d2}0'x15' and moves 20'. Hardness 8. 75 HP.<br>
+        Treasure type C.
+6-10    The large merchant galley has a {sailor-race} crew of {12d8+8} regular men plus {3d6+2} Level 1 Fighters
+        and {2d4} Level 2 Fighters. The captains is a Level 4 Fighter.<br>
+        AC 11, #At 1 sword or longbow, Dam 1d6 or 1d8, Mv 40', Ml 9<br>
+        It carries {1d100+275}/375 tons of {cargo}. It's 120'x20' and moves 30'/25'. Hardness 10. 120 HP.<br>
+        Forward are four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.<br>
+        Aft are two catapults. RoF 1/10, AB -8, Dam 3d10, Range -/300/400.<br>
+        Treasure type D.
+11-20   The merchant caravel had a crew of {2d8+8} regular men, all dead. It carries {1d75}/75 tons of {cargo}.<br>
+        It's {4d2}0'x15' and moves 20'. Hardness 8. 75 HP.<br>
+        The crew died of {merchants-dead}
+
+table: merchants-dead 1d4
+1       starvation or lack of water. Treasure type C.<br>
+2       spoiled food. A parasite infects the ship.
+        Anyone boarding makes a save vs Death. {parasite-type}.
+        Treasure type C.<br>
+3       pirate attack. No treasure left aboard.
+4       a plague. Anyone boarding makes a save vs Death. {disease-type}
+
+
+table: pirates 1d100
+1-15    {pirate-type} on a {ship-type}<br>
+        AC 11, #At 1 sword or light crossbow, Dam 1d6, Mv 40', Ml 9
+16-40   {pirate-type} with two ships.<br>
+        {ship-type}<br>
+        {ship-type}
+41-70   {pirate-type} with three ships.<br>
+        {ship-type}<br>
+        {ship-type}<br>
+        {ship-type}
+71-100  {pirate-type} with {2d4} ships of similar type.<br>
+        {ship-type}<br>
+
+table: pirate-illness 1d20
+1-15    The pirates are not ill.
+16-18   A parasite infects the pirates. Anyone boarding makes a save vs Death. {parasite-type}.
+19-20   A contagious disease infects the pirate crew. Anyone boarding makes a save vs Death. {disease-type}
+
+table: pirate-type 1d7
+1-4 {sailor-race} Pirates
+5   {sailor-race} Buccaneers, in service of {corsair-religion},
+6   {sailor-race} Corsairs, in service of {corsair-religion},
+7   {sailor-race} Privateers, flying the flag of {ship-alignment},
+
+table: corsair-religion 1d6
+1   The Anointed One
+2   Molok
+3   the druids
+4   Kot B'tod
+5   Ygthal - "The Sunken Maw"
+6   Xyllith - "She Who Whispers in the Coral"
+7   Qrazath - "The Obsidian Tide"
+8   Voknur - "Lord of the Shifting Sands"
+9   Zelkyra - "The Veiled Star"
+10  Hsuthul - "The Coiling Deep"
+
+table: ship-type 1d6
+1   caravel ({4d2}0'x15', Mv 20', Hardness 8, 75 HP, cargo {1d75}/75)<br>
+    Crewed by Level {1d4+2} Fighter (captain), {1d3} Level {1d4+1} Fighters (mates),
+    and {2d6} normal men.<br>
+    Carrying {cargo}. Treasure type C.<br>
+2   carrack ({1d6+6}0'x{1d3+1}0', Mv 30', Hardness 10, 120 HP, cargo {1d135}/135)<br>
+    Crewed by Level {1d4+2} Fighter (captain), {1d3} Level {1d4+1} Fighters (mates),
+    and {3d6} normal men.<br>
+    Carrying {cargo}. Treasure type B.<br>
+3   small galley (100'x15', Mv 20', Hardness 8, 75 HP, cargo {1d210}/210)<br>
+    Two ballistas forward and another two aft. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.
+    The bow is armored and suitable for ramming.<br>
+    Crewed by Level {1d4+2} Fighter (captain), {1d3} Level {1d4+1} Fighters (mates),
+    {2d10+20} Level 1 Fighters, and {2d10+20} normal men.<br>
+    Carrying {cargo}. Treasure type B.<br>
+4   large galley (120'x20', Mv 30'/25', Hardness 10, 120 HP, cargo {1d375}/375)<br>
+    Forward are four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.<br>
+    Aft are two catapults. RoF 1/10, AB -8, Dam 3d10, Range -/300/400.
+    The bow is armored and suitable for ramming.<br>
+    Crewed by Level {1d6+2} Fighter (captain), {3d6} Level {1d4+1} Fighters (mates),
+    {4d10+20} Level 1 Fighters, and {4d10+20} normal men.<br>
+    Carrying {cargo}. Treasure type D.<br>
+5-6 longship (110'x15', Mv 30'/25', Hardness 9, 110 HP, cargo {1d100}/100)
+    The bow is armored and suitable for ramming.<br>
+    Crewed by Level {1d8+2} Fighter (captain), {2d4} Level {1d4+1} Fighters (mates),
+    {2d10+20} Level 1 Fighters, and {2d10+20} normal men.<br>
+    Carrying {cargo}. Treasure type F.<br>
+
+
+table: cargo 1d12
+1   bolts of {cargo-cloth}
+2   {cargo-skins}
+3   {cargo-spices}
+4   sugar
+5   {cargo-dye} dye
+6   cocoa
+7   tobacco
+8   cotton
+9   {cargo-wood}
+10  {cargo-food}
+11  iron
+12  {cargo-slaves} slaves (plus food and water, 10 slaves per ton)
+
+table: cargo-slaves
+1   human
+2   elf
+3   dwarf
+4   halfling
+5   orc
+6   goblin
+
+table: cargo-cloth
+1   wool
+2   linen
+3   silk
+4   hemp
+
+table: cargo-skins
+1   furs
+2   tanned animal skins
+
+table: cargo-spices
+1   black pepper
+2   cinnamon
+3   turmeric
+4   cardamom
+5   garlic
+6   thyme
+7   saffron
+8   ginger
+9   mint
+10  curry leaf
+11  nutmeg
+12  mustard
+13  licorice
+
+table: cargo-dye
+1   cochineal
+2   black walnut
+3   ebony
+4   indigo
+5   orchil
+6   teak leaf
+7   hematite
+8   limonite
+9   lazurite
+10  kermes
+
+table: cargo-wood
+1   rosewood
+2   mahogany
+3   cedar
+4   camphor wood
+5   burl wood
+6   ironwood
+7   sandalwood
+8   teak wood
+
+table: cargo-food
+1   dried fish
+2   whale oil
+3   dried fruit
+3   molasses
+
+
+table: gargantua 1d5
+1   Kraken AC 20, HD 36** (+16), #At 10 tentacles or 1 bite, Dam 7d6(x10) or 4d6, Mv Swim 40', Sv F20, Ml 11, XP 18450<br>
+    100' long. 10 tentacles that reach 500'. Once hit, tentacle wraps around you and automatically does 7d6 each round.
+    Victim is -4 to attack when wrapped up. Do 60 damage to sever a tentacle.
+    Can wrap a ship with six tentacles to do 4d6 damage per round. Will flee if
+    it loses half of its tentacles. Can jet away at 280' in a cloud of ink.
+2   Dragon Turtle AC 22, HD 30** (AB+15), #At 2 claws/1 bite or breath,
+    Dam 2d8/2d8/10d6 or 30d8, Mv 10' (10') Swim 30' (15'), Sv F20 at +5, Ml 10, XP 13650<br>
+    Breath steam 30/day. 100' x 75'.
+3   The Great Storm Wyrm AC 18, HD 30** (+15), #At 1 bite, 2 claws, 1 tail lash,
+    Dam 6d8 bite, 4d6 claw (x2), 5d6 tail, Mv Fly 20', Swim 60', Sv F18, Ml 10, XP 13650<br>
+    Approximately 200' long with a 300' wingspan. This serpentine dragon dwells
+    in the deepest trenches and can erupt from the sea with surprising speed.
+    Its scales shimmer with embedded minerals that crackle with electrical energy.
+    Its bite can discharge a bolt of lightning (3d8 damage, save vs. Paralysis for half).
+    Its claws can tear through hulls, and its massive tail can sweep across a deck,
+    potentially knocking creatures overboard (save vs. Strength to hold fast).
+    When it dives, it creates a whirlpool
+    (treat as difficult terrain for 1 round in a 100' radius). It will likely
+    retreat if it sustains significant damage, diving back into the crushing depths.
+4   Giant Deep-Dweller Octopus AC 16 (natural armor), HD 32** (+15), #At 8 tentacles
+    and 1 bite, Dam 5d6 (x8) and 3d8, Mv Swim 50', Sv F17, Ml 9, XP 16800<br>
+    Approximately 150' across with tentacles reaching up to 600'. This colossal
+    octopus lurks in abyssal trenches and can rise to attack surface vessels.
+    Its eight massive tentacles are covered in rows of powerful suckers that
+    automatically inflict 5d6 damage on a successful hit and constrict the victim,
+    causing an additional 3d6 damage per round until freed
+    (requires a successful Strength check at -2 penalty or dealing 40 damage
+    to the tentacle). Its beak-like bite can crush through wooden hulls.
+    The giant octopus can also expel a cloud of inky darkness in a 60' radius,
+    obscuring vision (treat as total darkness). It will retreat to the depths
+    if it loses four or more tentacles.
+5   The Chorale of Coral and Bone AC 19 (chitinous plates), HD 40** (+17),
+    #At 4 resonant limbs and sonic shriek, Dam 4d8 (x4) and special, Mv Swim 30', Sv F22, Ml 12, XP 20550<br>
+    This gargantuan entity resembles a vast, slowly rotating mass of fused coral,
+    bleached bones, and the remnants of sunken ships, easily 300' in diameter.
+    Four immense, articulated limbs, tipped with clusters of resonating crystal
+    chimes, extend from its central mass. These limbs do crushing damage, but
+    their primary function is to generate complex sonic vibrations. Each round,
+    the Chorale emits a disorienting and damaging sonic shriek in a 200' radius.
+    Creatures caught in the shriek must make a Save vs. Paralysis or be stunned
+    for 1d4 rounds and suffer 6d6 sonic damage (Save halves damage, no stun).
+    The Chorale has no discernible eyes or mouth, seemingly sensing its surroundings
+    through vibrations in the water. Severing a resonant limb requires 80 damage
+    and disrupts its sonic output (reducing damage and stun chance). Its movement
+    is ponderous, but its sonic attacks can cripple entire vessels. The disturbing
+    aspect is its seemingly inorganic nature, a living ecosystem of death and
+    decay that sings a deadly, silent song.
+
+table: castaway 1d10
+1   A gruff dwarf named Borin was marooned after his pirate crew raided a dwarven
+    ruin and faced animated defenses, tossing him overboard during their escape.
+    He survives by a small spring and tough roots, guarding a humming metal box
+    salvaged from the wreck amidst ancient dwarven remnants. Borin seeks passage,
+    offering the box's contents, claiming trinkets, in exchange.
+2   A nervous halfling, Pippin, stowed away on a smuggling ship and was dropped
+    here by a monstrous flying creature. He hides in caves and scavenges shellfish,
+    leaving giant bird tracks around a foul nest. Pippin possesses a crude map to
+    a larger island westward and will share it for help escaping the bird.
+3   Lyra, a scarred smuggler captain, survived her ship breaking apart in a magical storm.
+    She's built a camp from wreckage and fishes with sharpened sticks, with a
+    locked strongbox among the debris and a glowing crystal shard she found.
+    Lyra wants to recover the strongbox, offering a share of its contents,
+    mostly coins she claims, for passage.
+4   An arrogant high elf named Faelan was shipwrecked by an intelligent octopus
+    while seeking rare flora. He uses illusion magic for food and collects rainwater,
+    surrounded by glowing moss and nightly clicking sounds. Faelan carries
+    luminescent flower petals and will reluctantly cooperate, offering arcane
+    plant knowledge for escape.
+5   A shifty goblin named Griknuk jumped ship during a pirate ambush and drifted here.
+    He burrows in dunes and eats small creatures, with hidden caches of shiny
+    trinkets and stolen coins. A large, sharp-clawed sand crab patrols the shore,
+    and Griknuk will reveal his treasures for safe passage and protection.
+6   Elias, a weathered scholar, was marooned by his mutinous crew after seeking
+    ancient ruins. He survives on foraged plants, sometimes toxic, near a partially
+    buried stone structure covered in strange symbols he meticulously documents.
+    Elias desperately wants to continue his research and offers his knowledge
+    of the ruins for rescue.
+7   Grok, a hulking half-orc gladiator, was forced onto a ship and thrown
+    overboard during a sea serpent attack. His strength allows him to break
+    shellfish, and he shelters in a cave, near the massive shed skin of a serpent
+    and giant footprints. Grok wears a broken iron collar and will offer his
+    strength for passage and its removal.
+8   A mysterious masked figure in dark robes, claiming "divine reckoning,"
+    refuses to explain their arrival. They seem to need little sustenance,
+    often in a trance, amidst geometric patterns etched in the sand. A faint
+    humming emanates from a black stone they possess, and they want the adventurers
+    to take it to a star constellation's location.
+9   Isla, a young woman clutching a broken lute, survived a magical whirlpool
+    that destroyed her ship and companions. She found water and fruit, singing
+    sadly amidst scattered instruments and stage props. Isla claims to see strange
+    lights at night and longs for company and safe passage, offering her music.
+10  Zix, a surprisingly clean goblin tinkerer, ended up here when his
+    self-propelled submersible malfunctioned. He uses salvaged parts for water
+    and traps, surrounded by gears and contraptions. Zix needs specific
+    components to repair his invention or build a new escape, offering his
+    technical skills for help.
+
+table: small-island 1d10
+1   The Isle of Whispering Bones appears as a typical tropical island at first
+    glance, but a constant, low murmur permeates the air, the collective sighs of
+    countless skeletons half-buried in the sand. These are the remains of those
+    who sought a legendary spring said to grant eternal youth, only to find it
+    guarded by a creature that drains life force, leaving animated husks that
+    eventually collapse. The island holds the dry, brittle petals of a flower
+    that blooms only near the spring.  Eating them temporarily wards off the
+    life-draining entity.
+2   The Obsidian Spire Island is dominated by a colossal, impossibly smooth
+    black tower that pierces the clouds, radiating an unnatural chill. Strange,
+    bioluminescent insects flit around its base, and the surrounding jungle is
+    unnaturally silent. The spire is a dormant bio-construct from a long-vanished
+    civilization, and within its depths lies a library of forgotten technology,
+    potentially powerful artifacts or dangerous knowledge. The island projects
+    the feeling of being watched by an unblinking, alien intelligence, a sense
+    that the island itself is a sleeping giant that could awaken at any moment.
+3   The Coral Labyrinth of Lost Souls is a sprawling network of razor-sharp coral
+    formations that creates disorienting passages and echoing chambers above and
+    below the water. Within this maze dwell spectral figures, the tormented
+    spirits of sailors lost to the Mare Incognitus, forever searching for a way
+    out. At the heart of the labyrinth is a still pool where the veil between
+    worlds is thin. A ritual performed with tears of the living and coral dust
+    can temporarily grant communication with the dead, offering valuable
+    information or terrible warnings. Here there is a palpable sense of unending sorrow
+    and the feeling of being surrounded by the silent screams of the departed.
+4   The Isle of Shifting Sands never remains the same for long, dunes rearranging
+    themselves as if alive, revealing and concealing strange, cyclopean ruins
+    that seem to sink and reappear with the tides of sand. Travelers might
+    stumble upon intricate devices that hum with an unknown energy or murals
+    depicting beings with far too many limbs and eyes. Those who linger too
+    long find their memories becoming unreliable, their sense of direction
+    failing, as if the very land is subtly altering their minds. The true
+    treasure might be the key to understanding the sand's strange sentience,
+    or escaping its disorienting influence.
+5   The Gilded Cage Island appears as a paradise, lush vegetation surrounding
+    a breathtaking waterfall that cascades into a crystal-clear lagoon. Beautiful,
+    exotic birds sing melodic tunes, and strange, sweet fruits grow in abundance.
+    However, the island is encircled by an invisible barrier, shimmering faintly
+    in the sunlight, that prevents any departure. Within this idyllic prison
+    live ageless humanoids with serene smiles, who offer endless hospitality
+    but speak of a benevolent "caretaker" who will one day release them, their
+    eyes holding a deep, unsettling emptiness.
+6   From afar, the Isle of Perpetual Bloom seems a vibrant tapestry of exotic
+    flowers, their scents carrying on the breeze for miles. Upon closer inspection,
+    the blossoms are unnaturally large and intricate, some pulsing with a faint
+    light. Strange, insectile creatures with human-like faces tend to the flora
+    with unnerving devotion. At the island's center lies a colossal, immobile
+    plant that seems to breathe slowly, its petals unfurling to reveal
+    unsettlingly familiar features. The pollen has a strange effect on visitors,
+    inducing vivid, shared dreams and a growing sense of unity with the island's
+    bizarre ecosystem.
+7   The Isle of Thunder echoes with roars that predate humanity, its dense jungle
+    canopy concealing creatures thought long extinct. Giant ferns and towering
+    cycads create a primeval landscape where armored herbivores graze in misty
+    valleys and swift predators stalk through the undergrowth. Ancient ruins,
+    overgrown and crumbling, hint at a forgotten civilization that once coexisted
+    with these behemoths, perhaps even controlling them. A valuable find might
+    be intact technology from this era, designed to interact with the dinosaurs,
+    or even fossilized remains of unique species found nowhere else.
+8   The Isle of Sunken Idols rises from the waves as a jagged collection of black,
+    slick rocks, perpetually damp and smelling of brine and decay. Crude,
+    cyclopean structures of a non-Euclidean geometry cling to the cliffsides,
+    their surfaces covered in unsettling carvings of fish-like humanoids and
+    impossible aquatic deities. The air is thick with a guttural croaking and
+    the scraping of webbed feet, the sounds of Gogglers moving between tide pools
+    and shadowy caves. A hidden grotto at the island's heart contains a pulsating,
+    obsidian obelisk covered in strange glyphs, radiating a palpable aura of
+    ancient, malevolent power, a focal point for their abhorrent rituals. Any
+    treasure here is likely tainted, either guarded by the Gogglers or imbued
+    with their alien, unsettling influence.
+9   A lush, verdant island, seemingly untouched by the dangers of Mare Incongnitus,
+    is known as Menagerie Isle. Here, the eccentric Lord Valerius Thorne, a man
+    of unnerving charm and formidable intellect, maintains a sprawling collection
+    of exotic creatures and surprisingly, captured adventurers. Thorne employs
+    a combination of ingenious, magically-enhanced traps disguised as natural
+    terrain, potent soporific gas released through hidden vents in the jungle,
+    and artifacts that induce paralysis or mental domination. His most effective
+    tool, however, is a set of intricately crafted silver whistles that emit
+    frequencies capable of subduing even magically resistant beings, exploiting
+    subtle vulnerabilities in their physiology or will. Thorne views his
+    collection as a grand experiment in apex predators and their interactions,
+    meticulously documenting their behavior within his carefully controlled
+    environment.
+10  The Isle of Chimeras reeks of antiseptic and something vaguely organic, a
+    sickly sweet odor that hangs heavy in the humid air. Scattered across the
+    island are crude laboratories built from salvaged shipwrecks and strange,
+    pulsating machinery powered by unknown energies. Within these makeshift
+    workshops, bubbling vats hold grotesque humanoids in various stages of
+    development, limbs of beasts grafted onto human torsos, eyes of birds
+    staring from human skulls. Dr. Alistair Finch, a gaunt figure with wild
+    eyes and bloodstained hands, oversees his horrific creations, driven by a
+    twisted pursuit of biological perfection. He uses crude surgical techniques,
+    arcane science, and possibly even captured magical energies to fuse disparate
+    life forms. His blatant disregard for life contrasts with the agonizing
+    existence of these unnatural beings, trapped between human and animal,
+    their pained moans echoing through the unnatural jungle. The value here
+    might be Finch's research notes, detailing his unsettling methods, or
+    perhaps a way to end the suffering of his failed experiments.
+
+
+table: settlement-list 2d6
+2-4     {settlement}
+5-7     {2 settlement}
+8-10    {3 settlement}
+11      {4 settlement}
+12      {2d4 settlement}
+
+table: settlement 2d4
+2   Small village of {2d6} {settlement-people}, primarily producing {settlement-trade}.
+    {settlement-government} {small-settlement-ships}
+3   Small village of {4d6} {settlement-people}, primarily producing {settlement-trade}.
+    {settlement-government} {small-settlement-ships}
+4   Village of {1d6}00 {settlement-people}, producing {settlement-trade} and {settlement-trade}.
+    {settlement-government} {medium-settlement-ships}
+5   Village of {1d20}00 {settlement-people}, producing {settlement-trade} and {settlement-trade}.
+    {settlement-government} {medium-settlement-ships}
+6   Village of {2d10}00 {settlement-people}, producing {settlement-trade}, {settlement-trade} and {settlement-trade}.
+    {settlement-government} {medium-settlement-ships}
+7   Village of {2d20}00 {settlement-people}, producing {settlement-trade}, {settlement-trade} and {settlement-trade}.
+    {settlement-government} {medium-settlement-ships}
+8   Town of {1d12},000 {settlement-people}, specializing in {settlement-trade}.
+    {settlement-government} {large-settlement-ships}
+
+table: settlement-people 2d4
+2   gnolls
+3   halflings
+4   humans and halflings
+5   humans
+6   humans, dwarves, elves and halflings
+7   elves
+8   orcs
+
+table: settlement-government 1d21
+1   No formal government enforces any laws here.
+2   No government exists per se, except when an ad hoc jury forms to deliver judgements.
+3   All government decisions are made by vote of all residents.
+4   Leaders with absolute power are elected by popular vote every {1d10} years.
+5   The industrial guilds operate the government.
+6   The government is run by council of {settlement-government-race} that decide by vote.
+7   The people are governed by an aristocracy.
+8   The people are ruled by the exceptionally wise, as determined by an ancient ritual.
+9   The people are ruled by the exceptionally intelligent, as determined by an ancient ritual.
+10  The people are ruled by the exceptionally strong, as determined by an ancient rite.
+11  The people are rulled by a guild of judges.
+12  Government power is held by the wealthy.
+13  The military operates the government.
+14  {settlement-government} Except, the government is really run by a secret cabal of {settlement-government-race}.
+15  The people are ruled by the priests.
+16  The people are governed by those deemed most honorable.
+17  The people are ruled absolutely by a {settlement-autocrat} monarch.
+18  The people are ruled by the banking guild.
+19  The people are ruled by thieves.
+20  The people are ruled by the merchant guild.
+21  All decisions of law are made by religious rite.
+
+table: settlement-government-race 2d3
+2   halflings
+3   elves
+4   humans
+5   dwarves
+6   orcs
+
+table: settlement-autocrat 1d10
+1   human
+2   elf
+3   dwarf
+4   halfling
+5   orc
+6   ogre
+7   dragon
+8   demigod
+9   mermaid
+10  demon
+
+table: settlement-trade 1d12
+1   {cargo-cloth}
+2   {cargo-skins}
+3   {cargo-spices}
+4   sugar
+5   {cargo-dye} dye
+6   cocoa
+7   tobacco
+8   cotton
+9   {cargo-wood}
+10  {cargo-food}
+11  iron
+12  {cargo-slaves} slaves
+
+table: small-settlement-ships 1d10
+1-7 The settlement has no port, and no ships are anchored nearby.
+8   The settlement has no port, but a vessel anchors offshore.<br><br>{settlement-ship}
+9   The settlement has a small harbor, currently empty.
+10  The settlement has a small harbor where ships are moored.<br><br>{1d2+1 settlement-ship}
+
+table: medium-settlement-ships 1d10
+1       The settlement has no port, and no ships are anchored nearby.
+2       The settlement has no port, but a vessel anchors offshore.<br><br>{settlement-ship}
+3       The settlement has a small harbor, currently empty.
+4-10    The settlement has a small harbor where ships are moored.<br><br>{1d2+1 settlement-ship}
+
+table: large-settlement-ships 1d10
+1       The settlement has a small harbor where several ships are moored.<br>br>
+        {1d4+1 settlement-ship}
+2       The settlement has a nice where ships are moored.<br>br>
+        {1d4+1 settlement-ship}
+3-7     The settlement has a large port where ships are moored.<br>br>
+        {2d6 settlement-ship}<br><br>
+        A few other ships are anchored offshore.<br><br>
+        {1d3 settlement-ship}
+8-10    The settlement has a large port where ships are moored.<br>br>
+        {2d8 settlement-ship}<br><br>
+        More ships are anchored offshore.<br><br>
+        {1d8 settlement-ship}
+
+table: settlement-ship
+1       {pirates}<br><br>
+2-8     The sail of a merchant ship is sighted, flying the flag of {ship-alignment}.<br>
+        {merchants}<br><br>
+9-10    The sail of a carrack is sighted, flying the flag of {ship-alignment}.<br>
+        The ship is {1d6+6}0'x{1d3+1}0', loaded with {1d135}/135 tons of {cargo}. Move 30'. 10 hardness.
+        120 HP.  The ship has four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.<br>
+        The crew are {3d8} Level 1 {sailor-race} Fighters, led by a Level {1d4+2} {sailor-race} Fighter
+        and {1d3} Level {1d4+1} {sailor-race} Fighters.<br>
+        AC 11, #At 1 sword, Dam 1d6, Mv 40', Ml 9<br><br>
+
+table: adventure-location-list 2d6
+2-4     No adventure locations.
+5-7     {1d2 adventure-location}
+8-10    {3 adventure-location}
+11      {4 adventure-location}
+12      {2d4 adventure-location}
+
+table: adventure-location 2d4
+2   The {adventure-location-spot} of the island has a monastery. {adventure-monastery}
+3   The {adventure-location-spot} of the island has a wizard's tower. {adventure-wizard}
+4   In the {adventure-location-spot} of the island are ruins of {adventure-ruins}
+    which might hide artifacts but also angry spirits.
+5   Hidden in the {adventure-location-spot} of the island is an underground dungeon
+    with traps, puzzles and treasure guarded by creatures. {adventure-dungeon}
+6   A shipwreck can be seen on the {adventure-shipwreck-side} side of the island,
+    {adventure-shipwreck-onshore}. {settlement-ship}
+7   The {adventure-location-spot} of the island has an abandoned {adventure-abandoned}.
+8   Hidden in the {adventure-location-spot} of the island is a glowing portal to another realm.
+
+table: adventure-location-spot 1d10
+1   north
+2   northeast
+3   east
+4   southeast
+5   south
+6   southwest
+7   west
+8   northwest
+9-10 center
+
+table: adventure-monastery 1d6
+1   Peaceful monks simply need a haven from the rest of the world.
+2   Monks guard a terrible secret.
+3   An order of the Anointed One studies scripture.
+4   Heretics to the Anointed One are developing their new ideas.
+5   An evil cult languishes in obscurity.
+6   An evil cult plots a terrible crime.
+
+table: adventure-wizard 1d4
+1   The wizard is still here.
+2   The wizard has left for a while, but will be back.
+3   The wizard died some time ago.
+4   The wizard abandoned the tower and it's crumbling.
+
+table: adventure-ruins 1d4
+1   a small settlement
+2   a religious monument
+3   a fort
+4   a farm
+
+table: adventure-dungeon 1d4
+1   The dungeon was built as a prison.
+2   The dungeon is a treasure vault.
+3   The dungeon is a tomb.
+4   The dungeon is a lair.
+
+table: adventure-shipwreck-side 1d4
+1   north
+2   south
+3   east
+4   west
+
+table: adventure-shipwreck-onshore 1d4
+1   on the beach
+2-4 {5d10+50} yards off the beach
+
+table: adventure-abandoned 1d4
+1   castle
+2   temple
+3   mine
+4   plantation
+
+
+table: reaction 2d6
+2       <strong>they pretend to be in trouble.</strong>
+        A pose of distress is quickly turned into an opportunity for attack.
+3       <strong>the time for talk is over.</strong>
+        Morale check is {2d6}. Failure means flight or surrender. Otherwise, attack immediately.
+4-6     <strong>someone will get their head bashed in.</strong>
+        They are aggressive and negative.
+        Apply -4 to the next check if there’s room for negotiation. Otherwise, it’s fight or flight.
+7-8     <strong>there is clear and present danger.</strong>
+        They are cautious and aware of possible trouble. They will disengage
+        without violence if possible, or provide a final warning.
+9       <strong>they genuinely need help.</strong>
+        Something is wrong and they hope for help, but are cautious and will flee
+        if threatened.
+10-11   <strong>they must trust and verify.</strong>
+        They are neutral and open to a fair exchange. Apply +4 to the next check.
+        Any final offers are take-it-or-leave-it.
+12      <strong>this could be the beginning of a beautiful friendship.</strong>
+        They are relaxed with a presumption of courtesy.
+
+table: fishing 1d6
+1-2     no fish caught
+3       {fishing-junk} is pulled out of the water {fishing-sick}
+4       {1d4} {fishing-small} are caught {fishing-sick}
+5       {1d20} {fishing-small} are caught {fishing-sick}
+6       a {fishing-big} is caught {fishing-sick}
+
+table: fishing-sick 1d20
+1-19    (no chance of disease)
+20      (check for disease)
+
+table: fishing-junk
+1   an old boot
+2   a coconut
+3   a dead gull
+4   a mass of seaweed
+5   a bottle half full of rum
+6   a bottle with a note inside
+7   the bloated corpse of a dolphin
+8   the bloated corpse of a {sailor-race}
+
+table: fishing-small
+1	Azure Striper - iridescent blue scales ({1d7}lbs each)
+2	Ghostscale Dart - translucent fins ({1d5}lbs each)
+3	Crimson Torpedo - blood-red flesh ({1d12}lbs each)
+4	Glimmer Orb - phosphorescent spots (0.{1d4+1}lbs each)
+5	Murmur Mouths - constantly clicking jaws ({1d3+1}lbs each)
+6	Scarlet Behemoths - tough, scaled hide ({1d20}lbs each)
+7	Crown Fins - elaborate dorsal fin ({1d25}lbs each)
+8	Flathead Glider - wide, wing-like fins (1.{1d5}lbs each)
+9	Shadow Skimmers - perfectly camouflaged ({1d10}lbs each)
+10	Pearl Eyes - large, luminous eyes (1.{1d5}lbs each)
+11	Sunset Terrors - vibrant orange and red stripes ({1d25}lbs each)
+12	Phantom Spots - pale, shifting markings ({1d25}lbs each)
+13	Maze Scales - intricate, swirling patterns ({1d25}lbs each)
+14	Blood Fins - deep red fins ({1d25}lbs each)
+15	Swift Shadows - incredibly fast swimmers ({1d25}lbs each)
+16	Gold Gills - metallic sheen on gill covers ({1d20}lbs each)
+17	Cerulean Chorus - emits a whistling sound ({1d5}lbs each)
+18	Chalkbacks - pale white dorsal stripe ({1d5}lbs each)
+19	Silver Flash - reflects light brilliantly (0.{1d4+1}lbs each)
+20	Tusk Jaws - prominent teeth ({1d10}lbs each)
+21	Star Fins - dark spots on fins (1.{1d10}lbs each)
+22	Bronze Backs - metallic brown coloration ({1d10}lbs each)
+23	Giant Eyes - disproportionately large eyes ({1d12}lbs each)
+24	Prism Darter - shimmers with multiple colors ({1d8}lbs each)
+25	Stripe Swimmer - distinct horizontal bands ({1d6}lbs each)
+26	Venom Spines - sharp, venomous spines (poisonous) (1.{1d5}lbs each)
+27	Glass Bodies - somewhat translucent flesh (1.{1d5}lbs each)
+28	Razor Teeth - serrated teeth ({1d10}lbs each)
+29	Stone Skins - rough, textured skin ({1d5}lbs each)
+30	Grunt Snouts - pig-like snout (1.{1d5}lbs each)
+31	Needle Noses - elongated snout (0.{1d4+1}lbs each)
+32	Hammer Heads - broad, flattened head ({1d5}lbs each)
+33	Ram Faces - sloping forehead ({1d5}lbs each)
+34	Abyss Blacks - uniformly dark coloration ({1d3}lbs each)
+35	Slime Trails - leaves a mucous trail (0.{1d4+1}lbs each)
+36	Night Fins - dark fins with pale edges ({1d15}lbs each)
+37	Hound Jaws - powerful, snapping jaws ({1d15}lbs each)
+38	Ruby Scales - individual scales shimmer red ({1d15}lbs each)
+39	Fan Tails - broad, fan-shaped tail fin ({1d8}lbs each)
+40	Iron Hides - exceptionally tough skin ({1d8}lbs each)
+41	Spike Backs - sharp protrusions along the spine ({1d5}lbs each)
+
+table: fishing-big
+1	Serpent Jaws - elongated lower jaw ({1d15}lbs each)
+2	Shadow Behemoth - dark, mottled skin ({2d40}lbs each)
+3	Sun Dancers - brilliant, shifting colors ({2d10}lbs each)
+4	Iron Clads - heavily armored scales ({2d15}lbs each)
+5	Cave Lurkers - pale, sightless eyes ({2d10+5}lbs each)
+6	Phantom Growlers - emits low, resonant sounds ({2d10+5}lbs each)
+7	Seismic Giants - causes tremors when it moves ({2d100+15}lbs each)
+8	Golden Fins - bright yellow fins ({2d10}lbs each)
+9	Tidal Crashers - incredibly strong tail ({5d10}lbs each)
+10	Silver Streaks - fast, silver-scaled body ({2d10}lbs each)
+11	Azure Lancers - long, pointed snout ({2d80+30}lbs each)
+12	White Phantoms - pale, almost translucent body ({3d20+15}lbs each)
+13	Obsidian Leviathan - jet-black and massive ({5d10}0lbs each)
+14	Pin Needles - extremely thin body (1.{1d5}lbs each)
+15	Deep Sleepers - sluggish and oily flesh ({1d25}lbs each)
+16	Disk Bodies - flattened, circular shape ({1d15}lbs each)
+17	Scale Mails - large, overlapping scales ({1d5}lbs each)
+18	Coin Fins - round, coin-like fins ({1d4}lbs each)
+19	Sky Leapers - leaps high out of the water ({1d50+10}lbs each)
+20	Toothed Blades - saw-like teeth along snout ({1d140+10}lbs each)
+21	River Tigers - dark stripes along the body ({1d20}lbs each)
+22	Coral Reds - deep red coloration ({1d15}lbs each)
+23	Hidden Hunters - excellent camouflage ({1d15}lbs each)
+24	Blade Backs - sharp dorsal fin ({1d150+10}lbs each)
+25	Silver Kings - large, silvery scales ({1d50+5}lbs each)
+26	Blue Comets - streaks of blue along the sides ({5d6}lbs each)
+27	Gold Suns - bright yellow coloration ({1d10}0lbs each)
+28	Lightning Stripes - jagged, pale stripes ({1d30+10}lbs each)
+
+
+table: disease-type 1d100
+1-3     Blood; {disease-occurrence-3}; {disease-severity-25}; -1 STR, -1 CON;
+        Death in {1d12} weeks for terminal cases.
+4       Bones; {disease-occurrence-1}; {disease-severity-13}; -1 STR, -1 CON;
+        Death in {1d12} weeks for terminal cases.
+5       Nervous System; {disease-occurrence-6}; {disease-severity-25}; -1 INT, -1 DEX;
+        Death in {2d12} hours for terminal cases.
+6-7     Cardiovascular System; {disease-occurrence-3}; {disease-severity-24}; -1 STR, -1 CON;
+        Death in {2d6} days for terminal cases.
+8-9     Connective Tissue; {disease-occurrence-1}; {disease-severity-13};
+        Permanent -1 STR, -1 DEX, -1 CON, -1 CHA for each month of affliction.
+10-12   Ears ({disease-side}); {disease-occurrence-7}; {disease-severity-67};
+        Terminal cases only cause permanent deafness.
+13-18   Eyes ({disease-side}); {disease-occurrence-7}; {disease-severity-57};
+        Terminal cases only cause permanent blindness.
+19-40   Gastro-Intestinal; {disease-occurrence-6}; {disease-severity-57};
+        -1 STR, -1 CON per attack. Death in {1d12} weeks for terminal cases.
+41-42   Sexual Organs; {disease-occurrence-2}; {disease-severity-37};
+        Terminal cases cause sterlity in {2d4} days.
+43-48   Joints ({disease-joint}); {disease-occurrence-4}; {disease-severity-68};
+        -1 DEX; Terminal cases cause permanent lose of function.
+49-50   Mucous Membranes; {disease-occurrence-7}; {disease-severity-68}; -1 CON;
+        Death in {1d12} days for terminal cases.
+51-52   Muscles; {disease-occurrence-5}; {disease-severity-57}; -1 STR, -1 DEX;
+        25% of episodes are permanent. Death in {1d12} months for terminal cases.
+53-65   Nose/Throat; {disease-occurrence-6}; {disease-severity-68}; Chronic cases
+        cause -1 CON in 10% of episodes. Death in {1d12} days for terminal cases.
+66-85   Respiratory System; {disease-occurrence-6}; {disease-severity-57};
+        -1 STR or -1 CON for 10% of chronic, severe cases.  Death in {1d12} months
+        for terminal cases.
+86-96   Skin; {disease-occurrence-7}; {disease-severity-57}; 10% of mild and 25%
+        of sever cases cause -1 CHA. Death in {1d12} weeks for terminal cases.
+97-100  Urinary System; {disease-occurrence-6}; {disease-severity-57}; 25% per
+        episode of -1 DEX, -1 CON; Death in {1d12} weeks for terminal cases.
+
+
+table: parasite-type 1d100
+1-10    Cardiovascular System; {disease-severity-25}
+11-35   Intestines; {disease-severity-27}
+36-40   Muscles; {disease-severity-13}
+41-45   Respiratory System; {disease-severity-14}
+46-75   Skin/Hair; {disease-severity-78}
+76-100  Stomach; {disease-severity-27}
+
+
+table: disease-occurrence-1 1d8
+1       Acute
+2-8     Chronic
+
+table: disease-occurrence-2 1d8
+1-2     Acute
+3-8     Chronic
+
+table: disease-occurrence-3 1d8
+1-3     Acute
+4-8     Chronic
+
+table: disease-occurrence-4 1d8
+1-4     Acute
+5-8     Chronic
+
+table: disease-occurrence-5 1d8
+1-5     Acute
+6-8     Chronic
+
+table: disease-occurrence-6 1d8
+1-6     Acute
+7-8     Chronic
+
+table: disease-occurrence-7 1d8
+1-7     Acute
+8       Chronic
+
+
+table: disease-severity-13 1d8
+1   {disease-severity-mild}
+2-3 {disease-severity-severe}
+4-8 Terminal
+
+table: disease-severity-14 1d8
+1   {disease-severity-mild}
+2-4 {disease-severity-severe}
+5-8 Terminal
+
+table: disease-severity-24 1d8
+1-2 {disease-severity-mild}
+3-4 {disease-severity-severe}
+5-8 Terminal
+
+table: disease-severity-25 1d8
+1-2 {disease-severity-mild}
+3-5 {disease-severity-severe}
+6-8 Terminal
+
+table: disease-severity-27 1d8
+1-2 {disease-severity-mild}
+3-7 {disease-severity-severe}
+8   Terminal
+
+table: disease-severity-37 1d8
+1-3 {disease-severity-mild}
+4-7 {disease-severity-severe}
+8   Terminal
+
+table: disease-severity-57 1d8
+1-5 {disease-severity-mild}
+6-7 {disease-severity-severe}
+8   Terminal
+
+table: disease-severity-67 1d8
+1-6 {disease-severity-mild}
+7   {disease-severity-severe}
+8   Terminal
+
+table: disease-severity-68 1d8
+1-6 {disease-severity-mild}
+7-8 {disease-severity-severe}
+
+table: disease-severity-78 1d8
+1-7 {disease-severity-mild}
+8   {disease-severity-severe}
+
+table: disease-severity-mild 1
+1   Mild -- must rest for {1d3} weeks
+
+table: disease-severity-severe 1
+1   Severe -- disabled {1d2} weeks, then must rest {1d2} weeks
+
+table: disease-side 1d4
+1   Right
+2   Left
+3-4 Both
+
+table: disease-joint 1d20
+1       Ankle
+2-3     Elbow
+4-6     Fingers
+7-9     Hip
+10      Jaw
+11-13   Knee
+14      Shoulder
+15-18   Spine
+19-20   Wrist
