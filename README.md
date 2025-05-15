@@ -137,3 +137,7 @@ Small adjustments to daily events on the southern seas.
 * Vary lengths of caravels and carracks
 ### 1.6.0
 * Allow repeat commands to specify dice rolls, too
+### 1.6.1
+* Add weather to southern seas events
+* Add monster notes to southern seas events
+

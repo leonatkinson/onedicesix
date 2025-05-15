@@ -1,11 +1,25 @@
 name: Daily Events in the Southern Seas
 description: Used some castaways from https://elfmaidsandoctopi.blogspot.com/2018/07/d100-castaways.html
-recipe: At {event-time}, {event-ocean}<br>
+recipe: {weather}<br>
+        At {event-time}, {event-ocean}<br>
         <br>
         {event-ocean-extra}<br>
         <br>
         If fishing, {fishing}.
 repeat: 1
+
+table: weather 1d10
+1-3 Optimal weather conditions provide the best visibility.
+4-6 Except for morning fog, conditions are clear.
+7   Distant storms reduce visibility to 3 miles.
+8   High humidity produces a haze that reduces visibility to 3 miles.
+9   Intermittent rain reduces visibility to under 1 mile.
+10  {weather-no-visibiilty} reduces visibility to a matter of yards.
+
+table: weather-no-visibiilty 1d2
+1   A torrential downpour
+2   Thick fog
+
 
 table: event-time 1d4
 1   dawn
@@ -189,25 +203,34 @@ table: ocean 2d8 Ocean
     Dam 1d10/1d10/3d10 or 11d8 steam breath, Mv 10' Fly 60' (20') Swim 60' (15'), Sv F8, Ml 8,
     XP 1015<br>
     Steam breath 11/day. 100' x 55'.
-3   {ocean-hydra}
-4   {1d3} Sperm Whales AC 22, HD 36* (+16), #At 1 bite or special, Dam 3d20, Mv Swim 60' (20'), Sv F8, Ml 7, XP 17850
-5   {1d4} Giant Squid AC 17, HD 6, #At 8 tentacles/1 bite, Dam 1d4 per tentacle/1d10, Mv Swim 40', Sv F6, Ml 8, XP 500
-6   {1d6} Giant Crabs AC 18, HD 3, #At 2 pincers, Dam 2d6/2d6, Mv 20' Swim 20', Sv F3, Ml 7, XP 145
+3   {ocean-hydra}<br>
+    Do 8 damage to a head to disable. {ocean-hydra-fire}
+4   {1d3} Sperm Whales AC 22, HD 36* (+16), #At 1 bite or special, Dam 3d20, Mv Swim 60' (20'), Sv F8, Ml 7, XP 17850<br>
+    Instead of biting, emit sound blast 5'x50' that stuns for 1d4 rounds. Save vs Death to resist.
+5   {1d4} Giant Squid AC 17, HD 6, #At 8 tentacles/1 bite, Dam 1d4 per tentacle/1d10, Mv Swim 40', Sv F6, Ml 8, XP 500<br>
+    To bite, must hit with 2 tentacles first. Each tentacle hit can pull 75lbs, and will pull victim underwater.
+6   {1d6} Giant Crabs AC 18, HD 3, #At 2 pincers, Dam 2d6/2d6, Mv 20' Swim 20', Sv F3, Ml 7, XP 145<br>
+    No bonus for attack from behind.
 7   {1d6} Killer Whales AC 17, HD 6, #At 1 bite, Dam 2d10, Mv Swim 80' (10'), Sv F6, Ml 10, XP 500
-8   {1d2} Giant Octopus AC 19, HD 8, #At 8 tentacles/1 bite, Dam 1d4 per tentacle/1d6, Mv Swim 30', Sv F8, Ml 7, XP 875
-9   {2d6} Mako Sharks AC 15, HD 4, #At 1 bite, Dam 2d6, Mv Swim 80', Sv F4, Ml 7, XP 240
-10  Giant Barracuda AC 15, HD 9 (+8), #At 1 bite, Dam 2d8+1, Mv Swim 60' (10'), Sv F9, Ml 10, XP 1075
+8   {1d2} Giant Octopus AC 19, HD 8, #At 8 tentacles/1 bite, Dam 1d4 per tentacle/1d6, Mv Swim 30', Sv F8, Ml 7, XP 875<br>
+    To bite, must hit with 2 tentacles first. Each tentacle hit can pull 100lbs, and will pull victim underwater.
+9   {2d6} Mako Sharks AC 15, HD 4, #At 1 bite, Dam 2d6, Mv Swim 80', Sv F4, Ml 7, XP 240<br>
+    May leap 20' into the air.
+10  Giant Barracuda AC 15, HD 9 (+8), #At 1 bite, Dam 2d8+1, Mv Swim 60' (10'), Sv F9, Ml 10, XP 1075<br>
+    Only surprised 1 in 6. Surprises 1-3. +2 initiative. Usually leave after 1d4 rounds.
 11  {1d6} Giant Electric Eels AC 12, HD 6*, #At 1 bite, Dam 1d12, Mv 60' Swim, Sv F6, Ml 8, XP 555<br>
-    Shock 3/day for 6d4 damage in 20' radius. Save for half.
+    Once per turn, electric burst 5' radius for 3d8 damage, 10' radius 2d8, 15' radius 1d8. Save vs Death for half.
+    Also stuns.
 12  {3d6} Bull Sharks AC 13, HD 2, #At 1 bite, Dam 2d4, Mv Swim 60' (10'), Sv F2, Ml 7, XP 75
-13  {ocean-roc}
+13  {ocean-roc}<br>
+    Two claw hits allows roc to carry off victim. Will not attack victim while carried off.
 14  Water Elemental AC 22 (m), HD 16* (+12), #At 1, Dam 3d6, Mv 20' (15') Swim 60', Sv F16, Ml 10, XP 3385<br>
     Looks like a giant wave. Double damage from air. Extra 1d8 damage to anything in the water.
 15  {1d2} Mermaids AC 12, HD 1*, #At 1 weapon, Dam 1d6 or by weapon, Mv Swim 40', Sv F1, Ml 8, XP 37<br>
     Siren song attracts. Save -4 if there are two mermaids. If the captain fails
     his save, he tries to steer the ship into the rocks.
 16  {2d6} Sea Serpents AC 17, HD 6, #At 1 bite, Dam 2d6, Mv Swim 50' (10'), Sv F6, Ml 8, XP 500<br>
-    Constrict does 2d10 damage to a vessel. {2d2}0' long.
+    Constrict does 2d10 damage to a vessel, reduce hardness by half. {2d2}0' long.
 
 table: ocean-roc 1d8
 1-7 {1d8} Large Rocs AC 18, HD 12 (+10), #At 2 claws/1 bite, Dam 1d8/1d8/2d10, Mv 20' Fly 160' (10'), Sv F12, Ml 9, XP 1875
@@ -222,6 +245,10 @@ table: ocean-hydra 1d20
 18      Hydra AC 21, HD 10 (+10), #At 10, Dam 1d10, Mv 40' (10'), Sv F10, Ml 9, XP 1300
 19      Hydra AC 22, HD 11 (+10), #At 11, Dam 1d10, Mv 40' (10'), Sv F11, Ml 9, XP 1575
 20      Hydra AC 23, HD 12 (+10), #At 12, Dam 1d10, Mv 40' (10'), Sv F12, Ml 9, XP 1875
+
+table: ocean-hydra-fire 1d6
+1-5 Cannot breath fire.
+6   Breath fire 10'x20' once per day per head. Used 1-2 in 6. Does 3d6 damage, save vs dragon breath for half.
 
 table: merchants 1d20
 1-15    The merchant caravel has a crew of {2d8+8} regular men. It carries {1d75}/75 tons of {cargo}.<br>
