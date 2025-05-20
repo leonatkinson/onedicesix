@@ -140,4 +140,6 @@ Small adjustments to daily events on the southern seas.
 ### 1.6.1
 * Add weather to southern seas events
 * Add monster notes to southern seas events
+### 1.6.2
+- Rename forts to frontier-forts.txt
 
