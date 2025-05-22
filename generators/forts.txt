@@ -1,0 +1,519 @@
+name: Forts
+description: Generate a fort
+recipe:
+    The primary purpose of the fort was {purpose}. It was built by {builder}.
+    Construction completed {age}. The fort is located {located} and constructed
+    {construction}. The walls are {wall-height} feet tall, have {ramparts} and
+    {bastions}. {towers} rise above the walls. The ramparts feature {parapets}.
+    {hoardings}.<br>
+    <br>
+    The gatehouse {gatehouse}. Outside and around the walls {moat}
+    {1d4}0 feet wide and {1d4+4} feet deep {moat-hidden}. {sally-port}.<br>
+    <br>
+    Inside the walls are the following structures. A central keep {keep}. {barracks}. {workshops}. {storage}.
+    {well}. {chapel}. {great-hall}. {guardhouse}. {dungeon}.<br>
+    <br>
+    {occupants}
+repeat: 1
+
+table: purpose
+1   for religious significance, and integrated a religious site
+2   for cultural significance, serving as a symbolic representation of cultural identity
+3   for military defense, a secure base of operations and a strongpoint against enemy attacks
+4   for territorial control, to assert and maintain authority over a specific area and its resources
+5   for strategic resource protection, to safeguard a vital asset, namely {vital-asset}
+6   to provide shelter, a refuge for civilians during times of conflict or invasion
+7   as a symbol of power, to project authority and prestige of {authority}
+8   as a forward operating base, a launchpad for military expeditions and expansion into new territories
+9   for economic control, to regulate and tax commerce passing through a strategic location
+10   as a communication hub, acting as a central point for relaying messages and coordinating activities across a region
+11  as deterrence, to discourage potential adversaries from attacking through a display of strength
+12  for enforcement, to provide a secure base for maintaining order and enforcing laws within a territory
+13  for observation and surveillance, to offer a vantage point for monitoring enemy movements or the surrounding landscape
+
+table: vital-asset
+1   a trade route
+2   a mine
+3   agricultural land
+
+table: authority
+1   a ruler
+2   a state
+3   an organization
+
+table: builder
+1   {monarch}
+2   a feudal Lord
+3   a knights
+4   a religious order
+5   a bishop
+6   an independent city-state
+7   a merchant guild
+8   a tribal chief
+9   a warlord
+10  a pirate or bandit leader
+11  frontier settlers
+12  an engineering guild
+
+table: monarch
+1   a king
+2   a queen
+3   an emperor
+4   an empress
+5   a grand duke
+6   a grand duchess
+7   a duke
+8   a duchess
+9   a prince
+10  a princess Regnant
+11  a margrave
+12  landgrave
+13  a count palatine
+14  a sultan
+15  a shah
+16  a czar
+17  a kaiser
+18  a pharaoh
+19  a khan
+20  an emir
+21  a raja
+22  a maharaja
+23  a high chief
+24  a pope
+25  a prophet
+
+table: age
+1   only {1d8+2} years ago. The walls {condition-young}
+2   within the last decade. The walls {condition-young}
+3   a few generations ago. ({1d10+3}0 years) The walls {condition-young}
+4   roughly a century ago. The walls {condition-young}
+5   {1d6+1} centuries past. The walls {condition-old}
+6   nearly a millennium ago. The walls {condition-old}
+7   over a thousand years ago. The walls {condition-old}
+8   dating back millennia. The walls {condition-old}
+9   before recorded history, at least 10,000 years ago. The walls {condition-old}
+10  in a time lost to the mists of antiquity. The walls {condition-old}
+
+table: condition-young
+1   are in an unfinished state
+2   still appear new
+3   are weathered but solid
+4   show signs of damage
+
+table: condition-old
+1   appear remarkably sturdy still
+2   are weathered but solid
+3   show signs of damage
+4   have fallen into disrepair
+5   are largely in ruins
+
+table: located
+1   on a commanding hilltop, offering extensive views
+2   at the edge of a sheer cliff, providing natural defenses
+3   beside a vital river crossing, controlling water access and trade
+4   at the confluence of two rivers, strategically dominating the waterways
+5   within a narrow mountain pass, blocking movement through the terrain
+6   on a small, isolated island, making approach difficult
+7   at a significant crossroads, overseeing overland routes
+8   as a citadel within a larger city, serving as its inner stronghold
+9   on an open, flat plain, relying heavily on its constructed defenses
+10  along a contested border, defending territorial claims
+11  deep within a treacherous marsh, using the terrain as a barrier
+12  within a natural cave system, enhanced by built structures
+
+table: construction
+1   primarily of roughly cut stone, with timber reinforcements
+2   from massive, hewn blocks of granite
+3   using packed earth and timber palisades
+4   with fired brick and mortar
+5   of local clay and straw (adobe/cob)
+6   from layered turf and earthworks, topped with timber
+7   from volcanic rock and basalt
+8   using coral and limestone
+9   primarily of reinforced concrete and steel
+10  by carving directly into a natural rock face, minimizing exposed construction
+11  from interlocking logs and sturdy timber
+12  with repurposed rubble and salvaged materials
+
+table: wall-height
+1   low, only {1d6+6}
+2   of modest height, {1d12+13}
+3   significant, {1d25+25}
+4   imposing at {1d4+4}0
+5   towering and massive, {1d20+10}
+6   integrated into the natural landscape, which reaches up to {2d20+10}
+
+table: ramparts
+1   no ramparts
+2   narrow ramparts
+3   5 foot ramparts
+4   10 foot ramparts
+
+table: bastions
+1   no bastions
+2   a few bastions
+3   bastions every {1d20}0 feet
+
+table: towers
+1   No towers
+2-4 {1d4}0 foot towers at the corners
+
+table: parapets
+1   no parapets
+2   4 foot parapets
+3   8 foot parapets with embrasures for firing arrows through
+
+table: hoardings
+1   The walls are smoothly vertical with no overhang
+2   Hoardings project from the walls to allow dropping missiles or harmful
+    substances down upon attackers.
+
+table: keep
+1   does not exist
+2   matches the height of the walls
+3   is as tall as any other feature
+4   rises {1d4}0 over the tallest features
+
+table: gatehouse
+1   is a heavy wooden door
+2   is a heavy wooden door and a portcullis
+3   features a passage with a portcullis on each side
+4   is recessed into the walls and fortified with a door and portcullis
+5   is a long, covered passage with a series of gates
+6   is a winding barbican
+
+table: moat
+1   is a dry ditch
+2   is a water-filled moat
+3   is a marshy moat, with sections of deep mud
+4   is a dry ditch filled with sharpened spikes
+5   is a water-filled moat hiding 10 foot pits
+6   is a natural ravine
+
+table: moat-hidden
+1   with a thick cover of vegetation
+2-4 in plain view
+
+table: sally-port
+1-2 The fort provides no other exits
+3   Elsewhere, a smaller, concealed gate allows defenders to make surprise attacks or escapes
+4   Elsewhere, a hidden postern gate allows quick escapes
+
+table: barracks
+1   There are no designated living quarters for soldiers
+2   A large hall provided quarters for soldiers
+3   Several semi-private rooms each provide space for up to 10 soldiers
+4   Aside from semi-private rooms for small groups, there are quarters for officers
+
+table: workshops
+1   No buildings used as workshops are seen
+2   There are a few buildings suitable for blacksmiths, carpenters, masons, and cooks
+3   There are buildings suitable for blacksmiths, carpenters, leather workers, masons, and cooks.
+4   There are many buildings suitable for blacksmiths, armorers, carpenters, fletchers, leather
+    workers, tailors, masons, cobblers, and cooks.
+
+
+table: storage
+1   No warehouses or other storage buildings are seen
+2   One large warehouse is seen
+3   There are separate warehouses for dry goods and food
+4   There are {1d8} storage houses dedicated to various types of goods
+
+table: well
+1   There is no source of water
+2   A central well is available
+3   A cistern collects rainwater
+
+table: chapel
+1   There are no religious facilities
+2   There is a simple shrine in the open air
+3   A small chapel provides a place of worship
+4   A grand cathedral is a signifant place of worship
+
+table: great-hall
+1   The great hall occupies the ground floor of the keep.
+2   A great hall occupies the second floor above one of the buildings.
+3   A dedicated hall is free-standing and opens into the main courtyard.
+4   The main hall is an upper floor of the keep.
+
+table: guardhouse
+1   There is no guardhouse
+2   The guardhouse is a room within the gatehouse
+3   The guardhouse is a small building next to the entrance
+4   The lowest floor of each tower is a guardhouse
+5   A simple shed in the courtyard serves as a guardhouse
+5   Part of the barracks is designated as the guardhouse
+
+table: dungeon
+1   Prisoners can be kept in oubliette, a bottle-shaped pit with access via the
+    floor of the keep
+2   A cell in the base of one of the towers or the gatehouse serves as a prison.
+3   A subterranean chamber beneath the courtyard may be accessed via a steep
+    stair. A heavy gate keeps prisoners inside
+4   A substatial room beneath the keep offers several cells for holding prisoners
+    securely
+
+table: occupants
+1   The fort is abandoned and nothing of value remains.
+2   The fort is abandoned, but a few things of value were left behind, including
+    a few traps or dangerous structures.
+3   Long abandoned, the fort is now occupied.<br>
+    <br>
+    {gang}
+4   The fort is still maintained by a hostile group.<br>
+    <br>
+    {gang}
+5   Wild beasts have overrun the fort.<br>
+    <br>
+    {beasts}
+6   A powerful monster lurks in the fort.<br>
+    <br>
+    {monster}
+
+table: gang
+1   They are {bandit-race} bandits.<br>
+    {bandits}
+2   {3d6} Gnolls AC 15 (13), HD 2, #At 1 mace, Dam 1d8+1, Mv 30' Unarmored 40', Sv F2, Ml 8, XP 75<br>
+    {1d6} Gnoll Warriors AC 15, HD 4, #At 1 mace, Dam 1d8+1, Mv 30', Sv F4, Ml 9<br>
+    Gnoll Leader AC 15, HD 6, #At 1 mace, Dam 1d8+2, Mv 30', Sv F6, Ml 10<br>
+    Gnoll Witch AC 15, HD 6, #At 1 mace, Dam 1d8+2, Mv 30', Sv M6, Ml 10<br>
+    Spells -- sleep, hold portal, shield, darkness, knock, fireball, lightning bolt<br>
+    Treasure -- D, K
+3   {5d4} Bugbears AC 15, HD 3+1, #At 1 scimitar, Dam 1d8+1, Mv 30', Sv F3, Ml 10, XP 145<br>
+    {5d4} Bugbear Warriors AC 15, HD 4+4, #At 1 scimitar, Dam 1d8+2, Mv 30', Sv F4, Ml 10<br>
+    Bugbear Chief AC 15, HD 6+6, #At 1 scimitar, Dam 1d8+3, Mv 30', Sv F6, Ml 10<br>
+    Bugbear Shaman (Cleric 5) AC 15, HD 6+6, #At 1 scimitar, Dam 1d8+3, Mv 30', Sv C5, Ml 10<br>
+    Spells -- cure light wounds, detect magic, hold person, silence 15' radius<br>
+    Treasure -- B, L, M
+4   {5d6} Orcs AC 14, HD 1, #At 1 scimitar, Dam 1d8, Mv 30' Unarmored 40', Sv F1, Ml 8, XP 25<br>
+    {5d6} Orc Warriors AC 14, HD 2, #At 1 scimitar, Dam 1d8, Mv 30', Sv F2, Ml 9, XP 75<br>
+    {1d8+2} Orc Chiefs AC 15, HD 4, #At 1 scimitar, Dam 1d8+1, Mv 20', Sv F4, Ml 9, XP 240<br>
+    Human Magic-User 10 AC 12, AB +4, #At 1 dagger, Dam 1d4, Mv 40', ML 9, XP 1390<br>
+    Spells -- 2x charm person, magic mouth, ventriloquism, continual darkness,
+    continual light, wizard lock, darkvision, fireball, water breathing,
+    charm monster, growth of plants, feeblemind, wall of stone<br>
+    ring of protection +1, potion of speed<br>
+    Treasure -- G
+
+
+table: bandits
+1   Chief (Level {1d4+2} Fighter) {gang-arms}, Mv 30', Ml {1d6+6}<br>
+    {1d3} Level {1d4+1} Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br>
+    {2d6} normal men AC 11, {gang-weapons-2}, Mv 40', Ml {1d6+4}<br>
+    <br>
+    They've stashed {1d20} tons of {trade-goods} and a treasure hoard of type C.
+2   Chief (Level {1d4+2} Fighter) {gang-arms}, Mv 30', Ml {1d6+6}<br>
+    {1d3} Level {1d4+1} Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br>
+    {3d6} normal men AC 11, {gang-weapons-2}, Mv 40', Ml {1d6+4}<br>
+    <br>
+    They've stashed {1d20} tons of {trade-goods} and a treasure hoard of type B.
+3   Chief (Level {1d4+2} Fighter) {gang-arms}, Mv 30', Ml {1d6+6}<br>
+    {1d3} Level {1d4+1} Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br>
+    {2d10+20} Level 1 Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br>
+    {3d6} normal men AC 11, {gang-weapons-2}, Mv 40', Ml {1d6+4}<br>
+    <br>
+    They've stashed {5d10} tons of {trade-goods} and a treasure hoard of type B.
+4   Chief (Level {1d6+2} Fighter) {gang-arms}, Mv 30', Ml {1d6+6}<br>
+    {3d6} Level {1d4+1} Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br>
+    {4d10+20} Level 1 Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br><br>
+    {4d10+20} normal men AC 11, {gang-weapons-2}, Mv 40', Ml {1d6+4}<br>
+    <br>
+    They've stashed {5d20} tons of {trade-goods} and a treasure hoard of type D.
+5-6 Chief (Level {1d8+2} Fighter) {gang-arms}, Mv 30', Ml {1d6+6}<br>
+    {2d4} Level {1d4+1} Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br>
+    {2d10+20} Level 1 Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br>
+    {2d10+20} normal men AC 11, {gang-weapons-2}, Mv 40', Ml {1d6+4}<br>
+    They've stashed {6d20} tons of {trade-goods} and a treasure hoard of type F.
+
+table: bandit-race
+1   human
+2   elf
+3   dwarf
+4   halfling
+
+table: gang-arms 1d6
+1   AC 11, {gang-weapons-2}
+2   Leather AC 13, {gang-weapons-2}
+3-4 Leather + Shield AC 14, {gang-weapons-1}
+5   Chain AC 15, {gang-weapons-2}
+6   Chain + Shield AC 16, {gang-weapons-1}
+
+table: gang-weapons-1 1d6
+1   #At hand axe 1d6 or {gang-weapon-ranged}
+2   #At battle axe 1d8 or {gang-weapon-ranged}
+3   #At shortsword 1d6 or {gang-weapon-ranged}
+4-5 #At longsword 1d8 or {gang-weapon-ranged}
+6   #At mace 1d8 or {gang-weapon-ranged}
+
+table: gang-weapons-2
+1   great axe 1d10 or {gang-weapon-ranged}
+2   great sword 1d10 or {gang-weapon-ranged}
+3   maul 1d10 or {gang-weapon-ranged}
+4   halberd 1d10 or {gang-weapon-ranged}
+
+table: gang-weapon-ranged
+1   shortbow (50/200/150) 1d6
+2   light crossbow (60/120/180) 1d6
+3   sling (30/60/90) 1d4
+
+
+table: beasts
+1   {8d6} Zombies AC 12, HD 2, #At 1 weapon, Dam 1d8 or by weapon, Mv 20', Sv F2, Ml 12, XP 75
+2   {4d6} Mummies AC 17‡, HD 5**, #At 1 touch + disease, Dam 1d12 + disease, Mv 20', Sv F5, Ml 12, XP 450, Tr D
+3   {4d6} Carnivorous Fire Apes AC 15, HD 6, #At 2 claws, Dam 1d6/1d6, Mv 40', Sv F6, Ml 8, XP 500<br>
+    Immune to fire
+4   {frogs}
+5   {3d6} Stone Living Statues AC 16, HD 5*, #At 2 lava sprays, Dam 2d6/2d6, Mv 20', Sv F5, Ml 12, XP 405
+6   {2d6} Basilisks AC 16, HD 6**, #At 1 bite/1 gaze, Dam 1d10/petrification, Mv 20' (10'), Sv F6, Ml 9, XP 610, Tr F
+7   {5d6} Giant Bees AC 13, HD 1d4 HP, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9, XP 13<br>
+    Queen Bee AC 13, HD 2, #At 1 sting, Dam 1d8 + poison, Mv 10' Fly 50', Sv F1, Ml 9, XP 75<br>
+    {2d10+10} gallons of honey (10 gp/gallon). {1d6+1} globs of healing honey.
+8   {4d6} Giant Ants AC 17, HD 4, #At 1 bite, Dam 2d6, Mv 60' (10'), Sv F4, Ml 7 on first sighting, 12 after engaged, XP 240, Tr U
+
+
+table: frog 2d4
+2   {2d4} Giant Black Toads AC 20, HD 10, #At 1 acid tongue or 1 bite, Dam 5d6 or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 1300<br>
+    8' tall. Tongue attacks 40'. Save vs Dragon for half. Swallows man-sized on natural 20.
+3   {4d4} Giant Fire Toads AC 17, HD 4, #At 1 tongue or 1 bite, Dam grab or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 240<br>
+    6' tall. Immune to fire attacks. Swallows man-sized on natural 20.
+4   {2d4} Bigger Giant Frogs AC 13, HD 4, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 240<br>
+    6' tall. Swallows man-sized on natural 20.
+5   {2d4} Giant Frogs AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 75<br>
+    Swallows dwarf-sized on natural 20.
+6   {2d4} Hypno Toads AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 100<br>
+    Swallows dwarf-sized on natural 20. On gaze, save vs wands or be paralyzed while gaze holds. Psychodelic colors. Single eye.
+7   {4d4} Giant Poisonous Frogs AC 13, HD 4, #At 1 tongue or 1 bite, Dam grab or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 280<br>
+    6' tall. Immune to poison. On bite, save vs poison or take an extra 1d6 damage over three rounds. Swallows man-sized on natural 20.
+8   {2d4} Undead Giant Frogs AC 15, HD 5, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 405<br>
+    8' tall. Tongue attacks 40'. On natural 20, one negative level. Obviously rotting.
+
+table: gems 1d10
+1-5     no gems
+6       {4d20} ornamental stones ({2d6} gp/each)
+7       {4d12} semiprecious stones ({10d6} gp/each)
+8       {4d10} fancy stones ({2d100} gp/each)
+9       {4d8} precious stones ({10d100} gp/each)
+10      {4d6} {gem-name} gems ({10d20}0 gp/each)
+
+table: gem-name 1d20
+1-3 Greenstone
+4-5 Malachite
+6-7 Aventurine
+8-9 Phenalope
+10  Amethyst
+11  Fluorospar
+12  Garnet
+13  Alexandrite
+14  Topaz
+15  Bloodstone
+16  Sapphire
+17  Diamond
+18  Fire Opal
+19  Ruby
+20  Emerald
+
+
+table: monster
+1   {1d4} Gorgons AC 19, HD 8*, #At 1 gore or 1 breath, Dam 2d6 or petrification, Mv 40' (10'), Sv F8, Ml 8, XP 945<br>
+    60' long by 10' wide petrificaton breath, usable 8x/day, every other round.
+2   Massive Lizard AC 25, HD 16, #At 2 claws/1 bite, Dam 2d6/2d6/3d10, Mv 40' (10'), Sv F16, Ml 9
+3   Purple Worm AC 16, HD 20* (+13), #At 1 bite/1 sting, Dam 2d8/1d8+poison, Mv 20' (15'), Sv F10, Ml 10, XP 5450
+4   Giant Roc AC 18, HD 32 (+16), #At 2 claws/1 bite, Dam 3d6/3d6/6d6, Mv 20' Fly 160' (10'), Sv F20 at +5, Ml 10, XP 14250, Tr I
+5   Black Knight AC 20, HD 14** (+11 +weapon), #At 1 weapon, Dam By weapon +3 +magic, Mv 30',
+    Sv F14, Ml 11, XP 2730, Tr F + Black Knight's sword<br>
+    {black-knight-sword}<br>
+    Creatures of 5 HD or less save vs spells or -2 AB and -2 AC<br>
+    75% to reflect any harmful spell.<br>
+    Detect Magic, Detect Invisible at will. 3xFireball for 10d6 damage.<br>
+    Half damage from non-magical weapons. Cannot be turned.
+6   Blue Dragon AC 20, HD 12** (+10), #At 2 claws/1 bite or breath/1 tail,
+    Dam 1d10/3d10 or breath/1d8, Mv 30' Fly 80' (15'), Sv F12, Ml 9, XP 1225, Tr H<br>
+    Lightning breath 120' x 60' 12x/day for 12d8 damage.<br>
+    Spells -- Shield (no MM, +3/+6 AC), Sleep, 3xCharm Person,
+    Invisibility, Mirror Image, Web, Phantasmal Force of 12 basilisks,
+    2xHold Person, Confusion (3d6 targets within 30' radius for 14 rounds)
+
+
+table: black-knight-sword
+1	longsword +3
+2	two-handed sword +3
+3	shortsword +2, charm person
+4	two-handed sword +4
+5	longsword +2, flames on command
+6	shortsword +1, energy drain (no limit to drains)
+
+
+table: trade-goods 1d12
+1   bolts of {trade-goods-cloth}
+2   {trade-goods-skins}
+3   {trade-goods-spices}
+4   sugar
+5   {trade-goods-dye} dye
+6   cocoa
+7   tobacco
+8   cotton
+9   {trade-goods-wood}
+10  {trade-goods-food}
+11  iron
+12  {trade-goods-slaves} slaves (plus food and water, 10 slaves per ton)
+
+table: trade-goods-slaves
+1   human
+2   elf
+3   dwarf
+4   halfling
+5   orc
+6   goblin
+
+table: trade-goods-cloth
+1   wool
+2   linen
+3   silk
+4   hemp
+
+table: trade-goods-skins
+1   furs
+2   tanned animal skins
+
+table: trade-goods-spices
+1   black pepper
+2   cinnamon
+3   turmeric
+4   cardamom
+5   garlic
+6   thyme
+7   saffron
+8   ginger
+9   mint
+10  curry leaf
+11  nutmeg
+12  mustard
+13  licorice
+
+table: trade-goods-dye
+1   cochineal
+2   black walnut
+3   ebony
+4   indigo
+5   orchil
+6   teak leaf
+7   hematite
+8   limonite
+9   lazurite
+10  kermes
+
+table: trade-goods-wood
+1   rosewood
+2   mahogany
+3   cedar
+4   camphor wood
+5   burl wood
+6   ironwood
+7   sandalwood
+8   teak wood
+
+table: trade-goods-food
+1   dried fish
+2   whale oil
+3   dried fruit
+3   molasses

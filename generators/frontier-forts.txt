@@ -1,4 +1,4 @@
-name: Forts
+name: Frontier Forts
 description: Based on Frontier Forts of Kelnore
 recipe: {condition}
 repeat: 1
