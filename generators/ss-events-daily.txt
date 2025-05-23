@@ -176,8 +176,7 @@ table: ship 1d10
         AC 11, #At 1 sword, Dam 1d6, Mv 40', Ml 9<br>
 
 table: ship-alignment 1d3
-1   the empire (red, eagle holding a cross)
-2   the rebellion (purple with a black X)
+1-2   the empire (red, eagle holding a cross)
 3   {small-nation}
 
 table: small-nation 1d10
