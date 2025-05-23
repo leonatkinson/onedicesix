@@ -371,7 +371,7 @@ table: beasts
 8   {4d6} Giant Ants AC 17, HD 4, #At 1 bite, Dam 2d6, Mv 60' (10'), Sv F4, Ml 7 on first sighting, 12 after engaged, XP 240, Tr U
 
 
-table: frog 2d4
+table: frogs 2d4
 2   {2d4} Giant Black Toads AC 20, HD 10, #At 1 acid tongue or 1 bite, Dam 5d6 or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 1300<br>
     8' tall. Tongue attacks 40'. Save vs Dragon for half. Swallows man-sized on natural 20.
 3   {4d4} Giant Fire Toads AC 17, HD 4, #At 1 tongue or 1 bite, Dam grab or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 240<br>
