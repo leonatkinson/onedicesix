@@ -250,7 +250,7 @@ table: dungeon
 2   A cell in the base of one of the towers or the gatehouse serves as a prison.
 3   A subterranean chamber beneath the courtyard may be accessed via a steep
     stair. A heavy gate keeps prisoners inside
-4   A substatial room beneath the keep offers several cells for holding prisoners
+4   A substantial room beneath the keep offers several cells for holding prisoners
     securely
 
 table: occupants
