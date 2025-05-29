@@ -143,3 +143,5 @@ Small adjustments to daily events on the southern seas.
 ### 1.6.2
 - Rename forts to frontier-forts.txt
 - Add new forts.txt
+### 1.6.3
+- Add mine.txt
