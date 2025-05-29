@@ -202,8 +202,8 @@ table: sally-port
 table: barracks
 1   There are no designated living quarters for soldiers
 2   A large hall provided quarters for soldiers
-3   Several semi-private rooms each provide space for up to 10 soldiers
-4   Aside from semi-private rooms for small groups, there are quarters for officers
+3   A barracks contains several semi-private rooms each provide space for up to 10 soldiers
+4   Aside from semi-private rooms for small groups in the barracks, there are quarters for officers
 
 table: workshops
 1   No buildings used as workshops are seen
