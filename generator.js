@@ -15,13 +15,18 @@ class EmptyZ_Generator
 
         /** List of supporting tables */
         this.tables = new Map();
+
+        /** List of counters */
+        this.counters = new Map();
     }
 
     // Expecting patterns like "3", "3d6", or "3d6+4"
     static DICE_ROLL_REGEX() { return /(\d+)d?(\d+)?([\+\-]\d+)?/; }
 
-    // Expecting patterns like "3d6 gems"
-    static REPEATER_REGEX() { return /(\S+)\s(\S+)/; }
+    // Expecting patterns like "3d6+4 gems" or "3d6 level <br>"
+    static REPEATER_REGEX() { return /(\S+)\s(\S+)\s?(\S+)?/; }
+
+    static COUNTER_REGEX() { return /\#\s?(\S+)/; }
 
     /**
      * Create an instance of Generator from import data
@@ -135,11 +140,27 @@ class EmptyZ_Generator
                 // Get the first curly brace expression
                 let m = recipe.match(/{([^}]+)}/);
 
+                // Is it a counter?
+                let counter = m[1];
+                if (counter.match(EmptyZ_Generator.COUNTER_REGEX())) {
+                    let counterName = counter.match(EmptyZ_Generator.COUNTER_REGEX())[1] || 'default';
+                    // If the map doesn't have this counter, initialize it
+                    if (typeof this.counters[counterName] === 'undefined') {
+                        this.counters[counterName] = 0;
+                    }
+                    // Increment the counter
+                    this.counters[counterName]++;
+
+                    // Replace the first counter reference
+                    recipe = recipe.replace('{' + counter + '}', this.counters[counterName]);
+                }
+
                 // Is it a repeater
                 let repeater = m[1];
                 if (repeater.match(EmptyZ_Generator.REPEATER_REGEX())) {
                     let spec = repeater.match(EmptyZ_Generator.REPEATER_REGEX())[1];
                     let table = repeater.match(EmptyZ_Generator.REPEATER_REGEX())[2];
+                    let separator = repeater.match(EmptyZ_Generator.REPEATER_REGEX())[3] || ', ';
 
                     // Are the two parts a dice roll and a table name?
                     if (
@@ -154,7 +175,7 @@ class EmptyZ_Generator
                         // Replace the repeater with that many table/roll references
                         recipe = recipe.replace(
                             '{' + repeater + '}',
-                            Array(roll).fill('{' + table + '}').join(', ')
+                            Array(roll).fill('{' + table + '}').join(separator)
                             );
                     } else {
                         recipe = recipe.replace('{' + repeater + '}', '[' + repeater + ' broken repeater]');
@@ -976,6 +997,7 @@ class EmptyZ_UI
         let container = jQuery(el);
         let tableID = container.attr('data-table-id');
         let generator = EmptyZ_Generators[tableID];
+        generator.counters = new Map();
         let output = container.find('div.output');
         output.html('');
         switch(tableID) {
