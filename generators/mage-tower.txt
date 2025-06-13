@@ -1,0 +1,182 @@
+name: Mage Towers
+description: Generate a mage tower
+recipe:
+    The tower is {material}.
+    It's {shaped}.
+    The entrance is {entrance}.
+    {windows}
+    The roof is {roof}
+    The tower stands {height}
+repeat: 1
+
+table: material 1d20
+1   of seamless, black stone, reflecting no light
+2   hewn from immense, grey granite blocks, worn by wind
+3   a spiral of dull, rust-colored metal, riveted together
+4   constructed from rough-cut, dark green serpentine
+5   a patchwork of uneven, crimson-stained bricks
+6   a slender spire of smooth, bone-white ceramic
+7   of dark, petrified wood, gnarled and ancient-looking
+8   a massive column of polished, veined marble
+9   built of dark, unmortared flagstones, perfectly fitted
+10  a stark cylinder of unadorned, grey concrete
+11  of tightly packed, dark earth, reinforced with thick timbers
+12  a blocky structure of dark, rough volcanic rock
+13  of intricately carved, dark oak, aged to nearly black
+14  a cluster of hexagonal columns, like dark basalt
+15  a tall structure of stacked, dark river stones
+16  of rough-hewn slate, overlapping in dark layers
+17  a forbidding pillar of dark, unpolished iron
+18  constructed from dark, vitrified sand, smooth and glassy
+19  a stark edifice of dark, porous sandstone
+20  of dark, unidentifiable material, appearing to absorb light
+
+table: shaped 1d20
+1-6     round, {3d6}0' across
+7-11    square, {3d6}0' across
+12-15   rectangular, {3d6}0' x {3d6}0' at the base
+16-17   gently conical, {3d6}0' at the base and {1d8+2}0' narrower at the top
+18-19   pyramid-shaped, {3d6}0' square at the base
+20      irregularly-shaped, a collection of blobs stacked atop each other
+
+table: entrance 1d20
+1   a heavy iron door, bolted from within
+2   a rough-hewn arch, cloaked in shadow
+3   a slender gap between shifting stones
+4   a circular portal, glowing faintly
+5   a pair of massive, brass-bound gates
+6   a low, squat opening, barely visible
+7   a crack in the tower's base, seeping cold air
+8   an opening like a mouth, lined with unseen teeth
+9   a shimmering veil of light, rippling gently
+10  a narrow slit, too small for easy passage
+11  a vast, unadorned archway, leading to darkness
+12  a single, unmarked wooden door, set deep
+13  an irregular fissure, looking recently torn
+14  a deep, recessed alcove, leading nowhere visible
+15  a swirling vortex of muted colors
+16  a dark, recessed hole, barely seen from afar
+17  no visible entrance, merely unbroken stone
+18  a suspended platform, {2d6}0' above the ground
+19  a pair of smooth, black panels, perfectly flush
+20  a narrow, winding passage, opening directly into the tower
+
+table: height 1d4
+1   {1d6+4}0' tall.<br>
+    <br>
+    {1d4 level <br><br>}
+2   {1d6+6}0' tall.<br>
+    <br>
+    {1d6+2 level <br><br>}
+3   {2d6+8}0' tall.<br>
+    <br>
+    {1d8+2 level <br><br>}
+4   {3d6+10}0' tall.<br>
+    <br>
+    {1d10+3 level <br><br>}
+
+table: windows 1d4
+1   No windows are visible.
+2   The even numbered levels have small windows. {window-shape}
+3   Every level has one window. {window-shape}
+4   Every level has {1d4} windows. {window-shape}
+
+table: window-shape 1d6
+1-2 Each is an arrow slit.
+3   They are round and {window-filled}.
+4   They are tall, narrow with a curved top, and {window-filled}.
+5   They are tall, narrow with a pointed top, and {window-filled}.
+6   They project from the tower wall, and are {window-filled}.
+
+table: window-filled 1d6
+1-2 open to the air
+3   shuttered
+4   barred
+5   filled with clear glass
+6   filled with stained glass
+
+
+table: roof 1d10
+1   a sharply pointed cone, {roof-tile-material}.
+2   flat and crenellated, with worn stone battlements.
+3   a low, wide dome of {roof-dome-material}.
+4   a complex spire, twisting upwards like a drill bit.
+5   a segmented pyramid, capped with gleaming crystal.
+6   a single, vast slab of black, unadorned rock.
+7   a bell-shaped curve, shingled in overlapping, dark wood.
+8   an open, skeletal framework of blackened iron.
+9   a jagged, asymmetrical cap, like a broken tooth.
+10  a collection of smaller, conical turrets clustered at the peak.
+
+table: roof-tile-material 1d6
+1   tiled with dark slate
+2   shingled with overlapping scales of black dragonhide
+3   sheathed in seamless, gleaming obsidian
+4   fashioned from countless shards of dark, jagged glass
+5   wrapped in bands of intricately carved, dark iron
+6   pitted and rough, like solidified volcanic ash
+
+table: roof-dome-material 1d6
+1   green-patinaed copper
+2   polished, dark granite, reflecting the sky
+3   shimmering, ethereal glass, hinting at impossible depths
+4   rough, unadorned concrete, stark against the elements
+5   intricate, dark iron tracery, open to the air
+6   smooth, featureless obsidian, absorbing all light
+
+table: level 1d10
+1-5     Level {# level} is a single room. Access to the level above is via {stairs}
+        starting in the {stairs-location} of the level.<br>
+        <br>
+        {numbered-room}
+6-7     Level {# level} consists of two rooms. Access to the level above is via {stairs}
+        starting in the {stairs-location} of the level.<br>
+        <br>
+        {2 numbered-room <br><br>}
+8-9     Level {# level} consists of three rooms. Access to the level above is via {stairs}
+        starting in the {stairs-location} of the level.<br>
+        <br>
+        {3 numbered-room <br><br>}
+10      Level {# level} consists of several rooms. Access to the level above is via {stairs}
+        starting in the {stairs-location} of the level.
+        <br>
+        <br>
+        {1d4+3 numbered-room <br><br>}
+
+table: numbered-room
+1   {# room}. {room}
+
+table: room 1d77
+1-10    Bedroom
+11-15   Lounge
+16-18   Kitchen
+19-22   Dining Hall
+23-26   Bathroom
+27-32   Private Sanctum
+33-38   Summoning Room
+39-45   Laboratory
+46-52   Library
+53-59   Workshop
+60-62   Menagerie
+63-68   Vault
+69-72   Observatory
+73-75   Scrying Chamber
+76-77   Planar Portal
+
+
+table: stairs 1d20
+1-5     a single, unbroken flight of stairs
+6-10    a flight of stairs going halfway up, then turning around to complete the vertical distance
+11-15   spiral stairs
+16      a ladder
+17      a rope
+18      a series of cantilevered stairs attached to the inner wall
+19      a set of invisible stairs
+20      a set of floating platforms, magically hovering
+
+table: stairs-location 1d6
+1   north side
+2   south side
+3   east side
+4   west side
+5-6 center
