@@ -3,7 +3,7 @@ description: Generate a mage tower
 recipe:
     The tower is {material}.
     It's {shaped}.
-    The entrance is {entrance}.
+    The entrance is {entrance}. {entrance-protection}
     {windows}
     The roof is {roof}
     The tower stands {height}
@@ -40,26 +40,83 @@ table: shaped 1d20
 20      irregularly-shaped, a collection of blobs stacked atop each other
 
 table: entrance 1d20
-1   a heavy iron door, bolted from within
-2   a rough-hewn arch, cloaked in shadow
-3   a slender gap between shifting stones
-4   a circular portal, glowing faintly
-5   a pair of massive, brass-bound gates
-6   a low, squat opening, barely visible
-7   a crack in the tower's base, seeping cold air
-8   an opening like a mouth, lined with unseen teeth
-9   a shimmering veil of light, rippling gently
-10  a narrow slit, too small for easy passage
-11  a vast, unadorned archway, leading to darkness
-12  a single, unmarked wooden door, set deep
-13  an irregular fissure, looking recently torn
-14  a deep, recessed alcove, leading nowhere visible
-15  a swirling vortex of muted colors
-16  a dark, recessed hole, barely seen from afar
-17  no visible entrance, merely unbroken stone
-18  a suspended platform, {2d6}0' above the ground
-19  a pair of smooth, black panels, perfectly flush
-20  a narrow, winding passage, opening directly into the tower
+1-2     a heavy iron door, bolted from within
+3-4     a rough-hewn arch, cloaked in shadow
+5       a circular portal, glowing faintly
+6       a pair of massive, brass-bound gates
+7       an opening like a mouth, lined with unseen teeth
+8       a narrow slit, just wide enough to squeeze through
+9-10    a single, unmarked wooden door, set deep
+11      a swirling vortex of muted colors
+12      unseen, merely unbroken stone
+13      a suspended platform, {2d6}0' above the ground
+14      a pair of smooth, black panels, perfectly flush
+15      a heavy iron gate
+16      a stone slab with runes
+17      an illusionary wall
+18      a teleportation circle at the base of the tower
+19-20   a drawbridge over {moat}
+
+table: moat
+1   a dry ditch
+2   a water-filled moat
+3   a marshy moat, with sections of deep mud
+4   a dry ditch filled with sharpened spikes
+
+table: entrance-protection 1d6
+1-2     {entrance-trap}
+3-4     {entrance-guard}
+5       {entrance-trap} Additionally, {entrance-guard}
+6       Entrance into the tower is not protected.
+
+table: entrance-trap
+1   An invisible magical ward was placed on the threshold that triggers an
+    explosion (4d6 damage) and sleep (Save vs spells +WIS, 1d4 min unconscious)
+    upon unauthorized entry. It may be disabled by a specific, complex hand
+    gesture and whispered command, known only to the wizard.
+2   A subtle, recessed pressure plate near the entrance triggers a volley of
+    darts (2d4 attacks AB+25, plus save vs. poison) from hidden launchers.
+    It may be disabled for 1 turn by placing approximately 50 lbs on the plate
+    for 1 minute.
+3   Stepping through triggers a 30' pitfall. It can be disabled by touching the
+    wall while speaking a specific passphrase.
+4   The entrance is protected by a temporal stasis field. Individuals entering
+    are greatly slowed for 1d6 turns. This effect may be disabled by tracing a
+    specific runic pattern in the air, briefly disrupting the field.
+5   The door is magically sealed with Wizard Lock, tied to an alarm. Unauthorized
+    lock attempts trigger a piercing shriek, alerting inhabitants and stunning
+    (save vs spell +CON or paralyzed 1d6 rounds). It can be disabled by passing
+    a small iron key over the lock.
+6   An invisible psychic barrier covers the entrance. Unauthorized passage
+    requires an INT check or take 4d6 psychic damage and suffer disadvantage on
+    all mental tasks for 1d4 hours. It may be bypassed by holding a piece of
+    raw amethyst over one's brow while passing through.
+
+table: entrance-guard
+1   An animated suit of armor guards the entrance.<br>
+    Shield Guardian AC 20‡, HD 15+20** (+5), #At 1 fist, Dam 1d6, Mv 30', Sv F9, Ml 12, XP 3100<br>
+    HP {15d8+20}<br>
+2   A stone golem stands motionless next to the entrance, attacking any who dare
+    enter the tower without permission.<br>
+    Stone Golem AC 25‡, HD 14** (+11), #At 1 + special, Dam 3d8 + special, Mv 20' (10'), Sv F7, Ml 12, XP 2730<br>
+    HP {14d8}<br>
+3   Gargoyles perch on ledges around the outside of the tower.<br>
+    {2d4} Gargoyles AC 15‡, HD 4**, #At 2 claws/1 bite/1 horn, Dam 1d4/1d4/1d6/1d4, Mv 30' Fly 50' (15'), Sv F6, Ml 11, XP 320<br>
+    HP {4d8}<br>
+4   A ghost reveals itself to any who walk in unannounced.<br>
+    Ghost AC 20‡, HD 10* (+9), #At 1 touch/1 gaze, Dam 1d8 + special, Mv 30', Sv F10, Ml 10, XP 1390<br>
+    Save vs. Spells or flee for 2d6 rounds. On touch, regenerate HP and reduce CON of
+    target. Elves and Dwarves save vs. Death Ray to resist touch attack. Use telekinesis
+    as 10th level Magic-User once per turn. Possess attack allows save vs. Spells to resist.<br>
+    HP {10d8}<br>
+5   An air elemental spins up and bars entrance to those without permission.<br>
+    Air Elemental AC 22‡, HD 16* (+12), #At , Dam 3d6, Mv Fly 120', Sv F16, Ml 10, XP 3385<br>
+    HP {16d8}
+6   An imp, disguised as a spider waits to interere with intruders.<br>
+    Imp AC 19†, HD 2**, #At 1 tail stinger, Dam 1d4 + poison, Mv 20' Fly 60', Sv C2, Ml 7, XP 125<br>
+    At-will change into spider, raven, giant rat. Detect magic at-will. Invisible at-will.
+    Charm person (7th level) once/day.<br>
+    HP {2d8}
 
 table: height 1d4
 1   {1d6+4}0' tall.<br>
