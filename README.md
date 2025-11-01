@@ -151,3 +151,5 @@ Small adjustments to daily events on the southern seas.
 - Add named counters. The expression is like {#} or {# name}. Leaving the name
   out uses "default".
 - Add mage-tower.txt
+## Unreleased
+- Revise 1e-dmg-npc-personality.txt for accuracy

@@ -1,11 +1,12 @@
 name: NPC Personality
 description: Based on 1e DMG page 100.
 recipe:
-    Wealth: {wealth};
-    Appearance: {appearance};
+    Alignment: {alignment};
+    Posessions or Wealth: {wealth};
+    Apparent Age: {age};
     General: {general};
     Sanity: {sanity};
-    General Tendencies: {tendency}, {tendency}, {tendency};
+    General Tendencies: {1d6 tendency};
     Personality: {personality};
     Disposition: {disposition};
     Intellect: {intellect};
@@ -17,9 +18,20 @@ recipe:
     Thrift: {thrift};
     Morals: {morals};
     Piety: {piety};
-    Interests: {interests}
+    Interests: {1d6 interests}
 repeat: 1
 
+table: alignment
+1   lawful good
+2   lawful neutral
+3   lawful evil
+4   neutral evil
+5   chaotic evil
+6   chaotic neutral
+7   chaotic good
+8   neutral good
+9   neutral
+0   neutral
 
 table: wealth
 1   none
@@ -29,7 +41,7 @@ table: wealth
 9   exceptional
 10  superabundant
 
-table: appearance
+table: age
 1   young
 2-3 youthful
 4-7 mature
@@ -51,11 +63,11 @@ table: general
 
 table: sanity
 1-12    very stable
-13-73   normal
-74-86   neurotic
-87-98   unstable
-99      insane
-100     maniacal
+13-72   normal
+73-84   neurotic
+85-96   unstable
+97-99   insane
+99-100  maniacal
 
 table: tendency
 1   optimist
@@ -188,16 +200,16 @@ table: thrift
 8   wastrel
 
 table: morals
-1-21    aesthetic
-22-41   virtuous
-42-61   normal
-62-81   lusty
-82-101  lustful
-102-121 immoral
-122-141 amoral
-142     perverted
-143     sadistic
-144     depraved
+1-11    ascetic
+12-22   virtuous
+23-43   normal
+44-64   lusty
+65-74   lustful
+75-84   immoral
+85-94   amoral
+95-96   perverted
+97-98   sadistic
+99-100  depraved
 
 table: piety
 1   saintly
