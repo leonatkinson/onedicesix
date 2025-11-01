@@ -153,3 +153,5 @@ Small adjustments to daily events on the southern seas.
 - Add mage-tower.txt
 ## Unreleased
 - Revise 1e-dmg-npc-personality.txt for accuracy
+- Add inhabitation table
+

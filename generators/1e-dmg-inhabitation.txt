@@ -1,0 +1,70 @@
+name: Inhabitation
+description: 1e DMG Appendix B
+recipe:
+    {type}
+repeat: 1
+
+table: type 1d100
+1-3     Single Dwelling, population {1d12}
+4-5     Thorp, population {2d4}0
+6-7     Hamlet, population {1d4}00
+8-9     Village, population {1d4+5}00
+10      Town, population {1d6}500
+11      City, population {1d6}0,000
+12-14   {castle}
+15-16   {ruins}
+17-100  Uninhabited
+
+table: ruins 1d100
+1-30    Ruined Village
+31-60   Ruined City
+61-85   Shrine
+86-100  Tomb
+
+table: castle 1d100
+1-10    Small shell keep (size class small) {inhabitants-small}
+11-25   Tower (size class small) {inhabitants-small}
+26-35   Moat house or friary (size class small) {inhabitants-small}
+36-45   Large shell keep (size class medium) {inhabitants-medium}
+46-65   Small walled castle with keep (size class medium) {inhabitants-medium}
+66-80   Medium walled castle with keep (size class medium) {inhabitants-medium}
+81-88   Concentric castle (size class large) {inhabitants-large}
+89-95   Large walled castle with keep (size class large) {inhabitants-large}
+96-100  Fortress complex (size class large) {inhabitants-large}
+
+table: inhabitants-small 1d100
+1-45    Totally deserted
+46-60   Deserted (monster therein)
+61-70   inhabited by {humans}
+71-100  inhabited by a {character}
+
+table: inhabitants-medium 1d100
+1-30    Totally deserted
+31-50   Deserted (monster therein)
+51-65   inhabited by {humans}
+66-100  inhabited by a {character}
+
+table: inhabitants-large 1d100
+1-15    Totally deserted
+16-40   Deserted (monster therein)
+41-60   inhabited by {humans}
+61-100   inhabited by a {character}
+
+table: humans 1d100
+1-25    Bandits
+26-85   Brigands
+86-97   Berserkers
+98-100   Dervishes
+
+table: character 1d100
+1-18    {1d4+8}th Level Cleric
+19-20   {1d2+11}th Level Druid
+21-65   {1d4+8}th Level Fighter
+66      {1d2+8}th Level Paladin
+67-68   {1d4+9}th Level Ranger
+69-80   {1d4+10}th Level Magic-User
+81-85   {1d4+9}th Level Illusionist
+86-93   {1d5+9}th Level Thief
+94-96   14th Level Assassin
+94-99   {1d4+8}th Level Monk
+100     23rd Level Bard
