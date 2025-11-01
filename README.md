@@ -149,9 +149,9 @@ Small adjustments to daily events on the southern seas.
 - Add optional separator param for repeaters. Default is still ", " but now you
   can use expressions like {1d6 tablename <br>} to separate with line breaks.
 - Add named counters. The expression is like {#} or {# name}. Leaving the name
-  out uses "default".
+  out uses "default". Every type counter is referenced, it increments.
 - Add mage-tower.txt
-## Unreleased
+## 1.8.0
 - Revise 1e-dmg-npc-personality.txt for accuracy
 - Add inhabitation table
 - Add a slight delay on regenerate button click
