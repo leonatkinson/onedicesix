@@ -1087,8 +1087,12 @@ class EmptyZ_UI
         jQuery('html, body').animate({
               scrollTop: container.offset().top - 200
             }, 500);
-        // Run it
-        EmptyZ_UI.run(el);
+        let output = container.find('div.output');
+        output.html('Regenerating...');
+        setTimeout(() => {
+            // Run it
+            EmptyZ_UI.run(el);
+        }, 300);
     }
 }
 
