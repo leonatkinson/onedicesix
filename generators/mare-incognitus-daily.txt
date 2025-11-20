@@ -312,30 +312,41 @@ table: ship-type 1d6
 1   caravel ({4d2}0'x15', Mv 20', Hardness 8, 75 HP, cargo {1d75}/75)<br>
     Crewed by Level {1d4+2} Fighter (captain), {1d3} Level {1d4+1} Fighters (mates),
     and {2d6} normal men.<br>
-    Carrying {cargo}. Treasure type C.<br>
+    Carrying {cargo}. {pirate-treasure}.<br>
 2   carrack ({1d6+6}0'x{1d3+1}0', Mv 30', Hardness 10, 120 HP, cargo {1d135}/135)<br>
     Crewed by Level {1d4+2} Fighter (captain), {1d3} Level {1d4+1} Fighters (mates),
     and {3d6} normal men.<br>
-    Carrying {cargo}. Treasure type B.<br>
+    Carrying {cargo}. {pirate-treasure}.<br>
 3   small galley (100'x15', Mv 20', Hardness 8, 75 HP, cargo {1d210}/210)<br>
     Two ballistas forward and another two aft. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.
     The bow is armored and suitable for ramming.<br>
     Crewed by Level {1d4+2} Fighter (captain), {1d3} Level {1d4+1} Fighters (mates),
     {2d10+20} Level 1 Fighters, and {2d10+20} normal men.<br>
-    Carrying {cargo}. Treasure type B.<br>
+    Carrying {cargo}. {pirate-treasure}.<br>
 4   large galley (120'x20', Mv 30'/25', Hardness 10, 120 HP, cargo {1d375}/375)<br>
     Forward are four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.<br>
     Aft are two catapults. RoF 1/10, AB -8, Dam 3d10, Range -/300/400.
     The bow is armored and suitable for ramming.<br>
     Crewed by Level {1d6+2} Fighter (captain), {3d6} Level {1d4+1} Fighters (mates),
     {4d10+20} Level 1 Fighters, and {4d10+20} normal men.<br>
-    Carrying {cargo}. Treasure type D.<br>
+    Carrying {cargo}. {pirate-treasure}.<br>
 5-6 longship (110'x15', Mv 30'/25', Hardness 9, 110 HP, cargo {1d100}/100)
     The bow is armored and suitable for ramming.<br>
     Crewed by Level {1d8+2} Fighter (captain), {2d4} Level {1d4+1} Fighters (mates),
     {2d10+20} Level 1 Fighters, and {2d10+20} normal men.<br>
-    Carrying {cargo}. Treasure type F.<br>
+    Carrying {cargo}. {pirate-treasure}.<br>
 
+table: pirate-treasure 1d6
+1   Treasure type {pirate-treasure-type} stored on the ship. Pirates use any suitable items.
+2-6 Treasure type {pirate-treasure-type}. Any suitable items used by the officers.
+    The rest is buried on an island {2d100} miles away as described on a map.
+
+table: pirate-treasure-type 1d20
+1-10    A
+11-13   B
+14-17   C
+18-19   D
+20      F
 
 table: cargo 1d12
 1   bolts of {cargo-cloth}
@@ -852,77 +863,77 @@ table: fishing-junk
 8   the bloated corpse of a {sailor-race}
 
 table: fishing-small
-1	Azure Striper - iridescent blue scales ({1d7}lbs each)
-2	Ghostscale Dart - translucent fins ({1d5}lbs each)
-3	Crimson Torpedo - blood-red flesh ({1d12}lbs each)
-4	Glimmer Orb - phosphorescent spots (0.{1d4+1}lbs each)
-5	Murmur Mouths - constantly clicking jaws ({1d3+1}lbs each)
-6	Scarlet Behemoths - tough, scaled hide ({1d20}lbs each)
-7	Crown Fins - elaborate dorsal fin ({1d25}lbs each)
-8	Flathead Glider - wide, wing-like fins (1.{1d5}lbs each)
-9	Shadow Skimmers - perfectly camouflaged ({1d10}lbs each)
-10	Pearl Eyes - large, luminous eyes (1.{1d5}lbs each)
-11	Sunset Terrors - vibrant orange and red stripes ({1d25}lbs each)
-12	Phantom Spots - pale, shifting markings ({1d25}lbs each)
-13	Maze Scales - intricate, swirling patterns ({1d25}lbs each)
-14	Blood Fins - deep red fins ({1d25}lbs each)
-15	Swift Shadows - incredibly fast swimmers ({1d25}lbs each)
-16	Gold Gills - metallic sheen on gill covers ({1d20}lbs each)
-17	Cerulean Chorus - emits a whistling sound ({1d5}lbs each)
-18	Chalkbacks - pale white dorsal stripe ({1d5}lbs each)
-19	Silver Flash - reflects light brilliantly (0.{1d4+1}lbs each)
-20	Tusk Jaws - prominent teeth ({1d10}lbs each)
-21	Star Fins - dark spots on fins (1.{1d10}lbs each)
-22	Bronze Backs - metallic brown coloration ({1d10}lbs each)
-23	Giant Eyes - disproportionately large eyes ({1d12}lbs each)
-24	Prism Darter - shimmers with multiple colors ({1d8}lbs each)
-25	Stripe Swimmer - distinct horizontal bands ({1d6}lbs each)
-26	Venom Spines - sharp, venomous spines (poisonous) (1.{1d5}lbs each)
-27	Glass Bodies - somewhat translucent flesh (1.{1d5}lbs each)
-28	Razor Teeth - serrated teeth ({1d10}lbs each)
-29	Stone Skins - rough, textured skin ({1d5}lbs each)
-30	Grunt Snouts - pig-like snout (1.{1d5}lbs each)
-31	Needle Noses - elongated snout (0.{1d4+1}lbs each)
-32	Hammer Heads - broad, flattened head ({1d5}lbs each)
-33	Ram Faces - sloping forehead ({1d5}lbs each)
-34	Abyss Blacks - uniformly dark coloration ({1d3}lbs each)
-35	Slime Trails - leaves a mucous trail (0.{1d4+1}lbs each)
-36	Night Fins - dark fins with pale edges ({1d15}lbs each)
-37	Hound Jaws - powerful, snapping jaws ({1d15}lbs each)
-38	Ruby Scales - individual scales shimmer red ({1d15}lbs each)
-39	Fan Tails - broad, fan-shaped tail fin ({1d8}lbs each)
-40	Iron Hides - exceptionally tough skin ({1d8}lbs each)
-41	Spike Backs - sharp protrusions along the spine ({1d5}lbs each)
+1   Azure Striper - iridescent blue scales ({1d7}lbs each)
+2   Ghostscale Dart - translucent fins ({1d5}lbs each)
+3   Crimson Torpedo - blood-red flesh ({1d12}lbs each)
+4   Glimmer Orb - phosphorescent spots (0.{1d4+1}lbs each)
+5   Murmur Mouths - constantly clicking jaws ({1d3+1}lbs each)
+6   Scarlet Behemoths - tough, scaled hide ({1d20}lbs each)
+7   Crown Fins - elaborate dorsal fin ({1d25}lbs each)
+8   Flathead Glider - wide, wing-like fins (1.{1d5}lbs each)
+9   Shadow Skimmers - perfectly camouflaged ({1d10}lbs each)
+10  Pearl Eyes - large, luminous eyes (1.{1d5}lbs each)
+11  Sunset Terrors - vibrant orange and red stripes ({1d25}lbs each)
+12  Phantom Spots - pale, shifting markings ({1d25}lbs each)
+13  Maze Scales - intricate, swirling patterns ({1d25}lbs each)
+14  Blood Fins - deep red fins ({1d25}lbs each)
+15  Swift Shadows - incredibly fast swimmers ({1d25}lbs each)
+16  Gold Gills - metallic sheen on gill covers ({1d20}lbs each)
+17  Cerulean Chorus - emits a whistling sound ({1d5}lbs each)
+18  Chalkbacks - pale white dorsal stripe ({1d5}lbs each)
+19  Silver Flash - reflects light brilliantly (0.{1d4+1}lbs each)
+20  Tusk Jaws - prominent teeth ({1d10}lbs each)
+21  Star Fins - dark spots on fins (1.{1d10}lbs each)
+22  Bronze Backs - metallic brown coloration ({1d10}lbs each)
+23  Giant Eyes - disproportionately large eyes ({1d12}lbs each)
+24  Prism Darter - shimmers with multiple colors ({1d8}lbs each)
+25  Stripe Swimmer - distinct horizontal bands ({1d6}lbs each)
+26  Venom Spines - sharp, venomous spines (poisonous) (1.{1d5}lbs each)
+27  Glass Bodies - somewhat translucent flesh (1.{1d5}lbs each)
+28  Razor Teeth - serrated teeth ({1d10}lbs each)
+29  Stone Skins - rough, textured skin ({1d5}lbs each)
+30  Grunt Snouts - pig-like snout (1.{1d5}lbs each)
+31  Needle Noses - elongated snout (0.{1d4+1}lbs each)
+32  Hammer Heads - broad, flattened head ({1d5}lbs each)
+33  Ram Faces - sloping forehead ({1d5}lbs each)
+34  Abyss Blacks - uniformly dark coloration ({1d3}lbs each)
+35  Slime Trails - leaves a mucous trail (0.{1d4+1}lbs each)
+36  Night Fins - dark fins with pale edges ({1d15}lbs each)
+37  Hound Jaws - powerful, snapping jaws ({1d15}lbs each)
+38  Ruby Scales - individual scales shimmer red ({1d15}lbs each)
+39  Fan Tails - broad, fan-shaped tail fin ({1d8}lbs each)
+40  Iron Hides - exceptionally tough skin ({1d8}lbs each)
+41  Spike Backs - sharp protrusions along the spine ({1d5}lbs each)
 
 table: fishing-big
-1	Serpent Jaws - elongated lower jaw ({1d15}lbs each)
-2	Shadow Behemoth - dark, mottled skin ({2d40}lbs each)
-3	Sun Dancers - brilliant, shifting colors ({2d10}lbs each)
-4	Iron Clads - heavily armored scales ({2d15}lbs each)
-5	Cave Lurkers - pale, sightless eyes ({2d10+5}lbs each)
-6	Phantom Growlers - emits low, resonant sounds ({2d10+5}lbs each)
-7	Seismic Giants - causes tremors when it moves ({2d100+15}lbs each)
-8	Golden Fins - bright yellow fins ({2d10}lbs each)
-9	Tidal Crashers - incredibly strong tail ({5d10}lbs each)
-10	Silver Streaks - fast, silver-scaled body ({2d10}lbs each)
-11	Azure Lancers - long, pointed snout ({2d80+30}lbs each)
-12	White Phantoms - pale, almost translucent body ({3d20+15}lbs each)
-13	Obsidian Leviathan - jet-black and massive ({5d10}0lbs each)
-14	Pin Needles - extremely thin body (1.{1d5}lbs each)
-15	Deep Sleepers - sluggish and oily flesh ({1d25}lbs each)
-16	Disk Bodies - flattened, circular shape ({1d15}lbs each)
-17	Scale Mails - large, overlapping scales ({1d5}lbs each)
-18	Coin Fins - round, coin-like fins ({1d4}lbs each)
-19	Sky Leapers - leaps high out of the water ({1d50+10}lbs each)
-20	Toothed Blades - saw-like teeth along snout ({1d140+10}lbs each)
-21	River Tigers - dark stripes along the body ({1d20}lbs each)
-22	Coral Reds - deep red coloration ({1d15}lbs each)
-23	Hidden Hunters - excellent camouflage ({1d15}lbs each)
-24	Blade Backs - sharp dorsal fin ({1d150+10}lbs each)
-25	Silver Kings - large, silvery scales ({1d50+5}lbs each)
-26	Blue Comets - streaks of blue along the sides ({5d6}lbs each)
-27	Gold Suns - bright yellow coloration ({1d10}0lbs each)
-28	Lightning Stripes - jagged, pale stripes ({1d30+10}lbs each)
+1   Serpent Jaws - elongated lower jaw ({1d15}lbs each)
+2   Shadow Behemoth - dark, mottled skin ({2d40}lbs each)
+3   Sun Dancers - brilliant, shifting colors ({2d10}lbs each)
+4   Iron Clads - heavily armored scales ({2d15}lbs each)
+5   Cave Lurkers - pale, sightless eyes ({2d10+5}lbs each)
+6   Phantom Growlers - emits low, resonant sounds ({2d10+5}lbs each)
+7   Seismic Giants - causes tremors when it moves ({2d100+15}lbs each)
+8   Golden Fins - bright yellow fins ({2d10}lbs each)
+9   Tidal Crashers - incredibly strong tail ({5d10}lbs each)
+10  Silver Streaks - fast, silver-scaled body ({2d10}lbs each)
+11  Azure Lancers - long, pointed snout ({2d80+30}lbs each)
+12  White Phantoms - pale, almost translucent body ({3d20+15}lbs each)
+13  Obsidian Leviathan - jet-black and massive ({5d10}0lbs each)
+14  Pin Needles - extremely thin body (1.{1d5}lbs each)
+15  Deep Sleepers - sluggish and oily flesh ({1d25}lbs each)
+16  Disk Bodies - flattened, circular shape ({1d15}lbs each)
+17  Scale Mails - large, overlapping scales ({1d5}lbs each)
+18  Coin Fins - round, coin-like fins ({1d4}lbs each)
+19  Sky Leapers - leaps high out of the water ({1d50+10}lbs each)
+20  Toothed Blades - saw-like teeth along snout ({1d140+10}lbs each)
+21  River Tigers - dark stripes along the body ({1d20}lbs each)
+22  Coral Reds - deep red coloration ({1d15}lbs each)
+23  Hidden Hunters - excellent camouflage ({1d15}lbs each)
+24  Blade Backs - sharp dorsal fin ({1d150+10}lbs each)
+25  Silver Kings - large, silvery scales ({1d50+5}lbs each)
+26  Blue Comets - streaks of blue along the sides ({5d6}lbs each)
+27  Gold Suns - bright yellow coloration ({1d10}0lbs each)
+28  Lightning Stripes - jagged, pale stripes ({1d30+10}lbs each)
 
 
 table: disease-type 1d100

@@ -155,3 +155,5 @@ Small adjustments to daily events on the southern seas.
 - Revise 1e-dmg-npc-personality.txt for accuracy
 - Add inhabitation table
 - Add a slight delay on regenerate button click
+## 1.8.1
+- Adjust pirate treasure

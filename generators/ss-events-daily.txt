@@ -307,30 +307,41 @@ table: ship-type 1d6
 1   caravel ({4d2}0'x15', Mv 20', Hardness 8, 75 HP, cargo {1d75}/75)<br>
     Crewed by Level {1d4+2} Fighter (captain), {1d3} Level {1d4+1} Fighters (mates),
     and {2d6} normal men.<br>
-    Carrying {cargo}. Treasure type C.<br>
+    Carrying {cargo}. {pirate-treasure}.<br>
 2   carrack ({1d6+6}0'x{1d3+1}0', Mv 30', Hardness 10, 120 HP, cargo {1d135}/135)<br>
     Crewed by Level {1d4+2} Fighter (captain), {1d3} Level {1d4+1} Fighters (mates),
     and {3d6} normal men.<br>
-    Carrying {cargo}. Treasure type B.<br>
+    Carrying {cargo}. {pirate-treasure}.<br>
 3   small galley (100'x15', Mv 20', Hardness 8, 75 HP, cargo {1d210}/210)<br>
     Two ballistas forward and another two aft. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.
     The bow is armored and suitable for ramming.<br>
     Crewed by Level {1d4+2} Fighter (captain), {1d3} Level {1d4+1} Fighters (mates),
     {2d10+20} Level 1 Fighters, and {2d10+20} normal men.<br>
-    Carrying {cargo}. Treasure type B.<br>
+    Carrying {cargo}. {pirate-treasure}.<br>
 4   large galley (120'x20', Mv 30'/25', Hardness 10, 120 HP, cargo {1d375}/375)<br>
     Forward are four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.<br>
     Aft are two catapults. RoF 1/10, AB -8, Dam 3d10, Range -/300/400.
     The bow is armored and suitable for ramming.<br>
     Crewed by Level {1d6+2} Fighter (captain), {3d6} Level {1d4+1} Fighters (mates),
     {4d10+20} Level 1 Fighters, and {4d10+20} normal men.<br>
-    Carrying {cargo}. Treasure type D.<br>
+    Carrying {cargo}. {pirate-treasure}.<br>
 5-6 longship (110'x15', Mv 30'/25', Hardness 9, 110 HP, cargo {1d100}/100)
     The bow is armored and suitable for ramming.<br>
     Crewed by Level {1d8+2} Fighter (captain), {2d4} Level {1d4+1} Fighters (mates),
     {2d10+20} Level 1 Fighters, and {2d10+20} normal men.<br>
-    Carrying {cargo}. Treasure type F.<br>
+    Carrying {cargo}. {pirate-treasure}.<br>
 
+table: pirate-treasure 1d6
+1   Treasure type {pirate-treasure-type} stored on the ship. Pirates use any suitable items.
+2-6 Treasure type {pirate-treasure-type}. Any suitable items used by the officers.
+    The rest is buried on an island {2d100} miles away as described on a map.
+
+table: pirate-treasure-type 1d20
+1-10    A
+11-13   B
+14-17   C
+18-19   D
+20      F
 
 table: cargo 1d12
 1   bolts of {cargo-cloth}
@@ -746,78 +757,78 @@ table: fishing-junk
 8   the bloated corpse of a {sailor-race}
 
 table: fishing-small
-1	Bluefish ({1d7}lbs each)
-2	Bonefish ({1d5}lbs each)
-3	Bonito ({1d12}lbs each)
-4	Bumper (0.{1d4+1}lbs each)
-5	Croakers ({1d3+1}lbs each)
-6	Red Drums ({1d20}lbs each)
-7	Kingfish ({1d25}lbs each)
-8	Planehead Filefish (1.{1d5}lbs each)
-9	Flounders ({1d10}lbs each)
-10	Coney (1.{1d5}lbs each)
-11	Red Hind Groupers ({1d25}lbs each)
-12	Speckled Hind Groupers ({1d25}lbs each)
-13	Marbled Groupers ({1d25}lbs each)
-14	Red Groupers ({1d25}lbs each)
-15	Scamp Groupers ({1d25}lbs each)
-16	Yellowedge Groupers ({1d20}lbs each)
-17	Blue Striped Grunts (1.{1d5}lbs each)
-18	White Grunts (1.{1d5}lbs each)
-19	Blueback Herring (0.{1d4+1}lbs each)
-20	Hogfish ({1d10}lbs each)
-21	Spotfin Hogfish ({1d10}lbs each)
-22	Lesser Amberjacks ({1d10}lbs each)
-23	Horse-Eye Jacks ({1d12}lbs each)
-24	Rainbow Runner Jacks ({1d8}lbs each)
-25	Banded Rudderfish ({1d6}lbs each)
-26	Lionfish (poisonous) (1.{1d5}lbs each)
-27	Lookdowns (1.{1d5}lbs each)
-28	Cero Mackerels ({1d10}lbs each)
-29	Margates ({1d5}lbs each)
-30	Pigfish (1.{1d5}lbs each)
-31	Pinfish (0.{1d4+1}lbs each)
-32	Jolthead Porgies ({1d5}lbs each)
-33	Sheepshead Porgies ({1d5}lbs each)
-34	Black Sea Bass ({1d3}lbs each)
-35	Slippery Dicks (0.{1d4+1}lbs each)
-36	Blackfin Snappers ({1d15}lbs each)
-37	Dog Snappers ({1d15}lbs each)
-38	Mutton Snappers ({1d15}lbs each)
-39	Spadefish ({1d8}lbs each)
-40	Tautogs ({1d8}lbs each)
-41	Triggerfish ({1d5}lbs each)
+1   Bluefish ({1d7}lbs each)
+2   Bonefish ({1d5}lbs each)
+3   Bonito ({1d12}lbs each)
+4   Bumper (0.{1d4+1}lbs each)
+5   Croakers ({1d3+1}lbs each)
+6   Red Drums ({1d20}lbs each)
+7   Kingfish ({1d25}lbs each)
+8   Planehead Filefish (1.{1d5}lbs each)
+9   Flounders ({1d10}lbs each)
+10  Coney (1.{1d5}lbs each)
+11  Red Hind Groupers ({1d25}lbs each)
+12  Speckled Hind Groupers ({1d25}lbs each)
+13  Marbled Groupers ({1d25}lbs each)
+14  Red Groupers ({1d25}lbs each)
+15  Scamp Groupers ({1d25}lbs each)
+16  Yellowedge Groupers ({1d20}lbs each)
+17  Blue Striped Grunts (1.{1d5}lbs each)
+18  White Grunts (1.{1d5}lbs each)
+19  Blueback Herring (0.{1d4+1}lbs each)
+20  Hogfish ({1d10}lbs each)
+21  Spotfin Hogfish ({1d10}lbs each)
+22  Lesser Amberjacks ({1d10}lbs each)
+23  Horse-Eye Jacks ({1d12}lbs each)
+24  Rainbow Runner Jacks ({1d8}lbs each)
+25  Banded Rudderfish ({1d6}lbs each)
+26  Lionfish (poisonous) (1.{1d5}lbs each)
+27  Lookdowns (1.{1d5}lbs each)
+28  Cero Mackerels ({1d10}lbs each)
+29  Margates ({1d5}lbs each)
+30  Pigfish (1.{1d5}lbs each)
+31  Pinfish (0.{1d4+1}lbs each)
+32  Jolthead Porgies ({1d5}lbs each)
+33  Sheepshead Porgies ({1d5}lbs each)
+34  Black Sea Bass ({1d3}lbs each)
+35  Slippery Dicks (0.{1d4+1}lbs each)
+36  Blackfin Snappers ({1d15}lbs each)
+37  Dog Snappers ({1d15}lbs each)
+38  Mutton Snappers ({1d15}lbs each)
+39  Spadefish ({1d8}lbs each)
+40  Tautogs ({1d8}lbs each)
+41  Triggerfish ({1d5}lbs each)
 
 
 table: fishing-big
-1	Barracuda ({1d15}lbs each)
-2	Cobia ({2d40}lbs each)
-3	Mahi Mahi ({2d10}lbs each)
-4	Black Drum ({2d15}lbs each)
-5	Black Grouper ({2d10+5}lbs each)
-6	Gag Grouper ({2d10+5}lbs each)
-7	Goliath Grouper ({2d100+15}lbs each)
-8	Yellowfin Grouper ({2d10}lbs each)
-9	Greater Amberjack ({5d10}lbs each)
-10	King Mackerel ({2d10}lbs each)
-11	Blue Marlin ({2d80+30}lbs each)
-12	White Marlin ({3d20+15}lbs each)
-13	Black Marlin ({5d10}0lbs each)
-14	Needlefish 	(1.{1d5}lbs each)
-15	Oilfish ({1d25}lbs each)
-16	Permit ({1d15}lbs each)
-17	Big Scale Pomfret ({1d5}lbs each)
-18	Pompano ({1d4}lbs each)
-19	Sailfish ({1d50+10}lbs each)
-20	Sawfish ({1d140+10}lbs each)
-21	Striped Bass ({1d20}lbs each)
-22	Red Snapper ({1d15}lbs each)
-23	Snook ({1d15}lbs each)
-24	Swordfish ({1d150+10}lbs each)
-25	Tarpon ({1d50+5}lbs each)
-26	Aacore Tuna ({5d6}lbs each)
-27	Yellowfin Tuna ({1d10}0lbs each)
-28	Wahoo ({1d30+10}lbs each)
+1   Barracuda ({1d15}lbs each)
+2   Cobia ({2d40}lbs each)
+3   Mahi Mahi ({2d10}lbs each)
+4   Black Drum ({2d15}lbs each)
+5   Black Grouper ({2d10+5}lbs each)
+6   Gag Grouper ({2d10+5}lbs each)
+7   Goliath Grouper ({2d100+15}lbs each)
+8   Yellowfin Grouper ({2d10}lbs each)
+9   Greater Amberjack ({5d10}lbs each)
+10  King Mackerel ({2d10}lbs each)
+11  Blue Marlin ({2d80+30}lbs each)
+12  White Marlin ({3d20+15}lbs each)
+13  Black Marlin ({5d10}0lbs each)
+14  Needlefish  (1.{1d5}lbs each)
+15  Oilfish ({1d25}lbs each)
+16  Permit ({1d15}lbs each)
+17  Big Scale Pomfret ({1d5}lbs each)
+18  Pompano ({1d4}lbs each)
+19  Sailfish ({1d50+10}lbs each)
+20  Sawfish ({1d140+10}lbs each)
+21  Striped Bass ({1d20}lbs each)
+22  Red Snapper ({1d15}lbs each)
+23  Snook ({1d15}lbs each)
+24  Swordfish ({1d150+10}lbs each)
+25  Tarpon ({1d50+5}lbs each)
+26  Aacore Tuna ({5d6}lbs each)
+27  Yellowfin Tuna ({1d10}0lbs each)
+28  Wahoo ({1d30+10}lbs each)
 
 
 table: disease-type 1d100
