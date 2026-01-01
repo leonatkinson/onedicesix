@@ -157,3 +157,5 @@ Small adjustments to daily events on the southern seas.
 - Add a slight delay on regenerate button click
 ## 1.8.1
 - Adjust pirate treasure
+## 1.8.2
+- Add 1e-dmg-wilderness-terrain.txt

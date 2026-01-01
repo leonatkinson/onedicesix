@@ -1,0 +1,173 @@
+name: Wilderness Terrain
+description: Random Wilderness Terrain from DMG Appendix B.
+recipe:
+    Source Hex is...<br>
+    Plain ➡️ {plain} {inhabitation}<br>
+    Scrub ➡️ {scrub} {inhabitation}<br>
+    Forest ➡️ {forest} {inhabitation}<br>
+    Rough ➡️ {rough} {inhabitation}<br>
+    Desert ➡️ {desert} {inhabitation}<br>
+    Hills ➡️ {hills} {inhabitation}<br>
+    Mountains ➡️ {mountains} {inhabitation}<br>
+    Marsh ➡️ {marsh} {inhabitation}<br>
+repeat: 1
+
+table: plain 1d20
+1-11    Plain
+12      Scrub
+13      Forest {forest-hills}
+14      Rough
+15      Desert
+16      Hills {forest-hills}
+17      Mountains {mountain-pass}
+18      Marsh
+19      Pond in Plain
+20      Depression
+
+table: scrub 1d20
+1-3     Plain
+4-11    Scrub
+12-13   Forest {forest-hills}
+14      Rough
+15      Desert
+16      Hills {forest-hills}
+17      Mountains {mountain-pass}
+18      Marsh
+19      Pond in Scrub
+20      Depression
+
+table: forest 1d20
+1       Plain
+2-4     Scrub
+5-14    Forest {forest-hills}
+15      Rough
+16      Hills {forest-hills}
+17      Mountains {mountain-pass}
+18      Marsh
+19      Pond in Forest
+20      Depression
+
+table: rough 1d20
+1-2     Plain
+3-4     Scrub
+5       Forest {forest-hills}
+6-8     Rough
+9-10    Desert
+11-15   Hills {forest-hills}
+16-17   Mountains {mountain-pass}
+18      Marsh
+19      Pond in Rough
+20      Depression
+
+table: desert 1d20
+1-3     Plain
+4-5     Scrub
+6-8     Rough
+9-14    Desert
+15      Hills {forest-hills}
+16-17   Mountains {mountain-pass}
+18      Marsh
+19      Pond in Desert
+20      Depression
+
+table: hills 1d20
+1       Plain
+2-3     Scrub
+4-5     Forest {forest-hills}
+6-7     Rough
+8       Desert
+9-14    Hills {forest-hills}
+15-16   Mountains {mountain-pass}
+17      Marsh
+18-19   Pond in Hills
+20      Depression
+
+table: mountains 1d20
+1       Plain
+2       Scrub
+3       Forest {forest-hills}
+4-5     Rough
+6       Desert
+7-10    Hills {forest-hills}
+11-18   Mountains {mountain-pass}
+19      Pond in Mountains
+20      Depression
+
+table: marsh 1d20
+1-2     Plain
+3-4     Scrub
+5-6     Forest {forest-hills}
+7       Rough
+8       Hills {forest-hills}
+9-15    Marsh
+16-19   Pond in Marsh
+20      Lake
+
+table: forest-hills 1d10
+1       (hills)
+2-10    -
+
+table: mountain-pass 1d20
+1       (pass)
+2-20    -
+
+table: inhabitation 1d100
+1-3     Single Dwelling ({1d12})
+4-5     Thorp ({2d4}0)
+6-7     Hamlet ({1d4}00)
+8-9     Village ({1d4+5}00)
+10      Town ({1d6}500)
+11      City ({1d6}0000)
+12-14   {castle}
+15-16   Ruins of a {ruins}
+17-100  Uninhabited
+
+table: ruins 1d100
+1-30    Village
+31-60   City
+61-85   Shrine
+86-00   Tomb
+
+table: castle 1d100
+1-10    Small shell keep, {small-castle-inhabit}
+11-25   Tower, {small-castle-inhabit}
+26-35   Moat house or friary, {small-castle-inhabit}
+36-45   Large shell keep, medium-castle-inhabit
+46-65   Small walled castle with keep, {medium-castle-inhabit}
+66-80   Medium walled castle with keep, {medium-castle-inhabit}
+81-88   Concentric castle, {large-castle-inhabit}
+89-95   Large walled castle with keep, {large-castle-inhabit}
+96-100  Fortress complex, {large-castle-inhabit}
+
+table: small-castle-inhabit 1d100
+1-45    Totally deserted
+46-60   Deserted (roll for monster)
+61-70   {npc-bandits}
+71-100  {lord}
+
+table: medium-castle-inhabit 1d100
+1-30    Totally deserted
+31-50   Deserted (roll for monster)
+51-65   {npc-bandits}
+66-100  {lord}
+
+table: large-castle-inhabit 1d100
+1-15    Totally deserted
+16-40   Deserted (roll for monster)
+41-60   {npc-bandits}
+61-100  {lord}
+
+table: npc-bandits 1
+1   Bandits -- {2d12} Level 1 Fighters and {1d6} Level 1 Thieves, led by a {npc-bandit-leader}.
+
+table: npc-bandit-leader
+1   Level {1d4+1} Fighter
+2   Level {1d4+1} Thief
+
+table: lord 1d4
+1   Level {1d6+9} Fighter leading {2d12} Level 1 Fighters and {1d6} Level 1 Thieves
+2   Level {1d6+9} Thief leading {1d12} Level 1 Fighters and {2d12} Level 1 Thieves
+3   Level {1d6+9} Magic User leading {2d6} Level 1 Fighters, {1d6} Level 1 Thieves, and {2d4} Level 1 Magic-Users
+4   Level {1d6+9} Cleric leading {2d12} Level 1 Clerics and {1d6} Level 1 Fighters
+
+
