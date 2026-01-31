@@ -159,3 +159,7 @@ Small adjustments to daily events on the southern seas.
 - Adjust pirate treasure
 ## 1.8.2
 - Add 1e-dmg-wilderness-terrain.txt
+## 1.8.3
+- Clarify details on jungle maps
+- Classify troop attitude for monthly events
+
