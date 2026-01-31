@@ -3,6 +3,17 @@ description: Generate a dungeon with text only
 recipe:
     The entrance is {entrance} that opens to room 1's {door-direction} side.<br>
     <br>
+    Passages are not necessarily straight. Longer passages may make several
+    turns, especially to connect various sides of rooms. Passages may
+    also cross or overlap. Doorways are located approximately by a side
+    of a room (e.g. northern), leaving exact placement up to iterpretation.
+    There may be multiple exits from a room going in the same direction.
+    In all cases of ambiguity, the map artist may make an arbitrary
+    decision to conform to the given parameters. The freedom includes
+    the choice to move passages in the vertical dimension with stairs
+    and slopes.
+    <br>
+    <br>
     {rooms}
 repeat: 1
 
@@ -29,12 +40,12 @@ table: rooms 1d20
 4-6     There are three rooms.<br>
         <strong>Room 1.</strong><br>
         {room}<br>
-        This room {connects} <strong>room 2</strong>.<br>
-        This room {connects} <strong>room 3</strong>.<br>
+        Room 1 {connects} <strong>room 2</strong>.<br>
+        Room 1 {connects} <strong>room 3</strong>.<br>
         <br>
         <strong>Room 2.</strong><br>
         {room}<br>
-        This room {connects} <strong>room 3</strong>.<br>
+        Room 2 {connects} <strong>room 3</strong>.<br>
         <br>
         <strong>Room 3.</strong><br>
         {room}
@@ -42,51 +53,53 @@ table: rooms 1d20
         <br>
         <strong>Room 1.</strong><br>
         {room}<br>
-        This room {connects} <strong>room 2</strong>.<br>
-        This room {connects} <strong>room 3</strong>.<br>
-        This room {connects} <strong>room 4</strong>.<br>
+        Room 1 {connects} <strong>room 2</strong>.<br>
+        Room 1 {connects} <strong>room 3</strong>.<br>
+        Room 1 {connects} <strong>room 4</strong>.<br>
         <br>
         <strong>Room 2.</strong><br>
         {room}<br>
-        This room {connects} <strong>room 3</strong>.<br>
-        This room {connects} <strong>room 4</strong>.<br>
+        Room 2 {connects} <strong>room 3</strong>.<br>
+        Room 2 {connects} <strong>room 4</strong>.<br>
         <br>
         <strong>Room 3.</strong><br>
         {room}<br>
-        This room {connects} <strong>room 4</strong>.<br>
+        Room 3 {connects} <strong>room 4</strong>.<br>
         <br>
         <strong>Room 4.</strong><br>
         {room}
 11-20   There are five rooms.<br>
+        <br>
         <strong>Room 1.</strong><br>
         {room}<br>
-        This room {connects} <strong>room 2</strong>.<br>
-        This room {connects} <strong>room 3</strong>.<br>
-        This room {connects} <strong>room 4</strong>.<br>
-        This room {connects} <strong>room 5</strong>.<br>
+        Room 1 {connects} <strong>room 2</strong>.<br>
+        Room 1 {connects} <strong>room 3</strong>.<br>
+        Room 1 {connects} <strong>room 4</strong>.<br>
+        Room 1 {connects} <strong>room 5</strong>.<br>
         <br>
         <strong>Room 2.</strong><br>
         {room}<br>
-        This room {connects} <strong>room 3</strong>.<br>
-        This room {connects} <strong>room 4</strong>.<br>
-        This room {connects} <strong>room 5</strong>.<br>
+        Room 2 {connects} <strong>room 3</strong>.<br>
+        Room 2 {connects} <strong>room 4</strong>.<br>
+        Room 2 {connects} <strong>room 5</strong>.<br>
         <br>
         <strong>Room 3.</strong><br>
         {room}<br>
-        This room {connects} <strong>room 4</strong>.<br>
-        This room {connects} <strong>room 5</strong>.<br>
+        Room 3 {connects} <strong>room 4</strong>.<br>
+        Room 3 {connects} <strong>room 5</strong>.<br>
         <br>
         <strong>Room 4.</strong><br>
         {room}<br>
-        This room {connects} <strong>room 5</strong>.<br>
+        Room 4 {connects} <strong>room 5</strong>.<br>
         <br>
         <strong>Room 5.</strong><br>
     {room}
 
 table: connects 1d6
 1   does not connect to
-2-6 has {door}, {door-trap}, on the {door-direction} side. It goes {3d6}0 feet via {passage}
-    ending in {door}, {door-trap}, which connects to the {door-direction} side of
+2-6 has {door}, {door-trap}, on the {door-direction} side.
+    A {passage} approximately {3d6}0 feet long ends in {door},
+    {door-trap}, which connects to the {door-direction} side of
 
 table: door
 1   an open archway
@@ -99,33 +112,40 @@ table: door-trap 1d6
 6   {container-trap}
 
 table: door-direction 1d4
+1   northern
+2   southern
+3   eastern
+4   western
+
+table: direction 1d4
 1   north
 2   south
 3   east
 4   west
 
+
 table: passage 1d6
-1-3 a ten by ten passage
-4-5 a five by eight foot passage
-6   a passage {1d12+4} feet wide and {1d8+4} feet tall
+1-3 ten by ten passage
+4-5 five by eight foot passage
+6   passage {1d12+4} feet wide and {1d8+4} feet tall
 
 table: room
-1   This room is {shape}. It contains {junk-pile}.<br>
-    <br>
+1   This room is {shape}.
     The room {contents}<br>
+    It also contains {junk-pile}.<br>
 
 # Shape and size
 table: shape 1d100
-1-60    a rectangle {2d4}0 feet wide by {2d4}0 feet wide and a {ceiling} foot ceiling
-61-66   an isosceles triangle pointing {door-direction} with two {2d4}0 foot sides and a {2d4}0 foot base. It has a {ceiling} foot ceiling
-67-72   a circle {2d4}0 feet across with a {ceiling} foot ceiling
-73-78   a semi-circle {2d4}0 feet across, flat side to the {door-direction}, and a {ceiling} foot ceiling
-79-84   an oval {2d4}0 feet across by {2d4}0 feet tall with a {ceiling} foot ceiling
-85-89   irregularly shaped, roughly {2d4}0 feet across by {2d4}0 feet tall with a {ceiling} foot ceiling
-90-93   a rhombus (square rotated 45 degrees) {2d4}0 feet wide and tall with a {ceiling} foot ceiling
-94-96   kite-shaped (rhombus with different x and y) {2d4}0 feet across by {2d4}0 feet tall with a {ceiling} foot ceiling
-97-99   a hexagon, flat side {door-direction}, {2d4}0 feet across with a {ceiling} foot ceiling
-99-100  an octagon {2d4}0 feet across with a {ceiling} foot ceiling
+1-60    a rectangle {2d4}0 feet east to west by {2d4}0 feet north to south with a {ceiling}-foot tall ceiling
+61-66   an isosceles triangle pointing {direction} with two {2d4}0 foot sides and a {2d4}0 foot base. It has a {ceiling}-foot tall ceiling
+67-72   a circle {2d4}0 feet across with a {ceiling}-foot tall ceiling
+73-78   a semi-circle {2d4}0 feet across, with the flat side to the {direction}, and a {ceiling}-foot tall ceiling
+79-84   an oval {2d4}0 feet east to west by {2d4}0 feet north to south with a {ceiling}-foot tall ceiling
+85-89   irregularly shaped, roughly {2d4}0 feet across by {2d4}0 feet tall with a {ceiling}-foot ceiling
+90-93   a rhombus (square rotated 45 degrees) {2d4}0 feet across with a {ceiling}-foot tall ceiling
+94-96   kite-shaped (rhombus with different x and y) {2d4}0 feet east to west by {2d4}0 feet north to south with a {ceiling}-foot tall ceiling
+97-99   a hexagon, flat side to the {direction}, {2d4}0 feet between sides with a {ceiling}-foot tall ceiling
+99-100  an octagon {2d4}0 feet across with a {ceiling}-foot tall ceiling
 
 table: ceiling 1d10
 1-5 10
