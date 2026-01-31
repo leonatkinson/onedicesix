@@ -420,9 +420,11 @@ table: troop-movements 1d1
     raids burn buildings and cause as much damage as possible in addition to
     carrying off anything of value.
 
-table: troop-friendly 1d2
-1   {friendly}
-2   {hostile}
+table: troop-friendly 1d4
+1   local, friendly
+2   allied, friendly
+3   hostile, enemy
+4   hostile, barbarian
 
 table: troop-arrest 1d10
 1       One of the PCs is arrested as a spy.
