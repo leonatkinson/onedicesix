@@ -162,4 +162,5 @@ Small adjustments to daily events on the southern seas.
 ## 1.8.3
 - Clarify details on jungle maps
 - Classify troop attitude for monthly events
-
+## 1.8.4
+- Minor edits to poison generator

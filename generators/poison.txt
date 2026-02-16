@@ -43,15 +43,15 @@ table: delay-period 1d4
 3   {1d4+1} days
 4   week
 
-table: effect 1d8
-1       does {damage-total} damage, {damage-save}. {damage-repeat}
-2       causes death, {death-save}
-3       induces sleep for {sleep-duration}
-4       reduces {stat} by {stat-damage}, {damage-save}. {damage-repeat}
-5       causes disease, save vs poison +CON to resist. {disease-duration}
-6       causes confusion, save for no effect
-7       causes memory loss, save vs poison or lose 1d6 memorized spells
-8       causes blindness
+table: effect 1d20
+1-5     does {damage-total} damage, {damage-save}. {damage-repeat}
+6-10    causes death, {death-save}
+11-12   induces sleep for {sleep-duration}
+13-14   reduces {stat} by {stat-damage}, {damage-save}. {damage-repeat}
+15-16   causes disease, save vs poison +CON to resist. {disease-duration}
+17-18   causes confusion, save for no effect
+19      causes memory loss, save vs poison or lose 1d6 memorized spells
+20      causes blindness
 
 table: damage-total
 1       1d6
@@ -85,8 +85,8 @@ table: damage-repeat 1d8
 8       Repeat for {1d4}d6 rounds
 
 table: permanence 1d10
-1-5     Damage taken may be healed normally
-6       The effects of the poison are permanent
+1-6     Hit point damage taken may be healed normally. Ability damage requires a Restoration spell.
+        Other effects resolve normally.
 7       The effects of the poison may be reversed with a remove curse spell
 8       The effects of the poison may be reversed with a restoration spell
 9       The effects wear off in {1d6} hours
@@ -97,7 +97,7 @@ table: sleep-duration 1d4
 1   3d6 rounds
 2   2d6 turns
 3   2d6 hours
-2   1d6+1 days
+4   1d6+1 days
 
 table: stat 1d6
 1   STR
