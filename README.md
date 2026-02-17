@@ -183,3 +183,5 @@ Small adjustments to daily events on the southern seas.
 ## 1.8.5
 - Updated README with more about language features.
 - Added event-calendar generator.
+## 1.8.6
+- Apply more dates to monthly events in the event calendar.
