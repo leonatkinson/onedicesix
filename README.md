@@ -36,7 +36,7 @@ curly braces with a table lookup or a random number. The recipe itself will be
 re-run according to the value of the repeat property.
 
 Note that long values, such as the recipe above, may be broken into multiple lines
-for reability by adding indenting spaces.
+for reability by indenting with spaces.
 
 To generate a dice roll in a recipe, you may use the following patterns.
 
@@ -44,13 +44,20 @@ To generate a dice roll in a recipe, you may use the following patterns.
 * 3d6 (3 six-sided dice added together to generate values from 3 to 18)
 * 3d6-3 (Generates values from 0 to 15)
 
+To show a counter, use `{# name}` notaion. The first instance will resolve to `1`,
+following by `2`, and so forth. Optionally, provide a counter name to track separate
+counters.
+
 To make a lookup against a table, put the name of the table in curly braces and
 define the table later in the file. You may also specify a repeating table
-reference by putting a dice roll inside the curly braces.
+reference by putting a dice roll inside the curly braces. The third part of a
+table reference specifies a symbol used to separate each repeat instance. The
+default of a comma and a space.
 
 * {table_name}
 * {2 table_name} (roll on the table twice)
 * {2d6+1 table_name} (roll on the table 3-13 times)
+* {2d6+1 table_name ,} (roll on the table 3-13 times)
 
 Tables are defined with a header row and a list of results. The header row must
 start with `name: ` and set a unique name. Optionally, the header may set a dice
@@ -75,6 +82,15 @@ After replacing curly brace expressions in the recipe, if the result contains
 new expressions, the generator makes another pass. Processing continues until
 no expressions remain. This allows for results from one table to refer to
 another or even recursively as in the example above.
+
+A few generators have extra logic to format results or take input. These are:
+
+The rest of the generators are considered "simple", and they get a final pass
+for a few formatting symbols. Line breaks are turned into paragraphs. Semicolons 
+turn into BRs. Finally, lines starting with a label and colon get STRONG treatment.
+
+You may place HTML into the content. It will be left as-is.
+
 
 See [leonatkinson.com/one-dice-six](https://www.leonatkinson.com/one-dice-six/) for the original release.
 
@@ -164,3 +180,6 @@ Small adjustments to daily events on the southern seas.
 - Classify troop attitude for monthly events
 ## 1.8.4
 - Minor edits to poison generator
+## 1.8.5
+- Updated README with more about language features.
+- Added event-calendar generator.

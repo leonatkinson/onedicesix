@@ -1,0 +1,987 @@
+name: Annual Event Calendar
+description: Generates campaign events for an entire year, greatly inspired by the OE yearly and monthly events.
+recipe:
+  The following event represents the theme of the year.
+  ; ;
+  {annual-event}
+repeat: 1
+
+table: annual-event 1d100
+1-10    Ambassador ;
+        On {date}, an ambassador {ambassador-dir} {ambassador-location} on a {3d10}-month
+        mission to {ambassador-mission}. The arrival is a major event for those
+        of the court, accompanied by ceremonies and banquets.
+        {monthly-other-preamble}
+11-15   Assassination of a Lord ;
+        A high-ranking lord is assassinated on {date}. The PCs may be under suspicion.
+        The assassin {assassin-escapes}, but {assassin-accuses}.
+        {lord-power-struggle}
+        {monthly-war-preamble}
+16-30   Birth ;
+        On {date}, a high-ranking noble's family has given birth to a child, a reason for
+        widespread celebration. Feasting and ceremonies last for several days.
+        {monthly-other-preamble}
+31      Comet ;
+        On {date}, a bright comet is sighted in the sky for {1d4} weeks,
+        a portent of some great event. {2d6} weeks later, a second event occurs. ;
+         ;
+        {event}
+        {monthly-other-preamble}
+32-40   Death of a Lord ;
+        A high-ranking noble dies on {date}, {lord-death}. {lord-power-struggle}
+        {monthly-war-preamble}
+41-43   Major Earthquake ;
+        On {date}, an earthquake produces extensive destruction in a {1d30+20}-mile-radius, {1d20}
+        miles {earthquake-direction} of the home of the PCs. A series of lesser
+        tremors come before and after. The big quake destroys cities, reshapes lakes,
+        coastlines, and rivers, causes great fires, and possibly kills hundreds
+        of people. {earthquake-fire} {earthquake-plague}
+        {monthly-disaster-preamble}
+44-47   Famine ;
+        Crops wither, animals die, and the poor begin to starve. The famine strikes
+        in the {month} month and lasts for {1d6+1} months. Food prices rise by
+        {famine-costs} times normal. Marauders scavenge food of any type. Farms
+        produce no income this year and 25% next year. {famine-uprising}
+        Population falls by 5% per month. {famine-plague}
+        {monthly-disaster-preamble}
+48-52   Major Fire ;
+        On {date}, a huge conflagration sweeps a major city of the land,
+        destroying {1d4+4}0% of the city. Use this as the chance the PCs lose property.
+        The city's population is reduced by {1d4}0%. The price of lumber and
+        building materials is ten times normal for the next four months. The price
+        of food doubles for one month.
+        {fire-plague} {fire-famine}
+        {monthly-disaster-preamble}
+53-57   Flood ;
+        A major flood sweeps the region on {date}. If on the coast, severe storms cause
+        the waters to flood the coastal regions. If along a river, a series of
+        heavy rains cause the river to rage and overflow its banks, flooding
+        the bottom land. The waters rise {5d6} feet. Signs of the impending
+        flood are obvious {1d4+1} days in advance and levees and dikes can be
+        built to protect against it. Once the flood begins, the waters rise at
+        the rate of half a foot an hour until the maximum is reached. They remain
+        at their high point for {4d6} hours and then subside at the rate of
+        1 foot per day. Buildings are extensively damaged, although only those
+        in the path of the raging waters are destroyed. The population of the
+        area is reduced by {1d10}% and the price of all goods is doubled
+        for {1d4+1} months. Normal movement across the flooded areas is
+        impossible.
+        {flood-plague}
+        {flood-timing}
+        {monthly-disaster-preamble}
+58      Major Incursion ;
+        Beginning in {month} month and lasting for {1d12} months, a major migration
+        of {incursion-creatures} numbering about 1% of the existing population
+        enters the kingdom from outside its borders.
+        They come {incursion-reason}.
+        They try to live life as they always have, retaining old habits and
+        speaking their own language.
+        {monthly-war-preamble}
+59-68   Marriage ;
+        The ruler of the land has arranged an important diplomatic marriage
+        {marriage-for}, seeking to {marriage-reason}. The marriage is a cause
+        for festivals and feasting. The marriage happens on {date}.
+        {monthly-other-preamble}
+69      New Religion ;
+        A {religion-type} arrives in the {month} month and gains converts over a
+        period of {1d6+1} months. {religion-feud} {religion-fued}
+        {religion-ruler} {religion-ruler-ban}
+        {monthly-other-preamble}
+70-74   Plague ;
+        {plague}
+        {monthly-other-preamble}
+75-78   Political Plot ;
+        {plot-discovered} Many nobles and government officials are stripped of
+        their rank, banished, or executed. If the PCs are involved in political
+        affairs, there is a 40% chance they are accused of complicity. If the
+        characters have powerful enemies, this chance is increased to 80%.
+        {plot-nobles}
+        Spies and secret police are everywhere, ready to arrest people
+        on the slightest evidence. The political turmoil begins in the {month} month
+        and lasts for {1d3} months.
+        {monthly-war-preamble}
+79-85   Rebellion ;
+        {rebel-group} attempts to overthrow the government.
+        The purpose of the rebellion is {rebel-aim}.
+        The rebellion begins in the {month} month and last {1d6} months.
+        {monthly-war-preamble}
+86      Tsunami ;
+        On {date}, a great wave, {1d11+9}0 feet high, strikes a 50-mile section of coastline.
+        It strikes with little warning. The population of the area is reduced
+        by 70%.
+        (Countries without coastlines treat this event as no event for the year.)
+        For {1d2} months afterwards, the price of building materials
+        triples, and the price of all other goods doubles.
+        {tsunami-plague}
+        {monthly-disaster-preamble}
+87      Visitation ;
+        On {date}, a major deity appears somewhere in the land. {visit-good}
+        {monthly-other-preamble}
+88      Volcano ;
+        On {date}, {volcano-appears}. The eruption is preceded by
+        tremors and rumblings identical to those that precede a major earthquake.
+        When the eruption occurs, it is of exceptional violence. All within a
+        5-mile radius is destroyed and clouds of thick ash rain down up to
+        30 miles downwind. The volcano spews smoke and ash for the remainder
+        of the month. Thereafter, the volcano remains active for {1d12} months,
+        with a 10% chance per month of another major eruption.
+        {monthly-disaster-preamble}
+89-100  War ;
+        On {date}, {war-type}. The war continues for {1d3} years.
+        {war-rebels} Press gangs roam the countryside, seeking new recruits.
+        Young adventurers desert their homes, seeking fame and fortune
+        as soldiers.
+        {monthly-war-preamble}
+
+table: date 1d1
+1   the {dom} day of the {month} month
+
+table: dom 1d28
+1   first
+2   second
+3   third
+4   fourth
+5   fifth
+6   sixth
+7   seventh
+8   eighth
+9   ninth
+10  tenth
+11  eleventh
+12  twelfth
+13  thirteenth
+14  fourteenth
+15  fifteenth
+16  sixteenth
+17  seventeenth
+18  eighteenth
+19  nineteenth
+20  twentieth
+21  twenty-first
+22  twenty-second
+23  twenty-third
+24  twenty-fourth
+25  twenty-fifth
+26  twenty-sixth
+27  twenty-seventh
+28  twenty-eighth
+
+table: month 1d12
+1 first
+2 second
+3 third
+4 fourth
+5 fifth
+6 sixth
+7 seventh
+8 eighth
+9 ninth
+10 tenth
+11 eleventh
+12 twelfth
+
+# LIST OF MONTHLY EVENTS
+
+table: monthly-war-preamble 1d1
+1 ; ;
+  This being a year of turmoil, the following monthly events occur.
+  {12 monthly-war-repeater <br>}
+
+table: monthly-war-repeater 1d1
+1 ; ;
+  Month {# month} ;
+  {monthly-event-war}
+
+table: monthly-disaster-preamble 1d1
+1 ; ;
+  This being a year of natural disaster, the following monthly events occur.
+  {12 monthly-disaster-repeater <br>}
+
+table: monthly-disaster-repeater 1d1
+1 ; ;
+  Month {# month} ;
+  {monthly-event-disaster}
+
+table: monthly-other-preamble 1d1
+1 ; ;
+  This being a year of a rare event, the following monthly events occur.
+  {12 monthly-other-repeater <br>}
+
+table: monthly-other-repeater 1d1
+1 ; ;
+  Month {# month} ;
+  {monthly-event-other}
+
+
+# ANNUAL
+
+table: ambassador-dir 1d100
+1-65    arrives from
+66-100  is sent to
+
+table: ambassador-mission 1d6
+1   prevent war
+2   form a military alliance
+3   arrange a marriage
+4   pay tribute
+5   promote trade
+6   gain culture
+
+table: ambassador-location 1d10
+1-9 a regional kingdom
+10  a far-away land
+
+table: assassin-escapes 1d10
+1-3     is taken alive
+4-6     is killed
+7-10    escapes
+
+table: assassin-accuses 1d100
+1       accuses the PCs
+2-100   does not implicate the PCs
+
+table: lord-power-struggle 1d10
+1-2     The lord has no clear successor, and power struggle ensues for {1d6} months.
+3-10    The court is in turmoil for {1d6} months.
+
+table: lord-death 1d4
+1   in battle
+2   through misadventure
+3   from disease
+4   peacefully in bed
+
+table: earthquake-direction 1d4
+1   north
+2   northeast
+3   east
+4   southeast
+5   south
+6   southwest
+7   west
+8   northwest
+
+table: earthquake-fire 1d10
+1-7     A large fire sweeps through the largest city.
+8-10    Small fires are quickly extinguished.
+
+table: earthquake-plague 1d10
+1-4     Populated areas suffer from a plague lasting {1d30} months.
+5-10    Fear of disease prove unwarranted.
+
+table: famine-costs 1d10
+1-4 ten
+5-9 fifty
+10  one hundred
+
+table: famine-uprising 1d10
+1-6     Peasants revolt.
+7-10    Lords prevent a peasant uprising with wise leadership.
+
+table: famine-plague 1d10
+1-2      ;
+        {plague}
+3-10    Fear of disease proves unwarranted.
+
+table: fire-plague 1d10
+1-2      ;
+        {plague}
+3-10    Fear of disease proves unwarranted.
+
+table: fire-famine 1d10
+1        ;
+        Famine strikes and lasts for {1d6+1} months. Food prices rise by
+        {famine-costs} times normal. Marauders scavenge food of any type. Farms
+        produce no income this year and 25% next year. {famine-uprising}
+        Population falls by 5% per month.
+2-10    Fortunately, there is no shortage of food.
+
+table: flood-plague 1d10
+1-2      ;
+        {plague}
+3-10    Fear of disease proves unwarranted.
+
+table: flood-timing 1d12
+1-2     The flood strikes during the winter.
+3-6     The flood strikes in the spring during planting season. Income
+        from farms in the area is reduced by 50% for the year.
+7-8     The flood strikes during the summer. 80% of all farm income is lost.
+        {flood-famine}
+9-11    The flood strikes during harvest season.
+12      The flood strikes during the winter.
+
+table: flood-famine 1d10
+1-4     Famine strikes and lasts for {1d3} months. Food prices rise by
+        {famine-costs} times normal. Marauders scavenge food of any type.
+        Population falls by 5% per month.
+5-10    Despite the ruined crops, the people have enough to eat.
+
+table: incursion-creatures
+1-5     humans
+6-8     humanoids
+9-10    monsters
+
+table: incursion-reason 1d10
+1       seeking religious freedom
+2-3     being driven from their homeland
+4-5     seeking to expand their territory
+6-7     chasing tales of natural resources such as gold
+8       fleeing famine
+9       fleeing war
+10      fleeing plague
+
+table: marriage-for 1d6
+1-2     for himself
+3-6     for his child
+
+table: marriage-reason 1d4
+1   secure an alliance
+2   gain control over a smaller kingdom
+3   settle a dispute
+4   appease an overlord
+
+table: religion-type 1d6
+1-2     new religion
+3-6     new sect of the dominant religion
+
+table: religion-feud 1d100
+1-75    It causes hostility and fueding between religions, leading to skirmishing,
+        temple burning, and battles between warrior monks.  Both sides attempt
+        to gain the support of the ruler of the land.
+76-100  It's accepted by the established faiths.
+
+table: religion-ruler 1d10
+1-6     The ruler adopts the new religion.
+7-10    The ruler
+
+table: religion-ruler-ban 1d10
+1-4     The old religions are banned. Their temples are burned. Clerics are
+        killed or banished.
+5-10    The faithful of the old religions are allowed to continue to practice.
+
+table: plague 1d1
+1   A terrible disease sweeps the land in the {month} month, lasting for {2d6} months.
+    The population falls by 5% per month. Those untouched by the disease and
+    those of neighboring lands are suspicious of strangers. Traders do not enter
+    plagued lands and the cost of imported goods increases five times. The cost
+    of normal goods doubles. Each month, {5d5}% of population centers become
+    infected and {6d5}% of population centers rid themselves of the disease.
+
+table: plot-discovered 1d2
+1   A plot to overthrow the present government is discovered.
+2   The ruler of the land is convinced that a plot exists to overthrow his rule.
+
+table: plot-nobles 1d10
+1-2     A noble or group of nobles rises in rebellion.
+3-10    Most nobles support the ruler.
+
+table: rebel-group 1d5
+1   A powerful lord
+2   A secret society
+3   A religious sect
+4   An army commander
+5   An army of peasants
+
+table: rebel-aim 1d4
+1   gain independence from the government
+2   avoid taxation and brutal treatment
+3   gain special privileges
+4   seize the throne
+
+table: tsunami-plague 1d10
+1        ;
+        {plague}
+2-10    The waves cleanse the land of any disease.
+
+table: visit-good 1d2
+1   The event is considered a blessing, and the site becomes a place of worship.
+    Construction of a shrine begins and completes in {2d6} months.
+2   The event is considered a curse, and the site is despised. Fortunes fall for
+    those nearby. Common folk move away if they can. The site becomes a meeting
+    place for evil beings.
+
+table: volcano-appears 1d10
+1-7     a dormant volcano erupts
+8-10    a new volcano appears
+
+table: war-type 1d2
+1   the ruler of the kingdom launches a campaign against a neighboring land
+2   the kingdom is invaded from a neighboring land
+
+table: war-rebels 1d6
+1   Away from the front, other groups take advantage of the situation and stage
+    a rebellion or uprising.
+2-6 Civilians move away from the fighting.
+
+
+# MONTHLY
+
+table: monthly-event-war 1d100
+01-05   {accident}
+06-10   {bandit-activity}
+11-15   {birth}
+16-20   {death}
+21-25   {excessive-taxes}
+26-27   {famous-person}
+28      {major-fire}
+29-30   {haunting}
+31-33   {horrendous-monster}
+34-41   {major-incursion}
+42-51   {major-incursion}
+52-54   {injustice}
+55-60   {major-battle}
+61      {notorious-criminal}
+62-66   {recruiting}
+67-71   {troop-movements}
+72-78   {uprising}
+79-80   {vengeful-stranger}
+81-100  {no-event}
+
+table: monthly-event-disaster 1d100
+01-05   {accident}
+06-15   {bad-harvest}
+16-22   {bad-weather}
+23-32   {bandit-activity}
+33-37   {birth}
+38-44   {death}
+45-49   {earthquake}
+50-54   {excessive-taxes}
+55-60   {minor-fire}
+61-66   {flooding}
+67-69   {haunting}
+70-73   {horrendous-monster}
+74-78   {injustice}
+79-82   {landslide}
+83-87   {maneater}
+88-92   {plague-month}
+93      {uprising}
+94      {vip-visit}
+95-100  {no-event}
+
+table: monthly-event-other 1d100
+01-05   {accident}
+06-07   {bad-harvest}
+08-10   {bad-weather}
+11-15   {bandit-activity}
+16-25   {birth}
+26-30   {death}
+31-35   {famous-person}
+36-40   {minor-fire}
+41-43   {haunting}
+44-50   {injustice}
+51-55   {maiden-of-virtue}
+56-60   {maneater}
+61-68   {marriage}
+69-78   {notorious-criminal}
+79-83   {vengeful-stranger}
+84-92   {vip-visit}
+93-100  {no-event}
+
+table: no-event 3d6
+3   A local shepherd claimed to have found a "dragon’s egg," which turned out to be a very smooth, very large river stone.
+4   A swarm of locusts passed through the valley, though they luckily preferred the wild weeds to the actual crops.
+5   A mysterious, foul smell permeated the village for ten days before it was discovered to be a forgotten sack of turnips rotting in the cellar.
+6   A massive oak tree fell across the main road during a windstorm, requiring a communal effort to chop it into firewood.
+7   A troupe of three mediocre jugglers performed in the square, though they were mostly remembered for accidentally dropping a torch in the well.
+8   The traveling tinker stayed for ten days instead of two because his mule went lame.
+9   The eldest daughter of a local craftsman finally wed the apprentice of another craftsman after a {1d3}}-year engagement.
+10  Nothing of note
+11  A heavy rain caused the creek to swell, washing away the small footbridge and forcing everyone to use the long path for a week.
+12  A farmer's prize sow escaped and led half the village on a frantic chase through the barley fields.
+13  The local tavern ran out of ale for three days due to a sour batch, nearly sparking a minor riot among the woodcutters.
+14  The village priest discovered a family of foxes living under the temple and spent the month trying to coax them out with scraps.
+15  A merchant’s wagon broke an axle in the mud, and he spent two weeks grumpily selling salted fish at a discount while waiting for a new wheel.
+16  The village children convinced everyone a ghost was in the belfry, but it turned out to be a particularly large and confused owl.
+17  A stray dog with a silver collar appeared in town, was pampered like royalty for a month, and then simply wandered off again.
+18  A knight in shining armor rode through the village without stopping, providing enough conversational material to last until winter.
+
+table: accident 1d1
+1   On the {dom} day of the month, {accident-type}. {accident-severity}.
+    It remains a topic of conversation for {1d12} months afterwards.
+
+table: accident-type
+1   A bridge across a raging river collapses.
+2   Lightning strikes a building.
+3   A horse-drawn cart rampages through the streets.
+4   A levee breaks.
+5   A fire breaks out in a crowded market, causing panic and injuries.
+6   A section of city wall collapses unexpectedly, blocking a main road.
+7   A well or cistern becomes contaminated.
+8   A festival stage collapses during a performance.
+9   A runaway herd of livestock tramples through the town square.
+10  A windstorm topples a large tree onto a house.
+
+table: accident-severity 1d6
+1-4 It is merely an inconvenience
+5   {1d6+1} people are injured.
+6   {2d6} people are injured and {1d6+1} die.
+
+table: bad-harvest 1d1
+1   Local crop harvests suffer due to {bad-harvest-reason}.
+    Farm incomes of the area are reduced by 25%.
+    {bad-harvest-famine} {bad-harvest-blame}
+
+table: bad-harvest-reason 1d6
+1   cold weather
+2   lazy farmers
+3   too much rain
+4   greedy crows
+5   hungry insects
+6   lack of rain
+
+table: bad-harvest-famine 1d20
+1       The bad harvest results in short-term famine, raising prices by 100%;
+2-20    The people have enough food to make it through the hard times. Prices
+        rise by 50%.
+
+table: bad-harvest-blame 1d6
+1-2     The people look to the ruler for help.
+3-6     The poor harvest is blamed on the actions of the ruler of the land, a
+        punishment for his evil actions.
+
+table: bad-weather 1d1
+1   The month is beset by relentless, punishing weather. In winter, blizzards
+    bury roads beneath drifts and the air bites with bitter cold. Spring and fall
+    bring ceaseless downpours, drowning the land in mud and mire. Summer scorches
+    with oppressive heat, the sun baking fields and villages alike. Travel grinds
+    to a crawl. Movement and trade are halved as travelers and merchants struggle
+    through the elements. Armies in the field see 15% of their soldiers desert,
+    driven away by hardship. Crops wither or rot in the fields, slashing farm
+    income by 15% during the growing season.
+
+table: bandit-activity 1d1
+1   A ruthless band of {2d10}0 bandits descends upon the region, preying on all
+    who pass. Half of all caravans are ambushed along the roads, and lone
+    travelers are robbed eight times out of ten. Fear and suspicion grip the
+    populace. Mercenary guards are suddenly in high demand, and merchants eye
+    every stranger with distrust. The bandits haunt the land until they are
+    crushed or the spoils run dry.
+
+table: birth 1d20
+1       One of the PCs is pregnant or he made a mate pregnant. The birth will occur
+        in {1d10} months.
+2-19    A local noble or government official has a child, an occasion for feasting
+        and celebration for the noble and his retainers.
+20      There are reports of the miraculous birth of a child to a hard-working
+        peasant family, an event of great wonder. {birth-type}
+
+table: birth-type 1d5
+1   The child springs from a tree stump.
+2   The child appears from the waters of a spring.
+3   The child is found in a local shrine.
+4   The child is discovered sleeping inside a giant cabbage.
+5   The child is found swaddled in a basket at the edge of the deep, dark woods.
+6   The child is delivered to the doorstep by a flock of white storks.
+
+table: death 1d2
+1   A local noble dies {death-cause}. {death-succession}
+2   A government official dies {death-cause}. The central government appoints a
+    replacement who arrives in {1d6+1} weeks. Until that time, no government
+    duties relating to the post can be resolved.
+
+table: death-cause 1d3
+1   of natural causes
+2   in battle
+3   by misadventure
+
+table: death-succession 1d10
+1-3     He is replaced by his son.
+4-6     Some other person has inherited the property, either through adoption or
+        assignment of rights, and the succession goes smoothly.
+7-8     The area is assigned to a new lord by the court. At the court there is
+        political maneuvering to gain control.
+9-10    Neighboring lords attempt to seize the area through force of arms.
+
+table: earthquake 1d1
+1   A minor earthquake strikes {1d10} miles from the home of the PCs, affecting a
+    {1d4+3}}-mile radius. Although loss of life is minor, 50% of the buildings in the
+    area of the quake will be damaged. {monthly-earthquake-fire} The earthquake is
+    preceded by tremors identical to those that precede a major quake. After
+    the earthquake, the cost of building materials doubles for {1d2} months.
+
+table: monthly-earthquake-fire 1d10
+1-2     A major fire occurs.
+3-5     {minor-fire}
+6-10    No significant fires break out.
+
+table: excessive-taxes 1d1
+1   Taxes soar to crushing heights, squeezing every last coin from the poorest
+    peasants. Families are torn apart as debt-slavery claims those unable to pay,
+    and once-proud farmers are forced to sell their ancestral lands for a pittance,
+    joining the ranks of beggars in the streets. Desperation breeds cunning—
+    villagers hide their meager goods, forge petitions for mercy, and whisper of
+    secret exemptions. The air is thick with resentment and fear as the tax
+    collectors make their rounds. {taxes-uprising} {taxes-bandits}
+
+table: taxes-uprising 1d10
+1-3     The peasants revolt!
+4-10    Yet, the peasants have no will to fight back.
+
+table: taxes-bandits 1d10
+1-7     Bandit activity increases as impoverished peasants flee to the hills.
+8-10    Bandits find little reason to pester the area.
+
+table: famous-person 1d1
+1   A person of great renown, but no official position, has arrived in the area.
+    The person is noted for {famous-person-reason}. The visitor attempts to arrive
+    quietly and pass his time without arousing notice. However, rumors soon get
+    about of his presence and his reputation. This individual remains in the area
+    for {1d6} weeks.
+
+table: famous-person-reason 1d5
+1   extraordinary skill at painting in the classical style
+2   mastery of a particularly difficult poetry form
+3   mastery of fighting with {weapon-mastery}
+4   brilliance as a philosopher
+5   a reputation for pious behavior
+
+table: weapon-mastery 1d6
+1   the longsword
+2   the lance
+3   the battleaxe
+4   the mace
+5   the warhammer
+6   the flail
+
+table: minor-fire 1d3
+1   Fire sweeps through a city. {1d4}0% of the buildings are destroyed. Building
+    material costs double.
+2   Fire sweeps through a town. {1d3+4}0% of the buildings are burned. Building
+    material costs double.
+3   Fire in a village burns {1d3+7}0% of structures to the ground. Building
+    material costs double.
+
+table: major-fire 1d1
+1   A huge conflagration sweeps a major city of the land, destroying {1d4+4}0%
+    of the city. The city's population is reduced by {1d4}0%. The price of lumber
+    and building materials is ten times normal for the next four months. The price
+    of food doubles for one month. {fire-plague} {fire-famine-monthly}
+
+table: flooding 1d1
+1   Flooding erupts as {flooding-cause} unleashes a roaring wall of water. A
+    surging wave, {5d4} feet high and {1d100+100} feet wide, bursts from the
+    riverbed and thunders across the countryside. The torrent carves a path of
+    devastation for {1d6} miles, sweeping away all in its wake—fields, homes,
+    livestock, and the unwary. Any caught in the flood’s path are hurled
+    downstream to their doom unless they cling to a raft or some desperate
+    flotation. When the fury subsides, the land is left sodden, water lingering
+    at {2d4} inches deep. The floodwaters remain until the shattered barrier is
+    rebuilt or the sun finally dries the land.
+
+table: flooding-cause 1d4
+1   the collapse of a levee
+2   the collapse of a dam
+3   the collapse of a dike
+4   a sudden cloudburst upstream
+
+table: haunting 1d1
+1   It is rumored that some site in the region has recently been the center of
+    strange supernatural events, the site of a {haunting-site}.
+    {haunting-real} {haunting-simple}
+
+table: haunting-site 1d3
+1   great battle
+2   murder
+3   accident
+
+table: haunting-real 1d2
+1   The haunting is real.
+2   The haunting is a hoax.
+
+table: haunting-simple 1d6
+1-2   It's a simple affair.
+3-4   The spirit returns to complete an arduous task left unfulfilled.
+5-6   The spirit returns to right some wrong.
+
+table: horrendous-monster 1d1
+1   A monstrous being of unspeakable power slithers into the region, casting a
+    pall of dread over every village and farmstead. Its lair—some forsaken ruin,
+    cavern, or ancient tomb—lies hidden in the wilds, whispered of but never
+    approached. The peasants know the general area, but none dare confront the
+    horror, paralyzed by tales of vanished hunters and shattered heroes. Each
+    night, the monster prowls, leaving behind mutilated livestock, burned fields,
+    and cryptic symbols scrawled in blood. As hope fades, desperate villagers
+    heap offerings at the edge of the monster’s domain, praying for mercy. If
+    left unchecked, the evil deepens. Others of its kind are drawn to the land,
+    and the countryside becomes a blighted realm of terror and ruin.
+
+table: major-incursion 1d1
+1   A group has moved into the region, with the intent of establishing a
+    permanent home here. {incursion-hostile} They arive suddenly and number about
+    1% of the existing population. They are {major-incursion-group}.
+
+table: incursion-hostile 1d6
+1-2 The group is friendly.
+3-6 The group is hostile.
+
+table: major-incursion-group 1d20
+1-5     invading soldiers
+6-8     retreating soldiers
+9-10    refugees escaping disaster
+11-12   a war party
+13-15   bandits driven from another area
+13-15   monsters driven from another area
+16-19   nomads following game
+20      prospectors attracted to a recent mineral find
+
+table: minor-incursion 1d1
+1   {minor-incursion-group} numbering {10d10} arrives suddenly.
+
+table: minor-incursion-group 1d10
+1-2     A band of spies
+3-4     Reinforcements to a bandit gang
+5-6     The punitive expedition of a neighboring warlord
+7-8     The raiding party of a savage tribe
+9-10    A raiding party of monsters
+
+table: injustice 1d1
+1       The shadow of injustice falls across the land. In the halls of power, 
+        venal magistrates and scheming officials twist the law to their own ends, 
+        condemning the innocent while the guilty walk free. {injustice-cause} 
+        {injustice-pcs} Rumors of wrongful imprisonment and cruel punishments 
+        spread like wildfire, sowing fear and resentment among the people. Only 
+        the intervention of brave souls or irrefutable evidence brought before 
+        higher authorities can hope to break the grip of corruption and restore 
+        justice to the realm.
+
+table: injustice-cause 1d6
+1   The magistrate has been bribed.
+2   The magistrate wants to steal the property of the accused.
+3   The magistrate has been tricked by others.
+4   The magistrate is cruel.
+5   The magistrate is exacting official vengeance on rebels.
+6   The magistrate is exacting official vengeance on traitors.
+
+table: injustice-pcs 1d20
+1-19    The PCs are not directly involved.
+20      The PCs are wrongfully accused!
+
+table: landslide 1d1
+1       A thunderous landslide or avalanche crashes down from the mountains, 
+        burying a vital road beneath tons of earth and shattered stone. The 
+        route vanishes beneath a tangled ruin of boulders, uprooted trees, 
+        and choking mud. Villages on either side are cut off, their trade 
+        and lifelines severed. Only the backbreaking labor of hundreds of 
+        peasants, toiling day and night, can hope to clear the way, a task 
+        that will take {1d2} weeks of sweat and determination.
+
+table: maiden-of-virtue 1d1
+1   A young woman of exceptional grace, wit, and beauty has appeared in the region.
+    She is {maiden-who}. She charms and impresses all who meet her. She has an
+    exceptionally fine writing style that reveals her pure nature. She is skilled
+    in the playing of musical instruments and other artistic accomplishments.
+    She is properly respectful of her parents, {maiden-parents}.
+    ; ;
+    If the maiden
+    is any but the daughter of a powerful noble, she can be courted without 
+    usual formalities. However, being aware of her own qualities, she does not 
+    accept just anyone. Her
+    accepted suitor must possess exceptional qualities of his own. He must also
+    be a model of virtue and likewise skilled in the arts. He must possess heroic
+    qualities. To even attract her notice, he must produce some artistic item of
+    quality &mdash; a poem, painting, exceptional handwriting, etc. He must have a
+    Charisma of at least 13.
+    ; ;
+    Maidens of mysterious origin or princesses may set
+    impossible tasks as a condition for any successful suitor. The social rank
+    of the character is not as important as the qualities mentioned above.
+
+table: maiden-who 1d10
+1-5 the daughter of a powerful noble
+6-8 a maiden of mysterious and magical origin
+9   an exiled princess
+10  simply a commoner
+
+table: maiden-parents 1d6
+1   who are kindly
+2   who are wicked
+3   who perished long ago 
+4   both her aged father and deceased mother
+5   both her widowed mother and deceased father
+6   though no one knows who they are
+
+table: major-battle 1d1
+1   A momentous battle erupts in the region, shaking the land to its core. In the
+    days leading up to the clash, columns of grim-faced soldiers march through
+    villages, requisitioning supplies and filling the air with the tramp of boots
+    and the clang of armor. When the armies finally meet, the earth is churned to
+    mud beneath the weight of thousands, and the sky is blackened by smoke and
+    the cries of the dying. In the aftermath, the defeated scatter in desperate
+    flight, some cut down by vengeful peasants defending their homes, others
+    hunted by relentless patrols of the victors. The countryside is left scarred,
+    haunted by the memory of blood and thunder.
+
+table: maneater 1d1
+1   A {maneater-creature} stalks the region, its hunger for human flesh
+    turning once-peaceful villages into haunted, silent places. Each week,
+    it snatches women, children, or lone farmers from fields and doorways,
+    leaving behind only blood and terror. The beast’s attacks are swift and
+    merciless. Bodies vanish, and the woods echo with distant, desperate
+    screams. Fear grips the countryside. Doors are barred at dusk, fires
+    burn through the night, and no one dares walk alone. Despairing
+    villagers beg for salvation from the authorities, a wandering hero, or
+    the player characters. The maneater’s reign of terror will not end
+    until it is hunted down and slain.
+
+table: maneater-creature 1d6
+1   cave lion
+2   cave bear
+3   dire wolf
+4-6 strange creature
+
+table: marriage 1d1
+1   An important or influential person in the region either marries or completes
+    the marriage arrangements for one of his children. If the PCs are known to the
+    NPC, they are invited to attend the wedding. In any case, the wedding is cause
+    for feasting and celebration.
+
+table: notorious-criminal 1d1
+1   A wanted villain is rumored to be in the area.
+    {criminal-type} {criminal-description} {criminal-reward} {criminal-rumor} 
+
+table: criminal-type 1d4
+1   He's a banished lord who has secretly returned.
+2   He's a traitor fleeing the wrath of the king.
+3   He's an escaped convict.
+4   He's a famous bandit.
+
+table: criminal-reward 1d4
+1   There is a reward for capturing the criminal.
+2   There is a reward for killing the criminal.
+3-4 There is no reward offered.
+
+table: criminal-rumor 1d4
+1-3 The rumors are true.
+4   The rumors are false.
+
+table: criminal-description 1d10
+1   He has a jagged scar running from his left eyebrow to his cheek.
+2   He is missing two fingers on his right hand.
+3   He has a distinctive tattoo of a serpent coiled around his neck.
+4   His left ear is notched and partially missing.
+5   He has a gold tooth that flashes when he grins.
+6   He walks with a pronounced limp and uses a carved cane.
+7   His eyes are mismatched—one blue, one brown.
+8   He wears an elaborate ring set with a blood-red stone.
+9   He has a bushy black beard streaked with white.
+10  He always covers his face with a faded green scarf.
+
+
+table: plague-month 1d1
+1   A terrible disease sweeps the land, lasting for {2d6} months.
+    The population falls by 5% per month. Those untouched by the disease and
+    those of neighboring lands are suspicious of strangers. Traders do not enter
+    plagued lands and the cost of imported goods increases five times. The cost
+    of normal goods doubles. Each month, {5d5}% of population centers become
+    infected and {6d5}% of population centers rid themselves of the disease.
+
+table: recruiting 1d1
+1   The drums of war echo through the land. Heralds ride out, and grim-faced
+    officials sweep the villages, rounding up able-bodied men for the army.
+    Peasant families are torn apart as enforced levies drag sons from their
+    homes. Bounties tempt ambitious officers, and ruthless recruiting gangs
+    prowl the countryside, snatching up any who hesitate. The air is thick
+    with dread and the promise of glory. {recruiting-pcs}
+
+table: recruiting-pcs 1d10
+1-2     The PCs are swept up into a press gang.
+3-10    The PCs avoid the press gangs.
+
+table: troop-movements 1d1
+1   Organized groups of {troop-friendly} soldiers sweep through the province.
+    There is a fair amount of looting and collections of grain and horses.
+    No repayment can be expected for this, although notes may be issued for items
+    taken. {troop-arrest} Friendly troops do not engage in wholesale pillaging
+    and neither do enemy troops (most of the time). Barbarians and enemies on
+    raids burn buildings and cause as much damage as possible in addition to
+    carrying off anything of value.
+
+table: troop-friendly 1d4
+1   local, friendly
+2   allied, friendly
+3   hostile, enemy
+4   hostile, barbarian
+
+table: troop-arrest 1d10
+1       One of the PCs is arrested as a spy.
+2-10    A spy is arrested.
+
+table: uprising 1d1
+1   Peasants rise spontaneously in rebellion. They protest against
+    {uprising-protest}. Beginning in one villages, the uprising spreads quickly
+    to the other rural areas. The peasants arm themselves with whatever is at
+    hand, including farm implements and weapons they have gathered from fighters they
+    have hunted down. Only 10% of the peasants involved have proper armor.
+    {uprising-support} The peasants have no military plan or strategy, simply
+    attacking and ambushing any troops and officials of the government they
+    find. If a strong leader should arrive in their midst, they can be trained
+    into an effective fighting force in {2d2} months.
+    ; ;
+    Of course, uprisings are
+    dealt with severely by the government and reinforcement troops are
+    dispatched to deal with them. No mercy or quarter is shown, a fact that
+    causes the peasants to fight to the death. {uprising-outcome}
+    {uprising-bandits}
+
+table: uprising-protest 1d4
+1   injustice
+2   excessive taxes
+3-4 general misfortune
+
+table: uprising-support 1d10
+1-6     A monastery in the area supports them, giving them troops, shelter and aid.
+7-10    No monasteries offer aid.
+
+table: uprising-outcome 1d10
+1-7     The government listens and reacts to the complaints of the peasants,
+        possibly lowering taxes or replacing the officials of the area.
+9-10    The goverment shows no mercy and changes nothing.
+
+table: uprising-bandits 1d10
+1-7     Bandit activity increases for {1d3} months as surviving peasants take
+        to the hills to escape punishment.
+9-10    The uprising is quickly put down.
+
+table: vengeful-stranger 1d1
+1   A mysterious stranger arrives in the area, searching for a particular person. He
+    travels through the region making discreet inquiries in the villages and
+    towns. He seeks revenge for {vengeful-wrong}}. {vengeful-target}
+
+table: vengeful-wrong 1d10
+1   the murder of his family
+2   wrongful imprisonment
+3   the theft of his inheritance
+4   betrayal by a trusted friend
+5   public humiliation and disgrace
+6   destruction of his home by arson
+7   false accusation of a crime
+8   exile from his homeland
+9   loss of his livelihood due to corruption
+10  kidnapping of a loved one
+
+table: vengeful-target 1d2
+1   He's looking for one of the PCs, {vengeful-success}.
+2   He's looking for aid from the PCs, {vengeful-success}.
+
+table: vengeful-success 1d10
+1-7     and he has located his target.
+8-10    but he is unable to find the target
+
+table: vip-visit 1d1
+1   An important person arrives in town. {vip-visit-reason}
+
+table: vip-visit-reason 1d10
+1   He has arrived to investigate the misdeeds of a local official and travels
+    in disguise. {vip-visit-pcs}
+2   The visit is marked by official banquets and feasts.
+3   A banished warlord seeks to rally allies to reclaim his stolen throne. {vip-visit-pcs}
+4   A mysterious woman with hissing voice seeks a hidden grimoire.
+5   A warlord demands tribute, promising profitable allliance or terrible bloodshed.
+6   A cursed prince seeks relief from a witch he believes to live in town.
+7   A wiry man, wrapped in a cloak is an alchemist seeking a rare reagent for his quest to brew a potion of immortality.
+8   An aggressive swordmistress seeks a renegade wizard.
+9   A wandering seer with milky eyes shuffles into town, spreading prophesies of doom. {vip-visit-pcs}
+10  A priestess and her entourage preaches purification and the destruction of false idols. {vip-visit-pcs}
+
+table: vip-visit-pcs 1d2
+1   The PCs are hired to protect the VIP.
+2   The PCs are hired to find and eliminate the VIP.
