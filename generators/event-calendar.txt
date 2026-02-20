@@ -483,7 +483,7 @@ table: no-event 3d6
 6   A massive oak tree fell across the main road during a windstorm, requiring a communal effort to chop it into firewood.
 7   A troupe of three mediocre jugglers performed in the square, though they were mostly remembered for accidentally dropping a torch in the well.
 8   The traveling tinker stayed for ten days instead of two because his mule went lame.
-9   The eldest daughter of a local craftsman finally wed the apprentice of another craftsman after a {1d3}}-year engagement.
+9   The eldest daughter of a local craftsman finally wed the apprentice of another craftsman after a {1d3}-year engagement.
 10  Nothing of note
 11  A heavy rain caused the creek to swell, washing away the small footbridge and forcing everyone to use the long path for a week.
 12  A farmer's prize sow escaped and led half the village on a frantic chase through the barley fields.
@@ -734,14 +734,14 @@ table: minor-incursion-group 1d10
 9-10    A raiding party of monsters
 
 table: injustice 1d1
-1       The shadow of injustice falls across the land. In the halls of power, 
-        venal magistrates and scheming officials twist the law to their own ends, 
-        condemning the innocent while the guilty walk free. On the {dom} day of the month, 
-        the people realize {injustice-cause} 
-        {injustice-pcs} Rumors of wrongful imprisonment and cruel punishments 
-        spread like wildfire, sowing fear and resentment among the people. Only 
-        the intervention of brave souls or irrefutable evidence brought before 
-        higher authorities can hope to break the grip of corruption and restore 
+1       The shadow of injustice falls across the land. In the halls of power,
+        venal magistrates and scheming officials twist the law to their own ends,
+        condemning the innocent while the guilty walk free. On the {dom} day of the month,
+        the people realize {injustice-cause}
+        {injustice-pcs} Rumors of wrongful imprisonment and cruel punishments
+        spread like wildfire, sowing fear and resentment among the people. Only
+        the intervention of brave souls or irrefutable evidence brought before
+        higher authorities can hope to break the grip of corruption and restore
         justice to the realm.
 
 table: injustice-cause 1d6
@@ -757,12 +757,12 @@ table: injustice-pcs 1d20
 20      The PCs are wrongfully accused!
 
 table: landslide 1d1
-1       On the {dom} day of the month, a thunderous landslide or avalanche crashes down from the mountains, 
-        burying a vital road beneath tons of earth and shattered stone. The 
-        route vanishes beneath a tangled ruin of boulders, uprooted trees, 
-        and choking mud. Villages on either side are cut off, their trade 
-        and lifelines severed. Only the backbreaking labor of hundreds of 
-        peasants, toiling day and night, can hope to clear the way, a task 
+1       On the {dom} day of the month, a thunderous landslide or avalanche crashes down from the mountains,
+        burying a vital road beneath tons of earth and shattered stone. The
+        route vanishes beneath a tangled ruin of boulders, uprooted trees,
+        and choking mud. Villages on either side are cut off, their trade
+        and lifelines severed. Only the backbreaking labor of hundreds of
+        peasants, toiling day and night, can hope to clear the way, a task
         that will take {1d2} weeks of sweat and determination.
 
 table: maiden-of-virtue 1d1
@@ -773,8 +773,8 @@ table: maiden-of-virtue 1d1
     She is properly respectful of her parents, {maiden-parents}.
     ; ;
     If the maiden
-    is any but the daughter of a powerful noble, she can be courted without 
-    usual formalities. However, being aware of her own qualities, she does not 
+    is any but the daughter of a powerful noble, she can be courted without
+    usual formalities. However, being aware of her own qualities, she does not
     accept just anyone. Her
     accepted suitor must possess exceptional qualities of his own. He must also
     be a model of virtue and likewise skilled in the arts. He must possess heroic
@@ -795,7 +795,7 @@ table: maiden-who 1d10
 table: maiden-parents 1d6
 1   who are kindly
 2   who are wicked
-3   who perished long ago 
+3   who perished long ago
 4   both her aged father and deceased mother
 5   both her widowed mother and deceased father
 6   though no one knows who they are
@@ -837,7 +837,7 @@ table: marriage 1d1
 
 table: notorious-criminal 1d1
 1   On the {dom} day of the month, a wanted villain is rumored to be in the area.
-    {criminal-type} {criminal-description} {criminal-reward} {criminal-rumor} 
+    {criminal-type} {criminal-description} {criminal-reward} {criminal-rumor}
 
 table: criminal-type 1d4
 1   He's a banished lord who has secretly returned.
