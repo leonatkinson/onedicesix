@@ -796,6 +796,13 @@ table: magic-armor-bonus 1d100
 91-95   Cursed -1
 96-100  Cursed, AC 11
 
+table: armor-size 1d10
+1       human
+2       dwarf
+3-7     elf
+8       halfling
+9-10    giant
+
 table: magic-potion 1d30
 1       Clairaudience
 2       Clairvoyance

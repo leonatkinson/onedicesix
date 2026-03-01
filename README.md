@@ -86,7 +86,7 @@ another or even recursively as in the example above.
 A few generators have extra logic to format results or take input. These are:
 
 The rest of the generators are considered "simple", and they get a final pass
-for a few formatting symbols. Line breaks are turned into paragraphs. Semicolons 
+for a few formatting symbols. Line breaks are turned into paragraphs. Semicolons
 turn into BRs. Finally, lines starting with a label and colon get STRONG treatment.
 
 You may place HTML into the content. It will be left as-is.
@@ -185,3 +185,5 @@ Small adjustments to daily events on the southern seas.
 - Added event-calendar generator.
 ## 1.8.6
 - Apply more dates to monthly events in the event calendar.
+## 1.8.7
+- Add armor sizing to all treasure generation

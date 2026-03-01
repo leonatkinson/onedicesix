@@ -1073,15 +1073,15 @@ table: magic-weapon-special 1d20
 20      Wishes
 
 table: magic-armor 1d100
-01-08   Leather Armor {magic-armor-bonus}
-09-13   Ring Mail {magic-armor-bonus}
-14-34   Chain Mail {magic-armor-bonus}
-35-38   Scale Mail {magic-armor-bonus}
-39-40   Banded Mail {magic-armor-bonus}
-41-50   Plate Mail {magic-armor-bonus}
-51-90   Medium Shield {magic-armor-bonus}
-91-99   Tower Shield {magic-armor-bonus}
-100     {unusual-armor}
+01-08   Leather Armor {magic-armor-bonus} ({armor-size}-sized)
+09-13   Ring Mail {magic-armor-bonus} ({armor-size}-sized)
+14-34   Chain Mail {magic-armor-bonus} ({armor-size}-sized)
+35-38   Scale Mail {magic-armor-bonus} ({armor-size}-sized)
+39-40   Banded Mail {magic-armor-bonus} ({armor-size}-sized)
+41-50   Plate Mail {magic-armor-bonus} ({armor-size}-sized)
+51-90   Medium Shield {magic-armor-bonus} ({armor-size}-sized)
+91-99   Tower Shield {magic-armor-bonus} ({armor-size}-sized)
+100     {unusual-armor} ({armor-size}-sized)
 
 table: unsual-armor
 1       Padded
@@ -1099,6 +1099,13 @@ table: magic-armor-bonus 1d100
 81-90   +3
 91-95   Cursed -1
 96-100  Cursed, AC 11
+
+table: armor-size 1d100
+1-68    human
+69-81   dwarf
+82-91   elf
+92-98   halfling
+99-100  giant
 
 table: magic-potion 1d30
 1       Clairaudience
