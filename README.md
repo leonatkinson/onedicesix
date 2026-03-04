@@ -187,3 +187,5 @@ Small adjustments to daily events on the southern seas.
 - Apply more dates to monthly events in the event calendar.
 ## 1.8.7
 - Add armor sizing to all treasure generation
+## 1.8.8
+- Add immediate terrain feautures to St. Orlan mountain encounters.

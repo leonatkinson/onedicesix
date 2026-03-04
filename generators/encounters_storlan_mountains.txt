@@ -1,6 +1,10 @@
 name: Encounters in the St. Orlan Mountains
 description: Tables for generating encounters by location
 recipe: While exploring, the party encounters {encounter}<br>
+        <br>
+        The immediate area is {vegetation}. The ground {ground-slope},
+        and it {ground-footing}. {area-feature}.<br>
+        <br>
         The general vibe is "{evocative}".
 repeat: 1
 
@@ -23,6 +27,38 @@ table: encounter 1d12
         {lair}
 11      a <strong>landmark</strong>, {landmark}.
 12      a <strong>dungeon</strong> entrance.
+
+
+table: vegetation 1d8
+1-2     an alpine field of grass with clear line of sight
+3-4     scattered with small trees and shrubs, providing light cover
+5-6     lightly forested, reducing visibility to {1d4+2}0 yards and allowing half cover
+7-8     densely forested, reducing visibility to {1d2}0 yards and movement to half, providing full cover
+
+table: ground-slope 1d6
+1       is flat
+2-3     slopes gently with the high point to the {direction}
+4-5     slopes steeply up to the the {direction} (+2 AB from higher ground)
+6       is at the edge of a sheer cliff with the party at the {cliff-top} and the enemy at the {cliff-top}
+
+table: cliff-top 1d2
+1   top
+2   bottom
+
+table: ground-footing 1d8
+1-3     is hard rock or packed dirt
+4-5     is loose scree or gravel, requiring save vs death +DEX to remain standing unless moving at half speed
+6       is covered in deep mud, requiring save vs death +STR or be stuck for one round
+7       is covered in ice, requiring save vs death +DEX to remain standing unless moving at half speed
+8       is covered in huge boulders providing full cover
+
+table: area-feature 1d20
+1-15    No water features are nearby
+16      A creek cuts from {direction} to {direction}
+17      A creek runs along the {direction} edge of the area
+18      A strong wind blows from the {direction}
+19      Thick fog reduces visibility by half
+20      Rain is falling
 
 table: direction 1d8
 1   north
