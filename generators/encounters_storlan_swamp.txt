@@ -1,16 +1,48 @@
 name: Encounters in the St. Orlan Swamp
 description: Tables for generating encounters by location
-recipe: {encounter}<br>
-        {wandering}<br>
-        Surprise {1d6} (monsters) / {1d6} (party)<br>
-        Distance {2d4}0' ({1d3}0' surprised)
+recipe: While exploring, the party encounters {encounter}<br>
+        <br>
+        The immediate area is {vegetation}. The area {water-depth},
+        and footing {ground-footing}. {area-feature}.<br>
+        <br>
+        The general vibe is "{evocative}".
 repeat: 1
 
-table: wandering 1d6
-1-2 wandering
-3-6 in lair
+table: encounter 1d10
+1-4     <strong>figures wandering {2d4}0 yards ({1d3}0 if surprised) to the {direction}</strong>.<br>
+        {wandering}<br>
+        <br>
+        Their attitude is that {reaction}<br>
+        <br>
+        Their surprise roll is {1d6}, and the party rolls {1d6}.
+5-6     <strong>figures wandering {2d4}0 yards ({1d3}0 if surprised) to the {direction}</strong>.<br>
+        {wandering}<br>
+        {with-or-against}<br>
+        {wandering}<br>
+        <br>
+        Their attitude is that {reaction}<br>
+        <br>
+        Their surprise roll is {1d6}, and the party rolls {1d6}.
+7-10    a <strong>lair</strong> {lair-type}. The party is {2d100+200} yards away.<br>
+        {lair}
 
-table: encounter 2d10
+table: direction 1d8
+1   north
+2   northeast
+3   east
+4   southeast
+5   south
+6   southwest
+7   west
+8   northwest
+
+table: with-or-against 1d6
+1-2 working with
+3-4 {2d6} rounds later followed by
+5 fighting with
+6 {1d6} rounds later chased by
+
+table: wandering 2d10
 2   Ghost AC 20‡, HD 10* (+9), #At 1 touch/1 gaze, Dam 1d8 + CON, Mv 30', Sv F10, Ml 10, XP 1,390, Tr E, N, O<br>
     Save vs. Spells or flee for 2d6 rounds. Damage done heals ghost. Lose 1 CON (elves and dwarves can save). Telekinesis. Possess, save vs spells to resist.
 3   Hydra AC 23, HD 12 (+10), #At 12, Dam 1d10, Mv 40' (10'), Sv F12, Ml 9, XP 1,875, Tr B<br>
@@ -34,12 +66,415 @@ table: encounter 2d10
 12  {3d12} Stirges AC 13, HD 1*, #At 1 bite, Dam 1d4 + 1d4/round blood drain, Mv 10' Fly 60', Sv F1, Ml 9, XP 37, Tr D<br>
     Blood drain 1d4 dam/round. +2 to attach if attached, but misses strike victim instead.
 13  {2d8} Wererats* AC 13 †, HD 3*, #At 1 bite or 1 weapon, Dam 1d4 or 1d6 or by weapon, Mv 40', Sv F3, Ml 8, XP 175, Tr C
-14  {1d4+1}/{1d10+10} Giant Wasps AC 15, HD 4+1*, #At 1 sting, Dam 1d6 + poison, Mv 20' Fly 60', Sv F4, Ml 10, XP 280
+14  {1d4+1} Giant Wasps AC 15, HD 4+1*, #At 1 sting, Dam 1d6 + poison, Mv 20' Fly 60', Sv F4, Ml 10, XP 280
+15  {1d3} Insect Swarms AC Immune to weapons, HD 4*, #At 1 swarm, Dam 1d3 (double against no armor), Mv 10' Fly 20', Sv N/A, Ml 11, XP 280
+16  {1d4} Giant Two-Headed Snakes AC 14, HD 5*, #At 2 bites, Dam 1d8/1d8 + poison, Mv 30', Sv F5, Ml 8, XP 405
+17  {2d4} Giant Centipedes AC 11, HD 1d4 Hit Points*, #At 1 bite, Dam poison, Mv 40', Sv NM, Ml 7
+18  {1d2} Giant Raccoons AC 16, HD 5, #At 1 bite, Dam 2d6, Mv 50' Climb 30', Sv F5, Ml 8, XP 360, #Ap 1, Tr L in lair
+19  {1d10} Shadows AC 13 ‡, HD 2*, #At 1 touch, Dam 1d4 + 1 point Strength loss, Mv 30', Sv F2, Ml 12
+20  {1d3} Giant Crocodiles AC 19, HD 15 (+11), #At 1 bite, Dam 3d8, Mv , Sv F15, Ml 9, XP 2,850
+
+
+table: lair 2d10
+2   Ghost AC 20‡, HD 10* (+9), #At 1 touch/1 gaze, Dam 1d8 + CON, Mv 30', Sv F10, Ml 10, XP 1,390, Tr E, N, O<br>
+    Save vs. Spells or flee for 2d6 rounds. Damage done heals ghost. Lose 1 CON (elves and dwarves can save). Telekinesis. Possess, save vs spells to resist.
+3   Hydra AC 23, HD 12 (+10), #At 12, Dam 1d10, Mv 40' (10'), Sv F12, Ml 9, XP 1,875, Tr B<br>
+    8 damage to a head disables it.
+4   {1d8} Treants AC 19, HD 8*, #At 2 fists, Dam 2d6/2d6, Mv 20', Sv F8, Ml 9, XP 945, Tr C
+5   {1d4} Manticores AC 18, HD 6+1*, #At 2 claws/1 bite or 6 spikes (180' range), Dam 1d4/1d4/2d4 or 1d6 per spike, Mv 40' Fly 60' (10'), Sv F6, Ml 9, XP 555, Tr D<br>
+    <br>
+    Overgrown lion with thick leathery wings and an ugly humanoid face. Tail ends in {1d12+12} spikes.
+6   {1d8} Trolls AC 16, HD 6*, #At 2 claws/1 bite, Dam 1d6/1d6/1d10, Mv 40', Sv F6, Ml 10 (8), XP 555, Tr D<br>
+    Heal 1 dam/round.
+7   {2d6} Ogres AC 15 (12), HD 4+1, #At 1 weapon, Dam 2d6 or weapon +3, Mv 30' Unarmored 40', Sv F4, Ml 10, XP 240, Tr C + 1d20x100 gp
+8   {1d3} Giant Black Widow Spiders AC 14, HD 3*, #At 1 bite, Dam 2d6 + poison, Mv 20' Web 40', Sv F3, Ml 8, XP 175, Lair 1d3<br>
+    Save -2 vs Poison. Stumble into webs and open stuck door to escape.
+9   {1d4} Giant Frogs AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 75<br>
+    15' reach with tongue, which can drag dwarves. Nat 20 is a swallow, doing 1d6 dam each round. Disease.
+10  {1d6} Giant Ticks AC 14, HD 1*, #At 1 bite, Dam 1d3 + blood drain and disease, Mv 10', Sv F1, Ml 7, XP 37<br>
+    Drops from trees. Save vs poison to notice. 1d4 dam each turn. Drop off after 20 damage. STR check to remove does 1d4 dam.
+11  Gnoll Patrol<br>
+    Gnoll Leader AC 20, HD 4, #At 1 greatsword or longbow, 1d10+1 or 1d8, Mv 30' Unarmored 40', Sv F4, Ml 9, XP 240, Tr Q, S each<br>
+    {3d6} Gnolls AC 15, HD 2, #At 1 greatsword or longbow, 1d10+1 or 1d8, Mv 30' Unarmored 40', Sv F2, Ml 8, XP 75, Tr Q, S each
+12  {3d12} Stirges AC 13, HD 1*, #At 1 bite, Dam 1d4 + 1d4/round blood drain, Mv 10' Fly 60', Sv F1, Ml 9, XP 37, Tr D<br>
+    Blood drain 1d4 dam/round. +2 to attach if attached, but misses strike victim instead.
+13  {2d8} Wererats* AC 13 †, HD 3*, #At 1 bite or 1 weapon, Dam 1d4 or 1d6 or by weapon, Mv 40', Sv F3, Ml 8, XP 175, Tr C
+14  {1d10+10} Giant Wasps AC 15, HD 4+1*, #At 1 sting, Dam 1d6 + poison, Mv 20' Fly 60', Sv F4, Ml 10, XP 280
 15  {1d3} Insect Swarms AC Immune to weapons, HD 4*, #At 1 swarm, Dam 1d3 (double against no armor), Mv 10' Fly 20', Sv N/A, Ml 11, XP 280
 16  {1d4} Giant Two-Headed Snakes AC 14, HD 5*, #At 2 bites, Dam 1d8/1d8 + poison, Mv 30', Sv F5, Ml 8, XP 405
 17  Hangman Tree AC 16, HD 5, #At 4 limbs plus strangle, Dam 1d6 per limb or strangle, Mv , Sv F4, Ml 12, XP 360
-18  {1d2} (wandering)/{2d4} (in lair) Giant Raccoons AC 16, HD 5, #At 1 bite, Dam 2d6, Mv 50' Climb 30', Sv F5, Ml 8, XP 360, #Ap 1, Tr L in lair
+18  {{2d4} (in lair) Giant Raccoons AC 16, HD 5, #At 1 bite, Dam 2d6, Mv 50' Climb 30', Sv F5, Ml 8, XP 360, #Ap 1, Tr L in lair
 19  {1d4+1} Assassin Vines AC 15, HD 6, #At 1 + special, Dam 1d8 + special, Mv 5', Sv F6, Ml 12, XP 500, Tr U<br>
     <br>
     Surprises on a roll of 1-4 on 1d6. Hit does 1d8 damage, plus entangle (1d8 damage). Save vs. Death +STR to escape.
-20  {1d3} Giant Crocodiles AC 19, HD 15 (+11), #At 1 bite, Dam 3d8, Mv , Sv F15, Ml 9, XP 2,850
+20  {2d4} Giant Crocodiles AC 19, HD 15 (+11), #At 1 bite, Dam 3d8, Mv , Sv F15, Ml 9, XP 2,850
+
+table: lair-type 1d4
+1       in a camp ({camp-type})
+2       in a ruined {ruined-structure}
+3       in a cabin
+4       in an intact {lair-fort}
+
+table: ruined-structure 1d6
+1-2     cabin
+3-4     homestead
+5       temple
+6       outpost
+
+table: graveyard-type 1d6
+1       human
+2       elven
+3       dwarven
+4       druidic
+5       dug-up
+6       orcish
+
+table: lair-fort 1d4
+1-2     fort surrounded by palisade
+3       {1d6+2}0' tower
+4       bunker
+
+table: camp-type
+1       little but a campfire ring
+2       ruined tents
+3       {1d6+2} temporary tents
+4       {1d6+2} seasonal tents
+5       {1d6+2} crude structures
+6       {1d6+2} permanent structures
+
+
+table: reaction 2d6
+2-3     <strong>the time for talk is over.</strong>
+        Morale check is {2d6}. Failure means flight or surrender. Otherwise, attack immediately.
+4-6     <strong>someone will get their head bashed in.</strong>
+        They are aggressive and negative.
+        Apply -4 to the next check if there’s room for negotiation. Otherwise, it’s fight or flight.
+7-9     <strong>there is clear and present danger.</strong>
+        They are cautious and aware of possible trouble. They will disengage
+        without violence if possible, or provide a final warning.
+10-11   <strong>they must trust and verify.</strong>
+        They are neutral and open to a fair exchange. Apply +4 to the next check.
+        Any final offers are take-it-or-leave-it.
+12      <strong>this could be the beginning of a beautiful friendship.</strong>
+        They are relaxed with a presumption of courtesy.
+
+
+table: vegetation 1d8
+1       open marsh with clear line of sight and easy movement
+2       grassy wetland with clear line of sight and easy movement
+3       reed beds, providing light cover advantageous for stealth
+4       tall sedge, providing light cover advantageous for stealth
+5-6     lightly wooded swamp with scattered cypress, reducing visibility to {1d4+2}0 yards and allowing half cover
+7-8     thick swamp forest, reducing visibility to {1d2}0 yards and movement to half, providing full cover
+
+table: water-depth 1d6
+1       features dry hummocks and peat mounds, allowing normal movement and a few safe camping spots
+2       is covered in shallow water
+3       is covered in ankle-to-knee mud, reducing movement by half
+4-5     is a waist-deep bog, requiring save vs death +STR or be stuck for one round
+6       is a deep channel or submerged pit, requiring swimming to cross
+
+table: ground-footing 1d8
+1-3     is firm peat or solid silt bottom
+4-5     is sucking mud
+6       is a quicksand patch, into which PCs sink 1d4 + 1 ft per failed save vs death +STR or +DEX
+7       is floating vegetation mats or lily-pad islands, supporting at most {2d6}0 lbs
+8       is plagued by bubbling gas vents, requiring a save versus death each round or suffer 1d4 damage
+
+table: area-feature 1d20
+1       Thick mist or fog halves visibility.
+2       Swarms of flying insects cause temporary 1d6 CON loss per hour
+3       Leeches cause temporary 1d6 CON loss per hour
+4       A light rain is falling
+5       Heavy rain is falling, reducing visibility by half
+6-20    No other natural annoyances are present.
+
+
+table: evocative
+1   aberration
+2   abhor
+3   ache
+4   acrid
+5   adoration
+6   adroit
+7   affection
+8   aggravation
+9   agitation
+10  agony
+11  alarm
+12  alienation
+13  amazement
+14  amusement
+15  ancient
+16  anger
+17  anguish
+18  annoyance
+19  anxiety
+20  appetite
+21  apprehension
+22  arid
+23  arousal
+24  ashen
+25  astonishment
+26  attraction
+27  audacity
+28  backbone
+29  baleful
+30  bellicose
+31  bereaved
+32  bewildered
+33  bitterness
+34  bleak
+35  blinding
+36  bliss
+37  bloodcurdling
+38  brazen
+39  breath
+40  broken
+41  caring
+42  cashmere
+43  caustic
+44  chaotic
+45  cheerfulness
+46  cherish
+47  clench
+48  coarse
+49  compassion
+50  contempt
+51  contentment
+52  corpulent
+53  courage
+54  crave
+55  crippling
+56  crisp
+57  curious
+58  deafening
+59  decorous
+60  defeat
+61  defy
+62  dejection
+63  deleterious
+64  delight
+65  demagogue
+66  depression
+67  desire
+68  desire
+69  despair
+70  diaphanous
+71  disappointment
+72  disastrous
+73  discordant
+74  disgust
+75  dislike
+76  dismay
+77  displeasure
+78  distress
+79  dowdy
+80  dread
+81  dulcet
+82  dynamic
+83  eagerness
+84  eccentric
+85  ecstasy
+86  elation
+87  embarrassment
+88  emollient
+89  enjoyment
+90  enrage
+91  enthrallment
+92  enthusiasm
+93  envy
+94  envy
+95  ephemeral
+96  euphoria
+97  euphoric
+98  exasperation
+99  excitement
+100 exhilaration
+101 exude
+102 fallen
+103 fear
+104 fear
+105 feckless
+106 feisty
+107 ferocity
+108 fickle
+109 florid
+110 fondness
+111 forbidden
+112 frenetic
+113 fright
+114 frown
+115 frustration
+116 fury
+117 gaiety
+118 gladness
+119 glee
+120 gloom
+121 gloom
+122 glumness
+123 gossamer ephemeral
+124 grief
+125 groan
+126 grouchiness
+127 grumpiness
+128 guilt
+129 haggard
+130 happiness
+131 hard
+132 harpy
+133 hate
+134 havoc
+135 hedonist
+136 hiss
+137 histrionic
+138 homesickness
+139 hope
+140 hopelessness
+141 horror
+142 hostility
+143 humiliation
+144 hunger
+145 hurt
+146 hysteria
+147 incendiary
+148 infatuation
+149 ingénue
+150 insecurity
+151 insolent
+152 insult
+153 intrepid
+154 irksome
+155 irritation
+156 isolation
+157 jealousy
+158 jolliness
+159 joviality
+160 joy
+161 joy
+162 jubilation
+163 juicy
+164 leathery
+165 liking
+166 lilt
+167 loathe
+168 loathing
+169 loneliness
+170 longing
+171 love
+172 love
+173 lurch
+174 lurking
+175 lush
+176 lust
+177 melancholy
+178 misery
+179 moan
+180 mordant
+181 mortification
+182 murmur
+183 need
+184 neglect
+185 nervousness
+186 oath
+187 off-limits
+188 optimism
+189 opulent
+190 outrage
+191 panic
+192 passion
+193 pervasive
+194 pity
+195 playful
+196 pleasure
+197 pliant
+198 pluck
+199 plunge
+200 power
+201 powerful
+202 pride: pride
+203 pungent
+204 rage
+205 rancorous
+206 rapture
+207 raspy
+208 recalcitrant
+209 redolent
+210 regret
+211 rejection
+212 rejection
+213 relief
+214 remorse
+215 resentment
+216 restrained
+217 revulsion
+218 rigid
+219 ruthless
+220 sadness
+221 sadness
+222 satisfaction
+223 scheme
+224 scorn
+225 searing
+226 secret
+227 seethe
+228 sentimentality
+229 shame
+230 shame
+231 shatter
+232 sheer
+233 shock
+234 shrill
+235 shuffled
+236 sinew
+237 sinful
+238 skittish
+239 solid
+240 sorrow
+241 spite
+242 spunk
+243 stark
+244 startle
+245 stubby
+246 succulent
+247 suffering
+248 surprise
+249 surprise
+250 surreptitious
+251 sympathy
+252 tenderness
+253 tenseness
+254 terror
+255 thermal
+256 thick
+257 thrill
+258 thrust
+259 thundering
+260 torment
+261 triumph
+262 turbulent
+263 twisted
+264 uneasiness
+265 unhappiness
+266 vengefulness
+267 venomous
+268 visceral
+269 vitriol
+270 voracious
+271 vulnerable
+272 warped
+273 watery
+274 weathered
+275 whimpering
+276 whisper
+277 wiry
+278 withering
+279 woe
+280 woe
+281 worry
+282 wraith
+283 wrath
+284 zeal
+285 zest
+
+

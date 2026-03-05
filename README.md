@@ -189,3 +189,5 @@ Small adjustments to daily events on the southern seas.
 - Add armor sizing to all treasure generation
 ## 1.8.8
 - Add immediate terrain feautures to St. Orlan mountain encounters.
+## unreleased
+- Add details to St. Orlan swamp encounters, including terrain.
