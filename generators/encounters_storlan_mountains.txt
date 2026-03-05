@@ -114,7 +114,6 @@ table: insect-type 1d6
 5-6 Crawling
 
 table: lair 1d100
-
 1-5     {2d4} Harpies AC 13, HD 2*, #At 2 claws/1 weapon + special, Dam 1d4/1d4/1d6 or by weapon + special, Mv 20' Fly 50' (10'), Sv F2, Ml 7, XP 100, Tr C
 6-10    {2d6} Giant Scorpions AC 15, HD 4*, #At 2 claws/1 stinger, Dam 1d10/1d10/1d6 + poison, Mv 50' (10'), Sv F2, Ml 11
 11      {2d6} Werewolves AC 15 †, HD 4*, #At 1 bite, Dam 2d4, Mv 60' Human Form 40', Sv F4, Ml 8
