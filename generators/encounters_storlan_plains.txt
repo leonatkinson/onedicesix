@@ -1,0 +1,680 @@
+name: Encounters in the St. Orlan Grassland
+description: Tables for generating encounters by location
+recipe: While exploring, the party encounters {encounter}<br>
+        <br>
+        The immediate area is {vegetation}. The ground {slope},
+        and footing {ground-footing}. {area-feature}.<br>
+        <br>
+        The general vibe is "{evocative}".
+repeat: 1
+
+table: encounter 1d10
+1-4     <strong>figures wandering {2d4}0 yards ({1d3}0 if surprised) to the {direction}</strong>.<br>
+        {wandering}<br>
+        <br>
+        Their attitude is that {reaction}<br>
+        <br>
+        Their surprise roll is {1d6}, and the party rolls {1d6}.
+5-6     <strong>figures wandering {2d4}0 yards ({1d3}0 if surprised) to the {direction}</strong>.<br>
+        {wandering}<br>
+        {with-or-against}<br>
+        {wandering}<br>
+        <br>
+        Their attitude is that {reaction}<br>
+        <br>
+        Their surprise roll is {1d6}, and the party rolls {1d6}.
+7-10    a <strong>lair</strong> {lair-type}. The party is {2d100+200} yards away.<br>
+        {lair}
+
+table: direction 1d8
+1   north
+2   northeast
+3   east
+4   southeast
+5   south
+6   southwest
+7   west
+8   northwest
+
+table: with-or-against 1d6
+1-2 working with
+3-4 {2d6} rounds later followed by
+5 fighting with
+6 {1d6} rounds later chased by
+
+table: wandering 1d93
+1-3     {3d10} Wild Cattle AC 13, HD {1d4}, #At 1 butt, Dam 1d6, Mv 80' (10'), Sv F1 to 4 (as Hit Dice), Ml 5 (7), XP 25 - 240
+4-5     2d6 Giant Ants AC 17, HD 4, #At 1 bite, Dam 2d6, Mv 60' (10'), Sv F4, Ml 7 on first sighting, 12 after engaged, XP 240
+6-7     Bandits<br>
+        {2d6} Level 1 Fighters AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
+        {1d4} Level 1 Thieves AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
+        Led by a {npc-bandit-leader}
+8-9     {2d6} Giant Bats AC 14, HD 2, #At 1 bite, Dam 1d4, Mv 10' Fly 60' (10'), Sv F2, Ml 8, XP 75
+10      Earthquake Beetle AC 26, HD 40**, #At 4 legs/1 bite, Dam 4d10/6d6, Mv 180' burrow 90', Sv F36, Ml 8, XP 25,050<br>
+        20' long. Orange-red beetle with black-furred spider legs and the head and neck of a black dragon.
+        When surfacing, produces earthquake. In 100' radius, all small structures reduced to rubble. Save vs death or fall into crack, fall 1d6x10 feet
+        and be coverered in rubble (2d6 damaage), save for half. When reduced to half HP, breath acid 60'x30' for 36d8 damage, once per day.
+        Undigested gems in stomach. Treasure type A.
+11      {1d6}  Berserkers AC 13, HD 1+1 (AB+3), #At 1 weapon, Dam {npc-bandit-weapon}, Mv 40', Sv F1, Ml 12, XP 25
+12-14   {1d6+3} Blink Dogs AC 15, HD 4*, #At 1 bite, Dam 1d6, Mv 40', Sv F4, Ml 6, XP 280
+15      {1d3} Giant Caecilia AC 14, HD 6*, #At 1 bite + swallow on 19/20, Dam 1d8 + 1d8/round if swallowed, Mv 20' (10'), Sv F3, Ml 9, XP 555
+16-17   {1d6} Centaurs AC 15 (13), HD 4, #At 2 hooves/1 weapon, Dam 1d6/1d6/1d6 or by weapon, Mv 50' Unarmored 60' (10'), Sv F4, Ml 8, XP 240
+18-20   Cheetah AC 14, HD 2, #At 2 claws/1 bite, Dam 1d4/1d4/2d4, Mv 100', Sv F2, Ml 7, XP 75
+21      {1d4} Chevall AC 15 (13), HD 4, #At 2 hooves/1 weapon, Dam 1d6/1d6/1d6 or by weapon, Mv 50' Unarmored 60' (10'), Sv F4, Ml 8, XP 240<br>
+        Intelligent horse that can polymorph into a centaur. Horse guardians.
+22      Cockatrices AC 14, HD 5**, #At 1 beak + special, Dam 1d6 + petrification, Mv 30' Fly 60' (10'), Sv F5, Ml 7, XP 450
+23-24   Blue Dragons AC 20, HD 9** (+8), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/3d8 or breath/1d8, Mv 30' Fly 80' (15'), Sv F9, Ml 9, XP 1225
+25      Gold Dragons AC 22, HD 11** (+9), #At 2 claws/1 bite or breath/1 tail, Dam 2d4/2d4/6d6 or breath/2d4, Mv 30' Fly 80' (20'), Sv F11, Ml 10, XP 1765
+26      {1d6} Blue Dragonfly AC 21, HD 4+2, #At bite/breath, Dam 1d6+4/4, Mv 60 Fly 240, Sv F4, Ml 9, XP 280<br>
+        Crossbreed dragonfly/dragon. 4' long. Breath weapon 3' long doing 4 damage. No save if in melee.
+27      {1d6} Red Dragonfly AC 22, HD 5, #At bite/breath, Dam 1d6+5/5, Mv 60 Fly 240, Sv F5, Ml 9, XP 405<br>
+        Crossbreed dragonfly/dragon. 4' long. Breath weapon 3' long doing 4 damage. No save if in melee.
+28      Dragonne AC 18, HD 9* (AB +8), #At 1 bite / 2 claws, Dam 2d6/2d6/2d4, Mv 40' Fly 30', Sv F9, Ml 10, XP 1150
+29      Giant Eagle AC 15, HD 4, #At 2 claws/1 bite, Dam 1d6/1d6/1d8, Mv 10' fly 90', Sv F4, Ml 7, XP 240
+30-31   {1d6} Elephants AC 18, HD 9 (+8), #At 2 tusks or 1 trample, Dam 2d4/2d4 or 4d8, Mv 40' (15'), Sv F9, Ml 8, XP 1075
+32-34   {2d6} Giant Fire Beetles AC 16, HD 1+2, #At 1 bite, Dam 2d4, Mv 40', Sv F1, Ml 7, XP 25, #Ap 1d8, Wild 2d6, Lair 2d6
+35-36   {1d6+3} Giant Racer Snake AC 15, HD 2, #At 1 bite, Dam 1d6, Mv 120', Sv F1, Ml 7, XP 75
+37-38   {1d8} Gnomes AC 15 (11), HD 1, #At 1 weapon, Dam 1d6 or by weapon, Mv 20' Unarmored 40', Sv F1 (with Dwarf bonuses), Ml 8, XP 25
+39      Gorgon AC 19, HD 8*, #At 1 gore or 1 breath, Dam 2d6 or petrification, Mv 40' (10'), Sv F8, Ml 8, XP 945
+40-41   {2d6} Gyerian AC 17, HD 3, #At 2 claws/1 peck, Dam 1d4/2d4, Mv 150', Sv F3, Ml 8, XP 145<br>
+        Birdmen 3-4' tall. Covered in feathers. Arms are wing-like but no flight. Hands. Excitable, extremely nervous, and impatient.
+        They do not care for humans, but get along with elves. Fascination with shiny objects. Cowards and will either babble, flee, or cry.
+        The very nervous ones have been known to sneeze. Anyone in front must DEX check or fall prone.
+42-43   {3d6} Halflings AC 13, HD 1-1, #At 1 weapon, Dam {npc-bandit-weapon}, Mv 40', Sv F1, Ml 8, XP 25
+44-45   {1d3} Giant Hawks AC 14, HD 4, #At 1 claw or bite, Dam 1d6, Mv Fly 150' (10'), Sv F4, Ml 8, XP 240
+46      Hypnosnake AC 16, HD 8, #At 1 bite or gaze or 1 tail, Dam 1d8 or sleep/1d10, Mv 90', Sv M5, Ml 9, XP 945<br>
+        Semi-intelligent reptile that attempts to hypnotize its prey before devouring it. Red-and-green-striped. 20 feet.
+        Eyes are a whirling blend of all the colors. Stares into the eyes of a potential victim while swaying in a rhythmical
+        fashion. Save vs paralysis or fall instantly asleep. Automatic if surprised. Avert eyes in melee for -4 AB and -2 AC.
+        Not immune to own gaze. Can lash out with its barbed tail for 1d10 or bite.
+47      {1d3} Insect Swarm AC Immune to weapons, HD 2*, #At 1 swarm, Dam 1d3 (double against no armor), Mv 10' Fly 20', Sv N/A, Ml 11, XP 100
+48-50   {1d4} Lions AC 14, HD 5, #At 2 claws/1 bite, Dam 1d6/1d6/1d10, Mv 50', Sv F5, Ml 9, XP 360
+51-52   {2d6} Lupin AC 14, HD 2, #At 1 silver spear or arrow, Dam 1d6, Mv 120', Sv F2, Ml 8, XP 75<br>
+        Resemble werewolves. Lawful nomads. Hate werewolves, recognize them automatically, attack on sight.
+53-54   Nobles<br>
+        {2d6} Level 1 Fighters AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
+        {1d6} Level 1 Thieves AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
+        Led by a {npc-bandit-leader}
+55-57   Nomads<br>
+        {1d4x10} Nomads AC 11, #At 1, Dam 1d3, Mv 40', Ml 7<br>
+        {2d6} Level 1 Fighters AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
+        {1d6} Level 1 Thieves AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
+        Led by a {npc-bandit-leader}
+58-60   {2d6} Giant Bombardier Beetles AC 16, HD 2*, #At 1 bite + special, Dam 1d6 + special, Mv 40', Sv F2, Ml 8, XP 100, #Ap 1d8, Wild 2d6, Lair 2d6
+61      {2d4} Pachydermion AC 17, HD 7, #At 2 swords/1 mace, Dam 1d10+3/1d12+6, Mv 90', Sv F7, Ml 9, XP 670<br>
+        Very intelligent, elephant-like humanoids. 8 feet tall. Have great historical knowledge but require 2,000 gp to answer questions.
+        Lawful. Wear armor. Hands hold swords. Trunk holds mace.
+62-64   Panther AC 14, HD 5, #At 2 claws/1 bite, Dam 1d6/1d6/1d10, Mv 50', Sv F5, Ml 9, XP 360
+65      {2d4} Pegataurs AC 15, HD 5, #At 2 hooves/1 weapon or spell, Dam 1d6/1d6, Mv 50', Sv F5, Ml 8, XP 405<br>
+        Winged centaur with elven upper bodies. Cast spells as 1st level magic user.
+66-67   {1d4} Pit Vipers AC 14, HD 1*, #At 1 bite, Dam 1d4 + poison, Mv 30', Sv F1, Ml 7, XP 37
+68-69   {2d6} Rakasta AC 14, HD 2+1, #At 2 claws/1 bite, Dam 1d4, Mv 30', Sv F2, Ml 9, XP 75<br>
+        Barbarian cat people. Treasure type M in lair.
+70-72   {1d6} Rhinoceros AC 15, HD 6, #At 1 butt or trample, Dam 1d4 or 2d8, Mv 40', Sv F3, Ml 6, XP 500<br>
+        If threatened, surprised, or charged, they will stampede in a random direction, goring all in their path for
+        double damage on the first attack.
+73-74   1d6 Robber Flies AC 14, HD 2, #At 1 bite, Dam 1d8, Mv 30' Fly 60', Sv F1, Ml 8, XP 75<br>
+        3' long giant fly with black and yellow stripes, mistaken for bees. Prefer bees as food, and immune to their
+        poison. Hide in shadows and wait to surprise prey (1-4 on 1d6).
+75-76   {2d6} Rock Baboons AC 14, HD 2, #At 1 club/1 bite, Dam 1d6/1d4, Mv 40', Sv F2, Ml 8, XP 75
+77-78   {1d3} Rock Pythons AC 14, HD 5, #At 1 bite/1 squeeze, Dam 1d4/2d4, Mv 30', Sv F3, Ml 8, XP 405<br>
+        30' long snake. Brown and yellow scales set in a spiral pattern. Its first attack is a bite. If the bite is successful, it coils
+        around the victim and constricts in the same round. This squeezing does 2d4 points of damage per round, and occurs automatically until
+        the snake dies or releases the victim.
+79-81   {2d4} Giant Tiger Beetles AC 17, HD 3+1, #At 1 bite, Dam 2d6, Mv 60' (10'), Sv F3, Ml 9, XP 145, #Ap 1d6, Wild 2d4, Lair 2d4, Tr U
+82-83   {1d6+3} Tortle AC 16, HD 4, #At 2 claws/1 beak or 1 weapon, Dam 1d4/1d6 or by weapon, Mv 10', Sv F4, Ml 11, XP 240<br>
+        Turtle-like humanoids. 6 feet tall. 500 lbs. Can withdraw into shells.
+84-86   Traders<br>
+        {1d20} Traders AC 11, #At 1, Dam 1d3, Mv 40', Ml 7<br>
+        {2d6} Level 1 Fighters AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
+        {1d6} Level 1 Thieves AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
+        Led by a {npc-bandit-leader}
+87      {2d6} Werewolves AC 15 †, HD 4*, #At 1 bite, Dam 2d4, Mv 60' Human Form 40', Sv F4, Ml 8, XP 280, #Ap 1d6, Wild 2d6, Lair 2d6, Tr C
+88-90   {1d10x10} Wild Horses AC 13, HD 3, #At 2 hooves, Dam 1d4/1d4, Mv 60' (10'), Sv F3, Ml 7, XP 145
+91-92   Wildcat AC 15, HD 1, #At 2 claws/1 bite, Dam 1/1d3, Mv 50', Sv NM, Ml 7, XP 25
+93      {1d6} Yowlers AC 20, HD 3+3, #At 1 bite, Dam 2d4, Mv 30' Fly 90', Sv M11, Ml 10, XP 205<br>
+        Well-muscled dogs with short, dull, black hair. Heads almost human appearance. Eyes glow. Can fly.
+        Baying heard up to a mile away. Within 90 feet save vs spell each round or flee in panic until the saving throw is successful.
+        If the pack consists of more than five yowlers, the saving throw is made at a penalty of -1 for each additional yowler
+        beyond the fifth, up to a maximum of -10.
+        Hit only by silver or magic, and damage equals 1 or magical bonus. (No dice roll or strength).
+
+table: lair 1d78
+1-2     {3d6} Amber Lotus Flowers AC 11, HD 1-4 HP, #At 1 spray, Dam Special, Mv 0, Sv NM, Ml 12, XP 10, Tr D<br>
+        Golden water lilies the size of sunflowers. Blossoms open and spray a 40' by 40' cloud of pollen. save vs spells or fall fast asleep for 4d4 turns.
+        Every 3d4 rounds.
+3-4     {4d6} Giant Ants AC 17, HD 4, #At 1 bite, Dam 2d6, Mv 60' (10'), Sv F4, Ml 7 on first sighting, 12 after engaged, XP 240, Tr D
+5       {1d20} Archer Bushes AC 13, HD 2, #At 1 thorn spray, Dam 1d4, Mv 3', Sv F1, Ml 12, XP 75, Tr V<br>
+        Sickly green leaves, stunted trunks and thorny brown branches. Carnivorous, attack by shooting thorns, range 20', 3xday.
+6-7     Bandits Tr A<br>
+        {2d12} Level 1 Fighters AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
+        {1d6} Level 1 Thieves AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
+        Led by a {npc-bandit-leader}
+8-9     {5d6} Giant Bats AC 14, HD 2, #At 1 bite, Dam 1d4, Mv 10' Fly 60' (10'), Sv F2, Ml 8, XP 75
+10-11   {3d10} Berserkers AC 13, HD 1+1 (AB+3), #At 1 weapon, Dam {npc-bandit-weapon}, Mv 40', Sv F1, Ml 12, XP 25, Tr B
+12-13   {1d6+3} Blink Dogs AC 15, HD 4*, #At 1 bite, Dam 1d6, Mv 40', Sv F4, Ml 6, XP 280, Tr C
+14      {1d3} Giant Caecilia AC 14, HD 6*, #At 1 bite + swallow on 19/20, Dam 1d8 + 1d8/round if swallowed, Mv 20' (10'), Sv F3, Ml 9, XP 555
+15-16   {2d10} Centaurs AC 15 (13), HD 4, #At 2 hooves/1 weapon, Dam 1d6/1d6/1d6 or by weapon, Mv 50' Unarmored 60' (10'), Sv F4, Ml 8, XP 240, Tr A
+17-19   {1d6+3} Cheetahs AC 14, HD 2, #At 2 claws/1 bite, Dam 1d4/1d4/2d4, Mv 100', Sv F2, Ml 7, XP 75
+20      {2d4} Cockatrices AC 14, HD 5**, #At 1 beak + special, Dam 1d6 + petrification, Mv 30' Fly 60' (10'), Sv F5, Ml 7, XP 450, Tr D
+21-22   {1d4} Blue Dragons AC 20, HD 9** (+8), #At 2 claws/1 bite or breath/1 tail, Dam 1d8/1d8/3d8 or breath/1d8, Mv 30' Fly 80' (15'), Sv F9, Ml 9, XP 1225
+23      {1d4} Gold Dragons AC 22, HD 11** (+9), #At 2 claws/1 bite or breath/1 tail, Dam 2d4/2d4/6d6 or breath/2d4, Mv 30' Fly 80' (20'), Sv F11, Ml 10, XP 1765
+24      {1d4} Dragonne AC 18, HD 9* (AB +8), #At 1 bite / 2 claws, Dam 2d6/2d6/2d4, Mv 40' Fly 30', Sv F9, Ml 10, XP 1150, Tr F<br>
+        Combination of a lion and dragon. Claws, fangs. Scales and stiff hair are the color of brass.
+        12 feet long and weighs about 700 pounds. Very intelligent.
+        Wings are useful only for short flights.
+        Every 1d4 rounds can produce a roar. Anyone within 120', save vs paralysis or -2 to AB, Damage and STR for 2d6 rounds.
+        Within 30' deafened, no save, meaning suprised 1-3 and -1 to init.
+25      {1d20} Giant Eagles AC 15, HD 4, #At 2 claws/1 bite, Dam 1d6/1d6/1d8, Mv 10' fly 90', Sv F4, Ml 7, XP 240
+26-27   {1d20} Elephants AC 18, HD 9 (+8), #At 2 tusks or 1 trample, Dam 2d4/2d4 or 4d8, Mv 40' (15'), Sv F9, Ml 8, XP 1075
+28-30   {2d6} Giant Fire Beetles AC 16, HD 1+2, #At 1 bite, Dam 2d4, Mv 40', Sv F1, Ml 7, XP 25, #Ap 1d8, Wild 2d6, Lair 2d6
+31-33   {1d6+3} Giant Racer Snake AC 15, HD 2, #At 1 bite, Dam 1d6, Mv 120', Sv F1, Ml 7, XP 75
+34-35   {5d8} Gnomes AC 15 (11), HD 1, #At 1 weapon, Dam 1d6 or by weapon, Mv 20' Unarmored 40', Sv F1 (with Dwarf bonuses), Ml 8, XP 25, Tr C
+36      {1d4} Gorgons AC 19, HD 8*, #At 1 gore or 1 breath, Dam 2d6 or petrification, Mv 40' (10'), Sv F8, Ml 8, XP 945, Tr E
+37-38   {10d4} Gyerians AC 17, HD 3, #At 2 claws/1 peck, Dam 1d4/2d4, Mv 150', Sv F3, Ml 8, XP 145, Tr K, O<br>
+        Birdmen 3-4' tall. Covered in feathers. Arms are wing-like but no flight. Hands. Excitable, extremely nervous, and impatient.
+        They do not care for humans, but get along with elves. Fascination with shiny objects. Cowards and will either babble, flee, or cry.
+        The very nervous ones have been known to sneeze. Anyone in front must DEX check or fall prone.
+39-40   {5d8} Halflings AC 13, HD 1-1, #At 1 weapon, Dam {npc-bandit-weapon}, Mv 40', Sv F1, Ml 8, XP 25, Tr B
+41-43   {1d3} Giant Hawks AC 14, HD 4, #At 1 claw or bite, Dam 1d6, Mv Fly 150' (10'), Sv F4, Ml 8, XP 240
+44      Hypnosnake AC 16, HD 8, #At 1 bite or gaze or 1 tail, Dam 1d8 or sleep/1d10, Mv 90', Sv M5, Ml 9, XP 945<br>
+        Semi-intelligent reptile that attempts to hypnotize its prey before devouring it. Red-and-green-striped. 20 feet.
+        Eyes are a whirling blend of all the colors. Stares into the eyes of a potential victim while swaying in a rhythmical
+        fashion. Save vs paralysis or fall instantly asleep. Automatic if surprised. Avert eyes in melee for -4 AB and -2 AC.
+        Not immune to own gaze. Can lash out with its barbed tail for 1d10 or bite.
+45      {1d3} Insect Swarm AC Immune to weapons, HD 2*, #At 1 swarm, Dam 1d3 (double against no armor), Mv 10' Fly 20', Sv N/A, Ml 11, XP 100
+46-48   {1d8} Lions AC 14, HD 5, #At 2 claws/1 bite, Dam 1d6/1d6/1d10, Mv 50', Sv F5, Ml 9, XP 360
+49-50   {5d8} Lupin AC 14, HD 2, #At 1 silver spear or arrow, Dam 1d6, Mv 120', Sv F2, Ml 8, XP 75, Tr C<br>
+        Resemble werewolves. Lawful nomads. Hate werewolves, recognize them automatically, attack on sight.
+51-53   {2d6} Giant Bombardier Beetles AC 16, HD 2*, #At 1 bite + special, Dam 1d6 + special, Mv 40', Sv F2, Ml 8, XP 100, #Ap 1d8, Wild 2d6, Lair 2d6
+54      {2d10} Pachydermion AC 17, HD 7, #At 2 swords/1 mace, Dam 1d10+3/1d12+6, Mv 90', Sv F7, Ml 9, XP 670, Tr A<br>
+        Very intelligent, elephant-like humanoids. 8 feet tall. Have great historical knowledge but require 2,000 gp to answer questions.
+        Lawful. Wear armor. Hands hold swords. Trunk holds mace.
+55-57   {1d6+3} Panthers AC 14, HD 5, #At 2 claws/1 bite, Dam 1d6/1d6/1d10, Mv 50', Sv F5, Ml 9, XP 360
+58      {2d10} Pegataurs AC 15, HD 5, #At 2 hooves/1 weapon or spell, Dam 1d6/1d6, Mv 50', Sv F5, Ml 8, XP 405, Tr E<br>
+        Winged centaur with elven upper bodies. Cast spells as 1st level magic user.
+59-61   {1d8} Pit Vipers AC 14, HD 1*, #At 1 bite, Dam 1d4 + poison, Mv 30', Sv F1, Ml 7, XP 37
+62-63   {3d10} Rakasta AC 14, HD 2+1, #At 2 claws/1 bite, Dam 1d4, Mv 30', Sv F2, Ml 9, XP 75, Tr M<br>
+        Barbarian cat people. Treasure type M in lair.
+64-65   {5d6} Rock Baboons AC 14, HD 2, #At 1 club/1 bite, Dam 1d6/1d4, Mv 40', Sv F2, Ml 8, XP 75, Tr C
+66-67   {1d3} Rock Pythons AC 14, HD 5, #At 1 bite/1 squeeze, Dam 1d4/2d4, Mv 30', Sv F3, Ml 8, XP 405<br>
+        30' long snake. Brown and yellow scales set in a spiral pattern. Its first attack is a bite. If the bite is successful, it coils
+        around the victim and constricts in the same round. This squeezing does 2d4 points of damage per round, and occurs automatically until
+        the snake dies or releases the victim.
+68-70   {2d4} Giant Tiger Beetles AC 17, HD 3+1, #At 1 bite, Dam 2d6, Mv 60' (10'), Sv F3, Ml 9, XP 145, #Ap 1d6, Wild 2d4, Lair 2d4, Tr U
+71-72   {1d6+3} Tortle AC 16, HD 4, #At 2 claws/1 beak or 1 weapon, Dam 1d4/1d6 or by weapon, Mv 10', Sv F4, Ml 11, XP 240, Tr V<br>
+        Turtle-like humanoids. 6 feet tall. 500 lbs. Can withdraw into shells.
+73-74   {1d8} Blood Roses AC 13, HD 2*, #At 1 to 3 plus blood drain, Dam 1d6, Mv 1', Sv F2, Ml 12, XP 100, #Ap Wild 1d8
+75      {1d3} Whipweeds AC 15 stalk/13 base, HD 3/2, #At 2 stalks, Dam 1d8, Mv 3', Sv F4, Ml 8, XP 145, Tr U<br>
+        Two whip-like stalks growing from a base. 15' long. Damage is acidic sap. Save vs death or be entangled until a save is made.
+        Stalks will grow back eventually. If base killed, stalks frenzy for three final attacks for 1d6 damage.
+76-77   {1d20} Wildcats AC 15, HD 1, #At 2 claws/1 bite, Dam 1/1d3, Mv 50', Sv NM, Ml 7, XP 25
+78      {4d4} Yowler AC 20, HD 3+3, #At 1 bite, Dam 2d4, Mv 30' Fly 90', Sv M11, Ml 10, XP 205<br>
+        Well-muscled dogs with short, dull, black hair. Heads almost human appearance. Eyes glow. Can fly.
+        Baying heard up to a mile away. Within 90 feet save vs spell each round or flee in panic until the saving throw is successful.
+        If the pack consists of more than five yowlers, the saving throw is made at a penalty of -1 for each additional yowler
+        beyond the fifth, up to a maximum of -10.
+        Hit only by silver or magic, and damage equals 1 or magical bonus. (No dice roll or strength).
+
+table: lair-type 1d10
+1-4       in a camp ({camp-type})
+5-7       in a ruined {ruined-structure} {ruined-structure-decay} {ruined-structure-reason}
+8         in a cabin
+9         in a {graveyard-type} graveyard
+10        in an intact {lair-fort}
+
+table: ruined-structure 1d6
+1-2     {1d2}-room {ruined-cabin}.
+3-4     family farmstead with main house plus outbuildings (barn, smokehouse, root cellar, animal pens).
+5       {ruined-shrine} once dedicated to {ruined-shrine-dedication}.
+6       frontier post.
+
+table: ruined-cabin 1d3
+1       hunter’s shack
+2       hermit’s hut
+3       forester’s lodge
+
+table: ruined-shrine 1d3
+1       shrine of small size
+2       chapel
+3       modest temple complex
+
+table: ruined-shrine-dedication 1d3
+1       the Anointed One
+2       St. Mec
+3       St. Gearuda
+4       St. Bari
+5       St. Anaderil
+6       St. Irevria
+7       Molok
+8       Haderax
+9       the World Tree
+10      the spirit of water
+11      the spirit of fire
+12      the west wind
+13      the sun
+14      wolves
+15      horses
+16      eagles
+17      dragons
+18      the moon
+19      lightning
+20      the harvest
+
+table: ruined-structure-decay 1d8
+1       Freshly abandoned, doors still latch, furniture is intact but dusty, with a faint smell of recent cooking or incense.
+2       Weathered, the roof sags, vines crawl the walls, faded paint or carvings, creaking floorboards.
+3       Partially collapsed, the roof has caved in one section, with some walls leaning. Debris piles inside.
+4       Heavily ruined, major sections are gone, the floors are rotten, and beams hang dangerously.
+5       Fire-scorched, there are charred timbers andsoot-blackened stone, with the lingering smell of old smoke.
+6       Waterlogged / flooded, green mold grows up walls, silt covers floors, warping wood.
+7       Overgrown / reclaimed, trees grow through walls, roots crack the foundation.
+8       A rubble heap, almost unrecognizable with scattered stones, timbers, and foundation stones poking through earth.
+
+table: ruined-structure-reason 1d10
+1       The original inhabitant packed up and left.
+2       A sudden blaze left at least half the structure still blackened.
+3       Violent intruders looted the place. Crude graffiti or trophies were left behind.
+4       A monster attacked here, leaving claw marks or huge bite wounds in beams.
+5       A curse left behind strange symbols, lingering cold spots, and warnings carved into doors.
+6       A natural disaster wrecked this building.
+7       A plague struck here. Warning symbols were left on doors, perhaps skeletons remain in beds.
+8       War or military action lead to its ruin.
+9       Decades of slow decay has slowly reclaimed this place for the wilderness.
+10      A sabotour purposefully wrecked this place to hide something or deny it to an enemy.
+
+
+table: graveyard-type 1d6
+1       human
+2       elven
+3       dwarven
+4       druidic
+5       dug-up
+6       orcish
+
+table: lair-fort 1d4
+1-2     fort surrounded by palisade
+3       {1d6+2}0' tower
+4       bunker
+
+table: camp-type
+1       little but a campfire ring
+2       ruined tents
+3       {1d6+2} temporary tents
+4       {1d6+2} seasonal tents
+5       {1d6+2} crude structures
+6       {1d6+2} permanent structures
+
+
+table: reaction 2d6
+2-3     <strong>the time for talk is over.</strong>
+        Morale check is {2d6}. Failure means flight or surrender. Otherwise, attack immediately.
+4-6     <strong>someone will get their head bashed in.</strong>
+        They are aggressive and negative.
+        Apply -4 to the next check if there’s room for negotiation. Otherwise, it’s fight or flight.
+7-9     <strong>there is clear and present danger.</strong>
+        They are cautious and aware of possible trouble. They will disengage
+        without violence if possible, or provide a final warning.
+10-11   <strong>they must trust and verify.</strong>
+        They are neutral and open to a fair exchange. Apply +4 to the next check.
+        Any final offers are take-it-or-leave-it.
+12      <strong>this could be the beginning of a beautiful friendship.</strong>
+        They are relaxed with a presumption of courtesy.
+
+table: vegetation 1d8
+1-2     open short-grass prairie with crystal-clear line of sight and no plants making movement difficult
+3       covered by tall grass, providing concealment for prone or small creatures (+2 bonus to stealth while moving slowly)
+4       covered by wildflowers, providing concealment for prone or small creatures (+2 bonus to stealth while moving slowly)
+5       dotted by scattered shrubs, with half cover possible and concealment for prone or small creatures (+2 bonus to stealth while moving slowly)
+6       heath and bushes, with half cover possible and concealment for prone or small creatures (+2 bonus to stealth while moving slowly)
+7-8     is short-grass interruped by patches of trees, offering half cover
+
+table: slope 1d6
+1       is a completely flat plain
+2-3     rises and falls in gentle, rolling hills
+4       has a low ridge offering a strategic view
+5       has a flat-topped mesa offering a strategic view
+6       is a steep-sided mesa edge that rises {1d2}0'
+
+table: ground-footing 1d8
+1-3     is firm packed earth
+4       is loose dirt that produces dust clouds when running
+5       is dusty, dry soil that creates obscuring clouds when running
+6       is littered with stone-strewn patches reducing speed by half and providing half cover
+7       has muddy patches reducing speed by half and risking slipping when moving faster than 30'
+8       features a hidden sinkhole or depression requiring a save vs death to avoid falling 10'
+
+table: area-feature 1d20
+1-2     A strong wind blows, disadvantaging ranged attacks greater than 30' (AB-4)
+3-4     Dense herd tracks cross the area
+5-6     Curled mud indicates recently rain
+7-20    Nothing much else distinguishes the area.
+
+
+table: npc-bandit-ac 1d6
+1-2 13
+3-4 14
+5-6 15
+7   16
+8   17
+
+table: npc-bandit-weapon 1d20
+1       Hand Axe 1d6
+2-3     Battle Axe 1d8
+4       Great Axe 1d10
+5       Dagger 1d4
+6       Shortsword 1d6
+7-8     Longsword 1d8
+9       Scimitar 1d8
+10      Two-Handed Sword 1d10
+11      Warhammer 1d6
+12-13   Mace 1d8
+14      Maul 1d10
+15-16   Pole Arm 1d10
+17-18   Spear 1d6
+19-20   Spear (two handed) 1d8
+
+table: npc-bandit-weapon-2 1d12
+1       Hand Axe 1d6
+2-5     Shortbow 1d6
+6-7     Longbow 1d8
+8       Light Crossbow 1d6
+9       Heavy Crossbow 1d8
+10      Dagger 1d4
+11      Sling 1d4
+12      Spear (Thrown) 1d6
+
+table: npc-bandit-leader 1d2
+1   Level {1d4+1} Fighter AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9
+2   Level {1d4+1} Thief AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9
+
+
+
+table: evocative
+1   aberration
+2   abhor
+3   ache
+4   acrid
+5   adoration
+6   adroit
+7   affection
+8   aggravation
+9   agitation
+10  agony
+11  alarm
+12  alienation
+13  amazement
+14  amusement
+15  ancient
+16  anger
+17  anguish
+18  annoyance
+19  anxiety
+20  appetite
+21  apprehension
+22  arid
+23  arousal
+24  ashen
+25  astonishment
+26  attraction
+27  audacity
+28  backbone
+29  baleful
+30  bellicose
+31  bereaved
+32  bewildered
+33  bitterness
+34  bleak
+35  blinding
+36  bliss
+37  bloodcurdling
+38  brazen
+39  breath
+40  broken
+41  caring
+42  cashmere
+43  caustic
+44  chaotic
+45  cheerfulness
+46  cherish
+47  clench
+48  coarse
+49  compassion
+50  contempt
+51  contentment
+52  corpulent
+53  courage
+54  crave
+55  crippling
+56  crisp
+57  curious
+58  deafening
+59  decorous
+60  defeat
+61  defy
+62  dejection
+63  deleterious
+64  delight
+65  demagogue
+66  depression
+67  desire
+68  desire
+69  despair
+70  diaphanous
+71  disappointment
+72  disastrous
+73  discordant
+74  disgust
+75  dislike
+76  dismay
+77  displeasure
+78  distress
+79  dowdy
+80  dread
+81  dulcet
+82  dynamic
+83  eagerness
+84  eccentric
+85  ecstasy
+86  elation
+87  embarrassment
+88  emollient
+89  enjoyment
+90  enrage
+91  enthrallment
+92  enthusiasm
+93  envy
+94  envy
+95  ephemeral
+96  euphoria
+97  euphoric
+98  exasperation
+99  excitement
+100 exhilaration
+101 exude
+102 fallen
+103 fear
+104 fear
+105 feckless
+106 feisty
+107 ferocity
+108 fickle
+109 florid
+110 fondness
+111 forbidden
+112 frenetic
+113 fright
+114 frown
+115 frustration
+116 fury
+117 gaiety
+118 gladness
+119 glee
+120 gloom
+121 gloom
+122 glumness
+123 gossamer ephemeral
+124 grief
+125 groan
+126 grouchiness
+127 grumpiness
+128 guilt
+129 haggard
+130 happiness
+131 hard
+132 harpy
+133 hate
+134 havoc
+135 hedonist
+136 hiss
+137 histrionic
+138 homesickness
+139 hope
+140 hopelessness
+141 horror
+142 hostility
+143 humiliation
+144 hunger
+145 hurt
+146 hysteria
+147 incendiary
+148 infatuation
+149 ingénue
+150 insecurity
+151 insolent
+152 insult
+153 intrepid
+154 irksome
+155 irritation
+156 isolation
+157 jealousy
+158 jolliness
+159 joviality
+160 joy
+161 joy
+162 jubilation
+163 juicy
+164 leathery
+165 liking
+166 lilt
+167 loathe
+168 loathing
+169 loneliness
+170 longing
+171 love
+172 love
+173 lurch
+174 lurking
+175 lush
+176 lust
+177 melancholy
+178 misery
+179 moan
+180 mordant
+181 mortification
+182 murmur
+183 need
+184 neglect
+185 nervousness
+186 oath
+187 off-limits
+188 optimism
+189 opulent
+190 outrage
+191 panic
+192 passion
+193 pervasive
+194 pity
+195 playful
+196 pleasure
+197 pliant
+198 pluck
+199 plunge
+200 power
+201 powerful
+202 pride: pride
+203 pungent
+204 rage
+205 rancorous
+206 rapture
+207 raspy
+208 recalcitrant
+209 redolent
+210 regret
+211 rejection
+212 rejection
+213 relief
+214 remorse
+215 resentment
+216 restrained
+217 revulsion
+218 rigid
+219 ruthless
+220 sadness
+221 sadness
+222 satisfaction
+223 scheme
+224 scorn
+225 searing
+226 secret
+227 seethe
+228 sentimentality
+229 shame
+230 shame
+231 shatter
+232 sheer
+233 shock
+234 shrill
+235 shuffled
+236 sinew
+237 sinful
+238 skittish
+239 solid
+240 sorrow
+241 spite
+242 spunk
+243 stark
+244 startle
+245 stubby
+246 succulent
+247 suffering
+248 surprise
+249 surprise
+250 surreptitious
+251 sympathy
+252 tenderness
+253 tenseness
+254 terror
+255 thermal
+256 thick
+257 thrill
+258 thrust
+259 thundering
+260 torment
+261 triumph
+262 turbulent
+263 twisted
+264 uneasiness
+265 unhappiness
+266 vengefulness
+267 venomous
+268 visceral
+269 vitriol
+270 voracious
+271 vulnerable
+272 warped
+273 watery
+274 weathered
+275 whimpering
+276 whisper
+277 wiry
+278 withering
+279 woe
+280 woe
+281 worry
+282 wraith
+283 wrath
+284 zeal
+285 zest
+
+

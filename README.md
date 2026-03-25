@@ -192,3 +192,5 @@ Small adjustments to daily events on the southern seas.
 ## 1.8.9
 - Add details to St. Orlan swamp encounters, including terrain.
 - Add St. Orlan dungeon generator
+## 1.8.10
+- Add St. Orlan grassland generator
