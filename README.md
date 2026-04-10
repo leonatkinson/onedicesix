@@ -194,3 +194,5 @@ Small adjustments to daily events on the southern seas.
 - Add St. Orlan dungeon generator
 ## 1.8.10
 - Add St. Orlan grassland generator
+## 1.9.0
+- Update block config to quiet deprecation warnings

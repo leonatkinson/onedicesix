@@ -6,6 +6,7 @@
     var SelectControl = components.SelectControl;
 
     blocks.registerBlockType( 'onedicesix/table', {
+        apiVersion: 3,
         title: 'One Dice Six Generator',
         icon: 'admin-settings',
         category: 'widgets',
@@ -34,6 +35,8 @@
                         label: 'Random Table',
                         value: tableID,
                         onChange: onChangeTable,
+                        __nextHasNoMarginBottom: true,
+                        __next40pxDefaultSize: true,
                         options: onedicesix.generators
                     }
                 )

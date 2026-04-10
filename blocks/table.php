@@ -50,6 +50,7 @@ function table_block_init() {
     );
 
     register_block_type( 'onedicesix/table', array(
+        'api_version'   => 3,
         'editor_script' => 'table-block-editor',
         'editor_style'  => 'table-block-editor',
         'style'         => 'table-block',
