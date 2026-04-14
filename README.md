@@ -196,3 +196,5 @@ Small adjustments to daily events on the southern seas.
 - Add St. Orlan grassland generator
 ## 1.9.0
 - Update block config to quiet deprecation warnings
+## 1.10.0
+- Normalize HTML for form fields to always use labels

@@ -512,9 +512,12 @@ class EmptyZ_UI_Death
     static setup(el) {
         let container = jQuery(el);
         container.append('<div class="params">'
-            + '<input type="number" name="level" min="1" max="20" placeholder="Level 1 to 20" style="width:33%">'
-            + '<input type="number" name="con" min="-3" max="3" placeholder="CON bonus -3 to +3" style="width:33%">'
-            + '<input type="number" name="hp" min="-100" max="0"  placeholder="Current HP 0 or less" style="width:33%">'
+            + '<label for="level">Class Level (1 to 20)</label>'
+            + '<input type="number" name="level" min="1" max="20" value="1">'
+            + '<label for="con">CON Bonus (-3 to +3)</label> '
+            + '<input type="number" name="con" min="-3" max="3" value="0">'
+            + '<label for="hp">Current HP (0 or less)</label>'
+            + '<input type="number" name="hp" min="-100" max="0" value="0">'
             + '</div>'
         );
     }
@@ -595,21 +598,24 @@ class EmptyZ_UI_1eDmgDisease
     static setup(el) {
         let container = jQuery(el);
         container.append('<div class="params">'
-            + '<input type="number" name="con" min="-3" max="3" placeholder="CON bonus -3 to +3"><br>'
-            + '<input type="checkbox" name="diseased" value="1"> Already Diseased<br>'
-            + '<input type="checkbox" name="lowhp" value="1"> Low Hit Points<br>'
-            + '<input type="checkbox" name="crowded" value="1"> Crowded<br>'
-            + '<input type="checkbox" name="filthy" value="1"> Filthy<br>'
-            + '<input type="checkbox" name="old" value="1"> Old<br>'
-            + '<input type="checkbox" name="venerable" value="1"> Venerable<br>'
-            + '<input type="checkbox" name="jungle" value="1"> Jungle, Marsh, Swamp<br>'
-            + '<input type="checkbox" name="hot" value="1"> Hot, Humid Climate<br>'
-            + '<input type="checkbox" name="exposed" value="1"> Exposed to Infected<br>'
-            + '<input type="checkbox" name="cool" value="1"> Cool Weather<br>'
-            + '<input type="checkbox" name="cold" value="1"> Cold Weather<br>'
-            + '<input type="checkbox" name="shipboard" value="1"> Shipboard for 2+ Weeks<br>'
-            + '<input type="checkbox" name="meat" value="1"> Ate bad meat<br>'
-            + '<input type="checkbox" name="water" value="1"> Drank polluted water<br>'
+            + '<label for="con-count">CON Bonus (-3 to +3)</label> '
+            + '<input type="number" name="con" min="-3" max="3" value="0"><br>'
+            + '<div style="column-count: 2;">'
+            + '<label><input type="checkbox" name="diseased" value="1"> Already Diseased</label><br>'
+            + '<label><input type="checkbox" name="lowhp" value="1"> Low Hit Points</label><br>'
+            + '<label><input type="checkbox" name="crowded" value="1"> Crowded Conditions</label><br>'
+            + '<label><input type="checkbox" name="filthy" value="1"> Filthy Conditions</label><br>'
+            + '<label><input type="checkbox" name="old" value="1"> Old Age</label> or <br>'
+            + '<label><input type="checkbox" name="venerable" value="1"> Venerable Age</label><br>'
+            + '<label><input type="checkbox" name="jungle" value="1"> Jungle, Marsh, Swamp</label><br>'
+            + '<label><input type="checkbox" name="hot" value="1"> Hot, Humid Climate</label><br>'
+            + '<label><input type="checkbox" name="exposed" value="1"> Exposed to Infected</label><br>'
+            + '<label><input type="checkbox" name="cool" value="1"> Cool Weather</label> or <br>'
+            + '<label><input type="checkbox" name="cold" value="1"> Cold Weather</label><br>'
+            + '<label><input type="checkbox" name="shipboard" value="1"> Shipboard for 2+ Weeks</label><br>'
+            + '<label><input type="checkbox" name="meat" value="1"> Ate Bad Meat</label><br>'
+            + '<label><input type="checkbox" name="water" value="1"> Drank Polluted Water</label><br>'
+            + '</div>'
             + '</div>'
         );
     }
@@ -678,14 +684,14 @@ class EmptyZ_UI_UnderdarkTunnels
         let container = jQuery(el);
         container.append('<div class="params">'
             + '<label for="segment-count">Number of Segments</label> '
-            + '<input type="number" name="segment-count" min="1" max="100" value="1" style="width: 50%;"><br>'
+            + '<input type="number" name="segment-count" min="1" max="100" value="1" style="width: 4em;"><br>'
             + '<label for="tunnel-type">Dry / Wet</label> '
-            + '<select name="tunnel-type" style="width: 50%;">'
+            + '<select name="tunnel-type">'
             + '<option value="dry">Dry Tunnel</option>'
             + '<option value="wet">Waterway</option>'
             + '</select><br>'
             + '<label for="segment-count">Max Length (in feet, 0=none)</label> '
-            + '<input type="number" name="max-length" min="0" max="100000" value="0" style="width: 50%;"><br>'
+            + '<input type="number" name="max-length" min="0" max="100000" value="0" style="width: 8em;"><br>'
             + '</div>'
         );
     }
@@ -785,7 +791,8 @@ class EmptyZ_UI_Reaction
     static setup(el) {
         let container = jQuery(el);
         container.append('<div class="params">'
-            + '<input type="number" name="adjustment" min="-6" max="6" placeholder="Adjustment -6 to +6">'
+             + '<label for="adjustment">Adjustement</label>'
+            + '<input type="number" name="adjustment" value="0" min="-6" max="6" placeholder="Adjustment -6 to +6">'
             + '</div>'
         );
     }
@@ -816,10 +823,10 @@ class EmptyZ_UI_BfrpgTreasure
     static setup(el) {
         let container = jQuery(el);
         container.append('<div class="params">'
-            + 'Treasure Type: '
+            + '<label for="type">Treasure Type</label>'
             + '<input type="text" name="type" placeholder="Treasure types separated by spaces" style="width:75%"><br>'
-            + 'Dragon HD: '
-            + '<input type="text" name="hd" placeholder="Dragon HD" style="width:25%" value="6"><br>'
+            + '<label for="hd">Dragon HD</label>'
+            + '<input type="text" name="hd" placeholder="Dragon HD" style="width:3em" value="6"><br>'
             + '</div>'
         );
     }
@@ -920,7 +927,7 @@ class EmptyZ_UI_WbOracle
         selectEstimation.append('<option value="likely">Likely</option>');
         selectEstimation.append('<option value="very-likely">Very Likely</option>');
         selectEstimation.append('<option value="certain">Practically Certain</option>');
-        params.append('<label for="estimation">Estimation</label>');
+        params.append('<label for="estimation">Probablity Estimation</label>');
         params.append(selectEstimation);
         container.append(params);
     }
@@ -983,7 +990,7 @@ class EmptyZ_UI
                     break;
             }
             // Add button
-            container.append('<button class="emptyz-regenerate">Regenerate '+generator.name+'</button>');
+            container.append('<button class="emptyz-regenerate wp-element-button">Generate '+generator.name+'</button>');
             // Run it
             EmptyZ_UI.run(el);
             // Activate button
