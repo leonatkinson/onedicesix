@@ -1,17 +1,159 @@
-name: Encounters in a St. Orlan Dungeon
+name: Rooms in a St. Orlan Dungeon
 description: 1st level dungeon with monsters HD 1-3
-recipe: 0. Room<br>
+recipe: {# room}. {room-name}<br>
         {contents}.<br>
-        The room smells {smell}. {junk-pile}.<br>
+        The room smells {smell}. The room contains {junk-pile}.<br>
 repeat: 10
+
+table: room-name 1d12
+1       {room-adjective} {room-synonym}
+2       {room-synonym} of {room-thing}
+3       The {room-thing} {room-synonym}
+4       {room-possessor}'s {room-synonym}
+5       {room-synonym} of the {room-adjective} {room-thing}
+6       {room-adjective} {room-thing} {room-synonym}
+7       {room-synonym} of {room-adjective} {room-thing}
+8       {room-descriptive-noun} {room-synonym}
+9       The {room-adjective} {room-synonym}
+10      {room-material} {room-synonym}
+11      {room-synonym} of the {room-possessor}
+12      {room-adjective} {room-possessor}'s {room-synonym}
+
+table: room-synonym 1d20
+1       Chamber
+2       Room
+3       Hall
+4       Vault
+5       Cavern
+6       Cell
+7       Gallery
+8       Crypt
+9       Sanctum
+10      Pit
+11      Antechamber
+12      Passage
+13      Alcove
+14      Shrine
+15      Temple
+16      Lair
+17      Den
+18      Barrow
+19      Sepulcher
+20      Oubliette
+
+table: room-adjective 1d20
+1       Filthy
+2       Grand
+3       Forgotten
+4       Dark
+5       Ancient
+6       Secret
+7       Dusty
+8       Crimson
+9       Black
+10      Iron
+11      Shadow
+12      Silent
+13      Whispering
+14      Burning
+15      Cursed
+16      Bloody
+17      Lower
+18      Upper
+19      Inner
+20      Outer
+
+table: room-thing 1d20
+1       Horrors
+2       Bones
+3       Whispers
+4       Shadows
+5       Damned
+6       Dead
+7       Forgotten
+8       Twilight
+9       Winds
+10      Screams
+11      Eyes
+12      Relics
+13      Mirrors
+14      Secrets
+15      Flames
+16      Ice
+17      Stone
+18      Blood
+19      Echoes
+20      Dust
+
+table: room-possessor 1d10
+1       Wizard
+2       King
+3       Priest
+4       Lich
+5       Baron
+6       Oracle
+7       Dragon
+8       Giant
+9       Demon
+10      Ghost
+
+table: room-descriptive-noun 1d24
+1       Armory
+2       Banquet Hall
+3       Barracks
+4       Cellar
+5       Cistern
+6       Dining Room
+7       Dormitory
+8       Forge
+9       Gallery
+10      Guard Room
+11      Kitchen
+12      Laboratory
+13      Library
+14      Pantry
+15      Prison
+16      Quarters
+17      Refectory
+18      Smithy
+19      Stable
+20      Storeroom
+21      Study
+22      Throne Room
+23      Treasury
+24      Workshop
+
+table: room-material 1d20
+1       Stone
+2       Iron
+3       Crystal
+4       Bronze
+5       Obsidian
+6       Marble
+7       Shadow
+8       Flame
+9       Frost
+10      Ash
+11      Bone
+12      Silver
+13      Brass
+14      Jade
+15      Ivory
+16      Steel
+17      Glass
+18      Ebony
+19      Gold
+20      Thunder
+
 
 table: contents 1d20
 1-5     Empty of monster or treasure
 6-8     {monster-group}
-9-12    {monster-group}
+9-12    {monster-group}<br>
         guarding {container}, {container-protect}, containing
         {cp}cp, {sp}sp, {ep}ep, {gp}gp, {pp}pp, {gems}, {jewelry}, {magic}
-13      {trick}. {monster-group}.
+13      {trick}.<br>
+        {monster-group}.
 14-18   {trick}
 19      {trick}. {container}, {container-protect}, containing
         {cp}cp, {sp}sp, {ep}ep, {gp}gp, {pp}pp, {gems}, {jewelry}, {magic}
@@ -523,36 +665,36 @@ table: trick-gas 1d20
 20      Poisons {trick-poison-type}
 
 table: trick-feature 1d30
-1   an altar
-2   an arch
-3   the ceiling
-4   a container
-5   a dome
-6   a door
-7   a secret door
-8   a fire
-9   a fireplace
-10  a force field
-11  a fountain
-12  a fresco, mosaic, or painting
-13  furnishings
-14  an idol
-15  an illusion
-16  a machine
-17  a monster
-18  a passage
-19  a pedestal
-20  a pillar or column
-21  a pit
-22  a pool
-23  a room
-24  a stairway
-25  a statue
-26  a tapestry
-27  vegetation
-28  a wall
-29  a well
-30  a lever
+1   An altar
+2   An arch
+3   The ceiling
+4   A container
+5   A dome
+6   A door
+7   A secret door
+8   A fire
+9   A fireplace
+10  A force field
+11  A fountain
+12  A fresco, mosaic, or painting
+13  Furnishings
+14  An idol
+15  An illusion
+16  A machine
+17  A monster
+18  A passage
+19  A pedestal
+20  A pillar or column
+21  A pit
+22  A pool
+23  A room
+24  A stairway
+25  A statue
+26  A tapestry
+27  Vegetation
+28  A wall
+29  A well
+30  A lever
 
 table: trick-attribute
 1   ages a target
@@ -649,443 +791,443 @@ table: junk-pile 1d20
 11-20   {junk}, {junk-pile}
 
 table: junk
-1   Alembic
-2   Altar
-3   Anklet
-4   Apron
-5   Arm Band
-6   Armchair
-7   Armoire
-8   Arras
-9   Arrow, Broken
-10  Ash
-11  Ashes
-12  Awl
-13  Bag
-14  Balance & Weights
-15  Bandages
-16  Bark
-17  Barrel
-18  Basin
-19  Basket
-20  Bastinadoes
-21  Beaker
-22  Beater
-23  Bed
-24  Bellows
-25  Bells
-26  Belt
-27  Bench
-28  Bladder
-29  Blanket
-30  Blouse
-31  Bone
-32  Bones
-33  Book
-34  Boots
-35  Bottle
-36  Broken Bottle
-37  Bowl
-38  Bracelet
-39  Branding Irons
-40  Brazier
-41  Brazier & Charcoal
-42  Brooch
-43  Brush
-44  Bucket
-45  Buckle
-46  Buffet
-47  Bunks
-48  Buskins
-49  Large Barrel
-50  Cabinet
-51  Cage
-52  Caldron
-53  Candelabra
-54  Candelabrum
-55  Candle
-56  Candles
-57  Candle Snuffer
-58  Candlestick
-59  Candlesticks
-60  Cane
-61  Cap
-62  Cape
-63  Carafe
-64  Carpet
-65  Case
-66  Cask
-67  Cassocks
-68  Chain
-69  Corroded
-70  Chains
-71  Chair
-72  Padded Chair
-73  Padded Arm Chair
-74  Chair With Straps
-75  Chalice
-76  Chalk
-77  Chandelier
-78  Charcoal
-79  Large Chest
-80  Medium Chest
-81  Chest Of Drawers
-82  Chimes
-83  Choker
-84  Chopper
-85  Chunks
-86  Cinders
-87  Clamps
-88  Clasp
-89  Cloak
-90  Wardrobe
-91  Altar Cloth
-92  Splintered Club
-93  Coal
-94  Coat
-95  Cobwebs
-96  Coffer
-97  Coif
-98  Bent Copper Coin
-99  Collar
-100 Cologne
-101 Columns/Pillars
-102 Comb
-103 Coronet
-104 Couch
-105 Ceiling Cracks
-106 Floor Cracks
-107 Wall Cracks
-108 Crate
-109 Cresset
-110 Cressets
-111 Crown
-112 Crucible
-113 Cruet
-114 Crystal Ball
-115 Crystals
-116 Cup
-117 Cupboard
-118 Curtain/Tapestry
-119 Cushion
-120 Dagger Hilt
-121 Dais
-122 Dampness, Ceiling
-123 Dampness, Wall
-124 Decanter
-125 Desk
-126 Diadem
-127 Dipper
-128 Dish
-129 Doublet
-130 Dress
-131 Dried Blood
-132 Dripping
-133 Drum
-134 Dung
-135 Dust
-136 Earring
-137 Earspoon
-138 Ewer
-139 Fetters
-140 Fibers
-141 Fire Pit
-142 Fireplace With Mantle
-143 Fireplace & Wood
-144 Firkin
-145 Flagon
-146 Flask
-147 Flask, Cracked
-148 Fob
-149 Font
-150 Food
-151 Food Scraps
-152 Fork
-153 Fountain
-154 Fresco
-155 Frock/Pinafore
-156 Fungi, Common
-157 Funnel
-158 Furnace
-159 Gauntlets
-160 Gelatin
-161 Girdle
-162 Globes
-163 Gloves
-164 Goblet
-165 Gong
-166 Gown
-167 Grains
-168 Grater
-169 Greasy
-170 Grill
-171 Grinder
-172 Grindstone
-173 Guano
-174 Habit
-175 Hair/Fur Bits
-176 Hammer Head, Cracked
-177 Hamper
-178 Hassock
-179 Hat
-180 Headband (Fillet)
-181 Helmet, Badly Dented
-182 Herbs
-183 Hogshead
-184 Holy/Unholy Symbol(S)
-185 Holy/Unholy Writings
-186 Hood
-187 Hooks
-188 Horn
-189 Hose
-190 Hourglass
-191 Huge Bell
-192 Husks
-193 Idol
-194 Idol (Largish)
-195 Idol(S)
-196 Incense Burner(S)
-197 Iron Bar, Bent, Rusted
-198 Iron Boots
-199 Iron Maiden
-200 Jack (Container)
-201 Jar
-202 Javelin Head, Blunt
-203 Jerkin
-204 Jug
-205 Jupon
-206 Keg
-207 Kerchief
-208 Kettle
-209 Kirtle
-210 Kneeling Bench
-211 Knife
-212 Knives
-213 Knucklebones
-214 Ladle
-215 Lamp
-216 Lamp/Lantern
-217 Lamp(S)
-218 Large Box
-219 Leather Boot
-220 Leaves
-221 Leaves (Dry) & Twigs
-222 Lectern
-223 Leggings
-224 Lens (Concave, Convex, Etc.)
-225 Linen (Drawers)
-226 Linen (Undershirt)
-227 Locket
-228 Loom
-229 Magic Circle
-230 Manacles
-231 Mantle
-232 Masher
-233 Mat
-234 Mattress
-235 Medal
-236 Medallion
-237 Mirror
-238 Mold (Common)
-239 Mortar & Pestle
-240 Mosaics
-241 Mug
-242 Necklace
-243 Needle(S)
-244 Offertory Container
-245 Oil (Barrel Of)
-246 Oil Fuel
-247 Oil, Scented
-248 Orb
-249 Oubliette (Pit)
-250 Pail
-251 Painting
-252 Paintings/Frescoes
-253 Pallet
-254 Pan
-255 Pantaloons
-256 Parchment
-257 Paste
-258 Pedestal
-259 Pegs
-260 Pellets
-261 Pendant
-262 Pentacle
-263 Pentagram
-264 Petticoat
-265 Pews
-266 Phial
-267 Pick Handle
-268 Pillory
-269 Pillow
-270 Pin
-271 Pincers
-272 Pipe (Large Cask)
-273 Pipe, Musical
-274 Pipe, Smoking
-275 Pipes (Musical)
-276 Pipette
-277 Pitcher
-278 Plate
-279 Platter
-280 Pliers
-281 Pole, Broken (5 2/3 ’ )
-282 Pot
-283 Pot (Huge)
-284 Pottery Shards
-285 Pouch
-286 Pouch/Purse
-287 Powder
-288 Prayer Rug
-289 Prism
-290 Puff
-291 Pulpit
-292 Quill
-293 Quilt
-294 Rack
-295 Rags
-296 Rail
-297 Razor
-298 Retort
-299 Robe
-300 Robes
-301 Rod, Mixing/Stirring
-302 Rope
-303 Rope, Rotten
-304 Ropes
-305 Rubble & Dirt
-306 Rug (Small-Medium)
-307 Rushes
-308 Sack
-309 Sack, Torn
-310 Salve
-311 Sanctuary
-312 Sandals
-313 Saucer
-314 Scarf
-315 Sceptre
-316 Sconce, Wall
-317 Scraper
-318 Screen
-319 Scroll
-320 Scroll Tube
-321 Shaker
-322 Shawl
-323 Sheet
-324 Shelf
-325 Shift
-326 Shrine
-327 Sideboard
-328 Side Chair(S)
-329 Sifter
-330 Skin
-331 Skin/Hide
-332 Skull
-333 Slimy Coating, Ceiling
-334 Slimy Coating, Floor
-335 Slimy Coating, Wall
-336 Slippers
-337 Small Box
-338 Small Casket
-339 Smock
-340 Soap
-341 Sofa
-342 Spatula
-343 Spigot
-344 Spike, Rusted
-345 Spoon
-346 Spoon, Measuring
-347 Staff, Normal
-348 Stalks
-349 Stand
-350 Statue
-351 Statue(S)
-352 Statuette
-353 Statuette/Figurine
-354 Sticks
-355 Stockings
-356 Stocks
-357 Stones, Small
-358 Stool
-359 Stool, High
-360 Stool, Normal
-361 Stopper
-362 Strainer
-363 Strappado
-364 Straw
-365 Stuffed Animal
-366 Surcoat
-367 Sword Blade, Broken
-368 Table
-369 Table, Large
-370 Table, Long
-371 Table, Low
-372 Table, Round
-373 Table, Small
-374 Table, Trestle
-375 Tankard
-376 Tank (Container)
-377 Tapestry
-378 Teeth/Fangs, Scattered
-379 Thongs
-380 Thread
-381 Throne
-382 Thumb Screws
-383 Thurible
-384 Tiara
-385 Tinderbox (With Flint & Steel)
-386 Toga
-387 Tongs
-388 Torches
-389 Torch Stub
-390 Towel
-391 Tray
-392 Tripod
-393 Trivet
-394 Trousers
-395 Trunk
-396 Tub
-397 Tube (Container)
-398 Tube (Piping)
-399 Tun
-400 Tunic
-401 Tureen
-402 Tweezers
-403 Twine
-404 Unguent
-405 U Rack
-406 Urn
-407 Vase
-408 Veil
-409 Vest
-410 Vestments
-411 Vestry
-412 Vial
-413 Vice
-414 Votive Light
-415 Wall Basin And Font
-416 Wallet
-417 Wall Scratchings
-418 Washcloth
-419 Waterclock
-420 Water, Large Puddle
-421 Water, Small Puddle
-422 Water, Trickle
-423 Wax Blob (Candle Stub)
-424 Wax Drippings
-425 Well
-426 Wheel
-427 Whetstone
-428 Whips
-429 Whistle
-430 Wig
-431 Wire
-432 Wood Billets
-433 Wood Pieces, Rotting
-434 Wool
-435 Workbench
-436 Wrapper
-437 Yarn
+1   an alembic
+2   an altar
+3   an anklet
+4   an apron
+5   an arm band
+6   an armchair
+7   an armoire
+8   an arras
+9   a broken arrow
+10  ash
+11  ashes
+12  an awl
+13  a bag
+14  a balance & weights
+15  bandages
+16  bark
+17  a barrel
+18  a basin
+19  a basket
+20  bastinadoes
+21  a beaker
+22  a beater
+23  a bed
+24  bellows
+25  bells
+26  a belt
+27  a bench
+28  a bladder
+29  a blanket
+30  a blouse
+31  a bone
+32  bones
+33  a book
+34  boots
+35  a bottle
+36  a broken bottle
+37  a bowl
+38  a bracelet
+39  branding irons
+40  a brazier
+41  a brazier & charcoal
+42  a brooch
+43  a brush
+44  a bucket
+45  a buckle
+46  a buffet
+47  bunks
+48  buskins
+49  a large barrel
+50  a cabinet
+51  a cage
+52  a caldron
+53  a candelabra
+54  a candelabrum
+55  a candle
+56  candles
+57  a candle snuffer
+58  a candlestick
+59  candlesticks
+60  a cane
+61  a cap
+62  a cape
+63  a carafe
+64  a carpet
+65  a case
+66  a cask
+67  cassocks
+68  a chain
+69  corroded
+70  chains
+71  a chair
+72  a padded chair
+73  a padded arm chair
+74  a chair with straps
+75  a chalice
+76  chalk
+77  a chandelier
+78  charcoal
+79  a large chest
+80  a medium chest
+81  a chest of drawers
+82  chimes
+83  a choker
+84  a chopper
+85  chunks
+86  cinders
+87  clamps
+88  a clasp
+89  a cloak
+90  a wardrobe
+91  an altar cloth
+92  a splintered club
+93  coal
+94  a coat
+95  cobwebs
+96  a coffer
+97  a coif
+98  a bent copper coin
+99  a collar
+100 a cologne
+101 columns/pillars
+102 a comb
+103 a coronet
+104 a couch
+105 ceiling cracks
+106 floor cracks
+107 wall cracks
+108 a crate
+109 a cresset
+110 cressets
+111 a crown
+112 a crucible
+113 a cruet
+114 a crystal ball
+115 crystals
+116 a cup
+117 a cupboard
+118 a curtain/tapestry
+119 a cushion
+120 a dagger hilt
+121 a dais
+122 a ceiling dampness
+123 a wall dampness
+124 a decanter
+125 a desk
+126 a diadem
+127 a dipper
+128 a dish
+129 a doublet
+130 a dress
+131 dried blood
+132 dripping
+133 a drum
+134 dung
+135 dust
+136 an earring
+137 an earspoon
+138 an ewer
+139 fetters
+140 fibers
+141 a fire pit
+142 a fireplace with mantle
+143 a fireplace & wood
+144 a firkin
+145 a flagon
+146 a flask
+147 a cracked flask
+148 a fob
+149 a font
+150 food
+151 food scraps
+152 a fork
+153 a fountain
+154 a fresco
+155 a frock/pinafore
+156 common fungi
+157 a funnel
+158 a furnace
+159 gauntlets
+160 gelatin
+161 a girdle
+162 globes
+163 gloves
+164 a goblet
+165 a gong
+166 a gown
+167 grains
+168 a grater
+169 greasy
+170 a grill
+171 a grinder
+172 a grindstone
+173 guano
+174 a habit
+175 hair/fur bits
+176 a cracked hammer head
+177 a hamper
+178 a hassock
+179 a hat
+180 a headband (fillet)
+181 a badly dented helmet
+182 herbs
+183 a hogshead
+184 holy/unholy symbol(s)
+185 holy/unholy writings
+186 a hood
+187 hooks
+188 a horn
+189 a hose
+190 an hourglass
+191 a huge bell
+192 husks
+193 an idol
+194 a largish idol
+195 idol(s)
+196 incense burner(s)
+197 a bent, rusted iron bar
+198 iron boots
+199 an iron maiden
+200 a jack (container)
+201 a jar
+202 a blunt javelin head
+203 a jerkin
+204 a jug
+205 a jupon
+206 a keg
+207 a kerchief
+208 a kettle
+209 a kirtle
+210 a kneeling bench
+211 a knife
+212 knives
+213 knucklebones
+214 a ladle
+215 a lamp
+216 a lamp/lantern
+217 lamp(s)
+218 a large box
+219 a leather boot
+220 leaves
+221 dry leaves & twigs
+222 a lectern
+223 leggings
+224 a concave, convex, etc. lens
+225 linen (drawers)
+226 linen (undershirt)
+227 a locket
+228 a loom
+229 a magic circle
+230 manacles
+231 a mantle
+232 a masher
+233 a mat
+234 a mattress
+235 a medal
+236 a medallion
+237 a mirror
+238 common mold
+239 a mortar & pestle
+240 mosaics
+241 a mug
+242 a necklace
+243 needle(s)
+244 an offertory container
+245 a barrel of oil
+246 oil fuel
+247 scented oil
+248 an orb
+249 a pit oubliette
+250 a pail
+251 a painting
+252 paintings/frescoes
+253 a pallet
+254 a pan
+255 pantaloons
+256 parchment
+257 paste
+258 a pedestal
+259 pegs
+260 pellets
+261 a pendant
+262 a pentacle
+263 a pentagram
+264 a petticoat
+265 pews
+266 a phial
+267 a pick handle
+268 a pillory
+269 a pillow
+270 a pin
+271 pincers
+272 a large cask pipe
+273 a musical pipe
+274 a smoking pipe
+275 musical pipes
+276 a pipette
+277 a pitcher
+278 a plate
+279 a platter
+280 pliers
+281 a broken pole (5 2/3 ’ )
+282 a pot
+283 a huge pot
+284 pottery shards
+285 a pouch
+286 a pouch/purse
+287 powder
+288 a prayer rug
+289 a prism
+290 a puff
+291 a pulpit
+292 a quill
+293 a quilt
+294 a rack
+295 rags
+296 a rail
+297 a razor
+298 a retort
+299 a robe
+300 robes
+301 a mixing/stirring rod
+302 a rope
+303 a rotten rope
+304 ropes
+305 rubble & dirt
+306 a small-medium rug
+307 rushes
+308 a sack
+309 a torn sack
+310 a salve
+311 a sanctuary
+312 sandals
+313 a saucer
+314 a scarf
+315 a sceptre
+316 a wall sconce
+317 a scraper
+318 a screen
+319 a scroll
+320 a scroll tube
+321 a shaker
+322 a shawl
+323 a sheet
+324 a shelf
+325 a shift
+326 a shrine
+327 a sideboard
+328 side chair(s)
+329 a sifter
+330 a skin
+331 a skin/hide
+332 a skull
+333 a ceiling slimy coating
+334 a floor slimy coating
+335 a wall slimy coating
+336 slippers
+337 a small box
+338 a small casket
+339 a smock
+340 soap
+341 a sofa
+342 a spatula
+343 a spigot
+344 a rusted spike
+345 a spoon
+346 a measuring spoon
+347 a normal staff
+348 stalks
+349 a stand
+350 a statue
+351 statue(s)
+352 a statuette
+353 a statuette/figurine
+354 sticks
+355 stockings
+356 stocks
+357 small stones
+358 a stool
+359 a high stool
+360 a normal stool
+361 a stopper
+362 a strainer
+363 a strappado
+364 straw
+365 a stuffed animal
+366 a surcoat
+367 a broken sword blade
+368 a table
+369 a large table
+370 a long table
+371 a low table
+372 a round table
+373 a small table
+374 a trestle table
+375 a tankard
+376 a tank (container)
+377 a tapestry
+378 scattered teeth/fangs
+379 thongs
+380 thread
+381 a throne
+382 thumb screws
+383 a thurible
+384 a tiara
+385 a tinderbox (with flint & steel)
+386 a toga
+387 tongs
+388 torches
+389 a torch stub
+390 a towel
+391 a tray
+392 a tripod
+393 a trivet
+394 trousers
+395 a trunk
+396 a tub
+397 a tube (container)
+398 a tube (piping)
+399 a tun
+400 a tunic
+401 a tureen
+402 tweezers
+403 twine
+404 an unguent
+405 a u rack
+406 an urn
+407 a vase
+408 a veil
+409 a vest
+410 vestments
+411 a vestry
+412 a vial
+413 a vice
+414 a votive light
+415 a wall basin and font
+416 a wallet
+417 wall scratchings
+418 a washcloth
+419 a waterclock
+420 a large water puddle
+421 a small water puddle
+422 a water trickle
+423 a candle stub wax blob
+424 wax drippings
+425 a well
+426 a wheel
+427 a whetstone
+428 whips
+429 a whistle
+430 a wig
+431 wire
+432 wood billets
+433 rotting wood pieces
+434 wool
+435 a workbench
+436 a wrapper
+437 yarn
 
 table: monster-group 1d10
 1-9 {monster}

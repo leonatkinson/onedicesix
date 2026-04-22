@@ -28,71 +28,71 @@ table: entrance
 table: rooms 1d20
 1       There is one room.<br>
         <br>
-        <strong>Room 1.</strong><br>
+        <strong>1. {room-name}</strong><br>
         {room}
 2-3     There are two rooms.<br><br>
-        <strong>Room 1.</strong><br>
+        <strong>1. {room-name}</strong><br>
         {room}<br><br>
         This room {connects} <strong>room 2</strong>.<br>
         <br>
-        <strong>Room 2.</strong><br>
+        <strong>2. {room-name}</strong><br>
         {room}
 4-6     There are three rooms.<br>
-        <strong>Room 1.</strong><br>
+        <strong>1. {room-name}</strong><br>
         {room}<br>
         Room 1 {connects} <strong>room 2</strong>.<br>
         Room 1 {connects} <strong>room 3</strong>.<br>
         <br>
-        <strong>Room 2.</strong><br>
+        <strong>2. {room-name}</strong><br>
         {room}<br>
         Room 2 {connects} <strong>room 3</strong>.<br>
         <br>
-        <strong>Room 3.</strong><br>
+        <strong>3. {room-name}</strong><br>
         {room}
 7-10    There are four rooms.<br>
         <br>
-        <strong>Room 1.</strong><br>
+        <strong>1. {room-name}</strong><br>
         {room}<br>
         Room 1 {connects} <strong>room 2</strong>.<br>
         Room 1 {connects} <strong>room 3</strong>.<br>
         Room 1 {connects} <strong>room 4</strong>.<br>
         <br>
-        <strong>Room 2.</strong><br>
+        <strong>2. {room-name}</strong><br>
         {room}<br>
         Room 2 {connects} <strong>room 3</strong>.<br>
         Room 2 {connects} <strong>room 4</strong>.<br>
         <br>
-        <strong>Room 3.</strong><br>
+        <strong>3. {room-name}</strong><br>
         {room}<br>
         Room 3 {connects} <strong>room 4</strong>.<br>
         <br>
-        <strong>Room 4.</strong><br>
+        <strong>4. {room-name}</strong><br>
         {room}
 11-20   There are five rooms.<br>
         <br>
-        <strong>Room 1.</strong><br>
+        <strong>1. {room-name}</strong><br>
         {room}<br>
         Room 1 {connects} <strong>room 2</strong>.<br>
         Room 1 {connects} <strong>room 3</strong>.<br>
         Room 1 {connects} <strong>room 4</strong>.<br>
         Room 1 {connects} <strong>room 5</strong>.<br>
         <br>
-        <strong>Room 2.</strong><br>
+        <strong>2. {room-name}</strong><br>
         {room}<br>
         Room 2 {connects} <strong>room 3</strong>.<br>
         Room 2 {connects} <strong>room 4</strong>.<br>
         Room 2 {connects} <strong>room 5</strong>.<br>
         <br>
-        <strong>Room 3.</strong><br>
+        <strong>3. {room-name}</strong><br>
         {room}<br>
         Room 3 {connects} <strong>room 4</strong>.<br>
         Room 3 {connects} <strong>room 5</strong>.<br>
         <br>
-        <strong>Room 4.</strong><br>
+        <strong>4. {room-name}</strong><br>
         {room}<br>
         Room 4 {connects} <strong>room 5</strong>.<br>
         <br>
-        <strong>Room 5.</strong><br>
+        <strong>5. {room-name}</strong><br>
     {room}
 
 table: connects 1d6
@@ -1560,3 +1560,144 @@ table: mage-spells-6
 8   Projected Image
 9   Reincarnate
 10  Wall of Iron
+
+
+table: room-name 1d12
+1       {room-adjective} {room-synonym}
+2       {room-synonym} of {room-thing}
+3       The {room-thing} {room-synonym}
+4       {room-possessor}'s {room-synonym}
+5       {room-synonym} of the {room-adjective} {room-thing}
+6       {room-adjective} {room-thing} {room-synonym}
+7       {room-synonym} of {room-adjective} {room-thing}
+8       {room-descriptive-noun} {room-synonym}
+9       The {room-adjective} {room-synonym}
+10      {room-material} {room-synonym}
+11      {room-synonym} of the {room-possessor}
+12      {room-adjective} {room-possessor}'s {room-synonym}
+
+table: room-synonym 1d20
+1       Chamber
+2       Room
+3       Hall
+4       Vault
+5       Cavern
+6       Cell
+7       Gallery
+8       Crypt
+9       Sanctum
+10      Pit
+11      Antechamber
+12      Passage
+13      Alcove
+14      Shrine
+15      Temple
+16      Lair
+17      Den
+18      Barrow
+19      Sepulcher
+20      Oubliette
+
+table: room-adjective 1d20
+1       Filthy
+2       Grand
+3       Forgotten
+4       Dark
+5       Ancient
+6       Secret
+7       Dusty
+8       Crimson
+9       Black
+10      Iron
+11      Shadow
+12      Silent
+13      Whispering
+14      Burning
+15      Cursed
+16      Bloody
+17      Lower
+18      Upper
+19      Inner
+20      Outer
+
+table: room-thing 1d20
+1       Horrors
+2       Bones
+3       Whispers
+4       Shadows
+5       Damned
+6       Dead
+7       Forgotten
+8       Twilight
+9       Winds
+10      Screams
+11      Eyes
+12      Relics
+13      Mirrors
+14      Secrets
+15      Flames
+16      Ice
+17      Stone
+18      Blood
+19      Echoes
+20      Dust
+
+table: room-possessor 1d10
+1       Wizard
+2       King
+3       Priest
+4       Lich
+5       Baron
+6       Oracle
+7       Dragon
+8       Giant
+9       Demon
+10      Ghost
+
+table: room-descriptive-noun 1d24
+1       Armory
+2       Banquet Hall
+3       Barracks
+4       Cellar
+5       Cistern
+6       Dining Room
+7       Dormitory
+8       Forge
+9       Gallery
+10      Guard Room
+11      Kitchen
+12      Laboratory
+13      Library
+14      Pantry
+15      Prison
+16      Quarters
+17      Refectory
+18      Smithy
+19      Stable
+20      Storeroom
+21      Study
+22      Throne Room
+23      Treasury
+24      Workshop
+
+table: room-material 1d20
+1       Stone
+2       Iron
+3       Crystal
+4       Bronze
+5       Obsidian
+6       Marble
+7       Shadow
+8       Flame
+9       Frost
+10      Ash
+11      Bone
+12      Silver
+13      Brass
+14      Jade
+15      Ivory
+16      Steel
+17      Glass
+18      Ebony
+19      Gold
+20      Thunder

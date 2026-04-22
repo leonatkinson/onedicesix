@@ -198,3 +198,9 @@ Small adjustments to daily events on the southern seas.
 - Update block config to quiet deprecation warnings
 ## 1.10.0
 - Normalize HTML for form fields to always use labels
+## 1.10.1
+- Rename "Enctouners in a St. Orlan Dungeon" to "Rooms in a St. Orlan Dungeon"
+- Make minor capitalization and grammar fixes in St. Orlan Dungeons.
+- Properly number rooms in the St. Orlan Dungeon Rooms generator
+- Add evocative names to the rooms in the St. Orlan Dungeon Rooms generator
+- Add evocative names the 1-5 Room St. Orland Dungeon generator
