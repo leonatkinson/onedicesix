@@ -1,0 +1,1632 @@
+name: Eliari
+description: Implements the entire Estates of the Eliari book.
+recipe:
+    <b>Outside the Walls</b>{break2}
+    A wall encircles a square plot approximately 150 feet per side.  The only visible entrance is through a gate in the south
+    wall.  Outside the walls, a path runs the length of the eastern wall, ending in a patch of gravel at the edge of a small
+    river.  {outside_wall}  {outside_wall_condition}
+    {break2}
+    <b>Inside the Walls</b>{break2}
+    Beyond the gate is a small estate containing three small buildings, a 10-foot wide road circling a fenced area and a 
+    two-story house.  To the east of the house are a well and a collection of garden beds.  To the west of the house an 
+    orchard grows.
+    {break2}
+    <b>1. Gate</b>{break}
+    {area1}  {area1_decoration}
+    {break2}
+    <b>2. Carriage House</b>{break}
+    {area2} {area2_monster}{break2}
+    {area2_treasure}
+    {break2}
+    <b>3. Hut</b>{break}
+    {area3} {area3_tunnel} {area3_treasure}
+    {break2}
+    <b>4. Orchard</b>{break}
+    {area4}  {area4_monster}
+    {break2}
+    <b>5. Stable and Pen</b>{break}
+    {area5}{break2}
+    <b>6. Garden</b>{break}
+    {area6}{break2}
+    <b>7. Well</b>{break}
+    Moss clings to smooth stones of a well.  The rushing sounds of the river is heard faintly.
+    {area7}{break2}
+    {house}
+    <b>26. River's Edge</b>{break}
+    {area26}{break2}
+repeat: 1
+
+# Outside
+table: outside_wall 2d6
+2-3     The wall was built of smooth river stone, mortared together to height of 6 feet and topped with a 4-foot palisade of timbers.
+        Every 25 feet, 12-inch tree trunks were cut square to fortify the walls.
+4-5	    The walls are a palisade made of rough-cut timbers 4-6 inches across driven deep into the earth and protruding 10 feet above.
+        Every 25 feet, a massive 18-inch log fortifies the wall.
+5-8	    The walls were made of smooth blocks of granite.  Every 25 feet a thick column adds further fortification to the wall, which is 15 feet tall.
+9-10	Every 25 feet, an ancient willow stands 40 feet tall, drooping its weeping branches down over a mound of earth topped by a thick hedgerow.
+11-12	Sticks poke out from a 6-foot wall made of tough clay painted white.  Square timbers frame the walls, with larger posts standing every 25 feet.
+
+table: outside_wall_condition 1d6
+1	    The walls show no signs of age and stand as sturdy as the day they were built.
+2	    The walls barely contain the 150- x 150-foot plot.  Between columns, the wall often falters, allowing easy access to the grounds within.
+3-4	    Though mostly intact, the walls have been breached at {1d6} location(s).
+5-6	    The walls show signs of age, but where they have faltered, a sturdy repair was made.
+
+# Gate
+table: area1 1d6
+1-2	    A rusting chain holds two iron gates together with a padlock.  Adjust lock-picking attempts by {1d20-10}% due to corrosion.
+3-4	    Iron gates have fallen from their hinges.  Weeds grow up through their decaying rods.
+5-6	    Corroded iron gates are fixed in place with a series of heavy posts.  A jumble of rotting boards obscure view to inside the walls.
+
+table: area1_decoration 1d10
+1-5 {blank}
+6	A sign declares "Danger! Keep Out!"
+7	"DEAD INSIDE" is painted in red letters.
+8	A small shrine including a holy symbol and dried flowers sits next to the gate.
+9	A (harmless) black fungus grows over scattered bones.
+10	{1d6+2} gold coins peak out from a half-rotten bag.
+
+# Carriage House
+table: area2
+1-3 Stone shingles keep the rain out of a 20- x 20-foot carriage house.  Double doors swing easily to reveal a small carriage in serviceable condition.  
+    A small door on the east side, slightly ajar, also allows entrance.
+4-6 A good portion of the stone shingles atop this 20-foot x 20-foot carriage house have tumbled and shattered, allowing damaging rain to pour over a 
+    small carriage found beyond the two doors.  The right wheels of the carriage have fallen away, leaving the vehicle to rest at a disturbed angle.
+
+table: area2_monster 2d4
+2-4	    {blank}
+5-6	    Stirges roost in the rafters.{break2}
+	    Stirges AC 13, HD 1*, #At 1 bite, Dam 1d4 + 1d4/round blood drain, Mv 10' Fly 60', Sv F1, ML 9, XP 37 ea.{break}
+	    +2 AB against attached stirges.  Missing hits victim.  Removed only by killing.{break}
+        HP {3d12 1d8}
+7	    Giant spiders have filled the structure with webs.  Any who enter must save vs. Death Ray (+/- DEX) or become stuck.  Roll to escape as if 
+        opening a door.  {1d4} figures wrapped in webbing hang motionless.  There is a 1 in 10 chance that any of the figures may be revived.{break2}
+	    Giant Black Widow Spider AC 14, HD 3*, #At 1 bite, Dam 2d6 + poison, Mv 20' Web 40', Sv F3, ML 8, XP 175 ea.{break}
+	    Those bitten must save vs. Poison at a penalty of -2 or die.{break}
+        HP {1d3 3d8}
+8-9	    Vines have grown up the walls and hang over the roof.  The vines surprise on a roll of 1-4 on 1d6, and swiftly entangle victim in a crushing grip.{break2}
+	    Strangle Vines AC 15, HD 6, #At 1 entangle, Dam 1d8 + 1d8/round crush, Mv 5', Sv F6, ML 12, XP 500 ea.{break}
+	    Save vs. Death Ray (+/- STR) to escape.{break}
+        HP {1d4 6d8}
+10-11	Gray ooze spreads out over the floor.{break2}
+	    Gray Jelly AC 12, HD 3*, #At 1 pseudopod, Dam 2d8 + 2d8/round, Mv 1', Sv F3, ML 12, XP 175{break}
+	    Sticks on successful hit.  Normal items dissolves immediately on contact.  Magical items save vs. Death Ray, adding any magical 
+        “plus” value to the roll if applicable.{break}
+	    HP {3d8}
+12 	    Wraiths in ragged uniforms linger within.{break2}
+	    Wraiths AC 15(m), HD 4**, #At 1 touch, Dam 1d6 + energy drain (1 level), Mv Fly 80', Sv F4, ML 12, XP 320 ea.{break}
+        HP {1d6+2 4d8}
+
+table: area2_treasure 1d6
+1-2	    Brass fittings from the carriage could fetch {2d10} gp.
+3-4	    An iron-bound chest contains four place-settings of fine dinnerware, including utensils ({2d8}00gp).
+5	    Under the seat of the carriage is a small case containing four darts +1.
+6	    Under the seat of the carriage is a waterproof tube containing a map.
+
+# Hut
+table: area3 1d6
+1-3	    Weeds grow from a mound of soil in a long-discarded wheelbarrow beside a 10-foot x 10-foot hut.  The stuck door requires significant 
+        force to open.  Inside, a meager living space contains a bed and a few personal effects, all untouched for some time.  An Elf skeleton 
+        rests under a heavy blanket.
+4-6	    A dilapidated door barely hangs on rusted hinges.  Leaves and dirt litter the floor of the 10-foot x 10-foot hut.
+
+table: area3_tunnel
+1-5 {blank}
+6   A trap door covers a tunnel curving down about 8 feet then leading directly under the wall, emerging under thick brush.
+
+table: area3_monster 1d6
+1-2 {blank}
+3	A pack of plague hounds made the hut their lair.  A small hole in the wall allows a quick exit for the mangy beasts who may 
+    burst out to devour anyone coming near.{break2}
+	3d8 Plague Hounds AC 14, HD 4*, #At 1 bite + special, Dam 2d4 bite + paralysis, Mv 50', Sv F4 ML 9, XP 280 ea.{break}
+	Save vs. Paralysis or be paralyzed for 2d8 turns; Elves are immune to this effect.  Cumulative +10% per bite of contracting ghoul fever.
+    Those afflicted save vs. Death Ray at a penalty of -4 or die.{break}
+    HP {3d8 4d8}
+4	A troll curls up in the corner.{break2}
+	Troll AC 16, HD 6*, #At 2 claws, 1 bite, Dam 1d6 claw, 1d10 bite, Mv 40', Sv F6, ML 10 (8), XP 555{break}
+	Heals 1 hit point of damage each round. Morale 8 if facing fire or acid.{break}
+	HP {6d8}
+5	A giant python rests in a coil.  If disturbed, it lashes out to bite, then wraps around its victim, constricting viciously.{break2}
+	Giant Python: AC 14, HD 5*, #At 1 bite, 1 constrict, Dam 1d4 bite, 2d4 + 2d4/round constrict, Mv 30', Sv F5, ML 8, XP 405{break}
+	Escape as stuck door, rolling 1+STR on 1d6.{break}
+	HP {5d8}
+6	Zombies slowly rise from concealment to attack anyone who enters the hut.{break2}
+	2d4 Zombie: AC 12 (half damage from blunt weapons, 1 point only from arrows, bolts, or sling stones), HD 2, #At 1 bludgeon, Dam 1d8, Mv 20', Sv F2, ML 12, XP 75 ea.{break}
+	Always loses initiative.{break}
+    HP {2d4} 2d8}
+
+table: area3_treasure 1d6
+1   {blank}
+4	A collection of garden implements remains well-preserved, including a shovel, a rake, and a pitchfork.
+5	Searching under the mattress turns up a sack of {1d8}00 sp.
+6	A magical ring of plant control long ago fell through a crack in the floorboards.
+
+# Orchard
+table: area4 1d6
+1	Aging trees bear a few shriveled apples, still edible.
+2	Only the largest limbs of long-dead fruit trees remain, standing pathetically over piles of debris.
+3	Verdant trees bear a variety of fruits, including apples and lemons.
+4	Sad stumps in a barren field suggest an orchard once grew here.
+5	Amid rotting stumps, one ancient tree clings to life, offering {1d6} bulging apples.
+6	{1d6} trees bear sad pears, yellow and shriveled.
+
+table: area4_monster 2d6
+2-3 {blank}
+7-8 Vines stretch across the ground and up the tree trunks.  The vines surprises on a roll of 1-4 on 1d6, and swiftly entangle victim in a crushing grip.{break2}
+	Strangle Vines AC 15, HD 6, #At 1 entangle, Dam 1d8 + 1d8/round crush, Mv 5', Sv F6, ML 12, XP 500 ea.{break}
+	Save vs. Death Ray (+/- STR) to escape.{break}
+    HP {1d4 6d8}
+9	Giant rats dwell in tunnels dug through this area.  They can pop in and out of holes, surprising on a roll of 1-3 on 1d6 and sometimes ducking back into the warren for safety.{break2}
+	Giant Rats AC 13, HD ½ (1d4 HP), #At 1 bite, Dam 1d4 + 5% chance of disease, Mv 40' Swim 20', Sv F1, ML 8, XP 10 ea.{break}
+	5% any victims bitten sicken in 3d6 hours.{break}
+    HP {3d10 1d4}
+10 	Hornets nest among the trees, dividing into 3 groups if disturbed.{break2}
+	Insect Swarms AC Immune to normal weapons, including most magical types, HD 3*, #At 1 swarm, Dam 1d3 (double against no armor), Mv 10' Fly 20', Sv N/A, ML 11, XP 175 ea.{break}
+    HP {3 3d8}
+11 	An undead minotaur prowls the orchard wielding a fearsome lumberjack's axe (100 gp).{break2}
+	Zombie Minotaur AC 12, HD 6, #At 1 gore, 1 bite or 1 great axe, Dam 1d6 gore, 1d6 bite, 1d10+2 great axe, Mv 20', Sv F6, ML 11, XP 500{break}
+	Always loses initiative.
+    HP {6d8}
+12	A giant hawk built a nest here and sits on 1d6 eggs, worth 2,000 gp each.{break2}
+	Giant Hawk AC 14, HD 4, #At 1 claw or 1 bite, Dam 1d6 claw, 1d6 bite, Mv Fly 150' (10'), Sv F4, ML 8, XP 240{break}
+    HP {4d8}
+
+# Stable and Pen
+table: area5 1d6
+1	The stable is empty and dusty.  The glint of something shiny attracts the eye that gazes over the field, which is infested with giant shrews.  
+    They will defend their home aggressively.  Poking out of the dirt is an earring that grants +1 CHA.{break2}
+	Giant Shrews AC 16, HD 1, #At 2 bites, Dam 1d6 bite, Mv 60', Sv F2, ML 10, XP 25 ea.{break}
+	May attack two foes in one round.{break}
+    HP {1d8 1d8}
+2	A zombie cow struggles to escape from its stall at the sight of living flesh.{break2}
+	Zombie Cow AC 12, HD 2, #At 1 bite, Dam 1d8, Mv 20', Sv F2, ML 12, XP 75{break}
+	Always loses initiative.{break}
+    HP {1d8}
+3-4	Doves roost in the rafters of the dilapidated stable.  Long-abandoned stalls contain nothing more than desiccated straw and the bones of a cow.
+5-6	The doors of the stable have fallen from their hinges.
+
+# Garden
+table: area6 1d6
+1	Raised beds meant for a garden have long ago given over to weeds.  One bed displays towering fungal growth that appears to be dusted with a yellow powder.{break2}
+	Yellow Mold AC Can always be hit, HD 2*, #At Spores, Dam See description, Mv 0, Sv NM, ML N/A, XP 100{break}
+	Dormant in sunlight.  May emit spores once per day.  All within 10 feet must save vs. Death Ray or take 1d8 points of damage per round for 6 rounds.{break}
+    HP {2d8}
+2	What was once a garden is now a graveyard.  Broken masonry stones are propped up as grave markers, the painted text long ago washed away by rain.
+    The graves are each {1d10} feet deep. 
+    {break2}
+    Grave 1. {area6_grave}{break2}
+    Grave 2. {area6_grave}{break2}
+    Grave 3. {area6_grave}{break2}
+    Grave 4. {area6_grave}{break2}
+    Grave 5. {area6_grave}{break2}
+    Grave 6. {area6_grave}
+3-4 Ancient roses tangle themselves with gnarled limbs in six ancient garden beds.  Fat bees gather pollen from the unusually vivid flowers.
+5-6 A tree trunk bare of limbs lies cross-ways over six garden beds filled with ordinary grass.
+
+table: area6_grave 1d10
+1-5	A rotted corpse clutches treasure. {area6_grave_treasure}
+6-7	A zombie that wields treasure as a weapon crawls out of the grave.  It holds {area6_grave_treasure}.{break2}
+	Zombie AC 12, HD 2, #At 1 blunt object, Dam 1d4, Mv 20', Sv F2, ML 12, XP 75{break}
+	Always loses initiative.{break}
+	HP {2d8}
+8-9	A corpse infected with disease keeps treasure in a pocket, {area6_grave_treasure}. Treat any significant interaction with the corpse as a rat bite, 
+    in which case 5% of victims become sick in {3d6} hours.
+10	A vampire slumbers here.  It has no weapons nor treasure.  If the grave is opened under full sun, the vampire will be disoriented, then destroyed.{break2}
+	Vampire AC 18(m), HD 7**, #At fists or bite or special, Dam 1d8 or 1d3 + energy drain or special, Mv 40' Fly 60', Sv F7, ML 11, XP 800{break}
+	Save vs. Spells with -2 penalty or be charmed by gaze.  Bite does 1d3 points of damage the first round followed by energy drain every round thereafter.  
+    While biting Vampire AC is modified by -5, opponents attacking biting Vampire get +3 points of damage with melee weapons.  Summon 10d10 rats, 5d4 giant rats, 
+    10d10 bats, 3d6 giant bats, or a pack of 3d6 wolves, arriving in 2d6 rounds.  Transform into giant bat or a dire wolf at will.{break}
+	HP {7d8}
+
+table: area6_grave_treasure 1d6
+1-2 a worthless bauble
+3   a {area6_wand}
+4   a small sack of {3d6}pp
+5	A small sack of {3d6} gp
+6	A simple ring worth {3d6} gp
+
+table: area6_wand 1d100
+1-35    wand with no charges
+36-40   wand of cold ({1d6+1} charges)
+41-45   wand of enemy detection ({1d6+1} charges)
+46-50   wand of fear ({1d6+1} charges)
+51-55   wand of fireballs ({1d6+1} charges)
+56-60   wand of illusion ({1d6+1} charges)
+61-65   wand of lightning bolts ({1d6+1} charges)
+66-73   wand of magic detection ({1d6+1} charges)
+74-79   wand of paralyzation ({1d6+1} charges)
+80-84   wand of polymorph ({1d6+1} charges)
+85-92   wand of secret door detection ({1d6+1} charges)
+93-100  wand of trap detection ({1d6+1} charges)
+
+# Well
+table: area7 1d6
+1-2	The ground around the well is unstable and will collapse {1d6}0 feet, taking anyone within 10 feet with it.
+3-4	The well contains fresh water 1d10 x 10 feet below ground level.
+5-6	The water in the well is fouled, exposing those investigating to disease.  Treat any significant interaction with the water as a rat bite, in which case 5% of victims become sick in 3d6 hours.
+
+# House theme
+table: house
+1   <b>Undead Infestation</b>{break2}
+    {house_windows}
+    {break2}
+    <b>8. Porch</b>{break}{area8a}{break2}
+    <b>9. Entry</b>{break}{area9a} {area9a_closet}{break2}
+    <b>10. Parlor and Hallway</b>{break}
+    A stairway on the north wall leads up to the second story.  Around the corner, a door opens to stairs going into the basement (Area 25).
+    {area10a_basement_door}
+    The parlor features a fireplace on the west wall and large windows overlooking the yard.
+    {area10a}{break2}
+    <b>11. Sun Room</b>{break}
+    {area11a}
+    {area11a_feature}
+    {break2}
+    {area11a_challenge}
+    {break2}
+    <b>12. Dining Room</b>{break}{area12a} {area12a_challenge}{break2}
+    <b>13. Library</b>{break}{area13a}
+    {break2}
+    {area13a_challenge}{break2}
+    <b>14. Service Pantry</b>{break}{area14a} {area14a_challenge}{break2}
+    <b>15. Food Pantry</b>{break}
+    Freestanding shelves line the walls of this 10-foot by 10-foot room.  A squat barrel is shoved in the northwest corner. 
+    {area15a} {area15a_challenge}{break2}
+    <b>16. Kitchen</b>{break}
+    A squat stove sits in the northeast corner of this well-lit kitchen.  The eastern wall offers a door to the outside.  
+    Around the corner a hallway connecting to Area 10 has a door leading to the basement.
+    {area16a}{break2}
+    <b>17. 2nd Floor Hallway</b>{break}
+    Stairs from the first floor deliver explorers to an L-shaped hallway with six doors.
+    {area17a}{break2}
+    <b>18. Scholar’s Bedroom</b>{break}
+    {area18a}
+    {break2}
+    {area18a_challenge}
+    {break2}
+    {area18a_treasure}
+    {break2}
+    <b>19. Lady’s Bedroom</b>{break}
+    The door opens to face a settee next to a fireplace.  To the right of the door sits a chest.  Around the corner, a large bed 
+    fills the western end of the room.  A door on the north wall opens to a closet.
+    {area19a}
+    {break2}
+    {area19a_challenge}
+    {break2}
+    {area19a_treasure}
+    {break2}
+    <b>20. Lord’s Bedroom</b>{break}
+    An animal hide spread over a massive bed made of rough-hewn oak.  A door beyond the bed opens to a closet.  A fireplace is on the 
+    north wall, over which hangs a dark oil panting.  Nearby, several weapons are displayed.
+    {area20a}
+    {break2}
+    {area20a_challenge}
+    {break2}
+    {area20a_treasure}
+    {break2}
+    <b>21. Back Bedroom</b>{break}
+    A door at the end of the hallway opens into a bedroom with windows that look over the grounds wall to a small stream.  
+    A modest bed is pushed against the east wall.  A great maul lays across the bed.  Something lumpy is under the covers.
+    {area21a} {area21a_challenge}  {area21a_treassure}
+    {break2}
+    <b>22. Master Bedroom</b>{break}
+    Four stout posts hold up a canopy over an expansive bed.  An oaken chest with domed top sits at the foot of the bed.  Several windows look out over the wall to the small river beyond.  A door on the east wall leads to a private bath.
+    {area22a} {area22a_challenge} {area22a_treasure}{break2}
+    <b>23. Bath</b>{break}{area23a}{break2}
+    <b>24. Private Bath</b>{break}{area24a}{break2}
+    <b>25. Basement</b>{break}{area25a} {area25a_challenge} {area25a_treasure}{break2}
+2   <b>House of Bandits</b>{break2}
+    The main house is occupied by bandits who may notice ({1d4} in 6) any
+    intruders on the grounds before they get near the house. {house_windows}
+    Bandits inside second story rooms may fire missile weapons through windows
+    at any oncoming threat. The gang specializes in {gang_specialty}. They may be
+    recognized by their {gang_insignia}.
+    {break2}
+    {gang}
+    {break2}
+    <b>8. Porch</b>{break}{area8b}{break2}
+    <b>9. Entry</b>{break}
+    {area9b}
+    {break2}
+    {area9b_closet}
+    {break2} 
+    Two pipes run floor to ceiling inside the closet, serving bathrooms on the second floor.
+    {break2}
+    <b>10. Parlor and Hallway</b>{break}
+    A stairway on the north wall leads up to the second story.  Around the corner, a door opens to stairs going into the basement (Area 25).  
+    The parlor features a fireplace on the west wall and large windows overlooking the yard.
+    {area10b}
+    {break2}
+    {area10b_stairs}
+    {break2}
+    <b>11. Sun Room</b>{break}
+    A fireplace warms a long room with windows on the south wall looking over the fenced pasture.
+    {area11b}
+    {break2}
+    <b>12. Dining Room</b>{break}
+    The eastern end of the room opens to reveal 12 chairs surrounding a dining table.  A fireplace on the north wall is next to a door.  
+    Windows in a curved alcove on the western side of the room offer a view into the orchard.
+    {area12b}
+    {break2}
+    {area12b_challenge}
+    {break2}
+    <b>13. Library</b>{break}
+    The door to the library is locked.
+    {break2}
+    {area13b}
+    {break2}
+    <b>14. Service Pantry</b>{break}
+    This 10- x 10-foot room connects the kitchen to the dining room.  A low cabinet is pushed against the north wall.
+    {area14b}{break2}
+    <b>15. Food Pantry</b>{break}
+    Boxes, barrels and sacks of food are stacked carelessly in this 10-foot x 10-foot room.
+    {area15b}
+    {break2}
+    <b>16. Kitchen</b>{break}
+    A small table sits in the northeast corner near a door in the east wall that leads outside.  A door on the west wall allows access to a pantry.  
+    An open doorway leads to a service pantry, and an open hallway connects to Areas 10, 11, and 12.
+    {area16b}
+    {break2}
+    <b>17. 2nd Floor Hallway</b>{break}
+    At the top of the stairs from the lower level is an L-shaped hallway with several closed doors.
+    {area17b}
+    {break2}
+    <b>18. Scholar’s Bedroom</b>{break}
+    {area18b}
+    {break2}
+    {area18b_challenge}
+    {break2}
+    {area18b_treasure}
+    {break2}
+    <b>19. Lady’s Bedroom</b>{break}
+    The locked door opens to face a settee next to a fireplace.  To the right of the door sits a chest.  
+    Around the corner, a large bed fills the western end of the room.  A door on the north wall opens to a closet.
+    {area19b}
+    {break2}
+    {area19b_treasure}
+    {break2}
+    <b>20. Lord’s Bedroom</b>{break}
+    {area20b} {area20b_challenge} {area20b_treasure}
+    {break2}
+    <b>21. Back Bedroom</b>{break}
+    A door at the end of the hallway opens into bedroom with windows that look over the grounds wall to a small stream.  
+    A modest bed is pushed against the east wall.  A great maul lays across the bed.  Something lumpy is under the covers.
+    {area21b} {area21b_challenge} {area21b_treasure}
+    {break2}
+    <b>22. Master Bedroom</b>{break}
+    Four stout posts hold up a canopy over an expansive bed.  An oaken chest with domed top sits at the foot of the bed.  Several windows look out over the wall to the small river beyond.  A door on the east wall leads to a private bath.
+    {area22b} {area22b_challenge} {area22b_treasure}
+    {break2}
+    <b>23. Bath</b>{break}
+    Opposite the door sits a metal tub.  A fine silver mirror hangs over a wash basin.  A pipe connects the toilet through the closet below to the basement.
+    {break2}
+    <b>24. Private Bath</b>{break}
+    A mild stench permeates this room.  A small seat with an open hole covers a pipe that extends all the way to the basement.
+    {break2}
+    <b>25. Basement</b>{break}
+    Creaking stairs descend into a dark basement, approximately 40- x 40-foot.  The floor is damp earth.
+    {area25b}
+    {break2}
+
+table: house_windows 1d6
+1-2	All windows are boarded up, though gaps between boards offer some view inside.
+3	No glass remains in any windows.  Ragged curtains flutter weakly.
+4-5	Half the panes of glass are missing from windows.  Most of the rest are shattered.  Curtains or drapes obscure views to inside.
+6	Windows are of a double-hung type and in good operation.  There is a 2 in 6 chance the windows are locked.
+
+# Undead / Demons
+
+# Porch
+table: area8a 1d6
+1-2	Stairs lead up to a 10-foot x 10-foot porch where sturdy boards hold a door closed.  Bold letters carved into one of the planks displays a warning,
+    "{area8a_warning}".  Withered offerings collect before the threshold.
+3	The entry door stands ajar, hanging loosely, on the north end of a 10-foot x 10-foot porch.  Access is available via stairs from the south.  
+    Standing on the creaking boards, a stale odor of decay creeps out from deep within the crumbling abode.  Flowers and herbs scatter over the 
+    groaning floorboards, some crushed under unknown feet.
+4	A patchwork of worm-eaten stair treads, leads to a partially collapsed porch.  Careful stepping on decaying framework of a 10-foot square 
+    porch allows access to a doorway blocked by a door which has fallen from its top hinge and tilted clockwise.
+5-6	Stone stairs lead to a porch covered in wooden planks over which green paint wore away under boot heels.  A rusting chain loops through a hole in 
+    the door, around the door frame and back out a hole in the wall where a padlock joins the two ends.  Almost unreadable, red paint smeared on the 
+    ragged door announces a warning, "{area8a_warning}".
+
+table: area8a_warning
+1   DEAD INSIDE
+2   DANGER
+3   MORTO PELIGRUNDO
+4   ANNOINTED ONE BLESS THIS HOUSE
+5   NO ENTRANCE
+6   DO NOT ENTER
+7   WOE TO THOSE WHO DISTURB MY REST
+8   CURSED
+9   DEMONS
+10  DEVILRY
+
+# Entry
+table: area9a 1d6
+1-3	Dim light stabs through the window on the east wall of this entry chamber over a well-worn rug and towards a hallway to the west.  
+    A closet door to the north invites investigation, and a doorway on the south wall allows exit from the building.
+4-6	The main entrance to the house on the south wall faces a closet door on the north wall.  A window on the east wall offers a view across a path to a garden.  
+    To the west, a hallway opens up to a parlor.  A glass vase has fallen from a small alcove, leaving glass shards strewn over a moth-eaten rug.
+
+table: area9a_closet 1d6
+1	Beyond the locked closet door hang {2d6} coats, some in severe disrepair.  A thorough search of pockets will turn up {area9a_closet_treasure}.
+2	A small closet, 5-foot square, holds only shreds of unrecognizable garments hanging from rusted hooks.  A concealed door on the west wall contains 
+    treasure, determined by the Closet Treasure table, below, plus a leather sack holding {3d8}00 gp.
+3	A leather whip winds around a rod spanning this 5-foot x 10-foot closet and around the neck of a wriggling corpse.  Its feet dangling only inches 
+    over old floorboards, the zombie reaches to the doorway to grab the unsuspecting explorer.  It will grapple to pull a victim in for a satisfying taste of flesh.{break2}
+	Zombie AC 12, HD 2, #At 1 bludgeon, Dam 1d8 or by weapon, Mv 20', Sv F2, ML 12, XP 75{break}
+	Always loses initiative.{break}
+	HP {2d8}{break2}
+	Inside the breast pocket of the zombie's coat, searchers find {area9a_closet_treasure}.
+4	The ceiling of this 5-foot x 10-foot closet collapsed into a pile of plaster and wood splinters, allowing access to Area 23 above.
+	Two pipes run floor to ceiling inside the closet, serving bathrooms on the second floor.
+5	A clatter of old cans and small boxes tumbles out of the closet.  The occupants of rooms 10, 11, or 12 will surely overhear and come to investigate.  
+    Searching in the debris for one turn will reveal {area9a_closet_treasure}.
+6	A ghoul hides among the {2d6+5} coats crammed together tightly in this 5-foot square closet, leaping out to surprise any who dare throw open the door.{break2}
+	Ghoul AC 14, HD 2*, #At 2 claws, 1 bite, Dam 1d4 claw, 1d4 bite, all plus paralysis, Mv 30', Sv F2, ML 9, XP 100{break}
+	Save vs. Paralysis or be paralyzed for 2d8 turns; Elves are immune to this effect.  Cumulative +10% per bite of contracting ghoul fever.
+    Those afflicted save vs. Death Ray at a penalty of -4 or die.{break2}
+	HP {2d8}{break2}
+	The ghoul has hidden a sack in the closet containing 2,200 cp, an azurite (worth 7 gp), a citrine (worth 50 gp), a jasper (worth 50 gp), 
+    a moss agate (worth 20 gp), a spinel (worth 500 gp), and a topaz (worth 500 gp).
+
+table: area9a_closet_treasure 1d6
+1	A thin bar of soap wrapped in oily rag that when rubbed over a non-magical weapon adds a +{1d2} enchantment for {1d6} turns.
+2	A small flask of purple goo labeled "maximum insight" that when consumed boosts Wisdom to 18 for {1d6} hours.
+3	A silver locket hiding a delicate cameo worth {3d6} gp.
+4	A suicide letter that mentions treasure thrown down the well.
+5	Rolled bandages coated in an orange powder, held together with twine.  If applied to a fresh wound, they stop bleeding and cure 1 hit point.
+6	A sack of pebbles.
+
+# Parlor and Hallway
+table: area10a 1d6
+1-3 The ruins of once-fine furniture litter the parlor, nearly disguising a gaping
+    hole in the floor connecting to the 4-foot tall crawlspace. {area10a_hole}.
+4-6 Two figures sit motionless in upolstered chairs. {area10a_residents}
+
+table: area10a_hole 1d6
+1	A desiccated corpse lies motionless among more debris {1d4+1} feet below floor level.  Anyone touching it must save vs. Poison or be infected by mummy rot.
+2	The corpse of a giant rat lies {1d4+1} feet below floor level.  Movement in this room has a {1d4} in 6 chance to draw the attention of rats from the nest in the crawlspace 
+    which expands under the entire footprint of the house.  It also provides exits under the back porch and down into the basement.  Entering the crawlspace 
+    triggers the rats to defend their nest to the death.{break2}
+	Giant Rats AC 13, HD 1d4 HP*, #At 1 bite, Dam 1d4 + 5% chance of disease, Mv 40' Swim 20', Sv F1, ML 8 (12), XP 13 ea.{break}
+	5% any victims bitten sicken in 3d6 hours.{break}
+	HP {2d6 1d4}
+3-4	The hole reveals an open, empty casket.
+5-6	The timbers of the floor have gently sagged and splintered under the weight of an iron chest that rusts in the damp air of the crawlspace.  
+    Hinges and locks have rusted.  Apply the rule for opening a barred door in order to pry open the chest.  Inside is {3d6}0 gp.
+
+table: area10a_residents 1d6
+1-2	The ordinary skeletons tumble into a pile of bones if touched.
+3-4	Two skeletons leap to attack, both picking one victim at random to grapple and drag down the hall into the kitchen (Area 16).{break2}
+	Skeletons AC 13, HD 1, #At 1 fist, Dam 1d6, Mv 40', Sv F1, ML 12, XP 25 ea.{break}
+	HP {2 1d8}
+5	Two zombies lurch to their feet, attracted to anything magical, which they will attempt to take away and then shamble outside to throw down the well.{break2}
+	2 Zombies AC 12, HD 2, #At 1 fist, Dam 1d8, Mv 20', Sv F2, ML 12, XP 75 ea.{break}
+	Always loses initiative.{break}
+	HP {2 2d8}
+6	Two ghouls pause their whispered argument to stare at intruders.{break2}
+	Ghouls AC 14, HD 2*, #At 2 claws, 1 bite, Dam 1d4 claw, 1d4 bite, all plus paralysis, Mv 30', Sv F2, ML 9, XP 100 ea.{break2}
+	Save vs. Paralysis or be paralyzed for 2d8 turns; Elves are immune to this effect.  Cumulative +10% per bite of contracting ghoul fever.  Those afflicted save vs. Death Ray at a penalty of -4 or die.{break}
+	HP {2 2d8}{break2}
+	Three gems are hidden in the cushions of the chair. They are a black opal (worth 1,000 gp), a bloodstone (worth 50 gp), and a garnet (worth 500 gp).
+
+table: area10a_basement_door 1d6
+1-3	A thick board nailed to the wall holds the door shut.
+4-5	The door is locked with a simple mechanism (+10% to pick locks roll).
+
+# Sun Room
+table: area11a 1d6
+1-3 Heavy drapes smother what would otherwise be an airy sun room.  Shriveled houseplants droop in earthen pots.
+4-6 Dry soil spills from a pile of overturned clay pots piled in the southwest corner.  Fetid goo oozes from a corpse tied down to a low table.
+
+table: area11a_challenge
+1	Three elves in hunting garb lay bound and gagged on the rotting carpet, unconscious.  Blood oozes from beneath torn clothing.  One of the hunters, 
+    called Meecel by his companions, has died.  The other two cling to life and would gladly accept rescue or the chance to take revenge on the 
+    unholy denizens of the house.{break2}
+	Shalam, Elf Thief 1, AC 13, #At 1 fist, Dam 1d3, Mv 30', ML 9{break}
+	STR 14 (+1) WIS 6 (-1) CON 8 (-1){break}
+	CHA 7 (-1){break}
+	leather armor{break}
+	HP {1d6}{break2}
+	Lancel, Elf Thief 1, AC 14, #At 1 fist, Dam 1d3, Mv 30', ML 9{break}
+	INT 16 (+2) DEX 15 (+1) CHA 7 (-1){break}
+	leather armor{break}
+	HP {1d6}{break2}
+2 	Ghouls click their teeth as they shift glances between each other.{break2}
+	Ghouls  AC 14, HD 2*, #At 2 claws, 1 bite, Dam 1d4 claw, 1d4 bite, all plus paralysis, Mv 30', Sv F2, ML 9, XP 100 ea.{break}
+	Save vs. Paralysis or be paralyzed for 2d8 turns; Elves are immune to this effect.  Cumulative +10% per bite of contracting ghoul fever.  
+    Those afflicted save vs. Death Ray at a penalty of -4 or die.{break}
+	HP {1d4+1 2d8}
+3	Yellow mold spreads out over the entire room.{break2}
+	Yellow Mold AC always hit, HD 2*, #At Special, Dam See below, Mv 0, Sv NM, ML N/A, XP 100{break}
+	Dormant in sunlight.  May emit spores once per day.  All within 10’ must save vs. Death Ray or take 1d8 points of damage per round for 6 rounds.{break}
+	HP {2d8}
+4	Two ghouls are tied up, back to back.  They are dressed in the clothing of farmers which is stained with blood.  They beg for release 
+    from their punishment, but will immediately attack any living saviors who free them.{break2}
+	Ghouls AC 14, HD 2*, #At 2 claws, 1 bite, Dam 1d4 claw, 1d4 bite, all plus paralysis, Mv 30', Sv F2, ML 9, XP 100 ea.{break}
+	Save vs. Paralysis or be paralyzed for 2d8 turns; Elves are immune to this effect.  Cumulative +10% per bite of contracting ghoul fever.  
+    Those afflicted save vs. Death Ray at a penalty of -4 or die.{break}
+	HP {2 2d8}{break2}
+	One ghoul wears a fine belt (worth 900 gp).  The other wears a jeweled bracelet (worth 600 gp).  Optionally, substitute with Treasure Type B.
+5	A rotting corpse in robes turns, hands held up.{break2}
+	Horticut (Zombraire) AC 12, HD 1*, #At 1 dagger or 1 spell, Dam 1d4 or per spell, Mv 20', Sv M1, Ml 9, XP 37{break}
+	Spell is magic missile{break}
+	HP {1d4}
+6	A zombie with no arms and distended belly lumbers forward.  The zombie can inflict no melee damage but any hit releases a cloud of yellow mold spores.{break}
+	Yellow Mold Zombie AC always hit, HD 2*, #At Special, Dam See below, Mv 20', Sv NM, ML N/A, XP 100{break}
+	Always loses initiative.  Emit spores once per day.  All within 10’ must save vs. Death Ray or take 1d8 points of damage per round for 6 rounds.{break}
+	HP {2d8}
+
+table: area11a_feature
+1	The animated skull of a cyclops sits on a table.  A brass hammer is nearby.  If struck with the hammer, the skull the skull {area11a_cyclops_action}.
+2	A wrinkled baron scowls out from a crackled oil painting that hangs over a silent Sun Room Fireplace. {area11a_fireplace}
+3	The waxy remains of long-extinguished candles stand before a shrine to a long-hair skeleton depicted in miniature effigy.  Once per day, an offering of 
+    anything worth at least 1 gp animates the small skeleton which speaks, "In honor of death itself, ask three questions and I will tell no lie." 
+    The spirit will answer three questions.  If the question may be answered with a simple yes or no, the skeleton makes it reply punctuated with a 
+    few moments of laughter.  Other questions are answered with a non sequitur, such as "bones are as brittle as twigs here", followed with the 
+    condemnation of “Fool!” upon the asker.
+4	Black lotus flowers grow from {1d6} pots.  If a character tries chewing black lotus, save vs. Poison or become ill for 24 hours, becoming mad from 
+    intense hallucinations.  Successful saves produce four hours of peaceful sleep.  Spellcasters travel the astral plane where they meet angels or 
+    demons of whom they may ask four questions.
+5	The belly of the corpse has been cut open and then sewn shut.  Inside the body cavity are coins and a piece of jewelry.
+    2,600 cp, 1,200 ep, 1,300 gp, and an anklet (worth 1,200 gp).  Alternatively, substitute with Treasure Type B.
+6	The belly of the corpse has been cut open and then sewn shut.  Opening the body cavity releases a cloud of moths that flutter
+    momentarily and then disperse into the rest of the house.
+
+table: area11a_cyclops_action 1d6
+1-2	sings a haunting elven ballad.
+3-4	rises into the air, spins for {1d6} rounds and then shoots a bolt of green energy from its eye socket at one living being.  Save vs. Spells or take 1d6 points of damage.
+5-6	Breaks in two to reveal a black diamond worth {1d20}0 gp.
+
+table: area11a_fireplace 1d6
+1-2	Searching in the stale ashes of the fireplace merely encourages soot to rain down the chimney.
+3 	Nestled in the stale ashes is a platinum coin stamped with the likeness of a frog.
+4	Though covered in ashes and scorch marks, an intact diary contains notes about a visit to the estate innumerable years before.  The book is immune to fire and contains ten blank pages.
+5	A glint of glass in the ashes comes from a small vial.  Inside is a potion of speed that lasts for one round.
+6	Mixed in the ashes are {2d6} gold pieces melted into a single blob.
+
+
+# Dining Room
+table: area12a 1d6
+1-3 A large banquet table is set with silver platters and utensils, together worth
+    {1d2},000 gp.
+4-6 An overturned banquet table blocks windows on the west wall. Several chairs
+    are broken into pieces.
+
+table: area12a_challenge
+1-2	Thick webs span from wall to wall.  Giant spiders cling to the ceiling, ready to pounce on easy prey.  The spiders have changed color to match the walls and surprise intruders 1-4 on 1d6.{break2}
+	Giant Crab Spider AC 13, HD 2*, #At 1 bite, Dam 1d8 + poison, Mv 40', Sv F2, ML 7, XP 100 ea.{break}
+	Save vs. Poison or die.{break}
+	HP {2d4 2d8}
+3-4	Necrotic oozes spill off the table onto the floor.{break2}
+	Necrotic Ooze AC 13, HD 3, #At 1 slam, Dam 1d6 slam + poison, Mv 10', Sv F3, ML 11, XP 145 ea.{break}
+	Save vs. Poison or suffer rotting disease.{break}
+	HP {1d4 3d8}
+5-6	Thick dust covers everything but a path to the door on the north wall.
+
+# Library
+table: area13a 1d6
+1-3	Bookshelves line the walls.  Heavy drapes cover the windows.  Laying open on a round table are several books.{break2}
+    {1d4+2 area13a_book <br>}
+4-6	Half-burned books linger in the fireplace.  Empty bookshelves block the windows.
+
+table: area13a_book
+1   Book {# book13}. {book}
+
+table: area13a_challenge 1d6
+1-2	Shriekers grow here.{break2}
+	Shriekers AC 13, HD 3, #At Special, Dam None, Mv 5', Sv F1, ML 12, XP 145 ea.{break}
+	Movement or light within 10 feet triggers shrieking for 1d3 rounds.{break}
+	HP {1d8 3d8}
+3-4	Red ink on a crinkled parchment reads "Curse those invisible crowns, and curse you, too!"
+5-6	A trap consisting of a wire spanning the entrance pulls a bookshelf down on the first to 
+    enter if undetected.  Save vs. Death (+/- DEX) or suffer 1d6 points of damage.
+
+# Service Pantry
+table: area14a 1d6
+1-3	Dust collects on pewter mugs arranged neatly atop a sideboard made of dark wood.  Though moth-eaten, the small rug betrays no recent traffic between the doors that connect this room to the Dining Room (Area 12) and the Kitchen (Area 16).  A few empty bottles are stashed in the drawers of the sideboard.
+4-6	Dishes of various types spill out of the doors and drawers of an ancient sideboard, many of them broken into small pieces.  The wood floor is a lighter color than the filthy parameter of the tiny room.
+
+table: area14a_challenge 1d6
+1-2	Necrotic oozes cover the floor.{break2}
+	Necrotic Oozes AC 13, HD 3, #At 1 slam, Dam 1d6, Mv 10', Sv F3, ML 11, XP 145 ea.{break}
+	Save vs. Poison or suffer rotting disease.{break}
+	HP {1d4 3d8}
+3-4	A zombie stands perfectly still, holding a tray of two empty wine glasses.  If disturbed, it lumbers at any living being, bashing with the sliver tray (120 gp).{break2}
+	Zombie AC 12, HD 2, #At 1 tray, Dam 1d6, Mv 20', Sv F2, ML 12, XP 75{break}
+	Always loses initiative.{break}
+	HP {2d8}
+5	Two heucova crouch, waiting to surprise interlopers.  They watch the dining room and the kitchen.{break}
+	Heucova AC 16, HD 2**, #At 2 claws or 1 mace, Dam 1d4 claw, 1d6 mace, Mv 40', Sv C2, ML 10, XP 125 ea.{break}
+	If struck by claws, save vs. Poison or contract disease.{break}
+	HP {2 2d8}
+6	{blank}
+
+# Food Pantry
+table: area15a 1d6
+1-3	The nearly empty shelves contain {1d6} empty glass jars and {2d4} glass jars still sealed.  The contents spoiled long ago.
+4-6	Thick dust covers {1d4} bottles left on otherwise empty shelves.
+
+table: area15a_challenge 1d6
+1	1 in 6 chance that the glass containers are under pressure and explode when handled.  Save vs. Death Ray (+/- DEX) or suffer 1d4 points of damage.
+2	Yellow mold covers the walls and shelves.{break2}
+	Yellow Mold AC always hit, HD 2*, #At Special, Dam See below, Mv 0, Sv NM, ML N/A, XP 100{break}
+	Dormant in sunlight.  May emit spores once per day.  All within 10 feet must save vs. Death Ray or take 1d8 points of damage per round for 6 rounds.{break}
+	HP {2d8}
+3	An ochre jelly oozed into the barrel long ago.{break2}
+	Ochre Jelly AC 12, HD 5*, #At 1 pseudopod, Dam 2d6, Mv 10', Sv F5, ML 12, XP 405{break}
+	Only hit by fire or cold.  On hits with weapons or electricity, divide into 1d4+1 smaller jellies of 2 HD, doing 1d6 points of damage each.{break}
+	HP {5d8}
+4-6	{blank}}
+
+# Kitchen
+table: area16a 1d6
+1-2	Among smashed cabinets and rusting pots are {1d6} arguably-human bodies in a state of advanced decay.  Little but bones remain inside tattered armor.
+3	Inside a black cauldron sleeps an ochre jelly.{break2}
+	Ochre Jelly AC 12, HD 5*, #At 1 pseudopod, Dam 2d6, Mv 10', Sv F5, ML 12, XP 405{break}
+	Only hit by fire or cold.  On hits with weapons or electricity, divide into 1d4+1 smaller jellies of 2 HD, doing 1d6 points of damage each.{break}
+	HP	{5d8}
+4-5	Two shriekers grow out of a pile of refuge.{break2}
+	2 Shriekers AC 13, HD 3, #At Special, Dam None, Mv 5', Sv F1, ML 12, XP 145 ea.{break}
+	Movement or light within 10 feet triggers shrieking for 1d3 rounds.{break}
+	HP {3d8}
+6	An evil Cleric in black plate armor grips a mace topped by an iron skull.  Fighters attend him.{break2}
+	Evil Human Cleric 5 AC 21, #At 1 Mace, Dam 1d8, Mv 30', ML 9, XP 405{break}
+	Spells are cure light wounds, protection from good, charm animal, silence 15' radius{break}
+	Equipment is plate mail +3, shield, mace
+	HP {5d6}{break2}
+	Human Fighters 2 AC 18, #At 1 shortsword, Dam 1d6, Mv 30', ML 9, XP 100 ea.{break}
+	Equipment is plate mail +1, shield, shortsword{break}
+	HP {1d6 2d8}
+
+# 2nd Floor Hallway
+table: area17a 1d6
+1-3	A tattered rug covers creaking floorboards.  A faded map hides under the rug.
+4-6	Dark stains mark bare floorboards.  The scent of decay hovers in the stale air.
+
+
+# Scholar’s Bedroom
+table: area18a
+1-3 An unlocked door opens to view a desk on the south wall beside large windows.  A small chair has toppled nearby.  An old bed rests in a nook 
+    in the east wall, missing bedclothes.  On the west wall stands a fireplace.
+4-6	Behind a locked door is an immaculate room that seems untouched for centuries.  A small chair is pushed up to an oak desk beside large windows 
+    on the south wall that overlook the entrance to the estate.  A cold fireplace stands on the west wall.
+
+table: area18a_challenge
+1	A spectre turns from contemplating something unseen on the desk.{break2}
+	Spectre AC 17(m), HD 6**, #At 1 touch, Dam Energy drain 2 levels/touch, Mv Fly 100', Sv F6, ML 11, XP 610{break}
+	HP {6d8}
+2	A mummy shambles toward the door as it opens.  It wheezes out a desperate warning.{break2}
+	Mummy AC 17(m), HD 5**, #At 1 touch, Dam 1d12 + disease, Mv 20', Sv F5, ML 12, XP 450{break}
+	Hits cause mummy rot, preventing healing.{break}
+	HP {5d8}
+3	With the door closed, the insane babbling and pacing of an allip can be heard only from outside by pressing one’s ear to the door. 
+    When the door opens, all within 60 feet are subject to its horrendous diatribe.{break2}
+	Allip AC 15, HD 6**, #At 1 touch + special, Dam Energy drain (1 level), Mv Fly 30’, Sv F6, ML 12, XP 610{break}
+	Save vs. Paralysis or become unable to move.  Regenerates 1d6 hit points per level drained.{break}
+	HP {6d8}
+4-6	{blank}
+
+table: area18a_treasure
+1	In a desk drawer are 600 sp in a sack and a Magic-User scroll with the spell ice storm.
+2	A gilded hourglass (300 gp) sits on the mantle over the fireplace.
+3	Three cloaks hang on freestanding coat rack.  One is an elven cloak.
+4	There are several books here.{break2}
+    {1d4+2 area18a_book <br>}
+5-6	None
+
+table: area18a_book
+1   Book {# book18}. {book}
+
+# Lady’s Bedroom
+table: area19a
+1	The ornate bed features turned posts and intricate carvings in hardwood, covered in golden overlay.
+    It weighs 500 lbs and could fetch {1d6},000 gp to the right buyer.
+2	A lacy gown drapes over the settee.
+3	A bearskin rugs lies before the fireplace.
+4	A skeletal hand protrudes from under the bed.
+5	Several elegant gowns hang in the closet.  One bears a jeweled pin ({2d6}00 gp).
+6	A dark stain spreads over the bare mattress.  Tuffs of brown straw poke out from holes in the mattress cover.
+
+table: area19a_challenge
+1-2	A crypt dweller hides in the {area19a_challenge_locked} chest.{break2}
+	Crypt Dweller AC 13(m), HD 2*, #At 2 claws, Dam 1d4, Mv 60', Sv F2, ML 12, XP 100{break}
+	Lose initiative on next round if struck by non-magical weapon.  Fights until destroyed.{break}
+	HP {2d8}
+3-4	Heucova hide under the bed, in the closet or in the chest, leaping out to surprise interlopers.  
+    A successful check for secret doors for the first PC to enter the room means glowing eyes are spotted and the surprise is negated.{break2}
+	Heucova AC 16 (s), HD 2**, #At 2 claws or 1 mace, Dam 1d4 claw or 1d6 mace, Mv 40', Sv C2, ML 10, XP 125 ea.{break}
+	If struck by claws, save vs. Poison or contract disease.{break}
+	HP {1d6 2d8}
+5	Embedded in the mattress, gray ooze waits to attack any who come near.{break2}
+	Gray Jelly AC 12, HD 3*, #At 1 pseudopod, Dam 2d8 + 2d8/round, Mv 1', Sv F3, ML 12, XP 175{break}
+	Touch instantly dissolves organic material and metal.  Magic items save vs. Death Ray.  Sticks on contact, doing automatic damage.{break}
+	HP {3d8}
+6	{blank}
+
+table: area19a_challenge_locked
+1-4 locked
+5-6 unlocked
+
+table: area19a_treasure
+1	The chest contains a purse with 2,100 gp, a platinum clasp (1,100 gp), a platinum comb (1,100 gp), and sapphire earrings (1,100 gp).
+2	The chest contains 2,600 sp and 1,700 gp.
+3	Under the mattress is an iron rod of cancellation.
+4	A diary next to the bed contains a map to buried treasure of type D.
+5	There are several books here.{break2}
+    {1d4+2 area18a_book <br>}
+6	{blank}
+
+table: area19a_book
+1   Book {# book19}. {book}
+
+# Lord’s Bedroom
+table: area20a 1d8
+1	On a nightstand sits an over-sized chess pawn.
+2	Heavy dust covers a bottle of wine and glass sitting on a small table next to the bed.
+3	The painting depicts a warrior in black plate armor standing up in the stirrups of his horse, two-handed sword aloft as a horde of footmen follow behind.
+4	A slash cuts across the portrait, in oil, of a maiden beside a brook.
+5	A vast quantity of bones are piled in the closet.
+6	An empty coffer is pushed under the bed.
+7	A secret door connects the closet to the closet from Area 19.
+8	The bottom of the fireplace has collapsed, allowing access to the rooms below.
+
+table: area20a_challenge
+1	A draugr sits motionless in an armchair, facing away from the door.  It arrogantly asks intruders if they have any last words before 
+    turning and breathing out a cloud of frost.{break2}
+	Draugr AC 17, HD 9** (AB +*8), #At 1 greatsword, Dam 1d10+3, Mv 30', Sv F9, ML 11, XP 1,225{break}
+	Once per turn, breathes 10-foot cone of ice. Save vs. Spells or be stunned (-2 to AC, no Dexterity or shield bonuses).{break}
+	HP {9d8}
+2	A vaguely humanoid figure made of bones stands at attention near the windows.  The bone horror steps forward to defend the room.{break2}
+	Bone Horror AC 14(m), HD 4*, #At 2 claws or 1 sting, Dam 1d6+3 claw or 1d4+poison sting, Mv 20' Fly 30', Sv C4, ML 12, XP 280{break}
+	Save vs. Poison or die.{break}
+	HP {4d8}
+3	{area20a_succubus} reclines on the bed.{break2}
+	Succubus/Incubus AC 20(m), HD 7**, #At 2 claws + special, Dam 1d4 claw, Mv 30' Fly 50', Sv C6, ML 7, XP 800{break}
+	Spells used at will as a 12th-level caster are charm person, suggestion, darkness 15' radius, dimension door, mind reading, 
+    clairaudience (as the potion).  Change shape at will.  Drain one energy level per kiss, gaining drained HP.  Immune to lightning and poison.  
+    Half-damage from acid, cold, and fire.{break}
+	HP {7d8}
+4	A carpet covering the floor is soaked in a foul liquid that rises out under footfalls.  The carpet is infested with rot grubs.{break2}
+	{3d6} Rot Grubs AC 10, HD 1 HP, #At 1 bite, Dam special, Mv 5', Sv F1, ML 12, XP 10{break}
+	WIS check to notice attack.  May be killed in two first rounds by cutting or fire, doing 2d6 points of damage, else victim dies in 1d3 turns.{break}
+5	The floor immediately inside the door has rotted.  Save vs. Death Ray or fall 10 feet into area 12, taking 1d6 points of damage.
+6	{blank}
+
+table: area20a_succubus 1d4
+1-2 An incubus
+3-4 A succubus
+
+table: area20a_treasure
+1	The animal skin on the bed is a well-preserved lion’s pelt worth 1,500 gp.
+2	Among the ordinary weapons hung on the wall is a magical dagger +1 that produces blue flames when the command word engraved on the hilt is spoken aloud.
+3	Every few minutes, tiny sparks leap from the head of a cursed spear -1 hung on the wall.
+4	Hanging from a hook is the Midas Sling.  It works as a sling +2 when throwing a gold piece.
+5-6	{blank}
+
+# Back Bedroom
+table: area21a
+1	The head of the maul is black iron forged in the shape of an ape skull.
+2	The floor and the lower 1 foot of wall show evidence of water damage.
+3	Tally marks carved in the wall over the bed number 138.
+4	A circle of dried blood soaked into the carpet contains a five-pointed star made of small twigs.
+5	A rat hangs from a noose.
+6	A leather-bound trunk stands tipped on its side, halfway open.
+
+table: area21a_challenge
+1	The lumps under the covers are body parts assembling into a blade spirit.  The body is mostly complete, though missing a few patches of 
+    skin and the entire head.  It leaps out of the bed, snatches the maul and attacks.  It will pursue any who flee.{break2}
+	Common Blade Spirit AC 17(m), HD 9 (AB +8), #At 3 maul/2 rounds, Dam 1d10+4, Mv 30', Sv F9, ML 9, XP 1,075{break}
+	HP {9d8}
+    {break2}
+2	A chill fills the air around the bed.  A draugr is curled up under the covers.{break2}
+	Draugr AC 17, HD 9** (AB +8), #At 1 maul, Dam 1d10+3, Mv 30', Sv F9, ML 11, XP 1,225{break}
+	Once per turn, breathe 10-foot cone of ice. Save vs. Spells or be stunned (-2 to AC, no Dexterity or shield bonuses).{break2}
+	HP {9d8}
+    {break2}
+3-6	{blank}
+
+table: area21a_treassure
+1	An oil painting hanging on the wall is enchanted with the illusion of movement (1,000 gp).
+2	A dark, pint-sized bottle contains a potion of giant strength.
+3	A squat, clay pot sealed with wax contains a potion of delusion.
+4	Under the pillow of the bed is a ring of protection +2.
+5-6	{blank}
+
+# Master Bedroom
+table: area22a
+1	A small (16- x 9-inch) oil painting of a castle with red flags leans against the wall below a similar-sized spot on the wall with darker paint.
+2	The skull of a cat sits on a nightstand in a blue dish.
+3	Musty blankets fill the chest.
+4	A dark stain on the floor radiates from the door on the east wall.
+5	Unrecognized runes surround abstract figures smeared on the walls in mud.
+6	An intricate engraving hanging on the wall over the bed casts confusion on anyone gazing at it.  The spell’s effect lasts for 10 rounds.
+
+table: area22a_challenge
+1	A mohrg grumbles insults to zombies armed with longswords.{break2}
+	Mohrg AC 23, HD 14** (AB +11), #At 1 slam or 1 tongue, Dam 1d6 or paralysis, Mv 30', Sv F14, ML 12, XP 2,730{break}
+	On tongue hit, save vs. Paralysis or become paralyzed for 6d4 rounds.{break2}
+	HP {14d8}
+    {break2}
+	Zombie AC 12 (half damage from blunt weapons, 1 point only from arrows, bolts, or sling stones), HD 2, #At 1 longsword, Dam 1d8, Mv 20', Sv F2, ML 12, XP 75 ea.{break}
+	Always loses initiative.{break}
+	HP {2d6 2d8}
+    {break2}
+2	A draugr paces about the room, contemplating revenge.{break2}
+	Draugr AC 17, HD 9** (AB +8), #At 1 weapon, Dam 1d10+3, Mv 30', Sv F9, ML 11, XP 1,225{break}
+	Once per turn, breathe 10 feet cone of ice. Save vs. Spells or be stunned (-2 to AC, no DEX or shield bonuses).{break}
+	HP {9d8}
+3	A barghest in humanoid form turns to face any who enter the room.{break2}
+	Barghest AC 16 (s), HD 6+3*, #At 2 claws  (humanoid) or 1 bite (dog), Dam 1d6 claw (humanoid) or 2d4 (dog), Mv 40' (humanoid) or 60' (dog), Sv F6, ML 10, XP 555{break}
+	Save vs. Paralysis to avoid gaze or be paralyzed for 1d6+1 turns.{break}
+	HP {6d8+3}
+    {break2}
+4	Soft weeping may be heard from beyond the door of the room, the intensifying wails of a banshee.  2d6 rounds after entering the room, the banshee’s 
+    cries will reach a peak, requiring a save vs. Death. {break2}
+	Banshee AC 19 (m), HD 7**, #At 1 touch, Dam 1d4 energy drain, Mv 60’, Sv F7, ML 8, XP 800{break}
+	On weeping crescendo, anyone within 50 feet must save vs. Death Ray or die in 2d6 rounds.{break}
+	HP {7d8}
+    {break2}
+5-6	{blank}}
+
+table: area22a_treasure
+1	A scroll of Magic-User spells with dispel magic, hold portal, locate object, magic jar, water breathing. 3,200 gp.	 
+2	A bag of gems worth 4,200 gp.
+3	4 potions of gaseous form.
+4	1,900 gp.  An amulet of proof against detection and location.  A longsword +1.  A map to type A treasure, 1d4 miles from the house.  
+    A scroll of protection from undead.  A scroll of Magic-User spells with floating disc, hold portal, light, lightning bolt, magic mouth, polymorph other.
+5-6	{blank}
+
+# Bath
+table: area23a
+1-3	Opposite the door sits a metal tub.  The pieces of a smashed mirror are scattered over the floor before a toilet.  
+    A pipe connects the toilet through the closet below to the basement.
+4-6	This 10- x 10-foot room contains little but unrecognizable debris.  The most prominent feature is a 4-inch open pipe in the floor.
+
+# Master Bath
+table: area24a
+1-3	An ancient stench permeates this room.  A small seat with an open hole covers a pipe that extends all the way to the basement.  
+    Thick filth covers the floor and has splattered up the walls.
+4-6	An old toilet over a pipe going down through the closet to the basement is barely seen among boxes of all sizes piled in this 10- x 10-foot room.  
+    Each box contains the skull or mummified head of a human or humanoid.
+
+# Basement
+table: area25a
+1-3	Creaking stairs descend into a dark basement, approximately 40- x 40-foot.  The floor is damp earth.  A small mound of dirt is piled in each corner.  
+    Two pipes protrude 2 feet from the ceiling.  Refer to 25a on the map.
+4-6	Water pools in a depression in the center of this 40- x 40-foot basement.  Beams cross the low (5-foot) ceiling.  Parts of ruined boxes litter the earthen floor.  
+    Four intact boxes sit in the corners.  Two pipes extend from the ceiling down into a 10-foot pit.  Refer to 25c on the map.
+
+table: area25a_challenge
+1-2	Four wraiths rise from each corner of the dank room, moaning as they advance.  They swing chains attached to rusting manacles.{break2}
+	Wraiths AC 15(m), HD 4**, #At 1 touch, Dam 1d6 + energy drain (1 level), Mv Fly 80', Sv F4, ML 12, XP 320 ea.{break}
+	HP {4 4d8}
+3-4	Giant shrews burrow up from the soft earth to investigate the vibrations of intruders.{break2}
+	Giant Shrews AC 16, HD 1*, #At 2 bites, Dam 1d6, Mv 60', Sv F2, ML 10, XP 37 ea.{break}
+	Can attack two foes in one round.{break}
+	HP {8 2d8}
+5-6	{blank}
+
+table: area25a_treasure
+1-2	2,400 cp, anklet (900 gp), flagon (700 gp)
+3-4	400 sp, 1,000 ep, 800 gp
+5-6	A box of toys covered in grime.
+
+
+# Bandits
+
+table: gang
+1	Leader (Human Fighter 5) AC 16, #At 1 longsword, Dam 1d8, Mv 40', Sv F5, ML 9, XP 360{break}
+	INT 7 (-1), DEX 14 (+1), CON 14 (+1){break}
+	Equipment is chain mail, longsword{break}
+	HP {5d8}{break2}
+	Sergeant (Dwarf Thief 5) AC 16, #At 1 longsword, Dam 1d8, Mv 40', Sv D‑T5, ML 9, XP 360{break}
+	WIS 7 (-1), DEX 14 (+1), CHA 17 (+2){break}
+	Equipment is leather armor +1, longsword{break}
+	HP {5d6}{break2}
+	9 Human Fighter 1 AC 13, #At 1 scimitar, Dam 1d8, Mv 40', Sv F1, ML 9, XP 25 ea.{break}
+	Equipment is leather armor, scimitar{break}
+	HP {9 1d8}{break2}
+	4 Human Thief 1 AC 13, #At 1 shortsword, Dam 1d6, Mv 40', Sv T1, ML 9, XP 25 ea.{break}
+	Equipment is leather armor, shortsword{break}
+	HP {4 1d6}
+    {break2}
+2	Leader (Halfling Thief 2) AC 15, #At 1 battle axe, Dam 1d8+1, Mv 40', Sv ½-T2, ML 9, XP 75{break}
+	STR 14 (+1){break}
+	Equipment is leather armor +2, battle axe{break}
+	HP {2d6}{break2}
+	Sergeant (Halfling Fighter 3) AC 13, #At 1 shortsword, Dam 1d6, Mv 40', Sv ½-F3, ML 9, XP 145{break}
+	WIS 7 (-1){break}
+	Equipment is leather armor, shortsword{break}
+	HP {3d8}{break2}
+	Halfling Thief 1 AC 13, #At 1 longsword, Dam 1d8, Mv 40', Sv ½-T1, ML 9, XP 25 ea.{break}
+	Equipment is 	leather armor, longsword{break}
+	HP {13 1d6}{break2}
+3	Leader (Orc Chief) AC 15, HD 4, #At 1 scimitar, Dam 1d8+1, Mv 20', Sv F4, ML 9, XP 240{break}
+	Equipment is chainmail, scimitar{break}
+	HP {4d8}{break2}
+	Sergeant (Orc Warrior) AC 15, HD 2, #At 1 two-handed sword, Dam 1d10, Mv 30', Sv F2, ML 9, XP 75{break}
+	Equipment is chain mail, two-handed sword{break}
+	HP {2d8}{break2}
+	Orc AC 15, HD 1, #At 1 scimitar, Dam 1d8, Mv 30', Sv F1, ML 8, XP 25 ea.{break}
+	Equipment is chain mail, scimitar{break}
+	HP {3d6 1d8}
+4	Leader (Hobgoblin) AC 14, HD 1, #At 1 longsword, Dam 1d8, Mv 30', Sv F1, ML 8, XP 25{break}
+	Equipment is leather armor, longsword{break}
+	HP {1d8}{break}
+	Sergeant (Bugbear) AC 15, HD 3+1, #At 1 spear, Dam 1d8+1, Mv 30', Sv F3, ML 9, XP 145{break}
+	Equipment is leather armor, spear{break}
+	HP {3d8+1}{break2}
+	Goblin AC 14, HD 1-1, #At 1 club, Dam 1d6, Mv 20', Sv F1, ML 7, XP 10 ea.{break}
+	Equipment is leather armor, club{break}
+	HP {3d6 1d8-1}{break2}
+5	Leader (Human Fighter 9) AC 17, #At 1 two-handed sword, Dam 1d10 +1, Mv 20', Sv F9, ML 9, XP 1,075{break}
+	STR 15 (+1), CON 13 (+1){break}
+	Equipment is plate mail, two-handed sword{break}
+	HP {9d8}{break2}
+	Sergeant (Human Thief 11) AC 16, #At 1 battle axe, Dam 1d8 -1, Mv 40', Sv T11, ML 9, XP 1,575 {break}
+	STR 8 (-1), INT 8 (-1), DEX 14 (+1), CHA 7 (-1){break}
+	Equipment is leather armor +2, battle axe, potion of invulnerability{break}
+	HP {11d6}{break2}
+	Human Fighter 4 AC 17, #At 1 spear, Dam 1d6, Mv 20', Sv F4, ML 9, XP 240 ea.{break}
+	Equipment is plate mail, spear{break}
+	HP {2d6 4d8}{break2}
+6	Leader (Elf Magic-User 9)  AC 12, #At 1 walking staff, Dam 1d4, Mv 40', Sv E-MU9, ML 9, XP 1,075{break}
+	INT 15 (+1), WIS 17 (+2), CON 16 (+2){break}
+	Spells are charm person, 2x detect magic, detect invisible, web, wizard lock, fireball, slow, hallucinatory terrain, massmorph, wall of stone{break}
+	Equipment is walking staff, ring of protection +1{break}
+	HP {9d4}{break2}
+	Sergeant (Dwarf Fighter 10) AC 18, #At 1 great axe, Dam 1d10 +2, Mv 30', Sv D-F10, ML 9, XP 1,300{break}
+	STR 17 (+2), CON 14 (+1){break}
+	Equipment is chain mail +3, greataxe, potion of treasure finding{break}
+	HP {10d8}{break2}
+	Human Fighter 6 AC 19, #At 1 longsword, Dam 1d8, Mv 20', Sv F6, ML 9, XP 500 ea.{break}
+	Equipment is plate mail, shield +2, longsword{break}
+	HP {2d6 6d8}{break2}
+
+table: gang_specialty
+1	highway robbery
+2	slavery
+3	assassination
+4	smuggling
+5	overthrow of the local government
+6	{gang_specialty} and {gang_specialty}
+
+table: gang_insignia
+1	a {gang_color}} bandana or sash
+2	an insignia of a dagger stabbing an eye
+3	an insignia of chains circling a skull
+4	an insignia of a broken crown
+5	an insignia of a silver toad
+6	an insignia of a hand missing a finger
+
+table: gang_color
+1   red
+2   blue
+3   green
+4   violet
+
+# Porch
+table: area8b
+1	Stairs lead up to a 10- x 10-foot porch and a heavy door that bears letters in red paint that offer a warning, "{area8b_warning}". 
+    The door is barred from the other side.
+2	A modest entry door on the north end of a 10- x 10-foot porch is secured by a simple lock.  Access is available via stairs from the south.
+    The boards of the porch creak under footsteps.
+3	Wooden stair treads appear newer than surrounding woodwork.  An ironclad door is barred from the other side.
+4	Stone stairs lead to a porch covered in wooden planks painted green.  A rusting chain loops through a hole in the door, 
+    around the door frame and back out a hole in the wall where a padlock joins the two ends.  Almost unreadable, red paint smeared on the 
+    ragged door announces "{area8b_warning}".
+5	"{area8b_warning}". is painted on a plank of wood affixed to a stake at the foot of stairs leading up to a 10- x 10-foot porch.  The door is unlocked.
+6	Wooden planks are placed over rotting stairs leading to a large porch.  Ragged vines grow on the eastern side, providing some shade.
+
+table: area8b_warning
+1	SPIKE’S HIDEOUT
+2	DANGER
+3	KNOCK LOUDLY
+4	BEWARE OF DOG
+5	NO ENTRANCE
+6	DO NOT ENTER
+7	LOOT & LUCRE
+8	PREPARE TO DIE
+9	DEATH TO ALL WHO OPPOSE US
+10	THE EYE SEES ALL
+
+table: area8b_trap
+1	The floor of the porch is rigged as a crude trap door that’s opened by pulling a rope from Area 9.  Victims must save vs. Death Ray or fall {1d4}0 feet into a pit dug into soft earth.
+2	The roof of the porch is rigged to drop a load of {1d4} boulders when a rope is pulled from inside, in Area 9.
+    Each boulder does 1d6 points of damage, save vs. Death Ray (+/- DEX) for half-damage.
+3	A crawlspace beneath the porch floor offers strategically placed gaps that allow a henchman to thrust a dagger upwards in a sneak attack.  
+    Floorboards offer excellent cover for the bandit who may wisely retreat into a crawlspace if threatened.
+4	A short barrel sits on the porch and contains rotting meat infested with rot grubs.{break2}
+	{5d4} Rot Grubs AC 10, HD 1 HP, #At 1 bite, Dam special, Mv 5', Sv F1, ML 12, XP 10 ea.{break}
+	WIS check to notice attack.  May be killed in two first rounds by cutting or fire, doing 2d6 points of damage, else victim dies in 1d3 turns.{break}
+5	An iron bear trap, unconcealed, sits in the middle of the porch.  Does 1d12 points of damage if accidentally tripped.
+6	An obvious gap around a square section in the middle of the porch is a false trap door.
+
+
+# Entry
+table: area9b
+1-3	Dim light stabs through the window on the east wall of this entry chamber over a fine, woven rug and towards a hallway to the west.  
+    A closet door to the north is kept shut with a heavy padlock, and a doorway on the south wall allows exit from the building.
+4-6	The main entrance to the house on the south wall faces a closet door on the north wall.  A window on the east wall offers a view across a 
+    path to a garden.  To the west, a hallway opens up to a parlor.  Three canes are stuffed into a large vase on the floor.
+
+table: area9b_closet
+1	Beyond the locked closet door hang 2d6 coats, most in pristine condition.  A thorough search of pockets will turn up {area9b_treasure}.
+2	A small closet, 5-foot square, is filled with sacks of old clothes.  A concealed door on the west wall contains {area9b_treasure} plus a leather sack holding {3d8}00 gp.
+3	A portly man sits gagged and tied to a chair.  His eyes blink furiously upon discovery.  If freed, he describes his recent kidnapping by the bandits.  
+    He promises a reward of {2d6},000 gp if returned to safety.  Roll starting morale to determine how well he might stick with the party in a fight.
+    {break2}
+	Tenork the Merchant AC 13, HD ½ (1d4 HP), #At 1 Dagger, Dam 1d4, Mv 20', Sv NM, ML special, XP 0{break}
+	CHA 17 (+2){break}
+	HP {1d4}
+4	The ceiling of this 5- x 10-foot closet collapsed into a pile of plaster and wood splinters, allowing access to Area 23 above.
+5	One of the henchmen dozes in this makeshift bedroom, waking if the door is opened and surprised for one round.  He keeps {area9b_treasure} in a small sack.
+6	Opening the closet door pulls a string that tips over a box of marbles which pour out into the entry area (Area 9).
+    The marbles reduce movement to 5' unless a save vs. Death Ray +DEX is made each round.
+
+table: area9b_treasure
+1	a fur-lined jacket of exceptional quality (300 gp).
+2	a palm-sized hourglass made of platinum and set with jewels (550 gp).
+3	the deed to a mine 50 miles away.
+4	a packet of letters and a book wrapped in parchment.  {book}
+5	a wool blanket of fine quality.
+6	a crystal ball in a silk sleeve.
+
+
+# Parlor and Hallway
+table: area10b
+1	Two figures relax in worn out chairs, smoking pipes. One is the gang leader. The other is one of the henchmen. They are not expecting visitors.
+2	Two figures, both henchmen, snore, slumped in comfortable chairs next to the fireplace. A bottle of fine whiskey sits next to two empty glasses.
+3	Four henchmen engage in an argument over {area10b_argument}.
+4	A fire smolders in the fireplace on the west side of the room.  An empty bottle has tumbled onto the ragged rug.  Two cushioned chairs sit empty.
+5	A halfling with curly red hair is tied to a chair, being interrogated by two henchmen.
+    His longsword is leaning against the wall near the fireplace on the west side of the room.{break2}
+	Redmund, Halfling Thief 1, AC 14, #At 1 longsword, Dam 1d8, Mv 30', ML 9{break}
+	INT 7 (-1) WIS 14 (+1) DEX 15 (+1){break}
+	Equipment isleather armor, longsword{break}
+	HP {1d6}
+6	Two smoking pipes rest on a side table near two worn out chairs.  The carpet is stained in blood.
+
+table: area10b_argument
+1	whether the sergeant ought to replace the leader.
+2	where to strike next
+3	whether to admit a new member
+4	whether to go to war with a rival gang
+5	whether toads are frogs
+6	how to split up a pile of loot sitting on a table between them ({1d6},000 gp)
+
+table: area10b_stairs
+1	A padlock binds a heavy chain that passes through a hole in the wall and a hole in the door.
+2	Four boards are nailed over the door.  A skull and crossbones are painted over the top of them.
+3	An unlocked door is stained with grease around the knob.
+4	An open doorway reveals stairs going down into darkness.
+5	A door hangs loosely, the latch forced and useless.
+6	Only hinges remain to suggest that a door once kept a draft from drifting up the dark staircase to the basement.
+
+
+# Sun Room
+table: area11b
+1	A map is spread out on a square table, its corners held down by smooth, fist-sized stones. {area11b_map}
+2	A wriggling captive is tied down to a table.  Two henchmen hover over her, one with a knife.  The captive is the 
+    lone survivor of the gang’s last excursion.  Her torturers hope to extract the location of her family’s treasure.
+3	{1d6} henchmen doze here after a drinking binge.
+4	Books burn in the blazing fireplace.  A small stack of books is set aside.  A henchmen squats near the fire, ready to toss another book in.
+    {break2}
+    {1d4+2 area11b_book <br>}
+5	In a row of pots grows healthy black lotus, now blooming.  A henchmen carefully pours water into the pots.
+	If a character tries chewing black lotus, save vs. Poison or become ill for 24 hours, becoming mad from intense hallucinations.  
+    Successful saves produce four hours of peaceful sleep.  Spellcasters travel the astral plane where they meet angels or demons of whom they may ask four questions.
+6	A large map is nailed to the north wall.  The sergeant and two henchmen study the map intently but notice any who enter. {area11b_map}
+
+table: area11b_map
+1	The map shows routes taken by merchants along with spots marked as prime ambush points.
+2	The map indicates a nearby spot where treasure type E was buried.
+3	The rooms of an underground tomb are drawn out on the map with some rooms marked with notes about the contents.
+4	The map shows the buildings in a nearby city and the routes taken by the town guard.
+5	The map shows stars and planets with dotted lines connecting them.
+6	Both stories of the house are diagrammed with notes added for adding secret chambers.
+
+table: area11b_book
+1   Book {# book11}. {book}
+
+
+# Dining Room
+table: area12b
+1	The face of a demon has been carved into the surface of the table in a crude style.
+2	A warm fire blazes in the fireplace.
+3	Empty bottles and filthy dishes litter the table.
+4	A bundle of swords lays across the table, tied together with a leather strap.
+5	{1d6} small sacks, each containing {3d6} gp are set around the table.
+6	The table has collapsed in the center.  The chairs are tumbled over.  Some are broken.
+
+table: area12b_challenge
+1	The leader sits at the head of the table facing any who enter.  {1d6} henchmen hunch over the table as well.
+2	The sergeant and {1d6} henchmen relax at the table, quaffing ale.
+3	The entire gang is here planning their next operation.
+4	Two henchmen are arm-wrestling at the far end of the table.
+5-6	{blank}
+
+# Library
+table: area13b
+1-2	Bookshelves line the walls.  Heavy drapes cover the windows.  Laying open on a round table are 1d10 books.
+3	Half-burned books linger in the fireplace.  Empty bookshelves block the windows.
+4-5	{1d6}00 books fill shelves.  A few sit open on a round table.{break2}
+    {3d6 area13b_book <br>}
+6	Discolored walls suggest the former presence of tall shelves.  Nothing remains in the room except for a 
+    single book on a single bookshelf next to the entrance. {book}
+
+table: area13b_challenge
+1-2	A trap consisting of a wire spanning the entrance pulls a bookshelf down on the first to enter if undetected.  Save vs. Death Ray (+/- DEX) or suffer 1d6 points of damage.
+3-4	A thin mage leaps up to the door when opened.  She has been held prisoner and ordered to decipher the secrets of the books.{break2}
+	Colita, Elf Magic-User 4 AC 13, #At 1, Dam 1d4, Mv 40', ML 9{break}
+	STR 13 (+1), INT 13 (+1), WIS 8 (-1), DEX 16 (+2), CHA 13 (+1){break}
+	Spells are magic missile, read magic{break}
+	HP {4d4}
+5-6	{blank}
+
+table: area13b_book
+1   Book {# book13}. {book}
+
+
+# Service Pantry
+table: area14b
+1-3	Pewter mugs are set on top of the cabinet, inside of which are {2d10} bottles of fine liquor.
+4	A giant rat was stuffed into the cupboard as a practical joke.{break2}
+	Giant Rat AC 13, HD 1d4 HP, #At 1 bite, Dam 1d4 + disease, Mv 40' Swim 20', Sv F1, ML 8, XP 10{break}
+	5% any victims bitten sicken in 3d6 hours.{break}
+	HP {1d4}
+5	A bear trap hides under a pile of dirty clothes.  Save vs. Death Ray (+/- DEX) or suffer 1d6 points of damage plus be held in place as if grappled.
+6	A single bottle of poisoned liquor is pushed back inside the cabinet.  Imbibers must save vs. Death Ray (+/- CON) or permanently lose 
+    1d6 INT and 1d6 WIS over the next 30 minutes.  Neutralize poison will reverse the effects if applied before the time expires.
+
+# Food Pantry
+table: area15b
+1-4	All of the food is spoiled.
+5-6	A pack of rats nest here, and a venomous snake has just crawled in to hunt.  Disturbing the contents of the room causes the rats to frenzy.  
+    The snake may (1-2 on 1d6) strike at a character in the room.{break2}
+	{5d10} Rats AC 11, HD 1 HP, #At 1 bite per pack, Dam 1d6 + disease, Mv 20' Swim 10', Sv NM, ML 5, XP 360{break}
+    5% any victims bitten sicken in 3d6 hours.{break2}
+	Venomous Snake AC 13, HD 1*, #At 1 bite, Dam 1d4 + poison, Mv 30', Sv F1, ML 7, XP 37{break}
+	HP {1d8}
+
+# Kitchen
+table: area16b
+1	Opening the door to the outside releases a spear rigged to the ceiling.  Save vs. Death Ray (+/- DEX) or suffer 1d6 points of damage.  The trap may be disabled by attaching a string to a cleat on the wall.
+2	{1d6} henchmen gather here for a meal.
+3	A cauldron of stew simmers on a wood-fired stove.
+4	A cauldron of stew fell from the stove and covered most of the floor in a slippery mess.  To avoid falling while moving through this area, halve movement or save vs. Death Ray (+/- DEX) every round.
+5	A miserable cook is preparing loaves of bread to place in a wood-fired stove.{break2}
+	Cookie, Normal Man AC 11, HD ½ (1d4 HP), #At 1 spoon, Dam 1d4, Mv 20', Sv NM, ML 6, XP 25{break}
+	HP {1d4}
+6	A wood golem stands at attention in the middle of the room, ready to clean or cook by order of anyone in the gang who knows to end 
+    all requests by stating “praise Molok”.  The golem ignores anyone moving through the room, unless they speak, and if they fail to 
+    state the code phrase, it attacks.{break2}
+	Wood Golem AC 13(m), HD 2+2*, #At 1 fist, Dam 1d8, Mv 40', Sv F1, ML 12, XP 100{break}
+	One extra point of damage per die from fire, save -2 versus fire, -1 penalty to initiative.{break}
+	HP {2d8+2}
+
+# 2nd Floor Hallway
+table: area17b
+1-2	So many empty bottles litter the hallway that it is nearly impossible to pass through without triggering a momentary tinkling glass.  
+    Only a successful move-silently roll can prevent a noise that might alert room occupants.
+3-4	A henchmen lays across the floor, bottle in hand and snoring loudly.
+5	A ratty rug runs the length of the hallway.  Characters might notice (as a secret door) a small lump under the rug near the stairs.  
+    It’s a key that opens the door to the master bedroom.
+6	Two dogs patrol the hallway, yapping at unrecognized visitors.  They only fight if cornered and will attempt to rush downstairs if possible.{break2}
+	Dogs AC 14, HD 1+1, #At 1 bite, Dam 1d4 + hold, Mv 50', Sv F1, ML 9, XP 25 ea.{break}
+	After biting, attach to do 1d4 points of damage every round. Save vs. Death Ray (+/- STR) to escape.{break}
+	HP {1d8+1}
+
+
+# Scholar’s Bedroom
+table: area18b
+1   {area18b_locked}} door opens to view a desk beside large windows on the south wall.  A small chair is pushed under the desk.  An old bed rests in a nook in the east wall.  On the west wall stands a fireplace.
+
+table: area18b_locked
+1-3 An unlocked
+4-6 A locked
+
+table: area18b_challenge
+1	A henchman relaxes in bed with a book. {book}
+2	A henchman is bent down to the fireplace lighting a fire.
+3	A henchman is sleeping in the bed.
+4	A giant cockroach hides under the bed and scrambles out if anyone enters.{break2}
+	Giant Cockroach AC 15, HD 1*, #At 1 bite, Dam 1d4, Mv 50', Sv F1*, ML 6, XP 37{break}
+	HP {1d8}{break2}
+5	A flesh golem sits on the bed.  Without turning, the golem instructs any who enter “leave now”.  Failure to comply causes the golem to attack.{break2}
+	Flesh Golem AC 20(m), HD 9** (+8), #At 2 fists, Dam 2d8, Mv 30', Sv F5, ML 12, XP 1,225{break}
+	Cumulative 1% chance per round of rampage.  Cold or fire slows a flesh golem (as the slow spell) for 2d6 rounds.  
+    Electricity breaks slowing and heals 1 point of damage for every 3 done.{break}
+	HP {9d8}{break2}
+6	{blank}}
+
+table: area18b_treasure
+1	A drawer in the desk has a sack of {1d6}00 sp.
+2	The drawers of the desk are filled with notes suitable for blackmailing prominent citizens of the closest towns.
+3	A ring on the desk is cursed to turn the wearer into a giant cockroach permanently via polymorph other.
+4	A grotesque statue (3,200 gp) made of gold and 2 feet tall stands on the desk.
+5	An envelope on the desk contains plans for carrying out a jailbreak of gang members from the royal prison.  The warden may pay a reward for the information.
+6	A notebook contains a full profile of a wealthy widow with treasure type E.  The notes allow a human to have a CHA score of 18 with respect to the widow.
+
+
+# Lady’s Bedroom
+table: area19b
+1	The sergeant sleeps in the bed.
+2	The sergeant sits on the bed, sharpening his sword.
+3	A giant rattlesnake is shut up in the chest.{break2}
+	Giant Rattlesnake AC 15, HD 2*, #At 1 bite, Dam 1d8 + poison, Mv 40', Sv F2, ML 8, XP 100{break}
+	Save vs. Poison or die.{break}
+	HP {2d8}
+    {break2}
+4	An evil Cleric and three henchmen discuss cooperation with the local temple of Molok.{break}
+	Human Cleric 5 AC 19, #At 1 warhammer, Dam 1d6, Mv 20', ML 9, XP 360{break}
+	STR 13 (+1), INT 7 (-1), WIS 15 (+1), DEX 13 (+1){break}
+	Spells are cure light wounds*, light*, hold person, silence 15' radius{break}
+	Equipment is plate mail, shield, warhammer, scroll of protection from living{break}
+	HP {5d6}
+    {break2}
+5-6	{blank}
+
+table: area19b_treasure
+1	A golden statue sits atop a pile of loose coins on the floor.  The pile contains 5,700 cp, 20,000 ep, and 2,000 pp.  
+    The fool’s idol will attack anyone entering the room who is not wearing the gang’s insignia.{break2}
+	Fool’s Idol: AC 15, HD 2*, #At 2 claws or 1 spray of coins, Dam 2d4 claw or 1d12 spray of coins, Mv 30', Sv F2, ML 10, XP 100{break}
+	HP {2d8}}
+2	A shrine to a mysterious god with 20 eyes fills the closet.  Various offerings lay at the feet of a golden idol.  The valuable items are treasure type E.
+3	The chest contains the shriveled corpse of a giant rattlesnake.
+4	A portrait (750 gp) of a noblewoman hangs over the bed.
+5	The closet contains an ornate great axe (350 gp), gold-plated and set with diamonds.
+6	{blank}
+
+# Lord’s Bedroom
+table: area20b
+1	A book lies open on a nightstand. {book}
+2	An empty bottle and a glass sit on a small table next to the bed.
+3	The painting depicts a warrior in black plate armor standing up in the stirrups of his horse, greatsword aloft as a horde of footmen follow behind.
+4	A silver locket (230 gp) on a table beside the bed contains a delicate painting of a red-haired lass.
+5	The closet contains ordinary clothes and boots.
+6	A secret door connects the closet to the closet from Area 19.
+
+table: area20b_challenge
+1	A Magic-User sits in an armchair holding a wand of paralyzation.{break2}
+	Human Magic-User 5 AC 12, #At 1 dagger, Dam 1d4, Mv 40', ML 9, XP 360{break}
+	STR 7 (-1), DEX 13 (+1), CON 13 (+1), CHA 14 (+1){break}
+	Spells are light, sleep, levitate, web, clairvoyance{break}
+	Equipment is wand of paralyzation (20 charges), dagger{break}
+	HP {5d4}
+2	The closet is a magical portal that connects to the basement of a building in a nearby town.
+3	An armored ogre grips a magical sword as she gazes out the window.{break2}
+	Ogre AC 15, HD 4+1, #At 1 longsword, Dam 2d6 + 2/+3 vs. humans, Mv 30', Sv F4, ML 10, XP 240{break}
+	Equipment is longsword +1/+2 vs. humans{break}
+	HP {4d8+1}
+4	The door is trapped.  If not deactivated, the trap fires a barbed spear directly at the doorway.  
+    Make an attack at AB +10 (ignoring shield or DEX bonus) to inflict 1d6 points of damage.
+5-6	{blank}}
+
+table: area20b_treasure
+1	The animal skin on the bed is worth {2d8}00 gp.
+2	The painting would fetch {1d20}0 gp.
+3	A pair of lizardskin boots in the closet are worth {3d6}0 gp.
+4	A sack shoved under the bed contains treasure type C.
+5-6	{blank}
+
+# Back Bedroom
+table: area21b
+1	The head of the maul is granite, bound to the shaft with furry leather.
+2	A secret door connects to room 22.
+3	Black fur collects in the corners of the room.
+4	A cool breeze flows into the room from a broken window pane.
+5	A dirty dish and cup are set outside the door.
+6	{blank}}
+
+table: area21b_challenge
+1	One of the lumps under the covers is a panther.{break2}
+	Panther AC 14, HD 5, #At 2 claws, 1 bite, Dam 1d6 claw, 1d10 bite, Mv 50', Sv F5, ML 9, XP 360{break}
+	HP {548}
+2	An opaque bottle on a table next to the bed summons an air elemental if opened.  The elemental immediately attacks everyone around it.{break2}
+	Air Elemental AC 20(m), HD 12* (+10), #At special, Dam 2d8, Mv Fly 120', Sv F12, ML 10, XP 1,975{break}
+	Knocks all opponents with 2 HD or less in a 5-foot radius to the ground.  Save vs. Death Ray or fall prone.{break}
+	HP {12d8}
+3	Five henchmen sleep on the bed and on the floor.
+4	The lumps under the covers are pillows.
+5-6	{blank}
+
+table: area21b_treasure
+1	The weapon on the bed is a great maul +1 that fires a lightning bolt (3d6 damage) once per day.
+2	A dark, pint-sized bottle contains a potion of flying.
+3	A squat, clay pot sealed with wax contains a salve that works as a potion of fire resistance when rubbed on bare skin.
+4	Under the pillow of the bed is a ring of spell turning sized for a small hand.  The ring may not even fit on most human pinkie fingers.
+5-6	{blank}
+
+# Master Bedroom
+table: area22b
+1	A small (16- x 9-inch) oil painting of a fort with red flags hangs on the wall.
+2	A leather bracelet fell on the floor near the bed.
+3	Musty blankets fill the chest.
+4	A dark stain on the floor radiates from the door on the east wall.
+5	Names and crude figures adorn the walls.
+6	The flag bearing the gang’s insignia hangs on the wall behind the bed.
+
+table: area22b_challenge
+1	The leader is relaxing in bed.  A henchman sits on the floor.
+2	An elf Thief just dashed under the bed at the sound of the door opening.  At first opportunity, he will jump out to sneak attack intruders, then run out of the room.{break2}
+	Elf Thief 6 AC 14, #At 1 longsword, Dam 1d8, Mv 30', ML 9, XP 500{break}
+	STR 5 (-2), INT 15 (+1), WIS 8 (-1), DEX 14 (+1), CON 13 (+1){break}
+	Equipment isleather armor, longsword{break}
+	HP {6d6}
+3	A halfling Thief sits on the bed, practicing imitating a distressed maiden.  From outside the door, it sounds like crying.{break2}
+	Halfling Thief 6 AC 14, #At 1, Dam 1d8, Mv 30', ML 9, XP 500{break}
+	STR 17 (+2), INT 6 (-1), DEX 13 (+1), CON 13 (+1), CHA 15 (+1){break}
+	Equipment is leather armor, longsword{break}
+	HP {6d6}
+4	A big, dumb brute of a Fighter naps here in his armor.  If disturbed, he attacks first and asks questions later.{break2}
+	Human Fighter 14 AC 15, #At 1 two-handed sword, Dam 1d10, Mv 20', ML 9, XP 2,500{break}
+	INT 7 (-1), WIS 7 (-1), DEX 5 (-2), CHA 5 (-2){break}
+	Equipment is plate mail, two-handed sword{break}
+	HP {14d8}
+5	These apes obey no one but their master, and they jump at the opportunity of fresh meat.{break2}
+	Carnivorous Ape AC 14, HD 4, #At 2 claws, Dam 1d4, Mv 40', Sv F4, ML 7, XP 240 ea.{break}
+	HP {1d6 4d8}
+6	{blank}
+
+table: area22b_treasure
+1	Inside the locked and trapped chest are 34,000 gp and 22,500 pp.  The sophisticated lock imposes a -25% penalty.  The trap goes off on any touching of the chest, filling the room with poison gas.  Save vs. Death Ray or die in 1d6 rounds.
+2	A medallion of mind reading is pinned to a woolen cloak tossed over the bed.
+3	A Magic-User scroll with 4 spells  (determine randomly.)
+4	Elven boots
+5-6	{blank}
+
+# Bath
+
+# Private Bath
+
+# Basement
+table: area25b
+1-2	{2d6} dirty captives are crammed into small cells, chains around their feet.  
+    {1d2} henchmen sit on stools, guarding the prisoners who are planned to be sold in the slave markets.  
+    1 in 6 of the captives are first-level adventurers who might join the party, especially if revenge on the gang is a possibility.  Refer to 25b on the map.
+3-4	{1d2} henchmen are chained to the wall, punished for misbehavior.  They may pretend to work with their liberators but only until 
+    they have a chance to rejoin the gang.  Refer to 25a on the map.
+5	Wild boars are penned down here, producing a foul odor.  The gang uses the hogs to dispose of bodies, and it’s been some time since they had a meal.  
+    A henchman here may open the pen if confronted.  Refer to 25b on the map.{break2}
+	Boar AC 13, HD 3, #At 1 tusk, Dam 2d4, Mv 50' (10'), Sv F3, ML 9, XP 145 ea.{break}
+	HP {1d6 3d8}
+6	A ladder descends down to a tunnel that goes beyond the walls of the compound, ending in another ladder climbing up to the surface.
+
+
+
+# River's Edge
+table: area26 1d6
+1-2 Behind the estate a deep stream races from west to east. Fish may be
+    spotted among the shadows and rocks.
+    {break2}
+    {area26_monster}
+3-4 A sluggish, algae-clogged stream trickles along the northern wall of the
+    estate. Check for disease after significant contact with the water.
+    Treat as a rat bite, in which 5% victims become sick in 3d6 hours.
+    {break2}
+    {area26_monster}
+5-6 The path ends at the edge of a stream beside a simple gravestone.
+    {break2}
+    {area26_grave}
+    {break2}
+    {area26_monster}
+
+table: area26_monster 1d4
+1	Giant frogs have strayed from a nearby pond.{break2}
+ 	Giant Frogs AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab tongue or 1d4+1 bite, Mv 30' Swim 30', Sv F2, ML 6, XP 75 ea.{break}
+	Tongue attacks reach 15 feet and may drag small foes into its mouth, doing automatic damage each round.  On a natural 20 attack roll, the victim is swallowed whole, taking 1d6 points of damage each round.{break}
+	HP {1d4 2d8}
+			☐
+2	Giant flies buzz 2d6 x 10 feet to the north, approaching cautiously anything that smells like food.{break2}
+ 	Giant Flies AC 14, HD 2, #At 1 bite, Dam 1d8, Mv 30' Fly 60', Sv F2, ML 8, XP 75 ea.{break}
+	HP {2d6 2d8}
+3	Black eels swim freely in the current. On a roll of 6 or less on 2d6, 1d6 of them attack any who enter the water.{break2}
+	Eel AC 11, HD 1, #At 1 bite, Dam 1d6, Mv 60' Swim, Sv F1, ML 8, XP 25 ea.{break}
+	HP {1d6 1d8}
+4	A giant catfish, a juvenile, hides in the muddy water.{break2}
+	Giant Catfish AC 16, HD 4, #At 1 bite, 2 fins, Dam 2d8 bite, 1d4+poison fin, Mv Swim 30' (10'), Sv F4, ML 8, XP 240{break}
+	HP {4d8}
+5-6	{blank}
+
+table: area26_grave 1d2
+1-2	If dug up, the grave will be found to contain the well-preserved body of a child wearing a jeweled necklace (5,000 gp).  
+    Beneath layers of clothing will be found a wooden stake through the heart.  If the vampire spawn is left out in the elements, 
+    there is a 1 in 6 chance every day that a scavenging animal tears the body up enough to dislodge the stake, bringing the vampire back to undeath.{break2}
+	Vampire Spawn AC 15(m), HD 4*, #At 1 punch or 1 bite, Dam 1d6+3 or 1d3 + special, Mv 30', Sv F4, ML 9, XP 280{break}
+	On natural 20, foes save vs. Death Ray or suffer energy drain, healing 1d8 points of damage to the vampire spawn.
+    Fail morale or death to break the bite, else drain one energy level every round.{break}
+	HP {4d8}
+3-4 If dug up, the grave will be found to contain the well-preserved body of a child wearing a jeweled necklace (5,000 gp).  
+    Removing the necklace will immediately bring forth the ghost of the child who will petulantly demand the return of the necklace.{break2}
+	Ghost AC 20(m), HD 10*(+9), #At 1 touch, Dam 1d8 + special, Mv 30', Sv F10, ML 10, XP 1,390{break}
+	Save vs. Spells on sight or flee for 2d6 rounds.  Regenerate all damage done, plus drain 1 CON. Elves and dwarves save vs. Death Ray to negate.  
+    Telekinesis as 10th-level Magic-User once per turn.  Possess as magic jar cast by 10th-level Magic-User; save vs. Spells to resist.{break}
+	HP {10d8}
+5	The grave contains an ordinary corpse with few distinguishing features.
+6	The grave contains an empty coffin.
+
+
+#
+# Utilities
+#
+
+table: blank
+1   <!-- blank -->
+
+table: break
+1   <br>
+
+table: break2
+1   {break} {break}
+
+table: book
+1   A book about {book_subject}, it's {book_condition}.
+2   With an appearance of {book_condition}, the subject is {book_subject},
+    based on the title written on the cover.
+
+table: book_subject
+1   Alchemy and {book_subject_alchemy}
+2   Astronomy and {book_subject_astronomy}
+3   {book_subject_beasts}
+4   {book_subject_demonology}
+5   {book_subject_divination}
+6   {book_subject_history}
+7   {book_subject_magic}
+8   {book_subject_necromancy}
+9   prophecies of {book_subject_prophecies}
+10  {book_subject_theology}
+
+
+table: book_subject_alchemy
+1	metallurgy
+2	poisons
+3	potions
+4	pyromancy
+5	recipes
+6	transmutation
+
+table: book_subject_astronomy
+1	comets
+2	constellations
+3	cosmology
+4	moon(s)
+5	sun
+6	stars
+
+table: book_subject_beasts
+1	animal husbandry
+2	domestication
+3	game animals
+4	poisonous monsters
+5	regional bestiary
+6	wild beasts
+
+table: book_subject_demonology
+1	bargaining with demons
+2	bestiary of demons
+3	conjuring demons
+4	exorcism of demons
+5	realms of demons
+6	symbology of demons
+
+table: book_subject_divination
+1	divination by animal droppings
+2	divination by animal sacrifice
+3	divination by automatic writing
+4	divination by birds
+5	divination by bleeding
+6	divination by burning
+7	divination by cards
+8	divination by casting tokens
+9	divination by clouds
+10	divination by crystals
+11	divination by dreams
+12	horoscope
+13	divination by human sacrifice
+14	divination by meditation
+15	numerology
+16	palmistry
+17	divination by pendulums
+18	phrenology
+19	divination by praying
+20	divination by stars
+
+table: book_subject_history
+1	ancient history
+2	dwarven history
+3	elven history
+4	military history
+5	political history
+6	regional history
+
+table: book_subject_magic
+1	abjuration
+2	alteration
+3	black magic
+4	candle magic
+5	ceremonial magic
+6	conjuration and summoning
+7	divination
+8	elemental magic
+9	enchantment
+10	evocation
+11	folk magic
+12	holy magic
+13	illusions
+14	invocation
+15	musical magic
+16	necromancy
+17	teleportation
+18	wards and sigils
+19	white magic
+20	witchcraft
+
+table: book_subject_necromancy
+1	animation of the dead
+2	bestiary of the undead
+3	communication with the dead
+4	ghosts
+5	liches
+6	lycanthropy
+7	rituals
+8	vampirism
+
+table: book_subject_prophecies
+1	the apocalypse
+2	the arrival of a savior
+3	an astronomical event
+4	the birth of a leader
+5	the death of a leader
+6	fire
+7	the liberation of a nation
+8	the visitation of a god
+9	a volcano eruption
+10	war
+11	weather
+12	the writings of a prophet
+
+table: book_subject_theology
+1	the afterlife
+2	creation
+3	creeds
+4	doctrines
+5	evil
+6	hymns
+7	leaders
+8	mythology
+9	practices of the dwarves
+10	practices of the elves
+11	prayer
+12	religious ethics
+13	religious history
+14	religious texts
+15	rituals
+16	sacraments
+17	sacred symbols
+18	saints and martyrs
+19	salvation and grace
+20	sects and cults
+
+
+table: book_condition 2d6
+2   blank
+3   pristine
+4   in poor condition, with ink stains obscuring parts
+5   damaged by water but readable
+6   well-used, including some handwritten notes in the margins
+7   worn and tattered
+8   badly damaged, nearly illegible
+9   ancient. Pages crumble as they turn
+10  vandalized, missing many pages
+11  unfinished, 1/{2d4} of pages blank
+12  hollowed out and containing {book_hidden_contents}
+
+table: book_hidden_contents
+1   a locket
+2   a knife
+3   a small hammer
+4   a small scroll
+5   a vial of mysterious liquid
+6   a ring
