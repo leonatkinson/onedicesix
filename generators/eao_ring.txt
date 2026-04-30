@@ -1,138 +1,146 @@
 name: Ancient Rings
 description: From Elfmaids & Octopi
     http://elfmaidsandoctopi.blogspot.com/2017/05/d100-ancient-rings.html
-recipe: {material} Ring, {decoration}, created by {origins} {purpose}. {has_conditions} {has_curse} {powers}
+    Expanded with more options
+recipe: This {material} ring, {decoration}, was created by {origins} {purpose}. 
+        {has_conditions}
+        {has_curse}
+        The ring provides the following powers.
+        {powers}.
 repeat: 1
 
 table: material 2d7
-2   Adamantium
-3   Electrum
-4   Iron
-5   Bone
-6   Platinum
-7   Silver
-8   Gold
-9   Bronze
-10  Brass
-11  Copper
-12  Steel
-13  Ivory
-14  Mithril
-
-table: gem
-1   Amber
-2   Amethyst
-3   Lapis
-4   Ruby
-5   Opal
-6   Obsidian
-7   Coral
-8   Emerald
-9   Jade
-10  Crystal
-11  Diamond
-12  Sapphire
+2   adamantium
+3   electrum
+4   iron
+5   bone
+6   platinum
+7   silver
+8   gold
+9   bronze
+10  brass
+11  copper
+12  steel
+13  ivory
+14  mithril
 
 table: decoration 1d4
 1-3 {decoration_common}
 4   {decoration_elaborate}
 
 table: decoration_common 1d6
-1 with abstract engraving
+1 with abstract engravings
 2 engraved with symbols
-3 with engraved creatures
+3 engraved creatures creatures
 4 with engraved writing
-5 Set with {gem}
+5 set with {gem}
 6 with creature figurine
 
-table: decoration_elaborate 1d6
-1 Set with cameo of carved stone
-2 with tiny bell or makes ring sound when used
+table: gem 1d12
+1   amber
+2   an amethyst
+3   lapis
+4   a ruby
+5   an opal
+6   obsidian
+7   coral
+8   an emerald
+9   jade
+10  a crystal
+11  a diamond
+12  a sapphire
+
+table: decoration_elaborate 1d8
+1 set with cameo of carved stone
+2 which chimes with the sound of a tiny bell
 3 with signet stamp
-4 highly reflective or shiny or glows
-5 with secret compartment for a pill or poison
-6 with functional holy symbol
+4 which reflects light from its mirror finish
+5 with its shiny surface
+6 which glows with the light of a candle
+7 with secret compartment for a pill or poison
+8 with functional holy symbol
 
 table: origins 1d12
-1 primordial pre-human race
-2 prehuman monster race
+1 a primordial pre-human race
+2 a prehuman monster race
 3 planar beings from beyond
-4 ancient shamen
-5 high priest of a long ago faith
-6 ancient wizard made for self
-7 acient wizard made for royalty
-8 ancient sorcerer made for cult
-9 witch made as a gift
+4 an ancient shamen
+5 a high priest of a long ago faith
+6 an ancient wizard and made for himself
+7 an acient wizard and made for royalty
+8 an ancient sorcerer and made for a cult
+9 a witch and made as a gift
 10 an alchemist
 11 spirits and given to mortals
 12 a deity
 
-table: purpose 1d12
-1 to help a ailing cult or religion or state
-2 to help win a war
-3 as a gift to favoured child
-4 as reward for some great deed
-5 to commemorate a great contract
-6 to be worn by a bloodline leader
-7 as a pact to ensure peace
-8 made to battle for a alignment
-9 made for champions of a cause
-10 made to use exotic magical ingredient like dragon heart
-11 stolen from supernatural beings
-12 lost by heroes or godlings of the dawn age
+table: purpose 1d14
+1 to help a failing cult
+2 to help a failing religion
+3 to help a failing state
+4 to help win a war
+5 as a gift to favoured child
+6 as reward for some great deed
+7 to commemorate a great contract
+8 to be worn by a bloodline leader
+9 as a pact to ensure peace
+10 made to battle for a alignment
+11 made for champions of a cause
+12 made to use exotic magical ingredient like dragon heart
+13 stolen from supernatural beings
+14 lost by heroes or godlings of the dawn age
 
 table: has_conditions 1d6
-1-2 {conditions}
-3-6 Has no conditions on use.
+1-2 {conditions}.
+3-6 <!-- no conditions -->
 
 table: conditions
-1 Full powers only work for certain race
-2 Full powers only work for certain bloodline
-3 Full powers only work for certain class
-4 Full powers only work for certain alignment
-5 Full powers only work for certain religion
-6 Ring require sacrifices to activate full powers
-7 Ring requires certain blood spilled to activate full powers
-8 Ring requires secret words found to activate full powers
-9 Ring requires quest to be fulfilled to activate full powers
-10 Ring cannot be removed without remove curse
-11 Ring is activated by visiting historic locations
-12 Ring is sentient with a ego and alignment tries to guide bearer to some cause
+1 Its full powers only work for {race_plural}
+2 Its full powers only work for a certain bloodline
+3 Its full powers only work for {class_plural}
+4 Its full powers only work for a certain alignment
+5 Its full powers only work for certain religion
+6 The ring requires sacrifices to activate its full powers
+7 The ring requires certain blood be spilled to activate its full powers
+8 The ring requires secret words be found to activate its full powers
+9 The ring requires a quest to be fulfilled in order to activate its full powers
+10 The ring cannot be removed without a remove curse spell
+11 The ring is activated by visiting a historic location
+12 The ring is sentient with an ego, and it tries to guide wearer to some cause
 
 table: has_curse 1d6
-1   {cursed}
-2-6 Not cursed.
+1   {cursed}.
+2-6 <!-- not cursed -->
 
-
-table: cursed 1d12
-1 Contrariness argues with everyone
-2 Delusion gives impression has ability like fly or fire resistance
-3 Weakness lose 1 point STR and CON per day til reduced to 3
-4 Pursued by powerful supernatural beings by night and their minions by day
-5 Alignment change to usually that of ring creators
-6 Any injuries you cause partly feed other planar beings
+table: cursed 1d14
+1 The wearer is cursed with contrariness and must argue with everyone
+2 The ring produces the delusion that the wearer has ability to fly
+3 The ring causes weakness, making the wearer lose 1 point of Strength daily until reaching 3
+4 The ring is pursued by powerful supernatural beings by night and their minions by day
+5 Wearing the ring causes a change in alignment
+6 Any injuries inflicted by the ring wearer feed other planar beings
 7 Otherworldly beings can see and hear the wielder through the ring
-8 Wielder increasingly interested in ring origin and becomes increasingly obsessed with past
-9 Wielder believes ring is their destiny and they are the lead hero of the story
-10 Wielder will not let go of the ring, becoming spiteful and paranoid if suggested
-11 Higher power takes control of wielder who remembers nothing a turn a day
-12 Flawed wish spell will work opposite to cause as much suffering as possible once
+8 The owner of the ring becomes increasingly interested in ring's origin, reaching at pont of obsession
+9 The owner of the ring believes destiny makes him the hero of the story
+10 The owner will not let go of the ring, becoming spiteful and paranoid
+11 A higher power takes control of ring wearer for one turn per day, leaving no memory of this time
+12 The ring grants one flawed wish spell that will work opposite to wish intent, producing as much suffering as possible
+13 The ring produces the delusion that the wearer has fire resistance
+14 The ring causes weakness, making the wearer lose 1 point of Constituation daily until reaching 3
+
 
 table: powers 1d6
 1 {basic_power}
-2 {basic_power}, {basic_power}
+2 {basic_power}. {basic_power}
 3 {major_power}
-4 {major_power}, {basic_power}
-5 {major_power}, {major_power}
-6 {major_power}, {major_power}, {basic_power}, {basic_power}
+4 {major_power}. {basic_power}
+5 {major_power}. {major_power}
+6 {major_power}. {major_power}. {basic_power}. {basic_power}
 
-table: power_reversed 1d4
-1-3 (as described)
-4   (reversed)
 
 table: basic_power
 1 Detect magic once per day
-2 Protection from evil once per day {power_reversed}
+2 {protection_from_evil} once per day
 3 Blur once per day
 4 Conceal alignment once per day
 5 Charm person once per day
@@ -144,8 +152,8 @@ table: basic_power
 11 Magic missile once per day
 12 Burning hands once per day
 13 Comprehend languages once per day
-14 Cure light wounds once per day {power_reversed}
-15 Bless once per day {power_reversed}
+14 {cure_light_wounds} once per day
+15 {bless} once per day
 16 Light once per day
 17 Hold portal once per day
 18 Knock once per day
@@ -154,7 +162,7 @@ table: basic_power
 21 Shield once per day
 22 Phantasmal force once per day
 23 Audible glamour once per day
-24 Enlarge once per day {power_reversed}
+24 {enlarge} once per day
 25 Featherfall once per day
 26 Identify once per day
 27 Mending once per day
@@ -178,10 +186,10 @@ table: basic_power
 45 Talk to fish once per day
 46 Talk to amphibians once per day
 47 Talk to reptiles once per day
-48 Purify food and water once per day {power_reversed}
+48 {purify_food} once per day
 49 Jump once per day
 50 Detect invisible once per day
-51 Protection +5, loses a point every time it succeeds in helping wearer
+51 Protection +5, but loses a point every time it succeeds in helping wearer
 52 Protection +1 AC
 53-54 Talk to {animal_talk}
 55 Gives knowledge of a specific language spoken and written
@@ -190,30 +198,30 @@ table: basic_power
 58 Stops blood loss after one round as if treated by first aid
 59 Infravision 20'
 60 Nightvision
-61 Protection from dirt, clothes and body never need washing
-62 Grants literacy to the illiterate, can read all spoken languages
-63 Will catch a edible fish a day in one turn once a day
-64 Can block a single arrow, crossbow bolt or magic missile once per day
+61 Protection from dirt. Clothes and body never need washing
+62 Grants literacy to the illiterate. Wearer can read all languages
+63 Wearer may catch one edible fish a day in one turn
+64 Blocks a single arrow, crossbow bolt or magic missile once per day
 65 Body will not decay while worn
-66 Can create a 1d10 copper coins a day in your pocket
+66 Can create 1d10 copper coins a day in your pocket
 67 Can transfer 1 HP from wearer to another once per person each day
-68 Always dry, water falls off leaving dry
-69 Resistant to extreme weather heat or cold, always comfortable
-70 Can once a day change a cup of water to wine
+68 Always dry. Water falls off, leaving there wearer dry
+69 Resistant to extreme weather heat or cold. Wearer is always comfortable
+70 Change a cup of water to wine once per day
 71 Can identify metal and purity by touch
 72 Can identify gems and semiprecious stones by touch
-73 Turn into small animal of specific type once per day most often rat or bird
+73 Turn into small animal of specific type once per day
 74 Produces up to a teaspoon of salt per day
 75 Produces up to a teaspoon of honeycomb per day
 76 Twinges if your master or leader in peril
 77 Lets you tell the time
 78 Lets you always know direction of north or a specific place
-79 Detect {detect_race} within 30'
+79 Detect {race_plural} within 30'
 80 Lets you hit creatures as if using a magic weapon with bare hands
 81 Undead touching you hands or bite takes 1 HP damage per hit
 82 Allows you to lactate continuously so you can be a all year wet nurse
 83 Protects you from sexually transmitted disease, lice and fleas
-84 You are incapable of producing children from any union while wearing ring
+84 You are incapable of producing children from any union while wearing the ring
 85 Allows you to perform sexually as a virile youth
 86 Gives you a lovely singing voice
 87 Allows you to dance in current local area style
@@ -228,7 +236,7 @@ table: basic_power
 96 Can kill vermin or birds with a HP or less with glance if it fails save
 97 Once a day can summon a medium dog for a turn
 98 Once a week can call a gremlin to serve for a hour
-99 Once a week can call a Imp to serve for a turn
+99 Once a week can call an imp to serve for a turn
 100 Once a week can call a kobold to serve for a hour
 
 table: major_power
@@ -242,19 +250,19 @@ table: major_power
 8 Gaseous form once per day
 9 Protection from normal missiles once per day
 10 Water breathing once per day
-11 Continual light once per day {power_reversed}
+11 {continual_light} once per day
 12 Confusion once per day
 13 Speak with dead once per day
 14 Speak with animals once per day
 15 Speak with plants once per day
-16 Cure disease once per day {power_reversed}
-17 Neutralise Poison once per day {power_reversed}
+16 {cure_disease} once per day
+17 {neutralise_poison} once per day
 18 Airwalk once per day
 19 Stone to flesh once per day
 20 Suggestion once per day
 21 Flame strike once per day
 22 Wall of fire once per day
-23 Wall of Ice once per day
+23 Wall of ice once per day
 24 Wall of wood once per day
 25 Wall of bone once per day
 26 Charm undead once per day
@@ -264,16 +272,16 @@ table: major_power
 30 Charm animal once per day includes giant animals
 31 Charm lycanthropes once per day
 32 Rock to mud once per day
-33 Dimension Door once per day
+33 Dimension door once per day
 34 Teleport once per day
 35 Remove Curse once per day
 36 Cure serious wounds once per day
 37 Air walk once per day
-38 Protection from evil 10 foot radius once per day {power_reversed}
+38 {protection_from_evil_10} once per day
 39 Ring turns into a +1 melee weapon at will
 40 Ring turns into a missile weapon with ten +1 shots a day
-41 Fire resistance - immune to natural fire, half damage from magic fire
-42 Cold resistance - immune to natural cold, half damage from magic cold
+41 Fire resistance
+42 Cold resistance
 43 Waterwalking at will
 44 CON +1
 45 CHA +1
@@ -281,23 +289,23 @@ table: major_power
 47 INT +1
 48 STR +1
 49 WIS +1
-50 Magic missile one d4 per round
-51 Immune to non magic weapons
+50 Magic missile 1d4 per round
+51 Immune to non-magic weapons
 52 Regenerate 1hp per round of non fire or acid damage
-53 Vampirism d4x10% of inflicted wounds heal wielder
+53 Vampirism {1d4}0% of inflicted wounds heal wielder
 54 Free Action - immune to being impeded by webs, paralysis or water
 55 Invisibility at will
 56 Protection +3
 57 Protection +1 5 foot radius
-58 Do not require air
-59 Do not require food
+58 Wearer does not require air
+59 Wearer does not require food
 60 Swimming can move full speed in water and breathe water
 61 Cantrip ring can cast one cantrip or zero level spell at will
 62 Turn undead as cleric once per day
 63 Turn into any natural animal and back once per day
 64 Extra attack each round +1
 65 Resist magic 5%
-66 Sorcery ring converts any known spells to power one 1st to third lv spell in the ring
+66 Sorcery ring converts any known spells to power one 1st-3rd level spell in the ring
 67 Wizardry doubles number of zero level spells (priest and druid versions possible)
 68 Wizardry doubles number of first level spells (priest and druid versions possible)
 69 Reflection deflects three level of spells per day (one 3rd or three 1st etc)
@@ -308,22 +316,22 @@ table: major_power
 74 Earth Elemental Ward - elemental cannot attack wearer unless wielder attacks first
 75 Telekinesis 25lb 6" range at will
 76 X-Ray vision can see through 10 foot stone or 2 inches of steel
-77 Call d12 kobolds for one turn a day with work tools or weapons
-78 Call d12 wild dogs per day
-79 Call d12 orcs for one turn a day
-80 Call d12 1HD snakes for a turn per day
+77 Call 1d12 kobolds for one turn a day with work tools or weapons
+78 Call 1d12 wild dogs per day
+79 Call 1d12 orcs for one turn a day
+80 Call 1d12 1HD snakes for a turn per day
 81 Call a Djinn once a week for one turn
-82 Call a Succubi/Incubi once a week for one hour
+82 Call a Succubus/Incubus once a week for one hour
 83 Call a lesser devil once a week for one day
 84 Call a lesser demon once a week for one day
-85 Call a Ogre once a day for a hour
-86 Call a 8HD elemental once a week for a hour
-87 Call a d12 skeletons once a day for 1 hour
-88 Call a d12 zombies once a week for 1 hour
+85 Call an ogre once a day for a hour
+86 Call an 8HD elemental once a week for a hour
+87 Call 1d12 skeletons once a day for 1 hour
+88 Call 1d12 zombies once a week for 1 hour
 89 Call a treant from the forest to serve one day a week
-90 Call d12 elves from elfland for one hour a week
+90 Call 1d12 elves from elfland for one hour a week
 91 True seeing once per day
-92 Blade Barrier once per day
+92 Blade barrier once per day
 93 Animate dead once per day
 94 Heal once per week
 95 Death spell once per week
@@ -331,8 +339,43 @@ table: major_power
 97 Comune once per week
 98 Plane Shift once per week
 99 Raise dead once per month
-100 One use wish
+100 Provides a single wish
 
+table: continual_light 1d14
+1-3 Continual light
+4   Continual darkness
+
+table: cure_disease 1d14
+1-3 Cure disease
+4   Cause disease
+
+table: neutralise_poison 1d14
+1-3 Neutralise poison
+4   Poison (as spell)
+
+table: protection_from_evil 1d4
+1-3 Protection from evil
+4   Protection from good
+
+table: protection_from_evil_10 1d4
+1-3 Protection from evil 10 foot radius
+4   Protection from good 10 foot radius
+
+table: cure_light_wounds 1d4
+1-3 Cure light wounds
+4   Cause light wounds
+
+table: bless 1d4
+1-2 Bless
+3-4 Bane
+
+table: enlarge 1d4
+1-2 Enlarge
+3-4 Shring
+
+table: purify_food 1d4
+1-3 Purify food and water
+4   Spoil food and water
 
 table: animal_talk 1d8
 1   rat
@@ -352,8 +395,14 @@ table: weapon_skill 1d6
 5   maces
 6   spears
 
-table: detect_race
-1   goblin
-2   orc
-3   elf
-4   dwarf
+table: race_plural
+1   goblins
+2   orcs
+3   elves
+4   dwarves
+
+table: class_plural
+1   fighters
+2   clerics
+3   thieves
+4   magic users

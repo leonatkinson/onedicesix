@@ -206,3 +206,5 @@ Small adjustments to daily events on the southern seas.
 - Add evocative names the 1-5 Room St. Orland Dungeon generator
 ## 1.11.0
 - Complete Estates of the Eliari
+## 1.11.1
+- Minor quality updates to Ancient Rings
