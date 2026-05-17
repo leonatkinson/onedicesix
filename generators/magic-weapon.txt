@@ -1,0 +1,389 @@
+name: Enchanted Weapon
+description: Unique Magic Weapons
+recipe: {weapon} {bonus}{break}
+        {glows} {intelligent}
+        {break2}
+        It was forged {age}.
+        {maker} made it {make-reason}.
+        {decoration}
+        {jeweled}
+repeat: 1
+
+table: age
+1   only {1d8+2} years ago and {condition-young}
+2   within the last decade and {condition-young}
+3   a few generations ago ({1d10+3}0 years) and {condition-young}
+4   roughly a century ago and {condition-young}
+5   {1d6+1} centuries past and {condition-old}
+6   nearly a millennium ago and {condition-old}
+7   over a thousand years ago and {condition-old}
+8   dating back millennia and {condition-old}
+9   before recorded history, at least 10,000 years ago and {condition-old}
+10  in a time lost to the mists of antiquity and {condition-old}
+
+table: condition-young 2d6
+2-3   is in an unfinished state
+4-7   still appears new
+8-10  is weathered but solid
+11-12 shows signs of damage
+
+table: condition-old
+1   appears remarkably sturdy still
+2   is weathered but solid
+3   shows signs of damage
+4   has need of repair
+
+table: maker
+1       A divine being
+2       A Dwarven master smith
+3       A legendary smith
+4       A dark Elven craftsman
+5       A master smith celebrated by the entire kingdom
+6       A shifty mentor known for reforging broken weapons
+7       A sorcerer blacksmith
+8       A cyclopean giant forger
+9       An otherworldly armorer from the fairy realm
+10      An ancient wizard forger
+
+table: make-reason
+1       to arm the gods against cosmic threats
+2       to fulfill a divine commission
+3       to fulfill a divine wager
+4       to gain revenge
+5       to gain freedom after betrayal
+6       to create a legacy of cursed power
+7       to create a legacy of fated power
+8       to save the nation
+9       to elevate the nation
+10      to reforge a broken hero’s destiny
+11      to bind a mortal champion for personal gain
+12      to empower a mortal champion for personal gain
+13      to obey the command of a higher power
+14      to obey the command of a higher prophecy
+15      to reward a worthy mortal from another realm
+16      to test a worthy mortal from another realm
+17      to experiment with forbidden knowledge or unleash chaos
+18      to unleash chaos
+
+table: decoration 1d10
+1       The item is utterly plain, its surface polished to a mirror sheen with no engraving or motif to betray the enchantement woven into its steel.
+2       Runes of glowing silver coil along the length of the item. {jeweled}
+3       It gleams unadorned except for the simple {motif} motif.
+4       It carries no decoration whatsoever, yet it bears the faint, heat-forged imprint of the creator.
+5       Intricate symbols of the smith cover the item. {jeweled}
+6       It appears as plain black iron until gripped, at which point the {motif} motif flared white-hot along its length.
+7       A single {motif} motif is etched into the item.
+8       The item displays no outward motif, its surface deliberately left smooth so that only the blood of its victims reveal the glowing crimson runes beneath.
+9       Engravings with a {motif} motif spiral down the length of the item.
+10      It hangs plain and unremarkable until drawn, when the craftsman’s secret {motif} motif appeared in blood-red lines along the edge.
+
+table: motif
+1       dragon
+2       stag
+3       stars
+4       moon
+5       weeping eye
+6       lightning bolt
+7       knotwork 
+8       raven wing
+9       sun
+10      serpent
+11      wolf
+12      chain
+13      tree of life
+14      eagle
+15      feather
+16      anvil
+17      teardrop
+
+table: jeweled 1d10
+1-5       {blank}
+6-8       A single, modest {gem} hints at the weapon's value without upsetting its perfect balance.  
+9         Small gems trace down the lenght of the item, adding some ceremonial purpose without disadvantaging its utility as a weapon.   
+10        The item blazes with large diamonds, rubies, and emeralds in gold filigree, so heavily bejeweled that the weapon is purely ceremonial, too ornate and unbalanced for real combat.
+
+table: gem 1d20
+1-3 greenstone
+4-5 malachite
+6-7 aventurine
+8-9 phenalope
+10  amethyst
+11  fluorospar
+12  garnet
+13  alexandrite
+14  topaz
+15  bloodstone
+16  sapphire
+17  diamond
+18  fire opal
+19  ruby
+20  emerald
+
+
+table: weapon 1d80
+1   Great Axe
+2   Battle Axe
+3   Hand Axe
+4   Footman's Pick
+5   Shortbow
+6   Longbow
+7   {1d12} Shortbow Arrows
+8   {1d12} Longbow Arrows
+9   {1d12} Light Quarrels
+10  {1d12} Heavy Quarrels
+11  {1d12} Sling Bullets
+12  Dagger
+13  Flail
+14  Shortsword
+15  Cutlass
+16  Longsword
+17  Scimitar
+18  Two-Handed Sword
+19  Mace
+20  Light Mace
+21  Great Mace
+22  Morningstar
+23  Warhammer
+24  Maul
+25  Pole Arm
+26  Dart
+27  Javelin
+28  Spear
+29  Trident
+30  Boar Spear
+31  Lance
+32  Scythe
+33  Sickle
+34  Pickaxe
+35  Defending Dagger
+36  Military Fork
+37  Quarterstaff
+38  Chain
+39  Whip
+40  Club
+41  Cudgel
+42  Walking Staff
+43  Greatclub
+44  Sap
+45  Hook
+46  Spade
+47  Crowbar
+48  Gauntlet
+49  Cestus
+50  Light Crossbow
+51  Heavy Crossbow
+52  Hand Crossbow
+53  Bullet Crossbow
+54  Sling
+55  Bola
+56  Dart
+57  Throwing Blade
+58  Javelin
+59  Blowgun
+60  Net
+61  Halberd
+62  Bardiche
+63  Bill-Guisarme
+64  Ranseur
+65  Voulge
+66  Guisarme
+67  Lucern Hammer
+68  Spetum
+69  Bec de Corbin
+70  Glaive
+71  Fauchard
+72  Partisan
+73  Rapier
+74  Torch
+75  {1d12} Caltrops
+76  Stone
+77  Mallet
+78  Candlestick
+79  Iron Spike
+80  Wooden Stake
+
+table: bonus 1d100
+1-40    +1
+41-50   +2
+51-55   +3
+56-57   +4
+58      +5
+59-75   +1, +2 vs {enemy}
+76-80   +1, +3 vs {rare-enemy}
+81-85   +1, +4 vs {very-rare-enemy}
+86-95   +{1d4} {magic-weapon-special}
+96-98   -1 (cursed)
+99-100  -2 (cursed)
+
+table: enemy
+1    Dragons
+2    Enchanted
+3    Lycanthropes
+4    Regenerators
+5    Spellcasters
+6    Undead
+7    Giants
+8    Fiends
+9    Fey
+10   Elementals
+11   Constructs
+12   Aberrations
+13   Oozes
+14   Plants
+15   Celestials
+16   Beasts
+17   Shapechangers
+18   Insects
+19   Aquatics
+20   Flyers
+21   Evil
+22   Good
+23   Lawful
+24   Chaotic
+25   Teleporters
+
+table: rare-enemy
+1   {dragon-color} Dragons
+2   Werewolves
+3   Wererats
+4   Werebears
+5   Wereboars
+6   Weretigers
+7   Trolls
+8   Orcs
+9   Goblinoids
+10  Skeletons
+11  Zombies
+12  Hill Giants
+13  Stone Giants
+14  Elves
+15  Dwarves
+16  Halflings
+17  Humans
+18  Illusionists
+19  Clerics
+20  Berserkers
+21  Invisibles
+22  Swarms
+23  Burrowers
+24  Ethereals
+25  Fire Elementals
+26  Air Elementals
+27  Water Elementals
+28  Earth Elementals
+29  Golems
+30  Owlbears
+31  Purple Worms
+32  Rocs
+33  Stirges
+34  Hydras
+35  Griffons
+36  Ogres
+
+table: dragon-color
+1 Black
+2 Blue
+3 Red
+4 Green
+5 White
+
+table: very-rare-enemy
+1   Witches
+2   Charmed
+3   Gnolls
+4   Vampires
+5   Ghosts
+6   Liches
+7   Storm Giants
+8   Balors
+9   Mariliths
+10  Vrocks
+11  Hezrou
+12  Glabrezu
+13  Pit Fiends
+14  Horned Devils
+15  Ice Devils
+16  Bone Devils
+17  Chain Devils
+18  Erinyes
+19  Barbed Devils
+20  Bearded Devils
+21  Spined Devils
+22  Flesh Golems
+23  Stone Golems
+24  Iron Golems
+25  Bronze Golems
+26  Pixies
+27  Sprites
+28  Dryads
+29  Satyrs
+30  Blink Dogs
+31  Mind Flayers
+32  Nagas
+33  Rust Monsters
+34  Black Puddings
+35  Ochre Jellies
+36  Green Slimes
+37  Gelatinous Cubes
+
+
+table: magic-weapon-special
+1   Casts Light on Command
+2   Charm Person {1d4}x/day
+3   Drains Energy on hit
+4   Flames on Command +1d6 damage
+5   Locate Objects {1d4}x/day
+6   Grants a wish every {1d100} years
+7   Freezes on hit +1d6 damage
+8   Shocks on hit +1d6 damage
+9   Poisons on hit save or die
+10  Detects Magic on Command {1d4}x/day
+11  Returns to Wielder
+12  Grants Invisibility
+13  Paralyzes on hit
+14  Blinds on hit
+15  Heals Wielder 1d6 HP on hit
+16  Summons Ally {1d4}x/day
+17  Dispels Magic on Command {1d4}x/day
+18  Banes Evil on hit
+19  Increases Speed +{1d4}0' movement
+20  Absorbs Spells
+21  Detects Traps on Command {1d4}x/day
+22  Turns Weilder Ethereal
+23  Silences on hit
+
+table: glows
+1-10  {blank}
+11-15 Glows faintly and continously.
+16-19 Glows as a candle when held.
+20    Radiates light as a lantern when held.
+
+table: intelligent
+1-3 {blank}
+4   Intelligent ({3d6} INT {3d6} WIS {3d6} CHA). {motive}
+
+table: motive
+1-10  {blank}
+11    Wants to defeat enemies.
+12    Wants to sow chaos.
+13    Wants to enforce order.
+14    Wants to start fights.
+15    Seeks treasure.
+16    Disdains wealth.
+17    Defends the innocent.
+18    Compells weilder to lie.
+19    Compells weilder to tell the truth.
+20    Promotes a faith.
+
+#
+# Utilities
+#
+
+table: blank
+1   <!-- blank -->
+
+table: break
+1   <br>
+
+table: break2
+1   {break} {break}

@@ -208,3 +208,6 @@ Small adjustments to daily events on the southern seas.
 - Complete Estates of the Eliari
 ## 1.11.1
 - Minor quality updates to Ancient Rings
+## 1.11.2
+- Add enchanted weapon generator
+
