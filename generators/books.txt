@@ -7,26 +7,26 @@ recipe:
 repeat: 3d6-3
 
 table: book_subject
-1   Alchemy ({book_subject_alchemy})
-2   Art ({book_subject_art})
-3   Astronomy ({book_subject_astronomy})
-4   Beasts ({book_subject_beasts})
-5   Demonology ({book_subject_demonology})
-6   Divination ({book_subject_divination})
-7   Healing ({book_subject_healing})
-8   Herbs ({book_subject_herbs})
-9   History ({book_subject_history})
-10  Languages ({book_subject_languages})
-11  Literature ({book_subject_literature})
-12  Mining and Mineralogy ({book_subject_mining})
-13  Music ({book_subject_music})
-14  Necromancy ({book_subject_necromancy})
-15  Plays ({book_subject_plays})
-16  Poetry ({book_subject_poetry})
-17  Prophecies ({book_subject_prophecies})
-18  Theology ({book_subject_theology})
-19  Magic ({book_subject_magic})
-20  Travel, Trade & Exploration ({book_subject_travel})
+1   {book_subject_alchemy} within the field of alchemy
+2   {book_subject_art} in the realm of art
+3   astronomy with a focus on {book_subject_astronomy}
+4   {book_subject_beasts}
+5   {book_subject_demonology} within the field of demonology
+6   {book_subject_divination} as a branch of divination
+7   healing with a focus on {book_subject_healing}
+8   herbs with a focus on {book_subject_herbs}
+9   {book_subject_history} history
+10  {book_subject_languages}
+11  {book_subject_literature}
+12  {book_subject_mining} within the field of mining and mineralogy
+13  music, specifically {book_subject_music}
+14  {book_subject_necromancy} in the realm of necromancy
+15  a stage play in a {book_subject_plays} style
+16  a collection of {book_subject_poetry}
+17  prophetic tales of {book_subject_prophecies}
+18  {book_subject_theology} within the field of theology
+19  {book_subject_magic} within the field of magic
+20  travel, trade & exploration with a focus on {book_subject_travel}
 
 table: book_subject_alchemy
 1   healing
@@ -35,30 +35,84 @@ table: book_subject_alchemy
 4   poisons
 5   potions
 6   recipes
+7   transmutation  
+8   chrysopoeia (gold-making)  
+9   longevity
+10  the philosopher’s stone  
+11  distillation  
+12  spagyrics  
+13  homunculi
+14  alkahest (universal solvent)  
+15  quintessence  
+16  fermentation  
+17  calcination  
+18  tinctures  
 
 table: book_subject_art
-1  fortresses and palaces
-2  painting
-3  sketching
-4  sculpture
-5  stonemasonry
-6  temples and tombs
+1   fortresses and palaces
+2   painting
+3   sketching
+4   sculpture
+5   stonemasonry
+6   temples and tombs
+7   castles and keeps  
+8   cathedrals and chapels  
+9   bridges and aqueducts  
+10  towers and spires  
+11  illumination  
+12  engraving  
+13  mosaics  
+14  woodworking  
+15  stained glass  
+16  calligraphy  
+17  tapestry  
+18  heraldry  
+19  cartography  
+20  pottery
 
 table: book_subject_astronomy
-1 comets
-2 constellations
-3 moon
-4 sun
-5 stars
-6 strange phenomena
+1 comets  
+2 constellations  
+3 the moon  
+4 the sun  
+5 stars  
+6 strange phenomena  
+7 planets  
+8 eclipses  
+9 the zodiac  
+10 portents  
+11 meteors  
+12 auroras  
+13 nebulae  
+14 conjunctions  
+15 omens  
+16 astrology  
+17 star charts  
+18 celestial navigation  
+19 blood moons  
+20 shooting stars
 
 table: book_subject_beasts
 1 domestic beasts
-2 habits
-3 handling
-4 husbandry
+2 the habits of beasts
+3 beast handling
+4 animal husbandry
 5 poisonous beasts
-6 regional bestiary
+6 a regional bestiary
+7 wild beasts  
+8 mythical beasts  
+9 dire beasts  
+10 aquatic beasts  
+11 aerial beasts  
+12 beast taming  
+13 beast training  
+14 monster hunting  
+15 beast ecology  
+16 beast lore  
+17 giant beasts  
+18 corrupted beasts  
+19 familiars  
+20 ancient bestiaries
 
 table: book_subject_demonology
 1 conjurings
@@ -67,6 +121,20 @@ table: book_subject_demonology
 4 fiendish bestiary
 5 fiendish realms
 6 fiendish symbols
+7 demonic hierarchies
+8 true names
+9 demonic possession
+10 infernal pacts
+11 abyssal realms
+12 demonic cults
+13 fiendish artifacts
+14 protective wards
+15 demonic physiology
+16 infernal magic
+17 binding rituals
+18 demonic corruption
+19 hellish politics
+20 archfiends
 
 table: book_subject_divination
 1 anthropomancy
@@ -75,6 +143,20 @@ table: book_subject_divination
 4 palm reading
 5 tarot cards
 6 tea leaves
+7 astrology
+8 augury
+9 haruspicy
+10 rune casting
+11 scrying
+12 numerology
+13 geomancy
+14 bibliomancy
+15 cleromancy
+16 pyromancy
+17 hydromancy
+18 pendulum reading
+19 mirror scrying
+20 bone throwing
 
 table: book_subject_healing
 1 alchemical remedies
@@ -83,6 +165,14 @@ table: book_subject_healing
 4 prayers
 5 rituals
 6 surgery
+7 poultices
+8 bloodletting
+9 bone setting
+10 midwifery
+11 plague remedies
+12 tinctures
+13 leechcraft
+14 amputation
 
 table: book_subject_herbs
 1 healing herbs
@@ -91,6 +181,20 @@ table: book_subject_herbs
 4 roots
 5 trees
 6 wildflowers
+7 magical herbs  
+8 culinary herbs  
+9 berries  
+10 tree bark  
+11 seeds  
+12 rare herbs  
+13 legendary plants  
+14 herbcraft  
+15 foraging  
+16 cultivation  
+17 distillation  
+18 enchanted flora  
+19 night-blooming plants  
+20 sacred herbs
 
 table: book_subject_history
 1 ancient
@@ -99,22 +203,70 @@ table: book_subject_history
 4 military
 5 political
 6 regional
+7 {race}  
+8 religious history  
+9 technological history  
+10 environmental history  
+11 maritime history  
+12 diplomatic history  
+13 legal history  
+14 medical history  
+15 dynastic history  
+16 legendary history  
+17 forbidden history  
+18 hidden history  
+19 architectural history  
+20 intellectual history
+
+table: race
+1 Dwarven
+2 Elven
+3 Gnomish
+4 Orcish
 
 table: book_subject_languages
-1 ancient
-2 forbidden
-3 exotic
+1 an ancient language
+2 forbidden languages
+3 exotic languages
 4 grammar and punctuation
-5 translations
+5 language translation
 6 traveler's phrases
+7 magical languages  
+8 dead languages  
+9 secret scripts  
+10 ciphers and codes  
+11 dialects and accents  
+12 etymology  
+13 language families  
+14 lost tongues  
+15 divine languages  
+16 infernal tongues  
+17 sign language  
+18 runic scripts  
+19 poetry and verse  
+20 slang and idioms
 
 table: book_subject_literature
-1 adventure
-2 fairy tales
-3 folk tales
-4 murder mystery
-5 romance
-6 satire
+1 a fictional adventure
+2 a collection of fairy tales
+3 a collection of folk tales
+4 a murder mystery
+5 a fictional romance
+6 a satire
+7 a horror tale  
+8 a story of speculative science  
+9 an epic fantasy  
+10 a historical novel  
+11 a collection of myths  
+12 a tragedy  
+13 a comedy  
+14 a ghost story  
+15 a collection of legends  
+16 a thriller  
+17 a coming-of-age tale  
+18 a collection of fables  
+19 a dark fantasy  
+20 a heroic saga
 
 table: book_subject_mining
 1 gems
@@ -123,30 +275,86 @@ table: book_subject_mining
 4 strategy
 5 rocks
 6 smithing
+7 ores  
+8 mineral veins  
+9 prospecting  
+10 excavation  
+11 tunneling  
+12 crystals  
+13 mineralogy  
+14 smelting  
+15 refining  
+16 quarrying  
+17 cave-ins  
+18 deep mining  
+19 rare minerals  
+20 legendary mines
 
 table: book_subject_music
-1 heroic ballads
-2 love ballads
-3 bawdy tunes
-4 dirges and laments
-5 hymns
-6 works of a celebrated singer
+1 a collection of heroic ballads
+2 a collection of love ballads
+3 a collection of bawdy tunes
+4 a collection of dirges and laments
+5 a collection of hymns
+6 the works of a celebrated singer
+7 on playing the {instrument}
+a collection of drinking songs  
+a collection of sea shanties  
+a collection of marching songs  
+a collection of folk songs  
+a collection of lullabies  
+a collection of satirical tunes  
+a collection of ritual chants  
+a collection of war songs  
+a collection of elegies  
+the works of a court composer  
+a collection of tavern ballads  
+a collection of epic lays  
+a collection of mystical hymns
+
+table: instrument
+1 guitar
+2 lute
+3 flute
+4 lyre
+5 horn
+6 harp
 
 table: book_subject_necromancy
-1 animation
+1 reanimation
 2 corpses
 3 lichdom
 4 spirits and souls
-5 undead bestiary
+5 an undead bestiary
 6 vampirism
+7 grave robbing  
+8 necromantic rituals  
+9 soul binding  
+10 death magic  
+11 spectral summoning  
+12 ghoul lore  
+13 mummification  
+14 resurrection  
+15 wraith binding  
+16 necrotic energy  
+17 eternal undeath  
+18 curses
 
 table: book_subject_plays
-1 comedy
-2 drama
-3 history
-4 romance
-5 satire
-6 tragedy
+1 comedic
+2 dramatic
+3 historical
+4 romantic
+5 satirical
+6 tragic
+7 farcical  
+8 melodramatic  
+9 heroic  
+10 political  
+11 morality  
+12 pastoral  
+13 epic  
+14 absurdist  
 
 table: book_subject_poetry
 1 ballads
@@ -155,22 +363,57 @@ table: book_subject_poetry
 4 lyric poetry
 5 odes and laments
 6 works of a celebrated poet
+7 sonnets  
+8 elegies  
+9 heroic verse  
+10 pastoral poetry  
+11 devotional poetry  
+12 war poetry  
+13 satirical verse  
+14 mystical poetry  
+15 courtly love poems  
+16 funerary verse  
+17 hymns and anthems  
+18 narrative poetry  
+19 works of an ancient bard  
+20 forbidden or cursed poems
 
 table: book_subject_prophecies
-1 apocalypse
+1 the apocalypse
 2 astronomical events
-3 birds
-4 dreams
-5 visions
-6 weather
+3 the return of kings  
+4 ancient evils  
+5 chosen ones  
+6 great wars  
+7 plagues and famines  
+8 the rise of dragons  
+9 betrayed alliances  
+10 lost artifacts  
+11 divine wrath  
+12 cataclysmic floods  
+13 the awakening of gods  
 
 table: book_subject_theology
-1 afterlife
-2 rituals and practices
+1 the afterlife
+2 rituals and religious practices
 3 religious history
 4 saints and martyrs
 5 sacred symbols
 6 sacred texts
+7 the nature of the gods  
+8 divine cosmology  
+9 heresies and schisms  
+10 prayers and invocations  
+11 holy orders  
+12 divine miracles  
+13 creation myths  
+14 fallen gods  
+15 religious law  
+16 pilgrimages  
+17 clerical hierarchies  
+18 blasphemy and apostasy  
+19 divine intervention  
+20 eschatology
 
 table: book_subject_magic
 1 elementalism
@@ -179,15 +422,42 @@ table: book_subject_magic
 4 summoning
 5 teleportation and travel
 6 warding
+7 abjuration  
+8 divination  
+9 evocation  
+10 necromancy  
+11 transmutation  
+12 ritual magic  
+13 arcane theory  
+14 spellcraft  
+15 blood magic  
+16 shadow magic  
+17 rune magic  
+18 wild magic  
+19 ley lines  
+20 metamagic
 
 table: book_subject_travel
 1 ancient ruins
-2 exotic travelogue
+2 an exotic travelogue
 3 economics and taxation
 4 foreign cultures
 5 regional landmarks and terrain
 6 trade routes
-
+7 dangerous roads  
+8 sea voyages  
+9 mountain passes  
+10 hidden paths and secret ways  
+11 pilgrimage routes  
+12 wilderness survival  
+13 legendary cities  
+14 border crossings  
+15 monster-haunted trails  
+16 explorer’s journals  
+17 lost civilizations  
+18 inns and waystations  
+19 caravans and merchants  
+20 maps and cartography
 
 table: book_condition 2d6
 2   blank
@@ -199,7 +469,7 @@ table: book_condition 2d6
 8   badly damaged, nearly illegible
 9   ancient. Pages crumble as they turn
 10  vandalized, missing many pages
-11  unfinished, 1/{2d4} of pages blank
+11  unfinished, 1/{2d4} of pages being blank
 12  hollowed out, hiding {book_hidden_contents}
 
 table: book_hidden_contents
@@ -210,20 +480,40 @@ table: book_hidden_contents
 5   a vial of mysterious liquid
 6   a ring
 
-table: book_cover 1d12
-1   missing, wrapped in string
-2   stained leather
-3   wooden
-4   paper
-5   animal hide
-6   stone, bound with iron rings
-7   iron and hinged
-8   leather and ebedded with gems
-9   leather, the title branded into the cover
-10  leather, gilded spine
-11  torn off, wrapped in a leather strap
-12  tree bark
+table: book_cover 2d8
+2   stone, bound with iron rings
+3   iron and hinged
+4   missing, wrapped in string  
+5   copper plates, green with verdigris
+6   {animal-hide} dyed {hide-stain} and ebedded with gems
+7   rough {animal-hide}
+8   {animal-hide} dyed {hide-stain} with gilded spine
+9   {animal-hide} dyed {hide-stain}, the title branded into the cover
+10  {animal-hide}, stained {hide-stain}
+11  {hide-stain} silk over wooden boards, embroidered with silver thread
+12  ivory, inlaid with tiny jet runes
+13  heavy paper
+14  wooden
+15  torn off, wrapped in a leather strap
+16  tree bark
 
+table: animal-hide 1d6
+1   goatskin
+2   calfskin
+3   sheepskin
+4   pigskin
+5   deerskin
+6   cowhide
+
+table: hide-stain 1d20
+1-4     red
+5-8     black
+9-12    brown
+13-14   green
+15-16   blue
+17-18   yellow 
+19      purple
+20      white
 
 table: book_volume
 1   a single volume, the author's only published work
@@ -234,5 +524,5 @@ table: book_volume
 6   a part of a series of {1d6+2} books
 7   a single volume of a larger work with {2d6+2} volumes
 8   an edition of a regularly published book with multiple authors
-9   a collection of works by the same author
+9   a collection of works all by the same author
 10  an anthology of works by several authors

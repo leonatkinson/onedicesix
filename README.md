@@ -210,4 +210,6 @@ Small adjustments to daily events on the southern seas.
 - Minor quality updates to Ancient Rings
 ## 1.11.2
 - Add enchanted weapon generator
+## 1.11.3
+- Expand the books generator
 
