@@ -1448,19 +1448,6 @@ table: area26_grave 1d2
 6	The grave contains an empty coffin.
 
 
-#
-# Utilities
-#
-
-table: blank
-1   <!-- blank -->
-
-table: break
-1   <br>
-
-table: break2
-1   {break} {break}
-
 table: book
 1   A book about {book_subject}, it's {book_condition}.
 2   With an appearance of {book_condition}, the subject is {book_subject},

@@ -1,23 +1,23 @@
 name: Encounters on Tropical Isles
 description: Tables for generating encounters by location
-recipe: {encounter} <br>({evocative})<br>
-        Surprise {1d6} (monsters) / {1d6} (party)<br>
+recipe: {encounter} {break}({evocative}){break}
+        Surprise {1d6} (monsters) / {1d6} (party){break}
 repeat: 1
 
 table: encounter 1d12
-1-4     <strong>Wandering ({2d4}0/{1d3}0 yards {direction})</strong><br>
-        {wandering}<br>
-        <br>
+1-4     <strong>Wandering ({2d4}0/{1d3}0 yards {direction})</strong>{break}
+        {wandering}{break}
+        {break}
         {reaction}
-5-6     <strong>Wandering ({2d4}0/{1d3}0 yards {direction})</strong><br>
-        {wandering}<br>
-        {with-or-against}<br>
-        {wandering}<br>
-        <br>
+5-6     <strong>Wandering ({2d4}0/{1d3}0 yards {direction})</strong>{break}
+        {wandering}{break}
+        {with-or-against}{break}
+        {wandering}{break}
+        {break}
         {reaction}
-7-10    <strong>Lair</strong> {lair-location}, {lair-type}.<br>
+7-10    <strong>Lair</strong> {lair-location}, {lair-type}.{break}
         {lair}
-11      <strong>Landmark</strong><br>
+11      <strong>Landmark</strong>{break}
         {landmark}
 12      <strong>Some sort of Dungeon</strong>
 
@@ -86,8 +86,8 @@ table: lair 1d100
 31-35   Treant AC 19, HD 8*, #At 2 fists, Dam 2d6/2d6, Mv 20', Sv F8, Ml 9, XP 945, Tr C
 36-40   {5d6} Winged Apes AC 14, HD 3, #At 2 claws / 1 rock, Dam 1d4/1d4/1d6, Mv 40' Fly 40' (10'), Sv F4, Ml 7 (9 in flight), XP 145
 41-45   {1d10} Giant Bats (C 14, HD 2, #At 1 bite, Dam 1d4, Mv 10' Fly 60' (10'), Sv F2, Ml 8
-46-50   {5d6} Giant Bees AC 13, HD 1d4 HP*, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9.<br>
-        Queen Bee AC 13, HD 2, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9<br>
+46-50   {5d6} Giant Bees AC 13, HD 1d4 HP*, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9.{break}
+        Queen Bee AC 13, HD 2, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9{break}
         {2d10+10} gallons of honey (10gp/ea). {honey}
 51-59   {3d6} Gorillas AC 14, HD 4, #At 1 maul / 1 bite, Dam 1d6/1d6, Mv 40', Sv F4, Ml 7, XP 240
 60-69   {3d12} Stirges AC 13, HD 1*, #At 1 bite, Dam 1d4 + 1d4/round blood drain, Mv 10' Fly 60', Sv F1, Ml 9, XP 37, Tr D

@@ -4,10 +4,10 @@ recipe: does not use recipes
 repeat: 1
 
 table: deadly_blow 2d6 Result of Deadly Blow
-2       <strong>Instant Death!</strong><br>
+2       <strong>Instant Death!</strong>{break}
         The PC suffers multiple and extensive injuries,
         expiring immediately.
-3       <strong>Fatal Wound!</strong><br>
+3       <strong>Fatal Wound!</strong>{break}
         Blow to {deadly_blow_location}. The wound is fatal, but the PC won’t
         actually die for another {1d20}0 minutes. Only a wish can stop the
         impending hand of doom. Make a Save vs. Death to determine if the PC
@@ -15,70 +15,70 @@ table: deadly_blow 2d6 Result of Deadly Blow
         crawl slowly. If the killing blow was to a limb, it is useless or
         severed. Blows to the eyes blind the PC. Blows to the ears deafen the
         PC.
-4-5     <strong>Severed Body {deadly_blow_location}!</strong><br>
+4-5     <strong>Severed Body {deadly_blow_location}!</strong>{break}
         The killing blow has separated a limb or other body part from the rest
         of the body. Blades make clean cuts. Crushing weapons turn flesh and
         bone to mush. Puncture wounds sever a major blood vessel, causing the
         limb to become paralyzed and to later shrivel and die. Other types of
         damage, such as fire or acid, burn away flesh over a large area to
         produce a similar effect. In all cases, the limb is lost without
-        magical regeneration.<br>
-        <br>
+        magical regeneration.{break}
+        {break}
         If the hit location is the skull or neck and the
         character wears no helmet, treat this result as a roll of 2 (Instant
         Death). If the hit location is the trunk (chest, back, gut), and the
         character wears no armor, treat this result as a roll of 3 (Fatal
         Wound). Otherwise, the character will <strong>die of bleeding in {1d6+2} rounds</strong>.
-        Make a Save vs. Death to determine if the PC can remain conscious.<br>
-        <br>
+        Make a Save vs. Death to determine if the PC can remain conscious.{break}
+        {break}
         If the hit location is to the trunk, a large chunk of flesh is
         destroyed. Skin may grow back over the wound, but it will always look
         grotesque. The area is permanently weak, and any later blow to this
-        spot will instantly kill the character.<br>
-        <br>
+        spot will instantly kill the character.{break}
+        {break}
         Bleeding characters may be saved with healing magic, a tourniquet, or
         cauterization with fire, except that cauterization will not stop
-        bleeding caused by burns.<br>
-        <br>
+        bleeding caused by burns.{break}
+        {break}
         Surviving characters require {3d6} weeks to recover. Until this time, the
         character can do nothing more strenuous than walk or speak.
-6-7     <strong>Broken Bone in {deadly_blow_location}!</strong><br>
+6-7     <strong>Broken Bone in {deadly_blow_location}!</strong>{break}
         The killing blow has shattered the bones indicated by Hit Location,
         producing an audible snap or grinding sound. In some cases, the broken
         bone may be protruding from the flesh. The PC falls <strong>unconscious
-        for {1d20} rounds</strong> unless a Save vs. Death Ray is made.<br>
-        <br>
+        for {1d20} rounds</strong> unless a Save vs. Death Ray is made.{break}
+        {break}
         If Hit Location is the head and no helmet is worn, Save vs Death Ray or
         fall into a coma. Otherwise, <strong>the bone heals after {3d6}
         weeks</strong>, during which time the limb cannot be used. Characters
         with broken legs or feet cannot stand or walk. Comatose PCs remain in
-        the coma until the bone heals.<br>
-        <br>
+        the coma until the bone heals.{break}
+        {break}
         Broken bones of the arms, legs or chest reduce carrying capacity by
         half. If the hit location is the the back, the character is permanently
         paralyzed and unable to walk. If hit location is the chest, broken ribs
         will prevent strenuous activity for the duration of recovery. A broken
         bone of the gut ruptures an internal organ.
-8-9     <strong>Knocked Out!</strong><br>
+8-9     <strong>Knocked Out!</strong>{break}
         A blow to the head had rendered the PC <strong>unconscious for {1d12}
         rounds</strong>, unless no helmet is worn, in which case treat as a
         Broken Bone to {deadly_blow_location}. After regaining consciousness,
         the PC wakes up with <strong>{1d4} hit points</strong>.
-10-11   <strong>Stunned!</strong><br>
+10-11   <strong>Stunned!</strong>{break}
         The PC is <strong>stunned for {1d4} rounds</strong> as a blow to the
         head dislodges the helmet, which tumbles {2d6} feet away. If no helmet
-        is worn, the PC is <strong>knocked unconscious for 1d12 rounds</strong>.<br>
-        <br>
+        is worn, the PC is <strong>knocked unconscious for 1d12 rounds</strong>.{break}
+        {break}
         Stunned PCs experience dizziness, ringing in the ears and blurred
         vision. Movement is halved. Ability bonuses are reduced to -3 for
-        Dexterity, Intelligence, and Charisma. Attacks suffer a -4 penalty.<br>
-        <br>
+        Dexterity, Intelligence, and Charisma. Attacks suffer a -4 penalty.{break}
+        {break}
         After regaining consciousness, the PC wakes up with <strong>{1d4} hit points</strong>.
-12      <strong>Rage!</strong><br>
+12      <strong>Rage!</strong>{break}
         A raging fury pushes back against the injury, returning the PC to {1d4}
         hit points. When combat ends, hit points are reduced to zero, and the
-        PC faints for {2d6} rounds.<br>
-        <br>
+        PC faints for {2d6} rounds.{break}
+        {break}
         If a PC achieves this result for a second time during a single combat,
         a berserker effect is produced similar to a potion of heroism. The PC
         gains a +3 attack bonus and {3d8} temporary hit points for the duration

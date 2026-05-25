@@ -1,29 +1,29 @@
 name: Encounters in the St. Orlan Mountains
 description: Tables for generating encounters by location
-recipe: While exploring, the party encounters {encounter}<br>
-        <br>
+recipe: While exploring, the party encounters {encounter}{break}
+        {break}
         The immediate area is {vegetation}. The ground {ground-slope},
-        and it {ground-footing}. {area-feature}.<br>
-        <br>
+        and it {ground-footing}. {area-feature}.{break}
+        {break}
         The general vibe is "{evocative}".
 repeat: 1
 
 table: encounter 1d12
-1-4     <strong>figures wandering {2d4}0 yards ({1d3}0 if surprised) to the {direction}</strong>.<br>
-        {wandering}<br>
-        <br>
-        Their attitude is that {reaction}<br>
-        <br>
+1-4     <strong>figures wandering {2d4}0 yards ({1d3}0 if surprised) to the {direction}</strong>.{break}
+        {wandering}{break}
+        {break}
+        Their attitude is that {reaction}{break}
+        {break}
         Their surprise roll is {1d6}, and the party rolls {1d6}.
-5-6     <strong>figures wandering {2d4}0 yards ({1d3}0 if surprised) to the {direction}</strong>.<br>
-        {wandering}<br>
-        {with-or-against}<br>
-        {wandering}<br>
-        <br>
-        Their attitude is that {reaction}<br>
-        <br>
+5-6     <strong>figures wandering {2d4}0 yards ({1d3}0 if surprised) to the {direction}</strong>.{break}
+        {wandering}{break}
+        {with-or-against}{break}
+        {wandering}{break}
+        {break}
+        Their attitude is that {reaction}{break}
+        {break}
         Their surprise roll is {1d6}, and the party rolls {1d6}.
-7-10    a <strong>lair</strong> {lair-location}, {lair-type}.<br>
+7-10    a <strong>lair</strong> {lair-location}, {lair-type}.{break}
         {lair}
 11      a <strong>landmark</strong>, {landmark}.
 12      a <strong>dungeon</strong> entrance.
@@ -83,9 +83,9 @@ table: wandering 3d10
 6   {1d4} Dire Wolves AC 14, HD 4, #At 1 bite, Dam 2d4, Mv 50', Sv F4, Ml 9
 7   {1d3} {insect-type} Insect Swarms AC 13, HD 4*, #At 1 swarm, Dam 1d3 (double against no armor), Mv 10' Fly 20', Sv N/A, Ml 11, XP 280
 8   Mountain Lion AC 14, HD 3+2, #At 2 claws/1 bite, Dam 1d4/1d4/1d6, Mv 50', Sv F3, Ml 8
-9   Bandits<br>
-    {2d12} Level 1 Fighters AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
-    {1d6} Level 1 Thieves AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
+9   Bandits{break}
+    {2d12} Level 1 Fighters AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9{break}
+    {1d6} Level 1 Thieves AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9{break}
     Led by a {npc-bandit-leader}
 10  {1d6} Giant Flies AC 14, HD 2, #At 1 bite, Dam 1d8, Mv 30' Fly 60', Sv F2, Ml 8
 11  {1d6} Zombies AC 12, HD 2, #At 1, Dam 1d8 or by weapon, Mv 20', Sv F2, Ml 12, XP 75
@@ -121,24 +121,24 @@ table: lair 1d100
 13      Succubus AC 20, HD 7**, #At 2 claws, Dam 1d4/1d4, Mv 30', Fly 50', Sv C6, Ml 7, XP 800.
         Charm Person, Suggestion, Darkness, Dimension Door, ESP and Clairaudience, at will, as a 12th level caster.
 14-15   {1d4} Mountain Lions AC 14, HD 3+2, #At 2 claws/1 bite, Dam 1d4/1d4/1d6, Mv 50', Sv F3, Ml 8
-16-20   Bandits<br>
-        {4d12} Level 1 Fighters AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
-        {2d6} Level 1 Thieves AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9<br>
-        led by a {npc-bandit-leader}.<br>
+16-20   Bandits{break}
+        {4d12} Level 1 Fighters AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9{break}
+        {2d6} Level 1 Thieves AC {npc-bandit-ac}, #At 1, Dam {npc-bandit-weapon}/{npc-bandit-weapon-2}, Mv 30', Ml 9{break}
+        led by a {npc-bandit-leader}.{break}
         They have treasure type A.
 21-25   {3d6} Wolves AC 13, HD 2, #At 1 bite, Dam 1d6, Mv 60', Sv F2, Ml 8
 26-30   {1d4} Giant Crab Spiders AC 13, HD 2*, #At 1 bite, Dam 1d8 + poison, Mv 40', Sv F2, Ml 7
-31-40   {5d6} Orcs AC 14, HD 1, #At 1 weapon, Dam 1d8 or by weapon, Mv 30' Unarmored 40', Sv F1, Ml 8.<br>
-        {5d6} Orc Warriors AC 14, HD 2, #At 1 weapon, Dam 1d8 or by weapon, Mv 30', Sv F2, Ml 9, XP 75.<br>
-        {1d8+2} Orc Chiefs AC 15, HD 4, #At 1 weapon, Dam 1d8+1 or by weapon+1 (strength), Mv 20', Sv F4, Ml 9, XP 240.<br>
+31-40   {5d6} Orcs AC 14, HD 1, #At 1 weapon, Dam 1d8 or by weapon, Mv 30' Unarmored 40', Sv F1, Ml 8.{break}
+        {5d6} Orc Warriors AC 14, HD 2, #At 1 weapon, Dam 1d8 or by weapon, Mv 30', Sv F2, Ml 9, XP 75.{break}
+        {1d8+2} Orc Chiefs AC 15, HD 4, #At 1 weapon, Dam 1d8+1 or by weapon+1 (strength), Mv 20', Sv F4, Ml 9, XP 240.{break}
         Orc King AC 16, HD 6, #At 1 weapon, Dam 1d8+2 or by weapon+2 (strength), Mv 20', Sv F6, Ml 9, XP 500.
 41-45   {1d10} Giant Bats (C 14, HD 2, #At 1 bite, Dam 1d4, Mv 10' Fly 60' (10'), Sv F2, Ml 8
-46-50   {5d6} Giant Bees AC 13, HD 1d4 HP*, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9.<br>
+46-50   {5d6} Giant Bees AC 13, HD 1d4 HP*, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9.{break}
         Queen Bee AC 13, HD 2, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9
-51-59   {3d6} Gnolls AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8.<br>
+51-59   {3d6} Gnolls AC 15 (13), HD 2, #At 1 weapon, Dam 2d4 or by weapon +1, Mv 30' Unarmored 40', Sv F2, Ml 8.{break}
         Gnoll chief AC 15, HD 4, #At 1 weapon, Dam 2d4+1 or by weapon +2, Mv 30', Sv F4, Ml 9, XP 240.
-60-69   {6d10} Goblins AC 14 (11), HD 1-1, #At 1 weapon, Dam 1d6 or by weapon, Mv 20' Unarmored 30', Sv F1, Ml 7.<br>
-        {2d4} Goblin warriors AC 15, HD 5-5, #At 1 weapon + 1, Dam 1d6+1 or by weapon+1, Mv 10', Sv F5, Ml 8, XP 360<br>
+60-69   {6d10} Goblins AC 14 (11), HD 1-1, #At 1 weapon, Dam 1d6 or by weapon, Mv 20' Unarmored 30', Sv F1, Ml 7.{break}
+        {2d4} Goblin warriors AC 15, HD 5-5, #At 1 weapon + 1, Dam 1d6+1 or by weapon+1, Mv 10', Sv F5, Ml 8, XP 360{break}
         Goblin King AC 16, HD 7-7, #At 1 weapon + 1, Dam 1d6+1 or by weapon+1, Mv 10', Sv F7, Ml 9, XP 500
 70-79   {2d4} Dire Wolves AC 14, HD 4, #At 1 bite, Dam 2d4, Mv 50', Sv F4, Ml 9
 80-88   {2d4} Hill Giants AC 15, HD 8, #At 1, Dam 2d8, Mv 30', Sv F8, Ml 8, XP 875, Tr E plus {1d8},000 gp

@@ -1,6 +1,6 @@
 name: 10th Level Dungeons
 description: Descriptions of 10th level dungeon rooms
-recipe: {contents}.<br>
+recipe: {contents}.{break}
         The room smells {smell}. {junk-pile}.
         {portal}.
 repeat: 10

@@ -1,16 +1,16 @@
 name: Monthly Events
 description: Oriental Adventures Yearly Events
-recipe: Monthly event depending on ongoing yearly event.<br>
-    <br>
-    For years of Assassination, Incursion, Political Plot, Rebellion, or War...<br>
-    {event-war}<br>
-    <br>
-    For years of Natural Disaster...<br>
-    {event-disaster}<br>
-    <br>
-    Other years...<br>
-    {event-other}<br>
-    <br>
+recipe: Monthly event depending on ongoing yearly event.{break}
+    {break}
+    For years of Assassination, Incursion, Political Plot, Rebellion, or War...{break}
+    {event-war}{break}
+    {break}
+    For years of Natural Disaster...{break}
+    {event-disaster}{break}
+    {break}
+    Other years...{break}
+    {event-other}{break}
+    {break}
 repeat: 1
 
 table: event-war 1d100
@@ -203,12 +203,12 @@ table: major-fire 1d1
     of food doubles for one month. {fire-plague} {fire-famine}
 
 table: fire-plague 1d10
-1-2     <br>
+1-2     {break}
         {plague}
 3-10    Fear of disease proves unwarranted.
 
 table: fire-famine 1d10
-1       <br>
+1       {break}
         Famine strikes and lasts for {1d6+1} months. Food prices rise by
         {famine-costs} times normal. Marauders scavenge food of any type. Farms
         produce no income this year and 25% next year. {famine-uprising}

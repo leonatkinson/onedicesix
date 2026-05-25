@@ -1,24 +1,24 @@
 name: Daily Events
 description: Oriental Adventures Yearly Events
-recipe: Events in the following locations...<br>
-        <br>
-        Court...<br>
+recipe: Events in the following locations...{break}
+        {break}
+        Court...{break}
         {event-court}
-        <br>
-        <br>
-        City...<br>
+        {break}
+        {break}
+        City...{break}
         {event-city}
-        <br>
-        <br>
-        Rural...<br>
+        {break}
+        {break}
+        Rural...{break}
         {event-rural}
-        <br>
-        <br>
-        Wilderness...<br>
+        {break}
+        {break}
+        Wilderness...{break}
         {event-wilderness}
-        <br>
-        <br>
-        Ocean...<br>
+        {break}
+        {break}
+        Ocean...{break}
         {event-ocean}
 repeat: 1
 

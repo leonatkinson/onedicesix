@@ -16,82 +16,82 @@ table: found
 table: condition
 1   A ruined fort {found} near {location}.
     {ruin}. {ruin}. {ruin}. {ruin}. {alteration}. {addition}.
-    {primary_location} is the lair of {primary_ancient}.<br>
-    1. Cellar - {room_ruin}<br>
-    2. Crypt - {room_ruin}<br>
-    3. Crypt - {room_ruin}<br>
-    4. Crypt - {room_ruin}<br>
-    5. Crypt - {room_ruin}<br>
-    6. Courtyard - {room_ruin}<br>
-    7. Gate - {room_ruin}<br>
-    8. Well - {room_ruin}<br>
-    9. Stables - {room_ruin}<br>
-    10. Walk - {room_ruin}<br>
-    11. Tower, ground floor - {room_ruin}<br>
-    12. Storeroom - {room_ruin}<br>
-    13. Storeroom - {room_ruin}<br>
-    14. Mess Hall - {room_ruin}<br>
-    15. Commander's Quarters - {room_ruin}<br>
-    16. Executive Quarters - {room_ruin}<br>
-    17. Tower, 2nd floor - {room_ruin}<br>
-    18. Barracks - {room_ruin}<br>
-    19. Tower, 3rd floor - {room_ruin}<br>
-    20. Tower, 4th floor - {room_ruin}<br>
+    {primary_location} is the lair of {primary_ancient}.{break}
+    1. Cellar - {room_ruin}{break}
+    2. Crypt - {room_ruin}{break}
+    3. Crypt - {room_ruin}{break}
+    4. Crypt - {room_ruin}{break}
+    5. Crypt - {room_ruin}{break}
+    6. Courtyard - {room_ruin}{break}
+    7. Gate - {room_ruin}{break}
+    8. Well - {room_ruin}{break}
+    9. Stables - {room_ruin}{break}
+    10. Walk - {room_ruin}{break}
+    11. Tower, ground floor - {room_ruin}{break}
+    12. Storeroom - {room_ruin}{break}
+    13. Storeroom - {room_ruin}{break}
+    14. Mess Hall - {room_ruin}{break}
+    15. Commander's Quarters - {room_ruin}{break}
+    16. Executive Quarters - {room_ruin}{break}
+    17. Tower, 2nd floor - {room_ruin}{break}
+    18. Barracks - {room_ruin}{break}
+    19. Tower, 3rd floor - {room_ruin}{break}
+    20. Tower, 4th floor - {room_ruin}{break}
 2   An abandoned fort {found} near {location}.
     {ruin}. {ruin}. {ruin}. {alteration}. {addition}.
-    {primary_location} is the lair of {primary_abandoned}.<br>
-    1. Cellar - {room_abandoned}<br>
-    2. Crypt - {room_abandoned}<br>
-    3. Crypt - {room_abandoned}<br>
-    4. Crypt - {room_abandoned}<br>
-    5. Crypt - {room_abandoned}<br>
-    6. Courtyard - {room_abandoned}<br>
-    7. Gate - {room_abandoned}<br>
-    8. Well - {room_abandoned}<br>
-    9. Stables - {room_abandoned}<br>
-    10. Walk - {room_abandoned}<br>
-    11. Tower, ground floor - {room_abandoned}<br>
-    12. Storeroom - {room_abandoned}<br>
-    13. Storeroom - {room_abandoned}<br>
-    14. Mess Hall - {room_abandoned}<br>
-    15. Commander's Quarters - {room_abandoned}<br>
-    16. Executive Quarters - {room_abandoned}<br>
-    17. Tower, 2nd floor - {room_abandoned}<br>
-    18. Barracks - {room_abandoned}<br>
-    19. Tower, 3rd floor - {room_abandoned}<br>
-    20. Tower, 4th floor - {room_abandoned}<br>
+    {primary_location} is the lair of {primary_abandoned}.{break}
+    1. Cellar - {room_abandoned}{break}
+    2. Crypt - {room_abandoned}{break}
+    3. Crypt - {room_abandoned}{break}
+    4. Crypt - {room_abandoned}{break}
+    5. Crypt - {room_abandoned}{break}
+    6. Courtyard - {room_abandoned}{break}
+    7. Gate - {room_abandoned}{break}
+    8. Well - {room_abandoned}{break}
+    9. Stables - {room_abandoned}{break}
+    10. Walk - {room_abandoned}{break}
+    11. Tower, ground floor - {room_abandoned}{break}
+    12. Storeroom - {room_abandoned}{break}
+    13. Storeroom - {room_abandoned}{break}
+    14. Mess Hall - {room_abandoned}{break}
+    15. Commander's Quarters - {room_abandoned}{break}
+    16. Executive Quarters - {room_abandoned}{break}
+    17. Tower, 2nd floor - {room_abandoned}{break}
+    18. Barracks - {room_abandoned}{break}
+    19. Tower, 3rd floor - {room_abandoned}{break}
+    20. Tower, 4th floor - {room_abandoned}{break}
 3   A deserted fort {found} near {location}.
     {ruin}. {ruin}. {alteration}. {addition}. {addition}.
-    {primary_location} is the lair of {primary_deserted}.<br>
-    1. Cellar - {room_deserted}<br>
-    2. Crypt - {room_deserted}<br>
-    3. Crypt - {room_deserted}<br>
-    4. Crypt - {room_deserted}<br>
-    5. Crypt - {room_deserted}<br>
-    6. Courtyard - {room_deserted}<br>
-    7. Gate - {room_deserted}<br>
-    8. Well - {room_deserted}<br>
-    9. Stables - {room_deserted}<br>
-    10. Walk - {room_deserted}<br>
-    11. Tower, ground floor - {room_deserted}<br>
-    12. Storeroom - {room_deserted}<br>
-    13. Storeroom - {room_deserted}<br>
-    14. Mess Hall - {room_deserted}<br>
-    15. Commander's Quarters - {room_deserted}<br>
-    16. Executive Quarters - {room_deserted}<br>
-    17. Tower, 2nd floor - {room_deserted}<br>
-    18. Barracks - {room_deserted}<br>
-    19. Tower, 3rd floor - {room_deserted}<br>
-    20. Tower, 4th floor - {room_deserted}<br>
+    {primary_location} is the lair of {primary_deserted}.{break}
+    1. Cellar - {room_deserted}{break}
+    2. Crypt - {room_deserted}{break}
+    3. Crypt - {room_deserted}{break}
+    4. Crypt - {room_deserted}{break}
+    5. Crypt - {room_deserted}{break}
+    6. Courtyard - {room_deserted}{break}
+    7. Gate - {room_deserted}{break}
+    8. Well - {room_deserted}{break}
+    9. Stables - {room_deserted}{break}
+    10. Walk - {room_deserted}{break}
+    11. Tower, ground floor - {room_deserted}{break}
+    12. Storeroom - {room_deserted}{break}
+    13. Storeroom - {room_deserted}{break}
+    14. Mess Hall - {room_deserted}{break}
+    15. Commander's Quarters - {room_deserted}{break}
+    16. Executive Quarters - {room_deserted}{break}
+    17. Tower, 2nd floor - {room_deserted}{break}
+    18. Barracks - {room_deserted}{break}
+    19. Tower, 3rd floor - {room_deserted}{break}
+    20. Tower, 4th floor - {room_deserted}{break}
 4   An occupied fort {found} near {location}.
     {ruin}. {alteration}, {alteration}. {addition}. {addition}.
-    Residents are lead by {primary_occupied} {leader_class} of {leader_level}.<br>
+    Residents are lead by {primary_occupied} {leader_class} of {leader_level}.{break}
 5   An outpost {found} near {location}.
     {alteration}, {alteration}. {addition}. {addition}. {addition}.
-    An army is lead by {primary_outpost} {leader_class} of {leader_level}.<br>
+    An army is lead by {primary_outpost} {leader_class} of {leader_level}.{break}
 6   A stronghold {found} near {location}.
     {alteration}. {alteration}. {alteration}. {addition}. {addition}. {addition}.
-    An army is lead by {primary_stronghold} {leader_class} of {leader_level}.<br>
+    An army is lead by {primary_stronghold} {leader_class} of {leader_level}.{break}
 
 table: location
 1   a river ford

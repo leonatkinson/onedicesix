@@ -1,9 +1,9 @@
 name: Molok's Mummies
 description:
 recipe:
-    Doors -- {1d6}, {1d6}, {1d6}, {1d6}, {1d6}, {1d6}<br>
-    In hex {1d6+6}, {trap}<br>
-    In hex {1d6+12}, {foe}<br>
+    Doors: {1d6}, {1d6}, {1d6}, {1d6}, {1d6}, {1d6}{break}
+    In hex {1d6+6}, {trap}{break}
+    In hex {1d6+12}, {foe}{break}
 repeat: 1
 
 table: trap

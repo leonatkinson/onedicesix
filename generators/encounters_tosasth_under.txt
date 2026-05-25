@@ -1,7 +1,7 @@
 name: Encounters in Tosasth Underdark
 description: Tables for generating encounters by location
-recipe: {encounter}<br>
-        Surprise {1d6} (monsters) / {1d6} (party)<br>
+recipe: {encounter}{break}
+        Surprise {1d6} (monsters) / {1d6} (party){break}
         Distance {2d4}0' ({1d3}0' surprised)
 repeat: 1
 
@@ -10,21 +10,21 @@ table: encounter 2d6
     {1d10} x 5' area of effect. {rockfall}
 3   Floor collapses. Roll surprise to see if you can save to avoid.
     {1d10} x 5' area of effect. {1d6}0' depth
-4   Bugbear Squad -- Leader (HP {4d8+4}), 4 Hobgoblin Warriors (HP {3d8}), Witch (HP {1d8}), {3d6} Goblins (HP {1d8-1})<br>
-    Bugbear Leader AC 15, HD 4+4, #At 1 weapon, Dam 1d8+2, Mv 30', Sv F4, Ml 10, XP 145<br>
-    Hobgoblin Warrior AC 14, HD 3, #At 1 weapon, Dam 1d8, Mv 30', Sv F3, Ml 9, XP 25<br>
-    Hobgoblin Witch AC 14 (11), HD 1, #At 1 weapon, Dam 1d8, Mv 30' Unarmored 40', Sv M4, Ml 8, XP 90, Magic Missile, Sleep, Web, Phantasmal Force used to create 6 Spectres.<br>
-    Goblin AC 14, HD 1-1, #At 1 weapon, Dam 1d6, Mv 20', Sv F1, Ml 7, XP 10<br>
+4   Bugbear Squad -- Leader (HP {4d8+4}), 4 Hobgoblin Warriors (HP {3d8}), Witch (HP {1d8}), {3d6} Goblins (HP {1d8-1}){break}
+    Bugbear Leader AC 15, HD 4+4, #At 1 weapon, Dam 1d8+2, Mv 30', Sv F4, Ml 10, XP 145{break}
+    Hobgoblin Warrior AC 14, HD 3, #At 1 weapon, Dam 1d8, Mv 30', Sv F3, Ml 9, XP 25{break}
+    Hobgoblin Witch AC 14 (11), HD 1, #At 1 weapon, Dam 1d8, Mv 30' Unarmored 40', Sv M4, Ml 8, XP 90, Magic Missile, Sleep, Web, Phantasmal Force used to create 6 Spectres.{break}
+    Goblin AC 14, HD 1-1, #At 1 weapon, Dam 1d6, Mv 20', Sv F1, Ml 7, XP 10{break}
 5   {1d6} Tentacle Worms (HP {3d8}) AC 13, HD 3*, #At 6 tentacles, Dam paralysis, Mv 40', Sv F3, Ml 9
 6   {dwarves}, attitude {2d6}
 7   {2d6} Goblins (HP {1d8-1}) AC 14, HD 1-1, #At 1 weapon, Dam 1d6, Mv 20', Sv F1, Ml 7, XP 10
 8   {2d6} Zombies (HP {2d8}) AC 12, HD 2, #At 1, Dam 1d8, Mv 20', Sv F2, Ml 12, XP 25
 9   {2d6} Giant Bugs, {bugbody}, {buglook} (HP {1d4}) AC 11, HD 1d4 HP, #At 1 bite, Dam {trick-poison-type}, Mv 40', Sv NM, Ml 7, XP 25
-10  Goggler Priest (HP {9d8}) and {1d4} Attendants (HP {2d8})<br>
+10  Goggler Priest (HP {9d8}) and {1d4} Attendants (HP {2d8}){break}
     Goggler Shaman AC 17, HD 9, #At 1 bite, Dam 1d6 kris or bite 1d4, Mv Swim 50 (20'), Sv F2, Ml 7, XP 1400
     Prot from Good (+2 AC, +2 saves), 2 Cure Lt Wounds (1d6+1), 2 hold person,
     resist fire (+3 saves, damage halved), striking (+1d6 dam for 9 rounds),
-    2 dispel magic, prot good 10’ radius<br>
+    2 dispel magic, prot good 10’ radius{break}
     Goggler AC 17, HD 2, #At 1, Dam 1d6 kris or bite 1d4, Mv Swim 50 (20'), Sv F2, Ml 9, XP 125
 11  {2d6} Ghouls (HP {2d8}) AC 14, HD 2*, #At 2 claws/1 bite, Dam 1d4/1d4/1d4, all plus paralysis, Mv 30', Sv F2, Ml 9, XP 100
 12  Purple Worm (HP {11d8}+9) AC 16, HD 11* (+9) to 20* (+13), #At 1 bite/1 sting, Dam 2d8/1d8+poison, Mv 20' (15'), Sv F6 to F10 (1/2 Hit Dice), Ml 10, XP 1670

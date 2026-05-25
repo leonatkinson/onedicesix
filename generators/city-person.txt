@@ -1,6 +1,6 @@
 name: City Person
 description: People you might meet wandering around in a city.
-recipe: {city-person}
+recipe: {# person}. {city-person}{break2}
 repeat: 1d6
 
 table: city-person 1d10

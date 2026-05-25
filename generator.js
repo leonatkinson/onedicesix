@@ -28,6 +28,10 @@ class EmptyZ_Generator
 
     static COUNTER_REGEX() { return /\#\s?(\S+)/; }
 
+    static BREAK_REGEX() { return /break\d*/; }
+
+    static BLANK_REGEX() { return /blank/; }
+
     /**
      * Create an instance of Generator from import data
      */
@@ -140,6 +144,19 @@ class EmptyZ_Generator
                 // Get the first curly brace expression
                 let m = recipe.match(/{([^}]+)}/);
 
+                // Check of m matches a break or blank pattern first, since those aren't looked up
+                if (m[1].match(EmptyZ_Generator.BREAK_REGEX())) {
+                    // Replace all {break} with <br>
+                    recipe = recipe.replace(/{break}/g, "<br>\n");
+                    recipe = recipe.replace(/{break2}/g, "<br>\n<br>\n");
+                    continue;
+                }
+                if (m[1].match(EmptyZ_Generator.BLANK_REGEX())) {
+                    // Replace {blank} with empty string
+                    recipe = recipe.replace(/{blank}/g, '');
+                    continue;
+                }
+
                 // Is it a counter?
                 let counter = m[1];
                 if (counter.match(EmptyZ_Generator.COUNTER_REGEX())) {
@@ -153,6 +170,7 @@ class EmptyZ_Generator
 
                     // Replace the first counter reference
                     recipe = recipe.replace('{' + counter + '}', this.counters[counterName]);
+                    continue;
                 }
 
                 // Is it a repeater
@@ -179,8 +197,8 @@ class EmptyZ_Generator
                             );
                     } else {
                         recipe = recipe.replace('{' + repeater + '}', '[' + repeater + ' broken repeater]');
-                        continue;
                     }
+                    continue;
                 }
 
                 // Does it match a table name?
@@ -293,10 +311,8 @@ class EmptyZ_Table
      * @param string data
      */
     addChoice(data) {
-//console.log('add choice for ' + this.name);
         let m = data.match(/^(\S+)\s+(.+)/);
         if (!m) {
-//console.log('nope');
             return;
         }
         let low = m[1];
@@ -306,11 +322,8 @@ class EmptyZ_Table
             low = m[1];
             high = m[2];
         }
-//console.log('new table choice is ', low, high, result);
         let tc = new EmptyZ_TableChoice(low, high, result);
-//console.log(tc);
         this.choices.push(tc);
-//console.log(this.choices);
     }
 
     /**
@@ -989,13 +1002,69 @@ class EmptyZ_UI
                     EmptyZ_UI_WbOracle.setup(el);
                     break;
             }
-            // Add button
-            container.append('<button class="emptyz-regenerate wp-element-button">Generate '+generator.name+'</button>');
+            // Add generate button
+            container.append('<button class="emptyz-regenerate wp-element-button" title="Regenerate">Generate '+generator.name+'</button>');
+            // Add button to copy results to clipboard
+            container.append('<button class="emptyz-copy wp-element-button" style="margin-left: 10px;" title="Copy to clipboard">📋</button>');
+            // Add button to save to a file
+            container.append('<button class="emptyz-save wp-element-button" style="margin-left: 10px;" title="Save to file">💾</button>');
             // Run it
             EmptyZ_UI.run(el);
-            // Activate button
+            // Activate regenerate button
             container.find('button.emptyz-regenerate').on( "click", function() {
                 EmptyZ_UI.rerun(jQuery(this).parent());
+            });
+            // Activate copy button
+            container.find('button.emptyz-copy').on( "click", function() {
+                const htmlContent = output.html();
+
+                // Plain text fallback
+                const plainText = htmlContent
+                    .replace(/<br\s*\/?>/gi, '\n')
+                    .replace(/<\/h[1-6]>/gi, '\n')
+                    .replace(/<\/?[^>]+(>|$)/g, '')
+                    .split('\n').map(line => line.trim())
+                    .join('\n').trim();
+
+                const clipboardItem = new ClipboardItem({
+                    'text/html': new Blob([htmlContent], { type: 'text/html' }),
+                    'text/plain': new Blob([plainText], { type: 'text/plain' })
+                });
+
+                navigator.clipboard.write([clipboardItem]).then(function() {
+                    // Success
+                    //alert('Copied to clipboard!');
+                }, function(err) {
+                    // Error
+                    alert('Failed to copy to clipboard: ' + err);
+                });
+            });
+            // Activate save button
+            container.find('button.emptyz-save').on( "click", function() {
+                const htmlContent = output.html();
+                const fullHtml = `<!DOCTYPE html>` +
+                    `<html lang="en">` +
+                    `<head>` +
+                        `<meta charset="UTF-8">` +
+                        `<meta name="viewport" content="width=device-width, initial-scale=1.0">` +
+                        `<title>${generator.name}</title>` +
+                    `</head>` +
+                    `<body>` +
+                    `${htmlContent}` +
+                    `</body>` +
+                    `</html>`;
+                const blob = new Blob([fullHtml], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = generator.name.replace(/\s+/g, '_').toLowerCase() + '.html';
+                document.body.appendChild(a);
+                a.click();
+
+                // Clean up
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
             });
         });
     }
@@ -1079,12 +1148,7 @@ class EmptyZ_UI
                 // Simple generator with fixed recipe. Line breaks are turned
                 // into paragraphs. Semicolons turn into BRs. Finally, lines
                 // starting with a label and colon get STRONG treatment.
-                generator.run().split(/[\r\n]+/).forEach(function(line) {
-                    output.append('<p>'
-                        + line.split('; ').join('<br>\n').replace(/(^|\n)([^:]+:)/g, '<strong>$2</strong>')
-                        + '</p>');
-                });
-
+                output.append(generator.run());
         }
     }
 

@@ -1,23 +1,23 @@
 name: Frogs
 description:
-recipe: {frog}<br>
+recipe: {frog}{break}
     {gems} in their bellies
 repeat: 1
 
 table: frog 2d4
-2   {1d4} Giant Black Toads AC 20, HD 10, #At 1 acid tongue or 1 bite, Dam 5d6 or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 1300<br>
+2   {1d4} Giant Black Toads AC 20, HD 10, #At 1 acid tongue or 1 bite, Dam 5d6 or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 1300{break}
     8' tall. Tongue attacks 40'. Save vs Dragon for half. Swallows man-sized on natural 20.
-3   {2d4} Giant Fire Toads AC 17, HD 4, #At 1 tongue or 1 bite, Dam grab or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 240<br>
+3   {2d4} Giant Fire Toads AC 17, HD 4, #At 1 tongue or 1 bite, Dam grab or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 240{break}
     6' tall. Immune to fire attacks. Swallows man-sized on natural 20.
-4   {1d4} Bigger Giant Frogs AC 13, HD 4, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 240<br>
+4   {1d4} Bigger Giant Frogs AC 13, HD 4, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 240{break}
     6' tall. Swallows man-sized on natural 20.
-5   {1d4} Giant Frogs AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 75<br>
+5   {1d4} Giant Frogs AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 75{break}
     Swallows dwarf-sized on natural 20.
-6   {1d4} Hypno Toads AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 100<br>
+6   {1d4} Hypno Toads AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 100{break}
     Swallows dwarf-sized on natural 20. On gaze, save vs wands or be paralyzed while gaze holds. Psychodelic colors. Single eye.
-7   {2d4} Giant Poisonous Frogs AC 13, HD 4, #At 1 tongue or 1 bite, Dam grab or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 280<br>
+7   {2d4} Giant Poisonous Frogs AC 13, HD 4, #At 1 tongue or 1 bite, Dam grab or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 280{break}
     6' tall. Immune to poison. On bite, save vs poison or take an extra 1d6 damage over three rounds. Swallows man-sized on natural 20.
-8   {1d4} Undead Giant Frogs AC 15, HD 5, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 405<br>
+8   {1d4} Undead Giant Frogs AC 15, HD 5, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 405{break}
     8' tall. Tongue attacks 40'. On natural 20, one negative level. Obviously rotting.
 
 

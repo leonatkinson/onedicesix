@@ -1,21 +1,21 @@
 name: Encounters in Tosasth (Reduced)
 description: Tables for generating encounters by location
-recipe: North<br>
-        {encounter}<br>
-        <br>
-        Northeast<br>
-        {encounter}<br>
-        <br>
-        Southeast<br>
-        {encounter}<br>
-        <br>
-        South<br>
-        {encounter}<br>
-        <br>
-        Southwest<br>
-        {encounter}<br>
-        <br>
-        Northwest<br>
+recipe: North{break}
+        {encounter}{break}
+        {break}
+        Northeast{break}
+        {encounter}{break}
+        {break}
+        Southeast{break}
+        {encounter}{break}
+        {break}
+        South{break}
+        {encounter}{break}
+        {break}
+        Southwest{break}
+        {encounter}{break}
+        {break}
+        Northwest{break}
         {encounter}
 repeat: 1
 
@@ -26,8 +26,8 @@ table: distance 1d4
 
 table: encounter 1d12
 1-11  clear
-12   {distance} away<br>
-     {monster}<br>
+12   {distance} away{break}
+     {monster}{break}
      {attitude}
 
 table: monster 1d100

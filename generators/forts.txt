@@ -673,20 +673,6 @@ table: trade-goods-food
 3   molasses
 
 
-#
-# Utilities
-#
-
-table: blank
-1   <!-- blank -->
-
-table: break
-1   <br>
-
-table: break2
-1   {break} {break}
-
-
 table: proper-noun 1d961
 1   Aelat
 2   Aemusti

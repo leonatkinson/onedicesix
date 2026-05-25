@@ -1,9 +1,9 @@
 name: Southern Seas Names
 description: Names for people of the southern seas
-recipe: Human -- {human}<br>
-    Elf -- {elf}<br>
-    Dwarf -- {dwarf}<br>
-    Halfling -- {halfling}<br>
+recipe: Human -- {human}{break}
+    Elf -- {elf}{break}
+    Dwarf -- {dwarf}{break}
+    Halfling -- {halfling}{break}
 repeat: 1
 
 table: human 1d961

@@ -1,11 +1,11 @@
 name: St. Orlan Adventures
 description: Describes a simple adventure idea.
 recipe:
-    How does it start? {start}<br>
-    Where is it? {where}<br>
-    Who's the antagonist? {antagonist}<br>
-    What's the challenge? {challenge}<br>
-    What's the reward? {reward}<br>
+    How does it start? {start}{break}
+    Where is it? {where}{break}
+    Who's the antagonist? {antagonist}{break}
+    What's the challenge? {challenge}{break}
+    What's the reward? {reward}{break}
 repeat: 1
 
 # How it starts

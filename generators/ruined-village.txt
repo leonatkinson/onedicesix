@@ -2,7 +2,7 @@ name: Ruined Village
 description: A building in a ruined village in the Tosasth valley.
 recipe: The structure was once a {building-type}. It has {building-rooms}
         and {building-entrances}. Inside it is {contents}.
-        Among the various items are {junk-pile}.<br>
+        Among the various items are {junk-pile}.{break}
 repeat: 1
 
 table: building-type 1d100
@@ -44,19 +44,19 @@ table: direction 1d8
 
 table: contents 1d20
 1-11    empty of monster or treasure
-12-14   occupied by monsters.<br>
-        <br>
-        {monster}<br>
+12-14   occupied by monsters.{break}
+        {break}
+        {monster}{break}
         The monster has no treasure
-15-17   the lair of monsters guarding treasure.<br>
-        <br>
-        {monster}<br>
-        <br>
+15-17   the lair of monsters guarding treasure.{break}
+        {break}
+        {monster}{break}
+        {break}
         The treasure is {container}, {container-protect}, containing
-        {cp}cp, {sp}sp, {ep}ep, {gp}gp, {pp}pp, {gems}, {jewelry}, {magic}<br>
+        {cp}cp, {sp}sp, {ep}ep, {gp}gp, {pp}pp, {gems}, {jewelry}, {magic}{break}
 18-19   some sort of trick. {trick}
 20      Treasure here is {container}, {container-protect}, containing
-        {cp}cp, {sp}sp, {ep}ep, {gp}gp, {pp}pp, {gems}, {jewelry}, {magic}<br>
+        {cp}cp, {sp}sp, {ep}ep, {gp}gp, {pp}pp, {gems}, {jewelry}, {magic}{break}
 
 table: cp 1d100
 1-5     {1d8}00
@@ -1135,27 +1135,27 @@ table: junk
 
 table: monster 2d8
 
-2       Black Knight: AC 20, HD 14** (+11 +weapon), #At 1 longsword, Dam By 1d8 +3 +magic, Mv 30', Sv F14, Ml 11, XP 2730<br>
+2       Black Knight: AC 20, HD 14** (+11 +weapon), #At 1 longsword, Dam By 1d8 +3 +magic, Mv 30', Sv F14, Ml 11, XP 2730{break}
         Creatures less than 5 HD save vs. Spells or -2 attack penalty and -2 AC.  75% reflect spells back at caster.
         Casts detect magic and detect invisibility at will.  Casts fireball and wall of fire each 3 times per day
         as a 10th level Magic-User.  Takes half damage from non-magical weapons.  Immune to sleep, charm, and hold magic.
         Cannot be Turned by a Cleric.
-3       {5d4} Rot Grubs AC 10, HD 1 HP, #At 1 bite, Dam special, Mv 5', Sv F1, Ml 12, XP 10<br>
+3       {5d4} Rot Grubs AC 10, HD 1 HP, #At 1 bite, Dam special, Mv 5', Sv F1, Ml 12, XP 10{break}
         Wisdom check to notice attack.  May be killed in two first rounds by cutting or fire, doing 2d6 points of damage,
         else victim dies in 1d3 turns.
 4       {1d10} Shadows AC 13‡, HD 2*, #At 1 touch, Dam 1d4 + 1 point Strength loss, Mv 30', Sv F2, Ml 12, XP 100
 5       {1d10} Cavemen AC 12, HD 2, #At 1 spear, Dam 1d6 + 1, Mv 40', Sv F2, Ml 7, XP 75
-6       {1d4} Black Bears AC 14, HD 4, #At 2 claws/1 bite + hug, Dam 1d4/1d4/1d6 + 2d6 hug, Mv 40', Sv F4, Ml 7, XP 240<br>
+6       {1d4} Black Bears AC 14, HD 4, #At 2 claws/1 bite + hug, Dam 1d4/1d4/1d6 + 2d6 hug, Mv 40', Sv F4, Ml 7, XP 240{break}
         Hit with both paws is a hug attack.
 7-8     {1d8} Yellow Molds AC always hit, HD 2*, #At Special, Dam See below, Mv 0, Sv NM, Ml N/A, XP 100
 9-10    {2d8} Flesh Eater Zombies AC 14, HD 2, #At 2 claws/1 bite, Dam 1d3/1d3/1d6, Mv 40', Sv F2, Ml 12, XP 75
-11-12   {2d4} Dormayvoos AC 12, HD 2, #At 1, Dam 1d8, Mv 20', Sv F2, Ml 12, XP 100<br>
+11-12   {2d4} Dormayvoos AC 12, HD 2, #At 1, Dam 1d8, Mv 20', Sv F2, Ml 12, XP 100{break}
         On hit, Save vs Spells or fall (seemingly dead). Rise in 1d4 rounds.
-13-14   {2d8} Ghouls AC 14, HD 2*, #At 2 claws/1 bite, Dam 1d4/1d4/1d4, all plus paralysis, Mv 30', Sv F2, Ml 9, XP 100.<br>
+13-14   {2d8} Ghouls AC 14, HD 2*, #At 2 claws/1 bite, Dam 1d4/1d4/1d4, all plus paralysis, Mv 30', Sv F2, Ml 9, XP 100.{break}
         Surprises 1-3 on 1d6.  Save vs. Paralysis or be paralyzed for 2d8 turns. Elves are immune to this effect.
         Cumulative +5% per bite of contracting ghoul fever. Those afflicted save vs. Death Ray at a penalty of -4 or die.
 15      {1d10+10} Giant Wasps AC 15, HD 4+1*, #At 1 sting, Dam 1d6 + poison, Mv 20' Fly 60', Sv F4, Ml 10, XP 280
-16      Hezrou AC 22‡, HD 10** (AB +9), #At 2 claws/1 bite or spell, Dam 1d4/1d4/4d4, Mv 30', Sv F10, Ml 11, XP 1480<br>
+16      Hezrou AC 22‡, HD 10** (AB +9), #At 2 claws/1 bite or spell, Dam 1d4/1d4/4d4, Mv 30', Sv F10, Ml 11, XP 1480{break}
         Appears as a demonic troglodyte that secretes smelly oil.  Save vs. Poison or -2 AB when near.
         Telepathic, darkvision, teleport at will (not when trapped).
         Cause fear at will (< 6HD save vs. Spells or flee).

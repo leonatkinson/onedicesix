@@ -218,7 +218,7 @@ table: mine-size 2d4
 4-6     The mine consists of a handful of chambers.{break}
         {mine-level}
 7-8     The mine was built on several levels, each with a number of chambers.{break}
-        {1d4+1 mine-level}
+        {1d4+1 mine-level <br>}
 
 table: mine-chamber 2d4
 2-3 It failed to produce and was quickly abandoned.
@@ -494,19 +494,6 @@ table: spell-effect
 5   Magic Missile
 6   Sleep
 
-
-#
-# Utilities
-#
-
-table: blank
-1   <!-- blank -->
-
-table: break
-1   <br>
-
-table: break2
-1   {break} {break}
 
 
 table: proper-noun 1d961

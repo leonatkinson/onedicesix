@@ -375,15 +375,3 @@ table: motive
 19    Compells weilder to tell the truth.
 20    Promotes a faith.
 
-#
-# Utilities
-#
-
-table: blank
-1   <!-- blank -->
-
-table: break
-1   <br>
-
-table: break2
-1   {break} {break}

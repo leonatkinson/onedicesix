@@ -1,11 +1,11 @@
 name: Encounters in Tunnels Beneath the Ruined Tower
 description: Tables for generating encounters by location
-recipe: You stop in a {2d6}0'x{2d6}0' chamber. {encounter}. {thing}.<br>
-        North has {open}.<br>
-        South has {open}.<br>
-        East has {open}.<br>
-        West has {open}.<br>
-        Up has {open_up}.<br>
+recipe: You stop in a {2d6}0'x{2d6}0' chamber. {encounter}. {thing}.{break}
+        North has {open}.{break}
+        South has {open}.{break}
+        East has {open}.{break}
+        West has {open}.{break}
+        Up has {open_up}.{break}
         Down has {open_down}.
 repeat: 1
 
@@ -37,8 +37,8 @@ table: open_down 1d20
 
 table: encounter 1d6
 1-3 No monsters
-4-6   Monsters {attitude}!<br>
-    {monster}<br><br>
+4-6   Monsters {attitude}!{break}
+    {monster}{break}{break}
 
 table: thing 1d6
 1-3 Nothing of value
@@ -75,16 +75,16 @@ table: fountain-drink 1d10
 10      permanent immunity to charm magic
 
 table: monster 1d100
-1-10    {1d6} Loadstars AC 17, HD 2, HP {2d8}, #At 1, Dam 1d6, Mv 20', Sv F2, Ml 12, XP 100<br>
+1-10    {1d6} Loadstars AC 17, HD 2, HP {2d8}, #At 1, Dam 1d6, Mv 20', Sv F2, Ml 12, XP 100{break}
         On hit, 10lb blob. Lance it for 1d4 damage within 1 turn.
-11-20   {2d4} Dormayvoos AC 12, HD 2, HP {2d8}, #At 1, Dam 1d8, Mv 20', Sv F2, Ml 12, XP 100<br>
+11-20   {2d4} Dormayvoos AC 12, HD 2, HP {2d8}, #At 1, Dam 1d8, Mv 20', Sv F2, Ml 12, XP 100{break}
         On hit, Save vs Spells or fall (seemingly dead). Rise in 1d4 rounds.
 21-30   {2d6} Ghouls AC 14, HD 2*, HP {2d8}, #At 2 claws/1 bite, Dam 1d4/1d4/1d4, all plus paralysis, Mv 30', Sv F2, Ml 9, XP 100
 31-40   Wights AC 15 †, HD 3*, HP {3d8}, #At 1 touch, Dam Energy drain (1 level), Mv 30', Sv F3, Ml 12, XP 175
 41-50   {1d4} Mummies AC 17 ‡, HD 5, HP {5d8}, #At 1 touch + disease, Dam 1d12 + disease, Mv 20', Sv F5, Ml 12, XP 450
 51-60   {1d4} Wraiths AC 15 ‡, HD 4, HP {4d8}, #At 1 touch, Dam 1d6 + energy drain (1 level), Mv Fly 80', Sv F4, Ml 12, XP 320
 61-99   {2d6} Giant Bugs, {bugbody}, {buglook} AC 11, HD 1d4 HP, HP {1d4}, #At 1 bite, Dam {trick-poison-type}, Mv 40', Sv NM, Ml 7, XP 25
-100     Bestomper AC 20, HD 11, HP {11d8}, #At stomp or bite or blast, Dam 3d6 or 2d6 or special, Mv 20', Sv M20, Ml 11, XP 1765<br>
+100     Bestomper AC 20, HD 11, HP {11d8}, #At stomp or bite or blast, Dam 3d6 or 2d6 or special, Mv 20', Sv M20, Ml 11, XP 1765{break}
         Decapitate on natural 20 bite. Toes are AC 24. 10 points of damage to disable toe.
         Blasts: Paralyze, Weaken, Confusion, Fire, Dispell Magic, Freeze, Blindness, Disintegrate, Death, Slow.
 

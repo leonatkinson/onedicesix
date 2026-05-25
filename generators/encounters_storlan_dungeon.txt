@@ -1,8 +1,8 @@
 name: Rooms in a St. Orlan Dungeon
 description: 1st level dungeon with monsters HD 1-3
-recipe: {# room}. {room-name}<br>
-        {contents}.<br>
-        The room smells {smell}. The room contains {junk-pile}.<br>
+recipe: {# room}. {room-name}{break}
+        {contents}.{break}
+        The room smells {smell}. The room contains {junk-pile}.{break2}
 repeat: 10
 
 table: room-name 1d12
@@ -149,10 +149,10 @@ table: room-material 1d20
 table: contents 1d20
 1-5     Empty of monster or treasure
 6-8     {monster-group}
-9-12    {monster-group}<br>
+9-12    {monster-group}{break}
         guarding {container}, {container-protect}, containing
         {cp}cp, {sp}sp, {ep}ep, {gp}gp, {pp}pp, {gems}, {jewelry}, {magic}
-13      {trick}.<br>
+13      {trick}.{break}
         {monster-group}.
 14-18   {trick}
 19      {trick}. {container}, {container-protect}, containing
@@ -1242,7 +1242,7 @@ table: monster 2d8
 4   {1d8} Shriekers AC 13, HD 3, #At Special, Dam None, Mv 5', Sv F1, Ml 12, XP 145
 5   {1d6} Loadstars AC 17, HD 2, #At 1, Dam 1d6, Mv 20', Sv F2, Ml 12, XP 100.
     On hit, 10lb blob. Lance it for 1d4 damage within 1 turn.
-6   Zombraire AC 12, HD 3*, #At 1 dagger or 1 spell, Dam 1d4 or per spell, Mv 20', Sv M3, Ml 9, XP 175<br>
+6   Zombraire AC 12, HD 3*, #At 1 dagger or 1 spell, Dam 1d4 or per spell, Mv 20', Sv M3, Ml 9, XP 175{break}
     Spells {mage-spells-1}, {mage-spells-1}, {mage-spells-2}
 7   {4d4} Kobolds AC 13, HD 1d4 HP, #At 1 spear, Dam 1d6, Mv 20', Sv NM, Ml 6, XP 10, Tr P, Q each
 8   {1d4} Giant Crab Spiders AC 13, HD 2*, #At 1 bite, Dam 1d8 + poison, Mv 40', Sv F2, Ml 7, XP 100

@@ -3,7 +3,7 @@ description: Generates the remains of a ruined village
 recipe:
     The {origin} village was last inhabited {years} ago. The structures {constructed}.
     {features}
-    Of the {2d6} structures, the following are interesting.<br><br>
+    Of the {2d6} structures, the following are interesting.{break}{break}
     {buildings}
 repeat: 1
 
@@ -48,7 +48,7 @@ table: buildings 1d100
 97-100  {building} {building} {building} {building} {building} {building} {building}
 
 table: building 1d1
-1   {building-type} {maybe-smell} {maybe-junk} {maybe-treasure}<br>
+1   {building-type} {maybe-smell} {maybe-junk} {maybe-treasure}{break}
 
 table: building-type 1d100
 1-83    Residence.

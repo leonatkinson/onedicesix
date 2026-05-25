@@ -1,17 +1,17 @@
 name: Monsters
 description: Random monsters
 recipe:
-    Armor Class = {armor-class} {armor-extra}<br>
-    Hit Dice = {hit-dice}<br>
-    Attacks = {attacks}<br>
-    Movement = {movement}<br>
-    No. Appearing = {appearing}, {appearing-lair} in lair<br>
-    Save As = {save-as}<br>
-    Morale = {1d6+6}<br>
-    Treasure Type = {treasure}<br>
-    {special-ability}<br>
-    Looks like a {appearance-color} {appearance}. {appearance-extra}<br>
-    {intelligence}<br>
+    Armor Class: {armor-class} {armor-extra}{break}
+    Hit Dice: {hit-dice}{break}
+    Attacks: {attacks}{break}
+    Movement: {movement}{break}
+    No. Appearing: {appearing}, {appearing-lair} in lair{break}
+    Save As: {save-as}{break}
+    Morale: {1d6+6}{break}
+    Treasure Type: {treasure}{break}
+    {special-ability}{break}
+    Looks like a {appearance-color} {appearance}. {appearance-extra}{break}
+    {intelligence}{break}
 repeat: 1
 
 table: dice-sides 1d6
@@ -65,25 +65,25 @@ table: armor-extra 1d100
 100     (only by cold)
 
 table: hit-dice 2d6
-2   1 hp<br>
+2   1 hp{break}
     {1d6} inches, {1d2} ounces
-3   1d2 hp<br>
+3   1d2 hp{break}
     {2d6} inches, {2d8} ounces
-4   1/2 HD (1d4 hp)<br>
+4   1/2 HD (1d4 hp){break}
     {1d12+12} inches, {1d8} pounds
-5-6 1 HD<br>
+5-6 1 HD{break}
     {2d2} feet, {1d53+7} pounds
-7   1 + {1d4} HD<br>
+7   1 + {1d4} HD{break}
     {2d2+2} feet, {1d75+100} pounds
-8   2 HD<br>
+8   2 HD{break}
     {2d4+2} feet, {1d45+5}0 pounds
-9   {1d3+1} HD<br>
+9   {1d3+1} HD{break}
     {1d8+8} feet, {1d36+4}00 pounds
-10  {4d4} HD<br>
+10  {4d4} HD{break}
     {1d16+15} feet, {4d8}000 pounds
-11  {1d16+15} HD<br>
+11  {1d16+15} HD{break}
     {1d16+15} feet, {2d100+30}000 pounds
-12  {1d32+32} HD<br>
+12  {1d32+32} HD{break}
     {2d10+6}0 feet, {3d10+25}0000 pounds
 
 table: attacks 1d100

@@ -1,24 +1,24 @@
 name: NPC Personality
 description: Based on 1e DMG page 100.
 recipe:
-    Alignment: {alignment};
-    Posessions or Wealth: {wealth};
-    Apparent Age: {age};
-    General: {general};
-    Sanity: {sanity};
-    General Tendencies: {1d6 tendency};
-    Personality: {personality};
-    Disposition: {disposition};
-    Intellect: {intellect};
-    Nature: {nature};
-    Materialism: {materialism};
-    Honesty: {honesty};
-    Bravery: {bravery};
-    Energy: {energy};
-    Thrift: {thrift};
-    Morals: {morals};
-    Piety: {piety};
-    Interests: {1d6 interests}
+    <strong>Alignment</strong>: {alignment}{break}
+    <strong>Posessions or Wealth</strong>: {wealth}{break}
+    <strong>Apparent Age</strong>: {age}{break}
+    <strong>General</strong>: {general}{break}
+    <strong>Sanity</strong>: {sanity}{break}
+    <strong>General Tendencies</strong>: {1d6 tendency}{break}
+    <strong>Personality</strong>: {personality}{break}
+    <strong>Disposition</strong>: {disposition}{break}
+    <strong>Intellect</strong>: {intellect}{break}
+    <strong>Nature</strong>: {nature}{break}
+    <strong>Materialism</strong>: {materialism}{break}
+    <strong>Honesty</strong>: {honesty}{break}
+    <strong>Bravery</strong>: {bravery}{break}
+    <strong>Energy</strong>: {energy}{break}
+    <strong>Thrift</strong>: {thrift}{break}
+    <strong>Morals</strong>: {morals}{break}
+    <strong>Piety</strong>: {piety}{break}
+    <strong>Interests</strong>: {1d6 interests}
 repeat: 1
 
 table: alignment

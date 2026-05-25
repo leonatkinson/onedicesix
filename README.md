@@ -78,6 +78,13 @@ the most readable format. Values may be single integers or a range as shown in
 the last row. Results may be plain text or contain curly brace expressions as
 decribed above for recipes.
 
+The generator 
+
+* {break} - linebreak
+* {break2} - two linebreaks
+* {blank} - empty string
+
+
 After replacing curly brace expressions in the recipe, if the result contains
 new expressions, the generator makes another pass. Processing continues until
 no expressions remain. This allows for results from one table to refer to
@@ -85,12 +92,18 @@ another or even recursively as in the example above.
 
 A few generators have extra logic to format results or take input. These are:
 
+* Infectious Disease and Parasitic Infestation
+* Cleric Spells
+* Death
+* Encounters
+* Magic-User Spells
+* Underdark Tunnels
+* Reactions
+* BFRPG Treasure
+* Wightbox Oracle
+
 The rest of the generators are considered "simple", and they get a final pass
-for a few formatting symbols. Line breaks are turned into paragraphs. Semicolons
-turn into BRs. Finally, lines starting with a label and colon get STRONG treatment.
-
-You may place HTML into the content. It will be left as-is.
-
+for a few formatting symbols. You may place HTML into the content. It will be left as-is.
 
 See [leonatkinson.com/one-dice-six](https://www.leonatkinson.com/one-dice-six/) for the original release.
 
@@ -214,3 +227,12 @@ Small adjustments to daily events on the southern seas.
 - Expand the books generator
 ## 1.11.4
 - Add names to mines, forts and towers
+## 1.12.0
+- Add "copy to clipboard" button
+- Add "save to file" button
+- Fix minor bug with commas instead of breaks separating mine levels
+- Remove logic that turned ; to line breaks
+- Remove logic that made labels from lines starting with a colon
+- Add `{break}` and `{blank}` as native tokens
+- Update most generators to match removed logic
+

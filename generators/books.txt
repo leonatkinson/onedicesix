@@ -3,7 +3,7 @@ description: Returns a list of books found in a library. Inspired by
     https://www.reddit.com/r/BehindTheTables/comments/43wsio/books_of_all_sorts/
 recipe:
     This book's cover is {book_cover}. The condition is {book_condition}.
-    The subject is {book_subject}, {book_volume}.
+    The subject is {book_subject}, {book_volume}.{break2}
 repeat: 3d6-3
 
 table: book_subject

@@ -1,8 +1,9 @@
 name: Potion-Quaffing Contest
 description: Inspired by
     http://abominablefancy.blogspot.com/2017/04/mini-game-potion-quaffing.html
-recipe: {potion_description}. {potion_effect}.
-
+recipe:
+    {potion_description}. {potion_effect}.
+    {break2}
 repeat: 4d6
 
 table: potion_description

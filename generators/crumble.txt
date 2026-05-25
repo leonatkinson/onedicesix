@@ -2,11 +2,11 @@ name: The Crumble
 description: Abandoned dwarven city exposed by half of a mountain falling away.
     Multiple rooms open in the air on the side of a mountain. Each room leads
     deeper into the mountain.
-recipe: Room is {room} with {exits}.<br>
-        <br>
-        {contents}.<br>
-        <br>
-        {junk-pile}.<br>
+recipe: Room is {room} with {exits}.{break}
+        {break}
+        {contents}.{break}
+        {break}
+        {junk-pile}.{break}
 repeat: 1
 
 table: direction 1d8
@@ -134,8 +134,8 @@ table: contents 1d20
 1-11    Empty of monster or treasure
 12      Already activated {trick} (harmless)
 13-14   {monster}
-15-17   {monster}<br>
-        <br>
+15-17   {monster}{break}
+        {break}
         Guarding {container}, {container-protect}, containing
         {cp}cp, {sp}sp, {ep}ep, {gp}gp, {pp}pp, {gems}, {jewelry}, {magic}
 18-19   {trick}
@@ -1219,29 +1219,29 @@ table: junk
 
 table: monster 2d8
 
-2       Water Elemental AC 20(m), HD 12* (+10), #At 1, Dam 2d8, Mv 20' (15') Swim 60', Sv F12, Ml 10, XP 1975<br>
+2       Water Elemental AC 20(m), HD 12* (+10), #At 1, Dam 2d8, Mv 20' (15') Swim 60', Sv F12, Ml 10, XP 1975{break}
         Double damage from air attacks.
-3       Air Elemental AC 20(m), HD 12* (+10), #At , Dam 2d8, Mv Fly 120', Sv F12, Ml 10, XP 1975<br>
+3       Air Elemental AC 20(m), HD 12* (+10), #At , Dam 2d8, Mv Fly 120', Sv F12, Ml 10, XP 1975{break}
         Appears as whirlwind. Double damage from earth attacks. Immune to air attacks.
-4       Fire Elemental AC 20(m), HD 12* (+10), #At 1, Dam 2d8, Mv 40' Fly 30', Sv F12, Ml 10, XP 1975<br>
+4       Fire Elemental AC 20(m), HD 12* (+10), #At 1, Dam 2d8, Mv 40' Fly 30', Sv F12, Ml 10, XP 1975{break}
         Double damage from water.
-5       Earth Elemental AC 20(m), HD 12* (+10), #At 1, Dam 2d8, Mv Special, Sv F12, Ml 10, XP 1975<br>
+5       Earth Elemental AC 20(m), HD 12* (+10), #At 1, Dam 2d8, Mv Special, Sv F12, Ml 10, XP 1975{break}
         Double damage from fire.
-6       Dwarven Amber Golem AC 21(m), HD 10* (+9), #At 2 claws/1 bite, Dam 2d6/2d6/2d10, Mv 60', Sv F5, Ml 12, XP 1390<br>
+6       Dwarven Amber Golem AC 21(m), HD 10* (+9), #At 2 claws/1 bite, Dam 2d6/2d6/2d10, Mv 60', Sv F5, Ml 12, XP 1390{break}
         Looks like a lion. Electricity heals 1 per 3 damage.
         Immune to most magical effects.
-7-8     {2d6} Crystal Living Statues AC 16, HD 3, #At 2 fists, Dam 1d6/1d6, Mv 30', Sv F3, Ml 12, XP 145<br>
-9-10    {2d6} Loadstars AC 17, HD 2, #At 1, Dam 1d6, Mv 20', Sv F2, Ml 12, XP 100<br>
+7-8     {2d6} Crystal Living Statues AC 16, HD 3, #At 2 fists, Dam 1d6/1d6, Mv 30', Sv F3, Ml 12, XP 145{break}
+9-10    {2d6} Loadstars AC 17, HD 2, #At 1, Dam 1d6, Mv 20', Sv F2, Ml 12, XP 100{break}
         On hit, 10lb blob. Lance it for 1d4 damage within 1 turn.
-11-12   {2d4} Iron Living Statues AC 18, HD 4*, #At 2 fists, Dam 1d8/1d8 + special, Mv 10', Sv F4, Ml 12, XP 280<br>
+11-12   {2d4} Iron Living Statues AC 18, HD 4*, #At 2 fists, Dam 1d8/1d8 + special, Mv 10', Sv F4, Ml 12, XP 280{break}
         Non-magic metal hitting statue must save vs magic or be stuck until statue killed.
-13-14   Metal Elemental AC 20(m), HD 12* (AB +10), #At 1 punch, stomp, or special, Dam 2d8, Mv 30', Sv F12, Ml 10, XP 1975<br>
+13-14   Metal Elemental AC 20(m), HD 12* (AB +10), #At 1 punch, stomp, or special, Dam 2d8, Mv 30', Sv F12, Ml 10, XP 1975{break}
         Abstract, flowing metal. Limbs form into blades. Ignore armor except enchantment bonus.
         Extra 1d8 damage to those in direct contact of metal.
-15      Dwarven Iron Golem AC 25(m), HD 17** (+12), #At 1 + special, Dam 4d10 + special, Mv 20' (10'), Sv F9, Ml 12, XP 3890<br>
+15      Dwarven Iron Golem AC 25(m), HD 17** (+12), #At 1 + special, Dam 4d10 + special, Mv 20' (10'), Sv F9, Ml 12, XP 3890{break}
         6' tall. Metallic odor from 60'. 3x/day poison gas 10' cube 1 round.
         Save vs dragon breath or die. Immune to most magical effects.
-16      Dwarven Bronze Golem AC 20(m), HD 20** (+13), #At 1 fist + special, Dam 3d10 + special, Mv 80' (10'), Sv F10, Ml 12, XP 5650<br>
+16      Dwarven Bronze Golem AC 20(m), HD 20** (+13), #At 1 fist + special, Dam 3d10 + special, Mv 80' (10'), Sv F10, Ml 12, XP 5650{break}
         5' tall. Additional 1d10 damage from the heat. If takes a hit, molten metal sprays
         2d6 damage unless save vs. Death. Immune to most magical effects.
 

@@ -2,19 +2,19 @@ name: Religion
 description: Generates a pantheistic religion. This generator should expand to
     include more about the greater religion, including: creation myth and major
     stories about the gods.
-recipe: {god}
+recipe: {god}{break2}
 repeat: 2d6
 
 table: god 1
-1   Name: {name};
-    Influence: {influence};
-    Gender: {gender};
-    Apparent Age: {age};
-    Physical Representation: {body};
-    Power: {power};
-    Offerings: {offerings};
-    Prayers: {prayers};
-    Holidays: {holidays}
+1   <strong>Name:</strong> {name}{break}
+    <strong>Influence:</strong> {influence}{break}
+    <strong>Gender:</strong> {gender}{break}
+    <strong>Apparent Age:</strong> {age}{break}
+    <strong>Physical Representation:</strong> {body}{break}
+    <strong>Power:</strong> {power}{break}
+    <strong>Offerings:</strong> {offerings}{break}
+    <strong>Prayers:</strong> {prayers}{break}
+    <strong>Holidays:</strong> {holidays}
 
 
 table: influence 2d4-1

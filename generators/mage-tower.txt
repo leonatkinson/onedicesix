@@ -189,43 +189,39 @@ table: entrance-trap
     raw amethyst over one's brow while passing through.
 
 table: entrance-guard
-1   An animated suit of armor guards the entrance.<br>
-    Shield Guardian AC 20‡, HD 15+20** (+5), #At 1 fist, Dam 1d6, Mv 30', Sv F9, Ml 12, XP 3100<br>
-    HP {15d8+20}<br>
+1   An animated suit of armor guards the entrance.{break}
+    Shield Guardian AC 20‡, HD 15+20** (+5), #At 1 fist, Dam 1d6, Mv 30', Sv F9, Ml 12, XP 3100{break}
+    HP {15d8+20}{break}
 2   A stone golem stands motionless next to the entrance, attacking any who dare
-    enter the tower without permission.<br>
-    Stone Golem AC 25‡, HD 14** (+11), #At 1 + special, Dam 3d8 + special, Mv 20' (10'), Sv F7, Ml 12, XP 2730<br>
-    HP {14d8}<br>
-3   Gargoyles perch on ledges around the outside of the tower.<br>
-    {2d4} Gargoyles AC 15‡, HD 4**, #At 2 claws/1 bite/1 horn, Dam 1d4/1d4/1d6/1d4, Mv 30' Fly 50' (15'), Sv F6, Ml 11, XP 320<br>
-    HP {4d8}<br>
-4   A ghost reveals itself to any who walk in unannounced.<br>
-    Ghost AC 20‡, HD 10* (+9), #At 1 touch/1 gaze, Dam 1d8 + special, Mv 30', Sv F10, Ml 10, XP 1390<br>
+    enter the tower without permission.{break}
+    Stone Golem AC 25‡, HD 14** (+11), #At 1 + special, Dam 3d8 + special, Mv 20' (10'), Sv F7, Ml 12, XP 2730{break}
+    HP {14d8}{break}
+3   Gargoyles perch on ledges around the outside of the tower.{break}
+    {2d4} Gargoyles AC 15‡, HD 4**, #At 2 claws/1 bite/1 horn, Dam 1d4/1d4/1d6/1d4, Mv 30' Fly 50' (15'), Sv F6, Ml 11, XP 320{break}
+    HP {4d8}{break}
+4   A ghost reveals itself to any who walk in unannounced.{break}
+    Ghost AC 20‡, HD 10* (+9), #At 1 touch/1 gaze, Dam 1d8 + special, Mv 30', Sv F10, Ml 10, XP 1390{break}
     Save vs. Spells or flee for 2d6 rounds. On touch, regenerate HP and reduce CON of
     target. Elves and Dwarves save vs. Death Ray to resist touch attack. Use telekinesis
-    as 10th level Magic-User once per turn. Possess attack allows save vs. Spells to resist.<br>
-    HP {10d8}<br>
-5   An air elemental spins up and bars entrance to those without permission.<br>
-    Air Elemental AC 22‡, HD 16* (+12), #At , Dam 3d6, Mv Fly 120', Sv F16, Ml 10, XP 3385<br>
+    as 10th level Magic-User once per turn. Possess attack allows save vs. Spells to resist.{break}
+    HP {10d8}{break}
+5   An air elemental spins up and bars entrance to those without permission.{break}
+    Air Elemental AC 22‡, HD 16* (+12), #At , Dam 3d6, Mv Fly 120', Sv F16, Ml 10, XP 3385{break}
     HP {16d8}
-6   An imp, disguised as a spider waits to interere with intruders.<br>
-    Imp AC 19†, HD 2**, #At 1 tail stinger, Dam 1d4 + poison, Mv 20' Fly 60', Sv C2, Ml 7, XP 125<br>
+6   An imp, disguised as a spider waits to interere with intruders.{break}
+    Imp AC 19†, HD 2**, #At 1 tail stinger, Dam 1d4 + poison, Mv 20' Fly 60', Sv C2, Ml 7, XP 125{break}
     At-will change into spider, raven, giant rat. Detect magic at-will. Invisible at-will.
-    Charm person (7th level) once/day.<br>
+    Charm person (7th level) once/day.{break}
     HP {2d8}
 
 table: height 1d4
-1   {1d6+4}0' tall.<br>
-    <br>
+1   {1d6+4}0' tall.{break2}
     {1d4 level <br><br>}
-2   {1d6+6}0' tall.<br>
-    <br>
+2   {1d6+6}0' tall.{break2}
     {1d6+2 level <br><br>}
-3   {2d6+8}0' tall.<br>
-    <br>
+3   {2d6+8}0' tall.{break2}
     {1d8+2 level <br><br>}
-4   {3d6+10}0' tall.<br>
-    <br>
+4   {3d6+10}0' tall.{break2}
     {1d10+3 level <br><br>}
 
 table: windows 1d4
@@ -279,21 +275,18 @@ table: roof-dome-material 1d6
 
 table: level 1d10
 1-5     Level {# level} is a single room. Access to the level above is via {stairs}
-        starting in the {stairs-location} of the level.<br>
-        <br>
+        starting in the {stairs-location} of the level.{break}
+        {break}
         {numbered-room}
 6-7     Level {# level} consists of two rooms. Access to the level above is via {stairs}
-        starting in the {stairs-location} of the level.<br>
-        <br>
+        starting in the {stairs-location} of the level.{break}
+        {break}
         {2 numbered-room <br><br>}
 8-9     Level {# level} consists of three rooms. Access to the level above is via {stairs}
-        starting in the {stairs-location} of the level.<br>
-        <br>
+        starting in the {stairs-location} of the level.{break2}
         {3 numbered-room <br><br>}
 10      Level {# level} consists of several rooms. Access to the level above is via {stairs}
-        starting in the {stairs-location} of the level.
-        <br>
-        <br>
+        starting in the {stairs-location} of the level.{break2}
         {1d4+3 numbered-room <br><br>}
 
 table: numbered-room
@@ -333,20 +326,6 @@ table: stairs-location 1d6
 3   east side
 4   west side
 5-6 center
-
-
-#
-# Utilities
-#
-
-table: blank
-1   <!-- blank -->
-
-table: break
-1   <br>
-
-table: break2
-1   {break} {break}
 
 
 table: proper-noun 1d961

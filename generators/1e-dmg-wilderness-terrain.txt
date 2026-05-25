@@ -1,15 +1,15 @@
 name: Wilderness Terrain
 description: Random Wilderness Terrain from DMG Appendix B.
 recipe:
-    Source Hex is...<br>
-    Plain ➡️ {plain} {inhabitation}<br>
-    Scrub ➡️ {scrub} {inhabitation}<br>
-    Forest ➡️ {forest} {inhabitation}<br>
-    Rough ➡️ {rough} {inhabitation}<br>
-    Desert ➡️ {desert} {inhabitation}<br>
-    Hills ➡️ {hills} {inhabitation}<br>
-    Mountains ➡️ {mountains} {inhabitation}<br>
-    Marsh ➡️ {marsh} {inhabitation}<br>
+    Source Hex is...{break}
+    Plain: {plain} {inhabitation}{break}
+    Scrub: {scrub} {inhabitation}{break}
+    Forest: {forest} {inhabitation}{break}
+    Rough: {rough} {inhabitation}{break}
+    Desert: {desert} {inhabitation}{break}
+    Hills: {hills} {inhabitation}{break}
+    Mountains: {mountains} {inhabitation}{break}
+    Marsh: {marsh} {inhabitation}{break}
 repeat: 1
 
 table: plain 1d20

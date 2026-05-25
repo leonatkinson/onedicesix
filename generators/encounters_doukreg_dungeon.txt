@@ -1,9 +1,10 @@
 name: Encounters in the Doukreg Dungeon
 description: Mostly 10th level encounters
-recipe: 0. Room<br>
-        {contents}.<br>
-        The room smells {smell}. {junk-pile}.<br>
+recipe: {# room}. Room{break}
+        {contents}.{break}
+        The room smells {smell}. {junk-pile}.{break}
         {portal}.
+        {break2}
 repeat: 10
 
 table: contents 1d20

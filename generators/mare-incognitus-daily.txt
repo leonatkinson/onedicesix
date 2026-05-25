@@ -1,10 +1,10 @@
 name: Daily Events in Mare Incognitus
 description:
-recipe: {weather}<br>
-        At {event-time}, {event-ocean}<br>
-        <br>
-        {event-ocean-extra}<br>
-        <br>
+recipe: {weather}{break}
+        At {event-time}, {event-ocean}{break}
+        {break}
+        {event-ocean-extra}{break}
+        {break}
         If fishing, {fishing}.
 repeat: 1
 
@@ -29,9 +29,9 @@ table: event-time 1d4
 
 table: event-ocean 1d100
 1-20    No event this day.
-21-40   Spotted {1d10+10}0 yards away...<br>
-        {ocean}<br>
-        <br>
+21-40   Spotted {1d10+10}0 yards away...{break}
+        {ocean}{break}
+        {break}
         The attitude is that {reaction}
 41-60   A fierce storm strikes, lasting {5d6} hours. Ships with sails
         can run with the wind, moving <strong>{direction}</strong> at 3x speed
@@ -42,14 +42,14 @@ table: event-ocean 1d100
 61-80   Land may be sighted {2d10} miles away. {land}
 81-85   The winds die out and the sea becomes perfectly still. Ships cannot sail
         this day and must be rowed.
-86-95   Possibly spotted {seen-distance}.<br><br>
-        {pirates}<br><br>
-        Their attitude is that {reaction}<br><br>
+86-95   Possibly spotted {seen-distance}.{break}{break}
+        {pirates}{break}{break}
+        Their attitude is that {reaction}{break}{break}
         {pirate-illness}
-96-97   Possibly spotted {seen-distance}.<br><br>
-        {ship}<br><br>
+96-97   Possibly spotted {seen-distance}.{break}{break}
+        {ship}{break}{break}
         Their attitude is that {reaction}
-98-99   Possibly spotted {seen-distance}.<br><br>{gargantua}<br><br>Its attitude is that {reaction}
+98-99   Possibly spotted {seen-distance}.{break}{break}{gargantua}{break}{break}Its attitude is that {reaction}
 99-100  Trapped in a maelstrom for {1d8} rounds. Giant whirlpool. After being
         trapped, suffer 6d6 damage for one round. Then ejected {6d8} miles away.
         To escape with enough rowers, the captain saves versus death.
@@ -78,13 +78,13 @@ table: event-ocean-extra 1d100
 75      Playful dolphins ride the bow waves.
 76-79   Also, the winds die out and the sea becomes perfectly still. Ships cannot sail
         this day and must be rowed.
-80-85   {1d10+1} hours later...<br>
-        Spotted {1d10+10}0 yards away...<br>
-        {ocean}<br>
-        <br>
+80-85   {1d10+1} hours later...{break}
+        Spotted {1d10+10}0 yards away...{break}
+        {ocean}{break}
+        {break}
         The attitude is that {reaction}
-86-90   {1d10+1} hours later, also possibly spotted {seen-distance}.<br><br>{pirates}<br><br>Their attitude is that {reaction}
-91-92   {1d10+1} hours later, also possibly spotted {seen-distance}.<br><br>{ship}<br>Their attitude is that {reaction}
+86-90   {1d10+1} hours later, also possibly spotted {seen-distance}.{break}{break}{pirates}{break}{break}Their attitude is that {reaction}
+91-92   {1d10+1} hours later, also possibly spotted {seen-distance}.{break}{break}{ship}{break}Their attitude is that {reaction}
 93-100  {1d10+1} hours later, land may be sighted {2d10} miles away. {land}
 
 
@@ -157,23 +157,23 @@ table: land-food 1d10
 
 
 table: ship 1d10
-1-8     The sail of a ghost ship is sighted, ferrying the dead to their new land.<br>
+1-8     The sail of a ghost ship is sighted, ferrying the dead to their new land.{break}
         The ship is a carrack, {1d6+6}0'x{1d3+1}0', loaded with 0/135 tons of cargo. Move 30'. 10 hardness.
-        120 HP. It has no siege weapons.<br>
+        120 HP. It has no siege weapons.{break}
         Ghost Captain AC 20‡, HD 10* (+9), #At 1 touch/1 gaze, Dam 1d8 + special,
-        Mv 30', Sv F10, Ml 10, XP 1390, #Ap 1, Tr E, N, O<br>
+        Mv 30', Sv F10, Ml 10, XP 1390, #Ap 1, Tr E, N, O{break}
         {2d6} Wights AC 15 †, HD 3*, #At 1 touch, Dam Energy drain (1 level), Mv 30',
-        Sv F3, Ml 12, XP 175<br>
-        {3d8} Skeletons AC 13, HD 1, #At 1 cutlass, Dam 1d6, Mv 40', Sv F1, Ml 12, XP 25<br>
-9       The sail of a merchant ship is sighted, flying the flag of {ship-alignment}.<br>
+        Sv F3, Ml 12, XP 175{break}
+        {3d8} Skeletons AC 13, HD 1, #At 1 cutlass, Dam 1d6, Mv 40', Sv F1, Ml 12, XP 25{break}
+9       The sail of a merchant ship is sighted, flying the flag of {ship-alignment}.{break}
         {merchants}
-10      The sail of a carrack is sighted, flying the flag of {ship-alignment}.<br>
+10      The sail of a carrack is sighted, flying the flag of {ship-alignment}.{break}
         The ship is {1d6+6}0'x{1d3+1}0', loaded with {1d135}/135 tons of {cargo}. Move 30'. 10 hardness.
         120 HP.  The ship has four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.
-        The bow is armored ans suitable for ramming.<br>
+        The bow is armored ans suitable for ramming.{break}
         The crew are {3d8} Level 1 {sailor-race} Fighters, led by a Level {1d4+2} {sailor-race} Fighter
-        and {1d3} Level {1d4+1} {sailor-race} Fighters.<br>
-        AC 11, #At 1 sword, Dam 1d6, Mv 40', Ml 9<br>
+        and {1d3} Level {1d4+1} {sailor-race} Fighters.{break}
+        AC 11, #At 1 sword, Dam 1d6, Mv 40', Ml 9{break}
 
 table: ship-alignment 1d4
 1   the empire (red, eagle holding a cross)
@@ -200,38 +200,38 @@ table: sailor-race 1d10
 table: ocean 2d8 Ocean
 2   Sea Dragon AC 19, HD 11** (+9 AB), #At 2 claws/1 bite or breath,
     Dam 1d10/1d10/3d10 or 11d8 steam breath, Mv 10' Fly 60' (20') Swim 60' (15'), Sv F8, Ml 8,
-    XP 1015<br>
+    XP 1015{break}
     Steam breath 11/day. 100' x 55'.
 3   {ocean-hydra}
 4   {1d4} Purple Worms AC 16, HD 20* (+13), #At 1 bite/1 sting, Dam 2d8/1d8+poison, Mv 20' (15'), Sv F10, Ml 10, XP 5450
 5   {1d3} Jellyfish Swarm AC Immune to weapons, HD 4*, #At 1 swarm, Dam 1d3 + DEX drain (1d6 turns), Mv Swim 20', Sv N/A, Ml 11, XP 280
-6   {3d4} Flying Man-of-War AC 11, HD 2, #At 1 touch, Dam Poison + digestion, Mv Fly 40', Sv F2, Ml 12, XP 75<br>
+6   {3d4} Flying Man-of-War AC 11, HD 2, #At 1 touch, Dam Poison + digestion, Mv Fly 40', Sv F2, Ml 12, XP 75{break}
     On touch, targets saves vs paralysis or stunned 1d4 rounds. Man-of-War attaches and does 1d6 dam/round.
     100lbs and size of horse. If it takes 6 dam in one blow, it pops. Corpses are poisonous.
 7   {1d3} Water-breathing Storm Giants AC 19 (13), HD 15** (+11), #At 1 giant weapon or 1 lightning bolt, Dam 8d6 or 15d6, Mv 30' Unarmored 50' (10'), Sv F15, Ml 10, XP 3100
 8   {1d4} Aquatic Naga AC 15, HD 9*, #At 1 bite or spells as MU 5, Dam 1d4 + poison, Mv 40' Swim 90', Sv F9, Ml 7, XP 1150
-9   {1d6} Ramfish AC 20, HD 10, #At 1 gore or bite, Dam 2d6+5, Mv Swim 40', Sv F20, Ml 7, XP 5250<br>
+9   {1d6} Ramfish AC 20, HD 10, #At 1 gore or bite, Dam 2d6+5, Mv Swim 40', Sv F20, Ml 7, XP 5250{break}
     10' long, 500lbs. Hard scales. Ramming horns. Charge for an additional 2d6 damage.
 10  {1d4} Wraiths AC 15(m), HD 4**, #At 1 touch, Dam 1d6 + energy drain (1 level), Mv Fly 80', Sv F4, Ml 12, XP 320
-11  {1d6} Sea Vampires AC 20(m), HD 9** (+8), #At 1 weapon or special, Dam 1d8 or by weapon or special, Mv 40' Swim 60', Sv F9, Ml 11, XP 1225<br>
+11  {1d6} Sea Vampires AC 20(m), HD 9** (+8), #At 1 weapon or special, Dam 1d8 or by weapon or special, Mv 40' Swim 60', Sv F9, Ml 11, XP 1225{break}
     Save vs. Spells with -2 penalty or be charmed by gaze.  Bite does 1d3 points of
     damage the first round followed by energy drain every round thereafter.
     Suffer -5 AC while biting.  Apply +3 points of damage with melee weapons.
     Summon 1d3 jellyfish swarm or 3d6 great white sharks,
     arriving in 2d6 rounds.  Transform into manta ray or great white shark at will.
     Gaseous form at will.
-12  Scyllan AC 29(s), HD 16** (+25), #At 4 tentacles + 2 claws, Dam 1d8+11 + 2d6+5, Mv Swim 50', Sv F16, Ml 12, XP 3520<br>
+12  Scyllan AC 29(s), HD 16** (+25), #At 4 tentacles + 2 claws, Dam 1d8+11 + 2d6+5, Mv Swim 50', Sv F16, Ml 12, XP 3520{break}
     20' tall, 10,000 lbs. Tentacles. Devil. Waits to snatch people from the ship deck to eat.
     Tentacles grapple. Wails. Save vs Spells +WIS or be panicked (<5HD) or shaken (-4 AB) for 2d6 rounds.
     Grappled opponents may be swallowed on another successful attack, taking 2d8+16 damage/round.
     Swallowed targets must do 25 dam to AC 17 to escape.
 13  {ocean-roc}
-14  Water Elemental AC 22 (m), HD 16* (+12), #At 1, Dam 3d6, Mv 20' (15') Swim 60', Sv F16, Ml 10, XP 3385<br>
+14  Water Elemental AC 22 (m), HD 16* (+12), #At 1, Dam 3d6, Mv 20' (15') Swim 60', Sv F16, Ml 10, XP 3385{break}
     Looks like a giant wave. Double damage from air. Extra 1d8 damage to anything in the water.
-15  {1d2} Mermaids AC 12, HD 1*, #At 1 weapon, Dam 1d6 or by weapon, Mv Swim 40', Sv F1, Ml 8, XP 37<br>
+15  {1d2} Mermaids AC 12, HD 1*, #At 1 weapon, Dam 1d6 or by weapon, Mv Swim 40', Sv F1, Ml 8, XP 37{break}
     Siren song attracts. Save -4 if there are two mermaids. If the captain fails
     his save, he tries to steer the ship into the rocks.
-16  {2d6} Sea Serpents AC 17, HD 6, #At 1 bite, Dam 2d6, Mv Swim 50' (10'), Sv F6, Ml 8, XP 500<br>
+16  {2d6} Sea Serpents AC 17, HD 6, #At 1 bite, Dam 2d6, Mv Swim 50' (10'), Sv F6, Ml 8, XP 500{break}
     Constrict does 2d10 damage to a vessel. {2d2}0' long.
 
 table: ocean-roc 1d8
@@ -249,41 +249,41 @@ table: ocean-hydra 1d20
 20      Hydra AC 23, HD 12 (+10), #At 12, Dam 1d10, Mv 40' (10'), Sv F12, Ml 9, XP 1875
 
 table: merchants 1d20
-1-5     The merchant caravel has a crew of {2d8+8} regular men. It carries {1d75}/75 tons of {cargo}.<br>
-        It's {4d2}0'x15' and moves 20'. Hardness 8. 75 HP.<br>
+1-5     The merchant caravel has a crew of {2d8+8} regular men. It carries {1d75}/75 tons of {cargo}.{break}
+        It's {4d2}0'x15' and moves 20'. Hardness 8. 75 HP.{break}
         Treasure type C.
 6-10    The large merchant galley has a {sailor-race} crew of {12d8+8} regular men plus {3d6+2} Level 1 Fighters
-        and {2d4} Level 2 Fighters. The captains is a Level 4 Fighter.<br>
-        AC 11, #At 1 sword or longbow, Dam 1d6 or 1d8, Mv 40', Ml 9<br>
-        It carries {1d100+275}/375 tons of {cargo}. It's 120'x20' and moves 30'/25'. Hardness 10. 120 HP.<br>
-        Forward are four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.<br>
-        Aft are two catapults. RoF 1/10, AB -8, Dam 3d10, Range -/300/400.<br>
+        and {2d4} Level 2 Fighters. The captains is a Level 4 Fighter.{break}
+        AC 11, #At 1 sword or longbow, Dam 1d6 or 1d8, Mv 40', Ml 9{break}
+        It carries {1d100+275}/375 tons of {cargo}. It's 120'x20' and moves 30'/25'. Hardness 10. 120 HP.{break}
+        Forward are four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.{break}
+        Aft are two catapults. RoF 1/10, AB -8, Dam 3d10, Range -/300/400.{break}
         Treasure type D.
-11-20   The merchant caravel had a crew of {2d8+8} regular men, all dead. It carries {1d75}/75 tons of {cargo}.<br>
-        It's {4d2}0'x15' and moves 20'. Hardness 8. 75 HP.<br>
+11-20   The merchant caravel had a crew of {2d8+8} regular men, all dead. It carries {1d75}/75 tons of {cargo}.{break}
+        It's {4d2}0'x15' and moves 20'. Hardness 8. 75 HP.{break}
         The crew died of {merchants-dead}
 
 table: merchants-dead 1d4
-1       starvation or lack of water. Treasure type C.<br>
+1       starvation or lack of water. Treasure type C.{break}
 2       spoiled food. A parasite infects the ship.
         Anyone boarding makes a save vs Death. {parasite-type}.
-        Treasure type C.<br>
+        Treasure type C.{break}
 3       pirate attack. No treasure left aboard.
 4       a plague. Anyone boarding makes a save vs Death. {disease-type}
 
 
 table: pirates 1d100
-1-15    {pirate-type} on a {ship-type}<br>
+1-15    {pirate-type} on a {ship-type}{break}
         AC 11, #At 1 sword or light crossbow, Dam 1d6, Mv 40', Ml 9
-16-40   {pirate-type} with two ships.<br>
-        {ship-type}<br>
+16-40   {pirate-type} with two ships.{break}
+        {ship-type}{break}
         {ship-type}
-41-70   {pirate-type} with three ships.<br>
-        {ship-type}<br>
-        {ship-type}<br>
+41-70   {pirate-type} with three ships.{break}
+        {ship-type}{break}
+        {ship-type}{break}
         {ship-type}
-71-100  {pirate-type} with {2d4} ships of similar type.<br>
-        {ship-type}<br>
+71-100  {pirate-type} with {2d4} ships of similar type.{break}
+        {ship-type}{break}
 
 table: pirate-illness 1d20
 1-15    The pirates are not ill.
@@ -309,32 +309,32 @@ table: corsair-religion 1d6
 10  Hsuthul - "The Coiling Deep"
 
 table: ship-type 1d6
-1   caravel ({4d2}0'x15', Mv 20', Hardness 8, 75 HP, cargo {1d75}/75)<br>
+1   caravel ({4d2}0'x15', Mv 20', Hardness 8, 75 HP, cargo {1d75}/75){break}
     Crewed by Level {1d4+2} Fighter (captain), {1d3} Level {1d4+1} Fighters (mates),
-    and {2d6} normal men.<br>
-    Carrying {cargo}. {pirate-treasure}.<br>
-2   carrack ({1d6+6}0'x{1d3+1}0', Mv 30', Hardness 10, 120 HP, cargo {1d135}/135)<br>
+    and {2d6} normal men.{break}
+    Carrying {cargo}. {pirate-treasure}.{break}
+2   carrack ({1d6+6}0'x{1d3+1}0', Mv 30', Hardness 10, 120 HP, cargo {1d135}/135){break}
     Crewed by Level {1d4+2} Fighter (captain), {1d3} Level {1d4+1} Fighters (mates),
-    and {3d6} normal men.<br>
-    Carrying {cargo}. {pirate-treasure}.<br>
-3   small galley (100'x15', Mv 20', Hardness 8, 75 HP, cargo {1d210}/210)<br>
+    and {3d6} normal men.{break}
+    Carrying {cargo}. {pirate-treasure}.{break}
+3   small galley (100'x15', Mv 20', Hardness 8, 75 HP, cargo {1d210}/210){break}
     Two ballistas forward and another two aft. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.
-    The bow is armored and suitable for ramming.<br>
+    The bow is armored and suitable for ramming.{break}
     Crewed by Level {1d4+2} Fighter (captain), {1d3} Level {1d4+1} Fighters (mates),
-    {2d10+20} Level 1 Fighters, and {2d10+20} normal men.<br>
-    Carrying {cargo}. {pirate-treasure}.<br>
-4   large galley (120'x20', Mv 30'/25', Hardness 10, 120 HP, cargo {1d375}/375)<br>
-    Forward are four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.<br>
+    {2d10+20} Level 1 Fighters, and {2d10+20} normal men.{break}
+    Carrying {cargo}. {pirate-treasure}.{break}
+4   large galley (120'x20', Mv 30'/25', Hardness 10, 120 HP, cargo {1d375}/375){break}
+    Forward are four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.{break}
     Aft are two catapults. RoF 1/10, AB -8, Dam 3d10, Range -/300/400.
-    The bow is armored and suitable for ramming.<br>
+    The bow is armored and suitable for ramming.{break}
     Crewed by Level {1d6+2} Fighter (captain), {3d6} Level {1d4+1} Fighters (mates),
-    {4d10+20} Level 1 Fighters, and {4d10+20} normal men.<br>
-    Carrying {cargo}. {pirate-treasure}.<br>
+    {4d10+20} Level 1 Fighters, and {4d10+20} normal men.{break}
+    Carrying {cargo}. {pirate-treasure}.{break}
 5-6 longship (110'x15', Mv 30'/25', Hardness 9, 110 HP, cargo {1d100}/100)
-    The bow is armored and suitable for ramming.<br>
+    The bow is armored and suitable for ramming.{break}
     Crewed by Level {1d8+2} Fighter (captain), {2d4} Level {1d4+1} Fighters (mates),
-    {2d10+20} Level 1 Fighters, and {2d10+20} normal men.<br>
-    Carrying {cargo}. {pirate-treasure}.<br>
+    {2d10+20} Level 1 Fighters, and {2d10+20} normal men.{break}
+    Carrying {cargo}. {pirate-treasure}.{break}
 
 table: pirate-treasure 1d6
 1   Treasure type {pirate-treasure-type} stored on the ship. Pirates use any suitable items.
@@ -425,16 +425,16 @@ table: cargo-food
 
 
 table: gargantua 1d5
-1   Kraken AC 20, HD 36** (+16), #At 10 tentacles or 1 bite, Dam 7d6(x10) or 4d6, Mv Swim 40', Sv F20, Ml 11, XP 18450<br>
+1   Kraken AC 20, HD 36** (+16), #At 10 tentacles or 1 bite, Dam 7d6(x10) or 4d6, Mv Swim 40', Sv F20, Ml 11, XP 18450{break}
     100' long. 10 tentacles that reach 500'. Once hit, tentacle wraps around you and automatically does 7d6 each round.
     Victim is -4 to attack when wrapped up. Do 60 damage to sever a tentacle.
     Can wrap a ship with six tentacles to do 4d6 damage per round. Will flee if
     it loses half of its tentacles. Can jet away at 280' in a cloud of ink.
 2   Dragon Turtle AC 22, HD 30** (AB+15), #At 2 claws/1 bite or breath,
-    Dam 2d8/2d8/10d6 or 30d8, Mv 10' (10') Swim 30' (15'), Sv F20 at +5, Ml 10, XP 13650<br>
+    Dam 2d8/2d8/10d6 or 30d8, Mv 10' (10') Swim 30' (15'), Sv F20 at +5, Ml 10, XP 13650{break}
     Breath steam 30/day. 100' x 75'.
 3   The Great Storm Wyrm AC 18, HD 30** (+15), #At 1 bite, 2 claws, 1 tail lash,
-    Dam 6d8 bite, 4d6 claw (x2), 5d6 tail, Mv Fly 20', Swim 60', Sv F18, Ml 10, XP 13650<br>
+    Dam 6d8 bite, 4d6 claw (x2), 5d6 tail, Mv Fly 20', Swim 60', Sv F18, Ml 10, XP 13650{break}
     Approximately 200' long with a 300' wingspan. This serpentine dragon dwells
     in the deepest trenches and can erupt from the sea with surprising speed.
     Its scales shimmer with embedded minerals that crackle with electrical energy.
@@ -445,7 +445,7 @@ table: gargantua 1d5
     (treat as difficult terrain for 1 round in a 100' radius). It will likely
     retreat if it sustains significant damage, diving back into the crushing depths.
 4   Giant Deep-Dweller Octopus AC 16 (natural armor), HD 32** (+15), #At 8 tentacles
-    and 1 bite, Dam 5d6 (x8) and 3d8, Mv Swim 50', Sv F17, Ml 9, XP 16800<br>
+    and 1 bite, Dam 5d6 (x8) and 3d8, Mv Swim 50', Sv F17, Ml 9, XP 16800{break}
     Approximately 150' across with tentacles reaching up to 600'. This colossal
     octopus lurks in abyssal trenches and can rise to attack surface vessels.
     Its eight massive tentacles are covered in rows of powerful suckers that
@@ -457,7 +457,7 @@ table: gargantua 1d5
     obscuring vision (treat as total darkness). It will retreat to the depths
     if it loses four or more tentacles.
 5   The Chorale of Coral and Bone AC 19 (chitinous plates), HD 40** (+17),
-    #At 4 resonant limbs and sonic shriek, Dam 4d8 (x4) and special, Mv Swim 30', Sv F22, Ml 12, XP 20550<br>
+    #At 4 resonant limbs and sonic shriek, Dam 4d8 (x4) and special, Mv Swim 30', Sv F22, Ml 12, XP 20550{break}
     This gargantuan entity resembles a vast, slowly rotating mass of fused coral,
     bleached bones, and the remnants of sunken ships, easily 300' in diameter.
     Four immense, articulated limbs, tipped with clusters of resonating crystal
@@ -713,40 +713,40 @@ table: settlement-trade 1d12
 
 table: small-settlement-ships 1d10
 1-7 The settlement has no port, and no ships are anchored nearby.
-8   The settlement has no port, but a vessel anchors offshore.<br><br>{settlement-ship}
+8   The settlement has no port, but a vessel anchors offshore.{break}{break}{settlement-ship}
 9   The settlement has a small harbor, currently empty.
-10  The settlement has a small harbor where ships are moored.<br><br>{1d2+1 settlement-ship}
+10  The settlement has a small harbor where ships are moored.{break}{break}{1d2+1 settlement-ship}
 
 table: medium-settlement-ships 1d10
 1       The settlement has no port, and no ships are anchored nearby.
-2       The settlement has no port, but a vessel anchors offshore.<br><br>{settlement-ship}
+2       The settlement has no port, but a vessel anchors offshore.{break}{break}{settlement-ship}
 3       The settlement has a small harbor, currently empty.
-4-10    The settlement has a small harbor where ships are moored.<br><br>{1d2+1 settlement-ship}
+4-10    The settlement has a small harbor where ships are moored.{break}{break}{1d2+1 settlement-ship}
 
 table: large-settlement-ships 1d10
-1       The settlement has a small harbor where several ships are moored.<br>br>
+1       The settlement has a small harbor where several ships are moored.{break}br>
         {1d4+1 settlement-ship}
-2       The settlement has a nice where ships are moored.<br>br>
+2       The settlement has a nice where ships are moored.{break}br>
         {1d4+1 settlement-ship}
-3-7     The settlement has a large port where ships are moored.<br>br>
-        {2d6 settlement-ship}<br><br>
-        A few other ships are anchored offshore.<br><br>
+3-7     The settlement has a large port where ships are moored.{break}br>
+        {2d6 settlement-ship}{break}{break}
+        A few other ships are anchored offshore.{break}{break}
         {1d3 settlement-ship}
-8-10    The settlement has a large port where ships are moored.<br>br>
-        {2d8 settlement-ship}<br><br>
-        More ships are anchored offshore.<br><br>
+8-10    The settlement has a large port where ships are moored.{break}br>
+        {2d8 settlement-ship}{break}{break}
+        More ships are anchored offshore.{break}{break}
         {1d8 settlement-ship}
 
 table: settlement-ship
-1       {pirates}<br><br>
-2-8     The sail of a merchant ship is sighted, flying the flag of {ship-alignment}.<br>
-        {merchants}<br><br>
-9-10    The sail of a carrack is sighted, flying the flag of {ship-alignment}.<br>
+1       {pirates}{break}{break}
+2-8     The sail of a merchant ship is sighted, flying the flag of {ship-alignment}.{break}
+        {merchants}{break}{break}
+9-10    The sail of a carrack is sighted, flying the flag of {ship-alignment}.{break}
         The ship is {1d6+6}0'x{1d3+1}0', loaded with {1d135}/135 tons of {cargo}. Move 30'. 10 hardness.
-        120 HP.  The ship has four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.<br>
+        120 HP.  The ship has four ballistas. RoF 1/4, AB -3, Dam 2d8, Range 50/100/150.{break}
         The crew are {3d8} Level 1 {sailor-race} Fighters, led by a Level {1d4+2} {sailor-race} Fighter
-        and {1d3} Level {1d4+1} {sailor-race} Fighters.<br>
-        AC 11, #At 1 sword, Dam 1d6, Mv 40', Ml 9<br><br>
+        and {1d3} Level {1d4+1} {sailor-race} Fighters.{break}
+        AC 11, #At 1 sword, Dam 1d6, Mv 40', Ml 9{break}{break}
 
 table: adventure-location-list 2d6
 2-4     No adventure locations.

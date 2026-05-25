@@ -1,21 +1,21 @@
 name: Encounters in Tosasth
 description: Tables for generating encounters by location
-recipe: North<br>
-        {encounter}<br>
-        <br>
-        Northeast<br>
-        {encounter}<br>
-        <br>
-        Southeast<br>
-        {encounter}<br>
-        <br>
-        South<br>
-        {encounter}<br>
-        <br>
-        Southwest<br>
-        {encounter}<br>
-        <br>
-        Northwest<br>
+recipe: North{break}
+        {encounter}{break}
+        {break}
+        Northeast{break}
+        {encounter}{break}
+        {break}
+        Southeast{break}
+        {encounter}{break}
+        {break}
+        South{break}
+        {encounter}{break}
+        {break}
+        Southwest{break}
+        {encounter}{break}
+        {break}
+        Northwest{break}
         {encounter}
 repeat: 1
 
@@ -27,8 +27,8 @@ table: distance 1d4
 table: encounter 1d6
 1-4 clear
 5   {harmless}
-6   {distance} away<br>
-    {monster}<br>
+6   {distance} away{break}
+    {monster}{break}
     {attitude}
 
 table: harmless 1d80
@@ -114,14 +114,14 @@ table: harmless 1d80
 80  Vomiting
 
 table: monster 1d100
-1-25    {2d6-2} Skeletons AC 13, HD 1, HP {1d8}, #At 1, Dam 1d6, Mv 40', Sv F1, Ml 12, XP 25<br>
-        {2d6-2} Gellybones AC 14, HD 2, HP {2d8}, #At 1 slap, Dam 1d6, Mv 40', Sv F2, Ml 12, XP 75<br>
+1-25    {2d6-2} Skeletons AC 13, HD 1, HP {1d8}, #At 1, Dam 1d6, Mv 40', Sv F1, Ml 12, XP 25{break}
+        {2d6-2} Gellybones AC 14, HD 2, HP {2d8}, #At 1 slap, Dam 1d6, Mv 40', Sv F2, Ml 12, XP 75{break}
         {2d6-2} Skeletal Flayers AC 15, HD 1, HP {1d8}, #At 1 whip/1 claw, Dam 1d6 + 1d6, Mv 40', Sv F1, Ml 12, XP 37
-26-50   {2d6} Zombies AC 12, HD 2, HP {2d8}, #At 1, Dam 1d8, Mv 20', Sv F2, Ml 12, XP 75<br>
+26-50   {2d6} Zombies AC 12, HD 2, HP {2d8}, #At 1, Dam 1d8, Mv 20', Sv F2, Ml 12, XP 75{break}
         {1d4-1} {monster-ghouls}
-51-60   {2d6} {monster-ghouls}<br>
+51-60   {2d6} {monster-ghouls}{break}
         {2d6} Ghasts AC 15, HD 2**, HP {2d8}, #At 2 claws/1 bite, Dam 1d4/1d4/1d4 + paralysis + stench, Mv 30', Sv F2, Ml 9, XP 125
-61-65   {monster-wights}<br>
+61-65   {monster-wights}{break}
         {2d6} {monster-ghouls}
 66-70   Ghost Shroom AC 12, HD 4, HP {4d8} and 2, #At 1, Dam 1d4 + special, Mv 0', Sv F4, Ml 12, XP 240
         Surprise on 1-3. Hit entangles, auto-damage. Save vs death +STR to escape.
@@ -139,9 +139,9 @@ table: monster 1d100
         Shambling amalgamation of rotting flesh. Constant chorus of wailing.
         Within 40’ save vs. Poison to avoid a -2 on all rolls. 10’ reach.
 96-97   {monster-vampires}
-98      {monster-vampires}<br>
+98      {monster-vampires}{break}
         {2d6} {monster-ghouls}
-99      {monster-vampires}<br>
+99      {monster-vampires}{break}
         {1d4} {monster-wights}
 100     Ghost AC 20*, HD 10 (+9), HP {10d8+9}, #At 1 touch/1 gaze, Dam 1d6 + special, Mv 30', Sv F10, Ml 10, XP 5500
 

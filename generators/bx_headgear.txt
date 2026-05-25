@@ -1,14 +1,14 @@
 name: Headgear
 description: B/X HEADGEAR from
     https://bxblackrazor.blogspot.com/2010/08/bx-headgear-new-charts-to-gear-up-your.html
-recipe: Headgear if you are a ...<br>
-    • Cleric ➔ {cleric}<br>
-    • Dwarf ➔ {dwarf}<br>
-    • Elf ➔ {elf}<br>
-    • Fighter ➔ {fighter}<br>
-    • Halfling ➔ {halfling}<br>
-    • Mage ➔ {mage}<br>
-    • Thief ➔ {thief}<br>
+recipe: Headgear if you are a ...{break}
+    • Cleric ➔ {cleric}{break}
+    • Dwarf ➔ {dwarf}{break}
+    • Elf ➔ {elf}{break}
+    • Fighter ➔ {fighter}{break}
+    • Halfling ➔ {halfling}{break}
+    • Mage ➔ {mage}{break}
+    • Thief ➔ {thief}{break}
 repeat: 1
 
 table: cleric 1d8
