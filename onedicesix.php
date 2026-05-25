@@ -1,12 +1,12 @@
 <?php
 /**
  * Plugin Name:     One Dice Six
- * Plugin URI:      PLUGIN SITE HERE
+ * Plugin URI:      https://github.com/leonatkinson/onedicesix
  * Description:     Framework for tables for random generation
  * Author:          Leon Atkinson
  * Author URI:      https://18int.com/
  * Text Domain:     onedicesix
- * Version:         1.11.3
+ * Version:         1.11.4
  *
  * @package         Onedicesix
  */

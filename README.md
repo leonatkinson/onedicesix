@@ -212,4 +212,5 @@ Small adjustments to daily events on the southern seas.
 - Add enchanted weapon generator
 ## 1.11.3
 - Expand the books generator
-
+## 1.11.4
+- Add names to mines, forts and towers

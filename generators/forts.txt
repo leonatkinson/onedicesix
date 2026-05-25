@@ -1,20 +1,174 @@
 name: Forts
 description: Generate a fort
 recipe:
+    <b>{fort-name}{break}</b>{break}
     The primary purpose of the fort was {purpose}. It was built by {builder}.
     Construction completed {age}. The fort is located {located} and constructed
     {construction}. The walls are {wall-height} feet tall, have {ramparts} and
     {bastions}. {towers} rise above the walls. The ramparts feature {parapets}.
-    {hoardings}.<br>
-    <br>
+    {hoardings}.{break}
+    {break}
     The gatehouse {gatehouse}. Outside and around the walls {moat}
-    {1d4}0 feet wide and {1d4+4} feet deep {moat-hidden}. {sally-port}.<br>
-    <br>
+    {1d4}0 feet wide and {1d4+4} feet deep {moat-hidden}. {sally-port}.{break}
+    {break}
     Inside the walls are the following structures. A central keep {keep}. {barracks}. {workshops}. {storage}.
-    {well}. {chapel}. {great-hall}. {guardhouse}. {dungeon}.<br>
-    <br>
+    {well}. {chapel}. {great-hall}. {guardhouse}. {dungeon}.{break}
+    {break}
     {occupants}
 repeat: 1
+
+table: fort-name 1d12
+1   {fort-synonym} {proper-noun}
+2   {the-or-adjective-fort} {fort-color} {fort-synonym}
+3   {fort-adjective} {fort-synonym}
+4   {fort-synonym} {fort-adjective}
+5   {fort-adjective} {fort-terrain} {fort-synonym}
+6   {the-or-adjective-fort} {fort-material} {fort-synonym}
+7   {the-or-adjective-fort} {fort-synonym} of {fort-number} {fort-feature}
+8   {fort-direction} {fort-synonym}
+9   St. {proper-noun}'s {fort-synonym}
+10  {fort-color}{fort-suffix}
+11  {fort-adjective}{fort-suffix}
+12  {proper-noun}{fort-suffix}
+
+table: fort-synonym
+1   Fort
+2   Stronghold
+3   Keep
+4   Redoubt
+5   Stockade
+6   Blockhouse
+7   Castrum
+8   Castle
+9   Chateau
+10  Castillo
+11  Qila
+12  Kot
+13  Husun
+14  Kasbah
+15  Ribat
+16  Alcazar
+17  Dun
+18  Rath
+19  Caer
+20  Pilis
+21  Krepost
+
+table: fort-suffix 1d20
+1-3     burg
+4-6     borg 
+7-9     grad 
+10-12   gorod 
+13-14   durg
+15-16   garh
+17      cheng
+18      shiro 
+19      -Jo 
+20      seong 
+
+table: the-or-adjective-fort 1d2
+1   The
+2   {fort-adjective}
+
+table: fort-adjective 1d20
+1   Iron
+2   Invincible
+3   Impregnable
+4   Unconquerable
+5   Victory
+6   Old
+7   Great
+8   Mighty
+9   Strong
+10  Ancient
+11  Eternal
+12  Royal
+13  Imperial
+14  Indomitable
+15  Unassailable
+16  Fortified
+17  Grand
+18  Sun
+19  Stone
+20  Supreme
+
+table: fort-color 1d10
+1   Red
+2   White
+3   Golden
+4   Black
+5   Orange
+6   Brown
+7   Gray
+8   Silver
+9   Yellow
+10  Crimson
+
+table: fort-terrain
+1   Hill
+2   Mountain
+3   Cliff
+4   Ridge
+5   Plateau
+6   Peak
+7   Summit
+8   River
+9   Lake
+10  Creek
+11  Cave
+
+table: fort-material
+1   Stone
+2   Iron
+3   Diamond
+4   Gold
+5   Granite
+6   Marble
+7   Obsidian
+8   Crystal
+9   Steel
+10  Bronze
+11  Adamant
+12  Mithril
+13  Ice
+14  Bone
+15  Silver
+16  Basalt
+17  Mud
+18  Wood
+19  Lava
+20  Cloud
+
+table: fort-number 1d8
+1   {1d20+1}
+2   Many
+3   Numerous
+4   Countless
+5   Uncountable
+6   Infinite
+7   Endless
+8   Multiple
+
+table: fort-feature
+1   Walls
+2   Towers
+3   Keeps
+4   Flags 
+5   Corners 
+6   Windows 
+
+table: fort-direction 1d10
+1   North
+2   South
+3   East
+4   West
+5   Upper 
+6   Lower
+7   High
+8   Front 
+9   Rear 
+10  Deep
+
 
 table: purpose
 1   for religious significance, and integrated a religious site
@@ -257,72 +411,72 @@ table: occupants
 1   The fort is abandoned and nothing of value remains.
 2   The fort is abandoned, but a few things of value were left behind, including
     a few traps or dangerous structures.
-3   Long abandoned, the fort is now occupied.<br>
-    <br>
+3   Long abandoned, the fort is now occupied.{break}
+    {break}
     {gang}
-4   The fort is still maintained by a hostile group.<br>
-    <br>
+4   The fort is still maintained by a hostile group.{break}
+    {break}
     {gang}
-5   Wild beasts have overrun the fort.<br>
-    <br>
+5   Wild beasts have overrun the fort.{break}
+    {break}
     {beasts}
-6   A powerful monster lurks in the fort.<br>
-    <br>
+6   A powerful monster lurks in the fort.{break}
+    {break}
     {monster}
 
 table: gang
-1   They are {bandit-race} bandits.<br>
+1   They are {bandit-race} bandits.{break}
     {bandits}
-2   {3d6} Gnolls AC 15 (13), HD 2, #At 1 mace, Dam 1d8+1, Mv 30' Unarmored 40', Sv F2, Ml 8, XP 75<br>
-    {1d6} Gnoll Warriors AC 15, HD 4, #At 1 mace, Dam 1d8+1, Mv 30', Sv F4, Ml 9<br>
-    Gnoll Leader AC 15, HD 6, #At 1 mace, Dam 1d8+2, Mv 30', Sv F6, Ml 10<br>
-    Gnoll Witch AC 15, HD 6, #At 1 mace, Dam 1d8+2, Mv 30', Sv M6, Ml 10<br>
-    Spells -- sleep, hold portal, shield, darkness, knock, fireball, lightning bolt<br>
+2   {3d6} Gnolls AC 15 (13), HD 2, #At 1 mace, Dam 1d8+1, Mv 30' Unarmored 40', Sv F2, Ml 8, XP 75{break}
+    {1d6} Gnoll Warriors AC 15, HD 4, #At 1 mace, Dam 1d8+1, Mv 30', Sv F4, Ml 9{break}
+    Gnoll Leader AC 15, HD 6, #At 1 mace, Dam 1d8+2, Mv 30', Sv F6, Ml 10{break}
+    Gnoll Witch AC 15, HD 6, #At 1 mace, Dam 1d8+2, Mv 30', Sv M6, Ml 10{break}
+    Spells -- sleep, hold portal, shield, darkness, knock, fireball, lightning bolt{break}
     Treasure -- D, K
-3   {5d4} Bugbears AC 15, HD 3+1, #At 1 scimitar, Dam 1d8+1, Mv 30', Sv F3, Ml 10, XP 145<br>
-    {5d4} Bugbear Warriors AC 15, HD 4+4, #At 1 scimitar, Dam 1d8+2, Mv 30', Sv F4, Ml 10<br>
-    Bugbear Chief AC 15, HD 6+6, #At 1 scimitar, Dam 1d8+3, Mv 30', Sv F6, Ml 10<br>
-    Bugbear Shaman (Cleric 5) AC 15, HD 6+6, #At 1 scimitar, Dam 1d8+3, Mv 30', Sv C5, Ml 10<br>
-    Spells -- cure light wounds, detect magic, hold person, silence 15' radius<br>
+3   {5d4} Bugbears AC 15, HD 3+1, #At 1 scimitar, Dam 1d8+1, Mv 30', Sv F3, Ml 10, XP 145{break}
+    {5d4} Bugbear Warriors AC 15, HD 4+4, #At 1 scimitar, Dam 1d8+2, Mv 30', Sv F4, Ml 10{break}
+    Bugbear Chief AC 15, HD 6+6, #At 1 scimitar, Dam 1d8+3, Mv 30', Sv F6, Ml 10{break}
+    Bugbear Shaman (Cleric 5) AC 15, HD 6+6, #At 1 scimitar, Dam 1d8+3, Mv 30', Sv C5, Ml 10{break}
+    Spells -- cure light wounds, detect magic, hold person, silence 15' radius{break}
     Treasure -- B, L, M
-4   {5d6} Orcs AC 14, HD 1, #At 1 scimitar, Dam 1d8, Mv 30' Unarmored 40', Sv F1, Ml 8, XP 25<br>
-    {5d6} Orc Warriors AC 14, HD 2, #At 1 scimitar, Dam 1d8, Mv 30', Sv F2, Ml 9, XP 75<br>
-    {1d8+2} Orc Chiefs AC 15, HD 4, #At 1 scimitar, Dam 1d8+1, Mv 20', Sv F4, Ml 9, XP 240<br>
-    Human Magic-User 10 AC 12, AB +4, #At 1 dagger, Dam 1d4, Mv 40', ML 9, XP 1390<br>
+4   {5d6} Orcs AC 14, HD 1, #At 1 scimitar, Dam 1d8, Mv 30' Unarmored 40', Sv F1, Ml 8, XP 25{break}
+    {5d6} Orc Warriors AC 14, HD 2, #At 1 scimitar, Dam 1d8, Mv 30', Sv F2, Ml 9, XP 75{break}
+    {1d8+2} Orc Chiefs AC 15, HD 4, #At 1 scimitar, Dam 1d8+1, Mv 20', Sv F4, Ml 9, XP 240{break}
+    Human Magic-User 10 AC 12, AB +4, #At 1 dagger, Dam 1d4, Mv 40', ML 9, XP 1390{break}
     Spells -- 2x charm person, magic mouth, ventriloquism, continual darkness,
     continual light, wizard lock, darkvision, fireball, water breathing,
-    charm monster, growth of plants, feeblemind, wall of stone<br>
-    ring of protection +1, potion of speed<br>
+    charm monster, growth of plants, feeblemind, wall of stone{break}
+    ring of protection +1, potion of speed{break}
     Treasure -- G
 
 
 table: bandits
-1   Chief (Level {1d4+2} Fighter) {gang-arms}, Mv 30', Ml {1d6+6}<br>
-    {1d3} Level {1d4+1} Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br>
-    {2d6} normal men AC 11, {gang-weapons-2}, Mv 40', Ml {1d6+4}<br>
-    <br>
+1   Chief (Level {1d4+2} Fighter) {gang-arms}, Mv 30', Ml {1d6+6}{break}
+    {1d3} Level {1d4+1} Fighters {gang-arms}, Mv 30', Ml {1d6+6}{break}
+    {2d6} normal men AC 11, {gang-weapons-2}, Mv 40', Ml {1d6+4}{break}
+    {break}
     They've stashed {1d20} tons of {trade-goods} and a treasure hoard of type C.
-2   Chief (Level {1d4+2} Fighter) {gang-arms}, Mv 30', Ml {1d6+6}<br>
-    {1d3} Level {1d4+1} Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br>
-    {3d6} normal men AC 11, {gang-weapons-2}, Mv 40', Ml {1d6+4}<br>
-    <br>
+2   Chief (Level {1d4+2} Fighter) {gang-arms}, Mv 30', Ml {1d6+6}{break}
+    {1d3} Level {1d4+1} Fighters {gang-arms}, Mv 30', Ml {1d6+6}{break}
+    {3d6} normal men AC 11, {gang-weapons-2}, Mv 40', Ml {1d6+4}{break}
+    {break}
     They've stashed {1d20} tons of {trade-goods} and a treasure hoard of type B.
-3   Chief (Level {1d4+2} Fighter) {gang-arms}, Mv 30', Ml {1d6+6}<br>
-    {1d3} Level {1d4+1} Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br>
-    {2d10+20} Level 1 Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br>
-    {3d6} normal men AC 11, {gang-weapons-2}, Mv 40', Ml {1d6+4}<br>
-    <br>
+3   Chief (Level {1d4+2} Fighter) {gang-arms}, Mv 30', Ml {1d6+6}{break}
+    {1d3} Level {1d4+1} Fighters {gang-arms}, Mv 30', Ml {1d6+6}{break}
+    {2d10+20} Level 1 Fighters {gang-arms}, Mv 30', Ml {1d6+6}{break}
+    {3d6} normal men AC 11, {gang-weapons-2}, Mv 40', Ml {1d6+4}{break}
+    {break}
     They've stashed {5d10} tons of {trade-goods} and a treasure hoard of type B.
-4   Chief (Level {1d6+2} Fighter) {gang-arms}, Mv 30', Ml {1d6+6}<br>
-    {3d6} Level {1d4+1} Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br>
-    {4d10+20} Level 1 Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br><br>
-    {4d10+20} normal men AC 11, {gang-weapons-2}, Mv 40', Ml {1d6+4}<br>
-    <br>
+4   Chief (Level {1d6+2} Fighter) {gang-arms}, Mv 30', Ml {1d6+6}{break}
+    {3d6} Level {1d4+1} Fighters {gang-arms}, Mv 30', Ml {1d6+6}{break}
+    {4d10+20} Level 1 Fighters {gang-arms}, Mv 30', Ml {1d6+6}{break}{break}
+    {4d10+20} normal men AC 11, {gang-weapons-2}, Mv 40', Ml {1d6+4}{break}
+    {break}
     They've stashed {5d20} tons of {trade-goods} and a treasure hoard of type D.
-5-6 Chief (Level {1d8+2} Fighter) {gang-arms}, Mv 30', Ml {1d6+6}<br>
-    {2d4} Level {1d4+1} Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br>
-    {2d10+20} Level 1 Fighters {gang-arms}, Mv 30', Ml {1d6+6}<br>
-    {2d10+20} normal men AC 11, {gang-weapons-2}, Mv 40', Ml {1d6+4}<br>
+5-6 Chief (Level {1d8+2} Fighter) {gang-arms}, Mv 30', Ml {1d6+6}{break}
+    {2d4} Level {1d4+1} Fighters {gang-arms}, Mv 30', Ml {1d6+6}{break}
+    {2d10+20} Level 1 Fighters {gang-arms}, Mv 30', Ml {1d6+6}{break}
+    {2d10+20} normal men AC 11, {gang-weapons-2}, Mv 40', Ml {1d6+4}{break}
     They've stashed {6d20} tons of {trade-goods} and a treasure hoard of type F.
 
 table: bandit-race
@@ -360,31 +514,31 @@ table: gang-weapon-ranged
 table: beasts
 1   {8d6} Zombies AC 12, HD 2, #At 1 weapon, Dam 1d8 or by weapon, Mv 20', Sv F2, Ml 12, XP 75
 2   {4d6} Mummies AC 17‡, HD 5**, #At 1 touch + disease, Dam 1d12 + disease, Mv 20', Sv F5, Ml 12, XP 450, Tr D
-3   {4d6} Carnivorous Fire Apes AC 15, HD 6, #At 2 claws, Dam 1d6/1d6, Mv 40', Sv F6, Ml 8, XP 500<br>
+3   {4d6} Carnivorous Fire Apes AC 15, HD 6, #At 2 claws, Dam 1d6/1d6, Mv 40', Sv F6, Ml 8, XP 500{break}
     Immune to fire
 4   {frogs}
 5   {3d6} Stone Living Statues AC 16, HD 5*, #At 2 lava sprays, Dam 2d6/2d6, Mv 20', Sv F5, Ml 12, XP 405
 6   {2d6} Basilisks AC 16, HD 6**, #At 1 bite/1 gaze, Dam 1d10/petrification, Mv 20' (10'), Sv F6, Ml 9, XP 610, Tr F
-7   {5d6} Giant Bees AC 13, HD 1d4 HP, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9, XP 13<br>
-    Queen Bee AC 13, HD 2, #At 1 sting, Dam 1d8 + poison, Mv 10' Fly 50', Sv F1, Ml 9, XP 75<br>
+7   {5d6} Giant Bees AC 13, HD 1d4 HP, #At 1 sting, Dam 1d4 + poison, Mv 10' Fly 50', Sv F1, Ml 9, XP 13{break}
+    Queen Bee AC 13, HD 2, #At 1 sting, Dam 1d8 + poison, Mv 10' Fly 50', Sv F1, Ml 9, XP 75{break}
     {2d10+10} gallons of honey (10 gp/gallon). {1d6+1} globs of healing honey.
 8   {4d6} Giant Ants AC 17, HD 4, #At 1 bite, Dam 2d6, Mv 60' (10'), Sv F4, Ml 7 on first sighting, 12 after engaged, XP 240, Tr U
 
 
 table: frogs 2d4
-2   {2d4} Giant Black Toads AC 20, HD 10, #At 1 acid tongue or 1 bite, Dam 5d6 or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 1300<br>
+2   {2d4} Giant Black Toads AC 20, HD 10, #At 1 acid tongue or 1 bite, Dam 5d6 or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 1300{break}
     8' tall. Tongue attacks 40'. Save vs Dragon for half. Swallows man-sized on natural 20.
-3   {4d4} Giant Fire Toads AC 17, HD 4, #At 1 tongue or 1 bite, Dam grab or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 240<br>
+3   {4d4} Giant Fire Toads AC 17, HD 4, #At 1 tongue or 1 bite, Dam grab or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 240{break}
     6' tall. Immune to fire attacks. Swallows man-sized on natural 20.
-4   {2d4} Bigger Giant Frogs AC 13, HD 4, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 240<br>
+4   {2d4} Bigger Giant Frogs AC 13, HD 4, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 240{break}
     6' tall. Swallows man-sized on natural 20.
-5   {2d4} Giant Frogs AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 75<br>
+5   {2d4} Giant Frogs AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 75{break}
     Swallows dwarf-sized on natural 20.
-6   {2d4} Hypno Toads AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 100<br>
+6   {2d4} Hypno Toads AC 13, HD 2, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 100{break}
     Swallows dwarf-sized on natural 20. On gaze, save vs wands or be paralyzed while gaze holds. Psychodelic colors. Single eye.
-7   {4d4} Giant Poisonous Frogs AC 13, HD 4, #At 1 tongue or 1 bite, Dam grab or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 280<br>
+7   {4d4} Giant Poisonous Frogs AC 13, HD 4, #At 1 tongue or 1 bite, Dam grab or 2d6, Mv 30' Swim 30', Sv F2, Ml 6, XP 280{break}
     6' tall. Immune to poison. On bite, save vs poison or take an extra 1d6 damage over three rounds. Swallows man-sized on natural 20.
-8   {2d4} Undead Giant Frogs AC 15, HD 5, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 405<br>
+8   {2d4} Undead Giant Frogs AC 15, HD 5, #At 1 tongue or 1 bite, Dam grab or 1d4+1, Mv 30' Swim 30', Sv F2, Ml 6, XP 405{break}
     8' tall. Tongue attacks 40'. On natural 20, one negative level. Obviously rotting.
 
 table: gems 1d10
@@ -414,21 +568,21 @@ table: gem-name 1d20
 
 
 table: monster
-1   {1d4} Gorgons AC 19, HD 8*, #At 1 gore or 1 breath, Dam 2d6 or petrification, Mv 40' (10'), Sv F8, Ml 8, XP 945<br>
+1   {1d4} Gorgons AC 19, HD 8*, #At 1 gore or 1 breath, Dam 2d6 or petrification, Mv 40' (10'), Sv F8, Ml 8, XP 945{break}
     60' long by 10' wide petrificaton breath, usable 8x/day, every other round.
 2   Massive Lizard AC 25, HD 16, #At 2 claws/1 bite, Dam 2d6/2d6/3d10, Mv 40' (10'), Sv F16, Ml 9
 3   Purple Worm AC 16, HD 20* (+13), #At 1 bite/1 sting, Dam 2d8/1d8+poison, Mv 20' (15'), Sv F10, Ml 10, XP 5450
 4   Giant Roc AC 18, HD 32 (+16), #At 2 claws/1 bite, Dam 3d6/3d6/6d6, Mv 20' Fly 160' (10'), Sv F20 at +5, Ml 10, XP 14250, Tr I
 5   Black Knight AC 20, HD 14** (+11 +weapon), #At 1 weapon, Dam By weapon +3 +magic, Mv 30',
-    Sv F14, Ml 11, XP 2730, Tr F + Black Knight's sword<br>
-    {black-knight-sword}<br>
-    Creatures of 5 HD or less save vs spells or -2 AB and -2 AC<br>
-    75% to reflect any harmful spell.<br>
-    Detect Magic, Detect Invisible at will. 3xFireball for 10d6 damage.<br>
+    Sv F14, Ml 11, XP 2730, Tr F + Black Knight's sword{break}
+    {black-knight-sword}{break}
+    Creatures of 5 HD or less save vs spells or -2 AB and -2 AC{break}
+    75% to reflect any harmful spell.{break}
+    Detect Magic, Detect Invisible at will. 3xFireball for 10d6 damage.{break}
     Half damage from non-magical weapons. Cannot be turned.
 6   Blue Dragon AC 20, HD 12** (+10), #At 2 claws/1 bite or breath/1 tail,
-    Dam 1d10/3d10 or breath/1d8, Mv 30' Fly 80' (15'), Sv F12, Ml 9, XP 1225, Tr H<br>
-    Lightning breath 120' x 60' 12x/day for 12d8 damage.<br>
+    Dam 1d10/3d10 or breath/1d8, Mv 30' Fly 80' (15'), Sv F12, Ml 9, XP 1225, Tr H{break}
+    Lightning breath 120' x 60' 12x/day for 12d8 damage.{break}
     Spells -- Shield (no MM, +3/+6 AC), Sleep, 3xCharm Person,
     Invisibility, Mirror Image, Web, Phantasmal Force of 12 basilisks,
     2xHold Person, Confusion (3d6 targets within 30' radius for 14 rounds)
@@ -517,3 +671,981 @@ table: trade-goods-food
 2   whale oil
 3   dried fruit
 3   molasses
+
+
+#
+# Utilities
+#
+
+table: blank
+1   <!-- blank -->
+
+table: break
+1   <br>
+
+table: break2
+1   {break} {break}
+
+
+table: proper-noun 1d961
+1   Aelat
+2   Aemusti
+3   Aerelia
+4   Aerer
+5   Aeria
+6   Aerius
+7   Aertiaia
+8   Aerussi
+9   Ala
+10  Alalatim
+11  Alanim
+12  Alatia
+13  Alaviae
+14  Alia
+15  Aliaelc
+16  Alian
+17  Alianaus
+18  Alius
+19  Anaeiai
+20  Anai
+21  Anaian
+22  Anaimag
+23  Anainil
+24  Anan
+25  Ananamusi
+26  Ananiau
+27  Anantu
+28  Anarim
+29  Anaucu
+30  Anaus
+31  Anauss
+32  Anec
+33  Anemi
+34  Anengama
+35  Angai
+36  Aniai
+37  Anian
+38  Aniana
+39  Aninai
+40  Aniviaus
+41  Aqudilan
+42  Aqusia
+43  Aqustar
+44  Aqusturc
+45  Ararit
+46  Arcana
+47  Areciam
+48  Areriu
+49  Aria
+50  Ariaer
+51  Arilial
+52  Arilila
+53  Arimero
+54  Aristi
+55  Ariucik
+56  Ariuia
+57  Artaran
+58  Artiari
+59  Artill
+60  Artiti
+61  Ataa
+62  Atiaia
+63  Atianai
+64  Atiarc
+65  Atoarel
+66  Atustai
+67  Audi
+68  Audianiar
+69  Audilal
+70  Augareci
+71  Augavak
+72  Auletavis
+73  Aulilapa
+74  Aunaure
+75  Aunel
+76  Auraxia
+77  Aure
+78  Aurelia
+79  Aureparem
+80  Aureree
+81  Aus
+82  Ausan
+83  Auscimu
+84  Ausi
+85  Ausia
+86  Ausiam
+87  Ausiau
+88  Ausik
+89  Ausilas
+90  Ausina
+91  Ausit
+92  Ausiti
+93  Auspan
+94  Ausst
+95  Aussti
+96  Ausstus
+97  Austa
+98  Austaiavi
+99  Austan
+100 Austat
+101 Austauc
+102 Austi
+103 Austia
+104 Austillo
+105 Austim
+106 Austus
+107 Aviai
+108 Avianai
+109 Avikau
+110 Avilanabi
+111 Avillin
+112 Avima
+113 Avintax
+114 Awhaia
+115 Awhi
+116 Awhila
+117 Awhinge
+118 Awhirbe
+119 Caar
+120 Caecel
+121 Caelat
+122 Caiaha
+123 Caiai
+124 Caiauss
+125 Cailere
+126 Caillia
+127 Cain
+128 Cait
+129 Caitiar
+130 Cal
+131 Cali
+132 Cami
+133 Cana
+134 Canaia
+135 Cananai
+136 Cananau
+137 Canaust
+138 Canille
+139 Canint
+140 Caniti
+141 Canti
+142 Cantian
+143 Caqulian
+144 Carariu
+145 Care
+146 Carein
+147 Carere
+148 Carereri
+149 Caria
+150 Carian
+151 Cariau
+152 Carius
+153 Carom
+154 Catalar
+155 Catam
+156 Catanan
+157 Catatia
+158 Cati
+159 Catia
+160 Catiana
+161 Cauia
+162 Caulari
+163 Caus
+164 Causcus
+165 Causi
+166 Causiai
+167 Causst
+168 Caustia
+169 Cavillau
+170 Caxiah
+171 Ceciagn
+172 Celarra
+173 Celiabi
+174 Celiar
+175 Cemareli
+176 Ciananst
+177 Ciliat
+178 Cilil
+179 Cinaxi
+180 Cionau
+181 Clabiro
+182 Claelci
+183 Claenst
+184 Clai
+185 Clalinan
+186 Clariai
+187 Clariu
+188 Clarori
+189 Claus
+190 Clbi
+191 Clbinan
+192 Clelala
+193 Clerriu
+194 Cliaill
+195 Clianau
+196 Cliane
+197 Cliaqur
+198 Cliari
+199 Clila
+200 Climan
+201 Climu
+202 Cliro
+203 Cliusiu
+204 Cllia
+205 Clll
+206 Clomi
+207 Clust
+208 Clypr
+209 Coana
+210 Coausst
+211 Coher
+212 Comaiart
+213 Comu
+214 Conimul
+215 Coransi
+216 Corerci
+217 Crarecr
+218 Criani
+219 Crianti
+220 Criaril
+221 Cypren
+222 Cyptiar
+223 Cyptiaus
+224 Cypusil
+225 Cypuspt
+226 Cyremu
+227 Cyrina
+228 Deler
+229 Dellar
+230 Deneli
+231 Dentiar
+232 Derenae
+233 Derenak
+234 Deri
+235 Deriana
+236 Deriare
+237 Deritabi
+238 Devaq
+239 Drenaro
+240 Drereri
+241 Dreria
+242 Driani
+243 Driara
+244 Drtanait
+245 Dusianam
+246 Dusirre
+247 Dussi
+248 Dussiure
+249 Dustata
+250 Dusti
+251 Dustiai
+252 Ereimer
+253 Erialel
+254 Eriarat
+255 Erimus
+256 Faemu
+257 Faiart
+258 Faiatik
+259 Failiau
+260 Falimat
+261 Fana
+262 Fanan
+263 Fanemui
+264 Faniane
+265 Fantamu
+266 Fapusi
+267 Fare
+268 Fatir
+269 Faug
+270 Faviaren
+271 Fecinai
+272 Felae
+273 Felari
+274 Fenan
+275 Ferberib
+276 Fercici
+277 Ferelia
+278 Feromil
+279 Fetiania
+280 Feviam
+281 Flai
+282 Flanian
+283 Flar
+284 Flav
+285 Flbaus
+286 Flilere
+287 Fliti
+288 Fll
+289 Fllbere
+290 Flli
+291 Fllici
+292 Flomau
+293 Foereni
+294 Foher
+295 Ganaullci
+296 Ganerev
+297 Garbi
+298 Gareni
+299 Garer
+300 Garom
+301 Gauia
+302 Hecia
+303 Heereni
+304 Heima
+305 Helan
+306 Helarriul
+307 Helen
+308 Helia
+309 Helial
+310 Helit
+311 Hellent
+312 Hema
+313 Hena
+314 Henaat
+315 Henalil
+316 Henam
+317 Henana
+318 Heni
+319 Hent
+320 Hentil
+321 Heretiman
+322 Heri
+323 Heriana
+324 Herill
+325 Heroee
+326 Hesceri
+327 Hiaal
+328 Hiaiar
+329 Hiainta
+330 Hiamaia
+331 Hian
+332 Hiat
+333 Hiaust
+334 Hiausti
+335 Hitiat
+336 Hohecir
+337 Jufit
+338 Jugec
+339 Juianau
+340 Juistat
+341 Julanar
+342 Juliana
+343 Juliaro
+344 Junai
+345 Juren
+346 Juritax
+347 Jusari
+348 Jusia
+349 Jusin
+350 Jusitab
+351 Juspr
+352 Jusstau
+353 Justa
+354 Justi
+355 Justire
+356 Kaibia
+357 Kailat
+358 Kaili
+359 Kaillaqu
+360 Kaiustu
+361 Kamahi
+362 Kaman
+363 Kamaravik
+364 Kana
+365 Kananati
+366 Kanat
+367 Kanatius
+368 Kantina
+369 Kareli
+370 Karept
+371 Karerem
+372 Kareril
+373 Kati
+374 Katoaro
+375 Kauiaui
+376 Kaurom
+377 Kaussi
+378 Kavi
+379 Kaviaka
+380 Kiaaur
+381 Kiainus
+382 Kialin
+383 Kiania
+384 Kiaren
+385 Kiarill
+386 Kiatari
+387 Kilai
+388 Kilila
+389 Kilitit
+390 Kivihia
+391 Lahiareri
+392 Laician
+393 Lailiani
+394 Lanti
+395 Lareli
+396 Larenia
+397 Lari
+398 Lasia
+399 Latoaxi
+400 Lauscaim
+401 Laust
+402 Laxiane
+403 Liaiaia
+404 Liare
+405 Liausiu
+406 Lilar
+407 Linallll
+408 Lituimal
+409 Luiai
+410 Lulausi
+411 Luli
+412 Lulilla
+413 Luscecu
+414 Lusioau
+415 Lust
+416 Lusti
+417 Maabi
+418 Maare
+419 Maaroa
+420 Mabagar
+421 Mabela
+422 Maec
+423 Maelai
+424 Maella
+425 Maellau
+426 Maer
+427 Maergall
+428 Magina
+429 Magusan
+430 Magusi
+431 Mahav
+432 Mahere
+433 Maiagang
+434 Maiaiau
+435 Maiain
+436 Maianat
+437 Maiangu
+438 Maiaren
+439 Maiatia
+440 Maiau
+441 Maiavan
+442 Maiavas
+443 Maiavia
+444 Maibellu
+445 Maikai
+446 Mail
+447 Maila
+448 Maile
+449 Mailiti
+450 Maimia
+451 Main
+452 Maina
+453 Mainaar
+454 Mainaiai
+455 Mainiss
+456 Mait
+457 Maitia
+458 Maitusi
+459 Maiuia
+460 Maiusim
+461 Makanare
+462 Makarili
+463 Makausc
+464 Malai
+465 Malain
+466 Malb
+467 Maliae
+468 Mamaiai
+469 Mamanatus
+470 Mamant
+471 Mamaror
+472 Mamasti
+473 Mamimusin
+474 Mamoa
+475 Mana
+476 Manaare
+477 Manai
+478 Manaiaell
+479 Manaiai
+480 Manan
+481 Manana
+482 Manani
+483 Manaqus
+484 Manar
+485 Manara
+486 Manaria
+487 Manaust
+488 Mane
+489 Manel
+490 Maneli
+491 Manelli
+492 Manem
+493 Manent
+494 Manentab
+495 Manere
+496 Manerilll
+497 Mang
+498 Mani
+499 Mania
+500 Manillc
+501 Maninab
+502 Manss
+503 Mant
+504 Mantani
+505 Mantau
+506 Mantaussi
+507 Manti
+508 Mantian
+509 Mantiar
+510 Mantiav
+511 Mantibele
+512 Mantila
+513 Mantius
+514 Manucian
+515 Manur
+516 Manustu
+517 Mapr
+518 Maprai
+519 Maquroerb
+520 Maraius
+521 Mararcin
+522 Maratan
+523 Marc
+524 Mareell
+525 Marel
+526 Marer
+527 Marerai
+528 Marerei
+529 Mareren
+530 Mareria
+531 Margana
+532 Maria
+533 Mariaiara
+534 Mariap
+535 Mariast
+536 Mariau
+537 Maricer
+538 Mariliu
+539 Marilo
+540 Marim
+541 Marin
+542 Marirg
+543 Maromus
+544 Marrere
+545 Martiani
+546 Marusim
+547 Masc
+548 Masim
+549 Mastiri
+550 Mata
+551 Mataella
+552 Mataim
+553 Matarell
+554 Matausi
+555 Matavi
+556 Mati
+557 Matia
+558 Matiae
+559 Matine
+560 Matonai
+561 Mattiati
+562 Maufian
+563 Mauint
+564 Maulli
+565 Maullia
+566 Maus
+567 Mausi
+568 Mausill
+569 Maussiaia
+570 Maust
+571 Maustia
+572 Maustom
+573 Maustu
+574 Mavia
+575 Maviabi
+576 Maviar
+577 Mavim
+578 Maviti
+579 Maxia
+580 Maxiai
+581 Maxiala
+582 Maxiant
+583 Melantia
+584 Melau
+585 Menalle
+586 Menanti
+587 Mentaen
+588 Mianaran
+589 Miar
+590 Miatan
+591 Mimaui
+592 Mitia
+593 Miturina
+594 Miusia
+595 Moaug
+596 Momiu
+597 Monat
+598 Monem
+599 Monian
+600 Moriali
+601 Moriant
+602 Neiah
+603 Nelaime
+604 Nelia
+605 Nelian
+606 Nelianita
+607 Nell
+608 Nemia
+609 Nemuiaib
+610 Nena
+611 Nenallah
+612 Nenanel
+613 Nene
+614 Neniari
+615 Neprita
+616 Nereli
+617 Neriani
+618 Neriari
+619 Nero
+620 Ngaelan
+621 Ngahill
+622 Ngalia
+623 Nganena
+624 Nganti
+625 Ngatiti
+626 Ngelausc
+627 Ngenaus
+628 Nger
+629 Nguimus
+630 Nguspaia
+631 Ngusss
+632 Niaimin
+633 Nianel
+634 Nianelai
+635 Niarer
+636 Nimar
+637 Niniar
+638 Nypavio
+639 Nyptu
+640 Nyriana
+641 Nyriuli
+642 Ocenili
+643 Ociamam
+644 Ocim
+645 Ocimul
+646 Ociriaxi
+647 Octari
+648 Ocu
+649 Olabia
+650 Olaga
+651 Olahiah
+652 Olaina
+653 Olamim
+654 Olianani
+655 Paatian
+656 Paiti
+657 Paman
+658 Panaka
+659 Panart
+660 Panaus
+661 Panemai
+662 Pauimana
+663 Pauss
+664 Paxial
+665 Penamai
+666 Peniav
+667 Peranare
+668 Phata
+669 Phentari
+670 Phiaem
+671 Phiaila
+672 Phiant
+673 Phiari
+674 Philimi
+675 Poar
+676 Poerel
+677 Poia
+678 Poianu
+679 Poiarel
+680 Poim
+681 Ponavi
+682 Pontil
+683 Ponust
+684 Pori
+685 Portina
+686 Prail
+687 Pran
+688 Prata
+689 Prciahi
+690 Preciavi
+691 Prenel
+692 Prenian
+693 Prenus
+694 Prer
+695 Priaia
+696 Prianiar
+697 Priatiai
+698 Primo
+699 Proare
+700 Proatiali
+701 Proheli
+702 Prorimus
+703 Prtia
+704 Prttiar
+705 Qufusst
+706 Quianau
+707 Quiar
+708 Quina
+709 Qulili
+710 Qusarecil
+711 Qusil
+712 Qusilan
+713 Qusimu
+714 Qusiuia
+715 Qussin
+716 Qustia
+717 Raaneciu
+718 Raliant
+719 Ranaiane
+720 Ranana
+721 Rarern
+722 Rausa
+723 Rela
+724 Relia
+725 Rema
+726 Renatia
+727 Rener
+728 Rerilin
+729 Roama
+730 Roamaxin
+731 Roana
+732 Roarela
+733 Roarili
+734 Ronaeci
+735 Ronan
+736 Rorcu
+737 Rorev
+738 Roria
+739 Rornaaria
+740 Ruiapust
+741 Ruiariti
+742 Ruliant
+743 Ruro
+744 Rusarele
+745 Rusi
+746 Rusia
+747 Rusiaim
+748 Rusil
+749 Rusili
+750 Rusimab
+751 Rusina
+752 Ruspre
+753 Russtt
+754 Rustia
+755 Rustiar
+756 Sananani
+757 Sanecri
+758 Sanerti
+759 Saussia
+760 Secian
+761 Seciana
+762 Seciusi
+763 Selaian
+764 Seliani
+765 Semaui
+766 Senaau
+767 Senael
+768 Seneni
+769 Serbilli
+770 Sere
+771 Sereni
+772 Serept
+773 Sererena
+774 Seri
+775 Serim
+776 Serinat
+777 Serinau
+778 Sernuss
+779 Sertatia
+780 Serti
+781 Sianar
+782 Siasahi
+783 Taail
+784 Taarilia
+785 Tabatia
+786 Taelela
+787 Taere
+788 Taetiti
+789 Taevimi
+790 Tahelan
+791 Tahia
+792 Tahiakana
+793 Taiai
+794 Taiaian
+795 Taian
+796 Taiare
+797 Taiarin
+798 Tail
+799 Tailia
+800 Taim
+801 Taimit
+802 Taliuspti
+803 Taman
+804 Tamane
+805 Tamus
+806 Tanaaela
+807 Tanai
+808 Tanaiam
+809 Tanam
+810 Tanana
+811 Tananai
+812 Tananar
+813 Tananat
+814 Tananta
+815 Tananti
+816 Tanarem
+817 Tanat
+818 Tanevi
+819 Tangec
+820 Tania
+821 Taniaa
+822 Tanil
+823 Tanilep
+824 Tanilia
+825 Tanily
+826 Tanstiti
+827 Tant
+828 Tantia
+829 Tapati
+830 Taprenak
+831 Tara
+832 Taraana
+833 Taraka
+834 Tararerian
+835 Tarei
+836 Tareiaan
+837 Tareli
+838 Taren
+839 Tarena
+840 Tarer
+841 Tari
+842 Taria
+843 Tariael
+844 Tariai
+845 Tariaia
+846 Tarima
+847 Tarito
+848 Tarohe
+849 Taronan
+850 Tarusce
+851 Tasi
+852 Tatia
+853 Tatialo
+854 Tatiaus
+855 Tatimim
+856 Tattilban
+857 Tatust
+858 Tauc
+859 Tauicem
+860 Taus
+861 Tauscau
+862 Tausci
+863 Tausit
+864 Taustaro
+865 Tausti
+866 Taustiusa
+867 Tavinana
+868 Taxia
+869 Tela
+870 Telaril
+871 Telian
+872 Tenil
+873 Terelia
+874 Terem
+875 Teri
+876 Testau
+877 Teviani
+878 Tianeror
+879 Tiarim
+880 Tiass
+881 Tiaus
+882 Tihius
+883 Tiurg
+884 Tulia
+885 Tusaia
+886 Tusimia
+887 Tusintati
+888 Uranain
+889 Uratim
+890 Urbia
+891 Urbimila
+892 Ureriai
+893 Uria
+894 Urila
+895 Urin
+896 Uroarel
+897 Vabianu
+898 Vaia
+899 Vaiaivi
+900 Vaialia
+901 Vaianel
+902 Vaiant
+903 Vaiarga
+904 Vailan
+905 Vailla
+906 Vaitar
+907 Vaitor
+908 Vaiusst
+909 Vakan
+910 Valiti
+911 Vallila
+912 Valoren
+913 Vana
+914 Vanabia
+915 Vanai
+916 Vanantil
+917 Vanatan
+918 Vanelu
+919 Vaneroa
+920 Vania
+921 Vanitar
+922 Vant
+923 Vantanu
+924 Vantin
+925 Vanusti
+926 Varahel
+927 Varamer
+928 Vare
+929 Vari
+930 Variari
+931 Variu
+932 Vascim
+933 Vatiar
+934 Vatul
+935 Vatuss
+936 Vauibiaia
+937 Vaurel
+938 Vauri
+939 Vausius
+940 Vava
+941 Vavi
+942 Vaviari
+943 Vaxiana
+944 Vaxini
+945 Viailil
+946 Viama
+947 Vicimaian
+948 Vilim
+949 Vima
+950 Vins
+951 Viusiti
+952 Viusti
+953 Wiai
+954 Wiana
+955 Wianaae
+956 Wiananu
+957 Wiari
+958 Wiariai
+959 Wilar
+960 Wimus
+961 Wiul
