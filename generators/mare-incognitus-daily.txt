@@ -937,48 +937,48 @@ table: fishing-big
 
 
 table: disease-type 1d100
-1-3     Blood; {disease-occurrence-3}; {disease-severity-25}; -1 STR, -1 CON;
+1-3     Blood{break} {disease-occurrence-3}{break} {disease-severity-25}{break} -1 STR, -1 CON{break}
         Death in {1d12} weeks for terminal cases.
-4       Bones; {disease-occurrence-1}; {disease-severity-13}; -1 STR, -1 CON;
+4       Bones{break} {disease-occurrence-1}{break} {disease-severity-13}{break} -1 STR, -1 CON{break}
         Death in {1d12} weeks for terminal cases.
-5       Nervous System; {disease-occurrence-6}; {disease-severity-25}; -1 INT, -1 DEX;
+5       Nervous System{break} {disease-occurrence-6}{break} {disease-severity-25}{break} -1 INT, -1 DEX{break}
         Death in {2d12} hours for terminal cases.
-6-7     Cardiovascular System; {disease-occurrence-3}; {disease-severity-24}; -1 STR, -1 CON;
+6-7     Cardiovascular System{break} {disease-occurrence-3}{break} {disease-severity-24}{break} -1 STR, -1 CON{break}
         Death in {2d6} days for terminal cases.
-8-9     Connective Tissue; {disease-occurrence-1}; {disease-severity-13};
+8-9     Connective Tissue{break} {disease-occurrence-1}{break} {disease-severity-13}{break}
         Permanent -1 STR, -1 DEX, -1 CON, -1 CHA for each month of affliction.
-10-12   Ears ({disease-side}); {disease-occurrence-7}; {disease-severity-67};
+10-12   Ears ({disease-side}){break} {disease-occurrence-7}{break} {disease-severity-67}{break}
         Terminal cases only cause permanent deafness.
-13-18   Eyes ({disease-side}); {disease-occurrence-7}; {disease-severity-57};
+13-18   Eyes ({disease-side}){break} {disease-occurrence-7}{break} {disease-severity-57}{break}
         Terminal cases only cause permanent blindness.
-19-40   Gastro-Intestinal; {disease-occurrence-6}; {disease-severity-57};
+19-40   Gastro-Intestinal{break} {disease-occurrence-6}{break} {disease-severity-57}{break}
         -1 STR, -1 CON per attack. Death in {1d12} weeks for terminal cases.
-41-42   Sexual Organs; {disease-occurrence-2}; {disease-severity-37};
+41-42   Sexual Organs{break} {disease-occurrence-2}{break} {disease-severity-37}{break}
         Terminal cases cause sterlity in {2d4} days.
-43-48   Joints ({disease-joint}); {disease-occurrence-4}; {disease-severity-68};
-        -1 DEX; Terminal cases cause permanent lose of function.
-49-50   Mucous Membranes; {disease-occurrence-7}; {disease-severity-68}; -1 CON;
+43-48   Joints ({disease-joint}){break} {disease-occurrence-4}{break} {disease-severity-68}{break}
+        -1 DEX{break} Terminal cases cause permanent lose of function.
+49-50   Mucous Membranes{break} {disease-occurrence-7}{break} {disease-severity-68}{break} -1 CON{break}
         Death in {1d12} days for terminal cases.
-51-52   Muscles; {disease-occurrence-5}; {disease-severity-57}; -1 STR, -1 DEX;
+51-52   Muscles{break} {disease-occurrence-5}{break} {disease-severity-57}{break} -1 STR, -1 DEX{break}
         25% of episodes are permanent. Death in {1d12} months for terminal cases.
-53-65   Nose/Throat; {disease-occurrence-6}; {disease-severity-68}; Chronic cases
+53-65   Nose/Throat{break} {disease-occurrence-6}{break} {disease-severity-68}{break} Chronic cases
         cause -1 CON in 10% of episodes. Death in {1d12} days for terminal cases.
-66-85   Respiratory System; {disease-occurrence-6}; {disease-severity-57};
+66-85   Respiratory System{break} {disease-occurrence-6}{break} {disease-severity-57}{break}
         -1 STR or -1 CON for 10% of chronic, severe cases.  Death in {1d12} months
         for terminal cases.
-86-96   Skin; {disease-occurrence-7}; {disease-severity-57}; 10% of mild and 25%
+86-96   Skin{break} {disease-occurrence-7}{break} {disease-severity-57}{break} 10% of mild and 25%
         of sever cases cause -1 CHA. Death in {1d12} weeks for terminal cases.
-97-100  Urinary System; {disease-occurrence-6}; {disease-severity-57}; 25% per
-        episode of -1 DEX, -1 CON; Death in {1d12} weeks for terminal cases.
+97-100  Urinary System{break} {disease-occurrence-6}{break} {disease-severity-57}{break} 25% per
+        episode of -1 DEX, -1 CON{break} Death in {1d12} weeks for terminal cases.
 
 
 table: parasite-type 1d100
-1-10    Cardiovascular System; {disease-severity-25}
-11-35   Intestines; {disease-severity-27}
-36-40   Muscles; {disease-severity-13}
-41-45   Respiratory System; {disease-severity-14}
-46-75   Skin/Hair; {disease-severity-78}
-76-100  Stomach; {disease-severity-27}
+1-10    Cardiovascular System{break} {disease-severity-25}
+11-35   Intestines{break} {disease-severity-27}
+36-40   Muscles{break} {disease-severity-13}
+41-45   Respiratory System{break} {disease-severity-14}
+46-75   Skin/Hair{break} {disease-severity-78}
+76-100  Stomach{break} {disease-severity-27}
 
 
 table: disease-occurrence-1 1d8

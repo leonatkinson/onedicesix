@@ -46,34 +46,23 @@ table: certain 1d20
 4-20    Yes
 
 table: but 1d20
-1   but with a twist &mdash; Something unexpected or unusual accompanies the situation.
-2   but there's a complication &mdash; A new problem or obstacle
-    arises in conjunction with the current scenario.
-3   but not as expected &mdash; The outcome differs from what was initially anticipated.
-4   but with a hidden cost &mdash; Achieving the goal involves unforeseen sacrifices or consequences.
-5   but with a delay &mdash; The desired result is attainable, but it will
-    take more time or effort than anticipated.
-6   but with a condition &mdash; Success hinges on meeting a specific
-    condition or requirement.
-7   but it comes with a burden &mdash; The situation brings added responsibilities or challenges.
-8   but with unexpected consequences &mdash; Actions lead to unforeseen and potentially troublesome repercussions.
-9   but with room for improvement &mdash; The outcome isn't perfect,
-    leaving opportunities for further enhancement or development.
-10  but with a silver lining &mdash; Despite the setback, there's a glimmer of hope or advantage.
-11  but with a twist of fate &mdash; A stroke of luck or misfortune
-    changes the course of events.
-12  but with a moral dilemma &mdash; The situation presents a moral or
-    ethical challenge to overcome.
-13  but with a change of perspective &mdash; The circumstances require
-    a shift in mindset or approach.
-14  but with misinformation &mdash; The information or details received
-    may be inaccurate or misleading.
-15  but with fading hope &mdash; The situation appears grim, but
-    there's still a faint glimmer of optimism.
-16  but with a tangled web &mdash; The situation becomes more complex and interconnected with other events.
-17  but with a shadowy figure &mdash; A mysterious or enigmatic character becomes involved.
-18  but with an ancient secret &mdash; The situation unveils an old and
-    long-forgotten mystery.
-19  but with a choice to make &mdash; The characters must make a difficult decision regarding their next steps.
-20  but with the hand of destiny &mdash; Fate intervenes, influencing
-    the outcome in an unexpected way.
+1   but with a twist. Something unexpected or unusual accompanies the situation.
+2   but there's a complication. A new problem or obstacle arises in conjunction with the current scenario.
+3   but not as expected. The outcome differs from what was initially anticipated.
+4   but with a hidden cost. Achieving the goal involves unforeseen sacrifices or consequences.
+5   but with a delay. The desired result is attainable, but it will take more time or effort than anticipated.
+6   but with a condition. Success hinges on meeting a specific condition or requirement.
+7   but it comes with a burden. The situation brings added responsibilities or challenges.
+8   but with unexpected consequences. Actions lead to unforeseen and potentially troublesome repercussions.
+9   but with room for improvement. The outcome isn't perfect, leaving opportunities for further enhancement or development.
+10  but with a silver lining. Despite the setback, there's a glimmer of hope or advantage.
+11  but with a twist of fate. A stroke of luck or misfortune changes the course of events.
+12  but with a moral dilemma. The situation presents a moral or ethical challenge to overcome.
+13  but with a change of perspective. The circumstances require a shift in mindset or approach.
+14  but with misinformation. The information or details received may be inaccurate or misleading.
+15  but with fading hope. The situation appears grim, but there's still a faint glimmer of optimism.
+16  but with a tangled web. The situation becomes more complex and interconnected with other events.
+17  but with a shadowy figure. A mysterious or enigmatic character becomes involved.
+18  but with an ancient secret. The situation unveils an old and long-forgotten mystery.
+19  but with a choice to make. The characters must make a difficult decision regarding their next steps.
+20  but with the hand of destiny. Fate intervenes, influencing the outcome in an unexpected way.

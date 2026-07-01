@@ -2,49 +2,49 @@ name: Annual Event Calendar
 description: Generates campaign events for an entire year, greatly inspired by the OE yearly and monthly events.
 recipe:
   The following event represents the theme of the year.
-  ; ;
+  {break}{break}
   {annual-event}
 repeat: 1
 
 table: annual-event 1d100
-1-10    Ambassador ;
+1-10    Ambassador {break}
         On {date}, an ambassador {ambassador-dir} {ambassador-location} on a {3d10}-month
         mission to {ambassador-mission}. The arrival is a major event for those
         of the court, accompanied by ceremonies and banquets.
         {monthly-other-preamble}
-11-15   Assassination of a Lord ;
+11-15   Assassination of a Lord {break}
         A high-ranking lord is assassinated on {date}. The PCs may be under suspicion.
         The assassin {assassin-escapes}, but {assassin-accuses}.
         {lord-power-struggle}
         {monthly-war-preamble}
-16-30   Birth ;
+16-30   Birth {break}
         On {date}, a high-ranking noble's family has given birth to a child, a reason for
         widespread celebration. Feasting and ceremonies last for several days.
         {monthly-other-preamble}
-31      Comet ;
+31      Comet {break}
         On {date}, a bright comet is sighted in the sky for {1d4} weeks,
-        a portent of some great event. {2d6} weeks later, a second event occurs. ;
-         ;
+        a portent of some great event. {2d6} weeks later, a second event occurs. {break}
+         {break}
         {event}
         {monthly-other-preamble}
-32-40   Death of a Lord ;
+32-40   Death of a Lord {break}
         A high-ranking noble dies on {date}, {lord-death}. {lord-power-struggle}
         {monthly-war-preamble}
-41-43   Major Earthquake ;
+41-43   Major Earthquake {break}
         On {date}, an earthquake produces extensive destruction in a {1d30+20}-mile-radius, {1d20}
         miles {earthquake-direction} of the home of the PCs. A series of lesser
         tremors come before and after. The big quake destroys cities, reshapes lakes,
         coastlines, and rivers, causes great fires, and possibly kills hundreds
         of people. {earthquake-fire} {earthquake-plague}
         {monthly-disaster-preamble}
-44-47   Famine ;
+44-47   Famine {break}
         Crops wither, animals die, and the poor begin to starve. The famine strikes
         in the {month} month and lasts for {1d6+1} months. Food prices rise by
         {famine-costs} times normal. Marauders scavenge food of any type. Farms
         produce no income this year and 25% next year. {famine-uprising}
         Population falls by 5% per month. {famine-plague}
         {monthly-disaster-preamble}
-48-52   Major Fire ;
+48-52   Major Fire {break}
         On {date}, a huge conflagration sweeps a major city of the land,
         destroying {1d4+4}0% of the city. Use this as the chance the PCs lose property.
         The city's population is reduced by {1d4}0%. The price of lumber and
@@ -52,7 +52,7 @@ table: annual-event 1d100
         of food doubles for one month.
         {fire-plague} {fire-famine}
         {monthly-disaster-preamble}
-53-57   Flood ;
+53-57   Flood {break}
         A major flood sweeps the region on {date}. If on the coast, severe storms cause
         the waters to flood the coastal regions. If along a river, a series of
         heavy rains cause the river to rage and overflow its banks, flooding
@@ -69,7 +69,7 @@ table: annual-event 1d100
         {flood-plague}
         {flood-timing}
         {monthly-disaster-preamble}
-58      Major Incursion ;
+58      Major Incursion {break}
         Beginning in {month} month and lasting for {1d12} months, a major migration
         of {incursion-creatures} numbering about 1% of the existing population
         enters the kingdom from outside its borders.
@@ -77,20 +77,20 @@ table: annual-event 1d100
         They try to live life as they always have, retaining old habits and
         speaking their own language.
         {monthly-war-preamble}
-59-68   Marriage ;
+59-68   Marriage {break}
         The ruler of the land has arranged an important diplomatic marriage
         {marriage-for}, seeking to {marriage-reason}. The marriage is a cause
         for festivals and feasting. The marriage happens on {date}.
         {monthly-other-preamble}
-69      New Religion ;
+69      New Religion {break}
         A {religion-type} arrives in the {month} month and gains converts over a
         period of {1d6+1} months. {religion-feud} {religion-fued}
         {religion-ruler} {religion-ruler-ban}
         {monthly-other-preamble}
-70-74   Plague ;
+70-74   Plague {break}
         {plague}
         {monthly-other-preamble}
-75-78   Political Plot ;
+75-78   Political Plot {break}
         {plot-discovered} Many nobles and government officials are stripped of
         their rank, banished, or executed. If the PCs are involved in political
         affairs, there is a 40% chance they are accused of complicity. If the
@@ -100,12 +100,12 @@ table: annual-event 1d100
         on the slightest evidence. The political turmoil begins in the {month} month
         and lasts for {1d3} months.
         {monthly-war-preamble}
-79-85   Rebellion ;
+79-85   Rebellion {break}
         {rebel-group} attempts to overthrow the government.
         The purpose of the rebellion is {rebel-aim}.
         The rebellion begins in the {month} month and last {1d6} months.
         {monthly-war-preamble}
-86      Tsunami ;
+86      Tsunami {break}
         On {date}, a great wave, {1d11+9}0 feet high, strikes a 50-mile section of coastline.
         It strikes with little warning. The population of the area is reduced
         by 70%.
@@ -114,10 +114,10 @@ table: annual-event 1d100
         triples, and the price of all other goods doubles.
         {tsunami-plague}
         {monthly-disaster-preamble}
-87      Visitation ;
+87      Visitation {break}
         On {date}, a major deity appears somewhere in the land. {visit-good}
         {monthly-other-preamble}
-88      Volcano ;
+88      Volcano {break}
         On {date}, {volcano-appears}. The eruption is preceded by
         tremors and rumblings identical to those that precede a major earthquake.
         When the eruption occurs, it is of exceptional violence. All within a
@@ -126,7 +126,7 @@ table: annual-event 1d100
         of the month. Thereafter, the volcano remains active for {1d12} months,
         with a 10% chance per month of another major eruption.
         {monthly-disaster-preamble}
-89-100  War ;
+89-100  War {break}
         On {date}, {war-type}. The war continues for {1d3} years.
         {war-rebels} Press gangs roam the countryside, seeking new recruits.
         Young adventurers desert their homes, seeking fame and fortune
@@ -183,33 +183,33 @@ table: month 1d12
 # LIST OF MONTHLY EVENTS
 
 table: monthly-war-preamble 1d1
-1 ; ;
+1 {break}{break}
   This being a year of turmoil, the following monthly events occur.
   {12 monthly-war-repeater <br>}
 
 table: monthly-war-repeater 1d1
-1 ; ;
-  Month {# month} ;
+1 {break}{break}
+  Month {# month} {break}
   {monthly-event-war}
 
 table: monthly-disaster-preamble 1d1
-1 ; ;
+1 {break}{break}
   This being a year of natural disaster, the following monthly events occur.
   {12 monthly-disaster-repeater <br>}
 
 table: monthly-disaster-repeater 1d1
-1 ; ;
-  Month {# month} ;
+1 {break}{break}
+  Month {# month} {break}
   {monthly-event-disaster}
 
 table: monthly-other-preamble 1d1
-1 ; ;
+1 {break}{break}
   This being a year of a rare event, the following monthly events occur.
   {12 monthly-other-repeater <br>}
 
 table: monthly-other-repeater 1d1
-1 ; ;
-  Month {# month} ;
+1 {break}{break}
+  Month {# month} {break}
   {monthly-event-other}
 
 
@@ -278,17 +278,17 @@ table: famine-uprising 1d10
 7-10    Lords prevent a peasant uprising with wise leadership.
 
 table: famine-plague 1d10
-1-2      ;
+1-2      {break}
         {plague}
 3-10    Fear of disease proves unwarranted.
 
 table: fire-plague 1d10
-1-2      ;
+1-2      {break}
         {plague}
 3-10    Fear of disease proves unwarranted.
 
 table: fire-famine 1d10
-1        ;
+1        {break}
         Famine strikes and lasts for {1d6+1} months. Food prices rise by
         {famine-costs} times normal. Marauders scavenge food of any type. Farms
         produce no income this year and 25% next year. {famine-uprising}
@@ -296,7 +296,7 @@ table: fire-famine 1d10
 2-10    Fortunately, there is no shortage of food.
 
 table: flood-plague 1d10
-1-2      ;
+1-2      {break}
         {plague}
 3-10    Fear of disease proves unwarranted.
 
@@ -388,7 +388,7 @@ table: rebel-aim 1d4
 4   seize the throne
 
 table: tsunami-plague 1d10
-1        ;
+1        {break}
         {plague}
 2-10    The waves cleanse the land of any disease.
 
@@ -529,7 +529,7 @@ table: bad-harvest-reason 1d6
 6   lack of rain
 
 table: bad-harvest-famine 1d20
-1       The bad harvest results in short-term famine, raising prices by 100%;
+1       The bad harvest results in short-term famine, raising prices by 100%{break}
 2-20    The people have enough food to make it through the hard times. Prices
         rise by 50%.
 
@@ -771,7 +771,7 @@ table: maiden-of-virtue 1d1
     exceptionally fine writing style that reveals her pure nature. She is skilled
     in the playing of musical instruments and other artistic accomplishments.
     She is properly respectful of her parents, {maiden-parents}.
-    ; ;
+    {break}{break}
     If the maiden
     is any but the daughter of a powerful noble, she can be courted without
     usual formalities. However, being aware of her own qualities, she does not
@@ -779,9 +779,9 @@ table: maiden-of-virtue 1d1
     accepted suitor must possess exceptional qualities of his own. He must also
     be a model of virtue and likewise skilled in the arts. He must possess heroic
     qualities. To even attract her notice, he must produce some artistic item of
-    quality &mdash; a poem, painting, exceptional handwriting, etc. He must have a
+    quality such as a poem, painting, exceptional handwriting, etc. He must have a
     Charisma of at least 13.
-    ; ;
+    {break}{break}
     Maidens of mysterious origin or princesses may set
     impossible tasks as a condition for any successful suitor. The social rank
     of the character is not as important as the qualities mentioned above.
@@ -916,7 +916,7 @@ table: uprising 1d1
     attacking and ambushing any troops and officials of the government they
     find. If a strong leader should arrive in their midst, they can be trained
     into an effective fighting force in {2d2} months.
-    ; ;
+    {break}{break}
     Of course, uprisings are
     dealt with severely by the government and reinforcement troops are
     dispatched to deal with them. No mercy or quarter is shown, a fact that

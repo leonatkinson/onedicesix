@@ -52,7 +52,7 @@ table: underdark_1f 1d20 Floor Condition
 2-6     Slippery (wet and slimy)
 7-15    Slick (damp or wet)
 16-19   Dry, good footing
-20      Dusty (dead tunnel; check cave-in chances)
+20      Dusty (Dead tunnel. Check cave-in chances)
 
 table: underdark_1g 1d20 Air Supply
 1       Poisonous/noxious gas

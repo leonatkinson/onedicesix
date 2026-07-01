@@ -89,7 +89,7 @@ table: bad-harvest 1d1
     {bad-harvest-famine} {bad-harvest-blame}
 
 table: bad-harvest-famine 1d20
-1       The bad harvest results in short-term famine, raising prices by 100%;
+1       The bad harvest results in short-term famine, raising prices by 100%.
 2-20    The people have enough food to make it through the hard times. Prices
         rise by 50%.
 

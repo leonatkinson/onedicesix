@@ -52,7 +52,7 @@ table: tower-adjective 1d20
 13  Imperial
 14  Indomitable
 15  Unassailable
-16  towerified
+16  Terrible
 17  Grand
 18  Sun
 19  Stone

@@ -238,3 +238,5 @@ Small adjustments to daily events on the southern seas.
 ## 1.13.0
 - Refactor generator.js to remove dependence on jQuery
 - Rename classes to OneDiceSix from EmptyZ
+## 1.13.1
+- Update generators to replace ; with {break}
