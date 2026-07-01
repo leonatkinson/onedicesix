@@ -1,4 +1,4 @@
-class EmptyZ_Generator
+class OneDiceSix_Generator
 {
     constructor(){
         /** Unique name */
@@ -72,19 +72,19 @@ class EmptyZ_Generator
     doChunk(type, data) {
         switch(type) {
             case 'name':
-                this.name = EmptyZ_Generator.cleanWhitespace(data);
+                this.name = OneDiceSix_Generator.cleanWhitespace(data);
                 break;
             case 'description':
-                this.description = EmptyZ_Generator.cleanWhitespace(data);
+                this.description = OneDiceSix_Generator.cleanWhitespace(data);
                 break;
             case 'recipe':
-                this.recipe = EmptyZ_Generator.cleanWhitespace(data);
+                this.recipe = OneDiceSix_Generator.cleanWhitespace(data);
                 break;
             case 'repeat':
-                this.repeat = EmptyZ_Generator.cleanWhitespace(data);
+                this.repeat = OneDiceSix_Generator.cleanWhitespace(data);
                 break;
             case 'table':
-                let t = EmptyZ_Table.import('table: ' + data);
+                let t = OneDiceSix_Table.import('table: ' + data);
                 this.tables[t.name] = t;
                 break;
             default:
@@ -131,7 +131,7 @@ class EmptyZ_Generator
         // Repeat rules: single value, dice roll spec, "choose"
         // e.g. 1, 2d6, choose
         if (this.repeat != 'choose') {
-            count = EmptyZ_Generator.computeRoll(this.repeat);
+            count = OneDiceSix_Generator.computeRoll(this.repeat);
         }
 
         // Recipe should be plain text with embedded curly braces that match table
@@ -145,13 +145,13 @@ class EmptyZ_Generator
                 let m = recipe.match(/{([^}]+)}/);
 
                 // Check of m matches a break or blank pattern first, since those aren't looked up
-                if (m[1].match(EmptyZ_Generator.BREAK_REGEX())) {
+                if (m[1].match(OneDiceSix_Generator.BREAK_REGEX())) {
                     // Replace all {break} with <br>
                     recipe = recipe.replace(/{break}/g, "<br>\n");
                     recipe = recipe.replace(/{break2}/g, "<br>\n<br>\n");
                     continue;
                 }
-                if (m[1].match(EmptyZ_Generator.BLANK_REGEX())) {
+                if (m[1].match(OneDiceSix_Generator.BLANK_REGEX())) {
                     // Replace {blank} with empty string
                     recipe = recipe.replace(/{blank}/g, '');
                     continue;
@@ -159,8 +159,8 @@ class EmptyZ_Generator
 
                 // Is it a counter?
                 let counter = m[1];
-                if (counter.match(EmptyZ_Generator.COUNTER_REGEX())) {
-                    let counterName = counter.match(EmptyZ_Generator.COUNTER_REGEX())[1] || 'default';
+                if (counter.match(OneDiceSix_Generator.COUNTER_REGEX())) {
+                    let counterName = counter.match(OneDiceSix_Generator.COUNTER_REGEX())[1] || 'default';
                     // If the map doesn't have this counter, initialize it
                     if (typeof this.counters[counterName] === 'undefined') {
                         this.counters[counterName] = 0;
@@ -175,21 +175,21 @@ class EmptyZ_Generator
 
                 // Is it a repeater
                 let repeater = m[1];
-                if (repeater.match(EmptyZ_Generator.REPEATER_REGEX())) {
-                    let spec = repeater.match(EmptyZ_Generator.REPEATER_REGEX())[1];
-                    let table = repeater.match(EmptyZ_Generator.REPEATER_REGEX())[2];
-                    let separator = repeater.match(EmptyZ_Generator.REPEATER_REGEX())[3] || ', ';
+                if (repeater.match(OneDiceSix_Generator.REPEATER_REGEX())) {
+                    let spec = repeater.match(OneDiceSix_Generator.REPEATER_REGEX())[1];
+                    let table = repeater.match(OneDiceSix_Generator.REPEATER_REGEX())[2];
+                    let separator = repeater.match(OneDiceSix_Generator.REPEATER_REGEX())[3] || ', ';
 
                     // Are the two parts a dice roll and a table name?
                     if (
-                        spec.match(EmptyZ_Generator.DICE_ROLL_REGEX())
+                        spec.match(OneDiceSix_Generator.DICE_ROLL_REGEX())
                         && (
                             typeof this.tables[table] !== 'undefined'
-                            || table.match(EmptyZ_Generator.DICE_ROLL_REGEX())
+                            || table.match(OneDiceSix_Generator.DICE_ROLL_REGEX())
                         )
                     ) {
                         // Get the number of repetitions
-                        let roll = parseInt(EmptyZ_Generator.computeRoll(spec));
+                        let roll = parseInt(OneDiceSix_Generator.computeRoll(spec));
                         // Replace the repeater with that many table/roll references
                         recipe = recipe.replace(
                             '{' + repeater + '}',
@@ -212,8 +212,8 @@ class EmptyZ_Generator
 
                 // Is it a dice roll?
                 let spec = m[1];
-                if (spec.match(EmptyZ_Generator.DICE_ROLL_REGEX())) {
-                    let roll = EmptyZ_Generator.computeRoll(spec);
+                if (spec.match(OneDiceSix_Generator.DICE_ROLL_REGEX())) {
+                    let roll = OneDiceSix_Generator.computeRoll(spec);
                     if (roll !== false) {
                         // Replace the first dice spec
                         recipe = recipe.replace('{' + spec + '}', roll);
@@ -239,7 +239,7 @@ class EmptyZ_Generator
     }
 }
 
-class EmptyZ_Table
+class OneDiceSix_Table
 {
     constructor() {
         /** Unique name */
@@ -322,7 +322,7 @@ class EmptyZ_Table
             low = m[1];
             high = m[2];
         }
-        let tc = new EmptyZ_TableChoice(low, high, result);
+        let tc = new OneDiceSix_TableChoice(low, high, result);
         this.choices.push(tc);
     }
 
@@ -332,7 +332,7 @@ class EmptyZ_Table
     run(forceRoll = false) {
         let roll = 0;
         if (forceRoll === false) {
-            roll = EmptyZ_Generator.computeRoll(this.roll);
+            roll = OneDiceSix_Generator.computeRoll(this.roll);
         } else {
             roll = forceRoll;
         }
@@ -349,7 +349,7 @@ class EmptyZ_Table
 }
 
 
-class EmptyZ_TableChoice
+class OneDiceSix_TableChoice
 {
     constructor(low, high, result) {
         this.low = low;
@@ -358,7 +358,7 @@ class EmptyZ_TableChoice
     }
 }
 
-class EmptyZ_UI_MageSpellbook
+class OneDiceSix_UI_MageSpellbook
 {
     static setup(el) {
         let container = el;
@@ -409,7 +409,7 @@ class EmptyZ_UI_MageSpellbook
 
         let container = el;
         let tableID = container.getAttribute('data-table-id');
-        let generator = EmptyZ_Generators[tableID];
+        let generator = OneDiceSix_Generators[tableID];
         let output = container.querySelector('div.output');
         let level = parseInt(container.querySelector('select[name="level"]').value);
 
@@ -419,9 +419,9 @@ class EmptyZ_UI_MageSpellbook
             let spells = spellsPerLevel[level - 1][spellLevel];
             if (spells > 0) {
                 // Adjust count up or down roughly like a bell curve
-                let roll = EmptyZ_Generator.computeRoll('1d100');
+                let roll = OneDiceSix_Generator.computeRoll('1d100');
                 let direction = 1;
-                if (EmptyZ_Generator.computeRoll('1d2') == 2) {
+                if (OneDiceSix_Generator.computeRoll('1d2') == 2) {
                     direction = -1;
                 }
                 if (roll >= 95) {
@@ -454,7 +454,7 @@ class EmptyZ_UI_MageSpellbook
     }
 }
 
-class EmptyZ_UI_ClericSpells
+class OneDiceSix_UI_ClericSpells
 {
     static setup(el) {
         let container = el;
@@ -503,7 +503,7 @@ class EmptyZ_UI_ClericSpells
 
         let container = el;
         let tableID = container.getAttribute('data-table-id');
-        let generator = EmptyZ_Generators[tableID];
+        let generator = OneDiceSix_Generators[tableID];
         let output = container.querySelector('div.output');
         let level = parseInt(container.querySelector('select[name="level"]').value);
 
@@ -541,7 +541,7 @@ class EmptyZ_UI_ClericSpells
     }
 }
 
-class EmptyZ_UI_Death
+class OneDiceSix_UI_Death
 {
     static setup(el) {
         let container = el;
@@ -568,10 +568,10 @@ class EmptyZ_UI_Death
             output.insertAdjacentHTML('beforeend', 'INVALID INPUT');
             return;
         }
-        let generator = EmptyZ_Generators[tableID];
+        let generator = OneDiceSix_Generators[tableID];
         let adjustment = con + Math.round(hp/level);
         let rollSpec = '2d6' + (adjustment >= 0 ? '+' : '') + adjustment
-        let result = EmptyZ_Generator.computeRoll(rollSpec);
+        let result = OneDiceSix_Generator.computeRoll(rollSpec);
         let roll = Math.min(Math.max(result, 2), 12);
         generator.recipe = generator.tables['deadly_blow'].run(roll);
         output.insertAdjacentHTML(
@@ -585,12 +585,12 @@ class EmptyZ_UI_Death
     }
 }
 
-class EmptyZ_UI_Encounters
+class OneDiceSix_UI_Encounters
 {
     static setup(el) {
         let container = el;
         let tableID = container.getAttribute('data-table-id');
-        let generator = EmptyZ_Generators[tableID];
+        let generator = OneDiceSix_Generators[tableID];
         let params = document.createElement('div');
         params.className = 'params';
         let selectLocation = document.createElement('select');
@@ -616,7 +616,7 @@ class EmptyZ_UI_Encounters
         let tableID = container.getAttribute('data-table-id');
         let location = container.querySelector('select[name="location"]').value;
         let count = container.querySelector('input[name="count"]').value;
-        let generator = EmptyZ_Generators[tableID];
+        let generator = OneDiceSix_Generators[tableID];
         generator.recipe = '{' + location + '}';
         generator.repeat = count;
         let output = container.querySelector('div.output');
@@ -634,7 +634,7 @@ class EmptyZ_UI_Encounters
     }
 }
 
-class EmptyZ_UI_1eDmgDisease
+class OneDiceSix_UI_1eDmgDisease
 {
     static setup(el) {
         let container = el;
@@ -665,7 +665,7 @@ class EmptyZ_UI_1eDmgDisease
         let container = el;
         let output = container.querySelector('div.output');
         let tableID = container.getAttribute('data-table-id');
-        let generator = EmptyZ_Generators[tableID];
+        let generator = OneDiceSix_Generators[tableID];
         let con = parseInt(container.querySelector('input[name="con"]').value);
         if (isNaN(con)) {
             con = 0;
@@ -696,7 +696,7 @@ class EmptyZ_UI_1eDmgDisease
         }
 
         let result = '<p>Chance of disease: ' + chanceDisease + '%; ';
-        let roll = EmptyZ_Generator.computeRoll('1d100');
+        let roll = OneDiceSix_Generator.computeRoll('1d100');
         result += 'Rolled a ' + roll + '! ';
         if (roll <= chanceDisease) {
             generator.recipe = '{disease-type}';
@@ -707,7 +707,7 @@ class EmptyZ_UI_1eDmgDisease
         output.insertAdjacentHTML('beforeend', result + '</p>');
 
         result = '<p>Chance of parasite: ' + chanceParasite + '%; ';
-        roll = EmptyZ_Generator.computeRoll('1d100');
+        roll = OneDiceSix_Generator.computeRoll('1d100');
         result += 'Rolled a ' + roll + '! ';
         if (roll <= chanceParasite) {
             generator.recipe = '{parasite-type}';
@@ -719,7 +719,7 @@ class EmptyZ_UI_1eDmgDisease
     }
 }
 
-class EmptyZ_UI_UnderdarkTunnels
+class OneDiceSix_UI_UnderdarkTunnels
 {
     static setup(el) {
         let container = el;
@@ -741,7 +741,7 @@ class EmptyZ_UI_UnderdarkTunnels
         let container = el;
         let output = container.querySelector('div.output');
         let tableID = container.getAttribute('data-table-id');
-        let generator = EmptyZ_Generators[tableID];
+        let generator = OneDiceSix_Generators[tableID];
         let segmentCount = parseInt(container.querySelector('input[name="segment-count"]').value);
         if (isNaN(segmentCount)) {
             segmentCount = 0;
@@ -827,7 +827,7 @@ class EmptyZ_UI_UnderdarkTunnels
     }
 }
 
-class EmptyZ_UI_Reaction
+class OneDiceSix_UI_Reaction
 {
     static setup(el) {
         let container = el;
@@ -846,9 +846,9 @@ class EmptyZ_UI_Reaction
         if (Number.isNaN(adjustment)) {
             return;
         }
-        let generator = EmptyZ_Generators[tableID];
+        let generator = OneDiceSix_Generators[tableID];
         let rollSpec = '2d6' + (adjustment >= 0 ? '+' : '') + adjustment
-        let result = EmptyZ_Generator.computeRoll(rollSpec);
+        let result = OneDiceSix_Generator.computeRoll(rollSpec);
         let roll = Math.min(Math.max(result, 2), 12);
         generator.recipe = generator.tables['reaction'].run(roll);
         container.querySelector('div.output').insertAdjacentHTML(
@@ -860,7 +860,7 @@ class EmptyZ_UI_Reaction
     }
 }
 
-class EmptyZ_UI_BfrpgTreasure
+class OneDiceSix_UI_BfrpgTreasure
 {
     static setup(el) {
         let container = el;
@@ -877,7 +877,7 @@ class EmptyZ_UI_BfrpgTreasure
         // compute roll and just do a straight lookup
         let container = el;
         let tableID = container.getAttribute('data-table-id');
-        let generator = EmptyZ_Generators[tableID];
+        let generator = OneDiceSix_Generators[tableID];
 
         // Get the input for treasure types, dropping to lowercase and stripping
         // anything but letters, numbers and spaces. Good to avoid spurious commas.
@@ -925,7 +925,7 @@ class EmptyZ_UI_BfrpgTreasure
                 let chance = dragonHd * 5;
                 // Loop over the three types
                 ['gems', 'jewelry', 'magic'].forEach(function(tablePostfix) {
-                    if (EmptyZ_Generator.computeRoll('1d100') <= chance) {
+                    if (OneDiceSix_Generator.computeRoll('1d100') <= chance) {
                         // Temporarily replace the recipe
                         let originalRecipe = generator.recipe;
                         generator.recipe = '{dragon-' + tablePostfix + '}';
@@ -957,7 +957,7 @@ class EmptyZ_UI_BfrpgTreasure
     }
 }
 
-class EmptyZ_UI_WbOracle
+class OneDiceSix_UI_WbOracle
 {
     static setup(el) {
         let container = el;
@@ -990,7 +990,7 @@ class EmptyZ_UI_WbOracle
     static run(el) {
         let container = el;
         let tableID = container.getAttribute('data-table-id');
-        let generator = EmptyZ_Generators[tableID];
+        let generator = OneDiceSix_Generators[tableID];
         let estimation = container.querySelector('select[name="estimation"]').value;
 
         generator.recipe = '{' + estimation + '}';
@@ -1001,7 +1001,7 @@ class EmptyZ_UI_WbOracle
     }
 }
 
-class EmptyZ_UI
+class OneDiceSix_UI
 {
     static setup(el) {
         let container = el;
@@ -1016,55 +1016,55 @@ class EmptyZ_UI
         })
         .then(function(data) {
             // Create generator
-            let generator = EmptyZ_Generator.import(data);
-            EmptyZ_Generators[tableID] = generator;
+            let generator = OneDiceSix_Generator.import(data);
+            OneDiceSix_Generators[tableID] = generator;
             // Add output
             container.innerHTML = '<div class="output"></div>';
             let output = container.querySelector('div.output');
             // Optionally, add more controls
             switch(tableID) {
                 case '1e-dmg-disease.txt':
-                    EmptyZ_UI_1eDmgDisease.setup(el);
+                    OneDiceSix_UI_1eDmgDisease.setup(el);
                     break;
                 case 'cleric-spells.txt':
-                    EmptyZ_UI_ClericSpells.setup(el);
+                    OneDiceSix_UI_ClericSpells.setup(el);
                     break;
                 case 'death.txt':
-                    EmptyZ_UI_Death.setup(el);
+                    OneDiceSix_UI_Death.setup(el);
                     break;
                 case 'encounters.txt':
-                    EmptyZ_UI_Encounters.setup(el);
+                    OneDiceSix_UI_Encounters.setup(el);
                     break;
                 case 'mage-spells.txt':
-                    EmptyZ_UI_MageSpellbook.setup(el);
+                    OneDiceSix_UI_MageSpellbook.setup(el);
                     break;
                 case 'underdark-tunnels.txt':
-                    EmptyZ_UI_UnderdarkTunnels.setup(el);
+                    OneDiceSix_UI_UnderdarkTunnels.setup(el);
                     break;
                 case 'reaction.txt':
-                    EmptyZ_UI_Reaction.setup(el);
+                    OneDiceSix_UI_Reaction.setup(el);
                     break;
                 case 'bfrpg-treasure.txt':
-                    EmptyZ_UI_BfrpgTreasure.setup(el);
+                    OneDiceSix_UI_BfrpgTreasure.setup(el);
                     break;
                 case 'wb-oracle.txt':
-                    EmptyZ_UI_WbOracle.setup(el);
+                    OneDiceSix_UI_WbOracle.setup(el);
                     break;
             }
             // Add generate button
-            container.insertAdjacentHTML('beforeend', '<button class="emptyz-regenerate wp-element-button" title="Regenerate">Generate '+generator.name+'</button>');
+            container.insertAdjacentHTML('beforeend', '<button class="onedicesix-regenerate wp-element-button" title="Regenerate">Generate '+generator.name+'</button>');
             // Add button to copy results to clipboard
-            container.insertAdjacentHTML('beforeend', '<button class="emptyz-copy wp-element-button" style="margin-left: 10px;" title="Copy to clipboard">📋</button>');
+            container.insertAdjacentHTML('beforeend', '<button class="onedicesix-copy wp-element-button" style="margin-left: 10px;" title="Copy to clipboard">📋</button>');
             // Add button to save to a file
-            container.insertAdjacentHTML('beforeend', '<button class="emptyz-save wp-element-button" style="margin-left: 10px;" title="Save to file">💾</button>');
+            container.insertAdjacentHTML('beforeend', '<button class="onedicesix-save wp-element-button" style="margin-left: 10px;" title="Save to file">💾</button>');
             // Run it
-            EmptyZ_UI.run(el);
+            OneDiceSix_UI.run(el);
             // Activate regenerate button
-            container.querySelector('button.emptyz-regenerate').addEventListener('click', function(event) {
-                EmptyZ_UI.rerun(event.currentTarget.parentElement);
+            container.querySelector('button.onedicesix-regenerate').addEventListener('click', function(event) {
+                OneDiceSix_UI.rerun(event.currentTarget.parentElement);
             });
             // Activate copy button
-            container.querySelector('button.emptyz-copy').addEventListener('click', function() {
+            container.querySelector('button.onedicesix-copy').addEventListener('click', function() {
                 const htmlContent = output.innerHTML;
 
                 // Plain text fallback
@@ -1089,7 +1089,7 @@ class EmptyZ_UI
                 });
             });
             // Activate save button
-            container.querySelector('button.emptyz-save').addEventListener('click', function() {
+            container.querySelector('button.onedicesix-save').addEventListener('click', function() {
                 const htmlContent = output.innerHTML;
                 const fullHtml = `<!DOCTYPE html>` +
                     `<html lang="en">` +
@@ -1125,76 +1125,76 @@ class EmptyZ_UI
     static run(el) {
         let container = el;
         let tableID = container.getAttribute('data-table-id');
-        let generator = EmptyZ_Generators[tableID];
+        let generator = OneDiceSix_Generators[tableID];
         generator.counters = new Map();
         let output = container.querySelector('div.output');
         output.innerHTML = '';
         switch(tableID) {
             case '1e-dmg-disease.txt':
-                if (typeof EmptyZ_UI_1eDmgDisease.runCount == 'undefined') {
-                    EmptyZ_UI_1eDmgDisease.runCount = 0;
+                if (typeof OneDiceSix_UI_1eDmgDisease.runCount == 'undefined') {
+                    OneDiceSix_UI_1eDmgDisease.runCount = 0;
                 } else {
-                    EmptyZ_UI_1eDmgDisease.run(el);
-                    EmptyZ_UI_1eDmgDisease.runCount++;
+                    OneDiceSix_UI_1eDmgDisease.run(el);
+                    OneDiceSix_UI_1eDmgDisease.runCount++;
                 }
                 break;
             case 'cleric-spells.txt':
-                if (typeof EmptyZ_UI_ClericSpells.runCount == 'undefined') {
-                    EmptyZ_UI_ClericSpells.runCount = 0;
+                if (typeof OneDiceSix_UI_ClericSpells.runCount == 'undefined') {
+                    OneDiceSix_UI_ClericSpells.runCount = 0;
                 } else {
-                    EmptyZ_UI_ClericSpells.run(el);
-                    EmptyZ_UI_ClericSpells.runCount++;
+                    OneDiceSix_UI_ClericSpells.run(el);
+                    OneDiceSix_UI_ClericSpells.runCount++;
                 }
                 break;
             case 'death.txt':
-                if (typeof EmptyZ_UI_Death.runCount == 'undefined') {
-                    EmptyZ_UI_Death.runCount = 0;
+                if (typeof OneDiceSix_UI_Death.runCount == 'undefined') {
+                    OneDiceSix_UI_Death.runCount = 0;
                 } else {
-                    EmptyZ_UI_Death.run(el);
-                    EmptyZ_UI_Death.runCount++;
+                    OneDiceSix_UI_Death.run(el);
+                    OneDiceSix_UI_Death.runCount++;
                 }
                 break;
             case 'encounters.txt':
-                if (typeof EmptyZ_UI_Encounters.runCount == 'undefined') {
-                    EmptyZ_UI_Encounters.runCount = 0;
+                if (typeof OneDiceSix_UI_Encounters.runCount == 'undefined') {
+                    OneDiceSix_UI_Encounters.runCount = 0;
                 } else {
-                    EmptyZ_UI_Encounters.run(el);
-                    EmptyZ_UI_Encounters.runCount++;
+                    OneDiceSix_UI_Encounters.run(el);
+                    OneDiceSix_UI_Encounters.runCount++;
                 }
                 break;
             case 'mage-spells.txt':
-                if (typeof EmptyZ_UI_MageSpellbook.runCount == 'undefined') {
-                    EmptyZ_UI_MageSpellbook.runCount = 0;
+                if (typeof OneDiceSix_UI_MageSpellbook.runCount == 'undefined') {
+                    OneDiceSix_UI_MageSpellbook.runCount = 0;
                 } else {
-                    EmptyZ_UI_MageSpellbook.run(el);
-                    EmptyZ_UI_MageSpellbook.runCount++;
+                    OneDiceSix_UI_MageSpellbook.run(el);
+                    OneDiceSix_UI_MageSpellbook.runCount++;
                 }
                 break;
             case 'underdark-tunnels.txt':
-                if (typeof EmptyZ_UI_UnderdarkTunnels.runCount == 'undefined') {
-                    EmptyZ_UI_UnderdarkTunnels.runCount = 0;
+                if (typeof OneDiceSix_UI_UnderdarkTunnels.runCount == 'undefined') {
+                    OneDiceSix_UI_UnderdarkTunnels.runCount = 0;
                 } else {
-                    EmptyZ_UI_UnderdarkTunnels.run(el);
-                    EmptyZ_UI_UnderdarkTunnels.runCount++;
+                    OneDiceSix_UI_UnderdarkTunnels.run(el);
+                    OneDiceSix_UI_UnderdarkTunnels.runCount++;
                 }
                 break;
             case 'reaction.txt':
-                EmptyZ_UI_Reaction.run(el);
+                OneDiceSix_UI_Reaction.run(el);
                 break;
             case 'bfrpg-treasure.txt':
-                if (typeof EmptyZ_UI_BfrpgTreasure.runCount == 'undefined') {
-                    EmptyZ_UI_BfrpgTreasure.runCount = 0;
+                if (typeof OneDiceSix_UI_BfrpgTreasure.runCount == 'undefined') {
+                    OneDiceSix_UI_BfrpgTreasure.runCount = 0;
                 } else {
-                    EmptyZ_UI_BfrpgTreasure.run(el);
-                    EmptyZ_UI_BfrpgTreasure.runCount++;
+                    OneDiceSix_UI_BfrpgTreasure.run(el);
+                    OneDiceSix_UI_BfrpgTreasure.runCount++;
                 }
                 break;
             case 'wb-oracle.txt':
-                if (typeof EmptyZ_UI_WbOracle.runCount == 'undefined') {
-                    EmptyZ_UI_WbOracle.runCount = 0;
+                if (typeof OneDiceSix_UI_WbOracle.runCount == 'undefined') {
+                    OneDiceSix_UI_WbOracle.runCount = 0;
                 } else {
-                    EmptyZ_UI_WbOracle.run(el);
-                    EmptyZ_UI_WbOracle.runCount++;
+                    OneDiceSix_UI_WbOracle.run(el);
+                    OneDiceSix_UI_WbOracle.runCount++;
                 }
                 break;
             default:
@@ -1214,7 +1214,7 @@ class EmptyZ_UI
         output.innerHTML = 'Regenerating...';
         setTimeout(() => {
             // Run it
-            EmptyZ_UI.run(el);
+            OneDiceSix_UI.run(el);
         }, 300);
     }
 }
@@ -1224,11 +1224,11 @@ class EmptyZ_UI
  * Boot up
  */
 // List of generators, in case we have many on one page
-var EmptyZ_Generators = {};
+var OneDiceSix_Generators = {};
 
 document.addEventListener('DOMContentLoaded', function() {
     // Loop over each container
     document.querySelectorAll('div.onedicesix-table').forEach(function(container) {
-        EmptyZ_UI.setup(container);
+        OneDiceSix_UI.setup(container);
     });
 });

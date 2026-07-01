@@ -237,4 +237,4 @@ Small adjustments to daily events on the southern seas.
 - Update most generators to match removed logic
 ## Unreleased
 - Refactor generator.js to remove dependence on jQuery
-
+- Rename classes to OneDiceSix from EmptyZ
