@@ -25,7 +25,7 @@ table: annual-event 1d100
         On {date}, a bright comet is sighted in the sky for {1d4} weeks,
         a portent of some great event. {2d6} weeks later, a second event occurs. {break}
          {break}
-        {event}
+        {annual-event}
         {monthly-other-preamble}
 32-40   Death of a Lord {break}
         A high-ranking noble dies on {date}, {lord-death}. {lord-power-struggle}
