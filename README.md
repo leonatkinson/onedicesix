@@ -235,4 +235,6 @@ Small adjustments to daily events on the southern seas.
 - Remove logic that made labels from lines starting with a colon
 - Add `{break}` and `{blank}` as native tokens
 - Update most generators to match removed logic
+## Unreleased
+- Refactor generator.js to remove dependence on jQuery
 

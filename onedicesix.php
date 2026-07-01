@@ -27,7 +27,7 @@ class Plugin {
             wp_enqueue_script(
                 'onedicesix',
                 Plugin::$url . 'generator.js',
-                ['jquery'],
+                [],
                 false, //filemtime(Plugin::$path . 'generator.js'),
                 true
                 );

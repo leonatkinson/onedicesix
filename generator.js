@@ -361,15 +361,23 @@ class EmptyZ_TableChoice
 class EmptyZ_UI_MageSpellbook
 {
     static setup(el) {
-        let container = jQuery(el);
-        var params = jQuery('<div class="params">');
-        var selectLevel = jQuery('<select name="level">');
+        let container = el;
+        let params = document.createElement('div');
+        params.className = 'params';
+        let selectLevel = document.createElement('select');
+        selectLevel.name = 'level';
         for (var i=1; i <=20 ; i++) {
-            selectLevel.append('<option value="'+i+'">'+i+'</option>');
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = i;
+            selectLevel.appendChild(option);
         }
-        params.append('<label for="level">Mage Level</label>');
-        params.append(selectLevel);
-        container.append(params);
+        const label = document.createElement('label');
+        label.setAttribute('for', 'level');
+        label.textContent = 'Mage Level';
+        params.appendChild(label);
+        params.appendChild(selectLevel);
+        container.appendChild(params);
     }
 
     static run(el) {
@@ -399,11 +407,11 @@ class EmptyZ_UI_MageSpellbook
         // By count of spells, 1 stdev of adjustment
         let adjustmentToCount = [ 0, 1, 1, 1, 2, 2 ];
 
-        let container = jQuery(el);
-        let tableID = container.attr('data-table-id');
+        let container = el;
+        let tableID = container.getAttribute('data-table-id');
         let generator = EmptyZ_Generators[tableID];
-        let output = container.find('div.output');
-        let level = parseInt(container.find('select[name="level"]').val());
+        let output = container.querySelector('div.output');
+        let level = parseInt(container.querySelector('select[name="level"]').value);
 
         let book = {};
         for (var sl in spellsPerLevel[level - 1]) {
@@ -437,8 +445,11 @@ class EmptyZ_UI_MageSpellbook
 
         for (var sl in book) {
             let spellLevel = parseInt(sl);
-            output.append('<p><strong>Level ' + (spellLevel + 1) + ':</strong> '
-                + Object.values(book[spellLevel]).join(', ') + '</p>');
+            output.insertAdjacentHTML(
+                'beforeend',
+                '<p><strong>Level ' + (spellLevel + 1) + ':</strong> '
+                + Object.values(book[spellLevel]).join(', ') + '</p>'
+            );
         }
     }
 }
@@ -446,15 +457,23 @@ class EmptyZ_UI_MageSpellbook
 class EmptyZ_UI_ClericSpells
 {
     static setup(el) {
-        let container = jQuery(el);
-        var params = jQuery('<div class="params">');
-        var selectLevel = jQuery('<select name="level">');
+        let container = el;
+        let params = document.createElement('div');
+        params.className = 'params';
+        let selectLevel = document.createElement('select');
+        selectLevel.name = 'level';
         for (var i=2; i <=20 ; i++) {
-            selectLevel.append('<option value="'+i+'">'+i+'</option>');
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = i;
+            selectLevel.appendChild(option);
         }
-        params.append('<label for="level">Cleric Level</label>');
-        params.append(selectLevel);
-        container.append(params);
+        const label = document.createElement('label');
+        label.setAttribute('for', 'level');
+        label.textContent = 'Cleric Level';
+        params.appendChild(label);
+        params.appendChild(selectLevel);
+        container.appendChild(params);
     }
 
     static run(el) {
@@ -482,11 +501,11 @@ class EmptyZ_UI_ClericSpells
             [6, 5, 5, 4, 3, 3]
         ];
 
-        let container = jQuery(el);
-        let tableID = container.attr('data-table-id');
+        let container = el;
+        let tableID = container.getAttribute('data-table-id');
         let generator = EmptyZ_Generators[tableID];
-        let output = container.find('div.output');
-        let level = parseInt(container.find('select[name="level"]').val());
+        let output = container.querySelector('div.output');
+        let level = parseInt(container.querySelector('select[name="level"]').value);
 
         let memorized = {};
         for (var sl in spellsPerLevel[level - 1]) {
@@ -513,9 +532,11 @@ class EmptyZ_UI_ClericSpells
             for (var s in memorized[spellLevel]) {
                 spellList.push(s + ' (' + memorized[spellLevel][s] + ')');
             }
-            output.append(
+            output.insertAdjacentHTML(
+                'beforeend',
                 '<p><strong>Level ' + (spellLevel + 1) + ':</strong> '
-                + spellList.join(', ') + '</p>');
+                + spellList.join(', ') + '</p>'
+            );
         }
     }
 }
@@ -523,8 +544,8 @@ class EmptyZ_UI_ClericSpells
 class EmptyZ_UI_Death
 {
     static setup(el) {
-        let container = jQuery(el);
-        container.append('<div class="params">'
+        let container = el;
+        container.insertAdjacentHTML('beforeend', '<div class="params">'
             + '<label for="level">Class Level (1 to 20)</label>'
             + '<input type="number" name="level" min="1" max="20" value="1">'
             + '<label for="con">CON Bonus (-3 to +3)</label> '
@@ -537,13 +558,14 @@ class EmptyZ_UI_Death
 
     static run(el) {
         // compute roll and just do a straight lookup
-        let container = jQuery(el);
-        let tableID = container.attr('data-table-id');
-        let level = parseInt(container.find('input[name="level"]').val());
-        let con = parseInt(container.find('input[name="con"]').val());
-        let hp = parseInt(container.find('input[name="hp"]').val());
+        let container = el;
+        let tableID = container.getAttribute('data-table-id');
+        let output = container.querySelector('div.output');
+        let level = parseInt(container.querySelector('input[name="level"]').value);
+        let con = parseInt(container.querySelector('input[name="con"]').value);
+        let hp = parseInt(container.querySelector('input[name="hp"]').value);
         if (Number.isNaN(level) || Number.isNaN(con) || Number.isNaN(hp)) {
-            container.find('div.output').append('INVALID INPUT');
+            output.insertAdjacentHTML('beforeend', 'INVALID INPUT');
             return;
         }
         let generator = EmptyZ_Generators[tableID];
@@ -552,7 +574,8 @@ class EmptyZ_UI_Death
         let result = EmptyZ_Generator.computeRoll(rollSpec);
         let roll = Math.min(Math.max(result, 2), 12);
         generator.recipe = generator.tables['deadly_blow'].run(roll);
-        container.find('div.output').append(
+        output.insertAdjacentHTML(
+            'beforeend',
             '<h2>Your Spectacular Demise</h2>'
             + '<p>'
             + '<strong>Rolling ' + rollSpec + ', results in a ' + result + '!</strong> '
@@ -565,43 +588,48 @@ class EmptyZ_UI_Death
 class EmptyZ_UI_Encounters
 {
     static setup(el) {
-        let container = jQuery(el);
-        let tableID = container.attr('data-table-id');
+        let container = el;
+        let tableID = container.getAttribute('data-table-id');
         let generator = EmptyZ_Generators[tableID];
-        var params = jQuery('<div class="params">');
-        var selectLocation = jQuery('<select name="location">');
+        let params = document.createElement('div');
+        params.className = 'params';
+        let selectLocation = document.createElement('select');
+        selectLocation.name = 'location';
         for (var t in generator.tables) {
             let table = generator.tables[t];
             if (table.label) {
-                selectLocation.append('<option value="'+table.name+'">'+table.label+'</option>');
+                const option = document.createElement('option');
+                option.value = table.name;
+                option.textContent = table.label;
+                selectLocation.appendChild(option);
             }
         }
-        params.append('<label for="location">Location</label>');
-        params.append(selectLocation);
-        params.append('<label for="count">Count</label>');
-        params.append('<input type="number" name="count" min="1" max="100" value="1">');
-        container.append(params);
+        params.insertAdjacentHTML('beforeend', '<label for="location">Location</label>');
+        params.appendChild(selectLocation);
+        params.insertAdjacentHTML('beforeend', '<label for="count">Count</label>');
+        params.insertAdjacentHTML('beforeend', '<input type="number" name="count" min="1" max="100" value="1">');
+        container.appendChild(params);
     }
 
     static run(el) {
-        let container = jQuery(el);
-        let tableID = container.attr('data-table-id');
-        let location = container.find('select[name="location"]').val();
-        let count = container.find('input[name="count"]').val();
+        let container = el;
+        let tableID = container.getAttribute('data-table-id');
+        let location = container.querySelector('select[name="location"]').value;
+        let count = container.querySelector('input[name="count"]').value;
         let generator = EmptyZ_Generators[tableID];
         generator.recipe = '{' + location + '}';
         generator.repeat = count;
+        let output = container.querySelector('div.output');
         if (count == 1) {
-            container.find('div.output').append('<p>' + generator.run() + '</p>');
+            output.insertAdjacentHTML('beforeend', '<p>' + generator.run() + '</p>');
         } else {
-            let output = container.find('div.output');
-            output.append('<table>');
             let i=1;
+            let rows = '';
             generator.run().trim().split(/[\r\n]+/).forEach(function(line) {
-                output.append('<tr><td>'+i+'</td><td>' + line + '</tr>');
+                rows += '<tr><td>'+i+'</td><td>' + line + '</tr>';
                 i++;
             });
-            output.append('</table>');
+            output.insertAdjacentHTML('beforeend', '<table>' + rows + '</table>');
         }
     }
 }
@@ -609,8 +637,8 @@ class EmptyZ_UI_Encounters
 class EmptyZ_UI_1eDmgDisease
 {
     static setup(el) {
-        let container = jQuery(el);
-        container.append('<div class="params">'
+        let container = el;
+        container.insertAdjacentHTML('beforeend', '<div class="params">'
             + '<label for="con-count">CON Bonus (-3 to +3)</label> '
             + '<input type="number" name="con" min="-3" max="3" value="0"><br>'
             + '<div style="column-count: 2;">'
@@ -634,11 +662,11 @@ class EmptyZ_UI_1eDmgDisease
     }
 
     static run(el) {
-        let container = jQuery(el);
-        let output = container.find('div.output');
-        let tableID = container.attr('data-table-id');
+        let container = el;
+        let output = container.querySelector('div.output');
+        let tableID = container.getAttribute('data-table-id');
         let generator = EmptyZ_Generators[tableID];
-        let con = parseInt(container.find('input[name="con"]').val());
+        let con = parseInt(container.querySelector('input[name="con"]').value);
         if (isNaN(con)) {
             con = 0;
         }
@@ -661,7 +689,7 @@ class EmptyZ_UI_1eDmgDisease
             water: [0, 5]
             };
         for (var adj in checkboxes) {
-            if (container.find('input[name="'+adj+'"]:checked').length) {
+            if (container.querySelector('input[name="'+adj+'"]:checked')) {
                 chanceDisease += checkboxes[adj][0];
                 chanceParasite += checkboxes[adj][1];
             }
@@ -676,7 +704,7 @@ class EmptyZ_UI_1eDmgDisease
         } else {
             result += 'Not Diseased';
         }
-        output.append(result + '</p>');
+        output.insertAdjacentHTML('beforeend', result + '</p>');
 
         result = '<p>Chance of parasite: ' + chanceParasite + '%; ';
         roll = EmptyZ_Generator.computeRoll('1d100');
@@ -687,15 +715,15 @@ class EmptyZ_UI_1eDmgDisease
         } else {
             result += 'No Parasite';
         }
-        output.append(result + '</p>');
+        output.insertAdjacentHTML('beforeend', result + '</p>');
     }
 }
 
 class EmptyZ_UI_UnderdarkTunnels
 {
     static setup(el) {
-        let container = jQuery(el);
-        container.append('<div class="params">'
+        let container = el;
+        container.insertAdjacentHTML('beforeend', '<div class="params">'
             + '<label for="segment-count">Number of Segments</label> '
             + '<input type="number" name="segment-count" min="1" max="100" value="1" style="width: 4em;"><br>'
             + '<label for="tunnel-type">Dry / Wet</label> '
@@ -710,16 +738,16 @@ class EmptyZ_UI_UnderdarkTunnels
     }
 
     static run(el) {
-        let container = jQuery(el);
-        let output = container.find('div.output');
-        let tableID = container.attr('data-table-id');
+        let container = el;
+        let output = container.querySelector('div.output');
+        let tableID = container.getAttribute('data-table-id');
         let generator = EmptyZ_Generators[tableID];
-        let segmentCount = parseInt(container.find('input[name="segment-count"]').val());
+        let segmentCount = parseInt(container.querySelector('input[name="segment-count"]').value);
         if (isNaN(segmentCount)) {
             segmentCount = 0;
         }
-        let tunnelType = container.find('select[name="tunnel-type"]').val();
-        let maxLength = parseInt(container.find('input[name="max-length"]').val());
+        let tunnelType = container.querySelector('select[name="tunnel-type"]').value;
+        let maxLength = parseInt(container.querySelector('input[name="max-length"]').value);
         if (isNaN(maxLength)) {
             maxLength = 0;
         }
@@ -730,7 +758,7 @@ class EmptyZ_UI_UnderdarkTunnels
                 break;
             }
 
-            output.append('<h3>Segment ' + i + '</h3>');
+            output.insertAdjacentHTML('beforeend', '<h3>Segment ' + i + '</h3>');
             let result = '<p>';
             if (tunnelType == 'dry') {
                 if (i == 1) {
@@ -792,18 +820,18 @@ class EmptyZ_UI_UnderdarkTunnels
             }
 
             result += '</p>';
-            output.append(result);
+            output.insertAdjacentHTML('beforeend', result);
         }
 
-        output.append('<p>Total Length: '+totalLength+'\'</p>');
+        output.insertAdjacentHTML('beforeend', '<p>Total Length: '+totalLength+'\'</p>');
     }
 }
 
 class EmptyZ_UI_Reaction
 {
     static setup(el) {
-        let container = jQuery(el);
-        container.append('<div class="params">'
+        let container = el;
+        container.insertAdjacentHTML('beforeend', '<div class="params">'
              + '<label for="adjustment">Adjustement</label>'
             + '<input type="number" name="adjustment" value="0" min="-6" max="6" placeholder="Adjustment -6 to +6">'
             + '</div>'
@@ -812,9 +840,9 @@ class EmptyZ_UI_Reaction
 
     static run(el) {
         // compute roll and just do a straight lookup
-        let container = jQuery(el);
-        let tableID = container.attr('data-table-id');
-        let adjustment = parseInt(container.find('input[name="adjustment"]').val());
+        let container = el;
+        let tableID = container.getAttribute('data-table-id');
+        let adjustment = parseInt(container.querySelector('input[name="adjustment"]').value);
         if (Number.isNaN(adjustment)) {
             return;
         }
@@ -823,7 +851,8 @@ class EmptyZ_UI_Reaction
         let result = EmptyZ_Generator.computeRoll(rollSpec);
         let roll = Math.min(Math.max(result, 2), 12);
         generator.recipe = generator.tables['reaction'].run(roll);
-        container.find('div.output').append(
+        container.querySelector('div.output').insertAdjacentHTML(
+            'beforeend',
             '<p>'
             + generator.run()
             + '</p>'
@@ -834,8 +863,8 @@ class EmptyZ_UI_Reaction
 class EmptyZ_UI_BfrpgTreasure
 {
     static setup(el) {
-        let container = jQuery(el);
-        container.append('<div class="params">'
+        let container = el;
+        container.insertAdjacentHTML('beforeend', '<div class="params">'
             + '<label for="type">Treasure Type</label>'
             + '<input type="text" name="type" placeholder="Treasure types separated by spaces" style="width:75%"><br>'
             + '<label for="hd">Dragon HD</label>'
@@ -846,15 +875,15 @@ class EmptyZ_UI_BfrpgTreasure
 
     static run(el) {
         // compute roll and just do a straight lookup
-        let container = jQuery(el);
-        let tableID = container.attr('data-table-id');
+        let container = el;
+        let tableID = container.getAttribute('data-table-id');
         let generator = EmptyZ_Generators[tableID];
 
         // Get the input for treasure types, dropping to lowercase and stripping
         // anything but letters, numbers and spaces. Good to avoid spurious commas.
         let treasureType = container
-            .find('input[name="type"]')
-            .val()
+            .querySelector('input[name="type"]')
+            .value
             .toLowerCase()
             .replace(/[^a-z0-9\s]/g, ' ');
 
@@ -892,7 +921,7 @@ class EmptyZ_UI_BfrpgTreasure
 
             // Handle type H gems, jewelry, and magic
             if (t.startsWith('h') && !t.startsWith('h1')) {
-                let dragonHd = parseInt(container.find('input[name="hd"]').val());
+                let dragonHd = parseInt(container.querySelector('input[name="hd"]').value);
                 let chance = dragonHd * 5;
                 // Loop over the three types
                 ['gems', 'jewelry', 'magic'].forEach(function(tablePostfix) {
@@ -921,7 +950,8 @@ class EmptyZ_UI_BfrpgTreasure
             treasure = 'no treasure';
         }
 
-        container.find('div.output').append(
+        container.querySelector('div.output').insertAdjacentHTML(
+            'beforeend',
             '<p>' + treasure + '</p>'
         );
     }
@@ -930,30 +960,42 @@ class EmptyZ_UI_BfrpgTreasure
 class EmptyZ_UI_WbOracle
 {
     static setup(el) {
-        let container = jQuery(el);
-        var params = jQuery('<div class="params">');
-        var selectEstimation = jQuery('<select name="estimation">');
-        selectEstimation.append('<option value="impossible">Practically Impossible</option>');
-        selectEstimation.append('<option value="very-unlikely">Very Unlikely</option>');
-        selectEstimation.append('<option value="unlikely">Unlikely</option>');
-        selectEstimation.append('<option value="middling">Middling</option>');
-        selectEstimation.append('<option value="likely">Likely</option>');
-        selectEstimation.append('<option value="very-likely">Very Likely</option>');
-        selectEstimation.append('<option value="certain">Practically Certain</option>');
-        params.append('<label for="estimation">Probablity Estimation</label>');
-        params.append(selectEstimation);
-        container.append(params);
+        let container = el;
+        let params = document.createElement('div');
+        params.className = 'params';
+        let selectEstimation = document.createElement('select');
+        selectEstimation.name = 'estimation';
+        [
+            ['impossible', 'Practically Impossible'],
+            ['very-unlikely', 'Very Unlikely'],
+            ['unlikely', 'Unlikely'],
+            ['middling', 'Middling'],
+            ['likely', 'Likely'],
+            ['very-likely', 'Very Likely'],
+            ['certain', 'Practically Certain']
+        ].forEach(function(item) {
+            const option = document.createElement('option');
+            option.value = item[0];
+            option.textContent = item[1];
+            selectEstimation.appendChild(option);
+        });
+        const label = document.createElement('label');
+        label.setAttribute('for', 'estimation');
+        label.textContent = 'Probablity Estimation';
+        params.appendChild(label);
+        params.appendChild(selectEstimation);
+        container.appendChild(params);
     }
 
     static run(el) {
-        let container = jQuery(el);
-        let tableID = container.attr('data-table-id');
+        let container = el;
+        let tableID = container.getAttribute('data-table-id');
         let generator = EmptyZ_Generators[tableID];
-        let output = container.find('div.output');
-        let estimation = container.find('select[name="estimation"]').val();
+        let estimation = container.querySelector('select[name="estimation"]').value;
 
         generator.recipe = '{' + estimation + '}';
-        container.find('div.output').append(
+        container.querySelector('div.output').insertAdjacentHTML(
+            'beforeend',
             '<p>' + generator.run() + '</p>'
         );
     }
@@ -962,16 +1004,23 @@ class EmptyZ_UI_WbOracle
 class EmptyZ_UI
 {
     static setup(el) {
-        let container = jQuery(el);
-        let tableID = container.attr('data-table-id');
+        let container = el;
+        let tableID = container.getAttribute('data-table-id');
         // Load generator definition
-        jQuery.get(onedicesix.url + tableID, function(data) {
+        fetch(onedicesix.url + tableID)
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error('Failed to load generator data: HTTP ' + response.status);
+            }
+            return response.text();
+        })
+        .then(function(data) {
             // Create generator
             let generator = EmptyZ_Generator.import(data);
             EmptyZ_Generators[tableID] = generator;
             // Add output
-            container.html('<div class="output"></div>');
-            let output = container.find('div.output');
+            container.innerHTML = '<div class="output"></div>';
+            let output = container.querySelector('div.output');
             // Optionally, add more controls
             switch(tableID) {
                 case '1e-dmg-disease.txt':
@@ -1003,20 +1052,20 @@ class EmptyZ_UI
                     break;
             }
             // Add generate button
-            container.append('<button class="emptyz-regenerate wp-element-button" title="Regenerate">Generate '+generator.name+'</button>');
+            container.insertAdjacentHTML('beforeend', '<button class="emptyz-regenerate wp-element-button" title="Regenerate">Generate '+generator.name+'</button>');
             // Add button to copy results to clipboard
-            container.append('<button class="emptyz-copy wp-element-button" style="margin-left: 10px;" title="Copy to clipboard">📋</button>');
+            container.insertAdjacentHTML('beforeend', '<button class="emptyz-copy wp-element-button" style="margin-left: 10px;" title="Copy to clipboard">📋</button>');
             // Add button to save to a file
-            container.append('<button class="emptyz-save wp-element-button" style="margin-left: 10px;" title="Save to file">💾</button>');
+            container.insertAdjacentHTML('beforeend', '<button class="emptyz-save wp-element-button" style="margin-left: 10px;" title="Save to file">💾</button>');
             // Run it
             EmptyZ_UI.run(el);
             // Activate regenerate button
-            container.find('button.emptyz-regenerate').on( "click", function() {
-                EmptyZ_UI.rerun(jQuery(this).parent());
+            container.querySelector('button.emptyz-regenerate').addEventListener('click', function(event) {
+                EmptyZ_UI.rerun(event.currentTarget.parentElement);
             });
             // Activate copy button
-            container.find('button.emptyz-copy').on( "click", function() {
-                const htmlContent = output.html();
+            container.querySelector('button.emptyz-copy').addEventListener('click', function() {
+                const htmlContent = output.innerHTML;
 
                 // Plain text fallback
                 const plainText = htmlContent
@@ -1040,8 +1089,8 @@ class EmptyZ_UI
                 });
             });
             // Activate save button
-            container.find('button.emptyz-save').on( "click", function() {
-                const htmlContent = output.html();
+            container.querySelector('button.emptyz-save').addEventListener('click', function() {
+                const htmlContent = output.innerHTML;
                 const fullHtml = `<!DOCTYPE html>` +
                     `<html lang="en">` +
                     `<head>` +
@@ -1066,16 +1115,20 @@ class EmptyZ_UI
                 document.body.removeChild(a);
                 URL.revokeObjectURL(url);
             });
+        })
+        .catch(function(err) {
+            container.innerHTML = '<div class="output"><p>Failed to load generator data.</p></div>';
+            console.error(err);
         });
     }
 
     static run(el) {
-        let container = jQuery(el);
-        let tableID = container.attr('data-table-id');
+        let container = el;
+        let tableID = container.getAttribute('data-table-id');
         let generator = EmptyZ_Generators[tableID];
         generator.counters = new Map();
-        let output = container.find('div.output');
-        output.html('');
+        let output = container.querySelector('div.output');
+        output.innerHTML = '';
         switch(tableID) {
             case '1e-dmg-disease.txt':
                 if (typeof EmptyZ_UI_1eDmgDisease.runCount == 'undefined') {
@@ -1148,18 +1201,17 @@ class EmptyZ_UI
                 // Simple generator with fixed recipe. Line breaks are turned
                 // into paragraphs. Semicolons turn into BRs. Finally, lines
                 // starting with a label and colon get STRONG treatment.
-                output.append(generator.run());
+                output.insertAdjacentHTML('beforeend', generator.run());
         }
     }
 
     static rerun(el) {
-        let container = jQuery(el);
+        let container = el;
         // Scroll up to the top
-        jQuery('html, body').animate({
-              scrollTop: container.offset().top - 200
-            }, 500);
-        let output = container.find('div.output');
-        output.html('Regenerating...');
+        const top = container.getBoundingClientRect().top + window.scrollY - 200;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+        let output = container.querySelector('div.output');
+        output.innerHTML = 'Regenerating...';
         setTimeout(() => {
             // Run it
             EmptyZ_UI.run(el);
@@ -1174,9 +1226,9 @@ class EmptyZ_UI
 // List of generators, in case we have many on one page
 var EmptyZ_Generators = {};
 
-jQuery(function() {
+document.addEventListener('DOMContentLoaded', function() {
     // Loop over each container
-    jQuery('div.onedicesix-table').each(function(index) {
-        EmptyZ_UI.setup(this);
+    document.querySelectorAll('div.onedicesix-table').forEach(function(container) {
+        EmptyZ_UI.setup(container);
     });
 });
