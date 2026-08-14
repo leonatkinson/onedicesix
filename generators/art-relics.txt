@@ -1,0 +1,627 @@
+name: Art, Antiques & Relics
+description: Random works of art, fine antiques, and ancient relics found in dungeons and ruins.
+recipe: {# item}. {item-name}{break}
+        {item-history} {item-desc}
+        {break2}
+repeat: 10
+
+table: item-category 1d100
+1-40  Work of Art
+41-75 Fine Antique
+76-100 Ancient Relic
+
+table: item-name
+1-33  {art-name}
+34-66 {antique-name}
+67-100 {relic-name}
+
+table: art-name
+1   {painting-frame} {paint-medium} painting of "{art-subject}"
+2   {hanging-size} {hanging-tech} {hanging-material} hanging depicting "{art-subject}"
+3   {bust-material} bust of {historical-figure}
+4   {statuette-material} statuette of {statuette-subject}
+5   {flat-art-size} {flat-art-form} of {flat-art-material} depicting "{art-subject}"
+6   {scroll-illumination} {scroll-material} scroll {scroll-storage} detailing "{art-history-topic}"
+7   Group of {1d6+1} {figurine-material} figurines depicting {statuette-subject}
+8   {serving-material} {serving-item}, {serving-decoration-tech} with {serving-motif}
+
+table: painting-frame
+1-3   Framed in carved giltwood
+4-5   Framed in tarnished silver
+6     Framed in heavy blackened iron
+7-8   Framed in weathered oak
+9     Framed in polished mother-of-pearl
+10    Framed in bone and ebony
+11-15 Unframed
+16-18 Mounted on a stretched wooden frame
+19-20 Enclosed in a brass-hinged double case
+
+table: paint-medium
+1-3   oil
+4-6   egg tempera
+7     encaustic
+8-9   distemper
+10    watercolor on vellum
+11    gouache
+12    ink and wash
+13    casein
+
+table: bust-material
+1-4   Marble
+5-6   Bronze
+7     Alabaster
+8     Terracotta
+9     Carved Basalt
+10    Jade
+11    Gilt-Bronze
+12    Carved Hardwood
+13    Ivory
+14    Serpentine
+
+table: statuette-material
+1-3   Bronze
+4     Gilt-Bronze
+5     Sterling Silver
+6     Solid Gold
+7     Carved Ivory
+8     Jade
+9     Obsidian
+10    Terracotta
+11    Cast Brass
+12    Pewter
+13    Porcelain
+14    Carved Hardwood
+
+table: statuette-subject
+1-10  a classical deity
+11-20 a divine avatar
+21-28 a heroic warrior
+29-36 a legendary champion
+37-44 a {mythic-beast}
+45-52 a crowned king
+53-60 a court dancer
+61-68 a court musician
+69-76 a priest
+77-84 a supplicant in prayer
+85-92 a sacred animal ({statuette-animal})
+93-96 an allegorical figure of {allegory-concept}
+97-100 an apotropaic guardian spirit
+
+table: statuette-animal
+1   sacred cat
+2   winged bull
+3   serpent
+4   falcon
+5   ram
+6   hound
+7   owl
+8   scarab
+9   lioness
+10  ibis
+
+table: allegory-concept
+1   victory
+2   justice
+3   fortune
+4   abundance
+5   wisdom
+6   time
+7   mercy
+8   vengeance
+
+table: flat-art-size
+1-4   small handheld
+5-8   medium wall-mounted
+9-10  large altar-scale
+
+table: flat-art-form
+1-4   single-panel plaque
+5-6   framed relief panel
+7     two-part hinged diptych
+8-9   three-part hinged triptych
+10    folding polyptych
+
+table: flat-art-material
+1-3   carved ivory
+4-5   carved hardwood
+6     jade and brass
+7-8   enamelled copper
+9     beaten gold
+10    silver-gilt
+
+table: scroll-illumination
+1-3   plain text with simple ink headers
+4-7   moderately illuminated with gold leaf accents and colored borders
+8-10  heavily illuminated with intricate marginal miniatures and pure gold leaf
+
+table: scroll-material
+1-4   calfskin vellum
+5-7   dried Egyptian papyrus
+8     sheepskin parchment
+9     fine woven silk
+10    beaten copper foil
+
+table: scroll-storage
+1-5   rolled tightly and tied with silk ribbon
+6-7   housed inside a carved bone storage tube
+8     folded accordion-style (concertina)
+9     framed under glass in a wooden case
+10    sealed with an official wax signet
+
+table: figurine-material
+1-3   terracotta
+4-5   glazed ceramic
+6     carved bone
+7     cast bronze
+8     carved soapstone
+9     beaten pewter
+10    gilded wood
+
+table: hanging-size
+1-3   Small (2x3 ft.)
+4-7   Medium (4x6 ft.)
+8-9   Large (8x12 ft.)
+10    Monumental (12x20 ft.)
+
+table: hanging-tech
+1-3   embroidered
+4-5   woven
+6     brocaded
+7     appliquéd
+8     jacquard-woven
+9     damask
+10    needlepoint
+
+table: hanging-material
+1-3   silk
+4-6   wool and silk blend
+7     gold-thread and velvet
+8     heavy linen
+9     dyed goat-hair and wool
+10    satin
+
+table: antique-name
+1   {wood-type} wardrobe with carved panels
+2   {rug-size} {rug-material} Rug
+3   {wood-type} writing desk
+4   Ceremonial bronze ewer and basin
+5   Brass astrolabe with silver inlay
+6   {wood-type} storage chest with {chest-hardware} hardware
+7   {candelabra-material} candelabra
+8   Velvet-lined jewelry casket of {wood-type}
+9   Standing mirror with {mirror-frame} frame
+10  {vessel-material} burial urn
+11  {screen-material} folding screen
+12  {incense-material} incense burner
+
+table: wood-type
+1   Oak
+2   Mahogany
+3   Cedar
+4   Walnut
+5   Rosewood
+6   Teak
+7   Ebonized Fruitwood
+8   Burl Pine
+
+table: candelabra-material
+1   Wrought Iron
+2   Polished Brass
+3   Tarnished Silver
+4   Carved Bone
+5   Gilded Bronze
+6   Blackened Steel
+
+table: rug-size
+1   Small
+2   Large Woven
+3   Ornate Medallion
+4   Nomadic Prayer
+
+table: rug-material
+1   silk
+2   wool
+3   goat-hair
+4   cashmere blend
+
+table: mirror-frame
+1   carved ivory
+2   gilded brass
+3   ebonized wood
+4   mother-of-pearl inlay
+5   hammered silver
+
+table: chest-hardware
+1   engraved brass
+2   rusted iron
+3   bronze strap
+4   silver filigree
+
+table: screen-material
+1   Lacquered wood and silk panels
+2   Carved sandalwood
+3   Painted leather panels
+4   Embossed brass plates
+
+table: vessel-material
+1   Celadon Porcelain
+2   Terracotta
+3   Alabaster
+4   Hammered Bronze
+5   Glass and Enamel
+
+table: incense-material
+1   Cloisonne Bronze
+2   Carved Soapstone
+3   Silver-Gilt
+4   Terracotta
+
+table: relic-name
+1   Gilded Reliquary Casket containing {relic-content}
+2   Sacrificial Dagger of {ancient-culture}
+3   Ceremonial Scepter of the {dynasty-name} Kings
+4   Obsidian Idol of {forgotten-god}
+5   Bronze Oracle Mirror
+6   Talisman of the {order-name}
+7   Crown of the {realm-name} Sovereign
+8   Ivory Libation Horn
+9   Eldritch Altar Bell
+10  Runed Stele Fragment
+
+table: art-subject
+1   The Fall of the Sunken City
+2   A Council of Archmages
+3   The Coronation Under Starlight
+4   A Battle Against Aberrations
+5   The Weeping Dryad of the Whispering Woods
+6   Ascent to the Celestial Spheres
+7   The Harvest of Souls
+8   Triumph of the Iron Legion
+9   The Siege of the Obsidian Fortress
+10  The Weeping Oracle of Delphi
+11  A Gathering of Celestial Judges
+12  The Taming of the Storm Dragon
+13  The Last Stand at the Mountain Gate
+14  The Drowning of the Star-King
+15  A Procession of Shadow Priests
+16  The Forge of the Earth Shaper
+17  The Awakening of the Titan
+18  A Banquet in the Cloud Palace
+19  The Flight from the Burning Spire
+20  The Hermit in the Crystal Cave
+21  The Offering to the River Serpent
+22  The Dance of the Autumn Dryads
+23  The Sacrifice of the Sunken Queen
+24  The March of the Undead Legion
+25  The Sealing of the Demon Portal
+26  The Astronomer's Tower at Midnight
+27  The Judgment of the Golden Scale
+28  The Slaying of the Seven-Headed Hydra
+29  The Blessing of the Harvest Mother
+30  The Descent into the Under-Realm
+31  The Surrender of the Rebel Duke
+32  The Alchemist's Desperate Transmutation
+33  The Discovery of the World Anchor
+34  The Wedding of the Sea Lord
+35  The Execution of the Heretic Mage
+36  The Miracle of the Blooming Staff
+37  The Plunder of the Dragon's Hoard
+38  The Pilgrimage to the Holy Mountain
+39  The Pestilence of the Emerald Swarm
+40  The Rebirth of the Phoenix
+41  The Shattering of the Moon
+42  The Shepherd and the Chimera
+43  The Oracle's Prophecy in Smoke
+44  The Battle of the Burning Sands
+45  The Voyage to the Edge of the World
+46  The Return of the Exiled Prince
+47  The Defense of the Ivory Bastion
+48  The Whispering Woods at Dusk
+49  The Sorcerer's Library in Flames
+50  The Foundation of the First Kingdom
+51  The Harvest Festival of the Sun
+52  The Offering at the Tomb of Kings
+53  The Drowning of the False Idol
+54  The Knight Facing the Wyrm
+55  The Passage Across the Styx
+56  The Awakening of the Forest Guardian
+57  The Treaty of the Five Nations
+58  The Stargazer's Final Omen
+59  The Storm over the Citadel
+60  The Gathering of the Beast Lords
+61  The Eclipse of the Twin Moons
+62  The Procession of Mourning Elves
+63  The Liberation of the Slaves
+64  The Consecration of the Grand Cathedral
+65  The Banquet of Shadows
+66  The Flight of the Griffin Riders
+67  The Judgment of the Ashen King
+68  The Discovery of the Lost Oasis
+69  The Sacrifice of the White Stag
+70  The Siege of the Sky-Hold
+71  The Lamentation of the Fallen City
+72  The Oracle's Vision of Ruin
+73  The Triumphal Entry of the Conqueror
+74  The Hermit's Last Revelation
+75  The Dance of the Ice Phantoms
+76  The Offering to the Sea Mother
+77  The Council of the Silver Hand
+78  The Exorcism of the Haunted Keep
+79  The Blessing of the New Ships
+80  The Fall of the Iron Tyrant
+81  The Gathering at the World Tree
+82  The Slaying of the Behemoth
+83  The Awakening of the Stone Army
+84  The Pilgrimage of the Blind Seer
+85  The Eclipse over the Capital
+86  The Defiance of the Mountain King
+87  The Voyage of the Ghost Ship
+88  The Discovery of the Ancient Rune
+89  The Banquet of the Fey Lords
+90  The Destruction of the Tower of Babel
+91  The Coronation of the Boy Emperor
+92  The Trial of the Flame
+93  The Offering of Firstfruits
+94  The March Across the Salt Waste
+95  The Vigil of the Eternal Flame
+96  The Battle of the Whispering Peaks
+97  The Descent into the Abyss
+98  The Surrender of the City Keys
+99  The Raising of the Sunken Monolith
+100 The Twilight of the Gods
+
+table: historical-figure
+1   The Veiled Sovereign
+2   The High Priest of the Sun
+3   The Exiled Archmage
+4   The Undefeated General
+5   The Masked Jester
+6   The Blind Seer
+7   The Last Monarch of the Old Dynasty
+8   The Wandering Scholar
+9   The Master of the Silent Tower
+10  The Fallen Champion
+11  The High Inquisitor
+12  The Sunken Queen
+13  The Ashen Lord
+14  The Oracle of the Deep
+15  The Master Blacksmith
+16  The First Pathfinder
+17  The Guardian of the Gate
+18  The Crownless Heir
+19  The Keeper of the Tombs
+20  The Shadow Regent
+
+table: mythic-beast
+1   Golden-Maned Chimera
+2   Crouching Sphinx
+3   Serpent-Coiled Dragon
+4   Winged Griffin
+5   Multi-Headed Hydra
+
+table: art-history-topic
+1   ancient star charts and constellations
+2   forbidden arcane rituals
+3   royal lineage and dynastic treaties
+4   mythic wars of the First Age
+5   botanical wonders of lost continents
+
+table: relic-content
+1   petrified fingerbones of a martyr
+2   ashes of a vanquished archfiend
+3   dust from the tombs of kings
+4   crystallized tears of an angel
+5   fragments of the World Tree
+
+table: ancient-culture
+1   the Pre-Cataclysm Empire
+2   the Empire of Mu
+3   the Searing Desert Caliphate
+4   the Deep Gnome Under-Realm
+5   the Sky-Citadel Dwarves
+
+table: dynasty-name
+1   First Sun
+2   Iron Throne
+3   Moonlit
+4   Bloodstone
+5   Frost-Bound
+
+table: forgotten-god
+1   the Faceless One
+2   the Crawling Chaos
+3   the Eternal Sovereign
+4   the Void Mother
+5   the Ashen Lord
+
+table: order-name
+1   Silver Dawn
+2   Ebon Hand
+3   Crimson Vigil
+4   Gilded Circle
+5   Astral Watch
+
+table: realm-name
+1   Valenor
+2   Kalthoria
+3   Drakengard
+4   Eldoria
+5   Thalassa
+
+table: item-value-low
+1-40  ({1d6}5 gp)
+41-80 ({1d10}10 gp)
+81-100 ({2d10}10 gp)
+
+table: item-value-mid
+1-30  ({1d6}50 gp)
+31-70 ({2d6}50 gp)
+71-100 ({1d6}200 gp)
+
+table: item-value-high
+1-40  ({1d6}500 gp)
+41-80 ({2d6}1000 gp)
+81-100 ({1d4}5000 gp)
+
+table: item-desc 1d100
+1-6   It is shattered and fragmented into scattered pieces. {item-value-low}
+7-12  It is heavily battered and missing major structural components. {item-value-low}
+13-18 It is deeply corroded and pitted throughout. {item-value-low}
+19-24 It is cracked down the center with extensive surface degradation. {item-value-low}
+25-30 It is severely warped and charred by ancient fire. {item-value-low}
+31-36 It is covered in thick grime and deep gouges. {item-value-low}
+37-42 It is missing vital inlay work and surface ornaments. {item-value-low}
+43-48 It is worn down and dulled by centuries of dampness. {item-value-mid}
+49-54 It shows rough fractures and heavy chipping. {item-value-mid}
+55-60 It is battered and scratched, bearing scars of past violence. {item-value-mid}
+61-66 It is weathered and sturdy, coated in a thick patina of dust. {item-value-mid}
+67-72 It is tarnished and scuffed, yet structurally solid. {item-value-mid}
+73-77 It shows minor surface cracks and age spots. {item-value-mid}
+78-82 It is gracefully aged with a pleasing antique patina. {item-value-mid}
+83-87 It is moderately well-preserved with light wear. {item-value-mid}
+88-91 It is remarkably clean, showing minimal signs of decay. {item-value-high}
+92-95 It is exceptionally preserved in a protective micro-climate. {item-value-high}
+96-98 It is nearly flawless with original polish intact. {item-value-high}
+99    It is impeccably fresh, appearing newly forged. {item-value-high}
+100   It is intact and pristine, radiating an aura of ancient prestige. {item-value-high}
+
+table: item-history
+1   It was forged in the royal workshops for the coronation of the first solar emperor.
+2   It was used in secret mystery cults dedicated to the subterranean star-gods.
+3   It was crafted by master artisans as a wedding gift for a tragic union of rival houses.
+4   It served as the ceremonial centerpiece during annual equinox feasts in the high citadel.
+5   It was commissioned by an eccentric archmage to channel celestial energies during eclipses.
+6   It was utilized in daily courtly rituals by generations of hereditary high magistrates.
+7   It was shaped from meteor iron by nomadic smiths living on the ash plains.
+8   It was kept upon the high altar of a mountain monastery dedicated to silent contemplation.
+9   It was used by royal heralds to proclaim imperial edicts across the outer provinces.
+10  It was crafted as a tribute offering presented annually by tributary merchant guilds.
+11  It was owned by a celebrated court poet who composed epic ballads in its silent presence.
+12  It was employed in alchemical transmutations within the subterranean chambers of the academy.
+13  It was used by high priestesses to burn sacred resins during nightly star-gazing vigils.
+14  It was forged during a golden age of peace as a symbol of eternal alliance between elves and dwarves.
+15  It was kept in the royal nursery to ward off malevolent spirits and night terrors.
+16  It was utilized by master judges to weigh the evidence during high treason trials.
+17  It was crafted by blind monks who chanted sacred protective mantras while shaping the metal.
+18  It was used by imperial ambassadors as an authenticating seal for cross-border treaties.
+19  It was held by high chieftains during tribal oath-swearing ceremonies around the eternal bonfire.
+20  It was commissioned by a paranoid tyrant who demanded daily inspections by his personal vizier.
+21  It was used in lavish banquets hosted by maritime merchant princes of the southern gulf.
+22  It was crafted for a legendary gladiator champion who fought in the colosseum of the capital.
+23  It was employed by monastic scribes to illuminate sacred texts in candlelit scriptoria.
+24  It was owned by an ancient order of astronomers charting the movements of wandering planets.
+25  It was used in seasonal fertility rites performed by agrarian priestesses in the fertile river valleys.
+26  It was forged in the subterranean bellows-halls of deep-earth duergar smiths.
+27  It was kept in the private study of a reclusive philosopher who debated the nature of the cosmos.
+28  It was utilized by palace guards during changing-of-the-guard ceremonies in the inner courtyard.
+29  It was commissioned by a mercantile guildmaster to display his immense wealth and refined taste.
+30  It was used during solemn funerary rites held for fallen knights of the obsidian order.
+31  It was crafted as an instructional tool for royal princes studying ancient history and heraldry.
+32  It was owned by a celebrated courtesan whose salons were frequented by the realm's greatest minds.
+33  It was employed in weather-warding rituals conducted atop the highest palace towers.
+34  It was forged from consecrated temple bells melted down during a time of holy crusade.
+35  It was kept in the treasury of an island empire that traded exclusively in rare spices and silks.
+36  It was used by oracle priestesses who inhaled intoxicating vapors to divine future portents.
+37  It was commissioned by a seafaring monarch to commemorate victories over the serpent fleets.
+38  It was utilized by master vintners during the blessing of the first autumn vintage.
+39  It was owned by a nomadic chieftain who carried it across the endless steppes for decades.
+40  It was crafted during the reign of the silver-masked queen whose edicts shaped the modern realm.
+41  It was used in initiation rites for novitiates entering the secretive brotherhood of shadows.
+42  It was kept upon the mantelpiece of a grand hall where minstrels sang tales of old glory.
+43  It was employed by master physicians during anatomical studies and herbal compounding.
+44  It was forged with magical alloys by an artisan guild that perished without revealing their secrets.
+45  It was owned by a prosperous provincial governor who hosted lavish banquets for visiting dignitaries.
+46  It was used in morning ablution ceremonies performed by the daughters of high nobility.
+47  It was commissioned to celebrate the completion of the great aqueduct spanning the arid canyon.
+48  It was utilized by battlefield surgeons to organize instruments during major military campaigns.
+49  It was kept within the scriptorium of a desert monastery devoted to preserving lost languages.
+50  It was crafted as a personal devotional piece for a pious princess who took holy vows.
+51  It was used in astronomical navigation training aboard imperial dreadnoughts.
+52  It was owned by a wealthy spice merchant whose trading caravans spanned three continents.
+53  It was employed in purification ceremonies held prior to major legislative assemblies.
+54  It was forged in honor of a legendary naval commander who mapped the uncharted archipelago.
+55  It was kept in a nobleman's lodge used during autumn deer-stalking expeditions.
+56  It was utilized by master architects when planning the grand monuments of the imperial capital.
+57  It was commissioned by an assembly of master sorcerers to regulate ambient magical currents.
+58  It was owned by a famed duelist who displayed it proudly in his private fencing academy.
+59  It was used in ritual cleansing baths by members of the solar priesthood.
+60  It was crafted by forest dwelling hermits using rare heartwood gathered from sacred groves.
+61  It was kept in the council chamber where elders debated matters of war and peace.
+62  It was employed by royal tax collectors to weigh precious coinage from tributary towns.
+63  It was commissioned to mark the boundary treaty established between rival forest kingdoms.
+64  It was owned by an enigmatic ambassador from an eastern empire across the endless ocean.
+65  It was used in harvest celebrations where villagers danced around glowing bonfires until dawn.
+66  It was forged during an era when mortals and dragons walked side by side in mutual respect.
+67  It was kept in the warden's quarters of a frontier fortress guarding the mountain passes.
+68  It was utilized by master perfumers to blend rare floral essences for the royal court.
+69  It was commissioned by a guild of master masons as their ultimate masterpiece of graduation.
+70  It was owned by a traveling troubadour who sang of forgotten kingdoms and lost loves.
+71  It was used in evening meditation sessions by monks seeking inner peace and enlightenment.
+72  It was crafted with intricate interlocking mechanisms designed by a clockwork genius.
+73  It was kept upon the captain's table aboard the flagship of the royal armada.
+74  It was employed by temple acolytes to carry glowing embers between sacred shrines.
+75  It was commissioned to honor the patron saint of travelers and wayward adventurers.
+76  It was owned by an imperial general who used it during war council briefings in field tents.
+77  It was used in seasonal solstitial celebrations marking the turning of the wheel of the year.
+78  It was forged from meteoric nickel-iron by sky-worshipping nomads of the high plateaus.
+79  It was kept in the archives of a sprawling imperial library containing scrolls from fallen epochs.
+80  It was utilized by master cartographers during the mapping of unknown territorial expanses.
+81  It was commissioned by a prosperous wine-maker to serve vintage nectars at royal symposiums.
+82  It was owned by a mystic seer who claimed it whispered secrets of tomorrow when touched.
+83  It was used in coronation banquets where foreign kings paid homage to the reigning sovereign.
+84  It was crafted by master sculptors whose lineage traced back to the first creators of the world.
+85  It was kept in a quiet alcove of a grand palace where rulers retreated to read state papers.
+86  It was employed in ceremonial duels of honor fought between aristocratic champions.
+87  It was commissioned to commemorate the founding of the great university city on the coast.
+88  It was owned by a high-ranking diplomat who traveled extensively across warring realms.
+89  It was used in winter solstice feasts where guests exchanged tokens of goodwill and prosperity.
+90  It was forged in the secret underground laboratories of pioneering elemental scholars.
+91  It was kept in the treasury vaults as a standardized measure of weight and purity for the realm.
+92  It was utilized by master tailors when designing ceremonial robes for imperial coronations.
+93  It was commissioned by a philanthropic duchess to fund charitable works across the slums.
+94  It was owned by an immortal sage who watched civilizations rise and fall from afar.
+95  It was used in twilight prayer services conducted by the guardians of the eternal flame.
+96  It was crafted during a renaissance of art and philosophy sponsored by enlightened patrons.
+97  It was kept in the command tent of an emperor leading his legions across the frontier.
+98  It was employed by guild masters during the induction ceremony of new master craftsmen.
+99  It was commissioned to celebrate a century of unbroken peace between neighboring realms.
+100 It was used in daily household rituals by generations of a venerable aristocratic dynasty.
+
+table: serving-item
+1   shallow serving plate
+2   ceremonial wine cup
+3   deep banquet bowl
+4   pouring pitcher
+5   ornate goblet
+6   large serving platter
+7   ceremonial spoon
+8   heavy drinking flagon
+
+table: serving-decoration-tech
+1   embossed
+2   chased
+3   enamelled
+4   filigreed
+5   painted
+6   engraved
+7   damascened
+
+table: serving-material
+1   silver-gilt
+2   beaten bronze
+3   glazed ceramic
+4   carved obsidian
+5   translucent jade
+6   polished brass
+7   heavy pewter
+8   solid gold
+
+table: serving-motif
+1   mythic hunting scenes
+2   entwining floral vines
+3   intricate geometric filigree
+4   royal crests and heraldic beasts
+5   bacchanalian banqueting feasts
+6   epic celestial battles
+7   swirling ocean waves and sea monsters
+8   processions of mythical deities

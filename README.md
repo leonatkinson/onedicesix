@@ -78,7 +78,7 @@ the most readable format. Values may be single integers or a range as shown in
 the last row. Results may be plain text or contain curly brace expressions as
 decribed above for recipes.
 
-The generator 
+The generator
 
 * {break} - linebreak
 * {break2} - two linebreaks
@@ -240,3 +240,5 @@ Small adjustments to daily events on the southern seas.
 - Rename classes to OneDiceSix from EmptyZ
 ## 1.13.1
 - Update generators to replace ; with {break}
+## 1.13.2
+- Add Art, Antiques & Relics generator
