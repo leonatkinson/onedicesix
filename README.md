@@ -242,3 +242,8 @@ Small adjustments to daily events on the southern seas.
 - Update generators to replace ; with {break}
 ## 1.13.2
 - Add Art, Antiques & Relics generator
+## 1.14.0
+- Add bin/generate.js
+  This CLI script allows running generators in the shell if you have Node
+  installed, which might be helpful for QA and automated workflows. Run
+  bin/generate.js to see usage.
