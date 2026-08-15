@@ -247,3 +247,6 @@ Small adjustments to daily events on the southern seas.
   This CLI script allows running generators in the shell if you have Node
   installed, which might be helpful for QA and automated workflows. Run
   bin/generate.js to see usage.
+## 1.14.1
+- Adjust Art, Antiques & Relics generator capitalization
+

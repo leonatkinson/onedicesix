@@ -16,35 +16,35 @@ table: item-name
 67-100 {relic-name}
 
 table: art-name
-1   {painting-frame} {paint-medium} painting of "{art-subject}"
-2   {hanging-size} {hanging-tech} {hanging-material} hanging depicting "{art-subject}"
-3   {bust-material} bust of {historical-figure}
-4   {statuette-material} statuette of {statuette-subject}
+1   {paint-medium} Painting of "{art-subject}", {painting-frame}
+2   {hanging-size} {hanging-tech} {hanging-material} Hanging depicting "{art-subject}"
+3   {bust-material} Bust of {historical-figure}
+4   {statuette-material} Statuette of {statuette-subject}
 5   {flat-art-size} {flat-art-form} of {flat-art-material} depicting "{art-subject}"
-6   {scroll-illumination} {scroll-material} scroll {scroll-storage} detailing "{art-history-topic}"
-7   Group of {1d6+1} {figurine-material} figurines depicting {statuette-subject}
+6   {scroll-material} Scroll {scroll-illumination}, {scroll-storage} detailing "{art-history-topic}"
+7   Group of {1d6+1} {figurine-material} Figurines depicting {statuette-subject}
 8   {serving-material} {serving-item}, {serving-decoration-tech} with {serving-motif}
 
 table: painting-frame
-1-3   Framed in carved giltwood
-4-5   Framed in tarnished silver
-6     Framed in heavy blackened iron
-7-8   Framed in weathered oak
-9     Framed in polished mother-of-pearl
-10    Framed in bone and ebony
-11-15 Unframed
-16-18 Mounted on a stretched wooden frame
-19-20 Enclosed in a brass-hinged double case
+1-3   framed in carved giltwood
+4-5   framed in tarnished silver
+6     framed in heavy blackened iron
+7-8   framed in weathered oak
+9     framed in polished mother-of-pearl
+10    framed in bone and bbony
+11-15 unframed
+16-18 mounted on a stretched wooden frame
+19-20 enclosed in a brass-hinged double case
 
 table: paint-medium
-1-3   oil
-4-6   egg tempera
-7     encaustic
-8-9   distemper
-10    watercolor on vellum
-11    gouache
-12    ink and wash
-13    casein
+1-3   Oil
+4-6   Egg Tempera
+7     Encaustic
+8-9   Distemper
+10    Watercolor on Vellum
+11    Gouache
+12    Ink and Wash
+13    Casein
 
 table: bust-material
 1-4   Marble
@@ -110,52 +110,52 @@ table: allegory-concept
 8   vengeance
 
 table: flat-art-size
-1-4   small handheld
-5-8   medium wall-mounted
-9-10  large altar-scale
+1-4   Small, Handheld
+5-8   Medium, Wall-Mounted
+9-10  Large, Altar-Scale
 
 table: flat-art-form
-1-4   single-panel plaque
-5-6   framed relief panel
-7     two-part hinged diptych
-8-9   three-part hinged triptych
-10    folding polyptych
+1-4   Single-Panel Plaque
+5-6   Framed Relief Panel
+7     Two-Part Hinged Diptych
+8-9   Three-Part Hinged Triptych
+10    Folding Polyptych
 
 table: flat-art-material
-1-3   carved ivory
-4-5   carved hardwood
-6     jade and brass
-7-8   enamelled copper
-9     beaten gold
-10    silver-gilt
+1-3   Carved Ivory
+4-5   Carved Hardwood
+6     Jade and Brass
+7-8   Enamelled Copper
+9     Beaten Gold
+10    Silver-Gilt
 
 table: scroll-illumination
-1-3   plain text with simple ink headers
-4-7   moderately illuminated with gold leaf accents and colored borders
-8-10  heavily illuminated with intricate marginal miniatures and pure gold leaf
+1-3   with Simple Ink Headers
+4-7   Moderately Illuminated with Gold Leaf Accents and Colored Borders
+8-10  Heavily Illuminated with Intricate Marginal Miniatures and Pure Gold Leaf
 
 table: scroll-material
-1-4   calfskin vellum
-5-7   dried Egyptian papyrus
-8     sheepskin parchment
-9     fine woven silk
-10    beaten copper foil
+1-4   Calfskin Vellum
+5-7   Dried Egyptian Papyrus
+8     Sheepskin Parchment
+9     Fine Woven Silk
+10    Beaten Copper Foil
 
 table: scroll-storage
 1-5   rolled tightly and tied with silk ribbon
 6-7   housed inside a carved bone storage tube
-8     folded accordion-style (concertina)
+8     folded accordion-style
 9     framed under glass in a wooden case
 10    sealed with an official wax signet
 
 table: figurine-material
-1-3   terracotta
-4-5   glazed ceramic
-6     carved bone
-7     cast bronze
-8     carved soapstone
-9     beaten pewter
-10    gilded wood
+1-3   Terracotta
+4-5   Glazed Ceramic
+6     Carved Bone
+7     Cast Bronze
+8     Carved Soapstone
+9     Beaten Pewter
+10    Gilded Wood
 
 table: hanging-size
 1-3   Small (2x3 ft.)
@@ -164,35 +164,35 @@ table: hanging-size
 10    Monumental (12x20 ft.)
 
 table: hanging-tech
-1-3   embroidered
-4-5   woven
-6     brocaded
-7     appliquéd
-8     jacquard-woven
-9     damask
-10    needlepoint
+1-3   Embroidered
+4-5   Woven
+6     Brocaded
+7     Appliquéd
+8     Jacquard-woven
+9     Damask
+10    Needlepoint
 
 table: hanging-material
-1-3   silk
-4-6   wool and silk blend
-7     gold-thread and velvet
-8     heavy linen
-9     dyed goat-hair and wool
-10    satin
+1-3   Silk
+4-6   Wool and Silk Blend
+7     Gold-Thread and Velvet
+8     Heavy Linen
+9     Dyed Goat-Hair and Wool
+10    Satin
 
 table: antique-name
-1   {wood-type} wardrobe with carved panels
+1   {wood-type} Wardrobe with Carved Panels
 2   {rug-size} {rug-material} Rug
-3   {wood-type} writing desk
-4   Ceremonial bronze ewer and basin
-5   Brass astrolabe with silver inlay
-6   {wood-type} storage chest with {chest-hardware} hardware
-7   {candelabra-material} candelabra
-8   Velvet-lined jewelry casket of {wood-type}
-9   Standing mirror with {mirror-frame} frame
-10  {vessel-material} burial urn
-11  {screen-material} folding screen
-12  {incense-material} incense burner
+3   {wood-type} Writing Desk
+4   Ceremonial Bronze Ewer and Basin
+5   Brass Astrolabe with Silver Inlay
+6   {wood-type} Storage Chest with {chest-hardware} Hardware
+7   {candelabra-material} Candelabra
+8   Velvet-Lined Jewelry Casket of {wood-type}
+9   Standing Mirror with {mirror-frame} Frame
+10  {vessel-material} Burial Urn
+11  {screen-material} Folding Screen
+12  {incense-material} Incense Burner
 
 table: wood-type
 1   Oak
@@ -219,29 +219,29 @@ table: rug-size
 4   Nomadic Prayer
 
 table: rug-material
-1   silk
-2   wool
-3   goat-hair
-4   cashmere blend
+1   Silk
+2   Wool
+3   Goat-Hair
+4   Cashmere Blend
 
 table: mirror-frame
-1   carved ivory
-2   gilded brass
-3   ebonized wood
-4   mother-of-pearl inlay
-5   hammered silver
+1   Carved Ivory
+2   Gilded Brass
+3   Ebonized Wood
+4   Mother-of-Pearl Inlay
+5   Hammered Silver
 
 table: chest-hardware
-1   engraved brass
-2   rusted iron
-3   bronze strap
-4   silver filigree
+1   Engraved Brass
+2   Rusted Iron
+3   Bronze Strap
+4   Silver Filigree
 
 table: screen-material
-1   Lacquered wood and silk panels
-2   Carved sandalwood
-3   Painted leather panels
-4   Embossed brass plates
+1   Lacquered Wood and Silk
+2   Carved Sandalwood
+3   Painted Leather
+4   Embossed Brass
 
 table: vessel-material
 1   Celadon Porcelain
@@ -400,11 +400,11 @@ table: mythic-beast
 5   Multi-Headed Hydra
 
 table: art-history-topic
-1   ancient star charts and constellations
-2   forbidden arcane rituals
-3   royal lineage and dynastic treaties
-4   mythic wars of the First Age
-5   botanical wonders of lost continents
+1   Ancient Star Charts and Constellations
+2   Forbidden Arcane Rituals
+3   Royal Lineage and Dynastic Treaties
+4   Mythic Wars of the First Age
+5   Botanical Wonders of Lost Continents
 
 table: relic-content
 1   petrified fingerbones of a martyr
@@ -607,14 +607,14 @@ table: serving-decoration-tech
 7   damascened
 
 table: serving-material
-1   silver-gilt
-2   beaten bronze
-3   glazed ceramic
-4   carved obsidian
-5   translucent jade
-6   polished brass
-7   heavy pewter
-8   solid gold
+1   Silver-Gilt
+2   Beaten Bronze
+3   Glazed Ceramic
+4   Carved Obsidian
+5   Translucent Jade
+6   Polished Brass
+7   Heavy Pewter
+8   Solid Gold
 
 table: serving-motif
 1   mythic hunting scenes
