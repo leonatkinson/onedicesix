@@ -1,0 +1,1017 @@
+name: Quests
+description: Missions given to heroes by someone important. Results are
+    generic enough for fantasy or science-fiction play.
+recipe:
+    The quest is given by {giver}, who {contact}. {explanation} {reward}{break2}
+    {quest_body} {condition_or_not}
+repeat: 1
+
+table: giver
+1-4     {giver_adj} {giver_role}
+5       the {giver_role}
+
+table: giver_adj
+1       a desperate
+2       an aging
+3       a young
+4       a feared
+5       a beloved
+6       a secretive
+7       a newly risen
+8       a disgraced
+9       an ailing
+10      a famous
+11      a proud
+12      a ruined
+13      a childless
+14      a vengeful
+15      a pious
+16      a pragmatic
+17      a dying
+18      an exiled
+19      a ruthless
+20      a grieving
+21      an ambitious
+22      a weary
+23      a cautious
+24      a nameless
+
+table: giver_role
+1       lord of {domain_land}
+2       lady of {domain_land}
+3       merchant of {domain_trade}
+4       high priest of {domain_faith}
+5       captain of {domain_arms}
+6       scholar known for {domain_learning}
+7       guildmaster of {domain_trade}
+8       magistrate of {domain_land}
+9       noble of {domain_house}
+10      commander of {domain_arms}
+11      steward of {domain_land}
+12      warden of {domain_land}
+13      envoy of {domain_house}
+14      treasurer of {domain_house}
+15      shipmaster of {domain_trade}
+16      heir of {domain_house}
+17      judge of {domain_land}
+18      factor of {domain_trade}
+19      master of {domain_faith}
+20      spymaster of {domain_house}
+
+table: domain_land
+1       a border province
+2       a river valley
+3       a highland district
+4       an island holding
+5       a city quarter
+6       a fading estate
+7       a newly conquered district
+8       a famine-struck county
+9       a wealthy port town
+10      the hinterland beyond the last road
+
+table: domain_trade
+1       great wealth and many ships
+2       a trading house
+3       the local market
+4       caravans that cross the waste
+5       a warehouse empire
+6       a rare staple no one else can supply
+7       debts owed by half the court
+8       a fleet of independent captains
+
+table: domain_faith
+1       a powerful temple
+2       a minor cult with rich friends
+3       an old order
+4       the city's favored shrine
+5       a faith newly arrived
+6       a shrine on a pilgrimage road
+7       a cloister that keeps records
+8       a hospital and poor-house
+
+table: domain_arms
+1       the local garrison
+2       a free company
+3       a fortress on the marches
+4       a noted vessel
+5       the household guard
+6       scouts along the border
+7       a levy that has not yet gone home
+8       escorts on the high road
+
+table: domain_house
+1       an old house
+2       a rising house
+3       a foreign court
+4       a house in exile
+5       the ruling house
+6       a cadet branch
+7       a house thought extinct
+8       a house that lives by secrets
+
+table: domain_learning
+1       histories of the last war
+2       forbidden catalogs
+3       the stars and the calendar
+4       languages and ciphers
+5       the keeping of relics
+6       maps of the waste
+7       bloodlines and claims
+8       diseases and their remedies
+
+table: contact
+1       summons them to a private audience
+2       sends a servant to fetch them at once
+3       approaches them in a crowded public place and speaks low
+4       leaves a sealed message where only they would find it
+5       has them brought in under guard, then dismisses the guards
+6       is introduced by a mutual acquaintance who then withdraws
+7       comes in disguise and reveals the truth only after testing them
+8       has them brought to a bedside
+9       invites them to a feast and takes them aside
+10      names them in public, then continues the matter in private
+11      hires them first for a trivial job, then reveals the true need
+12      calls them before a council and speaks to them after the others leave
+13      intercepts them on the road
+14      pays their debts, then tells them why
+15      sends a child or elderly retainer as messenger, to show good faith
+16      meets them at a grave, a vault, or a locked storeroom
+
+table: explanation 1d10
+1       The giver offers no explanation.
+2-10    {why}
+
+table: why
+1       {why_position}
+2       {why_secret}
+3       {why_time}
+4       {why_honor}
+5       {why_threat}
+6       {why_debt}
+
+table: why_position
+1       The giver's standing will collapse if this fails.
+2       The giver's rivals are already circling, and a success is needed in public.
+3       The giver cannot hold office another season unless this is done.
+4       A greater power is watching, and the giver is only the mouthpiece.
+5       The giver has already failed once and cannot fail again.
+6       Peace between two houses hangs on the outcome.
+
+table: why_secret
+1       The law cannot be seen to move in this matter.
+2       A rival house must not learn that the giver is involved.
+3       The giver's own people must not know.
+4       Word of this must never reach the court.
+5       The giver claims it is a small thing. The manner of asking says otherwise.
+6       The giver cannot act openly without breaking an oath of office.
+
+table: why_time
+1       Time is short. In {1d6+3} days it will be too late.
+2       A deadline was set by someone the giver dares not refuse.
+3       Whatever is in motion will finish itself if no one interferes.
+4       The giver waited too long, and now only a hard road remains.
+5       A season is turning, and after that the way will close.
+6       The giver will be gone from this place in {1d8+2} days, success or not.
+
+table: why_honor
+1       Honor requires it, though the giver will not say more.
+2       The giver is bound by an old oath.
+3       A guest was taken under the giver's protection, and that protection failed.
+4       The giver's name was used without leave, and the stain must be lifted.
+5       The giver would rather die than let this pass, and looks it.
+6       Custom demands a deed the giver can no longer do in person.
+
+table: why_threat
+1       A disaster is coming that this deed may yet avert.
+2       Someone the giver once wronged is now in a position to destroy them.
+3       The giver's household is already under threat, and this is the lever.
+4       If the other side finishes first, the giver's people will pay.
+5       A hostage-taking, theft, or insult has been framed as the giver's fault.
+6       The giver believes a war will start unless this is handled quietly.
+
+table: why_debt
+1       An old ally has called in a debt, and the giver cannot go in person.
+2       The giver is dying and would see this done first.
+3       The giver owes a life, a fortune, or a secret, and this is the payment.
+4       The giver's parent, patron, or predecessor left the matter unfinished.
+5       The heroes themselves are owed an explanation, but this is what they get instead.
+6       The giver will be ruined by a debt unless the heroes move.
+
+table: reward 1d10
+1       No reward is offered.
+2-10    {reward_offer}
+
+table: reward_offer
+1       {reward_wealth}
+2       {reward_status}
+3       {reward_means}
+4       {reward_promise}
+
+table: reward_wealth
+1       In return, the giver offers a substantial payment in coin or credit.
+2       Should they succeed, a share of whatever is recovered will be theirs.
+3       The giver promises a chest, draft, or letter of credit held by a third party.
+4       The giver offers nothing now, but a greater sum after the work is proven.
+5       In return, the giver will cancel a debt the heroes owe, or a debt owed on their behalf.
+6       The giver offers a rare {pay_object} from the household stores.
+
+table: reward_status
+1       In return, the giver offers a holding of land, a claim, or a lease.
+2       Should they succeed, a title, office, or public pardon will be theirs.
+3       The giver promises the gratitude of a powerful house, and the enemies that come with it.
+4       In return, the giver will name them before the court as friends of the house.
+5       The giver offers a place among the retainers, with pay and protection.
+6       Should they succeed, the giver will see a stain on their names struck off.
+
+table: reward_means
+1       In return, the giver offers a vessel, mount, or other conveyance of quality.
+2       The giver promises equipment chosen from the household armory or stores.
+3       Should they succeed, letters of safe conduct will be theirs.
+4       The giver offers charts, keys, or passwords that open roads elsewhere.
+5       In return, the giver will supply mounts, crew, or porters for a later journey.
+6       The giver promises an introduction to someone far more powerful.
+
+table: reward_promise
+1       The giver promises a favor to be named later.
+2       In return, the giver offers information the heroes have sought.
+3       Should they succeed, the giver will answer one question truthfully.
+4       The giver promises silence about the heroes' past, or about this deed.
+5       In return, the giver will shelter them when the work is done.
+6       The giver offers nothing but thanks, and expects that to be enough.
+
+table: pay_object
+1       chart or map
+2       key
+3       weapon
+4       tool of the giver's trade
+5       relic
+6       book or set of tablets
+7       seal or ring
+8       piece of art whose ownership is not disputed
+
+table: quest_body
+1-3     They must {step}.
+4-5     The work has two steps. First they must {step}. Then they must {step}.
+6       The work has three steps. First they must {step}. Next they must {step}. At last they must {step}.
+
+table: condition_or_not
+1       {condition}
+2       {blank}
+
+table: condition
+1       {condition_time}
+2       {condition_when}
+3       {condition_method}
+4       {condition_ban}
+
+table: condition_time
+1       The work must be done within {1d6+1} days.
+2       The work must be done within {1d4} weeks.
+3       The work must be finished before the next {deadline_event}.
+4       They have only one night to finish it.
+5       The work must be done before a rival company returns, and that company has a head start.
+6       The work must be done before the giver's enemies learn it was asked.
+
+table: deadline_event
+1       festival
+2       muster
+3       sitting of a court
+4       sailing
+5       new moon
+6       harvest
+7       tide
+8       changing of a watch or a guard
+
+table: condition_when
+1       The work must be done at night.
+2       The work must be done in daylight, where witnesses can see.
+3       The work must be done during {when_event}.
+4       The work must be done while the giver is in public, so suspicion falls elsewhere.
+5       The work must wait for a signal the giver will not describe in advance.
+6       The work must be done in weather that keeps honest folk indoors.
+
+table: when_event
+1       a holy day
+2       a storm
+3       a trial
+4       a funeral
+5       a market
+6       a blackout, a curfew, or a black-flag day
+7       a feast
+8       an eclipse, a conjunction, or some other counted hour
+
+table: condition_method
+1       The work must be done without bloodshed.
+2       The work must be done unseen.
+3       The work must look like an accident.
+4       The work must be done in a single visit. They may not go back.
+5       The work must be done with what the giver provides and nothing else.
+6       The work must be announced before it begins.
+7       The work must leave the place standing.
+8       The work must be blamed on someone other than the heroes.
+9       The work must be done unarmed.
+10      The work must be done without fire, without breaking a seal, or without both.
+
+table: condition_ban
+1       They may not kill the principal.
+2       They may not speak the giver's name while the work lasts.
+3       They may not spend a night under a roof until it is done.
+4       None of the giver's people may help them.
+5       They may not steal, even from the enemy.
+6       They must keep a witness alive and present for the whole of it.
+7       They must take along a person of the giver's choosing who will slow them down.
+8       They must not open what they carry.
+9       They must bring back proof a child could understand.
+10      They must not harm the innocent, even if the innocent bar the way.
+11      They must wear no colors of any house.
+12      They may not cross a border in the open.
+
+table: step 1d20
+1-3     {get_item}
+4-5     {deliver_message}
+6-7     {rescue_person}
+8-10    {slay_destroy}
+11      {homecoming}
+12-13   {discover}
+14-15   {escort_defend}
+16      {diplomacy}
+17      {ordeal}
+18      {ritual}
+19      {heist}
+20      {revenge}
+
+table: get_item
+1       {get_verb} {item} {item_source}, {challenge}
+
+table: get_verb
+1       obtain
+2       recover
+3       steal
+4       find and bring back
+5       seize
+6       bargain for
+7       smuggle out
+8       take by whatever means they must
+
+table: item
+1       {item_document}
+2       {item_treasure}
+3       {item_token}
+4       {item_remains}
+5       {item_living}
+6       {item_contraband}
+
+table: item_document
+1       a sealed case
+2       a ledger of accounts
+3       a formula, plan, or set of orders
+4       a book or set of tablets
+5       a map to a place that is not on any public chart
+6       proof of a crime
+7       a coded roster of names
+8       a will, deed, or grant of rights
+9       a confession written in a known hand
+10      a treaty draft that was never signed
+
+table: item_treasure
+1       an heirloom of the giver's house
+2       a relic of a vanished people
+3       a weapon with a history
+4       a work of art whose ownership is disputed
+5       a ransom in portable form
+6       a missing shipment of cargo
+7       a cup, banner, or other emblem of a house
+8       a sample of a rare material
+9       a jewel that is also a key
+10      a hoard small enough to carry and large enough to kill for
+
+table: item_token
+1       a key of unusual make
+2       a token of authority
+3       a ring, seal, or badge of office
+4       a password hidden in an ordinary object
+5       a box that must not be opened
+6       a standard, sigil, or identifying mark
+7       a letter of credit that is worthless without its twin
+8       a mask, uniform, or other means of passing a gate
+
+table: item_remains
+1       the remains of someone important
+2       ashes, bones, or a death-mask
+3       a personal effect taken from the dead
+4       a relic said to be a saint's or hero's
+5       a body that must be returned for burial
+6       a trophy taken from a famous kill
+
+table: item_living
+1       a living beast of great value
+2       a breeding pair of rare stock
+3       a plant, seed, or culture that will not survive delay
+4       a messenger-beast that knows one road
+5       a captive animal used as a watchdog
+6       a specimen that scholars would kill to possess
+
+table: item_contraband
+1       a stolen shipment still in its original seals
+2       a forbidden text, drug, or device
+3       tax, tribute, or tithe that never arrived
+4       a forged token meant to pass as the true one
+5       goods taken from a wreck, raid, or unpaid debt
+6       a prize that was already stolen once
+
+table: item_source
+1-3     from {place}
+4       hidden in {place}
+5       last seen at {place}
+6       now on the road to {place}
+
+table: deliver_message
+1       {deliver_verb} {message} to {recipient}, {challenge}
+
+table: deliver_verb
+1       carry
+2       deliver
+3       smuggle
+4       get
+5       bring
+6       convey
+
+table: message
+1       a sealed letter
+2       a verbal message that must not be written down
+3       the draft of a treaty
+4       coded orders
+5       a confession
+6       a summons
+7       news of a death
+8       an offer of alliance
+9       a threat that must be delivered to the face
+10      a plea for aid
+11      a map hidden inside an ordinary letter
+12      terms of surrender
+13      a password and a recognition sign
+14      a warning of betrayal
+15      a list of names
+16      a ransom demand
+17      a forged message the giver swears is genuine
+18      news that a promised relief will not come
+19      an apology that will be taken as weakness
+20      a claim of inheritance
+
+table: recipient
+1       {recipient_who}
+2       {recipient_who} at {place}
+3       {recipient_who} hidden at {place}
+4       {recipient_who} held at {place}
+
+table: recipient_who
+1       an ally who does not know they are in danger
+2       a rival who must be bargained with
+3       a commander in the field
+4       a recluse who will not receive ordinary messengers
+5       a prisoner
+6       a foreign court
+7       a hidden cell of loyalists
+8       a merchant factor
+9       a religious house
+10      a child of two houses
+11      someone who will kill the messenger if the seal is broken
+12      a dying elder
+13      a garrison that may already have changed sides
+14      a judge who has not yet heard the other tale
+15      a captain whose vessel is about to leave
+16      the giver's own kin, who will not believe a stranger
+17      a former ally now serving the other side
+18      a crowd, by public reading, whether they wish to hear it or not
+
+table: rescue_person
+1       {rescue_verb} {captive} {captive_where}, {challenge}
+
+table: rescue_verb
+1       rescue
+2       extract
+3       free
+4       bring out
+5       recover
+6       smuggle to safety
+7       bargain for the life of
+8       steal away with
+
+table: captive
+1       {captive_who}
+2       {captive_who} {captive_tie}
+
+table: captive_who
+1       a hostage of rank
+2       a missing heir
+3       a witness who has not yet spoken
+4       a scholar who knows too much
+5       a captured scout
+6       a condemned prisoner
+7       a household taken together
+8       a defector
+9       someone who does not wish to be found
+10      an agent whose name is about to be burned
+11      a child promised to two houses
+12      a crew held for ransom
+13      a bride or bridegroom taken on the road
+14      a healer the giver cannot spare
+15      a rival the giver would rather have alive
+16      a servant who overheard the wrong conversation
+17      a prophet whose words have started to come true
+18      a guide without whom a later journey fails
+
+table: captive_tie
+1       who is kin to the giver
+2       who was once an ally
+3       known to the giver only by description
+4       taken as a guest under the giver's protection
+5       who is the last of a line the giver is sworn to preserve
+6       beloved of someone the giver cannot refuse
+7       held as a hostage against the giver's good behavior
+8       who alone can identify the true prize
+
+table: captive_where
+1       from {place}
+2       held at {place}
+3       last seen at {place}
+4       before they are moved from {place}
+
+table: slay_destroy
+1       {slay_being}
+2       {destroy_thing}
+3       {prevent_event}
+
+table: slay_being
+1       {slay_verb} {being_target} in {place}, {challenge}
+
+table: slay_verb
+1       slay
+2       hunt down
+3       bring down
+4       put down
+5       kill
+6       put an end to
+
+table: being_target
+1       a raiding warlord
+2       a great beast
+3       a tyrant
+4       a traitor
+5       a beast that has learned to take people
+6       a captain turned pirate
+7       a pretender
+8       something that was once a person
+9       a champion of the other side
+10      a judge who has become the crime
+11      a keeper of a forbidden gate
+12      a hunter that has begun to hunt the giver's people
+
+table: destroy_thing
+1       {destroy_verb} {destroy_object} at {place}, {challenge}
+2       raze {place} so it cannot be used again, {challenge}
+3       {destroy_verb} the works at {place}, {challenge}
+
+table: destroy_verb
+1       destroy
+2       unmake
+3       break
+4       burn
+5       sink
+6       scatter
+
+table: destroy_object
+1       a relic that must not remain in the world
+2       a weapon too dangerous to keep
+3       a work that is nearly finished
+4       a proof that would ruin the peace
+5       a shrine that feeds a coming disaster
+6       a vessel that must never make another voyage
+7       a name, a claim, or a banner
+8       a store of arms
+9       a book of names
+10      a thing the giver once commissioned and now regrets
+
+table: prevent_event
+1       prevent {event} at {place}, {challenge}
+2       stop {event} before it is completed at {place}, {challenge}
+3       see that {event} fails at {place}, {challenge}
+
+table: event
+1       a ritual
+2       a coronation
+3       an invasion
+4       a marriage that would seal an alliance
+5       an execution
+6       the opening of a vault
+7       a sacrifice
+8       a signing
+9       a muster
+10      a naming or an anointing
+
+table: homecoming
+1       see {home_who} home to {place}, {challenge}
+2       find a road home from {place} for {home_who}, {challenge}
+3       bring {home_who} back from {place}, {challenge}
+4       open the way home through {place}, {challenge}
+5       return {home_who} to ordinary life from {place}, {challenge}
+6       end a voyage at {place} and not before, {challenge}
+
+table: home_who
+1       the giver's kin
+2       a lost company
+3       a household in exile
+4       a crew that has been gone too long
+5       an exile who is finally allowed to return
+6       the last survivors of a vanished post
+7       a child raised far from home
+8       a host that has wandered since the last war
+
+table: discover
+1       discover who is responsible for {mystery} at {place}, {challenge}
+2       learn whether {rumor}, {challenge}
+3       map a route through {place}, {challenge}
+4       find out what {place} hides, {challenge}
+5       uncover the truth of {mystery} at {place}, {challenge}
+6       survey {place} and return with a true account, {challenge}
+7       prove {rumor} at {place}, {challenge}
+8       find a people, a road, or a ruin said to lie beyond {place}, {challenge}
+
+table: mystery
+1       a murder
+2       a vanished company
+3       a ruin's purpose
+4       a famine that should not be
+5       a name that should be dead
+6       a war's first blow
+7       a birth or a claim
+8       lights on the waste
+9       a theft that left no sign
+10      a peace that broke overnight
+
+table: rumor
+1       a lost road still exists
+2       the dead have been seen walking
+3       a store of arms is hidden
+4       an heir still lives
+5       the maps are wrong
+6       a treaty was never meant to be kept
+7       a closed way can still be opened
+8       someone the giver buried is alive
+
+table: escort_defend
+1       {guard_move}
+2       {guard_stay}
+
+table: guard_move
+1       escort {ward} to {place}, {challenge}
+2       see {ward} through {place} unharmed, {challenge}
+3       guard a caravan bound for {place}, {challenge}
+
+table: guard_stay
+1       hold {place} until relief comes, {challenge}
+2       keep {ward} alive at {place} through a trial, {challenge}
+3       defend {place} for {1d6+2} days, {challenge}
+
+table: ward
+1       a visiting envoy
+2       a witness bound for trial
+3       a religious procession
+4       a fleeing household
+5       a wounded commander
+6       a child of two houses
+7       a herd or shipment of great value
+8       a scholar carrying what must not be copied
+9       a council on the road
+10      the giver's own person, though they will not travel as themselves
+
+table: diplomacy
+1       convince {diplomat_target} {concession}, {challenge}
+2       broker {deal} at {place}, {challenge}
+3       expose {lie} at {place}, {challenge}
+4       win {diplomat_target} over at {place}, {challenge}
+5       keep {diplomat_target} from {bad_act} at {place}, {challenge}
+
+table: diplomat_target
+1       a ruler
+2       a commander in the field
+3       a religious house
+4       a guild
+5       a rival house
+6       a judge
+7       a crowd
+8       an exile who still commands loyalty
+9       a council that has not yet voted
+10      a captain whose crew will follow
+
+table: concession
+1       not to go to war
+2       to stand down
+3       to accept terms
+4       to open a road or a gate
+5       to name an heir
+6       to withdraw a claim
+7       to shelter the giver's people
+8       to tell the truth in public
+
+table: deal
+1       a marriage
+2       a truce
+3       a trade right
+4       a hostage exchange
+5       a border
+6       a pardon
+7       a shared watch on the road
+8       an end to a feud
+
+table: lie
+1       a lie about a death
+2       a forged claim
+3       a false peace
+4       a hidden levy
+5       a crime blamed on the wrong house
+6       a miracle that was arranged
+
+table: bad_act
+1       marching
+2       hanging a prisoner
+3       burning a holding
+4       naming a rival
+5       closing the gates
+6       speaking in public
+
+table: ordeal
+1       endure {ordeal_what} at {place}, {challenge}
+2       last {1d6+2} days in {place}, {challenge}
+3       cross {place} and live, {challenge}
+4       pass {trial} at {place}, {challenge}
+5       prove they can {proof} at {place}, {challenge}
+6       complete a pilgrimage to {place}, {challenge}
+7       atone at {place} in the manner the giver names, {challenge}
+
+table: ordeal_what
+1       the winter
+2       a drought
+3       a siege from the inside
+4       a season of tests
+5       hunger and thirst
+6       a watch that must not sleep
+7       a fever in the camp
+8       isolation with a law they may not break
+
+table: trial
+1       a test set by a power the giver will not name
+2       an initiation
+3       a night in a place that kills the unworthy
+4       a judgment by ordeal
+5       a crossing that only the worthy finish
+6       a silence that must be kept
+
+table: proof
+1       keep a watch
+2       go unarmed
+3       tell no lie
+4       bring no blood
+5       refuse an offered prize
+6       return with empty hands
+
+table: ritual
+1       complete {ceremony} at {place}, {challenge}
+2       undo a ceremony already begun at {place}, {challenge}
+3       solve what {place} asks of those who enter, {challenge}
+4       speak the true name in {place}, {challenge}
+5       put {item} in its right place at {place}, {challenge}
+6       open {place} the right way, not the easy way, {challenge}
+7       walk the pattern at {place}, {challenge}
+8       finish what was left half-done at {place}, {challenge}
+
+table: ceremony
+1       a naming
+2       a burial
+3       a consecration
+4       a binding
+5       a sundering
+6       a watch-night
+7       a crowning
+8       a cleansing
+
+table: heist
+1       steal {item} from {place} without a fight, {challenge}
+2       break {captive} out of {place} without raising an alarm, {challenge}
+3       infiltrate {place} and {heist_goal}, {challenge}
+4       smuggle {item} out of {place} unseen, {challenge}
+5       walk out of {place} with {item} as if they belonged there, {challenge}
+6       get themselves out of {place} after the door has closed, {challenge}
+
+table: heist_goal
+1       leave with {item}
+2       open a way for others
+3       replace {item} with a fake
+4       learn the inner layout and get out
+5       free {captive} without raising an alarm
+6       put a mark, a letter, or a lie where it will be found later
+
+table: revenge
+1       hunt down {revenge_target} to {place}, {challenge}
+2       make {revenge_target} pay for {wrong} at {place}, {challenge}
+3       bring {revenge_target} back from {place} to face justice, {challenge}
+4       settle the giver's score with {revenge_target} at {place}, {challenge}
+5       find {revenge_target} across {place} and not come home without an answer, {challenge}
+
+table: revenge_target
+1       the one responsible
+2       a former ally
+3       a whole house
+4       a captain who walked away
+5       a name the giver will only say once
+6       the last living offender
+7       someone who still wears the giver's colors
+8       a person the law will not touch
+
+table: wrong
+1       the murder of the giver's kin
+2       a burned holding
+3       a betrayal in the field
+4       a stolen name
+5       being left to die
+6       a broken peace
+7       a public humiliation
+8       a debt collected in blood
+
+table: place
+1-2     {place_settled}
+3-4     {place_strong}
+5-6     {place_wild}
+7       {place_transit}
+8       {place_hidden}
+
+table: place_settled
+1       a remote village
+2       a crowded city
+3       a decaying port
+4       a frontier town
+5       a foreign quarter
+6       the giver's own city, in a place they cannot be seen to enter
+7       a market that meets only at certain times
+8       a plague-closed ward
+9       a company town or estate village
+10      a holy city on a pilgrimage road
+
+table: place_strong
+1       a fortress on the border
+2       a rival's stronghold
+3       a prison
+4       a private estate
+5       a garrison town
+6       a tower that watches a pass
+7       a fortified warehouse
+8       a citadel inside a city
+9       a camp of a free company
+10      a palace with too many doors
+
+table: place_wild
+1       the deep wilderness
+2       a ruin older than the present realm
+3       a maze of caverns
+4       the open waste
+5       an isolated outpost
+6       an island or high place
+7       a mine or excavation
+8       a tomb or vault
+9       a wreck on a reef, a shoal, or a forgotten road
+10      a hunting ground claimed by something that is not human
+
+table: place_transit
+1       a port or waystation
+2       a ship, caravan, or convoy already underway
+3       a bridge, ford, or lock
+4       a crossroads inn
+5       a pass that is snowed, flooded, or watched
+6       a blockade line
+7       a customs house
+8       a dry dock, caravanserai, or marshalling yard
+
+table: place_hidden
+1       the undercity
+2       a holy site
+3       a cloister that admits no outsiders
+4       a safehouse whose keepers have gone silent
+5       a vault beneath an ordinary shop
+6       a room behind a court, a choir, or a counting-house
+7       a grave that is not a grave
+8       a place the giver will describe only after the heroes agree
+
+table: challenge
+1-2     {challenge_person}
+3-4     {challenge_group}
+5       {challenge_beast}
+6       {challenge_force}
+
+table: challenge_person
+1       but {antagonist_person} will try to stop them
+2       though {antagonist_person} already holds the ground
+3       while {antagonist_person} hunts anyone who tries
+4       before {antagonist_person} can finish the matter first
+5       and {antagonist_person} will take it as a personal insult
+6       though {antagonist_person} may offer a bargain that is worse than refusal
+
+table: challenge_group
+1       but {antagonist_group} will try to stop them
+2       though {antagonist_group} already holds the ground
+3       while {antagonist_group} hunts anyone who tries
+4       before {antagonist_group} can finish the matter first
+5       knowing that {antagonist_group} wants the same prize
+6       against the opposition of {antagonist_group}
+
+table: challenge_beast
+1       but {antagonist_beast} bars the way
+2       though they must pass {antagonist_beast}
+3       and they will have to get past {antagonist_beast}
+4       while {antagonist_beast} hunts the approaches
+
+table: antagonist_person
+1       a rival {rival_kind}
+2       a {warlord_adj} warlord
+3       a traitor in the giver's household
+4       a hired hunter
+5       a guardian bound to the place
+6       a fanatic who calls the quest unholy
+7       a magistrate who has forbidden the attempt
+8       the original thief now grown desperate
+9       a jealous sibling of the giver
+10      an old ally who has changed sides
+11      a bounty hunter with a legal writ
+12      a priest who would see the prize destroyed
+13      a scholar who believes the prize belongs in a vault
+14      the local warden
+15      a pretender using the same claim
+16      an assassin who has already been paid
+17      a captain who needs the prize to pay a crew
+18      a child of the giver acting in secret
+19      a judge who has already decided the case
+20      a host who smiles and poisons the wine
+
+table: rival_kind
+1       captain
+2       merchant
+3       noble
+4       envoy
+5       heir
+6       scholar
+7       priest
+8       company of adventurers
+
+table: warlord_adj
+1       petty
+2       rising
+3       broken
+4       famous
+5       border
+6       exiled
+7       mercenary
+8       crowned
+
+table: antagonist_group
+1       a band of raiders
+2       a secret society
+3       a rival house
+4       the garrison of the place
+5       a pirate crew
+6       another company racing for the same prize
+7       cultists who claim the prize as holy
+8       the local folk who will not suffer outsiders
+9       a syndicate of thieves
+10      soldiers who think the heroes are the enemy
+11      a clan bound by blood-debt
+12      mutineers
+13      tax-men and other legal thieves
+14      pilgrims who will not be turned aside
+15      a household guard still loyal to a dead master
+16      slavers
+17      a guild with a private army
+18      survivors of a deed the giver would rather forget
+
+table: antagonist_beast
+1       a great beast that hunts the approaches
+2       something that nests in the ruin
+3       a pack that claims the wilderness road
+4       a watchdog-beast bound to the prize
+5       vermin in numbers enough to strip a camp
+6       a creature that follows the smell of the prize
+7       a trained hunter-beast loosed by the other side
+8       something old that wakes if the prize is moved
+
+table: challenge_force
+1       though a storm season is closing the way
+2       though plague has taken the route
+3       though a siege is already underway
+4       though the waste itself may kill them
+5       though the deed is a hanging crime
+6       though they have only {1d6+1} days before the prize is gone
+7       though flood, fire, or famine is in the land
+8       though a blockade cuts the ordinary roads
+9       though the way is watched by day and worse by night
+10      though no guide will take the road for any price
+11      though the prize is moving, and will be gone if they delay
+12      though law and custom both forbid what they are asked to do

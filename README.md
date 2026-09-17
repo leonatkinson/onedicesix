@@ -249,4 +249,6 @@ Small adjustments to daily events on the southern seas.
   bin/generate.js to see usage.
 ## 1.14.1
 - Adjust Art, Antiques & Relics generator capitalization
+## 1.14.2
+- Add quest generator
 
