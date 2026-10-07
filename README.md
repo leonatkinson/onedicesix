@@ -109,7 +109,7 @@ See [leonatkinson.com/one-dice-six](https://www.leonatkinson.com/one-dice-six/) 
 
 ## Installation
 
-1. Copy the entire plugin folder into wp-content/plugins.
+1. Copy the entire plugin folder into wp-content/plugins. Alternatively, install using `wp plugin install --force https://github.com/leonatkinson/onedicesix/archive/refs/heads/main.zip`
 1. Activate the plugin
 1. Place a One Dice Six block on a page.
 
